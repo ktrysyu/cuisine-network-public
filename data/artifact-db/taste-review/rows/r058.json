@@ -1,0 +1,17 @@
+{
+  "canonical": "cinnamon",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "ground cinnamon",
+  "n_recipes": 1231,
+  "note": "甘い香りを甘1とした。香りが本体",
+  "order": 58,
+  "reviewed": true
+}

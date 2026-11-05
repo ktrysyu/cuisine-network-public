@@ -1,0 +1,17 @@
+{
+  "canonical": "oyster sauce",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 5
+  },
+  "ingredient": "oyster sauce",
+  "n_recipes": 455,
+  "note": "",
+  "order": 168,
+  "reviewed": true
+}

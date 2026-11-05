@@ -1,0 +1,78 @@
+{
+  "methods": {
+    "pca": {
+      "title": "PCA (2 components)",
+      "explained_variance_ratio": [
+        0.1563,
+        0.1384
+      ],
+      "explained_variance_ratio_sum": 0.2947,
+      "neighbor_preservation_k30_sample": 0.0468,
+      "trustworthiness_k30_sample": 0.8238,
+      "knn_label_agreement_k10_2d": 0.3017,
+      "sweets_knn_purity_k10_2d": 0.595
+    },
+    "umap_n10": {
+      "title": "UMAP n_neighbors=10",
+      "params": {
+        "n_neighbors": 10,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42
+      },
+      "neighbor_preservation_k30_sample": 0.1923,
+      "trustworthiness_k30_sample": 0.9376,
+      "knn_label_agreement_k10_2d": 0.5574,
+      "sweets_knn_purity_k10_2d": 0.6434
+    },
+    "umap_n30": {
+      "title": "UMAP n_neighbors=30 (= Exp-01 Fig. 1)",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42
+      },
+      "neighbor_preservation_k30_sample": 0.1897,
+      "trustworthiness_k30_sample": 0.9376,
+      "knn_label_agreement_k10_2d": 0.5474,
+      "sweets_knn_purity_k10_2d": 0.6303
+    },
+    "umap_n100": {
+      "title": "UMAP n_neighbors=100",
+      "params": {
+        "n_neighbors": 100,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42
+      },
+      "neighbor_preservation_k30_sample": 0.1842,
+      "trustworthiness_k30_sample": 0.9364,
+      "knn_label_agreement_k10_2d": 0.5377,
+      "sweets_knn_purity_k10_2d": 0.6188
+    }
+  },
+  "umap_n30_matches_exp01_umap_2d_npy": true,
+  "umap_n30_max_abs_diff_vs_exp01": 0.0,
+  "reference_100d": {
+    "knn_label_agreement_k10": 0.6587,
+    "sweets_knn_purity_k10": 0.8451,
+    "chance_sum_p_squared": 0.1001,
+    "sweets_share": 0.1052
+  },
+  "settings": {
+    "eval_sample": 10000,
+    "eval_sample_seed": 42,
+    "neighbor_k": 30,
+    "knn_label_k": 10,
+    "sweets_rule": ">= 2 of sugar / flour / vanilla categories",
+    "n_sweets": 4184,
+    "n_recipes_used": 39772,
+    "labels_no_overlap": {
+      "pca": true,
+      "umap_n10": true,
+      "umap_n30": true,
+      "umap_n100": true
+    }
+  }
+}

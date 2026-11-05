@@ -1,0 +1,953 @@
+{
+  "n_recipes_used": 39772,
+  "vocab_size": 3336,
+  "silhouette": {
+    "note": "cuisine ラベルをクラスタとみなしたシルエット係数。10000 件サンプル×5 回の平均。参考値",
+    "dish_space_100d_cosine": {
+      "mean": -0.0026,
+      "std": 0.0026
+    },
+    "umap_2d_euclidean": {
+      "mean": -0.0375,
+      "std": 0.0062
+    },
+    "baseline_shuffled_labels_100d_cosine": {
+      "mean": -0.0426,
+      "std": 0.0036
+    },
+    "baseline_shuffled_labels_umap_2d_euclidean": {
+      "mean": -0.0713,
+      "std": 0.0074
+    }
+  },
+  "silhouette_by_cuisine_100d": {
+    "indian": 0.1525,
+    "mexican": 0.1405,
+    "korean": 0.1316,
+    "moroccan": 0.1244,
+    "cajun_creole": 0.1102,
+    "thai": 0.0626,
+    "italian": 0.0013,
+    "greek": -0.0134,
+    "chinese": -0.0144,
+    "british": -0.0323,
+    "jamaican": -0.0332,
+    "filipino": -0.0803,
+    "vietnamese": -0.0849,
+    "spanish": -0.0895,
+    "russian": -0.0969,
+    "irish": -0.0989,
+    "southern_us": -0.1145,
+    "french": -0.1207,
+    "brazilian": -0.1809,
+    "japanese": -0.2
+  },
+  "knn_label_agreement": {
+    "k": 10,
+    "overall": 0.6587,
+    "chance_sum_p_squared": 0.1001,
+    "by_cuisine": {
+      "mexican": 0.8637,
+      "indian": 0.8016,
+      "italian": 0.7709,
+      "chinese": 0.7375,
+      "moroccan": 0.6579,
+      "thai": 0.6439,
+      "cajun_creole": 0.6228,
+      "korean": 0.6213,
+      "southern_us": 0.6025,
+      "japanese": 0.5491,
+      "filipino": 0.5294,
+      "jamaican": 0.5101,
+      "greek": 0.5034,
+      "vietnamese": 0.4856,
+      "brazilian": 0.4548,
+      "french": 0.4051,
+      "spanish": 0.3242,
+      "british": 0.2955,
+      "irish": 0.2886,
+      "russian": 0.2675
+    },
+    "by_cuisine_chance": {
+      "brazilian": 0.0117,
+      "british": 0.0202,
+      "cajun_creole": 0.0389,
+      "chinese": 0.0672,
+      "filipino": 0.019,
+      "french": 0.0665,
+      "greek": 0.0295,
+      "indian": 0.0755,
+      "irish": 0.0168,
+      "italian": 0.1971,
+      "jamaican": 0.0132,
+      "japanese": 0.0358,
+      "korean": 0.0209,
+      "mexican": 0.1619,
+      "moroccan": 0.0206,
+      "russian": 0.0123,
+      "southern_us": 0.1086,
+      "spanish": 0.0249,
+      "thai": 0.0387,
+      "vietnamese": 0.0207
+    }
+  },
+  "knn_top_other_cuisines": {
+    "brazilian": [
+      [
+        "mexican",
+        0.221
+      ],
+      [
+        "southern_us",
+        0.161
+      ],
+      [
+        "italian",
+        0.114
+      ]
+    ],
+    "british": [
+      [
+        "southern_us",
+        0.245
+      ],
+      [
+        "french",
+        0.2
+      ],
+      [
+        "italian",
+        0.14
+      ]
+    ],
+    "cajun_creole": [
+      [
+        "southern_us",
+        0.456
+      ],
+      [
+        "italian",
+        0.182
+      ],
+      [
+        "mexican",
+        0.095
+      ]
+    ],
+    "chinese": [
+      [
+        "korean",
+        0.207
+      ],
+      [
+        "thai",
+        0.16
+      ],
+      [
+        "japanese",
+        0.157
+      ]
+    ],
+    "filipino": [
+      [
+        "chinese",
+        0.226
+      ],
+      [
+        "southern_us",
+        0.1
+      ],
+      [
+        "mexican",
+        0.075
+      ]
+    ],
+    "french": [
+      [
+        "italian",
+        0.458
+      ],
+      [
+        "southern_us",
+        0.16
+      ],
+      [
+        "british",
+        0.068
+      ]
+    ],
+    "greek": [
+      [
+        "italian",
+        0.526
+      ],
+      [
+        "french",
+        0.096
+      ],
+      [
+        "moroccan",
+        0.072
+      ]
+    ],
+    "indian": [
+      [
+        "japanese",
+        0.183
+      ],
+      [
+        "moroccan",
+        0.182
+      ],
+      [
+        "mexican",
+        0.095
+      ]
+    ],
+    "irish": [
+      [
+        "southern_us",
+        0.281
+      ],
+      [
+        "french",
+        0.172
+      ],
+      [
+        "british",
+        0.148
+      ]
+    ],
+    "italian": [
+      [
+        "french",
+        0.331
+      ],
+      [
+        "southern_us",
+        0.143
+      ],
+      [
+        "greek",
+        0.132
+      ]
+    ],
+    "jamaican": [
+      [
+        "southern_us",
+        0.194
+      ],
+      [
+        "mexican",
+        0.153
+      ],
+      [
+        "indian",
+        0.107
+      ]
+    ],
+    "japanese": [
+      [
+        "chinese",
+        0.334
+      ],
+      [
+        "korean",
+        0.171
+      ],
+      [
+        "indian",
+        0.146
+      ]
+    ],
+    "korean": [
+      [
+        "chinese",
+        0.498
+      ],
+      [
+        "japanese",
+        0.211
+      ],
+      [
+        "filipino",
+        0.064
+      ]
+    ],
+    "mexican": [
+      [
+        "southern_us",
+        0.208
+      ],
+      [
+        "italian",
+        0.17
+      ],
+      [
+        "spanish",
+        0.087
+      ]
+    ],
+    "moroccan": [
+      [
+        "indian",
+        0.307
+      ],
+      [
+        "italian",
+        0.157
+      ],
+      [
+        "greek",
+        0.114
+      ]
+    ],
+    "russian": [
+      [
+        "french",
+        0.172
+      ],
+      [
+        "italian",
+        0.163
+      ],
+      [
+        "southern_us",
+        0.159
+      ]
+    ],
+    "southern_us": [
+      [
+        "cajun_creole",
+        0.218
+      ],
+      [
+        "italian",
+        0.177
+      ],
+      [
+        "mexican",
+        0.124
+      ]
+    ],
+    "spanish": [
+      [
+        "italian",
+        0.339
+      ],
+      [
+        "mexican",
+        0.153
+      ],
+      [
+        "french",
+        0.152
+      ]
+    ],
+    "thai": [
+      [
+        "vietnamese",
+        0.373
+      ],
+      [
+        "chinese",
+        0.276
+      ],
+      [
+        "indian",
+        0.108
+      ]
+    ],
+    "vietnamese": [
+      [
+        "thai",
+        0.441
+      ],
+      [
+        "chinese",
+        0.243
+      ],
+      [
+        "filipino",
+        0.083
+      ]
+    ]
+  },
+  "axes": {
+    "soy sauce ↔ butter": {
+      "cuisine_mean_projection": {
+        "korean": 0.2622,
+        "chinese": 0.2481,
+        "japanese": 0.201,
+        "vietnamese": 0.1958,
+        "thai": 0.1898,
+        "filipino": 0.0556,
+        "jamaican": -0.0322,
+        "indian": -0.0348,
+        "mexican": -0.0639,
+        "brazilian": -0.073,
+        "moroccan": -0.0992,
+        "cajun_creole": -0.1222,
+        "spanish": -0.126,
+        "greek": -0.1358,
+        "russian": -0.1622,
+        "italian": -0.1759,
+        "southern_us": -0.1884,
+        "french": -0.1963,
+        "irish": -0.2065,
+        "british": -0.2126
+      },
+      "全レシピ_soy sauce_top100_cuisines": {
+        "japanese": 43,
+        "chinese": 41,
+        "korean": 12,
+        "thai": 2,
+        "vietnamese": 1,
+        "indian": 1
+      },
+      "全レシピ_butter_top100_cuisines": {
+        "southern_us": 36,
+        "italian": 25,
+        "french": 17,
+        "irish": 7,
+        "british": 5,
+        "indian": 4,
+        "mexican": 3,
+        "brazilian": 2,
+        "cajun_creole": 1
+      },
+      "食材 5 個以上_soy sauce_top100_cuisines": {
+        "chinese": 47,
+        "japanese": 35,
+        "korean": 14,
+        "thai": 2,
+        "vietnamese": 1,
+        "indian": 1
+      },
+      "食材 5 個以上_butter_top100_cuisines": {
+        "southern_us": 47,
+        "italian": 21,
+        "french": 17,
+        "british": 5,
+        "irish": 4,
+        "mexican": 3,
+        "cajun_creole": 1,
+        "jamaican": 1,
+        "russian": 1
+      }
+    },
+    "japanese 重心 ↔ italian 重心": {
+      "cuisine_mean_projection": {
+        "japanese": 0.3082,
+        "korean": 0.3032,
+        "chinese": 0.2918,
+        "vietnamese": 0.2343,
+        "thai": 0.2283,
+        "filipino": 0.1072,
+        "indian": 0.0378,
+        "jamaican": -0.0058,
+        "brazilian": -0.0168,
+        "russian": -0.0828,
+        "british": -0.0941,
+        "mexican": -0.0974,
+        "southern_us": -0.1012,
+        "irish": -0.1076,
+        "moroccan": -0.138,
+        "cajun_creole": -0.1731,
+        "french": -0.1781,
+        "spanish": -0.2035,
+        "greek": -0.2461,
+        "italian": -0.3073
+      },
+      "全レシピ_japanese 重心_top100_cuisines": {
+        "japanese": 90,
+        "chinese": 5,
+        "korean": 4,
+        "thai": 1
+      },
+      "全レシピ_italian 重心_top100_cuisines": {
+        "italian": 96,
+        "greek": 3,
+        "southern_us": 1
+      },
+      "食材 5 個以上_japanese 重心_top100_cuisines": {
+        "japanese": 90,
+        "korean": 5,
+        "chinese": 4,
+        "thai": 1
+      },
+      "食材 5 個以上_italian 重心_top100_cuisines": {
+        "italian": 96,
+        "greek": 3,
+        "southern_us": 1
+      }
+    }
+  },
+  "cross_cultural_japanese_nn_cuisine": {
+    "korean": 548,
+    "chinese": 426,
+    "indian": 116,
+    "thai": 80,
+    "vietnamese": 49,
+    "southern_us": 40,
+    "french": 32,
+    "filipino": 28,
+    "italian": 24,
+    "mexican": 17,
+    "cajun_creole": 17,
+    "british": 10,
+    "russian": 9,
+    "jamaican": 7,
+    "moroccan": 6,
+    "spanish": 6,
+    "irish": 3,
+    "brazilian": 3,
+    "greek": 2
+  },
+  "arithmetic": {
+    "Kazama 形式: mirin − japanese + french": {
+      "top": [
+        [
+          "white asparagus",
+          0.5619
+        ],
+        [
+          "chopped fresh thyme",
+          0.5565
+        ],
+        [
+          "fresh thyme leaves",
+          0.5533
+        ],
+        [
+          "parsley sprigs",
+          0.539
+        ],
+        [
+          "candied lemon peel",
+          0.5197
+        ],
+        [
+          "unsalted butter",
+          0.5169
+        ],
+        [
+          "dried bonito flakes",
+          0.5149
+        ],
+        [
+          "lemon curd",
+          0.5146
+        ]
+      ],
+      "overlap_with_plus_only": 1
+    },
+    "soy sauce − japanese + italian": {
+      "top": [
+        [
+          "sausage meat",
+          0.5647
+        ],
+        [
+          "italian style seasoning",
+          0.5493
+        ],
+        [
+          "olive oil",
+          0.5473
+        ],
+        [
+          "low sodium soy sauce",
+          0.545
+        ],
+        [
+          "fresh parsley",
+          0.5435
+        ],
+        [
+          "grated parmesan cheese",
+          0.5409
+        ],
+        [
+          "pecorino cheese",
+          0.5379
+        ],
+        [
+          "parmesan cheese",
+          0.5344
+        ]
+      ],
+      "overlap_with_plus_only": 2
+    },
+    "soy sauce − chinese + mexican": {
+      "top": [
+        [
+          "black beans",
+          0.6453
+        ],
+        [
+          "medium salsa",
+          0.5927
+        ],
+        [
+          "canned black beans",
+          0.5924
+        ],
+        [
+          "taco toppings",
+          0.5772
+        ],
+        [
+          "tortillas",
+          0.575
+        ],
+        [
+          "mexican cheese",
+          0.5744
+        ],
+        [
+          "kraft mexican style finely shredded four cheese",
+          0.5723
+        ],
+        [
+          "chop green chilies, undrain",
+          0.5672
+        ]
+      ],
+      "overlap_with_plus_only": 2
+    },
+    "miso − japanese + italian": {
+      "top": [
+        [
+          "balsamic reduction",
+          0.5612
+        ],
+        [
+          "bocconcini",
+          0.5522
+        ],
+        [
+          "caper berries",
+          0.5484
+        ],
+        [
+          "fresh mozzarella balls",
+          0.5451
+        ],
+        [
+          "grated parmesan cheese",
+          0.5434
+        ],
+        [
+          "perciatelli",
+          0.5408
+        ],
+        [
+          "2% low-fat cottage cheese",
+          0.5375
+        ],
+        [
+          "frozen pizza dough",
+          0.5367
+        ]
+      ],
+      "overlap_with_plus_only": 1
+    },
+    "sake − japanese + french": {
+      "top": [
+        [
+          "grappa",
+          0.5313
+        ],
+        [
+          "kirsch",
+          0.5259
+        ],
+        [
+          "chopped fresh thyme",
+          0.5206
+        ],
+        [
+          "riesling",
+          0.5121
+        ],
+        [
+          "pinot noir",
+          0.51
+        ],
+        [
+          "dry white wine",
+          0.5041
+        ],
+        [
+          "truffle oil",
+          0.5022
+        ],
+        [
+          "nonfat dry milk",
+          0.5014
+        ]
+      ],
+      "overlap_with_plus_only": 0
+    },
+    "butter − french + indian": {
+      "top": [
+        [
+          "ghee",
+          0.6218
+        ],
+        [
+          "margarine",
+          0.5688
+        ],
+        [
+          "salt",
+          0.5324
+        ],
+        [
+          "meat tenderizer",
+          0.5288
+        ],
+        [
+          "black cumin seeds",
+          0.5185
+        ],
+        [
+          "oil",
+          0.5152
+        ],
+        [
+          "black gram",
+          0.5107
+        ],
+        [
+          "rose essence",
+          0.5068
+        ]
+      ],
+      "overlap_with_plus_only": 2
+    },
+    "flour tortillas − mexican + indian": {
+      "top": [
+        [
+          "basmati rice",
+          0.6042
+        ],
+        [
+          "corn tortillas",
+          0.5591
+        ],
+        [
+          "garam masala",
+          0.5568
+        ],
+        [
+          "yoghurt",
+          0.5112
+        ],
+        [
+          "whole wheat tortillas",
+          0.51
+        ],
+        [
+          "fajita size flour tortillas",
+          0.4978
+        ],
+        [
+          "tortillas",
+          0.4956
+        ],
+        [
+          "large flour tortillas",
+          0.4904
+        ]
+      ],
+      "overlap_with_plus_only": 1
+    },
+    "fish sauce − thai + italian": {
+      "top": [
+        [
+          "prosciutto",
+          0.5701
+        ],
+        [
+          "dried basil",
+          0.5559
+        ],
+        [
+          "fresh parsley",
+          0.5413
+        ],
+        [
+          "fresh oregano",
+          0.5401
+        ],
+        [
+          "pancetta",
+          0.5368
+        ],
+        [
+          "mild italian sausage",
+          0.5346
+        ],
+        [
+          "pesto",
+          0.5291
+        ],
+        [
+          "prepar pesto",
+          0.5279
+        ]
+      ],
+      "overlap_with_plus_only": 0
+    },
+    "parmesan cheese − italian + japanese": {
+      "top": [
+        [
+          "dried udon",
+          0.6102
+        ],
+        [
+          "roasted white sesame seeds",
+          0.5904
+        ],
+        [
+          "shredded nori",
+          0.5811
+        ],
+        [
+          "soy sauce",
+          0.5687
+        ],
+        [
+          "chili paste",
+          0.5553
+        ],
+        [
+          "mung bean noodles",
+          0.5363
+        ],
+        [
+          "sesame oil",
+          0.5339
+        ],
+        [
+          "grated parmesan cheese",
+          0.5231
+        ]
+      ],
+      "overlap_with_plus_only": 4
+    },
+    "食材だけ: soy sauce − ginger + basil": {
+      "top": [
+        [
+          "fresh basil",
+          0.4721
+        ],
+        [
+          "low sodium soy sauce",
+          0.431
+        ],
+        [
+          "reduced sodium soy sauce",
+          0.4213
+        ],
+        [
+          "bocconcini",
+          0.4096
+        ],
+        [
+          "corn flakes cereal",
+          0.3845
+        ],
+        [
+          "pea shoots",
+          0.3824
+        ],
+        [
+          "sausage meat",
+          0.3766
+        ],
+        [
+          "italian sausage",
+          0.3693
+        ]
+      ],
+      "overlap_with_plus_only": 2
+    },
+    "食材だけ: sake − rice + grapes": {
+      "top": [
+        [
+          "mirin",
+          0.4766
+        ],
+        [
+          "shiso",
+          0.4614
+        ],
+        [
+          "apricot preserves",
+          0.4153
+        ],
+        [
+          "dashi powder",
+          0.3973
+        ],
+        [
+          "navel oranges",
+          0.3965
+        ],
+        [
+          "dried bonito flakes",
+          0.3921
+        ],
+        [
+          "napa cabbage leaves",
+          0.3913
+        ],
+        [
+          "matcha green tea powder",
+          0.391
+        ]
+      ],
+      "overlap_with_plus_only": 0
+    },
+    "食材だけ: tofu − soy sauce + cheese": {
+      "top": [
+        [
+          "shredded cheese",
+          0.568
+        ],
+        [
+          "cheddar cheese",
+          0.4843
+        ],
+        [
+          "shredded cheddar cheese",
+          0.4749
+        ],
+        [
+          "grating cheese",
+          0.4717
+        ],
+        [
+          "mexican cheese blend",
+          0.4716
+        ],
+        [
+          "goat cheese",
+          0.4431
+        ],
+        [
+          "chèvre",
+          0.4352
+        ],
+        [
+          "monterey jack",
+          0.4271
+        ]
+      ],
+      "overlap_with_plus_only": 5
+    }
+  }
+}

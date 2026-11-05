@@ -1,0 +1,17 @@
+{
+  "canonical": "white pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "white pepper",
+  "n_recipes": 439,
+  "note": "発酵臭は6軸外",
+  "order": 177,
+  "reviewed": true
+}

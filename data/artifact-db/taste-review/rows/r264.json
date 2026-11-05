@@ -1,0 +1,17 @@
+{
+  "canonical": "bread crumbs",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "bread crumbs",
+  "n_recipes": 306,
+  "note": "",
+  "order": 264,
+  "reviewed": true
+}

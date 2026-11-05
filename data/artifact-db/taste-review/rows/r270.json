@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "chopped tomatoes",
+  "n_recipes": 298,
+  "note": "生か缶詰か不明",
+  "order": 270,
+  "reviewed": true
+}

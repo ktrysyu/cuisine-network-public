@@ -1,0 +1,17 @@
+{
+  "canonical": "pecans",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "chopped pecans",
+  "n_recipes": 282,
+  "note": "",
+  "order": 283,
+  "reviewed": true
+}

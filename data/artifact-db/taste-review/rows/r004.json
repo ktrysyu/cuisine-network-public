@@ -1,0 +1,25 @@
+{
+  "canonical": "garlic",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "garlic",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 1
+  },
+  "n_recipes": 7380,
+  "note": "生の刺激（辛3程度）と加熱後の甘み・旨みで大きく変わる。料理に入った後（加熱）基準で辛1",
+  "order": 4,
+  "reviewed": true
+}

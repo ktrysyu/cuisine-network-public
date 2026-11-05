@@ -1,0 +1,17 @@
+{
+  "canonical": "oregano",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh oregano",
+  "n_recipes": 393,
+  "note": "生のほうが刺激が強い",
+  "order": 197,
+  "reviewed": true
+}

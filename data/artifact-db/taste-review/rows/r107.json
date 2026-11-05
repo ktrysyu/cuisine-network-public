@@ -1,0 +1,17 @@
+{
+  "canonical": "cheddar cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "shredded cheddar cheese",
+  "n_recipes": 769,
+  "note": "熟成度で旨み・酸味が変わる",
+  "order": 107,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "chopped onion",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "n_recipes": 1250,
+  "note": "onions と同じ（加熱基準）",
+  "order": 56,
+  "reviewed": true
+}

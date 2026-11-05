@@ -1,0 +1,17 @@
+{
+  "canonical": "garlic",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "garlic powder",
+  "n_recipes": 1442,
+  "note": "",
+  "order": 48,
+  "reviewed": true
+}

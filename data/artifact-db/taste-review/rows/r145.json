@@ -1,0 +1,17 @@
+{
+  "canonical": "dijon mustard",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 3,
+    "sour": 3,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "dijon mustard",
+  "n_recipes": 513,
+  "note": "",
+  "order": 145,
+  "reviewed": true
+}

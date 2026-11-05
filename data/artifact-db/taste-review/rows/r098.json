@@ -1,0 +1,17 @@
+{
+  "canonical": "coconut milk",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "coconut milk",
+  "n_recipes": 854,
+  "note": "",
+  "order": 98,
+  "reviewed": true
+}

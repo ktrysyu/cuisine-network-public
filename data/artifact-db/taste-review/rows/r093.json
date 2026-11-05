@@ -1,0 +1,25 @@
+{
+  "canonical": "garlic",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "large garlic cloves",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 2
+  },
+  "n_recipes": 873,
+  "note": "garlic と同じ扱い（加熱基準）",
+  "order": 93,
+  "reviewed": true
+}

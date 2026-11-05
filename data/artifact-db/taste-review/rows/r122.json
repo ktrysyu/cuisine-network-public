@@ -1,0 +1,25 @@
+{
+  "canonical": "cinnamon",
+  "confidence": "low",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "cinnamon sticks",
+  "mine": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 0
+  },
+  "n_recipes": 646,
+  "note": "煮出して取り出す前提。単体では口にしない",
+  "order": 122,
+  "reviewed": true
+}

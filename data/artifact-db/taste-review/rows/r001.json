@@ -1,0 +1,25 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "onions",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 1
+  },
+  "n_recipes": 7972,
+  "note": "加熱前提で採点。生なら辛（刺激）2・甘1程度",
+  "order": 1,
+  "reviewed": true
+}

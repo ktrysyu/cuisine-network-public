@@ -1,0 +1,304 @@
+ingredient,canonical,n_recipes,sweet,salty,sour,bitter,umami,spicy,confidence,note
+salt,salt,18048,0,5,0,0,0,0,high,
+onions,onions,7972,2,0,0,0,1,0,medium,加熱前提で採点。生なら辛（刺激）2・甘1程度
+olive oil,olive oil,7971,0,0,0,1,0,0,medium,精製度で苦み・喉の刺激が変わる。脂のコクは6軸外
+water,water,7457,0,0,0,0,0,0,high,
+garlic,garlic,7380,1,0,0,0,1,1,low,生の刺激（辛3程度）と加熱後の甘み・旨みで大きく変わる。料理に入った後（加熱）基準で辛1
+sugar,sugar,6434,5,0,0,0,0,0,high,
+garlic cloves,garlic,6236,1,0,0,0,1,1,low,garlic と同じ扱い（加熱基準）
+butter,butter,4847,1,2,0,0,1,0,medium,米国の有塩バター想定。無塩なら塩0
+ground black pepper,black pepper,4784,0,0,0,1,0,4,high,
+all-purpose flour,flour,4632,0,0,0,0,0,0,high,
+pepper,black pepper,4438,0,0,0,1,0,4,low,単に pepper。black pepper と解釈したが bell pepper・唐辛子の可能性も残る
+vegetable oil,vegetable oil,4385,0,0,0,0,0,0,high,
+eggs,eggs,3388,0,0,0,0,1,0,medium,加熱後。卵黄のコクを旨1とした
+soy sauce,soy sauce,3296,1,5,0,0,4,0,high,
+kosher salt,salt,3113,0,5,0,0,0,0,high,
+green onions,green onions,3078,1,0,0,0,0,2,medium,生の薬味として使う前提。加熱すると辛み0・甘み2
+tomatoes,tomatoes,3058,2,0,2,0,2,0,medium,生・熟度で変わる
+large eggs,eggs,2948,0,0,0,0,1,0,medium,eggs と同じ
+carrots,carrots,2814,2,0,0,0,0,0,medium,加熱後。生でも甘2程度
+unsalted butter,butter,2782,1,0,0,0,1,0,medium,
+extra-virgin olive oil,olive oil,2747,0,0,0,2,0,1,medium,ポリフェノールの苦みと喉の刺激
+ground cumin,cumin,2747,0,0,0,2,0,1,medium,香りが本体。味としては苦みと弱い刺激のみ
+black pepper,black pepper,2627,0,0,0,1,0,4,high,
+milk,milk,2263,2,0,0,0,0,0,high,
+chili powder,chili powder,2036,0,1,0,1,0,2,low,米国式ブレンド（唐辛子＋クミン・オレガノ・塩）想定。インド料理では純粋な唐辛子粉（辛5）の意味でも使われる
+oil,vegetable oil,1970,0,0,0,0,0,0,medium,種類不明。中性の植物油と解釈
+red bell pepper,bell pepper,1939,3,0,0,0,0,0,high,
+purple onion,onions,1896,1,0,0,0,0,2,medium,サラダ・サルサで生のまま使うことが多いので生基準
+scallions,green onions,1891,1,0,0,0,0,2,medium,green onions と同じ（生の薬味基準）
+grated parmesan cheese,parmesan cheese,1885,0,4,1,0,5,0,high,
+sesame oil,sesame oil,1773,0,0,0,1,1,0,medium,焙煎香が本体。香ばしさを苦1・旨1に割り振った
+corn starch,corn starch,1757,0,0,0,0,0,0,high,
+ginger,ginger,1755,0,0,0,0,0,3,medium,生の生姜基準。加熱で辛みは弱まる
+baking powder,baking powder,1738,0,1,1,1,0,0,medium,単体では金属的な塩味・苦み。焼成後はほぼ消える
+jalapeno chilies,chile pepper,1730,0,0,0,1,0,3,medium,個体差が大きい（辛2〜4）
+dried oregano,oregano,1706,0,0,0,2,0,1,medium,香りが本体
+chopped cilantro fresh,cilantro,1698,0,0,0,1,0,0,medium,香りが本体。石けん様に感じる人がいる（遺伝差）
+fresh lemon juice,lemon juice,1679,0,0,5,0,0,0,high,
+diced tomatoes,tomatoes,1623,2,1,3,0,2,0,medium,缶詰想定（加塩・酸味強め）
+fresh parsley,parsley,1604,0,0,0,2,0,0,medium,
+minced garlic,garlic,1583,1,0,0,0,1,1,low,garlic と同じ扱い（加熱基準）
+chicken broth,chicken broth,1554,0,3,0,0,3,0,medium,市販品想定。塩分は製品差が大きい
+sour cream,sour cream,1538,1,0,3,0,0,0,high,
+cayenne pepper,cayenne pepper,1523,0,0,0,1,0,5,high,
+brown sugar,brown sugar,1503,5,0,0,1,0,0,medium,糖蜜のわずかな苦み
+fresh ginger,ginger,1503,0,0,0,0,0,3,medium,
+cooking spray,vegetable oil,1490,0,0,0,0,0,0,high,
+shallots,shallots,1477,2,0,0,0,1,1,medium,加熱基準。生なら辛2
+garlic powder,garlic,1442,1,0,0,1,1,1,medium,
+lime,lime,1439,0,0,5,1,0,0,medium,果汁・くし切りで搾る前提。皮ごとなら苦みが増す
+lemon juice,lemon juice,1394,0,0,5,0,0,0,high,
+fresh lime juice,lime juice,1368,0,0,5,1,0,0,high,
+flour,flour,1348,0,0,0,0,0,0,high,
+honey,honey,1299,5,0,1,0,0,0,high,
+vanilla extract,vanilla extract,1298,1,0,0,2,0,0,low,香りが本体。原液はアルコールの苦み。甘い香りを甘1として残した
+paprika,paprika,1287,1,0,0,1,0,0,medium,スイートパプリカ想定。辛口（hot）なら辛2〜3
+chopped onion,onions,1250,2,0,0,0,1,0,medium,onions と同じ（加熱基準）
+fish sauce,fish sauce,1247,0,5,0,0,5,0,high,
+ground cinnamon,cinnamon,1231,1,0,0,2,0,1,medium,甘い香りを甘1とした。香りが本体
+avocado,avocado,1228,0,0,0,0,1,0,medium,脂肪のコクは6軸外。ほぼ無味
+canola oil,vegetable oil,1223,0,0,0,0,0,0,high,
+dry white wine,white wine,1218,0,0,3,1,0,0,medium,加熱でアルコールが飛ぶと酸味が残る
+lemon,lemon,1218,0,0,5,1,0,0,medium,果汁として使う前提。皮も使うなら苦み増
+rice vinegar,rice vinegar,1204,1,0,4,0,0,0,medium,無調味の米酢想定。すし酢タイプなら甘3・塩2
+yellow onion,onions,1184,2,0,0,0,1,0,medium,onions と同じ（加熱基準）
+green bell pepper,bell pepper,1180,1,0,0,2,0,0,high,
+cilantro leaves,cilantro,1160,0,0,0,1,0,0,medium,
+tomato paste,tomato paste,1158,2,1,3,1,4,0,medium,
+heavy cream,heavy cream,1146,1,0,0,0,0,0,high,脂肪のコクは6軸外
+cilantro,cilantro,1142,0,0,0,1,0,0,medium,
+fresh basil,basil,1137,0,0,0,1,0,0,medium,香りが本体
+boneless skinless chicken breasts,chicken,1111,0,0,0,0,2,0,medium,加熱後。味付けなし
+flat leaf parsley,parsley,1094,0,0,0,2,0,0,medium,
+white sugar,sugar,1093,5,0,0,0,0,0,high,
+lime juice,lime juice,1072,0,0,5,1,0,0,high,
+chicken stock,chicken broth,1039,0,2,0,0,3,0,medium,自家製なら塩0、市販なら塩3。中間
+bay leaves,bay leaves,1036,0,0,0,2,0,0,low,取り出す前提で単体では口にしない。煮出した液の苦み基準
+potatoes,potatoes,1018,1,0,0,0,1,0,medium,加熱後
+chicken,chicken,982,0,0,0,0,2,0,medium,部位不明。加熱後
+corn tortillas,corn tortillas,965,1,0,0,0,0,0,medium,
+salsa,salsa,963,1,2,3,0,1,2,medium,市販トマトサルサ想定。辛さは製品差大
+cumin,cumin,953,0,0,0,2,0,1,medium,
+freshly ground pepper,black pepper,949,0,0,0,1,0,4,medium,black pepper と解釈
+ground turmeric,turmeric,949,0,0,0,3,0,0,medium,土っぽい苦み。少量使用が普通
+baking soda,baking soda,942,0,2,0,2,0,0,medium,単体ではせっけん様の苦み・塩味。料理中では中和されて消える
+sea salt,salt,940,0,5,0,0,0,0,high,
+cumin seed,cumin,935,0,0,0,2,0,1,medium,
+garam masala,garam masala,925,1,0,0,2,0,2,medium,ブレンドの配合差あり
+shrimp,shrimp,912,2,1,0,0,3,0,medium,加熱後。甘みはグリシン由来
+black beans,black beans,896,1,0,0,0,1,0,medium,加熱後。缶詰なら塩1
+zucchini,zucchini,892,1,0,0,0,0,0,high,
+ground beef,ground beef,877,0,0,0,0,3,0,medium,加熱後
+dried thyme,thyme,873,0,0,0,2,0,1,medium,
+large garlic cloves,garlic,873,1,0,0,0,1,1,low,garlic と同じ扱い（加熱基準）
+flour tortillas,flour tortillas,865,0,1,0,0,0,0,medium,
+tomato sauce,tomato sauce,865,2,2,2,0,3,0,medium,米国の缶入りトマトソース（無調味寄り）想定
+buttermilk,buttermilk,863,1,1,3,0,0,0,medium,
+plum tomatoes,tomatoes,858,2,0,2,0,2,0,medium,
+coconut milk,coconut milk,854,2,0,0,0,0,0,high,
+granulated sugar,sugar,849,5,0,0,0,0,0,high,
+fresh cilantro,cilantro,841,0,0,0,1,0,0,medium,
+bay leaf,bay leaves,839,0,0,0,2,0,0,low,bay leaves と同じ
+celery,celery,837,0,1,0,1,1,0,medium,ナトリウムのわずかな塩味と青い苦み
+crushed red pepper,red pepper flakes,825,0,0,0,1,0,4,high,
+chopped cilantro,cilantro,796,0,0,0,1,0,0,medium,
+chicken breasts,chicken,793,0,0,0,0,2,0,medium,
+mayonaise,mayonnaise,781,1,2,2,0,1,0,medium,米国式（甘みあり）想定
+shredded cheddar cheese,cheddar cheese,769,0,3,1,0,3,0,medium,熟成度で旨み・酸味が変わる
+cucumber,cucumber,768,1,0,0,0,0,0,high,皮の苦みは品種差
+green chilies,chile pepper,768,0,0,0,1,0,3,low,インドの青唐辛子（辛4）と米国の缶詰マイルドチリ（辛1〜2）が混在
+ground coriander,coriander,768,1,0,0,1,0,0,medium,種子の粉。柑橘様の香りが本体
+whole milk,milk,764,2,0,0,0,0,0,high,
+red wine vinegar,vinegar,752,0,0,5,0,0,0,high,
+tumeric,turmeric,738,0,0,0,3,0,0,medium,綴り違い（turmeric）
+cinnamon,cinnamon,696,1,0,0,2,0,1,medium,
+curry powder,curry powder,694,1,0,0,2,0,2,medium,辛さは製品差大（mild〜hot）
+worcestershire sauce,worcestershire sauce,688,2,3,3,0,3,1,medium,
+white onion,onions,684,1,0,0,0,0,2,medium,メキシコ料理で生の薬味に使うことが多いので生基準
+ground ginger,ginger,678,0,0,0,1,0,3,medium,乾燥粉。生より苦みが出る
+sesame seeds,sesame seeds,676,1,0,0,1,1,0,medium,香ばしさが本体
+hot sauce,hot sauce,674,0,2,3,0,0,4,medium,タバスコ型（酢＋唐辛子）想定
+red pepper flakes,red pepper flakes,669,0,0,0,1,0,4,high,
+cinnamon sticks,cinnamon,646,1,0,0,2,0,1,low,煮出して取り出す前提。単体では口にしない
+red chili peppers,chile pepper,644,0,0,0,0,0,4,medium,
+bacon,bacon,620,1,4,0,0,4,0,high,加熱後
+whipping cream,heavy cream,619,1,0,0,0,0,0,high,
+boneless skinless chicken breast halves,chicken,618,0,0,0,0,2,0,medium,
+peanut oil,vegetable oil,610,0,0,0,0,0,0,high,精製油想定
+ground nutmeg,nutmeg,605,1,0,0,2,0,1,medium,香りが本体
+clove,cloves,600,0,0,0,3,0,3,medium,共起（cinnamon sticks・インド料理）からスパイスのクローブと判断。ニンニク片ではない。オイゲノールのしびれを辛に入れた
+parmesan cheese,parmesan cheese,591,0,4,1,0,5,0,high,
+dried basil,basil,585,0,0,0,1,0,0,medium,
+peeled fresh ginger,ginger,582,0,0,0,0,0,3,medium,
+coarse salt,salt,578,0,5,0,0,0,0,high,
+mushrooms,mushrooms,578,0,0,0,0,3,0,medium,加熱後。ホワイトマッシュルーム想定
+warm water,water,577,0,0,0,0,0,0,high,
+large egg yolks,egg yolks,575,1,0,0,0,2,0,medium,加熱後
+balsamic vinegar,balsamic vinegar,574,3,0,4,0,1,0,medium,熟成度で甘みが大きく変わる
+celery ribs,celery,567,0,1,0,1,1,0,medium,
+cream cheese,cream cheese,562,1,2,2,0,0,0,medium,
+white vinegar,vinegar,554,0,0,5,0,0,0,high,
+egg yolks,egg yolks,542,1,0,0,0,2,0,medium,
+capers,capers,541,0,4,3,1,0,0,medium,塩漬け・酢漬けで比率が変わる
+ground red pepper,cayenne pepper,538,0,0,0,1,0,5,medium,米国では cayenne の別名として使われる
+onion powder,onions,528,2,0,0,1,1,0,medium,
+dijon mustard,dijon mustard,513,0,3,3,1,0,4,medium,
+rice,rice,509,1,0,0,0,0,0,high,炊いた後
+cold water,water,506,0,0,0,0,0,0,high,
+crushed red pepper flakes,red pepper flakes,505,0,0,0,1,0,4,high,
+mirin,mirin,503,4,0,0,0,1,0,high,本みりん想定。みりん風調味料も甘4
+fresh basil leaves,basil,502,0,0,0,1,0,0,medium,
+eggplant,eggplant,501,0,0,0,1,0,0,medium,加熱後。品種によりアクの苦み
+powdered sugar,powdered sugar,501,5,0,0,0,0,0,high,
+large egg whites,egg whites,485,0,1,0,0,0,0,medium,わずかな塩味・硫黄臭
+cooking oil,vegetable oil,483,0,0,0,0,0,0,high,
+lime wedges,lime,482,0,0,5,1,0,0,medium,搾って使う前提
+shredded mozzarella cheese,mozzarella cheese,474,1,2,1,0,2,0,medium,低水分の米国式シュレッド想定。フレッシュモッツァレラより塩・旨みが強い
+fat free less sodium chicken broth,chicken broth,473,0,1,0,0,3,0,medium,減塩品
+ground pork,pork,473,1,0,0,0,2,0,medium,加熱後
+sliced green onions,green onions,472,1,0,0,0,0,2,medium,
+cayenne,cayenne pepper,470,0,0,0,1,0,5,high,
+mozzarella cheese,mozzarella cheese,467,1,1,1,0,1,0,medium,フレッシュかシュレッドか不明。中間
+medium shrimp,shrimp,461,2,1,0,0,3,0,medium,
+raisins,raisins,460,5,0,2,0,0,0,high,
+red pepper,bell pepper,459,2,0,0,0,0,1,low,red bell pepper と唐辛子（red chili / 粉）のどちらも含む。bell 寄りに採点し辛1を残した
+coriander,coriander,458,1,0,0,1,0,0,low,種子（ground coriander）か葉（cilantro）か不明。共起はインド料理が多く種子寄り
+sauce,sauce,458,2,3,1,0,2,0,low,何のソースか不明。共起は soy sauce・sugar・water が多く、中華系の合わせ調味料が多いと推定
+finely chopped onion,onions,457,2,0,0,0,1,0,medium,
+oyster sauce,oyster sauce,455,2,4,0,0,5,0,high,
+sweet potatoes,sweet potatoes,455,4,0,0,0,0,0,high,加熱後
+beansprouts,beansprouts,454,1,0,0,0,0,0,medium,緑豆もやし想定。豆臭さは6軸外
+black peppercorns,black pepper,453,0,0,0,1,0,4,medium,ホールで煮出す用途が多く、噛めば辛4
+crushed tomatoes,tomatoes,453,2,1,3,0,2,0,medium,缶詰想定
+egg whites,egg whites,453,0,1,0,0,0,0,medium,
+cheese,cheese,447,0,3,1,0,3,0,low,種類不明。チェダー相当として採点
+fresh rosemary,rosemary,442,0,0,0,2,0,1,medium,
+oregano,oregano,440,0,0,0,2,0,1,medium,
+white pepper,white pepper,439,0,0,0,1,0,4,medium,発酵臭は6軸外
+cherry tomatoes,tomatoes,436,3,0,2,0,2,0,high,
+leeks,leeks,435,2,0,0,0,1,0,medium,加熱後
+ketchup,ketchup,432,4,2,3,0,2,0,high,
+hoisin sauce,hoisin sauce,429,4,3,1,0,2,0,high,
+chopped celery,celery,426,0,1,0,1,1,0,medium,
+low sodium soy sauce,soy sauce,425,1,4,0,0,4,0,high,減塩でも塩は強い
+cheddar cheese,cheddar cheese,424,0,3,1,0,3,0,medium,
+light brown sugar,brown sugar,422,5,0,0,0,0,0,high,
+cabbage,cabbage,416,2,0,0,1,0,0,medium,生はわずかな辛み（辛子油）もある
+fresh mint,mint,416,0,0,0,1,0,0,medium,清涼感（メントール）は6軸外。辛には入れない
+large shrimp,shrimp,414,2,1,0,0,3,0,medium,
+vegetable broth,vegetable broth,409,1,3,0,0,2,0,medium,市販品想定
+cracked black pepper,black pepper,408,0,0,0,1,0,4,high,
+spring onions,green onions,407,1,0,0,0,0,2,medium,
+peanuts,peanuts,406,1,0,0,1,2,0,medium,無塩ローストの想定。塩味付きなら塩3
+chickpeas,chickpeas,402,1,0,0,0,1,0,medium,加熱後
+confectioners sugar,powdered sugar,395,5,0,0,0,0,0,high,
+coriander seeds,coriander,395,1,0,0,1,0,0,medium,
+italian seasoning,italian seasoning,395,0,0,0,2,0,1,medium,乾燥ハーブのブレンド（塩なし）
+fresh oregano,oregano,393,0,0,0,2,0,1,medium,生のほうが刺激が強い
+bell pepper,bell pepper,387,2,0,0,1,0,0,low,色不明。赤（甘3）と緑（苦2）の中間
+cooked rice,rice,387,1,0,0,0,0,0,high,
+lean ground beef,ground beef,387,0,0,0,0,3,0,medium,
+ground pepper,black pepper,385,0,0,0,1,0,4,medium,
+low salt chicken broth,chicken broth,385,0,1,0,0,3,0,medium,
+frozen peas,peas,383,3,0,0,0,1,0,high,
+beef broth,beef broth,381,0,3,0,0,4,0,medium,市販品想定
+active dry yeast,yeast,377,0,0,0,2,2,0,low,単体では苦みと旨み。パン生地では発酵後に消える
+cajun seasoning,cajun seasoning,376,0,4,0,1,1,3,medium,塩入りブレンド想定（製品差大）
+chopped fresh thyme,thyme,375,0,0,0,2,0,1,medium,
+green pepper,bell pepper,373,1,0,0,2,0,0,medium,共起（onions・cajun_creole）から green bell pepper と判断。青唐辛子の可能性も残る
+ground cloves,cloves,371,0,0,0,3,0,3,medium,
+cornmeal,cornmeal,368,1,0,0,0,0,0,medium,加熱後
+white wine,white wine,367,1,0,3,1,0,0,low,辛口か甘口か不明
+spinach,spinach,366,0,0,0,1,1,0,medium,シュウ酸のえぐみを苦1とした
+ground allspice,allspice,364,1,0,0,2,0,2,medium,
+lemongrass,lemongrass,364,0,0,1,1,0,0,low,香りが本体。硬く単体では食べない
+plain yogurt,yogurt,364,1,0,3,0,0,0,high,
+thyme,thyme,361,0,0,0,2,0,1,medium,
+feta cheese crumbles,feta cheese,358,0,4,3,0,2,0,medium,
+hot water,water,356,0,0,0,0,0,0,high,
+orange,orange,355,4,0,2,0,0,0,high,
+toasted sesame oil,sesame oil,355,0,0,0,1,1,0,medium,
+long-grain rice,rice,353,1,0,0,0,0,0,high,
+parmigiano reggiano cheese,parmesan cheese,353,0,4,1,0,5,0,high,
+fennel seeds,fennel seeds,352,2,0,0,1,0,0,medium,アニス様の甘い香りを甘2とした
+ricotta cheese,ricotta cheese,352,2,1,0,0,0,0,medium,
+white wine vinegar,vinegar,352,0,0,5,0,0,0,high,
+boiling water,water,350,0,0,0,0,0,0,high,
+cider vinegar,cider vinegar,348,1,0,5,0,0,0,high,
+ground white pepper,white pepper,348,0,0,0,1,0,4,high,
+pinenuts,pine nuts,348,1,0,0,1,1,0,medium,
+light soy sauce,soy sauce,347,0,5,0,0,3,0,medium,中国式の生抽（濃口醤油より塩辛く色が薄い）想定。日本の淡口でも塩5
+chopped garlic,garlic,345,1,0,0,0,1,1,low,garlic と同じ扱い（加熱基準）
+fresh thyme,thyme,345,0,0,0,2,0,1,medium,
+parsley,parsley,345,0,0,0,2,0,0,medium,
+sake,sake,345,1,0,1,1,2,0,medium,加熱でアルコールが飛ぶ前提
+smoked paprika,paprika,345,1,0,0,1,0,1,medium,燻製香は6軸外。スペインの picante なら辛3
+boneless chicken skinless thigh,chicken,343,0,0,0,0,3,0,medium,もも肉は胸肉より旨み強め
+grated lemon zest,lemon zest,342,0,0,1,2,0,0,medium,香りが本体。精油の苦み
+spaghetti,pasta,342,0,0,0,0,0,0,high,ゆでた後（ゆで湯の塩は含めない）
+green beans,green beans,341,1,0,0,1,0,0,medium,加熱後
+yellow corn meal,cornmeal,341,1,0,0,0,0,0,medium,
+chile pepper,chile pepper,340,0,0,0,1,0,3,low,品種不明
+low sodium chicken broth,chicken broth,339,0,1,0,0,3,0,medium,
+fresh ginger root,ginger,338,0,0,0,0,0,3,medium,
+orange juice,orange juice,338,4,0,2,0,0,0,high,
+half & half,heavy cream,337,2,0,0,0,0,0,high,乳脂肪 10〜18%。牛乳に近い甘み
+chicken thighs,chicken,336,0,0,0,0,3,0,medium,
+sweet onion,onions,336,3,0,0,0,1,0,medium,ビダリア等の甘玉ねぎ。生でも辛み弱い
+chopped parsley,parsley,333,0,0,0,2,0,0,medium,
+shiitake,shiitake,331,0,0,0,0,4,0,medium,生を加熱した基準。干し椎茸を戻したものなら旨5
+corn,corn,329,4,0,0,0,1,0,medium,スイートコーン想定
+basmati rice,rice,326,1,0,0,0,0,0,high,
+shredded monterey jack cheese,monterey jack cheese,325,1,2,1,0,2,0,medium,
+tomatillos,tomatillos,322,1,0,4,0,0,0,medium,
+chiles,chile pepper,321,0,0,0,1,0,3,low,品種不明（生・乾燥とも）
+pasta,pasta,321,0,0,0,0,0,0,high,ゆでた後
+dark brown sugar,brown sugar,319,5,0,0,1,0,0,high,糖蜜分が多くわずかな苦み
+chopped fresh mint,mint,317,0,0,0,1,0,0,medium,
+vinegar,vinegar,316,0,0,5,0,0,0,high,
+mustard seeds,mustard seeds,313,0,0,0,2,0,2,low,油で弾かせるインド式の用途では辛みより香ばしさ。すり潰せば辛4
+dark soy sauce,soy sauce,312,2,4,0,1,3,0,medium,中国式の老抽想定（カラメル入り・とろみ・やや甘い）
+vanilla,vanilla extract,311,1,0,0,2,0,0,low,vanilla extract と同じ
+dry red wine,red wine,309,0,0,2,3,0,0,medium,渋み（タンニン）は6軸外だが苦に寄せた
+ghee,ghee,307,1,0,0,0,1,0,medium,乳の焦がしたコク。脂は6軸外
+bread crumbs,bread crumbs,306,1,1,0,0,0,0,medium,
+hot pepper sauce,hot sauce,306,0,2,3,0,0,4,medium,
+green chile,chile pepper,302,0,0,0,1,0,2,low,米国の缶詰グリーンチリ（アナハイム系）想定で辛さ控えめ
+tortilla chips,tortilla chips,302,0,3,0,0,0,0,high,
+pork,pork,300,1,0,0,0,2,0,medium,加熱後。部位不明
+serrano chile,chile pepper,299,0,0,0,1,0,4,medium,
+chopped tomatoes,tomatoes,298,2,0,2,0,2,0,medium,生か缶詰か不明
+sriracha,sriracha,298,2,2,2,0,1,4,high,
+cooked chicken,chicken,295,0,0,0,0,2,0,medium,
+enchilada sauce,enchilada sauce,295,1,2,1,1,2,2,medium,赤いエンチラーダソース想定
+toasted sesame seeds,sesame seeds,294,1,0,0,1,1,0,medium,
+arborio rice,rice,292,1,0,0,0,0,0,high,
+yellow bell pepper,bell pepper,291,3,0,0,0,0,0,high,
+dry bread crumbs,bread crumbs,287,1,1,0,0,0,0,medium,
+fresh parmesan cheese,parmesan cheese,286,0,4,1,0,5,0,high,
+fine sea salt,salt,285,0,5,0,0,0,0,high,
+fresh coriander,cilantro,285,0,0,0,1,0,0,medium,fresh coriander は葉（cilantro）
+prosciutto,prosciutto,284,1,5,0,0,4,0,high,
+basil,basil,282,0,0,0,1,0,0,medium,
+chopped pecans,pecans,282,2,0,0,1,0,0,medium,
+garlic paste,garlic,282,1,0,0,0,1,1,low,garlic と同じ扱い（加熱基準）。市販品は塩入りのこともある
+radishes,radishes,282,0,0,0,1,0,2,high,生
+corn kernels,corn,280,4,0,0,0,1,0,medium,
+juice,juice,280,2,0,3,0,0,0,low,何の果汁か不明。共起（olive oil・garlic・トマト）から柑橘の搾り汁と推定し酸3
+long grain white rice,rice,277,1,0,0,0,0,0,high,
+saffron threads,saffron,277,0,0,0,3,0,0,medium,少量使用が普通。単体では苦い
+creole seasoning,creole seasoning,276,0,4,0,1,1,2,medium,塩入りブレンド想定（製品差大）
+melted butter,butter,276,1,2,0,0,1,0,low,有塩か無塩か不明。butter と同じく有塩として採点
+beef,beef,273,0,0,0,0,3,0,medium,加熱後。部位不明
+fresh mushrooms,mushrooms,272,0,0,0,0,3,0,medium,
+sweetened condensed milk,sweetened condensed milk,271,5,0,0,0,0,0,high,
+taco seasoning,taco seasoning,271,1,4,0,1,1,2,medium,市販ミックス（塩・唐辛子・クミン・でんぷん）想定
+baguette,baguette,270,1,1,0,0,1,0,medium,
+romaine lettuce,romaine lettuce,270,1,0,0,1,0,0,high,
+apple cider vinegar,cider vinegar,268,1,0,5,0,0,0,high,
+chopped green bell pepper,bell pepper,268,1,0,0,2,0,0,high,
+feta cheese,feta cheese,268,0,4,3,0,2,0,medium,
+mango,mango,268,5,0,1,0,0,0,high,完熟想定
+okra,okra,268,1,0,0,0,0,0,medium,加熱後。粘りは6軸外

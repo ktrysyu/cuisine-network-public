@@ -1,0 +1,17 @@
+{
+  "canonical": "soy sauce",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 4
+  },
+  "ingredient": "soy sauce",
+  "n_recipes": 3296,
+  "note": "",
+  "order": 13,
+  "reviewed": true
+}

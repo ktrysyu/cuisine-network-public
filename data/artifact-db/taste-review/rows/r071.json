@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "boneless skinless chicken breasts",
+  "n_recipes": 1111,
+  "note": "加熱後。味付けなし",
+  "order": 71,
+  "reviewed": true
+}

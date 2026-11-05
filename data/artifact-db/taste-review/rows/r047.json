@@ -1,0 +1,25 @@
+{
+  "canonical": "shallots",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "shallots",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 1,
+    "sweet": 2,
+    "umami": 1
+  },
+  "n_recipes": 1477,
+  "note": "加熱基準。生なら辛2",
+  "order": 47,
+  "reviewed": true
+}

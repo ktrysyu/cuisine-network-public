@@ -1,0 +1,17 @@
+{
+  "canonical": "italian seasoning",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "italian seasoning",
+  "n_recipes": 395,
+  "note": "乾燥ハーブのブレンド（塩なし）",
+  "order": 196,
+  "reviewed": true
+}

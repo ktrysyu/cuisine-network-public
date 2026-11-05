@@ -1,0 +1,17 @@
+{
+  "canonical": "garam masala",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "garam masala",
+  "n_recipes": 925,
+  "note": "ブレンドの配合差あり",
+  "order": 87,
+  "reviewed": true
+}

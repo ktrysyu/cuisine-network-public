@@ -1,0 +1,17 @@
+{
+  "canonical": "nutmeg",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "ground nutmeg",
+  "n_recipes": 605,
+  "note": "香りが本体",
+  "order": 128,
+  "reviewed": true
+}

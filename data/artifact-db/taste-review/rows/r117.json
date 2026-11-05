@@ -1,0 +1,17 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "white onion",
+  "n_recipes": 684,
+  "note": "メキシコ料理で生の薬味に使うことが多いので生基準",
+  "order": 117,
+  "reviewed": true
+}

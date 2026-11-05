@@ -1,0 +1,17 @@
+{
+  "canonical": "green onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "spring onions",
+  "n_recipes": 407,
+  "note": "",
+  "order": 191,
+  "reviewed": true
+}

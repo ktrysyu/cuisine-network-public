@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>規則と出典</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&family=Noto+Sans+JP:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&family=Roboto+Mono:wght@500&display=swap"><style>:root{--ground:#FCFCFC;--surface:#F3F3F3;--rule:#E1E1E1;--ink:#171717;--ink-muted:#606060;--main:#B63552;--on-main:#FFFFFF;
+--heading:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif;--body:"IBM Plex Sans","IBM Plex Sans JP",system-ui,sans-serif;--numeric:"Roboto Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;letter-spacing:.04em;padding:0 16px 64px}
+main{max-width:860px;margin:0 auto;padding-top:40px}
+h1{font-family:var(--heading);font-size:clamp(22px,4vw,30px);line-height:1.4;margin:8px 0;letter-spacing:.05em}
+h2{font-family:var(--heading);font-size:19px;margin:40px 0 8px;letter-spacing:.05em}
+p,ul{margin:0 0 16px}
+.eyebrow{font-family:var(--numeric);font-size:11.5px;color:var(--main);margin:0;letter-spacing:.08em}
+.muted{color:var(--ink-muted)}.small{font-size:13.5px}
+.num,code{font-family:var(--numeric)}
+a{color:var(--main)}
+.check{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.check .ck{background:var(--main);color:var(--on-main);border-radius:4px;padding:0 8px;font-weight:600}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:16px 0}
+dl.facts dt{color:var(--ink-muted);font-size:13.5px}dl.facts dd{margin:0}
+blockquote{margin:0 0 8px;padding:8px 16px;background:var(--surface);border-radius:8px;font-size:15px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;background:var(--surface);padding:8px}td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+footer{max-width:860px;margin:64px auto 0;font-size:13.5px;color:var(--ink-muted);border-top:1px solid var(--rule);padding-top:8px}
+</style></head>
+<body><main>
+<p class="eyebrow">Cuisine Network · 根拠</p>
+<h1>規則と出典</h1>
+<p>通説ページと調理の計算が使っている規則（1つの事実）と出典を、1つずつのページにしました。どこまで確かめたか（本文を読んだか、抜粋だけか）を各ページの先頭に出しています。この一覧は Claude（Anthropic の AI）が集めた記録から自動で作っています。</p>
+<h2>規則（81）</h2><p class="muted small">確かめ方: 本文確認 30・抄録確認 8・抜粋のみ 37・未確認 5・書籍(章) 1</p>
+<div class="tablewrap"><table><thead><tr><th>id</th><th>事実</th><th>確かめ方</th><th>確かさ</th><th>通説</th></tr></thead><tbody>
+<tr><td class="num"><a href="rules/R-E01.html">R-E01</a></td><td>egg_white_stage 0→1（オボトランスフェリンが固まり始める）</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E02.html">R-E02</a></td><td>egg_white_stage 1→2</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E03.html">R-E03</a></td><td>egg_white_stage 2→3（オボアルブミンが凝固）</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E04.html">R-E04</a></td><td>卵白たんぱく質全体が凝固する温度範囲</td><td>本文確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E05.html">R-E05</a></td><td>egg_yolk_stage 0→1→2</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E06.html">R-E06</a></td><td>egg_yolk_stage 2→3（固ゆで卵のほろほろ）</td><td>本文確認</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E07.html">R-E07</a></td><td>egg_gel_stage → 2 以上</td><td>本文確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E08.html">R-E08</a></td><td>同じ到達温度でも保持時間で凝固が進む。70℃では30分で卵白の流動性が消える。65・68℃では卵黄の高さが保持時間とともに増す</td><td>抄録確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E09.html">R-E09</a></td><td>凝固（とろみ開始）温度が上がる。カスタードは 80〜85℃で凝固</td><td>抜粋のみ</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E10.html">R-E10</a></td><td>凝固温度がさらに上がる。牛乳の効果と足し合わさる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E11.html">R-E11</a></td><td>ゲル強度が下がる（卵白で最も大きい）</td><td>抄録確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E12.html">R-E12</a></td><td>凝固力（ゲル化）が促進される。卵白は 0.5% で著しく、1.0% で最高。卵黄は 1.0% まではあまり変わらず 1.5〜2.0% で著しく促進</td><td>抄録確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E13.html">R-E13</a></td><td>凝固温度は上がる。卵白に 1.5% 以上で著しく上がる</td><td>抄録確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E14.html">R-E14</a></td><td>卵白の凝固が促進される（ポーチドエッグに酢を入れる理由）</td><td>未確認</td><td>低</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E15.html">R-E15</a></td><td>porosity（す）を抑える。高すぎると す立ち・硬くなる</td><td>抜粋のみ</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E16.html">R-E16</a></td><td>egg_dilution 約25%。やわらかく固まる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E17.html">R-E17</a></td><td>egg_gel_stage → 2</td><td>本文確認</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E18.html">R-E18</a></td><td>砂糖は泡立て時間を延ばすが泡を安定させる。酸（酒石酸など）は pH を下げて安定させる。脂肪（卵黄を含む）は泡立ちを妨げる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E19.html">R-E19</a></td><td>凝固温度が違うので固まり方にむらが出る</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E20.html">R-E20</a></td><td>撹拌あり → gel_structure=小片（カード）。撹拌なし → 連続ゲル</td><td>未確認</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-E21.html">R-E21</a></td><td>卵白が散る前に固まり、卵黄を包んでまとまる（egg_white_cohesion=まとまる）。沸騰（100℃）では対流で卵白がちぎれる（ばらける）。70℃では卵白が固まりきらない。3〜4分で卵白は完全に固まり、卵黄の中心は 65℃未満（流動）</td><td>本文確認</td><td>低</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E22.html">R-E22</a></td><td>卵白の凝固が速まり、湯の中で飛び散らない。ただし卵の表面に不規則な膜・ちぎれができる（egg_white_cohesion=まとまる（表面に膜・ちぎれ））</td><td>本文確認</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-E23.html">R-E23</a></td><td>オボアルブミンの熱安定性が下がる（pH が高いほど安定）。水中 5% で変性温度 80.22℃</td><td>抄録確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-D01.html">R-D01</a></td><td>milk_casein 分散→凝集（カゼインの等電点）</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-D02.html">R-D02</a></td><td>乳清たんぱく質は熱で変性する。カゼインは熱に強い（変性は約120℃から）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-D03.html">R-D03</a></td><td>脂肪球が部分合一してネットワークを作り気泡を安定させる（fat_phase → 部分合一ネットワーク、foam_stage ↑）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-D04.html">R-D04</a></td><td>fat_phase → 分離（バターと液に分かれる）。foam_stage=4</td><td>書籍(章)</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-D05.html">R-D05</a></td><td>fat_phase 可塑→液体。明確な融点はなく幅で融ける</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-D06.html">R-D06</a></td><td>乳脂肪の融解範囲</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S01.html">R-S01</a></td><td>starch_gel 0→1（糊化）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S02.html">R-S02</a></td><td>starch_gel 0→1</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S03.html">R-S03</a></td><td>starch_gel 0→1</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S04.html">R-S04</a></td><td>starch_gel → 約1</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S05.html">R-S05</a></td><td>炊き上がりは米の重さの 2.1〜2.3倍、飯の水分 約60〜65%</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S06.html">R-S06</a></td><td>water ↑（吸水率 20〜25%）。30℃は5℃より速い。最低30分、できれば60分、約2時間で飽和</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S07.html">R-S07</a></td><td>炊飯直後の糊化度は加水比によらず約95%。1.2倍未満では沸騰が不十分。官能評価は1.3〜1.4倍が高い</td><td>抄録確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S08.html">R-S08</a></td><td>starch_retro ↑（老化して硬くなる）。0〜4℃付近・水分30〜60%で最も速い</td><td>未確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S09.html">R-S09</a></td><td>そのルーで作ったソースの粘度が下がる（でんぷんの増粘力が落ちる）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S10.html">R-S10</a></td><td>starch_gel → 1、とろみが出る。粉臭さを消すには長め（最長30分）に煮る</td><td>抜粋のみ</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S11.html">R-S11</a></td><td>cell_wall → 硬化（ペクチンメチルエステラーゼが働く）。その後 80℃以上で長く煮ても煮崩れしにくい。60℃付近に長く置きすぎると柔らかくならない（2時間で生より硬くなることも）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-S12.html">R-S12</a></td><td>cell_wall → 軟化 → 崩壊（ペクチンが溶け出して煮崩れ）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-G01.html">R-G01</a></td><td>gluten 0→1（グリアジンとグルテニンが結びつく）。水がなければ形成しない</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-G02.html">R-G02</a></td><td>gluten ↑（1→2→3）</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-G03.html">R-G03</a></td><td>gluten_relaxed 0→1（弾性が下がる）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-G04.html">R-G04</a></td><td>gluten ↑ で生地が締まる。粉気が少し残る程度で止める</td><td>抜粋のみ</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-L01.html">R-L01</a></td><td>co2 0→1（濡れた時点）→2（加熱時）</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-L02.html">R-L02</a></td><td>co2 → 3。yeast_alive 活性→死滅（≧55〜60℃）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-L03.html">R-L03</a></td><td>表面の maillard ↑、co2 第2段</td><td>抜粋のみ</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C01.html">R-C01</a></td><td>caramel 0→2</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C02.html">R-C02</a></td><td>caramel 0→2</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C03.html">R-C03</a></td><td>ショ糖は熱力学的には融けず、熱分解で結晶が崩れる（見かけの融解）。熱分解は時間をかければ低い温度でも始まる</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C04.html">R-C04</a></td><td>結晶のまま色づく（caramel 0→1）</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C05.html">R-C05</a></td><td>syrup_stage が温度とともに上がる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-C06.html">R-C06</a></td><td>熱分解（焦げ）。caramel → 3</td><td>本文確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-M01.html">R-M01</a></td><td>maillard ↑（速く進む）</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-M02.html">R-M02</a></td><td>表面温度が沸点を超えないため、メイラードはほとんど進まない</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-M03.html">R-M03</a></td><td>maillard が速くなる。pH 6〜8 で最適との記述</td><td>本文確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-M04.html">R-M04</a></td><td>maillard は遅いが進む</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-M05.html">R-M05</a></td><td>maillard が最も速い</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-F01.html">R-F01</a></td><td>表面は乾いてクラスト（T_surface_max &gt; 100、maillard ↑）。中心は100℃を超えない（water は中心に残る）</td><td>抜粋のみ</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-O01.html">R-O01</a></td><td>water ↓、onion_sulfur → 0（刺激臭が消える）、甘く香ばしい香り、maillard/caramel ↑。ブドウ糖・果糖・遊離糖の総量は減る</td><td>抄録確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-O02.html">R-O02</a></td><td>遊離糖（生で約6%）は増えず、変わらないか減る。硫黄化合物は減り、糖の分解で甘い香りの成分ができる。甘く感じるのは水分蒸発による濃縮と組織の軟化と考えられる（著者の考察）</td><td>抄録確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-O03.html">R-O03</a></td><td>褐変は糖とアミノ酸のメイラードが主で、温度が上がるとカラメル化も加わる</td><td>未確認</td><td>低</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-J01.html">R-J01</a></td><td>gelatin_state 乾燥→膨潤</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-J02.html">R-J02</a></td><td>gelatin_state → 溶解（ゾル）</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-J03.html">R-J03</a></td><td>粘度・ゲル強度が時間とともに下がる</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-J04.html">R-J04</a></td><td>gelatin_state ゾル→ゲル。ゲル化温度は融解温度より低い。濃度が上がると両方上がる。ブルームが上がると融解温度は下がりゲル化温度は上がる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-J05.html">R-J05</a></td><td>約5〜10℃で固まり、約20〜25℃で融ける（可逆）</td><td>抜粋のみ</td><td>低</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-J06.html">R-J06</a></td><td>gelatin_state → 分解（固まらない）。果物を加熱すると酵素が失活して固まる</td><td>抜粋のみ</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-P01.html">R-P01</a></td><td>meat_myosin 0→1、meat_collagen 0→1（変性して収縮）、meat_actin 0→1。硬さは筋原線維たんぱく質の変性で増す</td><td>抜粋のみ</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-P02.html">R-P02</a></td><td>meat_myoglobin 0→1、meat_water_loss ↑</td><td>本文確認</td><td>中</td><td class="num">2</td></tr>
+<tr><td class="num"><a href="rules/R-P03.html">R-P03</a></td><td>meat_collagen 1→2（ゼラチンとして溶ける）</td><td>本文確認</td><td>中</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-P04.html">R-P04</a></td><td>meat_water_loss ↑（鳥のむね肉が乾く）</td><td>本文確認</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-P05.html">R-P05</a></td><td>状態変化ではなく制約。鶏肉 165°F（74℃）、牛ステーキ 145°F（63℃）＋3分休ませる、牛ひき肉 160°F（71℃）</td><td>抜粋のみ</td><td>高</td><td class="num">2</td></tr>
+<tr><td class="num"><a href="rules/R-P06.html">R-P06</a></td><td>加熱損失（失う重さの割合）は到達温度とともに増える。50℃ 7〜11%、60℃ 17〜21%、70℃ 29〜32%、80℃ 34〜40%</td><td>本文確認</td><td>中</td><td class="num">3</td></tr>
+<tr><td class="num"><a href="rules/R-P07.html">R-P07</a></td><td>保つ時間が足りるとサルモネラが 7 桁（1000万分の1）に減る。温度が低いほど長く要る（140°F 60℃で 25.7分、145°F 62.8℃で 8.6分、150°F 65.6℃で 2.7分、165°F 73.9℃で 10秒未満。鶏・脂肪 2%）</td><td>本文確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-W04.html">R-W04</a></td><td>沸点が上がる。上がり幅 ΔTb = Kb × m × i（m は水 1 kg あたりの溶けた物質の量 mol、食塩は Na⁺ と Cl⁻ に分かれるので i ≒ 2）</td><td>本文確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-W01.html">R-W01</a></td><td>媒体の温度は100℃が上限</td><td>本文確認</td><td>高</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-W02.html">R-W02</a></td><td>T_surface_max は沸点を超えない。高温の乾いた加熱（焼く・揚げる）で表面が乾いてはじめて100℃を超える</td><td>本文確認</td><td>高</td><td class="num"></td></tr>
+<tr><td class="num"><a href="rules/R-W03.html">R-W03</a></td><td>庫内を 85〜90℃ に下げられる</td><td>抜粋のみ</td><td>中</td><td class="num">1</td></tr>
+<tr><td class="num"><a href="rules/R-A01.html">R-A01</a></td><td>pH ↓（酢 約2.4〜3.0、レモン汁 約2.0〜2.6）</td><td>未確認</td><td>低</td><td class="num"></td></tr>
+</tbody></table></div>
+<h2>出典（72）</h2><p class="muted small">確かめ方: 本文確認 20・抄録確認 1・抜粋のみ 1・— 50</p>
+<div class="tablewrap"><table><thead><tr><th>id</th><th>出典</th><th>確かめ方</th></tr></thead><tbody>
+<tr><td class="num"><a href="sources/fooddb.html">fooddb</a></td><td>文部科学省『日本食品標準成分表（八訂）増補2023年』食品成分データベース</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/mcgee.html">mcgee</a></td><td>Harold McGee, On Food and Cooking: The Science and Lore of the Kitchen, 2nd ed., Scribner, 2004</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/soc_temps.html">soc_temps</a></td><td>Science of Cooking, &quot;Important temperatures in Cooking and Baking&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/soc_sousvide.html">soc_sousvide</a></td><td>Science of Cooking, &quot;Cooking Eggs Sous Vide&quot;（McGee p.85 を引用）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/wiki_caramel.html">wiki_caramel</a></td><td>Wikipedia &quot;Caramelization&quot;（温度表は McGee 2004, p.656 を引用）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/awatsu1982.html">awatsu1982</a></td><td>粟津原宏子 ほか (1982)「卵白および卵黄の熱凝固について―食塩,砂糖の添加による影響―」調理科学 15(2):114</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/tatsu2019.html">tatsu2019</a></td><td>N. Tatsutaguchi, M. Dai (2019)「温泉卵の凝固状態への加熱温度と保持時間の影響―好みの温泉卵を作るには―」日本調理科学会誌 52(5):345（著者名は J-STAGE の英字表記）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/maff_rice.html">maff_rice</a></td><td>農林水産省「米の調理特性」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/kainuma1987.html">kainuma1987</a></td><td>Y. Kainuma, A. Ema (1987)「加水量が炊飯に及ぼす影響」日本家政学会誌 38(7):567-575</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/tamaki2003.html">tamaki2003</a></td><td>M. Tamaki, M. Ukai (2003)「長時間炒めたタマネギの味, 香り, 遊離糖, 色の変化」日本家政学会誌 54(1):69</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/tokitomo1993.html">tokitomo1993</a></td><td>Y. Tokitomo, S. Yamanishi (1993)「加熱タマネギの甘いフレーバーについて」日本家政学会誌 44(5):347-353</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/mc_maillard.html">mc_maillard</a></td><td>Modernist Cuisine, &quot;The Maillard Reaction&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/maillard_overview.html">maillard_overview</a></td><td>ScienceDirect Topics &quot;Maillard Reaction&quot; / BAKERpedia &quot;Maillard Reaction&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/schmidt2011.html">schmidt2011</a></td><td>J. W. Lee, L. C. Thomas, S. J. Schmidt (2011) Can the thermodynamic melting temperature of sucrose, glucose, and fructose be measured using rapid-scanning DSC? J. Agric. Food Chem. 59(8)（巻号は記憶、要確認）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/roasted_sugar.html">roasted_sugar</a></td><td>Stella Parks（Serious Eats / BraveTart）の roasted sugar 手法を紹介した記事（Boston Univ. &quot;Trial by Fryer&quot; 2018 など）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/candy_stages.html">candy_stages</a></td><td>Wikipedia &quot;Candy making&quot;（糖液の段階の表）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/nitta.html">nitta</a></td><td>新田ゼラチン Web研究所「ゼラチン研究室 12. よりよく活用するために」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/ijfp2007.html">ijfp2007</a></td><td>Effects of Concentration, Bloom Degree, and pH on Gelatin Melting and Gelling Temperatures Using Small Amplitude Oscillatory Rheology. Int. J. Food Properties 10(4) (2007)</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/gelatin_home.html">gelatin_home</a></td><td>料理科学の森「ゼラチンの凝固温度と融解温度」ほか家庭向け解説</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/pineapple.html">pineapple</a></td><td>国立国会図書館 レファレンス協同データベース「パイナップルを入れるとゼラチンではかたまらないが、寒天では固まる」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/tornberg2005.html">tornberg2005</a></td><td>E. Tornberg (2005) Effects of heat on meat proteins – Implications on structure and quality of meat products. Meat Science 70:493-508（巻・頁は記憶、要確認）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/fsis.html">fsis</a></td><td>USDA FSIS &quot;Safe Minimum Internal Temperature Chart&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/cream2010.html">cream2010</a></td><td>Influence of whipping temperature on the whipping properties and rheological characteristics of whipped cream. J. Dairy Sci. (2010)</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/cream_overview.html">cream_overview</a></td><td>ScienceDirect Topics &quot;Whipped Cream&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/eggfoam_isu.html">eggfoam_isu</a></td><td>Iowa State Univ., Food Preparation Lab Manual for FSHN 1150, &quot;9.1 Introduction to Egg White Foams&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/eggfoam_yolk.html">eggfoam_yolk</a></td><td>Effect of Lipase and Phospholipase A1 on Foaming and Batter Properties of Yolk Contaminated Egg White (PMC10048306)</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/custard_textbook.html">custard_textbook</a></td><td>Modern Pastry and Plated Dessert Techniques, &quot;Coagulation&quot; (BCcampus Open Textbook)</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/custard_123.html">custard_123</a></td><td>123 Food Science &quot;Why Custard Thickens&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/casein.html">casein</a></td><td>Acid-induced gelation behavior of casein/whey protein solutions assessed by oscillatory rheology (PMC4152502) ほか</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/starch_gel.html">starch_gel</a></td><td>検索抜粋に出た複数論文（ResearchGate &quot;Studies on the Gelatinization Temperature of Some Cereal Starches&quot;、PMC12167104 など）。どの値がどの論文かは抜粋では分離できなかった</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/roux.html">roux</a></td><td>Effects of Cooking Temperatures and Starch Source on the Gelatinization and Thickening Power of Roux</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/roux_texts.html">roux_texts</a></td><td>LibreTexts &quot;4.2 Roux and Thickening&quot;（Kansas State Univ. FNDH 313）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/potato_pme.html">potato_pme</a></td><td>宝酒造 業務用調味料「煮崩れ～その要因と防止する方法～」、香西みどり「野菜の硬さと最適加熱時間の予測」（熱物性資料）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/gluten.html">gluten</a></td><td>Institute of Food Science and Technology &quot;Protein: gluten formation&quot; / Wikipedia &quot;Gluten&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/baking_powder.html">baking_powder</a></td><td>Wikipedia &quot;Baking powder&quot; / Britannica &quot;Double-acting baking powder&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/yeast.html">yeast</a></td><td>Exploratorium &quot;Yeast is Fussy About Temperature&quot; / ThermoWorks &quot;Homemade Bread: Temperature is Key&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/frying.html">frying</a></td><td>&quot;Changes in food caused by deep fat frying – A review.&quot; Archivos Latinoamericanos de Nutrición 63(1) (2013) ほか</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/chawan_web.html">chawan_web</a></td><td>三越伊勢丹 FOODIE「茶碗蒸しレシピ。卵と出汁は1:3が黄金比」ほか</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/kajiya.html">kajiya</a></td><td>カジヤ「カスタードプリンや茶碗蒸しの凝固温度は？」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/mirai.html">mirai</a></td><td>科学者の卵養成講座「プリンの“す”」（高校生の記事）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/omelet_web.html">omelet_web</a></td><td>オリーブオイルをひとまわし「ふんわり卵でオムレツを作ろう！コツや卵の凝固温度を紹介！」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/butter.html">butter</a></td><td>The Physics Factbook &quot;Melting Point of Butter&quot; / Pastry Arts Magazine &quot;Plasticity and Melting Points in Butter&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/pancake_web.html">pancake_web</a></td><td>Betty Crocker &quot;Fluffy Homemade Pancakes&quot; ほかレシピサイト</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/soc_poach.html">soc_poach</a></td><td>Science of Cooking, &quot;What are best methods to poach an egg?&quot;（McGee &quot;On Food and Cooking&quot; と Heston Blumenthal の手順を引用）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/terumimorita.html">terumimorita</a></td><td>Terumi Morita, &quot;Poached Egg&quot;（Journal / Recipes, 2025-08-28）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/travelingfoodlab.html">travelingfoodlab</a></td><td>樋口直哉（TravelingFoodLab.）「ポーチドエッグの作り方」note。『マギーキッチンサイエンス』p88（共立出版、香西みどり監訳）を引用</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/kyounoryouri.html">kyounoryouri</a></td><td>NHK「みんなのきょうの料理」脇雅世「ポーチドエッグ」</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/wiki_poached.html">wiki_poached</a></td><td>Wikipedia &quot;Poached egg&quot;</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/wang2025.html">wang2025</a></td><td>Wang L, Li R, Lv S, et al. The Thermodynamic and Gelation Properties of Ovalbumin and Lysozyme. Gels 2025;11(6):470. doi:10.3390/gels11060470</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/egg_structure.html">egg_structure</a></td><td>「たまごの構造」（個人のページ）。卵殻 8～11%、卵白 56～59%、卵黄 30～33%、卵殻の厚さ 0.2～0.38mm。検索抜粋では 卵白 57～63.4%・卵黄 28～30.6%・卵殻 8.1～12.4% という値もあった</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/egg_thermal.html">egg_thermal</a></td><td>熱拡散率 卵白 1.7×10⁻⁷ m²/s・卵黄 1.3×10⁻⁷ m²/s、熱伝導率 卵白 0.52・卵黄 0.34 W/(m·K)（ResearchGate の表 &quot;Thermal properties of egg components&quot;、本文は 403）。卵を模した熱シミュレータの特許（US10466188B2）では卵白 1.3〜2.3×10⁻⁷、卵黄 1.1〜1.4×10⁻⁷ m²/s</td><td>抜粋のみ</td></tr>
+<tr><td class="num"><a href="sources/dilorenzo2025.html">dilorenzo2025</a></td><td>E. Di Lorenzo, F. Romano, L. Ciriaco, N. Iaccarino, L. Izzo, A. Randazzo, P. Musto, E. Di Maio (2025) Periodic cooking of eggs. Communications Engineering 4:5。Table 4 に卵黄・卵白の熱伝導率・密度・比熱と変性の A・Ea（熱物性の元は Abbasnezhad et al. 2016 Food Sci Nutr 4:42）。CC BY-NC-ND 4.0</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wiki_boiled.html">wiki_boiled</a></td><td>Wikipedia &quot;Boiled egg&quot;（&quot;Soft-boiled eggs have a partially liquid yolk&quot; / &quot;heat will take longer to reach the yolk through the albumin&quot;）</td><td>—</td></tr>
+<tr><td class="num"><a href="sources/ashrae_thermal.html">ashrae_thermal</a></td><td>ASHRAE (1998) Refrigeration Handbook, Chapter 8 Thermal Properties of Foods. 表1・表2 は Choi, Y. &amp; Okos, M.R. (1986) Effects of temperature and composition on the thermal properties of foods. In: Food Engineering and Process Applications, Vol.1, pp.93–101 の式（ヤード・ポンド単位）。表5・表7 は食品の熱伝導率・熱拡散率の実測</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/ngadi2007.html">ngadi2007</a></td><td>M.O. Ngadi, D-K. Hwang (2007) Modelling Heat Transfer and Heterocyclic Amines Formation in Meat Patties during Frying. Agricultural Engineering International: the CIGR Ejournal, Manuscript BC 04 004, Vol. IX（厚さ 20mm の牛ひき肉のパティ、片面焼き器 180・200℃。鍋に触れた面 h=300、上面 60、側面 10 W/(m²·℃)、表面近くの温度に合うよう決めた値）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/tokyogas_steak.html">tokyogas_steak</a></td><td>東京ガス ウチコト「実証! 絶対に失敗しないステーキの焼き方【東京ガス調べ】」2021-09-21（オーストラリア産サーロイン 厚さ約2cm・250g、室温に戻す、中火、中心 55℃まで。90秒ごとに返して 6分30秒〜7分、15秒ごとに返して 5分30秒〜6分）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/aussiebeef_steak.html">aussiebeef_steak</a></td><td>オージー・ビーフ公式サイト「ステーキの上手な焼き方」（厚さ2cm以上。ミディアム: 強火約1分→弱火約2分→返して強火約30秒→弱火約2〜3分、中心 約55℃。3〜5分休ませる）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/thermoworks_medium.html">thermoworks_medium</a></td><td>ThermoWorks &quot;What Temperature is Medium Doneness?&quot; 2026-01-21（medium 135–145°F。目標より 2〜3°F 低く火から下ろすと休ませる間に約 3°F 上がる）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wiki_doneness.html">wiki_doneness</a></td><td>Wikipedia &quot;Doneness&quot;（表は Field Guide to Meat, 2005 を引く。Medium 60–65 °C）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/ebara_steak.html">ebara_steak</a></td><td>エバラ食品「お肉の焼き方ルール」（ミディアム 65℃〜70℃）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/amsa2015.html">amsa2015</a></td><td>AMSA (2015) Research Guidelines for Cookery, Sensory Evaluation, and Instrumental Tenderness Measurements of Meat, 2nd ed. ver.1.0（ステーキの厚さ 2.54cm。速く焼くと加熱後の上昇が 5℃ を超えることがある）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/mext2020_tables.html">mext2020_tables</a></td><td>文部科学省『日本食品標準成分表2020年版（八訂）』表12 調理方法の概要および重量変化率表、表13 揚げ物等における衣の割合及び脂質量の増減（じゃがいも 皮なし フライドポテト（生を揚げたもの）02067: くし形 1.5×1.5×5.0cm、油揚げ→油切り→油揚げ→油切り、重量変化率 71%、吸油量 4.0g／生 100g。水煮 02019: 重量変化率 97%）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wikibooks_hard_eggs.html">wikibooks_hard_eggs</a></td><td>Wikibooks Cookbook:Hard Cooked Eggs（蒸す方法: 鍋に湯 2 cm を強く沸かし、かごに卵、蓋をして約 12〜13 分、氷水で冷やす）。CC BY-SA</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/maff_dashimaki.html">maff_dashimaki</a></td><td>農林水産省「中東の家庭料理に向いた日本食レシピ だし巻きたまご」（卵 4 個・だし汁 150 mL・薄口醤油 小さじ2・砂糖 大さじ1/2・みりん風調味料 大さじ1/2。玉子焼き器を中火、卵液を 1/5 ずつ、周りが固まってきたら寄せて巻く）。政府標準利用規約 第2.0版</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wikibooks_creme_pat.html">wikibooks_creme_pat</a></td><td>Wikibooks Cookbook:Crème pâtissière（砂糖 1 カップ・卵黄 5・薄力粉 2/3 カップ・沸騰した牛乳 2 カップ・バター 大さじ1。中火で混ぜながらゆっくり沸騰させ、沸騰したら 2〜3 分混ぜて粉に火を通す）。CC BY-SA</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/fsis_poultry_tables.html">fsis_poultry_tables</a></td><td>USDA FSIS の Time and Temperature Tables for Cooking Poultry（サルモネラを 7 桁減らすのに要る時間。脂肪 2・4・6%…、鶏・七面鳥）を、Riverstone Health（米モンタナ州の保健所）が低温調理の手引きとして写した PDF（2025-03-04 作成）</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/libretexts_bpe.html">libretexts_bpe</a></td><td>Chemistry LibreTexts, Introductory Chemistry (CK-12) 16.14 &quot;Boiling Point Elevation&quot;（ΔTb = Kb × m、水の Kb は 0.512 ℃/m。パスタの湯の沸点を数℃上げるには 1 L に 100 g を超える食塩が要る）。CK-12 Curriculum Materials License</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/vaskoska2020.html">vaskoska2020</a></td><td>R. Vaskoska, M. Ha, Z.B. Naqvi, J.D. White, R.D. Warner (2020) Muscle, Ageing and Temperature Influence the Changes in Texture, Cooking Loss and Shrinkage of Cooked Beef. Foods 9(9):1289。牛の3つの筋肉（半腱様筋・大腿二頭筋・大腰筋）の 50×30×30 mm の角切りを 50・60・70・80℃の湯で中心がその温度になってから 30 分保った。CC BY 4.0</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wiki_searing.html">wiki_searing</a></td><td>Wikipedia &quot;Searing&quot;（&quot;Experiments to test the theory were carried out as early as the 1930s and found that the seared roasts lost the same amount of moisture or more.&quot; McGee 2004 On Food and Cooking p.161 を引く）。CC BY-SA</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wikibooks_fries.html">wikibooks_fries</a></td><td>Wikibooks Cookbook:French Fries（細い棒状に切る→水で洗う→水で約15分 simmer or parboil→水気を切る→175℃の油で 4〜5分「until light golden and crisp」→塩。二度揚げの変形は 177℃ で「nearly cooked but limp and pale」まで、冷ましてから 190℃ で「golden and crisp」まで）。CC BY-SA</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/wikibooks_boiled_potato.html">wikibooks_boiled_potato</a></td><td>Wikibooks Cookbook:Boiled Potatoes（同じ大きさに切る→水からゆで、沸騰したら弱く煮て「soft enough to be pierced gently with a fork」まで→湯を捨て、ふたを取ってごく弱火にかけ余分な水分を飛ばす。中くらいのいもで 15〜20分）。CC BY-SA</td><td>本文確認</td></tr>
+<tr><td class="num"><a href="sources/gamble1987.html">gamble1987</a></td><td>M.H. Gamble, P. Rice, J.D. Selman (1987) Relationship between oil uptake and moisture loss during frying of potato slices from c.v. Record U.K. tubers. Int. J. Food Sci. Technol. 22(3):233–241（1.5mm の薄切りを 145・165・185℃で揚げ、水の減りと油の増えはどちらも揚げ時間の平方根に比例）</td><td>抄録確認</td></tr>
+</tbody></table></div>
+</main><footer>Cuisine Network 研究ノートの根拠のページ。experiments/myths/basis.py が rules.yaml から生成します（Claude の記録）。</footer></body>
+</html>

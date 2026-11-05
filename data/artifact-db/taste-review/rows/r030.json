@@ -1,0 +1,17 @@
+{
+  "canonical": "sesame oil",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "sesame oil",
+  "n_recipes": 1773,
+  "note": "焙煎香が本体。香ばしさを苦1・旨1に割り振った",
+  "order": 30,
+  "reviewed": true
+}

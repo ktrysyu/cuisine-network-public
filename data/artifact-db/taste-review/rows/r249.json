@@ -1,0 +1,17 @@
+{
+  "canonical": "shiitake",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 4
+  },
+  "ingredient": "shiitake",
+  "n_recipes": 331,
+  "note": "生を加熱した基準。干し椎茸を戻したものなら旨5",
+  "order": 249,
+  "reviewed": true
+}

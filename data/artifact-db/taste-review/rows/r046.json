@@ -1,0 +1,17 @@
+{
+  "canonical": "vegetable oil",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "cooking spray",
+  "n_recipes": 1490,
+  "note": "",
+  "order": 46,
+  "reviewed": true
+}

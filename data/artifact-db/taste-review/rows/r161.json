@@ -1,0 +1,17 @@
+{
+  "canonical": "mozzarella cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "mozzarella cheese",
+  "n_recipes": 467,
+  "note": "フレッシュかシュレッドか不明。中間",
+  "order": 161,
+  "reviewed": true
+}

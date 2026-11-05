@@ -1,0 +1,17 @@
+{
+  "canonical": "bell pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "green pepper",
+  "n_recipes": 373,
+  "note": "共起（onions・cajun_creole）から green bell pepper と判断。青唐辛子の可能性も残る",
+  "order": 208,
+  "reviewed": true
+}

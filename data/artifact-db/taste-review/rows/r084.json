@@ -1,0 +1,17 @@
+{
+  "canonical": "baking soda",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 2,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "baking soda",
+  "n_recipes": 942,
+  "note": "単体ではせっけん様の苦み・塩味。料理中では中和されて消える",
+  "order": 84,
+  "reviewed": true
+}

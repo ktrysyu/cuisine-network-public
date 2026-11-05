@@ -1,0 +1,17 @@
+{
+  "canonical": "black pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground black pepper",
+  "n_recipes": 4784,
+  "note": "",
+  "order": 8,
+  "reviewed": true
+}

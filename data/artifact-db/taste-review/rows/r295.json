@@ -1,0 +1,25 @@
+{
+  "canonical": "taco seasoning",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "taco seasoning",
+  "mine": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 1,
+    "umami": 1
+  },
+  "n_recipes": 271,
+  "note": "市販ミックス（塩・唐辛子・クミン・でんぷん）想定",
+  "order": 295,
+  "reviewed": true
+}

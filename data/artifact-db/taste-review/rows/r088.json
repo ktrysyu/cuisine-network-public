@@ -1,0 +1,17 @@
+{
+  "canonical": "shrimp",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 3
+  },
+  "ingredient": "shrimp",
+  "n_recipes": 912,
+  "note": "加熱後。甘みはグリシン由来",
+  "order": 88,
+  "reviewed": true
+}

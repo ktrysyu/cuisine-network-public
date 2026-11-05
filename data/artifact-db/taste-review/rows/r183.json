@@ -1,0 +1,17 @@
+{
+  "canonical": "soy sauce",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 4
+  },
+  "ingredient": "low sodium soy sauce",
+  "n_recipes": 425,
+  "note": "減塩でも塩は強い",
+  "order": 183,
+  "reviewed": true
+}

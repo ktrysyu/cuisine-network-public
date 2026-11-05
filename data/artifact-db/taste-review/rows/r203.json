@@ -1,0 +1,17 @@
+{
+  "canonical": "peas",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 1
+  },
+  "ingredient": "frozen peas",
+  "n_recipes": 383,
+  "note": "",
+  "order": 203,
+  "reviewed": true
+}

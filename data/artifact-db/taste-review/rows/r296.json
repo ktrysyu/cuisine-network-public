@@ -1,0 +1,17 @@
+{
+  "canonical": "baguette",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "baguette",
+  "n_recipes": 270,
+  "note": "",
+  "order": 296,
+  "reviewed": true
+}

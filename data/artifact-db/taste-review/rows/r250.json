@@ -1,0 +1,17 @@
+{
+  "canonical": "corn",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 1
+  },
+  "ingredient": "corn",
+  "n_recipes": 329,
+  "note": "スイートコーン想定",
+  "order": 250,
+  "reviewed": true
+}

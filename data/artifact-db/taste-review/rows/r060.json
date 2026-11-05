@@ -1,0 +1,17 @@
+{
+  "canonical": "vegetable oil",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "canola oil",
+  "n_recipes": 1223,
+  "note": "",
+  "order": 60,
+  "reviewed": true
+}

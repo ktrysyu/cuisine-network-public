@@ -1,0 +1,17 @@
+{
+  "canonical": "sugar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "granulated sugar",
+  "n_recipes": 849,
+  "note": "",
+  "order": 99,
+  "reviewed": true
+}

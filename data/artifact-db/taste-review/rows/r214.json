@@ -1,0 +1,17 @@
+{
+  "canonical": "lemongrass",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lemongrass",
+  "n_recipes": 364,
+  "note": "香りが本体。硬く単体では食べない",
+  "order": 214,
+  "reviewed": true
+}

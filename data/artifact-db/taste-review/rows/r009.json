@@ -1,0 +1,17 @@
+{
+  "canonical": "flour",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "all-purpose flour",
+  "n_recipes": 4632,
+  "note": "",
+  "order": 9,
+  "reviewed": true
+}

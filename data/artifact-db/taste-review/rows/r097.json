@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "plum tomatoes",
+  "n_recipes": 858,
+  "note": "",
+  "order": 97,
+  "reviewed": true
+}

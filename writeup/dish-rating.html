@@ -1,0 +1,150 @@
+<title>料理の感じ方</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+.scale{margin-top:16px;background:var(--surface);border-radius:6px;padding:12px 16px;font-size:13.5px}
+.scale dl{display:grid;grid-template-columns:max-content 1fr;gap:4px 14px;margin:6px 0 0}
+.scale dt{font-weight:700}
+.scale dd{margin:0;color:var(--muted)}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;border-bottom:1px solid var(--rule);display:flex;gap:12px;align-items:center;margin-top:16px;font-family:var(--mono);font-size:13px}
+.meter{width:160px;height:6px;border-radius:99px;background:var(--surface);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--kombu);width:0}
+.status{margin-left:auto;font-family:var(--sans);font-size:12px;color:var(--muted)}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;min-width:760px}
+th{font-size:13px;font-weight:700;text-align:center;padding:8px 6px;border-bottom:2px solid var(--rule);white-space:nowrap}
+th:first-child{text-align:left}
+td{padding:10px 6px;border-bottom:1px solid var(--rule);vertical-align:middle;text-align:center}
+td:first-child{text-align:left}
+tr.done td{background:color-mix(in srgb,var(--kombu) 5%,transparent)}
+.dish{font-weight:700}
+.how{font-size:12px;color:var(--muted);max-width:30ch}
+select{font-family:var(--mono);font-size:14px;width:52px;padding:3px 2px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--ink);text-align:center}
+select.unset{color:var(--muted);border-style:dashed}
+select:focus-visible,input:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+input.memo{font:inherit;font-size:13px;width:100%;min-width:140px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--ink);padding:4px 6px}
+.help{font-size:13px;color:var(--muted);margin-top:10px}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Cuisine Network · Exp-14</div>
+  <h1>料理の感じ方</h1>
+  <p class="lead">13品の料理を、食べたときに感じるままに 0〜5 で付けてください。計算した状態とこの採点の対応から、「状態 → 感じ方」の変換を作ります。正解はありません。選ぶと自動で保存されます。食べたことがない料理は空けたままで大丈夫です。</p>
+  <div class="scale">
+    <b>項目と目安</b>（0＝感じない、5＝その感じが主役）
+    <dl>
+      <dt>硬さ</dt><dd>噛んだときの抵抗。0＝液体、5＝よく焼いた肉</dd>
+      <dt>とろみ</dt><dd>流れにくさ・まとわりつき。0＝水、5＝固まる直前の濃いソース</dd>
+      <dt>なめらかさ</dt><dd>舌ざわりの均一さ。0＝ぼそぼそ・粒っぽい、5＝つるん</dd>
+      <dt>甘さ</dt><dd>味覚スコアと同じ甘さ</dd>
+      <dt>香ばしさ</dt><dd>焼き色・焦げの香り。0＝なし、5＝焦がしたカラメル</dd>
+      <dt>温かさ</dt><dd>食べるときの温度感。0＝冷たい、3＝常温、5＝熱い</dd>
+    </dl>
+  </div>
+</header>
+
+<div class="bar"><span class="meter"><i id="meter"></i></span><span id="count">— / 13 品</span><span class="status" id="status" aria-live="polite">読み込み中…</span></div>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>料理</th><th>硬さ</th><th>とろみ</th><th>なめらかさ</th><th>甘さ</th><th>香ばしさ</th><th>温かさ</th><th>メモ（任意）</th></tr></thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+<p class="help">作り方の欄は、計算で使った作り方の要約です。自分の知っているその料理と違う場合は、自分の知っている方で付けて、違いをメモに書いてください。</p>
+</div>
+
+<script>
+(function(){
+  const DISHES=[
+    ['scrambled_eggs','スクランブルエッグ','卵と牛乳を溶いて、フライパンで混ぜながら加熱'],
+    ['omelet','オムレツ（プレーン）','溶き卵を強火で手早く焼いてまとめる'],
+    ['custard_pudding','プリン','卵・牛乳・砂糖を蒸す（カラメルは除く本体）'],
+    ['chawanmushi','茶碗蒸し','卵とだしを蒸す'],
+    ['white_sauce','ホワイトソース','バターと小麦粉を炒め、牛乳でのばして煮る'],
+    ['caramel_sauce','カラメルソース','砂糖を褐色になるまで加熱'],
+    ['sauteed_onion','炒め玉ねぎ（あめ色）','玉ねぎを油でじっくり炒める'],
+    ['steamed_rice','ご飯（白飯）','米を水で炊く'],
+    ['pancake','パンケーキ','小麦粉・卵・牛乳の生地をフライパンで両面焼く'],
+    ['milk_jelly','牛乳ゼリー','牛乳にゼラチンを溶かして冷やし固める'],
+    ['whipped_cream','ホイップクリーム','冷えた生クリームに砂糖を加えて泡立てる'],
+    ['onsen_tamago','温泉卵','殻付きの卵を約65〜70℃の湯に保つ'],
+    ['sauteed_chicken','鶏むね肉のソテー','鶏むね肉をフライパンで焼く']
+  ];
+  const AX=['hardness','thickness','smoothness','sweet','roasted','warmth'];
+  const tbody=document.getElementById('tbody'),statusEl=document.getElementById('status');
+  let data={}, db=null, readOnly=false; const chains=new Map(); const memoTimers={};
+
+  function done(id){ const d=data[id]||{}; return AX.every(a=>typeof d[a]==='number'); }
+  function counts(){
+    const n=DISHES.filter(([id])=>done(id)).length;
+    document.getElementById('count').textContent=n+' / 13 品';
+    document.getElementById('meter').style.width=(n/13*100)+'%';
+  }
+  function render(){
+    tbody.innerHTML=DISHES.map(([id,name,how])=>{
+      const d=data[id]||{};
+      let h='<tr data-id="'+id+'" class="'+(done(id)?'done':'')+'"><td><div class="dish">'+name+'</div><div class="how">'+how+'</div></td>';
+      AX.forEach(a=>{
+        const v=d[a];
+        h+='<td><select data-ax="'+a+'" class="'+(typeof v==='number'?'':'unset')+'" aria-label="'+name+' '+a+'"'+(readOnly?' disabled':'')+'><option value="">—</option>';
+        for(let i=0;i<=5;i++) h+='<option'+(v===i?' selected':'')+'>'+i+'</option>';
+        h+='</select></td>';
+      });
+      h+='<td><input class="memo" type="text" aria-label="'+name+' メモ"'+(readOnly?' disabled':'')+'></td></tr>';
+      return h;
+    }).join('');
+    DISHES.forEach(([id])=>{ const el=tbody.querySelector('tr[data-id="'+id+'"] input.memo'); el.value=(data[id]||{}).memo||''; });
+    counts();
+  }
+  function save(id){
+    if(!db||readOnly) return;
+    const body=Object.assign({},data[id]||{});
+    const prev=chains.get(id)||Promise.resolve();
+    const next=prev.then(()=>db.collection('ratings').doc(id).set(body)).then(()=>{statusEl.textContent='保存しました';})
+      .catch(e=>{ if(e&&e.code==='invalid_argument'){readOnly=true;statusEl.textContent='この表示では保存できません';render();} else statusEl.textContent='保存できませんでした。もう一度選んでください'; });
+    chains.set(id,next); statusEl.textContent='保存中…';
+  }
+  tbody.addEventListener('change',e=>{
+    const tr=e.target.closest('tr'); if(!tr||!e.target.matches('select')) return;
+    const id=tr.dataset.id; data[id]=data[id]||{};
+    const v=e.target.value; if(v==='') delete data[id][e.target.dataset.ax]; else data[id][e.target.dataset.ax]=Number(v);
+    e.target.classList.toggle('unset',v==='');
+    tr.classList.toggle('done',done(id)); counts(); save(id);
+  });
+  tbody.addEventListener('input',e=>{
+    if(!e.target.matches('input.memo')) return;
+    const id=e.target.closest('tr').dataset.id; data[id]=data[id]||{}; data[id].memo=e.target.value;
+    clearTimeout(memoTimers[id]); memoTimers[id]=setTimeout(()=>save(id),800);
+  });
+  render();
+  (async function(){
+    db=await (window.claude?window.claude.use('db'):null);
+    if(!db){ statusEl.textContent='この表示では保存できません'; readOnly=true; render(); return; }
+    db.collection('ratings').limit(100).onSnapshot(snap=>{
+      snap.docs.forEach(d=>{ data[d.id]=Object.assign({},d.data()); });
+      statusEl.textContent='';
+      if(!(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#tbody'))) render(); else counts();
+    },()=>{ statusEl.textContent='読み込みが止まりました。ページを開き直してください'; });
+  })();
+})();
+</script>

@@ -1,0 +1,17 @@
+{
+  "canonical": "heavy cream",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "half & half",
+  "n_recipes": 337,
+  "note": "乳脂肪 10〜18%。牛乳に近い甘み",
+  "order": 245,
+  "reviewed": true
+}

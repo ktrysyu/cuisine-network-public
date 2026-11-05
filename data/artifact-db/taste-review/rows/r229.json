@@ -1,0 +1,17 @@
+{
+  "canonical": "pine nuts",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "pinenuts",
+  "n_recipes": 348,
+  "note": "",
+  "order": 229,
+  "reviewed": true
+}

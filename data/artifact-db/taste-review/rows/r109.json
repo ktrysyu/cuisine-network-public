@@ -1,0 +1,25 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "green chilies",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 768,
+  "note": "インドの青唐辛子（辛4）と米国の缶詰マイルドチリ（辛1〜2）が混在",
+  "order": 109,
+  "reviewed": true
+}

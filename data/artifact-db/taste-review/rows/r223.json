@@ -1,0 +1,17 @@
+{
+  "canonical": "fennel seeds",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "fennel seeds",
+  "n_recipes": 352,
+  "note": "アニス様の甘い香りを甘2とした",
+  "order": 223,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "yogurt",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "plain yogurt",
+  "n_recipes": 364,
+  "note": "",
+  "order": 215,
+  "reviewed": true
+}

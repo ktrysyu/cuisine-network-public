@@ -1,0 +1,17 @@
+{
+  "canonical": "curry powder",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "curry powder",
+  "n_recipes": 694,
+  "note": "辛さは製品差大（mild〜hot）",
+  "order": 115,
+  "reviewed": true
+}

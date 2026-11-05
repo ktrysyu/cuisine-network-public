@@ -1,0 +1,25 @@
+{
+  "canonical": "bell pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "bell pepper",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 0
+  },
+  "n_recipes": 387,
+  "note": "色不明。赤（甘3）と緑（苦2）の中間",
+  "order": 198,
+  "reviewed": true
+}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>規則 R-D02</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&family=Noto+Sans+JP:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&family=Roboto+Mono:wght@500&display=swap"><style>:root{--ground:#FCFCFC;--surface:#F3F3F3;--rule:#E1E1E1;--ink:#171717;--ink-muted:#606060;--main:#B63552;--on-main:#FFFFFF;
+--heading:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif;--body:"IBM Plex Sans","IBM Plex Sans JP",system-ui,sans-serif;--numeric:"Roboto Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;letter-spacing:.04em;padding:0 16px 64px}
+main{max-width:860px;margin:0 auto;padding-top:40px}
+h1{font-family:var(--heading);font-size:clamp(22px,4vw,30px);line-height:1.4;margin:8px 0;letter-spacing:.05em}
+h2{font-family:var(--heading);font-size:19px;margin:40px 0 8px;letter-spacing:.05em}
+p,ul{margin:0 0 16px}
+.eyebrow{font-family:var(--numeric);font-size:11.5px;color:var(--main);margin:0;letter-spacing:.08em}
+.muted{color:var(--ink-muted)}.small{font-size:13.5px}
+.num,code{font-family:var(--numeric)}
+a{color:var(--main)}
+.check{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.check .ck{background:var(--main);color:var(--on-main);border-radius:4px;padding:0 8px;font-weight:600}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:16px 0}
+dl.facts dt{color:var(--ink-muted);font-size:13.5px}dl.facts dd{margin:0}
+blockquote{margin:0 0 8px;padding:8px 16px;background:var(--surface);border-radius:8px;font-size:15px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;background:var(--surface);padding:8px}td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+footer{max-width:860px;margin:64px auto 0;font-size:13.5px;color:var(--ink-muted);border-top:1px solid var(--rule);padding-top:8px}
+</style></head>
+<body><main>
+<p class="eyebrow">規則 · R-D02</p>
+<h1>乳清たんぱく質は熱で変性する。カゼインは熱に強い（変性は約120℃から）</h1>
+<p class="check"><span class="ck">抜粋のみ</span></p>
+<dl class="facts">
+<dt>計算での書き方</dt><dd>乳清たんぱく質は熱で変性する。カゼインは熱に強い（変性は約120℃から）</dd>
+<dt>確かさ</dt><dd>中</dd>
+<dt>条件</dt><dd>加熱</dd>
+<dt>対象</dt><dd>milk（操作 heat）</dd>
+</dl>
+<h2>出典の文面</h2>
+<blockquote>casein ... denaturation begins at approximately 120°C, while whey proteins ... can be denatured at high temperatures</blockquote>
+<p>出典: <a href="../sources/casein.html">casein</a></p>
+<p class="muted">注: 乳清の変性温度の数値は確認していない（推定 70℃前後）</p>
+<h2>計算で使う値（採用値）</h2>
+<div class="tablewrap"><table><thead><tr><th>名前</th><th>値</th><th>出典</th><th>ほかの値</th><th>確かめ方</th></tr></thead><tbody>
+<tr><td class="num">whey_denature_T</td><td class="num">70℃</td><td>—</td><td>—</td><td>推定</td></tr>
+</tbody></table></div>
+<h2>出典どうしの食い違い</h2>
+<p class="muted">記録した食い違いはありません。</p>
+<h2>この規則を使っている通説</h2>
+<p class="muted">まだどの通説ページでも使っていません（調理の計算の中では使われています）。</p>
+<p class="small"><a href="../index.html">規則と出典の一覧へ</a></p>
+</main><footer>Cuisine Network 研究ノートの根拠のページ。experiments/myths/basis.py が rules.yaml から生成します（Claude の記録）。</footer></body>
+</html>

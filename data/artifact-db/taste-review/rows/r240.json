@@ -1,0 +1,17 @@
+{
+  "canonical": "cornmeal",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "yellow corn meal",
+  "n_recipes": 341,
+  "note": "",
+  "order": 240,
+  "reviewed": true
+}

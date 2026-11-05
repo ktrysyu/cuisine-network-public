@@ -1,0 +1,17 @@
+{
+  "canonical": "salsa",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 3,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "salsa",
+  "n_recipes": 963,
+  "note": "市販トマトサルサ想定。辛さは製品差大",
+  "order": 80,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "lemon juice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lemon juice",
+  "n_recipes": 1394,
+  "note": "",
+  "order": 50,
+  "reviewed": true
+}

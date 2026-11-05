@@ -1,0 +1,17 @@
+{
+  "canonical": "carrots",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "carrots",
+  "n_recipes": 2814,
+  "note": "加熱後。生でも甘2程度",
+  "order": 18,
+  "reviewed": true
+}

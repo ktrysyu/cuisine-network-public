@@ -1,0 +1,17 @@
+{
+  "canonical": "white wine",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "white wine",
+  "n_recipes": 367,
+  "note": "辛口か甘口か不明",
+  "order": 211,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "raisins",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "raisins",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "n_recipes": 460,
+  "note": "",
+  "order": 163,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "honey",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "honey",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "n_recipes": 1299,
+  "note": "",
+  "order": 53,
+  "reviewed": true
+}

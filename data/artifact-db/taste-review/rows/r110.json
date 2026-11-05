@@ -1,0 +1,17 @@
+{
+  "canonical": "coriander",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "ground coriander",
+  "n_recipes": 768,
+  "note": "種子の粉。柑橘様の香りが本体",
+  "order": 110,
+  "reviewed": true
+}

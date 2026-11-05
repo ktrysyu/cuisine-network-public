@@ -1,0 +1,17 @@
+{
+  "canonical": "worcestershire sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 3,
+    "spicy": 1,
+    "sweet": 2,
+    "umami": 3
+  },
+  "ingredient": "worcestershire sauce",
+  "n_recipes": 688,
+  "note": "",
+  "order": 116,
+  "reviewed": true
+}

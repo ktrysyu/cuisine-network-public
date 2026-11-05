@@ -1,0 +1,17 @@
+{
+  "canonical": "salt",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "salt",
+  "n_recipes": 18048,
+  "note": "",
+  "order": 0,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "butter",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "melted butter",
+  "n_recipes": 276,
+  "note": "有塩か無塩か不明。butter と同じく有塩として採点",
+  "order": 291,
+  "reviewed": true
+}

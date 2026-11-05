@@ -1,0 +1,17 @@
+{
+  "canonical": "beef broth",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 4
+  },
+  "ingredient": "beef broth",
+  "n_recipes": 381,
+  "note": "市販品想定",
+  "order": 204,
+  "reviewed": true
+}

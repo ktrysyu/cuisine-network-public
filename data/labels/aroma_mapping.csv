@@ -1,0 +1,304 @@
+ingredient,aroma_source_name,method,note
+salt,,none,塩。無機物で香り化合物なし（Ahn の表にも無い）
+onions,onion,auto,ingredient 名の正規化で一致
+olive oil,olive_oil,auto,ingredient 名の正規化で一致
+water,,none,水
+garlic,garlic,auto,ingredient 名の正規化で一致
+sugar,cane_molasses,manual,"Ahn らのレシピ（s3）では砂糖に当たる名前が cane_molasses しか出てこない（7,655 レシピ）ので同じく寄せた（推定）。精製糖そのものの香り化合物は Ahn の表に無い"
+garlic cloves,garlic,auto,canonical（garlic）の正規化で一致
+butter,butter,auto,ingredient 名の正規化で一致
+ground black pepper,black_pepper,auto,canonical（black pepper）の正規化で一致
+all-purpose flour,wheat,manual,"小麦粉 → wheat（Ahn らのレシピでも wheat が 20,782 レシピ）"
+pepper,pepper,auto,ingredient 名の正規化で一致
+vegetable oil,vegetable_oil,auto,ingredient 名の正規化で一致
+eggs,egg,auto,ingredient 名の正規化で一致
+soy sauce,soy_sauce,auto,ingredient 名の正規化で一致
+kosher salt,,none,塩
+green onions,scallion,manual,青ねぎ → scallion（化合物 3）
+tomatoes,tomato,auto,ingredient 名の正規化で一致
+large eggs,egg,auto,canonical（eggs）の正規化で一致
+carrots,carrot,auto,ingredient 名の正規化で一致
+unsalted butter,butter,auto,canonical（butter）の正規化で一致
+extra-virgin olive oil,olive_oil,auto,canonical（olive oil）の正規化で一致
+ground cumin,cumin,auto,canonical（cumin）の正規化で一致
+black pepper,black_pepper,auto,ingredient 名の正規化で一致
+milk,milk,auto,ingredient 名の正規化で一致
+chili powder,cayenne,manual,"唐辛子に他のスパイス（クミン・オレガノ等）を混ぜた複合スパイス。主成分の唐辛子に寄せた。唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+oil,vegetable_oil,auto,canonical（vegetable oil）の正規化で一致
+red bell pepper,bell_pepper,auto,canonical（bell pepper）の正規化で一致
+purple onion,onion,auto,canonical（onions）の正規化で一致
+scallions,scallion,auto,ingredient 名の正規化で一致
+grated parmesan cheese,parmesan_cheese,auto,canonical（parmesan cheese）の正規化で一致
+sesame oil,sesame_oil,auto,ingredient 名の正規化で一致
+corn starch,starch,manual,でんぷん。Ahn の starch（化合物 2）
+ginger,ginger,auto,ingredient 名の正規化で一致
+baking powder,,none,膨張剤（無機塩）
+jalapeno chilies,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+dried oregano,oregano,auto,canonical（oregano）の正規化で一致
+chopped cilantro fresh,cilantro,auto,canonical（cilantro）の正規化で一致
+fresh lemon juice,lemon_juice,auto,canonical（lemon juice）の正規化で一致
+diced tomatoes,tomato,auto,canonical（tomatoes）の正規化で一致
+fresh parsley,parsley,auto,canonical（parsley）の正規化で一致
+minced garlic,garlic,auto,canonical（garlic）の正規化で一致
+chicken broth,chicken_broth,auto,ingredient 名の正規化で一致
+sour cream,cream,manual,サワークリーム。Ahn に項目なし、cream に寄せた（発酵由来の香りは入らない）
+cayenne pepper,cayenne,manual,カイエンペッパー
+brown sugar,cane_molasses,manual,糖蜜を含む砂糖。cane_molasses（糖蜜）
+fresh ginger,ginger,auto,canonical（ginger）の正規化で一致
+cooking spray,vegetable_oil,auto,canonical（vegetable oil）の正規化で一致
+shallots,shallot,auto,ingredient 名の正規化で一致
+garlic powder,garlic,auto,canonical（garlic）の正規化で一致
+lime,lime,auto,ingredient 名の正規化で一致
+lemon juice,lemon_juice,auto,ingredient 名の正規化で一致
+fresh lime juice,lime_juice,auto,canonical（lime juice）の正規化で一致
+flour,wheat,manual,小麦粉 → wheat
+honey,honey,auto,ingredient 名の正規化で一致
+vanilla extract,vanilla,manual,バニラエッセンス → vanilla
+paprika,capsicum_annuum,manual,パプリカパウダー = Capsicum annuum の乾燥粉。Ahn の capsicum_annuum（化合物 38）
+chopped onion,onion,auto,canonical（onions）の正規化で一致
+fish sauce,fish,manual,魚醤。fish に寄せた（発酵由来の香りは入らない）
+ground cinnamon,cinnamon,auto,canonical（cinnamon）の正規化で一致
+avocado,avocado,auto,ingredient 名の正規化で一致
+canola oil,vegetable_oil,auto,canonical（vegetable oil）の正規化で一致
+dry white wine,white_wine,auto,canonical（white wine）の正規化で一致
+lemon,lemon,auto,ingredient 名の正規化で一致
+rice vinegar,vinegar,manual,米酢 → vinegar（原料の違いは入らない）
+yellow onion,onion,auto,canonical（onions）の正規化で一致
+green bell pepper,green_bell_pepper,auto,ingredient 名の正規化で一致
+cilantro leaves,cilantro,auto,canonical（cilantro）の正規化で一致
+tomato paste,tomato,manual,トマトの加工品 → tomato（加熱濃縮の香りは入らない）
+heavy cream,cream,manual,生クリーム → cream
+cilantro,cilantro,auto,ingredient 名の正規化で一致
+fresh basil,basil,auto,canonical（basil）の正規化で一致
+boneless skinless chicken breasts,chicken,auto,canonical（chicken）の正規化で一致
+flat leaf parsley,parsley,auto,canonical（parsley）の正規化で一致
+white sugar,cane_molasses,manual,"Ahn らのレシピ（s3）では砂糖に当たる名前が cane_molasses しか出てこない（7,655 レシピ）ので同じく寄せた（推定）。精製糖そのものの香り化合物は Ahn の表に無い"
+lime juice,lime_juice,auto,ingredient 名の正規化で一致
+chicken stock,chicken_broth,auto,canonical（chicken broth）の正規化で一致
+bay leaves,laurel,manual,ローリエ = Laurus nobilis。Ahn には bay（化合物 1）・bay_laurel（4）・laurel（34）がある。最も化合物の多い laurel にした
+potatoes,potato,auto,ingredient 名の正規化で一致
+chicken,chicken,auto,ingredient 名の正規化で一致
+corn tortillas,corn_tortilla,auto,ingredient 名の正規化で一致
+salsa,,none,複合調味料（トマト・玉ねぎ・唐辛子など）
+cumin,cumin,auto,ingredient 名の正規化で一致
+freshly ground pepper,black_pepper,auto,canonical（black pepper）の正規化で一致
+ground turmeric,turmeric,auto,canonical（turmeric）の正規化で一致
+baking soda,,none,膨張剤（重曹）
+sea salt,,none,塩
+cumin seed,cumin,auto,canonical（cumin）の正規化で一致
+garam masala,,none,複合スパイス
+shrimp,shrimp,auto,ingredient 名の正規化で一致
+black beans,black_bean,auto,ingredient 名の正規化で一致
+zucchini,zucchini,auto,ingredient 名の正規化で一致
+ground beef,beef,manual,牛ひき肉 → beef
+dried thyme,thyme,auto,canonical（thyme）の正規化で一致
+large garlic cloves,garlic,auto,canonical（garlic）の正規化で一致
+flour tortillas,wheat,manual,小麦粉のトルティーヤ。小麦に寄せた
+tomato sauce,tomato,manual,トマトの加工品 → tomato
+buttermilk,buttermilk,auto,ingredient 名の正規化で一致
+plum tomatoes,tomato,auto,canonical（tomatoes）の正規化で一致
+coconut milk,coconut,manual,ココナッツミルク → coconut
+granulated sugar,cane_molasses,manual,"Ahn らのレシピ（s3）では砂糖に当たる名前が cane_molasses しか出てこない（7,655 レシピ）ので同じく寄せた（推定）。精製糖そのものの香り化合物は Ahn の表に無い"
+fresh cilantro,cilantro,auto,canonical（cilantro）の正規化で一致
+bay leaf,laurel,manual,同上
+celery,celery,auto,ingredient 名の正規化で一致
+crushed red pepper,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+chopped cilantro,cilantro,auto,canonical（cilantro）の正規化で一致
+chicken breasts,chicken,auto,canonical（chicken）の正規化で一致
+mayonaise,,none,複合調味料（卵・油・酢）
+shredded cheddar cheese,cheddar_cheese,auto,canonical（cheddar cheese）の正規化で一致
+cucumber,cucumber,auto,ingredient 名の正規化で一致
+green chilies,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+ground coriander,coriander,auto,canonical（coriander）の正規化で一致
+whole milk,milk,auto,canonical（milk）の正規化で一致
+red wine vinegar,vinegar,auto,canonical（vinegar）の正規化で一致
+tumeric,turmeric,auto,canonical（turmeric）の正規化で一致
+cinnamon,cinnamon,auto,ingredient 名の正規化で一致
+curry powder,,none,複合スパイス
+worcestershire sauce,,none,複合調味料
+white onion,onion,auto,canonical（onions）の正規化で一致
+ground ginger,ginger,auto,canonical（ginger）の正規化で一致
+sesame seeds,sesame_seed,auto,ingredient 名の正規化で一致
+hot sauce,tabasco_pepper,manual,唐辛子と酢のソース。Ahn の tabasco_pepper に寄せた（Ahn らのレシピでも 965 レシピ）。酢の香りは入らない
+red pepper flakes,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+cinnamon sticks,cinnamon,auto,canonical（cinnamon）の正規化で一致
+red chili peppers,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+bacon,bacon,auto,ingredient 名の正規化で一致
+whipping cream,cream,manual,生クリーム → cream
+boneless skinless chicken breast halves,chicken,auto,canonical（chicken）の正規化で一致
+peanut oil,peanut_oil,auto,ingredient 名の正規化で一致
+ground nutmeg,nutmeg,auto,canonical（nutmeg）の正規化で一致
+clove,clove,auto,ingredient 名の正規化で一致
+parmesan cheese,parmesan_cheese,auto,ingredient 名の正規化で一致
+dried basil,basil,auto,canonical（basil）の正規化で一致
+peeled fresh ginger,ginger,auto,canonical（ginger）の正規化で一致
+coarse salt,,none,塩
+mushrooms,mushroom,auto,ingredient 名の正規化で一致
+warm water,,none,水
+large egg yolks,egg,manual,卵黄の項目なし。egg
+balsamic vinegar,vinegar,manual,バルサミコ酢 → vinegar（ぶどう・熟成の香りは入らない）
+celery ribs,celery,auto,canonical（celery）の正規化で一致
+cream cheese,cream_cheese,auto,ingredient 名の正規化で一致
+white vinegar,vinegar,auto,canonical（vinegar）の正規化で一致
+egg yolks,egg,manual,卵黄の項目なし。egg
+capers,,none,ケッパー。Ahn の表に項目なし
+ground red pepper,cayenne,manual,赤唐辛子パウダー（canonical が cayenne pepper）
+onion powder,onion,auto,canonical（onions）の正規化で一致
+dijon mustard,mustard,manual,ディジョンマスタード → mustard（酢・ワインの香りは入らない）
+rice,rice,auto,ingredient 名の正規化で一致
+cold water,,none,水
+crushed red pepper flakes,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+mirin,,none,みりん。Ahn の表に項目なし（近いものに sake・rice・cane_molasses があるが、どれかに寄せると別物になる）
+fresh basil leaves,basil,auto,canonical（basil）の正規化で一致
+eggplant,,none,なす。Ahn の表に項目なし
+powdered sugar,cane_molasses,manual,"Ahn らのレシピ（s3）では砂糖に当たる名前が cane_molasses しか出てこない（7,655 レシピ）ので同じく寄せた（推定）。精製糖そのものの香り化合物は Ahn の表に無い"
+large egg whites,egg,manual,卵白の項目なし。egg
+cooking oil,vegetable_oil,auto,canonical（vegetable oil）の正規化で一致
+lime wedges,lime,auto,canonical（lime）の正規化で一致
+shredded mozzarella cheese,mozzarella_cheese,auto,canonical（mozzarella cheese）の正規化で一致
+fat free less sodium chicken broth,chicken_broth,auto,canonical（chicken broth）の正規化で一致
+ground pork,pork,auto,canonical（pork）の正規化で一致
+sliced green onions,scallion,manual,青ねぎ → scallion
+cayenne,cayenne,auto,ingredient 名の正規化で一致
+mozzarella cheese,mozzarella_cheese,auto,ingredient 名の正規化で一致
+medium shrimp,shrimp,auto,canonical（shrimp）の正規化で一致
+raisins,raisin,auto,ingredient 名の正規化で一致
+red pepper,bell_pepper,auto,canonical（bell pepper）の正規化で一致
+coriander,coriander,auto,ingredient 名の正規化で一致
+sauce,,none,曖昧（What's Cooking で 'sauce' とだけ書かれたもの）
+finely chopped onion,onion,auto,canonical（onions）の正規化で一致
+oyster sauce,oyster,manual,牡蠣エキスの調味料。oyster に寄せた（糖・塩・加熱の香りは入らない）
+sweet potatoes,sweet_potato,auto,ingredient 名の正規化で一致
+beansprouts,mung_bean,manual,もやし（緑豆もやし）→ mung_bean。発芽の違いは入らない
+black peppercorns,black_pepper,auto,canonical（black pepper）の正規化で一致
+crushed tomatoes,tomato,auto,canonical（tomatoes）の正規化で一致
+egg whites,egg,manual,卵白の項目なし。egg
+cheese,cheese,auto,ingredient 名の正規化で一致
+fresh rosemary,rosemary,auto,canonical（rosemary）の正規化で一致
+oregano,oregano,auto,ingredient 名の正規化で一致
+white pepper,pepper,manual,白胡椒。Ahn に white_pepper の項目はあるが化合物 0。pepper（36）にした
+cherry tomatoes,tomato,auto,canonical（tomatoes）の正規化で一致
+leeks,leek,auto,ingredient 名の正規化で一致
+ketchup,,none,複合調味料（トマト・砂糖・酢）
+hoisin sauce,,none,複合調味料
+chopped celery,celery,auto,canonical（celery）の正規化で一致
+low sodium soy sauce,soy_sauce,auto,canonical（soy sauce）の正規化で一致
+cheddar cheese,cheddar_cheese,auto,ingredient 名の正規化で一致
+light brown sugar,cane_molasses,manual,糖蜜を含む砂糖。cane_molasses（糖蜜）
+cabbage,cabbage,auto,ingredient 名の正規化で一致
+fresh mint,mint,auto,canonical（mint）の正規化で一致
+large shrimp,shrimp,auto,canonical（shrimp）の正規化で一致
+vegetable broth,,none,複合（野菜の煮出し。具体的な野菜が決まらない）
+cracked black pepper,black_pepper,auto,canonical（black pepper）の正規化で一致
+spring onions,scallion,manual,葉玉ねぎ → scallion
+peanuts,peanut,auto,ingredient 名の正規化で一致
+chickpeas,chickpea,auto,ingredient 名の正規化で一致
+confectioners sugar,cane_molasses,manual,"Ahn らのレシピ（s3）では砂糖に当たる名前が cane_molasses しか出てこない（7,655 レシピ）ので同じく寄せた（推定）。精製糖そのものの香り化合物は Ahn の表に無い"
+coriander seeds,coriander,auto,canonical（coriander）の正規化で一致
+italian seasoning,,none,複合スパイス（ハーブ類の混合）
+fresh oregano,oregano,auto,canonical（oregano）の正規化で一致
+bell pepper,bell_pepper,auto,ingredient 名の正規化で一致
+cooked rice,rice,auto,canonical（rice）の正規化で一致
+lean ground beef,beef,manual,牛ひき肉 → beef
+ground pepper,black_pepper,auto,canonical（black pepper）の正規化で一致
+low salt chicken broth,chicken_broth,auto,canonical（chicken broth）の正規化で一致
+frozen peas,pea,auto,canonical（peas）の正規化で一致
+beef broth,beef_broth,auto,ingredient 名の正規化で一致
+active dry yeast,yeast,auto,canonical（yeast）の正規化で一致
+cajun seasoning,,none,複合スパイス
+chopped fresh thyme,thyme,auto,canonical（thyme）の正規化で一致
+green pepper,green_bell_pepper,manual,ピーマン（緑）。自動では canonical 経由で bell_pepper になるが、Ahn に green_bell_pepper があるのでそちらに
+ground cloves,clove,auto,canonical（cloves）の正規化で一致
+cornmeal,corn,manual,とうもろこし粉 → corn
+white wine,white_wine,auto,ingredient 名の正規化で一致
+spinach,dried_spinach,manual,生のほうれん草の項目なし。dried_spinach（化合物 1）で代用
+ground allspice,pimento,manual,オールスパイス（Pimenta dioica）の英名の一つが pimento。Ahn の pimento（13）を採った。pimenta（1）もある。Ahn の pimento がピメント（唐辛子）の意味で使われている可能性は未確認
+lemongrass,lemongrass,auto,ingredient 名の正規化で一致
+plain yogurt,yogurt,auto,canonical（yogurt）の正規化で一致
+thyme,thyme,auto,ingredient 名の正規化で一致
+feta cheese crumbles,feta_cheese,auto,canonical（feta cheese）の正規化で一致
+hot water,,none,水
+orange,orange,auto,ingredient 名の正規化で一致
+toasted sesame oil,sesame_oil,auto,canonical（sesame oil）の正規化で一致
+long-grain rice,rice,auto,canonical（rice）の正規化で一致
+parmigiano reggiano cheese,parmesan_cheese,auto,canonical（parmesan cheese）の正規化で一致
+fennel seeds,fennel,manual,フェンネルシード → fennel
+ricotta cheese,cheese,manual,リコッタの項目なし。総称の cheese（化合物 127）
+white wine vinegar,vinegar,auto,canonical（vinegar）の正規化で一致
+boiling water,,none,水
+cider vinegar,vinegar,manual,りんご酢 → vinegar。Ahn の cider（りんご酒）には寄せなかった
+ground white pepper,pepper,manual,同上
+pinenuts,,none,松の実。Ahn の表に項目なし（pine は松の精油類のみ）
+light soy sauce,soy_sauce,auto,canonical（soy sauce）の正規化で一致
+chopped garlic,garlic,auto,canonical（garlic）の正規化で一致
+fresh thyme,thyme,auto,canonical（thyme）の正規化で一致
+parsley,parsley,auto,ingredient 名の正規化で一致
+sake,sake,auto,ingredient 名の正規化で一致
+smoked paprika,capsicum_annuum,manual,燻製したパプリカパウダー。燻製由来の香り（Ahn の smoke）は入らない
+boneless chicken skinless thigh,chicken,auto,canonical（chicken）の正規化で一致
+grated lemon zest,lemon_peel,manual,レモンの皮 → lemon_peel
+spaghetti,macaroni,manual,"乾燥パスタ。Ahn の表のパスタ類は macaroni のみ（Ahn らのレシピでも macaroni 3,074）"
+green beans,snap_bean,manual,さやいんげん = snap bean
+yellow corn meal,corn,manual,とうもろこし粉 → corn
+chile pepper,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+low sodium chicken broth,chicken_broth,auto,canonical（chicken broth）の正規化で一致
+fresh ginger root,ginger,auto,canonical（ginger）の正規化で一致
+orange juice,orange_juice,auto,ingredient 名の正規化で一致
+half & half,cream,manual,牛乳と生クリームの混合。cream に寄せた
+chicken thighs,chicken,auto,canonical（chicken）の正規化で一致
+sweet onion,onion,auto,canonical（onions）の正規化で一致
+chopped parsley,parsley,auto,canonical（parsley）の正規化で一致
+shiitake,shiitake,auto,ingredient 名の正規化で一致
+corn,corn,auto,ingredient 名の正規化で一致
+basmati rice,rice,auto,canonical（rice）の正規化で一致
+shredded monterey jack cheese,cheese,manual,モントレージャックの項目なし。総称の cheese
+tomatillos,,none,トマティーヨ。Ahn の表に項目なし
+chiles,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+pasta,macaroni,manual,乾燥パスタ。Ahn の表のパスタ類は macaroni のみ
+dark brown sugar,cane_molasses,manual,糖蜜を含む砂糖。cane_molasses（糖蜜）
+chopped fresh mint,mint,auto,canonical（mint）の正規化で一致
+vinegar,vinegar,auto,ingredient 名の正規化で一致
+mustard seeds,mustard,manual,マスタードシード → mustard
+dark soy sauce,soy_sauce,auto,canonical（soy sauce）の正規化で一致
+vanilla,vanilla,auto,ingredient 名の正規化で一致
+dry red wine,red_wine,auto,canonical（red wine）の正規化で一致
+ghee,milk_fat,manual,澄ましバター。Ahn の milk_fat（化合物 4）。butter（140）の方が化合物は多いが、固形分を除いた乳脂として milk_fat にした
+bread crumbs,bread,manual,パン粉 → bread
+hot pepper sauce,tabasco_pepper,manual,同上
+green chile,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+tortilla chips,corn_tortilla,manual,揚げたコーントルティーヤ。揚げ油由来の香りは入らない
+pork,pork,auto,ingredient 名の正規化で一致
+serrano chile,cayenne,manual,"唐辛子類。Ahn の表に jalapeno・serrano 等の個別項目は無く、Ahn らのレシピ（s3）でも唐辛子に当たる名前は cayenne が大半（7,950 レシピ）なので cayenne に寄せた"
+chopped tomatoes,tomato,auto,canonical（tomatoes）の正規化で一致
+sriracha,,none,複合調味料（唐辛子・にんにく・砂糖・酢）
+cooked chicken,chicken,auto,canonical（chicken）の正規化で一致
+enchilada sauce,,none,複合調味料
+toasted sesame seeds,toasted_sesame_seed,auto,ingredient 名の正規化で一致
+arborio rice,rice,auto,canonical（rice）の正規化で一致
+yellow bell pepper,bell_pepper,auto,canonical（bell pepper）の正規化で一致
+dry bread crumbs,bread,manual,パン粉 → bread
+fresh parmesan cheese,parmesan_cheese,auto,canonical（parmesan cheese）の正規化で一致
+fine sea salt,,none,塩
+fresh coriander,cilantro,auto,canonical（cilantro）の正規化で一致
+prosciutto,cured_ham,manual,生ハム → cured_ham
+basil,basil,auto,ingredient 名の正規化で一致
+chopped pecans,pecan,auto,canonical（pecans）の正規化で一致
+garlic paste,garlic,auto,canonical（garlic）の正規化で一致
+radishes,radish,manual,ラディッシュ → radish
+corn kernels,corn,auto,canonical（corn）の正規化で一致
+juice,,none,曖昧（何の果汁か不明）
+long grain white rice,rice,auto,canonical（rice）の正規化で一致
+saffron threads,saffron,auto,canonical（saffron）の正規化で一致
+creole seasoning,,none,複合スパイス
+melted butter,butter,auto,canonical（butter）の正規化で一致
+beef,beef,auto,ingredient 名の正規化で一致
+fresh mushrooms,mushroom,auto,canonical（mushrooms）の正規化で一致
+sweetened condensed milk,milk,manual,加糖練乳。milk に寄せた（加熱・加糖の香りは入らない）
+taco seasoning,,none,複合スパイス
+baguette,bread,manual,パン → bread（white_bread もあるが bread crumbs と揃えた）
+romaine lettuce,lettuce,manual,ロメインレタス → lettuce（化合物 7）
+apple cider vinegar,vinegar,manual,同上
+chopped green bell pepper,green_bell_pepper,manual,同上
+feta cheese,feta_cheese,auto,ingredient 名の正規化で一致
+mango,mango,auto,ingredient 名の正規化で一致
+okra,okra,auto,ingredient 名の正規化で一致

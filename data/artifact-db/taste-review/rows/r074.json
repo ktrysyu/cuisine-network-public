@@ -1,0 +1,17 @@
+{
+  "canonical": "lime juice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lime juice",
+  "n_recipes": 1072,
+  "note": "",
+  "order": 74,
+  "reviewed": true
+}

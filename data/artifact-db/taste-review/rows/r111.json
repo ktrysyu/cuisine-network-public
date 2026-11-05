@@ -1,0 +1,17 @@
+{
+  "canonical": "milk",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "whole milk",
+  "n_recipes": 764,
+  "note": "",
+  "order": 111,
+  "reviewed": true
+}

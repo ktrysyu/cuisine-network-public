@@ -1,0 +1,17 @@
+{
+  "canonical": "mozzarella cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "shredded mozzarella cheese",
+  "n_recipes": 474,
+  "note": "低水分の米国式シュレッド想定。フレッシュモッツァレラより塩・旨みが強い",
+  "order": 156,
+  "reviewed": true
+}

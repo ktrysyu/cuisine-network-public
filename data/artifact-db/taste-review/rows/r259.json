@@ -1,0 +1,17 @@
+{
+  "canonical": "mustard seeds",
+  "confidence": "low",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "mustard seeds",
+  "n_recipes": 313,
+  "note": "油で弾かせるインド式の用途では辛みより香ばしさ。すり潰せば辛4",
+  "order": 259,
+  "reviewed": true
+}

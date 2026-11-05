@@ -1,0 +1,17 @@
+{
+  "canonical": "ginger",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ginger",
+  "n_recipes": 1755,
+  "note": "生の生姜基準。加熱で辛みは弱まる",
+  "order": 32,
+  "reviewed": true
+}

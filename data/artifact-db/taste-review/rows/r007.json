@@ -1,0 +1,17 @@
+{
+  "canonical": "butter",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "butter",
+  "n_recipes": 4847,
+  "note": "米国の有塩バター想定。無塩なら塩0",
+  "order": 7,
+  "reviewed": true
+}

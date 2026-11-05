@@ -1,0 +1,17 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "finely chopped onion",
+  "n_recipes": 457,
+  "note": "",
+  "order": 167,
+  "reviewed": true
+}

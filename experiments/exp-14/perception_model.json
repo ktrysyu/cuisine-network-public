@@ -1,0 +1,291 @@
+{
+ "about": "Exp-14 段2: 状態 → 感じ方（0〜5）。perception.py が生成。全13品（状態で止める版の正解のレシピ）で当てはめた。",
+ "labels_source": "data/labels/dish_perception.csv",
+ "none_as_zero": true,
+ "none_category": "（値なし）",
+ "clip": [
+  0,
+  5
+ ],
+ "items": {
+  "hardness": {
+   "ja": "硬さ",
+   "why": "water は §7 の候補で唯一13品すべてが値を持つ（水が少ないほど硬い、を想定）。肉の硬さは水分量だけでは出ないので、むね肉が乾く段階（R-P04）の meat_water_loss を足す",
+   "type": "linear",
+   "vars": [
+    "water",
+    "meat_water_loss"
+   ],
+   "intercept": 2.0295726649161105,
+   "coef": [
+    -0.008050094109961617,
+    1.7677717614182251
+   ]
+  },
+  "thickness": {
+   "ja": "とろみ",
+   "why": "とろみを付ける2つの経路（糖液の濃さ R-C05、でんぷんの糊化 R-S01）。egg_gel_stage は卵の品にしか値がなく、ゲル（硬さ）ととろみを区別できないので選ばない",
+   "type": "linear",
+   "vars": [
+    "sugar_conc",
+    "starch_gel"
+   ],
+   "intercept": 1.0924102541391798,
+   "coef": [
+    0.046488613761702206,
+    -0.31132247090620496
+   ]
+  },
+  "smoothness": {
+   "ja": "なめらかさ",
+   "why": "§7 の候補3つ（porosity・gel_structure・egg_gel_stage）はどれも卵の品にしか値がない。gel_structure は撹拌の有無（R-E20）でなめらかさが変わる筋を持つ。値ごとの採点の平均を返す区分関数（学習側に無い値・卵を含まない品（値なし）も1つの区分として扱い、学習側に無い区分は全体平均）",
+   "type": "category_mean",
+   "vars": [
+    "gel_structure"
+   ],
+   "means": {
+    "小片（カード）": 3.0,
+    "外側連続・内側半流動": 1.0,
+    "連続ゲル": 3.6666666666666665,
+    "（値なし）": 2.4285714285714284,
+    "なし": 4.0
+   },
+   "counts": {
+    "小片（カード）": 1,
+    "外側連続・内側半流動": 1,
+    "連続ゲル": 3,
+    "（値なし）": 7,
+    "なし": 1
+   },
+   "fallback": 2.769230769230769
+  },
+  "sweet": {
+   "ja": "甘さ",
+   "why": "甘さは溶けている糖の濃さ（§7 の先頭）。濃さに対して頭打ちになるはずなので線形でなく単調増加の区分関数（isotonic 回帰、点の間は直線で補間、端は一定）",
+   "type": "isotonic",
+   "vars": [
+    "sugar_conc"
+   ],
+   "x": [
+    0.0,
+    0.732824427480916,
+    4.123711340206185,
+    6.166440158033489,
+    10.525106230166275,
+    11.784,
+    12.974418604651163,
+    13.261538461538462,
+    84.92041594665048
+   ],
+   "y": [
+    0.5714285714285714,
+    0.5714285714285714,
+    0.5714285714285714,
+    2.0,
+    4.0,
+    4.0,
+    4.0,
+    4.0,
+    5.0
+   ]
+  },
+  "roasted": {
+   "ja": "香ばしさ",
+   "why": "§7 の候補そのまま（メイラード R-M01 とカラメル化 R-C01 の段階）",
+   "type": "linear",
+   "vars": [
+    "maillard",
+    "caramel"
+   ],
+   "intercept": 0.411290322580646,
+   "coef": [
+    1.0080645161290316,
+    0.9435483870967738
+   ]
+  },
+  "warmth": {
+   "ja": "温かさ",
+   "why": "§7 の候補そのまま（食べるときの温度＝最後の操作の後の中心温度）",
+   "type": "linear",
+   "vars": [
+    "T_serve"
+   ],
+   "intercept": 0.22173234006198286,
+   "coef": [
+    0.026838241754252555
+   ]
+  }
+ },
+ "spec_changes": {},
+ "labels": {
+  "caramel_sauce": {
+   "hardness": 1.0,
+   "thickness": 5.0,
+   "smoothness": 5.0,
+   "sweet": 5.0,
+   "roasted": 5.0,
+   "warmth": 3.0
+  },
+  "chawanmushi": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 5.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 4.0
+  },
+  "custard_pudding": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 5.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "milk_jelly": {
+   "hardness": 0.0,
+   "thickness": 3.0,
+   "smoothness": 5.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "omelet": {
+   "hardness": 3.0,
+   "thickness": 0.0,
+   "smoothness": 1.0,
+   "sweet": 0.0,
+   "roasted": 1.0,
+   "warmth": 3.0
+  },
+  "onsen_tamago": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 4.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 1.0
+  },
+  "pancake": {
+   "hardness": 4.0,
+   "thickness": 0.0,
+   "smoothness": 1.0,
+   "sweet": 4.0,
+   "roasted": 3.0,
+   "warmth": 2.0
+  },
+  "sauteed_chicken": {
+   "hardness": 5.0,
+   "thickness": 0.0,
+   "smoothness": 0.0,
+   "sweet": 0.0,
+   "roasted": 4.0,
+   "warmth": 3.0
+  },
+  "sauteed_onion": {
+   "hardness": 3.0,
+   "thickness": 1.0,
+   "smoothness": 0.0,
+   "sweet": 2.0,
+   "roasted": 5.0,
+   "warmth": 2.0
+  },
+  "scrambled_eggs": {
+   "hardness": 1.0,
+   "thickness": 1.0,
+   "smoothness": 3.0,
+   "sweet": 1.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  },
+  "steamed_rice": {
+   "hardness": 3.0,
+   "thickness": 0.0,
+   "smoothness": 0.0,
+   "sweet": 3.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  },
+  "whipped_cream": {
+   "hardness": 0.0,
+   "thickness": 1.0,
+   "smoothness": 4.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "white_sauce": {
+   "hardness": 0.0,
+   "thickness": 3.0,
+   "smoothness": 3.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  }
+ },
+ "dish_ja": {
+  "scrambled_eggs": "スクランブルエッグ",
+  "omelet": "オムレツ（プレーン）",
+  "custard_pudding": "プリン",
+  "chawanmushi": "茶碗蒸し",
+  "white_sauce": "ホワイトソース",
+  "caramel_sauce": "カラメル",
+  "sauteed_onion": "炒め玉ねぎ（あめ色）",
+  "steamed_rice": "ご飯（白飯）",
+  "pancake": "パンケーキ",
+  "milk_jelly": "牛乳ゼリー",
+  "whipped_cream": "ホイップクリーム",
+  "onsen_tamago": "温泉卵",
+  "sauteed_chicken": "鶏むね肉のソテー"
+ },
+ "cv": {
+  "hardness": {
+   "mae_loo": 1.5936060716045601,
+   "mae_base": 1.5256410256410255,
+   "rho_loo": -0.7606087305741638,
+   "rho_base": -1.0,
+   "mae_insample": 1.069729631169763,
+   "rho_insample": 0.42319583505630165
+  },
+  "thickness": {
+   "mae_loo": 1.0676171439594906,
+   "mae_base": 1.2948717948717947,
+   "rho_loo": -0.028257721461827687,
+   "rho_base": -1.0,
+   "mae_insample": 0.8420172117962058,
+   "rho_insample": 0.3777137133150375
+  },
+  "smoothness": {
+   "mae_loo": 2.192307692307692,
+   "mae_base": 1.9743589743589742,
+   "rho_loo": -0.3035830549626323,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 1.5311355311355312,
+   "rho_insample": 0.36331261528259573
+  },
+  "sweet": {
+   "mae_loo": 0.7367234612781757,
+   "mae_base": 1.923076923076923,
+   "rho_loo": 0.6960969028832069,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 0.4395604395604395,
+   "rho_insample": 0.9192140047502299
+  },
+  "roasted": {
+   "mae_loo": 1.2602089268755934,
+   "mae_base": 1.9102564102564101,
+   "rho_loo": -0.16913516427169173,
+   "rho_base": -1.0,
+   "mae_insample": 0.833746898263028,
+   "rho_insample": 0.8738518946547206
+  },
+  "warmth": {
+   "mae_loo": 0.7725451972415941,
+   "mae_base": 1.2435897435897434,
+   "rho_loo": 0.41640203236453976,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 0.670637585269739,
+   "rho_insample": 0.46071385117151953
+  }
+ }
+}

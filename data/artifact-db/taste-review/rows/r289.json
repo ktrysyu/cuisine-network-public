@@ -1,0 +1,17 @@
+{
+  "canonical": "saffron",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 3,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "saffron threads",
+  "n_recipes": 277,
+  "note": "少量使用が普通。単体では苦い",
+  "order": 289,
+  "reviewed": true
+}

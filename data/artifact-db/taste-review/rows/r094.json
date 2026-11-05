@@ -1,0 +1,17 @@
+{
+  "canonical": "flour tortillas",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "flour tortillas",
+  "n_recipes": 865,
+  "note": "",
+  "order": 94,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "purple onion",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "n_recipes": 1896,
+  "note": "サラダ・サルサで生のまま使うことが多いので生基準",
+  "order": 27,
+  "reviewed": true
+}

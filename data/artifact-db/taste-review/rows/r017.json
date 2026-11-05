@@ -1,0 +1,17 @@
+{
+  "canonical": "eggs",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "large eggs",
+  "n_recipes": 2948,
+  "note": "eggs と同じ",
+  "order": 17,
+  "reviewed": true
+}

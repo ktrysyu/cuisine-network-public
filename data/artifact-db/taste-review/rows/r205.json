@@ -1,0 +1,25 @@
+{
+  "canonical": "yeast",
+  "confidence": "low",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "active dry yeast",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "n_recipes": 377,
+  "note": "単体では苦みと旨み。パン生地では発酵後に消える",
+  "order": 205,
+  "reviewed": true
+}

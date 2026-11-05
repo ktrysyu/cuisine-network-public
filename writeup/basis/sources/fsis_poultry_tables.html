@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>出典 fsis_poultry_tables</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&family=Noto+Sans+JP:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&family=Roboto+Mono:wght@500&display=swap"><style>:root{--ground:#FCFCFC;--surface:#F3F3F3;--rule:#E1E1E1;--ink:#171717;--ink-muted:#606060;--main:#B63552;--on-main:#FFFFFF;
+--heading:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif;--body:"IBM Plex Sans","IBM Plex Sans JP",system-ui,sans-serif;--numeric:"Roboto Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;letter-spacing:.04em;padding:0 16px 64px}
+main{max-width:860px;margin:0 auto;padding-top:40px}
+h1{font-family:var(--heading);font-size:clamp(22px,4vw,30px);line-height:1.4;margin:8px 0;letter-spacing:.05em}
+h2{font-family:var(--heading);font-size:19px;margin:40px 0 8px;letter-spacing:.05em}
+p,ul{margin:0 0 16px}
+.eyebrow{font-family:var(--numeric);font-size:11.5px;color:var(--main);margin:0;letter-spacing:.08em}
+.muted{color:var(--ink-muted)}.small{font-size:13.5px}
+.num,code{font-family:var(--numeric)}
+a{color:var(--main)}
+.check{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.check .ck{background:var(--main);color:var(--on-main);border-radius:4px;padding:0 8px;font-weight:600}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:16px 0}
+dl.facts dt{color:var(--ink-muted);font-size:13.5px}dl.facts dd{margin:0}
+blockquote{margin:0 0 8px;padding:8px 16px;background:var(--surface);border-radius:8px;font-size:15px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;background:var(--surface);padding:8px}td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+footer{max-width:860px;margin:64px auto 0;font-size:13.5px;color:var(--ink-muted);border-top:1px solid var(--rule);padding-top:8px}
+</style></head>
+<body><main>
+<p class="eyebrow">出典 · fsis_poultry_tables</p>
+<h1>USDA FSIS の Time and Temperature Tables for Cooking Poultry（サルモネラを 7 桁減らすのに要る時間。脂肪 2・4・6%…、鶏・七面鳥）を、Riverstone Health（米モンタナ州の保健所）が低温調理の手引きとして写した PDF（2025-03-04 作成）</h1>
+<p class="check"><span class="ck">本文確認</span><span class="muted">本文確認（2026-10-22、通説11。FSIS の元の表は開いていない）</span></p>
+<dl class="facts">
+<dt>種類</dt><dd>公的機関の資料（写し）</dd>
+<dt>場所</dt><dd><a href="https://riverstonehealth.org/wp-content/uploads/SousVide_LethalityChart_Poultry.pdf" rel="noopener">https://riverstonehealth.org/wp-content/uploads/SousVide_LethalityChart_Poultry.pdf</a></dd>
+</dl>
+<h2>この出典から取った規則</h2>
+<ul><li><a href="../rules/R-P07.html">R-P07</a> 保つ時間が足りるとサルモネラが 7 桁（1000万分の1）に減る。温度が低いほど長く要る（140°F 60℃で 25.7分、145°F 62.8℃で 8.6分、150°F 65.6℃で 2.7分、165°F 73.9℃で 10秒未満。鶏・脂肪 2%）<span class="muted">（本文確認・確かさ 高）</span></li></ul>
+<h2>この出典から取った計算の値</h2>
+<ul><li><code>sim.adopted_values.poultry_7log_min_fat2</code> = [[136, 64.5], [137, 51], [138, 40.5], [139, 32.2], [140, 25.7], [141, 20.5], [142, 16.4], [143, 13.2], [144, 10.6], [145, 8.6], [146, 6.9], [147, 5.5], [148, 4.4], [149, 3.5], [150, 2.7], [151, 2.0], [152, 1.5], [153, 1.2], [154, 0.948], [155, 0.75], [156, 0.593], [157, 0.47], [158, 0.372], [159, 0.293], [160, 0.233], [161, 0.183]][°F, 分]<span class="muted">（本文確認）</span></li></ul>
+<h2>この出典を使っている通説</h2>
+<ul><li><a href="../../myth-chicken-low.html">鶏むね肉は、低温でゆっくり加熱するとしっとりする？</a></li></ul>
+<p class="small"><a href="../index.html">規則と出典の一覧へ</a></p>
+</main><footer>Cuisine Network 研究ノートの根拠のページ。experiments/myths/basis.py が rules.yaml から生成します（Claude の記録）。</footer></body>
+</html>

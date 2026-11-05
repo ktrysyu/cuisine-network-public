@@ -1,0 +1,25 @@
+{
+  "canonical": "bell pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 0
+  },
+  "ingredient": "red bell pepper",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 0
+  },
+  "n_recipes": 1939,
+  "note": "",
+  "order": 26,
+  "reviewed": true
+}

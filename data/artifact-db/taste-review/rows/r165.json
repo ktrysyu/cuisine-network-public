@@ -1,0 +1,17 @@
+{
+  "canonical": "coriander",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "coriander",
+  "n_recipes": 458,
+  "note": "種子（ground coriander）か葉（cilantro）か不明。共起はインド料理が多く種子寄り",
+  "order": 165,
+  "reviewed": true
+}

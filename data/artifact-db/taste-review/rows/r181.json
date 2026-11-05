@@ -1,0 +1,17 @@
+{
+  "canonical": "hoisin sauce",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 2
+  },
+  "ingredient": "hoisin sauce",
+  "n_recipes": 429,
+  "note": "",
+  "order": 181,
+  "reviewed": true
+}

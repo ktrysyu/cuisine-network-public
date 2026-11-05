@@ -1,0 +1,17 @@
+{
+  "canonical": "cheddar cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "cheddar cheese",
+  "n_recipes": 424,
+  "note": "",
+  "order": 184,
+  "reviewed": true
+}

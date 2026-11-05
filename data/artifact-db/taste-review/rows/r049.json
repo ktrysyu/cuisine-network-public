@@ -1,0 +1,17 @@
+{
+  "canonical": "lime",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lime",
+  "n_recipes": 1439,
+  "note": "果汁・くし切りで搾る前提。皮ごとなら苦みが増す",
+  "order": 49,
+  "reviewed": true
+}

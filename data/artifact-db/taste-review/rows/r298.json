@@ -1,0 +1,17 @@
+{
+  "canonical": "cider vinegar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "apple cider vinegar",
+  "n_recipes": 268,
+  "note": "",
+  "order": 298,
+  "reviewed": true
+}

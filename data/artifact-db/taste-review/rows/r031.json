@@ -1,0 +1,17 @@
+{
+  "canonical": "corn starch",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "corn starch",
+  "n_recipes": 1757,
+  "note": "",
+  "order": 31,
+  "reviewed": true
+}

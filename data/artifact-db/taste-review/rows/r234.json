@@ -1,0 +1,17 @@
+{
+  "canonical": "sake",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "sake",
+  "n_recipes": 345,
+  "note": "加熱でアルコールが飛ぶ前提",
+  "order": 234,
+  "reviewed": true
+}

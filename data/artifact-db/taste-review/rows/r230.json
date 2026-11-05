@@ -1,0 +1,17 @@
+{
+  "canonical": "soy sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "light soy sauce",
+  "n_recipes": 347,
+  "note": "中国式の生抽（濃口醤油より塩辛く色が薄い）想定。日本の淡口でも塩5",
+  "order": 230,
+  "reviewed": true
+}

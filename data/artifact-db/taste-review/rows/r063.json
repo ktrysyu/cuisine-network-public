@@ -1,0 +1,17 @@
+{
+  "canonical": "rice vinegar",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 4,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "rice vinegar",
+  "n_recipes": 1204,
+  "note": "無調味の米酢想定。すし酢タイプなら甘3・塩2",
+  "order": 63,
+  "reviewed": true
+}

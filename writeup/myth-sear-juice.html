@@ -1,0 +1,166 @@
+<title>焼き目と肉汁</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--low:#B4552D;
+  --d-x:#888888;--pt-edge:#1A1F1C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+    --d-x:#888888;--pt-edge:#F4F7F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+  --d-x:#888888;--pt-edge:#F4F7F5;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0;line-height:1.3}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+section{margin-top:40px}
+h2{font-family:var(--serif);font-weight:800;font-size:22px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .no{font-family:var(--mono);font-size:13px;color:var(--kombu);font-weight:500}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:8px 0;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.claim{font-family:var(--serif);font-weight:800;font-size:clamp(20px,3.2vw,26px);margin:0 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--surface);border-radius:8px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-weight:700;font-size:14px;margin-bottom:4px}
+.x{fill:var(--d-x)}
+.hatch-l{stroke:var(--muted);stroke-width:1;stroke-opacity:.55}
+.frame{fill:none;stroke:var(--rule)}
+.dif{fill:none;stroke:var(--saffron);stroke-width:1.6}
+.ax{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+.axs{font-family:var(--sans);font-size:9.5px;fill:var(--muted)}
+.axl{font-family:var(--sans);font-size:10.5px;fill:var(--muted)}
+.c-sc{fill:var(--low)}.c-fi{fill:var(--saffron)}.c-co{fill:var(--kombu)}.c-na{fill:var(--surface)}
+.w0{fill:var(--surface)}.w1{fill:color-mix(in srgb,var(--kombu) 25%,var(--surface))}.w2{fill:color-mix(in srgb,var(--kombu) 55%,var(--surface))}.w3{fill:var(--kombu)}
+.wn{font-family:var(--mono);font-size:8.5px;fill:var(--ink);pointer-events:none}
+.w3+.wn{fill:var(--card)}
+.pt .o{fill:none;stroke:var(--pt-edge);stroke-width:3.4}
+.pt .i{stroke:var(--card);stroke-width:1.4;fill:var(--card)}
+.pt-yes .i{fill:var(--ink)}
+.pt .h{fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;margin-top:10px;align-items:center}
+.legend .it{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw.ring{border:2px solid var(--saffron);background:transparent}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--pt-edge);background:var(--card)}
+.dot.yes{background:var(--ink)}
+.dot.opt{background:linear-gradient(90deg,var(--card) 50%,var(--ink) 50%)}
+.find{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.find li{background:var(--surface);border-radius:8px;padding:10px 14px}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-size:12.5px;font-weight:700;text-align:left;padding:7px 8px;border-bottom:2px solid var(--rule);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.q{font-family:var(--serif);font-weight:800;font-size:12.5px;line-height:1.6}
+.nw{white-space:nowrap}
+td.use{min-width:13em}
+table.rules{min-width:900px}
+.dif2{fill:none;stroke:var(--ink);stroke-width:1.4}
+.conf{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:0 9px;border:1px solid currentColor;white-space:nowrap}
+.conf.h{color:var(--kombu)}.conf.m{color:var(--saffron)}.conf.l{color:var(--low)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cols h3{margin-top:0}
+.cols ul{margin:6px 0 0;padding-left:1.2em}
+.cols li{margin:6px 0}
+.verdict{border-left:4px solid var(--saffron);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;margin-top:14px}
+.verdict p{margin:4px 0}
+table.rec td{height:52px}
+table.rec td.photo{min-width:120px}
+table.rec td.pred{font-size:12px;color:var(--muted)}
+ol.steps{padding-left:1.4em;margin:8px 0}
+ol.steps li{margin:6px 0}
+a{color:var(--kombu)}
+footer{margin-top:48px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.fg-grid{stroke:var(--rule);stroke-width:1}
+.fg-s0{stroke:var(--kombu)}.fg-s1{stroke:var(--saffron)}.fg-s2{stroke:var(--low)}.fg-s3{stroke:var(--ink)}
+.fg-f0{fill:var(--kombu)}.fg-f1{fill:var(--saffron)}.fg-f2{fill:var(--low)}.fg-f3{fill:var(--ink)}
+.fg-line{fill:none;stroke-width:2.2}.fg-dash{stroke-dasharray:5 4}
+.fg-h{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.fg-lab{font-family:var(--sans);font-size:11.5px;fill:var(--ink)}
+.fg-ax{font-family:var(--mono);font-size:11.5px;fill:var(--muted)}
+.fg-key{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+@media (max-width:720px){
+  .maps,.cols{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .card{padding:14px 12px}
+  table.rec{min-width:640px}
+}
+</style>
+<div class="wrap">
+<header><div class="eyebrow">Cuisine Network · 通説の検証 3</div><h1>肉は、先に焼き目を付けると肉汁を閉じ込める？</h1><p class="lead">判定と確かさ・決め手の図・言えないこと・自分で試す手順を先に置き、通説の説明・計算の詳しい答え・根拠を後ろに並べたページです。通説の説明と結論の文章は本人が書きます（いまは空欄と材料）。</p></header>
+<section id="verdict"><h2><span class="no">1</span>判定と確かさ</h2>
+<div class="card"><h3>言えること</h3><ul><li>同じ中心温度（55℃）まで焼くなら、<b>焼き目を先に付けても失う重さは減らない</b>。計算では焼き目ありが 28.7%、なしが 28.6%（差 +0.2 ポイント）。出典（Wikipedia が引く McGee、1930年代からの実験「同じかそれ以上を失った」）と食い違わない。<span class="conf m">確かさ 中</span></li><li>失う量を左右するのは焼き目ではなく、休ませる間を含めて中の層がどこまで上がったか（R-P06 は到達温度とともに増える）。<span class="conf m">確かさ 中</span></li><li>焼き目を付けたほうが「多く」失う、までは計算からは言えない（差が小さく、表面の乾いた層を入れていない）。</li></ul></div>
+<div class="owner"><p class="slot">（ここに本人が書く）結論（まとめの文章） <span>下の実験の結果を見てから書くのでもよい</span></p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>失う重さ（計算）: 焼き目を付けてから弱火 28.7%、焼き目なし（弱火だけ） 28.6%、中火のまま 30.4%、低温のオーブン→最後に焼き目 31.5%</li><li>焼き目ありとなしの差: +0.2 ポイント（ほぼ同じ）。出典は「同じかそれ以上を失った」</li><li>確かさ: 「焼き目で減らない」は 中（出典と計算が食い違わない）、値は 低（30分保った値を当てた）</li><li>焼き目の役目は香ばしさ（メイラード反応）で、肉汁を閉じ込めることではない、という言い方ができる</li></ul></div>
+</section>
+<section id="keyfig"><h2><span class="no">2</span>決め手の図</h2><figure class="key"><figcaption>同じ中心温度（55℃）まで焼いたときに失う重さ（計算）</figcaption><svg viewBox="0 0 640 146" role="img" aria-label="横棒グラフ"><text class="fg-lab" x="222" y="24" text-anchor="end">焼き目を付けてから弱火</text><rect class="fg-f2" x="230" y="10" width="310.5" height="22" rx="3"/><text class="fg-ax" x="546.5" y="24">28.7%</text><text class="fg-lab" x="222" y="58" text-anchor="end">焼き目なし（弱火だけ）</text><rect class="fg-f0" x="230" y="44" width="308.5" height="22" rx="3"/><text class="fg-ax" x="544.5" y="58">28.6%</text><text class="fg-lab" x="222" y="92" text-anchor="end">中火のまま</text><rect class="fg-f1" x="230" y="78" width="328.1" height="22" rx="3"/><text class="fg-ax" x="564.1" y="92">30.4%</text><text class="fg-lab" x="222" y="126" text-anchor="end">低温のオーブン→最後に焼き目</text><rect class="fg-f3" x="230" y="112" width="340.0" height="22" rx="3"/><text class="fg-ax" x="576.0" y="126">31.5%</text></svg></figure><p class="small">焼き目ありとなしの差は +0.2 ポイント。焼き目を付けても失う重さは減らない（計算）。失う量を左右するのは、休ませる間を含めて中がどこまで上がったか。</p></section>
+<section id="cannot"><h2><span class="no">3</span>言えないこと</h2><div class="card"><h3>言えないこと</h3><ul><li><b>表面の膜が汁を止める力</b>そのもの。膜の性質（すき間・強さ）は計算に無い。</li><li>何 g 失うかの値。R-P06 は 30 分保った後の値で、短い加熱の失い方の速さを入れていない。</li><li>焼き目の<b>香ばしさ・おいしさ</b>。焼き目を付ける理由として正しい（メイラード反応、R-M01）が、肉汁の話とは別。</li><li>休ませる間に皿に出る汁の量。休ませる間の上昇は計算では大きめに出る（Exp-18）。</li><li>肉の種類・厚さ・脂の量による違い。牛ひき肉の成分・厚さ 20 mm の1通りだけ。</li><li>強火の表面がどれだけ乾いて重さを失うか。計算では水が残る間は表面が 100℃ 止まり（R-W01）で、焼き目の層の乾きを持たない。</li></ul></div></section>
+<section id="try"><h2><span class="no">4</span>自分で試す</h2>
+<p>同じ肉を2枚に切り、焼き方だけを変えて、焼く前と休ませた後の重さを量ります。中心温度をそろえるために温度計（肉に刺すもの）と、1 g 単位のはかりが要ります。</p>
+<h3>手順</h3><ol class="steps"><li>同じかたまりから、厚さ 2 cm・同じくらいの重さのステーキ肉を2枚切る。30 分ほど室温に置く。</li><li>焼く前の重さを量って書く。</li><li>A: 強火で片面 1 分ずつ焼き目を付け、弱火にして 90 秒ごとに返し、中心が 55℃ になったら火から下ろす。</li><li>B: はじめから弱火で 90 秒ごとに返し、中心が 55℃ になったら火から下ろす。</li><li>どちらも網か皿の上で 4 分休ませ、出た汁をふかずに肉だけの重さを量る。</li><li>失った割合 =（焼く前 − 休ませた後）÷ 焼く前。できれば順番を入れ替えてもう一組。</li></ol>
+<div class="tablewrap"><table class="rec"><thead><tr><th>回</th><th>焼き方</th><th>焼く前（g）</th><th>中心温度（℃、下ろした時）</th><th>焼いた時間（分）</th><th>休ませた後（g）</th><th>失った割合（%）</th><th>計算の予言</th></tr></thead><tbody>
+<tr><td class="num">1</td><td>焼き目を付けてから弱火</td><td></td><td></td><td></td><td></td><td></td><td class="pred">29% 前後（多めに出る見積もり）</td></tr>
+<tr><td class="num">2</td><td>焼き目なし（弱火だけ）</td><td></td><td></td><td></td><td></td><td></td><td class="pred">29% 前後（多めに出る見積もり）</td></tr>
+</tbody></table></div>
+<p class="small muted">計算の予言は「A と B はほぼ同じ」。A のほうがはっきり少なければ、通説の側に合う結果です。値は R-P06 が 30 分保った値なので、実際より多めに出ます。</p>
+</section>
+<section id="claim"><h2><span class="no">5</span>通説</h2><div class="card">
+<p class="claim">「ステーキは、最初に強火で表面を焼き固めると、肉汁が閉じ込められる」</p>
+<div class="owner"><p class="slot">（ここに本人が書く）この通説がどう言われているか・なぜ気になったか</p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>言われる理由: 表面のたんぱく質が固まって膜になり、中の汁が出ていかない</li><li>反対の記録: 1930年代から試されていて、焼き目を付けた肉は同じかそれ以上の水分を失った（Wikipedia "Searing"、McGee 2004 p.161 を引く）</li><li>計算で扱えるのは「同じ中心温度まで焼いたとき、失う重さ（加熱損失）が焼き目でどう変わるか」。表面に膜ができて汁を止めるかどうか（膜の性質）は扱えない</li></ul></div>
+</div></section>
+<section id="calc"><h2><span class="no">6</span>計算の詳しい答え</h2>
+<p>牛肉（成分表の牛ひき肉の成分、250 g・厚さ 20 mm・20℃から）を、厚み方向の熱の伝わり方で計算しました（Exp-18 の計算）。4 通りとも中心が 55℃ になったら火から下ろし、4 分休ませます。肉の中を 40 層に分け、層ごとに届いた最高の温度から、牛肉を各温度に保ったときに失う重さの割合（R-P06）を読み、厚さで平均しました。</p>
+<div class="tablewrap"><table><thead><tr><th>焼き方</th><th>手順</th><th>火にかけた時間（分）</th><th>休ませた後の中心の最高（℃）</th><th>失う重さ（%）</th><th>うち表から 5 mm の層（%）</th><th>250 g あたり（g）</th></tr></thead><tbody>
+<tr><td>焼き目を付けてから弱火</td><td class="small">強火 230℃ で片面 1 分ずつ焼き目を付け、弱火 130℃ で 90 秒ごとに返して中心 55℃まで</td><td class="num">5.5</td><td class="num">63.5</td><td class="num">28.7</td><td class="num">34.1</td><td class="num">72</td></tr>
+<tr><td>焼き目なし（弱火だけ）</td><td class="small">弱火 130℃ で 90 秒ごとに返して中心 55℃まで</td><td class="num">6.6</td><td class="num">63.3</td><td class="num">28.6</td><td class="num">33.9</td><td class="num">71</td></tr>
+<tr><td>中火のまま</td><td class="small">中火 175℃ で 90 秒ごとに返して中心 55℃まで（東京ガスの手順）</td><td class="num">5.6</td><td class="num">64.8</td><td class="num">30.4</td><td class="num">35.5</td><td class="num">76</td></tr>
+<tr><td>低温のオーブン→最後に焼き目</td><td class="small">120℃ のオーブンで中心 50℃まで、強火 230℃ で片面 1 分ずつ</td><td class="num">25.9</td><td class="num">66.4</td><td class="num">31.5</td><td class="num">35.9</td><td class="num">79</td></tr>
+</tbody></table></div>
+<figure class="chart"><figcaption>厚さ方向の各層が届いた最高の温度（休ませた後まで）</figcaption><svg viewBox="0 0 640 300" role="img" aria-label="最高温度（℃）と肉の中の位置（mm、0 と 20 が表面）"><line class="fg-grid" x1="52" x2="624" y1="258.0" y2="258.0"/><text class="fg-ax" x="46" y="262.0" text-anchor="end">40</text><line class="fg-grid" x1="52" x2="624" y1="176.7" y2="176.7"/><text class="fg-ax" x="46" y="180.7" text-anchor="end">60</text><line class="fg-grid" x1="52" x2="624" y1="95.3" y2="95.3"/><text class="fg-ax" x="46" y="99.3" text-anchor="end">80</text><line class="fg-grid" x1="52" x2="624" y1="14.0" y2="14.0"/><text class="fg-ax" x="46" y="18.0" text-anchor="end">100</text><text class="fg-ax" x="52.0" y="276" text-anchor="middle">0</text><text class="fg-ax" x="195.0" y="276" text-anchor="middle">5</text><text class="fg-ax" x="338.0" y="276" text-anchor="middle">10</text><text class="fg-ax" x="481.0" y="276" text-anchor="middle">15</text><text class="fg-ax" x="624.0" y="276" text-anchor="middle">20</text><text class="fg-lab" x="338.0" y="294" text-anchor="middle">肉の中の位置（mm、0 と 20 が表面）</text><text class="fg-lab" x="12" y="136.0" text-anchor="middle" transform="rotate(-90 12 136.0)">最高温度（℃）</text><line class="fg-h" x1="52" x2="624" y1="217.3" y2="217.3"/><text class="fg-ax" x="620" y="213.3" text-anchor="end">50℃</text><line class="fg-h" x1="52" x2="624" y1="176.7" y2="176.7"/><text class="fg-ax" x="620" y="172.7" text-anchor="end">60℃</text><line class="fg-h" x1="52" x2="624" y1="136.0" y2="136.0"/><text class="fg-ax" x="620" y="132.0" text-anchor="end">70℃</text><line class="fg-h" x1="52" x2="624" y1="95.3" y2="95.3"/><text class="fg-ax" x="620" y="91.3" text-anchor="end">80℃</text><path class="fg-line fg-s2" d="M59.1,14.0 L73.5,14.0 L87.8,21.8 L102.0,62.1 L116.4,86.4 L130.7,105.2 L144.9,122.4 L159.2,137.8 L173.6,147.9 L187.8,152.8 L202.2,156.1 L216.4,158.2 L230.8,159.5 L245.1,160.3 L259.4,160.8 L273.6,161.2 L287.9,161.6 L302.2,161.8 L316.6,162.1 L330.8,162.3 L345.1,162.6 L359.4,162.8 L373.8,163.0 L388.1,163.2 L402.4,163.4 L416.6,163.5 L430.9,163.5 L445.2,163.1 L459.6,160.1 L473.9,154.2 L488.1,146.5 L502.4,137.2 L516.8,126.0 L531.0,112.9 L545.4,97.8 L559.6,80.7 L573.9,61.5 L588.2,21.5 L602.6,14.0 L616.9,14.0"><title>焼き目を付けてから弱火</title></path><path class="fg-line fg-s0" d="M59.1,14.0 L73.5,25.1 L87.8,48.2 L102.0,70.5 L116.4,91.8 L130.7,110.8 L144.9,127.9 L159.2,140.5 L173.6,147.2 L187.8,152.2 L202.2,155.6 L216.4,157.9 L230.8,159.4 L245.1,160.3 L259.4,161.0 L273.6,161.5 L287.9,162.0 L302.2,162.4 L316.6,162.7 L330.8,163.0 L345.1,163.4 L359.4,163.7 L373.8,164.0 L388.1,164.3 L402.4,164.6 L416.6,164.9 L430.9,165.0 L445.2,164.8 L459.6,161.4 L473.9,155.3 L488.1,147.6 L502.4,138.3 L516.8,127.1 L531.0,113.9 L545.4,98.7 L559.6,81.6 L573.9,62.3 L588.2,42.0 L602.6,20.9 L616.9,14.0"><title>焼き目なし（弱火だけ）</title></path><path class="fg-line fg-s1" d="M59.1,14.0 L73.5,14.0 L87.8,17.5 L102.0,40.4 L116.4,62.2 L130.7,81.7 L144.9,98.1 L159.2,111.5 L173.6,122.1 L187.8,130.2 L202.2,136.2 L216.4,140.7 L230.8,144.0 L245.1,146.6 L259.4,148.8 L273.6,150.6 L287.9,152.3 L302.2,153.8 L316.6,155.2 L330.8,156.6 L345.1,157.9 L359.4,159.2 L373.8,160.4 L388.1,161.7 L402.4,162.9 L416.6,164.2 L430.9,165.4 L445.2,166.7 L459.6,159.9 L473.9,151.4 L488.1,141.0 L502.4,128.7 L516.8,114.3 L531.0,98.0 L545.4,79.7 L559.6,59.2 L573.9,37.7 L588.2,15.6 L602.6,14.0 L616.9,14.0"><title>中火のまま</title></path><path class="fg-line fg-s3 fg-dash" d="M59.1,14.0 L73.5,14.0 L87.8,14.0 L102.0,28.5 L116.4,52.8 L130.7,75.2 L144.9,93.5 L159.2,107.8 L173.6,118.5 L187.8,126.4 L202.2,132.1 L216.4,136.1 L230.8,139.1 L245.1,141.4 L259.4,143.3 L273.6,145.0 L287.9,146.4 L302.2,147.7 L316.6,148.9 L330.8,150.1 L345.1,151.2 L359.4,152.3 L373.8,153.5 L388.1,154.6 L402.4,155.7 L416.6,156.8 L430.9,157.9 L445.2,157.0 L459.6,150.2 L473.9,142.2 L488.1,132.7 L502.4,121.3 L516.8,107.8 L531.0,91.6 L545.4,72.5 L559.6,50.3 L573.9,26.8 L588.2,14.0 L602.6,14.0 L616.9,14.0"><title>低温のオーブン→最後に焼き目</title></path></svg></figure>
+<div class="legend"><span class="it"><span class="fg-key" style="border-color:var(--low);"></span>焼き目を付けてから弱火</span><span class="it"><span class="fg-key" style="border-color:var(--kombu);"></span>焼き目なし（弱火だけ）</span><span class="it"><span class="fg-key" style="border-color:var(--saffron);"></span>中火のまま</span><span class="it"><span class="fg-key" style="border-color:var(--ink);border-top-style:dashed;"></span>低温のオーブン→最後に焼き目</span></div>
+<ul class="find">
+<li><b>焼き目の有無で、失う重さはほとんど変わらない。</b>焼き目を付けてから弱火 28.7%、焼き目なし（弱火だけ）28.6%（差 +0.2 ポイント）。表から 5 mm の層でも 34.1% と 33.9%。この計算では、水が残っている間は表面が 100℃ を超えない（R-W01）ので、強火でも弱火でも表面の層は 100℃ 止まりになり、差が出にくい。</li>
+<li><b>差を決めているのは、中の層がどこまで上がったか。</b>休ませる間に中心は 63〜66℃ まで上がり、その上がり方が大きい焼き方（中火 30.4%、低温のオーブン→焼き目 31.5%）ほど多く失う。低温のオーブンの手順は、焼き目を付ける間に中心が 56.8℃ まで上がっていて、ほかと同じ中心温度にはそろっていない。</li>
+<li class="muted small">注意: 加熱損失の値（R-P06）は肉を各温度に 30 分保った後の値で、短い加熱では実際にはこれより少なく失います。ここで比べられるのは焼き方どうしの大小の向きで、何 g 失うかの値は確かではありません。表面の乾いた層（クラスト）・蒸発で逃げる熱・肉の縮みは入れていません（Exp-18）。</li>
+</ul></section>
+<section id="basis"><h2><span class="no">7</span>根拠</h2>
+<p class="small">規則ごとのページ（値・出典の文面・確かめ方・食い違い・使っている通説）: <a href="basis/rules/R-P06.html">R-P06</a>・<a href="basis/rules/R-P01.html">R-P01</a>・<a href="basis/rules/R-P02.html">R-P02</a>・<a href="basis/rules/R-P05.html">R-P05</a>。出典ごとのページ: <a href="basis/sources/vaskoska2020.html">vaskoska2020</a>・<a href="basis/sources/wiki_searing.html">wiki_searing</a>・<a href="basis/sources/mcgee.html">mcgee</a>・<a href="basis/sources/tokyogas_steak.html">tokyogas_steak</a>・<a href="basis/sources/aussiebeef_steak.html">aussiebeef_steak</a>・<a href="basis/sources/ngadi2007.html">ngadi2007</a>・<a href="basis/sources/ashrae_thermal.html">ashrae_thermal</a>。<a href="basis/index.html">規則と出典の一覧</a></p>
+<h3>使った規則（Exp-14 rules.yaml）</h3><div class="tablewrap"><table class="rules"><thead><tr><th>id</th><th>内容</th><th>出典の文面</th><th>出典</th><th>確かめ方</th><th>確かさ</th><th>計算での扱い</th></tr></thead><tbody>
+<tr><td class="num nw">R-P06</td><td>加熱損失（失う重さの割合）は到達温度とともに増える。50℃ 7〜11%、60℃ 17〜21%、70℃ 29〜32%、80℃ 34〜40%</td><td class="q">The cooking loss gradually increased with the increase in temperature, and it ranged between 7% and 11% at 50 °C, between 17% and 21% at 60 °C, and between 29 and 32% at 70 °C</td><td>vaskoska2020</td><td class="nw">本文確認</td><td><span class="conf m">確かさ 中</span></td><td class="small use">層ごとの最高温度から失う重さの割合を読む（50・60・70・80℃ の範囲の中央を直線でつなぐ。50℃未満は 20℃で 0 から直線＝推定、80℃超は 80℃ の値）</td></tr>
+<tr><td class="num nw">R-P01</td><td>meat_myosin 0→1、meat_collagen 0→1（変性して収縮）、meat_actin 0→1。硬さは筋原線維たんぱく質の変性で増す</td><td class="q">myosin denaturing at 40-60°C and actin at 66-73°C. Collagen denaturation occurs at temperatures between 53 and 63°C, followed by collagen fiber shrinkage</td><td>tornberg2005</td><td class="nw">抜粋のみ</td><td><span class="conf h">確かさ 高</span></td><td class="small use">参考（ミオシン・アクチンの変性温度）。この計算では失う重さに直接は使っていない</td></tr>
+<tr><td class="num nw">R-P02</td><td>meat_myoglobin 0→1、meat_water_loss ↑</td><td class="q">120°F/50°C -- Meat develops a white opacity / 140°F/60°C -- Red myoglobin begins to denature / 140°F/60°C -- Meat suddenly releases lots of juice</td><td>soc_temps</td><td class="nw">本文確認</td><td><span class="conf m">確かさ 中</span></td><td class="small use">参考（60℃で肉汁が急に出る）。R-P06 の 50→60℃ の増え方と向きが合う</td></tr>
+<tr><td class="num nw">R-P05</td><td>状態変化ではなく制約。鶏肉 165°F（74℃）、牛ステーキ 145°F（63℃）＋3分休ませる、牛ひき肉 160°F（71℃）</td><td class="q">poultry 165°F / steaks, chops, roasts 145°F + rest 3 minutes / ground beef 160°F</td><td>fsis</td><td class="nw">抜粋のみ</td><td><span class="conf h">確かさ 高</span></td><td class="small use">参考（牛ステーキの安全上の中心温度 63℃＋3分休ませる）。ここでは中心 55℃（ミディアムの手順）にそろえた</td></tr>
+</tbody></table></div>
+<h3>出典と確かめ方</h3><div class="tablewrap"><table><thead><tr><th>出典</th><th>何か</th><th>確かめ方</th><th>この計算で使ったこと</th></tr></thead><tbody>
+<tr><td class="num">vaskoska2020</td><td>R. Vaskoska, M. Ha, Z.B. Naqvi, J.D. White, R.D. Warner (2020) Muscle, Ageing and Temperature Influence the Changes in Texture, Cooking Loss and Shrinkage of Cooked Beef. Foods 9(9):1289。牛の3つの筋肉（半腱様筋・大腿二頭筋・大腰筋）の 50×30×30 mm の角切りを 50・60・70・80℃の湯で中心がその温度になってから 30 分保った。CC BY 4.0 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7555138/" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">牛肉の3つの筋肉を 50・60・70・80℃の湯に 30 分。加熱損失は 7〜11%・17〜21%・29〜32%・34〜40%。温度とともに増える。層ごとの失う割合に使った</td></tr>
+<tr><td class="num">wiki_searing</td><td>Wikipedia &quot;Searing&quot;（&quot;Experiments to test the theory were carried out as early as the 1930s and found that the seared roasts lost the same amount of moisture or more.&quot; McGee 2004 On Food and Cooking p.161 を引く）。CC BY-SA <a href="https://en.wikipedia.org/wiki/Searing" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">1930年代から試されていて、焼き目を付けた肉は同じかそれ以上の水分を失った。McGee（2004）p.161 を引く</td></tr>
+<tr><td class="num">mcgee</td><td>Harold McGee, On Food and Cooking: The Science and Lore of the Kitchen, 2nd ed., Scribner, 2004</td><td class="nw">未確認（書籍）</td><td class="small">焼き目は肉汁を閉じ込めない、同じ中心温度なら焼き目を付けたほうが多く失う（Wikipedia が引く p.161。書籍本文は開いていない）</td></tr>
+<tr><td class="num">tokyogas_steak</td><td>東京ガス ウチコト「実証! 絶対に失敗しないステーキの焼き方【東京ガス調べ】」2021-09-21（オーストラリア産サーロイン 厚さ約2cm・250g、室温に戻す、中火、中心 55℃まで。90秒ごとに返して 6分30秒〜7分、15秒ごとに返して 5分30秒〜6分） <a href="https://uchi.tokyo-gas.co.jp/topics/7462" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">厚さ約2cm・250g・室温に戻す・中火で中心 55℃まで。条件をそろえるのに使った</td></tr>
+<tr><td class="num">aussiebeef_steak</td><td>オージー・ビーフ公式サイト「ステーキの上手な焼き方」（厚さ2cm以上。ミディアム: 強火約1分→弱火約2分→返して強火約30秒→弱火約2〜3分、中心 約55℃。3〜5分休ませる） <a href="https://www.aussiebeef.jp/steak/" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">ミディアムは中心 約55℃、3〜5分休ませる。強火→弱火の手順</td></tr>
+<tr><td class="num">ngadi2007</td><td>M.O. Ngadi, D-K. Hwang (2007) Modelling Heat Transfer and Heterocyclic Amines Formation in Meat Patties during Frying. Agricultural Engineering International: the CIGR Ejournal, Manuscript BC 04 004, Vol. IX（厚さ 20mm の牛ひき肉のパティ、片面焼き器 180・200℃。鍋に触れた面 h=300、上面 60、側面 10 W/(m²·℃)、表面近くの温度に合うよう決めた値） <a href="https://cigrjournal.org/index.php/Ejounral/article/download/884/878/878" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">フライパンに触れた面と上の面の熱の伝わりやすさ（h = 300・60 W/(m²·K)）</td></tr>
+<tr><td class="num">ashrae_thermal</td><td>ASHRAE (1998) Refrigeration Handbook, Chapter 8 Thermal Properties of Foods. 表1・表2 は Choi, Y. &amp; Okos, M.R. (1986) Effects of temperature and composition on the thermal properties of foods. In: Food Engineering and Process Applications, Vol.1, pp.93–101 の式（ヤード・ポンド単位）。表5・表7 は食品の熱伝導率・熱拡散率の実測 <a href="https://www.kingson-foodtech.com/files/L2.pdf" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">肉の成分から熱の伝わりやすさ・比熱・密度を出す式（Choi &amp; Okos）</td></tr>
+</tbody></table></div>
+</section>
+<footer>Cuisine Network。計算: Exp-18 の肉の熱伝導（experiments/exp-14/sim/meat_slab.py）と R-P06（rules.yaml）。このページは experiments/myths/build.py（通説3 sear_juice）が生成します。</footer>
+</div>

@@ -1,0 +1,17 @@
+{
+  "canonical": "radishes",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "radishes",
+  "n_recipes": 282,
+  "note": "生",
+  "order": 285,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "orange juice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 0
+  },
+  "ingredient": "orange juice",
+  "n_recipes": 338,
+  "note": "",
+  "order": 244,
+  "reviewed": true
+}

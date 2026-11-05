@@ -1,0 +1,11 @@
+# 生データは容量が大きいので git に入れない。取得元とハッシュは data/SOURCES.md に残す
+data/raw/*
+!data/raw/.gitkeep
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+data/processed/*.kv
+data/processed/*.kv.*
+
+# API キー
+.env

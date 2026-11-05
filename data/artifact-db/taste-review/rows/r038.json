@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "diced tomatoes",
+  "n_recipes": 1623,
+  "note": "缶詰想定（加塩・酸味強め）",
+  "order": 38,
+  "reviewed": true
+}

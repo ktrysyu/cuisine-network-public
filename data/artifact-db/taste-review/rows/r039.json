@@ -1,0 +1,17 @@
+{
+  "canonical": "parsley",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh parsley",
+  "n_recipes": 1604,
+  "note": "",
+  "order": 39,
+  "reviewed": true
+}

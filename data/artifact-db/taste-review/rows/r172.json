@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "crushed tomatoes",
+  "n_recipes": 453,
+  "note": "缶詰想定",
+  "order": 172,
+  "reviewed": true
+}

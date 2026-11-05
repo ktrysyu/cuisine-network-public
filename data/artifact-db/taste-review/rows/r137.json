@@ -1,0 +1,25 @@
+{
+  "canonical": "balsamic vinegar",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 4,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 1
+  },
+  "ingredient": "balsamic vinegar",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 4,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "n_recipes": 574,
+  "note": "熟成度で甘みが大きく変わる",
+  "order": 137,
+  "reviewed": true
+}

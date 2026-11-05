@@ -1,0 +1,17 @@
+{
+  "canonical": "lemon juice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh lemon juice",
+  "n_recipes": 1679,
+  "note": "",
+  "order": 37,
+  "reviewed": true
+}

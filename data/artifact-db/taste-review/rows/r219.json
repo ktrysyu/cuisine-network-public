@@ -1,0 +1,17 @@
+{
+  "canonical": "orange",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 0
+  },
+  "ingredient": "orange",
+  "n_recipes": 355,
+  "note": "",
+  "order": 219,
+  "reviewed": true
+}

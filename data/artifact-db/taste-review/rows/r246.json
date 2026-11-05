@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "chicken thighs",
+  "n_recipes": 336,
+  "note": "",
+  "order": 246,
+  "reviewed": true
+}

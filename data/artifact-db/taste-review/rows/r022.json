@@ -1,0 +1,17 @@
+{
+  "canonical": "black pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "black pepper",
+  "n_recipes": 2627,
+  "note": "",
+  "order": 22,
+  "reviewed": true
+}

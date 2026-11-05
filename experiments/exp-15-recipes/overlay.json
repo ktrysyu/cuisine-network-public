@@ -1,0 +1,1588 @@
+{
+ "about": "Exp-15 のレシピ（map_ok=yes）を Exp-14 の地図に重ねた点。experiments/exp-15-recipes/overlay.py が生成。手で直さない。",
+ "no_match_below": 0.6,
+ "reason_kinds": {
+  "T_EST": "温度の推定",
+  "T_COUNT": "時間の数え始め",
+  "RULE": "計算の規則",
+  "DEF": "料理の定義",
+  "BASE": "地図の前提（元のレシピの手順）"
+ },
+ "points": [
+  {
+   "row_id": "R002",
+   "map": "shell_egg",
+   "after_step": "none",
+   "base_mod": null,
+   "dish": "soft_boiled_egg",
+   "dish_ja": "半熟ゆで卵",
+   "shape": "circle",
+   "x": 100.0,
+   "y": 5.0,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    4.0,
+    6.0
+   ],
+   "T_raw": "boil",
+   "time_raw": "4–6 minutes (4 minutes for runny yolk, 5 minutes for soft yolk)",
+   "time_counts": "卵を入れてから",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Soft Boiled Eggs",
+   "method": "Method 1（沸騰を続ける）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500586",
+   "quote": "Gently add the eggs, and boil for 4–6 minutes (4 minutes for runny yolk, 5 minutes for soft yolk).",
+   "vinegar": "no",
+   "independence_group": "G-softboiled",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none"
+   ],
+   "alt": {
+    "what": "すぐ氷水に取った場合",
+    "answer": "__none",
+    "answer_ja": "該当なし",
+    "top": null
+   },
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（W-BOIL、中心 100℃ 95〜100℃）。Bring a saucepan of water to a boil ... boil for 4–6 minutes"
+    ],
+    [
+     "RULE",
+     "殻付き卵は場所ごとの変性度から卵白・卵黄の段階を決める（Exp-17、2026-09-30 から既定）。後の手順は書いていない（室温に置く）で、余熱を含めて固まった割合 卵白 1.00・卵黄 1.00、中心 最高 72.0℃、卵白 3・卵黄 2。卵白が固まり卵黄がやわらかく固まった（卵黄 2）状態で、半熟ゆで卵（卵黄 0〜1）と固ゆで（卵黄 3）の間。必須条件を満たす料理が無い"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R005",
+   "map": "shell_egg",
+   "after_step": "none",
+   "base_mod": null,
+   "dish": "soft_boiled_egg",
+   "dish_ja": "半熟ゆで卵",
+   "shape": "circle",
+   "x": 100.0,
+   "y": 6.25,
+   "estimate": true,
+   "T_rule": "S-STEAM",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    6.0,
+    6.5
+   ],
+   "T_raw": "about 1 inch (2.5 cm) of water to a rolling boil, cover, boil/steam",
+   "time_raw": "6–6½ minutes",
+   "time_counts": "卵を入れて蓋をしてから",
+   "T_basis": "沸騰した湯の上で蓋をして蒸す。蒸気は 100℃（W-BOIL と同じ根拠）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Soft Boiled Eggs",
+   "method": "Method 4（少量の湯で蒸す）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500586",
+   "quote": "Let boil/steam for 6–6½ minutes, depending on how runny you want the yolks.",
+   "vinegar": "no",
+   "independence_group": "G-softboiled",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none"
+   ],
+   "alt": {
+    "what": "すぐ氷水に取った場合",
+    "answer": "soft_boiled_egg",
+    "answer_ja": "半熟ゆで卵",
+    "top": [
+     "soft_boiled_egg",
+     6,
+     6
+    ]
+   },
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（S-STEAM、中心 100℃ 95〜100℃）。Let boil/steam"
+    ],
+    [
+     "RULE",
+     "殻付き卵は場所ごとの変性度から卵白・卵黄の段階を決める（Exp-17、2026-09-30 から既定）。後の手順は書いていない（室温に置く）で、余熱を含めて固まった割合 卵白 1.00・卵黄 1.00、中心 最高 76.6℃、卵白 3・卵黄 2。卵白が固まり卵黄がやわらかく固まった（卵黄 2）状態で、半熟ゆで卵（卵黄 0〜1）と固ゆで（卵黄 3）の間。必須条件を満たす料理が無い"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R006",
+   "map": "shell_egg_ice",
+   "after_step": "ice",
+   "base_mod": null,
+   "dish": "soft_boiled_egg",
+   "dish_ja": "半熟ゆで卵",
+   "shape": "circle",
+   "x": 100.0,
+   "y": 7.0,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    7.0,
+    7.0
+   ],
+   "T_raw": "rolling boil → full boil",
+   "time_raw": "7–9 minutes（9 minutes hard, 7 minutes jammier）",
+   "time_counts": "再沸騰してから（入れてから再沸騰までの時間は含まない）",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Tonkotsu Ramen",
+   "method": "Marinated eggs（7 分）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4536315",
+   "quote": "9 minutes will give you a fully hard boiled egg, while 7 minutes makes a jammier egg.",
+   "vinegar": "no",
+   "independence_group": "G-tonkotsu",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none",
+    "soft_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "__none",
+    "answer_ja": "該当なし",
+    "top": null
+   },
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（W-BOIL、中心 100℃ 95〜100℃）。Wait for the water to come back to a full boil, then cook。推定の幅・時間の幅の端では一致する答えがある"
+    ],
+    [
+     "T_COUNT",
+     "時間の数え始め: 再沸騰してから（入れてから再沸騰までの時間は含まない）。地図の時間は湯・鍋に入れてからの時間"
+    ],
+    [
+     "RULE",
+     "殻付き卵は場所ごとの変性度から卵白・卵黄の段階を決める（Exp-17、2026-09-30 から既定）。後の手順は氷水に取るで、余熱を含めて固まった割合 卵白 1.00・卵黄 0.56、中心 最高 64.5℃、卵白 3・卵黄 2。卵白が固まり卵黄がやわらかく固まった（卵黄 2）状態で、半熟ゆで卵（卵黄 0〜1）と固ゆで（卵黄 3）の間。必須条件を満たす料理が無い"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R007",
+   "map": "shell_egg_ice",
+   "after_step": "cold",
+   "base_mod": {
+    "i": 1,
+    "key": "T",
+    "value": 15
+   },
+   "dish": "soft_boiled_egg",
+   "dish_ja": "半熟ゆで卵",
+   "shape": "circle",
+   "x": 100.0,
+   "y": 6.5,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    6.0,
+    7.0
+   ],
+   "T_raw": "水が沸騰したら卵を入れ、再び沸騰するまで加熱",
+   "time_raw": "半熟卵: 6～7分",
+   "time_counts": "再沸騰してから（と読める。「その後は以下の時間で茹でます」）",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "ウィキブックス 料理本（日本語版）公式ダンプ jawikibooks-20260901",
+   "page_title": "料理本/ゆで卵",
+   "method": "基本のゆで卵（沸騰した湯に入れる）",
+   "permalink": "https://ja.wikibooks.org/w/index.php?oldid=255486",
+   "quote": "半熟卵: 6～7分",
+   "vinegar": "no",
+   "independence_group": "G-ja-yudetamago",
+   "answer": "soft_boiled_egg",
+   "answer_ja": "半熟ゆで卵",
+   "top": [
+    "soft_boiled_egg",
+    6,
+    6
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "soft_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "__none",
+    "answer_ja": "該当なし",
+    "top": null
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R008",
+   "map": "shell_egg",
+   "after_step": "none",
+   "base_mod": null,
+   "dish": "soft_boiled_egg",
+   "dish_ja": "半熟ゆで卵",
+   "shape": "circle",
+   "x": 100.0,
+   "y": 6.0,
+   "estimate": true,
+   "T_rule": "W-UNSPEC",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    6.0,
+    6.0
+   ],
+   "T_raw": "茹でる（湯温・水から/湯からの記述なし）",
+   "time_raw": "半熟：6分",
+   "time_counts": "不明（数え始めの記述なし）",
+   "T_basis": "「茹でる」「boil」とだけあり湯温の指示が無い。沸騰した湯と読む（推定）",
+   "source": "ウィキブックス 料理本（日本語版）公式ダンプ jawikibooks-20260901",
+   "page_title": "料理本/畜産物",
+   "method": "調理のコツ（手順なし）",
+   "permalink": "https://ja.wikibooks.org/w/index.php?oldid=255512",
+   "quote": "茹でる時間を調整し、好みの固さに仕上げる（半熟：6分、固ゆで：10分程度）",
+   "vinegar": "no",
+   "independence_group": "G-ja-yudetamago",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none"
+   ],
+   "alt": {
+    "what": "すぐ氷水に取った場合",
+    "answer": "soft_boiled_egg",
+    "answer_ja": "半熟ゆで卵",
+    "top": [
+     "soft_boiled_egg",
+     6,
+     6
+    ]
+   },
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（W-UNSPEC、中心 100℃ 95〜100℃）。茹でる時間を調整し"
+    ],
+    [
+     "T_COUNT",
+     "時間の数え始め: 不明（数え始めの記述なし）。地図の時間は湯・鍋に入れてからの時間"
+    ],
+    [
+     "RULE",
+     "殻付き卵は場所ごとの変性度から卵白・卵黄の段階を決める（Exp-17、2026-09-30 から既定）。後の手順は書いていない（室温に置く）で、余熱を含めて固まった割合 卵白 1.00・卵黄 1.00、中心 最高 75.7℃、卵白 3・卵黄 2。卵白が固まり卵黄がやわらかく固まった（卵黄 2）状態で、半熟ゆで卵（卵黄 0〜1）と固ゆで（卵黄 3）の間。必須条件を満たす料理が無い"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R011",
+   "map": "shell_egg_ice",
+   "after_step": "ice",
+   "base_mod": null,
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 12.5,
+   "estimate": true,
+   "T_rule": "S-STEAM",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    12.0,
+    13.0
+   ],
+   "T_raw": "2 cm of water to a fast boil; steam with lid",
+   "time_raw": "about 12–13 minutes",
+   "time_counts": "蒸し始めてから",
+   "T_basis": "沸騰した湯の上で蓋をして蒸す。蒸気は 100℃（W-BOIL と同じ根拠）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Hard Cooked Eggs",
+   "method": "Steaming method",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500335",
+   "quote": "Steam for about 12–13 minutes—the heat can be lowered slightly, as long as there is steam.",
+   "vinegar": "no",
+   "independence_group": "G-hardcooked",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "hard_boiled_egg",
+    "answer_ja": "ゆで卵（固ゆで）",
+    "top": [
+     "hard_boiled_egg",
+     5,
+     5
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R013",
+   "map": "shell_egg_ice",
+   "after_step": "ice",
+   "base_mod": null,
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 9.0,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    9.0,
+    9.0
+   ],
+   "T_raw": "rolling boil → full boil",
+   "time_raw": "9 minutes",
+   "time_counts": "再沸騰してから",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Tonkotsu Ramen",
+   "method": "Marinated eggs（9 分）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4536315",
+   "quote": "Wait for the water to come back to a full boil, then cook for 7–9 minutes.",
+   "vinegar": "no",
+   "independence_group": "G-tonkotsu",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "hard_boiled_egg",
+    "answer_ja": "ゆで卵（固ゆで）",
+    "top": [
+     "hard_boiled_egg",
+     5,
+     5
+    ]
+   },
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（W-BOIL、中心 100℃ 95〜100℃）。Wait for the water to come back to a full boil, then cook"
+    ],
+    [
+     "T_COUNT",
+     "時間の数え始め: 再沸騰してから。地図の時間は湯・鍋に入れてからの時間"
+    ],
+    [
+     "RULE",
+     "殻付き卵は場所ごとの変性度から卵白・卵黄の段階を決める（Exp-17、2026-09-30 から既定）。後の手順は氷水に取るで、余熱を含めて固まった割合 卵白 1.00・卵黄 1.00、中心 最高 73.7℃、卵白 3・卵黄 2。卵白が固まり卵黄がやわらかく固まった（卵黄 2）状態で、半熟ゆで卵（卵黄 0〜1）と固ゆで（卵黄 3）の間。必須条件を満たす料理が無い"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R014",
+   "map": "shell_egg_ice",
+   "after_step": "cold",
+   "base_mod": {
+    "i": 1,
+    "key": "T",
+    "value": 15
+   },
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 11.0,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    10.0,
+    12.0
+   ],
+   "T_raw": "水が沸騰したら卵を入れ、再び沸騰するまで加熱",
+   "time_raw": "10～12分",
+   "time_counts": "再沸騰してから",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "ウィキブックス 料理本（日本語版）公式ダンプ jawikibooks-20260901",
+   "page_title": "料理本/ゆで卵",
+   "method": "基本のゆで卵（沸騰した湯に入れる）",
+   "permalink": "https://ja.wikibooks.org/w/index.php?oldid=255486",
+   "quote": "中身がしっかり固まった卵: 10～12分",
+   "vinegar": "no",
+   "independence_group": "G-ja-yudetamago",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "hard_boiled_egg",
+    "answer_ja": "ゆで卵（固ゆで）",
+    "top": [
+     "hard_boiled_egg",
+     5,
+     5
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R015",
+   "map": "shell_egg",
+   "after_step": "none",
+   "base_mod": null,
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 10.0,
+   "estimate": true,
+   "T_rule": "W-UNSPEC",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    10.0,
+    10.0
+   ],
+   "T_raw": "茹でる",
+   "time_raw": "10分程度",
+   "time_counts": "不明",
+   "T_basis": "「茹でる」「boil」とだけあり湯温の指示が無い。沸騰した湯と読む（推定）",
+   "source": "ウィキブックス 料理本（日本語版）公式ダンプ jawikibooks-20260901",
+   "page_title": "料理本/畜産物",
+   "method": "調理のコツ（手順なし）",
+   "permalink": "https://ja.wikibooks.org/w/index.php?oldid=255512",
+   "quote": "固ゆで：10分程度",
+   "vinegar": "no",
+   "independence_group": "G-ja-yudetamago",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "すぐ氷水に取った場合",
+    "answer": "__none",
+    "answer_ja": "該当なし",
+    "top": null
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R016",
+   "map": "shell_egg",
+   "after_step": "none",
+   "base_mod": null,
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 10.0,
+   "estimate": true,
+   "T_rule": "W-UNSPEC",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    10.0,
+    10.0
+   ],
+   "T_raw": "hard-boil",
+   "time_raw": "about 10 minutes",
+   "time_counts": "不明",
+   "T_basis": "「茹でる」「boil」とだけあり湯温の指示が無い。沸騰した湯と読む（推定）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Egg Butter",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4523485",
+   "quote": "Hard-boil the eggs (about 10 minutes).",
+   "vinegar": "no",
+   "independence_group": "G-eggbutter",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "すぐ氷水に取った場合",
+    "answer": "__none",
+    "answer_ja": "該当なし",
+    "top": null
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R017",
+   "map": "shell_egg_ice",
+   "after_step": "ice",
+   "base_mod": null,
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 12.0,
+   "estimate": true,
+   "T_rule": "W-BOIL",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    12.0,
+    12.0
+   ],
+   "T_raw": "boiling water, return to a boil",
+   "time_raw": "a further 12 minutes",
+   "time_counts": "再沸騰してから",
+   "T_basis": "沸騰は 95〜100℃（Wikibooks Cookbook:Boiling、標高・気圧で変わる）。海抜0m付近として 100",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Vinegar-Pickled Eggs and Onions",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4526117",
+   "quote": "Wait for the water to return to a boil and then boil the eggs for a further 12 minutes.",
+   "vinegar": "no",
+   "independence_group": "G-pickled",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "hard_boiled_egg",
+    "answer_ja": "ゆで卵（固ゆで）",
+    "top": [
+     "hard_boiled_egg",
+     5,
+     5
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R018",
+   "map": "shell_egg_ice",
+   "after_step": "cold",
+   "base_mod": {
+    "i": 1,
+    "key": "T",
+    "value": 15
+   },
+   "dish": "hard_boiled_egg",
+   "dish_ja": "ゆで卵（固ゆで）",
+   "shape": "square",
+   "x": 100.0,
+   "y": 30.0,
+   "estimate": true,
+   "T_rule": "W-UNSPEC",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    30.0,
+    30.0
+   ],
+   "T_raw": "boil the eggs in water",
+   "time_raw": "about 30 minutes",
+   "time_counts": "不明（水からか湯からか書かれていない）",
+   "T_basis": "「茹でる」「boil」とだけあり湯温の指示が無い。沸騰した湯と読む（推定）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Potato Salad (Southern Ontario Style)",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4613369",
+   "quote": "boil the eggs in water for about 30 minutes until hard-boiled.",
+   "vinegar": "no",
+   "independence_group": "G-potatosalad",
+   "answer": "hard_boiled_egg",
+   "answer_ja": "ゆで卵（固ゆで）",
+   "top": [
+    "hard_boiled_egg",
+    5,
+    5
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "hard_boiled_egg"
+   ],
+   "alt": {
+    "what": "室温に置いた場合",
+    "answer": "hard_boiled_egg",
+    "answer_ja": "ゆで卵（固ゆで）",
+    "top": [
+     "hard_boiled_egg",
+     5,
+     5
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R021",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 75.0,
+   "y": 2.5,
+   "estimate": false,
+   "T_rule": "",
+   "T_range": [
+    75.0,
+    75.0
+   ],
+   "time_range": [
+    2.0,
+    3.0
+   ],
+   "T_raw": "\"shrimp eyes\" stage. It should be about 70–80 °C (155–175 °F)",
+   "time_raw": "The yolks should set in around 2–3 minutes",
+   "time_counts": "湯に入れてから",
+   "T_basis": "原文の数値（70–80℃）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Poached Egg",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500505",
+   "quote": "It should be about 70–80 °C (155–175 °F)",
+   "vinegar": "optional",
+   "independence_group": "G-poachedegg",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    6,
+    9
+   ],
+   "second": null,
+   "margin": 0.666667,
+   "match": true,
+   "sensitivity": [
+    "poached_egg"
+   ],
+   "alt": {
+    "what": "湯に酢 1.5% を入れた場合",
+    "answer": "poached_egg",
+    "answer_ja": "ポーチドエッグ",
+    "top": [
+     "poached_egg",
+     6,
+     9
+    ]
+   },
+   "reasons": [],
+   "cautions": [
+    "湯温 75℃ は 80℃ 未満で、卵白は「ばらける」（R-E21）。まとまりは必須ではないのでポーチドエッグと答える"
+   ]
+  },
+  {
+   "row_id": "R022",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 85.0,
+   "y": 3.5,
+   "estimate": true,
+   "T_rule": "W-GENTLE",
+   "T_range": [
+    75.0,
+    90.0
+   ],
+   "time_range": [
+    3.0,
+    4.0
+   ],
+   "T_raw": "gentle simmer（Avoid boiling the water）",
+   "time_raw": "about 3-4 minutes for a soft, runny yolk",
+   "time_counts": "湯に入れてから",
+   "T_basis": "gentle / very gentle simmer・「沸騰させない」。Poaching の定義（71〜82℃）と Simmering（85〜95℃）の間として推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Poaching",
+   "method": "Whirlpool method（3–4 分）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4313204",
+   "quote": "poach the egg for about 3-4 minutes for a soft, runny yolk or 5-6 minutes for a firmer yolk",
+   "vinegar": "optional",
+   "independence_group": "G-poaching",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    9,
+    9
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "poached_egg"
+   ],
+   "alt": {
+    "what": "湯に酢 1.5% を入れた場合",
+    "answer": "poached_egg",
+    "answer_ja": "ポーチドエッグ",
+    "top": [
+     "poached_egg",
+     9,
+     9
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R023",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 85.0,
+   "y": 5.5,
+   "estimate": true,
+   "T_rule": "W-GENTLE",
+   "T_range": [
+    75.0,
+    90.0
+   ],
+   "time_range": [
+    5.0,
+    6.0
+   ],
+   "T_raw": "gentle simmer",
+   "time_raw": "5-6 minutes for a firmer yolk",
+   "time_counts": "湯に入れてから",
+   "T_basis": "gentle / very gentle simmer・「沸騰させない」。Poaching の定義（71〜82℃）と Simmering（85〜95℃）の間として推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Poaching",
+   "method": "Whirlpool method（5–6 分）",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4313204",
+   "quote": "poach the egg for about 3-4 minutes for a soft, runny yolk or 5-6 minutes for a firmer yolk",
+   "vinegar": "optional",
+   "independence_group": "G-poaching",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    9,
+    9
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "poached_egg"
+   ],
+   "alt": {
+    "what": "湯に酢 1.5% を入れた場合",
+    "answer": "poached_egg",
+    "answer_ja": "ポーチドエッグ",
+    "top": [
+     "poached_egg",
+     9,
+     9
+    ]
+   },
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R024",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 100.0,
+   "y": 6.0,
+   "estimate": true,
+   "T_rule": "W-BOIL-POACH",
+   "T_range": [
+    75.0,
+    100.0
+   ],
+   "time_range": [
+    5.0,
+    7.0
+   ],
+   "T_raw": "boiling water/vinegar mixture",
+   "time_raw": "5–7 minutes",
+   "time_counts": "湯に入れてから",
+   "T_basis": "沸騰した湯に落とすと書くが「poach」とも書き、火を弱める指示が無い。書かれたとおり 100 とし、下限は poaching の定義まで広げる",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Portable Eggs Benedict",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4514769",
+   "quote": "Crack eggs into the boiling water/vinegar mixture. Leave them alone for 5–7 minutes.",
+   "vinegar": "yes",
+   "independence_group": "G-portable",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    8,
+    9
+   ],
+   "second": null,
+   "margin": 0.888889,
+   "match": true,
+   "sensitivity": [
+    "poached_egg"
+   ],
+   "alt": {
+    "what": "湯に酢 1.5% を入れた場合",
+    "answer": "poached_egg",
+    "answer_ja": "ポーチドエッグ",
+    "top": [
+     "poached_egg",
+     9,
+     9
+    ]
+   },
+   "reasons": [],
+   "cautions": [
+    "沸騰した湯。地図の元は酢なしで「ばらける」。レシピどおり酢を入れると「まとまる（表面に膜・ちぎれ）」（R-E22）"
+   ]
+  },
+  {
+   "row_id": "R025",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 85.0,
+   "y": 9.0,
+   "estimate": true,
+   "T_rule": "W-GENTLE",
+   "T_range": [
+    75.0,
+    90.0
+   ],
+   "time_range": [
+    8.0,
+    10.0
+   ],
+   "T_raw": "boiling → very very gently simmer",
+   "time_raw": "about 8–10 minutes",
+   "time_counts": "割り入れてから",
+   "T_basis": "gentle / very gentle simmer・「沸騰させない」。Poaching の定義（71〜82℃）と Simmering（85〜95℃）の間として推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:English Breakfast",
+   "method": "沸騰した湯に割り入れ、ごく弱い simmer",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500277",
+   "quote": "They should take about 8–10 minutes to cook.",
+   "vinegar": "no",
+   "independence_group": "G-englishbreakfast",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    9,
+    9
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "poached_egg"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R027",
+   "map": "poach",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "poached_egg",
+   "dish_ja": "ポーチドエッグ",
+   "shape": "diamond",
+   "x": 100.0,
+   "y": 2.0,
+   "estimate": true,
+   "T_rule": "W-BOIL-POACH",
+   "T_range": [
+    75.0,
+    100.0
+   ],
+   "time_range": [
+    2.0,
+    2.0
+   ],
+   "T_raw": "boiling, swirl",
+   "time_raw": "2 minutes or more",
+   "time_counts": "湯に入れてから",
+   "T_basis": "沸騰した湯に落とすと書くが「poach」とも書き、火を弱める指示が無い。書かれたとおり 100 とし、下限は poaching の定義まで広げる",
+   "source": "Wikibooks Cookbook（英語版）Hugging Face gossminn/wikibooks-cookbook（2024-07-31 取得のスナップショット、rev 49fb73ea）",
+   "page_title": "Stir-fried Veggies and Poached Egg",
+   "method": "-",
+   "permalink": "https://huggingface.co/datasets/gossminn/wikibooks-cookbook/blob/49fb73ea07d2a1380c15197db5589934937457ed/recipes_parsed.mini.json",
+   "quote": "Once water is boiling, swirl the water anti clockwise for about 20 seconds, then place the egg in the middle of the swirl.",
+   "vinegar": "yes",
+   "independence_group": "G-stirfried",
+   "answer": "poached_egg",
+   "answer_ja": "ポーチドエッグ",
+   "top": [
+    "poached_egg",
+    7,
+    9
+   ],
+   "second": null,
+   "margin": 0.777778,
+   "match": true,
+   "sensitivity": [
+    "poached_egg"
+   ],
+   "alt": {
+    "what": "湯に酢 1.5% を入れた場合",
+    "answer": "poached_egg",
+    "answer_ja": "ポーチドエッグ",
+    "top": [
+     "poached_egg",
+     8,
+     9
+    ]
+   },
+   "reasons": [],
+   "cautions": [
+    "沸騰した湯。地図の元は酢なしで「ばらける」。レシピどおり酢を入れると「まとまる（表面に膜・ちぎれ）」（R-E22）"
+   ]
+  },
+  {
+   "row_id": "R029",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 175.0,
+   "y": 1.75,
+   "estimate": true,
+   "T_rule": "P-MED",
+   "T_range": [
+    150.0,
+    190.0
+   ],
+   "time_range": [
+    0.5,
+    3.0
+   ],
+   "T_raw": "medium",
+   "time_raw": "30 seconds to 3 or more minutes",
+   "time_counts": "卵液を入れてから",
+   "T_basis": "中火。Wikibooks 内の用例 medium heat ≈ 175〜180℃（Koesisters の油 180℃、Choripán のグリル 350°F、Nigerian Egg Roll の油 350–375°F）。フライパンの鍋肌の温度としては推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Easy Scrambled Eggs",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4629096",
+   "quote": "The time will vary from 30 seconds to 3 or more minutes",
+   "vinegar": "no",
+   "independence_group": "G-easyscrambledeggs",
+   "answer": "scrambled_eggs",
+   "answer_ja": "スクランブルエッグ",
+   "top": [
+    "scrambled_eggs",
+    6,
+    10
+   ],
+   "second": null,
+   "margin": 0.6,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "__raw",
+    "scrambled_eggs"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R032",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 230.0,
+   "y": 0.24,
+   "estimate": true,
+   "T_rule": "P-HIGH",
+   "T_range": [
+    210.0,
+    260.0
+   ],
+   "time_range": [
+    0.23,
+    0.25
+   ],
+   "T_raw": "high heat until hot; butter melted and bubbly, but before it browns; then off the heat",
+   "time_raw": "about 3 seconds + 11–12 seconds off the heat",
+   "time_counts": "火の上 3 秒＋火から外して 11〜12 秒",
+   "T_basis": "強火。出典なしの推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Creamy Cornstarch Scrambled Eggs",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4522201",
+   "quote": "Start stirring the eggs, making 1 full circle per second, for about 11–12 seconds.",
+   "vinegar": "no",
+   "independence_group": "G-creamycornstarchscra",
+   "answer": "__raw",
+   "answer_ja": "生のまま（変化なし）",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__raw"
+   ],
+   "alt": null,
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（P-HIGH、中心 230℃ 210〜260℃）。Heat a non-stick skillet over high heat until hot"
+    ],
+    [
+     "BASE",
+     "地図の元はスクランブルエッグ（牛乳・バター入り、110℃で混ぜながら）。材料の割合・火加減の細部はレシピと違う"
+    ],
+    [
+     "RULE",
+     "フライパンの鍋肌の温度→卵液の温度は時定数の推定（Exp-14 sim.heat_transfer、出典なし）"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R034",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 200.0,
+   "y": 0.75,
+   "estimate": true,
+   "T_rule": "P-HOT",
+   "T_range": [
+    170.0,
+    240.0
+   ],
+   "time_range": [
+    0.5,
+    1.0
+   ],
+   "T_raw": "hot frying pan（ソーセージを焼いた後）",
+   "time_raw": "30–60 seconds",
+   "time_counts": "卵液を入れてから",
+   "T_basis": "「熱したフライパン」とだけあり火力の指示が無い。推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Scrambled Eggs with Sausage",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4500565",
+   "quote": "Fry for 30–60 seconds.",
+   "vinegar": "no",
+   "independence_group": "G-scrambledeggswithsau",
+   "answer": "scrambled_eggs",
+   "answer_ja": "スクランブルエッグ",
+   "top": [
+    "scrambled_eggs",
+    9,
+    10
+   ],
+   "second": null,
+   "margin": 0.9,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "__raw",
+    "scrambled_eggs"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R036",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 175.0,
+   "y": 0.75,
+   "estimate": true,
+   "T_rule": "P-MED",
+   "T_range": [
+    150.0,
+    190.0
+   ],
+   "time_range": [
+    0.5,
+    1.0
+   ],
+   "T_raw": "medium heat → high",
+   "time_raw": "30 seconds to 1 minute（強火に上げる前）",
+   "time_counts": "中火の段階のみ。強火にしてからの時間は書かれていない",
+   "T_basis": "中火。Wikibooks 内の用例 medium heat ≈ 175〜180℃（Koesisters の油 180℃、Choripán のグリル 350°F、Nigerian Egg Roll の油 350–375°F）。フライパンの鍋肌の温度としては推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Southwestern Scramble",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4523445",
+   "quote": "allow to cook for 30 seconds to 1 minute, until they just begin to set",
+   "vinegar": "no",
+   "independence_group": "G-southwesternscramble",
+   "answer": "__none",
+   "answer_ja": "該当なし",
+   "top": null,
+   "second": null,
+   "margin": 0.0,
+   "match": false,
+   "sensitivity": [
+    "__none",
+    "__raw",
+    "scrambled_eggs"
+   ],
+   "alt": null,
+   "reasons": [
+    [
+     "T_EST",
+     "温度は推定（P-MED、中心 175℃ 150〜190℃）。medium heat → high。推定の幅・時間の幅の端では一致する答えがある"
+    ],
+    [
+     "T_COUNT",
+     "時間の数え始め: 中火の段階のみ。強火にしてからの時間は書かれていない。地図の時間は湯・鍋に入れてからの時間"
+    ],
+    [
+     "BASE",
+     "地図の元はスクランブルエッグ（牛乳・バター入り、110℃で混ぜながら）。材料の割合・火加減の細部はレシピと違う"
+    ],
+    [
+     "RULE",
+     "フライパンの鍋肌の温度→卵液の温度は時定数の推定（Exp-14 sim.heat_transfer、出典なし）"
+    ]
+   ],
+   "cautions": []
+  },
+  {
+   "row_id": "R037",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 200.0,
+   "y": 2.5,
+   "estimate": true,
+   "T_rule": "P-MEDHIGH",
+   "T_range": [
+    185.0,
+    220.0
+   ],
+   "time_range": [
+    2.0,
+    3.0
+   ],
+   "T_raw": "medium-high heat",
+   "time_raw": "2–3 minutes (+2–3 minutes with beef)",
+   "time_counts": "卵が固まり始めるまで。牛肉を入れた後の 2〜3 分は含めない",
+   "T_basis": "中強火。Wikibooks Sesame Shrimp Toast の medium-high で油 375°F（190℃）を下限側の目安にした推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Machacado con Huevo (Eggs with Shredded Beef)",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4515177",
+   "quote": "cook, stirring frequently, for 2–3 minutes or until eggs just begin to set",
+   "vinegar": "no",
+   "independence_group": "G-machacadoconhuevoegg",
+   "answer": "scrambled_eggs",
+   "answer_ja": "スクランブルエッグ",
+   "top": [
+    "scrambled_eggs",
+    6,
+    10
+   ],
+   "second": null,
+   "margin": 0.6,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "scrambled_eggs"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R038",
+   "map": "beaten_stir",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "scrambled_eggs",
+   "dish_ja": "スクランブルエッグ",
+   "shape": "triangle",
+   "x": 175.0,
+   "y": 2.5,
+   "estimate": true,
+   "T_rule": "P-MED",
+   "T_range": [
+    150.0,
+    190.0
+   ],
+   "time_range": [
+    2.0,
+    3.0
+   ],
+   "T_raw": "medium heat",
+   "time_raw": "2–3 minutes",
+   "time_counts": "卵液を入れてから",
+   "T_basis": "中火。Wikibooks 内の用例 medium heat ≈ 175〜180℃（Koesisters の油 180℃、Choripán のグリル 350°F、Nigerian Egg Roll の油 350–375°F）。フライパンの鍋肌の温度としては推定",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Nigerian Egg Stew",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4518664",
+   "quote": "Cook for another 2–3 minutes, or until eggs are fully set but still moist.",
+   "vinegar": "no",
+   "independence_group": "G-nigerianeggstew",
+   "answer": "scrambled_eggs",
+   "answer_ja": "スクランブルエッグ",
+   "top": [
+    "scrambled_eggs",
+    6,
+    10
+   ],
+   "second": null,
+   "margin": 0.6,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "scrambled_eggs"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R044",
+   "map": "pudding",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "custard_pudding",
+   "dish_ja": "プリン",
+   "shape": "triangle_down",
+   "x": 88.0,
+   "y": 15.0,
+   "estimate": true,
+   "T_rule": "S-LOW",
+   "T_range": [
+    80.0,
+    95.0
+   ],
+   "time_range": [
+    15.0,
+    15.0
+   ],
+   "T_raw": "蒸し器に水を沸かし、弱火",
+   "time_raw": "15分ほど",
+   "time_counts": "加熱を始めてから",
+   "T_basis": "蒸し器を弱火で。Exp-14 R-E15（蒸し器内 85〜90℃に保つ、抜粋のみ・確かさ中）を弱火の狙いとみなした推定。実際の庫内温度は書かれていない",
+   "source": "ウィキブックス 料理本（日本語版）公式ダンプ jawikibooks-20260901",
+   "page_title": "料理本/プリン",
+   "method": "-",
+   "permalink": "https://ja.wikibooks.org/w/index.php?oldid=255485",
+   "quote": "蒸し器に水を沸かし、弱火で15分ほど蒸す。",
+   "vinegar": "no",
+   "independence_group": "G-プリン",
+   "answer": "custard_pudding",
+   "answer_ja": "プリン",
+   "top": [
+    "custard_pudding",
+    9,
+    9
+   ],
+   "second": null,
+   "margin": 1.0,
+   "match": true,
+   "sensitivity": [
+    "__none",
+    "custard_pudding"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": []
+  },
+  {
+   "row_id": "R053",
+   "map": "pudding",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "custard_pudding",
+   "dish_ja": "プリン",
+   "shape": "triangle_down",
+   "x": 100.0,
+   "y": 35.0,
+   "estimate": true,
+   "T_rule": "S-STEAM",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    30.0,
+    40.0
+   ],
+   "T_raw": "蒸籠を沸騰した湯の上",
+   "time_raw": "30–40 minutes",
+   "time_counts": "加熱を始めてから",
+   "T_basis": "沸騰した湯の上で蓋をして蒸す。蒸気は 100℃（W-BOIL と同じ根拠）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Coconut Pudding II",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4517913",
+   "quote": "Steam the pudding for 30–40 minutes, or until no longer fluid. If the pudding is cooked too fast, it becomes rubbery.",
+   "vinegar": "no",
+   "independence_group": "G-coconutpuddingii",
+   "answer": "custard_pudding",
+   "answer_ja": "プリン",
+   "top": [
+    "custard_pudding",
+    6,
+    9
+   ],
+   "second": null,
+   "margin": 0.666667,
+   "match": true,
+   "sensitivity": [
+    "custard_pudding"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": [
+    "100℃で蒸すと す が立つ（porosity）が、す は必須条件ではないのでプリンと答える（maps.md §6）"
+   ]
+  },
+  {
+   "row_id": "R054",
+   "map": "pudding",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "custard_pudding",
+   "dish_ja": "プリン",
+   "shape": "triangle_down",
+   "x": 100.0,
+   "y": 20.0,
+   "estimate": true,
+   "T_rule": "S-STEAM",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    20.0,
+    20.0
+   ],
+   "T_raw": "steam（湯温の記述なし）",
+   "time_raw": "20 minutes（小分けなら 5–10 minutes）",
+   "time_counts": "加熱を始めてから",
+   "T_basis": "沸騰した湯の上で蓋をして蒸す。蒸気は 100℃（W-BOIL と同じ根拠）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Watalappam (Sri Lankan Coconut Custard)",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4587428",
+   "quote": "Transfer the mixture to a pot and steam for 20 minutes.",
+   "vinegar": "no",
+   "independence_group": "G-watalappamsrilankanc",
+   "answer": "custard_pudding",
+   "answer_ja": "プリン",
+   "top": [
+    "custard_pudding",
+    6,
+    9
+   ],
+   "second": null,
+   "margin": 0.666667,
+   "match": true,
+   "sensitivity": [
+    "custard_pudding"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": [
+    "100℃で蒸すと す が立つ（porosity）が、す は必須条件ではないのでプリンと答える（maps.md §6）"
+   ]
+  },
+  {
+   "row_id": "R055",
+   "map": "pudding",
+   "after_step": "",
+   "base_mod": null,
+   "dish": "custard_pudding",
+   "dish_ja": "プリン",
+   "shape": "triangle_down",
+   "x": 100.0,
+   "y": 17.5,
+   "estimate": true,
+   "T_rule": "S-STEAM",
+   "T_range": [
+    95.0,
+    100.0
+   ],
+   "time_range": [
+    15.0,
+    20.0
+   ],
+   "T_raw": "蒸し器の湯を沸騰",
+   "time_raw": "15–20 minutes",
+   "time_counts": "加熱を始めてから",
+   "T_basis": "沸騰した湯の上で蓋をして蒸す。蒸気は 100℃（W-BOIL と同じ根拠）",
+   "source": "Wikibooks Cookbook（英語版）公式ダンプ enwikibooks-20260901",
+   "page_title": "Cookbook:Kuih Seri Muka (Malaysian Sticky Rice with Pandan Custard)",
+   "method": "-",
+   "permalink": "https://en.wikibooks.org/w/index.php?oldid=4587518",
+   "quote": "Steam for 15–20 minutes, or until the custard is firm and a skewer inserted into it comes out clean.",
+   "vinegar": "no",
+   "independence_group": "G-kuihserimukamalaysia",
+   "answer": "custard_pudding",
+   "answer_ja": "プリン",
+   "top": [
+    "custard_pudding",
+    6,
+    9
+   ],
+   "second": null,
+   "margin": 0.666667,
+   "match": true,
+   "sensitivity": [
+    "custard_pudding"
+   ],
+   "alt": null,
+   "reasons": [],
+   "cautions": [
+    "100℃で蒸すと す が立つ（porosity）が、す は必須条件ではないのでプリンと答える（maps.md §6）"
+   ]
+  }
+ ]
+}

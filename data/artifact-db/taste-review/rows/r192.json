@@ -1,0 +1,17 @@
+{
+  "canonical": "peanuts",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "peanuts",
+  "n_recipes": 406,
+  "note": "無塩ローストの想定。塩味付きなら塩3",
+  "order": 192,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "egg yolks",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "egg yolks",
+  "n_recipes": 542,
+  "note": "",
+  "order": 141,
+  "reviewed": true
+}

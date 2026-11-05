@@ -1,0 +1,25 @@
+{
+  "canonical": "celery",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "chopped celery",
+  "mine": {
+    "bitter": 2,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "n_recipes": 426,
+  "note": "",
+  "order": 182,
+  "reviewed": true
+}

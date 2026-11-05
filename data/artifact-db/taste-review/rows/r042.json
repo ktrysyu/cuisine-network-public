@@ -1,0 +1,25 @@
+{
+  "canonical": "sour cream",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "sour cream",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "n_recipes": 1538,
+  "note": "",
+  "order": 42,
+  "reviewed": true
+}

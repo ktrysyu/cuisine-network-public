@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ja">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>規則 R-E09</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@700&family=Noto+Sans+JP:wght@700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&family=Roboto+Mono:wght@500&display=swap"><style>:root{--ground:#FCFCFC;--surface:#F3F3F3;--rule:#E1E1E1;--ink:#171717;--ink-muted:#606060;--main:#B63552;--on-main:#FFFFFF;
+--heading:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif;--body:"IBM Plex Sans","IBM Plex Sans JP",system-ui,sans-serif;--numeric:"Roboto Mono",ui-monospace,monospace}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}}
+:root[data-theme="dark"]{color-scheme:dark;--ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--ink-muted:#A4A4A4;--main:#FB8495}
+*{box-sizing:border-box}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;letter-spacing:.04em;padding:0 16px 64px}
+main{max-width:860px;margin:0 auto;padding-top:40px}
+h1{font-family:var(--heading);font-size:clamp(22px,4vw,30px);line-height:1.4;margin:8px 0;letter-spacing:.05em}
+h2{font-family:var(--heading);font-size:19px;margin:40px 0 8px;letter-spacing:.05em}
+p,ul{margin:0 0 16px}
+.eyebrow{font-family:var(--numeric);font-size:11.5px;color:var(--main);margin:0;letter-spacing:.08em}
+.muted{color:var(--ink-muted)}.small{font-size:13.5px}
+.num,code{font-family:var(--numeric)}
+a{color:var(--main)}
+.check{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13.5px}
+.check .ck{background:var(--main);color:var(--on-main);border-radius:4px;padding:0 8px;font-weight:600}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;margin:16px 0}
+dl.facts dt{color:var(--ink-muted);font-size:13.5px}dl.facts dd{margin:0}
+blockquote{margin:0 0 8px;padding:8px 16px;background:var(--surface);border-radius:8px;font-size:15px}
+.tablewrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;background:var(--surface);padding:8px}td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+footer{max-width:860px;margin:64px auto 0;font-size:13.5px;color:var(--ink-muted);border-top:1px solid var(--rule);padding-top:8px}
+</style></head>
+<body><main>
+<p class="eyebrow">規則 · R-E09</p>
+<h1>凝固（とろみ開始）温度が上がる。カスタードは 80〜85℃で凝固</h1>
+<p class="check"><span class="ck">抜粋のみ</span></p>
+<dl class="facts">
+<dt>計算での書き方</dt><dd>凝固（とろみ開始）温度が上がる。カスタードは 80〜85℃で凝固</dd>
+<dt>確かさ</dt><dd>中</dd>
+<dt>条件</dt><dd>卵を牛乳で薄める</dd>
+<dt>対象</dt><dd>egg + milk（+ sugar）（操作 heat）</dd>
+</dl>
+<h2>出典の文面</h2>
+<blockquote>custard (egg, milk, sugar) will coagulate between 80°C and 85°C (176–185°F) / 卵1個+牛乳1カップ+砂糖大さじ1 では 175–180°F まで増粘が始まらない（薄めない卵は約150°F）</blockquote>
+<p>出典: <a href="../sources/custard_textbook.html">custard_textbook</a>・<a href="../sources/custard_123.html">custard_123</a>・<a href="../sources/mcgee.html">mcgee</a></p>
+<p class="muted">注: custard_textbook は取得を試みたが 403。値は検索抜粋。McGee 第2章にも同趣旨の記述があるはずだが本文未確認</p>
+<h2>計算で使う値（採用値）</h2>
+<div class="tablewrap"><table><thead><tr><th>名前</th><th>値</th><th>出典</th><th>ほかの値</th><th>確かめ方</th></tr></thead><tbody>
+<tr><td class="num">egg_diluted_s1</td><td class="num">79℃</td><td><a href="../sources/custard_123.html">custard_123</a></td><td>82（180°F）</td><td>—</td></tr>
+<tr><td class="num">egg_diluted_s2</td><td class="num">80℃</td><td><a href="../sources/custard_textbook.html">custard_textbook</a></td><td>85（R-E09 の上端）</td><td>—</td></tr>
+</tbody></table></div>
+<h2>出典どうしの食い違い</h2>
+<p><b>C2</b> 撹拌した全卵の凝固が 73℃（SoC）と「70℃開始・75℃でしっかり」（家庭向けサイト）で違う。プリン液について「70℃開始・75℃」とする記事（mirai、出典なし）は、カスタードの 80〜85℃（R-E09）と矛盾する。希釈・砂糖を考えると後者が正しいと思われるが、一次資料では確認していない</p>
+<p><b>C3</b> 牛乳・砂糖で薄めると凝固温度が上がる（R-E09, R-E10）ことは確かだが、薄め方ごとの凝固温度の関数（何%で何℃）は見つけていない。プリン・茶碗蒸しの状態は類推で書いた</p>
+<h2>この規則を使っている通説</h2>
+<ul><li><a href="../../myth-custard-su.html">茶碗蒸し・プリンは、強火で蒸すと す が立つ？</a></li></ul>
+<p class="small"><a href="../index.html">規則と出典の一覧へ</a></p>
+</main><footer>Cuisine Network 研究ノートの根拠のページ。experiments/myths/basis.py が rules.yaml から生成します（Claude の記録）。</footer></body>
+</html>

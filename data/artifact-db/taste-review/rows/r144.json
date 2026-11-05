@@ -1,0 +1,17 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "onion powder",
+  "n_recipes": 528,
+  "note": "",
+  "order": 144,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "soy sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 3
+  },
+  "ingredient": "dark soy sauce",
+  "n_recipes": 312,
+  "note": "中国式の老抽想定（カラメル入り・とろみ・やや甘い）",
+  "order": 260,
+  "reviewed": true
+}

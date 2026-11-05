@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "tomatoes",
+  "n_recipes": 3058,
+  "note": "生・熟度で変わる",
+  "order": 16,
+  "reviewed": true
+}

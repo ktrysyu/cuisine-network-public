@@ -1,0 +1,17 @@
+{
+  "canonical": "turmeric",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 3,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "tumeric",
+  "n_recipes": 738,
+  "note": "綴り違い（turmeric）",
+  "order": 113,
+  "reviewed": true
+}

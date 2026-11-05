@@ -1,0 +1,17 @@
+{
+  "canonical": "vinegar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "red wine vinegar",
+  "n_recipes": 752,
+  "note": "",
+  "order": 112,
+  "reviewed": true
+}

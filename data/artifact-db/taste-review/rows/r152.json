@@ -1,0 +1,17 @@
+{
+  "canonical": "powdered sugar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "powdered sugar",
+  "n_recipes": 501,
+  "note": "",
+  "order": 152,
+  "reviewed": true
+}

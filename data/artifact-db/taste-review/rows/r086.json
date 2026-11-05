@@ -1,0 +1,17 @@
+{
+  "canonical": "cumin",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "cumin seed",
+  "n_recipes": 935,
+  "note": "",
+  "order": 86,
+  "reviewed": true
+}

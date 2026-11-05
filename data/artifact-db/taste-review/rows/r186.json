@@ -1,0 +1,17 @@
+{
+  "canonical": "cabbage",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "cabbage",
+  "n_recipes": 416,
+  "note": "生はわずかな辛み（辛子油）もある",
+  "order": 186,
+  "reviewed": true
+}

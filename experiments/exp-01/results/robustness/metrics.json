@@ -1,0 +1,1778 @@
+{
+  "conditions": {
+    "spectral_s0": {
+      "title": "n=30, spectral, seed=0",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 0,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 41.7,
+      "neighbor_preservation_k30_sample": 0.1894,
+      "knn_label_agreement_k10_2d_sample": 0.5505,
+      "procrustes_disparity_vs_ref": 0.0005,
+      "spearman_centroid_dist_vs_ref": 0.9997,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8501,
+      "centroids_2d": {
+        "brazilian": [
+          8.595,
+          5.585
+        ],
+        "british": [
+          9.158,
+          4.917
+        ],
+        "cajun_creole": [
+          5.826,
+          8.308
+        ],
+        "chinese": [
+          1.115,
+          0.716
+        ],
+        "filipino": [
+          2.177,
+          2.258
+        ],
+        "french": [
+          9.076,
+          7.964
+        ],
+        "greek": [
+          8.883,
+          10.183
+        ],
+        "indian": [
+          3.863,
+          4.093
+        ],
+        "irish": [
+          8.417,
+          6.737
+        ],
+        "italian": [
+          8.189,
+          9.825
+        ],
+        "jamaican": [
+          5.019,
+          6.254
+        ],
+        "japanese": [
+          0.085,
+          0.266
+        ],
+        "korean": [
+          0.491,
+          0.469
+        ],
+        "mexican": [
+          2.48,
+          8.661
+        ],
+        "moroccan": [
+          4.059,
+          5.653
+        ],
+        "russian": [
+          8.157,
+          6.882
+        ],
+        "southern_us": [
+          8.151,
+          6.035
+        ],
+        "spanish": [
+          8.148,
+          9.119
+        ],
+        "thai": [
+          0.645,
+          2.494
+        ],
+        "vietnamese": [
+          0.571,
+          2.225
+        ]
+      }
+    },
+    "spectral_s1": {
+      "title": "n=30, spectral, seed=1",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 1,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 24.7,
+      "neighbor_preservation_k30_sample": 0.1885,
+      "knn_label_agreement_k10_2d_sample": 0.549,
+      "procrustes_disparity_vs_ref": 0.0002,
+      "spearman_centroid_dist_vs_ref": 0.9997,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8495,
+      "centroids_2d": {
+        "brazilian": [
+          8.691,
+          5.556
+        ],
+        "british": [
+          9.185,
+          4.928
+        ],
+        "cajun_creole": [
+          5.854,
+          8.32
+        ],
+        "chinese": [
+          1.262,
+          0.812
+        ],
+        "filipino": [
+          2.322,
+          2.371
+        ],
+        "french": [
+          9.102,
+          7.917
+        ],
+        "greek": [
+          8.91,
+          10.171
+        ],
+        "indian": [
+          3.824,
+          4.25
+        ],
+        "irish": [
+          8.456,
+          6.656
+        ],
+        "italian": [
+          8.25,
+          9.777
+        ],
+        "jamaican": [
+          5.065,
+          6.249
+        ],
+        "japanese": [
+          0.233,
+          0.401
+        ],
+        "korean": [
+          0.619,
+          0.544
+        ],
+        "mexican": [
+          2.459,
+          8.722
+        ],
+        "moroccan": [
+          3.989,
+          5.836
+        ],
+        "russian": [
+          8.213,
+          6.817
+        ],
+        "southern_us": [
+          8.179,
+          5.987
+        ],
+        "spanish": [
+          8.218,
+          9.054
+        ],
+        "thai": [
+          0.757,
+          2.61
+        ],
+        "vietnamese": [
+          0.699,
+          2.305
+        ]
+      }
+    },
+    "spectral_s2": {
+      "title": "n=30, spectral, seed=2",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 2,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 23.9,
+      "neighbor_preservation_k30_sample": 0.1894,
+      "knn_label_agreement_k10_2d_sample": 0.5502,
+      "procrustes_disparity_vs_ref": 0.0066,
+      "spearman_centroid_dist_vs_ref": 0.997,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8489,
+      "centroids_2d": {
+        "brazilian": [
+          8.424,
+          5.591
+        ],
+        "british": [
+          8.999,
+          4.906
+        ],
+        "cajun_creole": [
+          5.715,
+          8.303
+        ],
+        "chinese": [
+          -0.356,
+          1.233
+        ],
+        "filipino": [
+          1.552,
+          2.491
+        ],
+        "french": [
+          8.974,
+          7.953
+        ],
+        "greek": [
+          8.799,
+          10.187
+        ],
+        "indian": [
+          3.665,
+          4.053
+        ],
+        "irish": [
+          8.285,
+          6.693
+        ],
+        "italian": [
+          8.113,
+          9.804
+        ],
+        "jamaican": [
+          4.878,
+          6.236
+        ],
+        "japanese": [
+          0.179,
+          0.519
+        ],
+        "korean": [
+          0.313,
+          0.85
+        ],
+        "mexican": [
+          2.397,
+          8.596
+        ],
+        "moroccan": [
+          3.941,
+          5.592
+        ],
+        "russian": [
+          8.085,
+          6.785
+        ],
+        "southern_us": [
+          8.007,
+          6.01
+        ],
+        "spanish": [
+          8.079,
+          9.035
+        ],
+        "thai": [
+          0.032,
+          3.057
+        ],
+        "vietnamese": [
+          -0.089,
+          2.781
+        ]
+      }
+    },
+    "spectral_s3": {
+      "title": "n=30, spectral, seed=3",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 3,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 24.3,
+      "neighbor_preservation_k30_sample": 0.1904,
+      "knn_label_agreement_k10_2d_sample": 0.5524,
+      "procrustes_disparity_vs_ref": 0.0046,
+      "spearman_centroid_dist_vs_ref": 0.9973,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8492,
+      "centroids_2d": {
+        "brazilian": [
+          8.517,
+          5.471
+        ],
+        "british": [
+          9.014,
+          4.843
+        ],
+        "cajun_creole": [
+          5.818,
+          8.336
+        ],
+        "chinese": [
+          -0.053,
+          0.982
+        ],
+        "filipino": [
+          1.769,
+          2.306
+        ],
+        "french": [
+          9.044,
+          7.911
+        ],
+        "greek": [
+          8.877,
+          10.137
+        ],
+        "indian": [
+          3.664,
+          4.233
+        ],
+        "irish": [
+          8.329,
+          6.609
+        ],
+        "italian": [
+          8.224,
+          9.751
+        ],
+        "jamaican": [
+          4.953,
+          6.312
+        ],
+        "japanese": [
+          0.559,
+          0.25
+        ],
+        "korean": [
+          0.637,
+          0.645
+        ],
+        "mexican": [
+          2.465,
+          8.784
+        ],
+        "moroccan": [
+          3.911,
+          5.791
+        ],
+        "russian": [
+          8.116,
+          6.844
+        ],
+        "southern_us": [
+          8.05,
+          6.004
+        ],
+        "spanish": [
+          8.158,
+          9.053
+        ],
+        "thai": [
+          0.225,
+          2.767
+        ],
+        "vietnamese": [
+          0.142,
+          2.512
+        ]
+      }
+    },
+    "spectral_s42": {
+      "title": "n=30, spectral, seed=42 (= Fig. 1, reference)",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 24.6,
+      "neighbor_preservation_k30_sample": 0.1897,
+      "knn_label_agreement_k10_2d_sample": 0.5507,
+      "procrustes_disparity_vs_ref": 0.0,
+      "spearman_centroid_dist_vs_ref": 1.0,
+      "spearman_centroid_dist_vs_100d_cosine": 0.851,
+      "centroids_2d": {
+        "brazilian": [
+          8.696,
+          5.581
+        ],
+        "british": [
+          9.172,
+          4.96
+        ],
+        "cajun_creole": [
+          5.862,
+          8.387
+        ],
+        "chinese": [
+          1.452,
+          0.635
+        ],
+        "filipino": [
+          2.47,
+          2.23
+        ],
+        "french": [
+          9.108,
+          8.007
+        ],
+        "greek": [
+          8.872,
+          10.225
+        ],
+        "indian": [
+          3.917,
+          4.242
+        ],
+        "irish": [
+          8.455,
+          6.766
+        ],
+        "italian": [
+          8.242,
+          9.863
+        ],
+        "jamaican": [
+          5.099,
+          6.295
+        ],
+        "japanese": [
+          0.441,
+          0.164
+        ],
+        "korean": [
+          0.825,
+          0.342
+        ],
+        "mexican": [
+          2.497,
+          8.734
+        ],
+        "moroccan": [
+          4.035,
+          5.833
+        ],
+        "russian": [
+          8.2,
+          6.943
+        ],
+        "southern_us": [
+          8.175,
+          6.079
+        ],
+        "spanish": [
+          8.16,
+          9.099
+        ],
+        "thai": [
+          0.907,
+          2.417
+        ],
+        "vietnamese": [
+          0.857,
+          2.132
+        ]
+      }
+    },
+    "random_s0": {
+      "title": "n=30, init=random, seed=0",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 0,
+        "init": "random"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 20.5,
+      "neighbor_preservation_k30_sample": 0.1874,
+      "knn_label_agreement_k10_2d_sample": 0.5498,
+      "procrustes_disparity_vs_ref": 0.5199,
+      "spearman_centroid_dist_vs_ref": 0.8073,
+      "spearman_centroid_dist_vs_100d_cosine": 0.7852,
+      "centroids_2d": {
+        "brazilian": [
+          3.425,
+          3.945
+        ],
+        "british": [
+          3.396,
+          3.558
+        ],
+        "cajun_creole": [
+          4.229,
+          7.922
+        ],
+        "chinese": [
+          9.658,
+          -0.213
+        ],
+        "filipino": [
+          8.224,
+          1.293
+        ],
+        "french": [
+          5.876,
+          6.36
+        ],
+        "greek": [
+          7.729,
+          8.459
+        ],
+        "indian": [
+          0.496,
+          6.814
+        ],
+        "irish": [
+          4.542,
+          5.73
+        ],
+        "italian": [
+          6.786,
+          8.022
+        ],
+        "jamaican": [
+          3.167,
+          6.754
+        ],
+        "japanese": [
+          10.365,
+          0.514
+        ],
+        "korean": [
+          9.997,
+          0.513
+        ],
+        "mexican": [
+          2.236,
+          10.731
+        ],
+        "moroccan": [
+          1.896,
+          7.601
+        ],
+        "russian": [
+          4.462,
+          6.17
+        ],
+        "southern_us": [
+          3.843,
+          5.229
+        ],
+        "spanish": [
+          6.16,
+          7.624
+        ],
+        "thai": [
+          7.977,
+          -0.296
+        ],
+        "vietnamese": [
+          8.243,
+          -0.438
+        ]
+      }
+    },
+    "random_s1": {
+      "title": "n=30, init=random, seed=1",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 1,
+        "init": "random"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 21.8,
+      "neighbor_preservation_k30_sample": 0.1892,
+      "knn_label_agreement_k10_2d_sample": 0.5526,
+      "procrustes_disparity_vs_ref": 0.015,
+      "spearman_centroid_dist_vs_ref": 0.9856,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8713,
+      "centroids_2d": {
+        "brazilian": [
+          4.777,
+          6.226
+        ],
+        "british": [
+          3.768,
+          7.916
+        ],
+        "cajun_creole": [
+          3.238,
+          3.599
+        ],
+        "chinese": [
+          11.789,
+          3.184
+        ],
+        "filipino": [
+          9.694,
+          3.889
+        ],
+        "french": [
+          2.004,
+          5.766
+        ],
+        "greek": [
+          -0.242,
+          4.052
+        ],
+        "indian": [
+          7.272,
+          4.571
+        ],
+        "irish": [
+          3.235,
+          6.089
+        ],
+        "italian": [
+          0.61,
+          4.344
+        ],
+        "jamaican": [
+          4.758,
+          4.156
+        ],
+        "japanese": [
+          12.232,
+          4.302
+        ],
+        "korean": [
+          11.799,
+          3.873
+        ],
+        "mexican": [
+          4.445,
+          0.646
+        ],
+        "moroccan": [
+          5.983,
+          3.754
+        ],
+        "russian": [
+          3.394,
+          5.543
+        ],
+        "southern_us": [
+          3.932,
+          6.346
+        ],
+        "spanish": [
+          1.429,
+          4.595
+        ],
+        "thai": [
+          10.261,
+          2.388
+        ],
+        "vietnamese": [
+          10.492,
+          2.504
+        ]
+      }
+    },
+    "random_s2": {
+      "title": "n=30, init=random, seed=2",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 2,
+        "init": "random"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 22.1,
+      "neighbor_preservation_k30_sample": 0.1901,
+      "knn_label_agreement_k10_2d_sample": 0.5487,
+      "procrustes_disparity_vs_ref": 0.185,
+      "spearman_centroid_dist_vs_ref": 0.8808,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8673,
+      "centroids_2d": {
+        "brazilian": [
+          5.007,
+          2.427
+        ],
+        "british": [
+          5.401,
+          1.757
+        ],
+        "cajun_creole": [
+          3.228,
+          5.216
+        ],
+        "chinese": [
+          10.001,
+          6.502
+        ],
+        "filipino": [
+          7.9,
+          6.498
+        ],
+        "french": [
+          3.034,
+          2.08
+        ],
+        "greek": [
+          0.849,
+          2.417
+        ],
+        "indian": [
+          0.826,
+          8.243
+        ],
+        "irish": [
+          4.347,
+          2.641
+        ],
+        "italian": [
+          1.2,
+          2.96
+        ],
+        "jamaican": [
+          4.678,
+          6.06
+        ],
+        "japanese": [
+          10.717,
+          6.988
+        ],
+        "korean": [
+          10.365,
+          6.926
+        ],
+        "mexican": [
+          3.904,
+          9.202
+        ],
+        "moroccan": [
+          1.471,
+          6.947
+        ],
+        "russian": [
+          4.261,
+          2.85
+        ],
+        "southern_us": [
+          5.113,
+          2.813
+        ],
+        "spanish": [
+          1.937,
+          3.122
+        ],
+        "thai": [
+          8.953,
+          8.212
+        ],
+        "vietnamese": [
+          9.17,
+          7.965
+        ]
+      }
+    },
+    "random_s3": {
+      "title": "n=30, init=random, seed=3",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 3,
+        "init": "random"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 21.4,
+      "neighbor_preservation_k30_sample": 0.1913,
+      "knn_label_agreement_k10_2d_sample": 0.5599,
+      "procrustes_disparity_vs_ref": 0.1206,
+      "spearman_centroid_dist_vs_ref": 0.9258,
+      "spearman_centroid_dist_vs_100d_cosine": 0.9008,
+      "centroids_2d": {
+        "brazilian": [
+          5.933,
+          6.131
+        ],
+        "british": [
+          1.824,
+          5.495
+        ],
+        "cajun_creole": [
+          5.654,
+          6.522
+        ],
+        "chinese": [
+          5.172,
+          0.226
+        ],
+        "filipino": [
+          5.695,
+          2.34
+        ],
+        "french": [
+          3.92,
+          7.419
+        ],
+        "greek": [
+          5.138,
+          9.821
+        ],
+        "indian": [
+          8.724,
+          3.205
+        ],
+        "irish": [
+          3.344,
+          6.196
+        ],
+        "italian": [
+          3.777,
+          9.247
+        ],
+        "jamaican": [
+          6.189,
+          4.789
+        ],
+        "japanese": [
+          5.105,
+          -0.715
+        ],
+        "korean": [
+          5.174,
+          -0.309
+        ],
+        "mexican": [
+          9.575,
+          7.089
+        ],
+        "moroccan": [
+          7.75,
+          4.557
+        ],
+        "russian": [
+          3.843,
+          6.03
+        ],
+        "southern_us": [
+          3.094,
+          5.397
+        ],
+        "spanish": [
+          5.276,
+          8.275
+        ],
+        "thai": [
+          7.071,
+          0.596
+        ],
+        "vietnamese": [
+          6.756,
+          0.437
+        ]
+      }
+    },
+    "random_s42": {
+      "title": "n=30, init=random, seed=42",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "random"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 21.3,
+      "neighbor_preservation_k30_sample": 0.1891,
+      "knn_label_agreement_k10_2d_sample": 0.5594,
+      "procrustes_disparity_vs_ref": 0.0474,
+      "spearman_centroid_dist_vs_ref": 0.9871,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8605,
+      "centroids_2d": {
+        "brazilian": [
+          7.972,
+          5.235
+        ],
+        "british": [
+          8.206,
+          5.696
+        ],
+        "cajun_creole": [
+          5.554,
+          2.912
+        ],
+        "chinese": [
+          0.216,
+          8.862
+        ],
+        "filipino": [
+          1.521,
+          7.544
+        ],
+        "french": [
+          7.806,
+          2.952
+        ],
+        "greek": [
+          7.632,
+          0.542
+        ],
+        "indian": [
+          1.653,
+          4.7
+        ],
+        "irish": [
+          7.731,
+          4.215
+        ],
+        "italian": [
+          8.452,
+          1.607
+        ],
+        "jamaican": [
+          4.314,
+          4.402
+        ],
+        "japanese": [
+          0.042,
+          9.915
+        ],
+        "korean": [
+          0.076,
+          9.489
+        ],
+        "mexican": [
+          2.396,
+          0.961
+        ],
+        "moroccan": [
+          3.012,
+          3.872
+        ],
+        "russian": [
+          7.361,
+          4.117
+        ],
+        "southern_us": [
+          7.761,
+          4.915
+        ],
+        "spanish": [
+          6.996,
+          1.542
+        ],
+        "thai": [
+          2.022,
+          8.849
+        ],
+        "vietnamese": [
+          1.746,
+          8.99
+        ]
+      }
+    },
+    "n5": {
+      "title": "n=5, spectral, seed=42",
+      "params": {
+        "n_neighbors": 5,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 11.9,
+      "neighbor_preservation_k30_sample": 0.189,
+      "knn_label_agreement_k10_2d_sample": 0.5573,
+      "procrustes_disparity_vs_ref": 0.0579,
+      "spearman_centroid_dist_vs_ref": 0.9626,
+      "spearman_centroid_dist_vs_100d_cosine": 0.874,
+      "centroids_2d": {
+        "brazilian": [
+          11.644,
+          4.83
+        ],
+        "british": [
+          12.204,
+          4.743
+        ],
+        "cajun_creole": [
+          7.817,
+          1.06
+        ],
+        "chinese": [
+          6.163,
+          10.276
+        ],
+        "filipino": [
+          5.956,
+          7.59
+        ],
+        "french": [
+          11.514,
+          1.086
+        ],
+        "greek": [
+          10.703,
+          -2.085
+        ],
+        "indian": [
+          3.833,
+          5.035
+        ],
+        "irish": [
+          11.312,
+          3.031
+        ],
+        "italian": [
+          10.197,
+          -1.33
+        ],
+        "jamaican": [
+          6.595,
+          4.59
+        ],
+        "japanese": [
+          5.824,
+          11.346
+        ],
+        "korean": [
+          5.324,
+          10.913
+        ],
+        "mexican": [
+          3.152,
+          -0.102
+        ],
+        "moroccan": [
+          5.119,
+          3.275
+        ],
+        "russian": [
+          10.842,
+          2.905
+        ],
+        "southern_us": [
+          10.891,
+          3.79
+        ],
+        "spanish": [
+          10.106,
+          -0.337
+        ],
+        "thai": [
+          3.7,
+          9.293
+        ],
+        "vietnamese": [
+          3.83,
+          9.821
+        ]
+      }
+    },
+    "n10": {
+      "title": "n=10, spectral, seed=42",
+      "params": {
+        "n_neighbors": 10,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 14.6,
+      "neighbor_preservation_k30_sample": 0.1923,
+      "knn_label_agreement_k10_2d_sample": 0.5569,
+      "procrustes_disparity_vs_ref": 0.001,
+      "spearman_centroid_dist_vs_ref": 0.9989,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8483,
+      "centroids_2d": {
+        "brazilian": [
+          8.719,
+          5.616
+        ],
+        "british": [
+          9.016,
+          4.843
+        ],
+        "cajun_creole": [
+          5.37,
+          8.838
+        ],
+        "chinese": [
+          0.683,
+          0.265
+        ],
+        "filipino": [
+          1.617,
+          2.11
+        ],
+        "french": [
+          8.862,
+          8.569
+        ],
+        "greek": [
+          8.528,
+          11.166
+        ],
+        "indian": [
+          3.305,
+          4.317
+        ],
+        "irish": [
+          8.221,
+          7.03
+        ],
+        "italian": [
+          7.851,
+          10.664
+        ],
+        "jamaican": [
+          4.463,
+          6.605
+        ],
+        "japanese": [
+          -0.338,
+          -0.451
+        ],
+        "korean": [
+          -0.041,
+          -0.132
+        ],
+        "mexican": [
+          1.47,
+          9.386
+        ],
+        "moroccan": [
+          3.224,
+          6.123
+        ],
+        "russian": [
+          8.007,
+          7.179
+        ],
+        "southern_us": [
+          7.947,
+          6.313
+        ],
+        "spanish": [
+          7.752,
+          9.857
+        ],
+        "thai": [
+          -0.189,
+          2.144
+        ],
+        "vietnamese": [
+          -0.163,
+          1.865
+        ]
+      }
+    },
+    "n100": {
+      "title": "n=100, spectral, seed=42",
+      "params": {
+        "n_neighbors": 100,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 57.4,
+      "neighbor_preservation_k30_sample": 0.1842,
+      "knn_label_agreement_k10_2d_sample": 0.5371,
+      "procrustes_disparity_vs_ref": 0.0043,
+      "spearman_centroid_dist_vs_ref": 0.9987,
+      "spearman_centroid_dist_vs_100d_cosine": 0.85,
+      "centroids_2d": {
+        "brazilian": [
+          8.466,
+          6.153
+        ],
+        "british": [
+          9.08,
+          5.664
+        ],
+        "cajun_creole": [
+          5.862,
+          8.675
+        ],
+        "chinese": [
+          1.317,
+          1.963
+        ],
+        "filipino": [
+          2.503,
+          3.236
+        ],
+        "french": [
+          8.916,
+          8.391
+        ],
+        "greek": [
+          8.689,
+          10.471
+        ],
+        "indian": [
+          4.378,
+          4.622
+        ],
+        "irish": [
+          8.272,
+          7.231
+        ],
+        "italian": [
+          8.059,
+          10.095
+        ],
+        "jamaican": [
+          5.251,
+          6.77
+        ],
+        "japanese": [
+          0.423,
+          1.671
+        ],
+        "korean": [
+          0.826,
+          1.816
+        ],
+        "mexican": [
+          2.725,
+          8.668
+        ],
+        "moroccan": [
+          4.508,
+          6.088
+        ],
+        "russian": [
+          8.024,
+          7.386
+        ],
+        "southern_us": [
+          8.08,
+          6.602
+        ],
+        "spanish": [
+          7.995,
+          9.342
+        ],
+        "thai": [
+          1.151,
+          3.689
+        ],
+        "vietnamese": [
+          1.039,
+          3.408
+        ]
+      }
+    },
+    "n500": {
+      "title": "n=500, spectral, seed=42",
+      "params": {
+        "n_neighbors": 500,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 183.8,
+      "neighbor_preservation_k30_sample": 0.1744,
+      "knn_label_agreement_k10_2d_sample": 0.5268,
+      "procrustes_disparity_vs_ref": 0.0037,
+      "spearman_centroid_dist_vs_ref": 0.9974,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8588,
+      "centroids_2d": {
+        "brazilian": [
+          7.893,
+          6.885
+        ],
+        "british": [
+          8.782,
+          7.115
+        ],
+        "cajun_creole": [
+          5.427,
+          9.157
+        ],
+        "chinese": [
+          2.772,
+          2.133
+        ],
+        "filipino": [
+          3.523,
+          3.592
+        ],
+        "french": [
+          8.073,
+          9.259
+        ],
+        "greek": [
+          7.483,
+          11.241
+        ],
+        "indian": [
+          4.823,
+          5.311
+        ],
+        "irish": [
+          7.773,
+          8.178
+        ],
+        "italian": [
+          7.164,
+          10.806
+        ],
+        "jamaican": [
+          5.149,
+          7.43
+        ],
+        "japanese": [
+          2.075,
+          1.787
+        ],
+        "korean": [
+          2.361,
+          2.031
+        ],
+        "mexican": [
+          2.522,
+          8.636
+        ],
+        "moroccan": [
+          4.703,
+          6.579
+        ],
+        "russian": [
+          7.604,
+          8.134
+        ],
+        "southern_us": [
+          7.661,
+          7.561
+        ],
+        "spanish": [
+          7.157,
+          10.003
+        ],
+        "thai": [
+          2.191,
+          3.65
+        ],
+        "vietnamese": [
+          2.186,
+          3.394
+        ]
+      }
+    },
+    "n1000": {
+      "title": "n=1000, spectral, seed=42",
+      "params": {
+        "n_neighbors": 1000,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "all",
+      "n_points": 39772,
+      "seconds": 370.8,
+      "neighbor_preservation_k30_sample": 0.1728,
+      "knn_label_agreement_k10_2d_sample": 0.5218,
+      "procrustes_disparity_vs_ref": 0.0039,
+      "spearman_centroid_dist_vs_ref": 0.9971,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8621,
+      "centroids_2d": {
+        "brazilian": [
+          7.542,
+          7.414
+        ],
+        "british": [
+          8.65,
+          7.567
+        ],
+        "cajun_creole": [
+          5.209,
+          9.435
+        ],
+        "chinese": [
+          2.598,
+          2.239
+        ],
+        "filipino": [
+          3.319,
+          3.685
+        ],
+        "french": [
+          7.76,
+          9.592
+        ],
+        "greek": [
+          7.135,
+          11.57
+        ],
+        "indian": [
+          4.56,
+          5.629
+        ],
+        "irish": [
+          7.491,
+          8.458
+        ],
+        "italian": [
+          6.835,
+          11.108
+        ],
+        "jamaican": [
+          4.938,
+          7.734
+        ],
+        "japanese": [
+          1.885,
+          1.878
+        ],
+        "korean": [
+          2.192,
+          2.153
+        ],
+        "mexican": [
+          2.323,
+          8.847
+        ],
+        "moroccan": [
+          4.488,
+          6.851
+        ],
+        "russian": [
+          7.265,
+          8.476
+        ],
+        "southern_us": [
+          7.425,
+          7.903
+        ],
+        "spanish": [
+          6.884,
+          10.305
+        ],
+        "thai": [
+          1.986,
+          3.737
+        ],
+        "vietnamese": [
+          1.995,
+          3.491
+        ]
+      }
+    },
+    "n5000_sample": {
+      "title": "n=5000, spectral, seed=42 [10k sample]",
+      "params": {
+        "n_neighbors": 5000,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "10k sample",
+      "n_points": 10000,
+      "seconds": 474.7,
+      "neighbor_preservation_k30_sample": 0.1667,
+      "knn_label_agreement_k10_2d_sample": 0.507,
+      "procrustes_disparity_vs_ref": 0.0834,
+      "spearman_centroid_dist_vs_ref": 0.9544,
+      "spearman_centroid_dist_vs_100d_cosine": 0.8675,
+      "centroids_2d": {
+        "brazilian": [
+          0.903,
+          16.084
+        ],
+        "british": [
+          0.804,
+          15.896
+        ],
+        "cajun_creole": [
+          2.704,
+          13.274
+        ],
+        "chinese": [
+          5.362,
+          17.774
+        ],
+        "filipino": [
+          4.845,
+          16.681
+        ],
+        "french": [
+          0.287,
+          14.256
+        ],
+        "greek": [
+          0.314,
+          12.644
+        ],
+        "indian": [
+          5.871,
+          13.932
+        ],
+        "irish": [
+          1.077,
+          14.619
+        ],
+        "italian": [
+          0.816,
+          12.913
+        ],
+        "jamaican": [
+          3.664,
+          14.02
+        ],
+        "japanese": [
+          5.781,
+          18.233
+        ],
+        "korean": [
+          5.656,
+          17.957
+        ],
+        "mexican": [
+          4.204,
+          11.567
+        ],
+        "moroccan": [
+          4.654,
+          13.735
+        ],
+        "russian": [
+          1.226,
+          15.482
+        ],
+        "southern_us": [
+          0.965,
+          15.346
+        ],
+        "spanish": [
+          1.109,
+          13.236
+        ],
+        "thai": [
+          6.469,
+          16.888
+        ],
+        "vietnamese": [
+          6.295,
+          17.028
+        ]
+      }
+    },
+    "n30_sample": {
+      "title": "n=30, spectral, seed=42 [10k sample] (control)",
+      "params": {
+        "n_neighbors": 30,
+        "min_dist": 0.1,
+        "metric": "cosine",
+        "random_state": 42,
+        "init": "spectral"
+      },
+      "fit_on": "10k sample",
+      "n_points": 10000,
+      "seconds": 8.6,
+      "neighbor_preservation_k30_sample": 0.2074,
+      "knn_label_agreement_k10_2d_sample": 0.5369,
+      "procrustes_disparity_vs_ref": 0.0106,
+      "spearman_centroid_dist_vs_ref": 0.9892,
+      "spearman_centroid_dist_vs_100d_cosine": 0.851,
+      "centroids_2d": {
+        "brazilian": [
+          -1.291,
+          5.985
+        ],
+        "british": [
+          -0.966,
+          6.75
+        ],
+        "cajun_creole": [
+          1.681,
+          9.728
+        ],
+        "chinese": [
+          5.014,
+          2.524
+        ],
+        "filipino": [
+          4.134,
+          3.964
+        ],
+        "french": [
+          -1.38,
+          9.025
+        ],
+        "greek": [
+          -1.235,
+          11.237
+        ],
+        "indian": [
+          3.387,
+          6.128
+        ],
+        "irish": [
+          -0.553,
+          8.388
+        ],
+        "italian": [
+          -0.486,
+          10.844
+        ],
+        "jamaican": [
+          2.202,
+          8.301
+        ],
+        "japanese": [
+          5.929,
+          2.083
+        ],
+        "korean": [
+          5.587,
+          2.294
+        ],
+        "mexican": [
+          4.667,
+          10.108
+        ],
+        "moroccan": [
+          2.989,
+          7.613
+        ],
+        "russian": [
+          -0.614,
+          7.913
+        ],
+        "southern_us": [
+          -0.787,
+          7.392
+        ],
+        "spanish": [
+          -0.099,
+          10.057
+        ],
+        "thai": [
+          5.889,
+          4.065
+        ],
+        "vietnamese": [
+          5.73,
+          3.804
+        ]
+      }
+    }
+  },
+  "reference_matches_exp01_umap_2d_npy": true,
+  "matches_projections_npy": {
+    "n10": true,
+    "n100": true
+  },
+  "null_label_shuffle": {
+    "n": 2000,
+    "disparity_mean": 0.9395,
+    "disparity_p05": 0.8274,
+    "disparity_min": 0.5181,
+    "spearman_mean": -0.0039,
+    "spearman_p95": 0.1205,
+    "spearman_max": 0.4495
+  },
+  "reference_100d_sample": {
+    "knn_label_agreement_k10": 0.6156
+  },
+  "within_group_pairwise": {
+    "spectral_seeds": {
+      "pairs": 10,
+      "disparity_mean": 0.0033,
+      "disparity_max": 0.0066,
+      "spearman_mean": 0.9983,
+      "spearman_min": 0.997
+    },
+    "random_seeds": {
+      "pairs": 10,
+      "disparity_mean": 0.2861,
+      "disparity_max": 0.5333,
+      "spearman_mean": 0.8734,
+      "spearman_min": 0.7706
+    }
+  },
+  "settings": {
+    "eval_sample": 10000,
+    "eval_sample_seed": 42,
+    "neighbor_k": 30,
+    "knn_label_k": 10,
+    "centroid": "per-cuisine median of 2-d coordinates",
+    "reference": "spectral_s42",
+    "n_recipes_used": 39772,
+    "labels_no_overlap": {
+      "grid": {
+        "spectral_s0": true,
+        "spectral_s1": true,
+        "spectral_s2": true,
+        "spectral_s3": true,
+        "spectral_s42": true,
+        "random_s0": true,
+        "random_s1": true,
+        "random_s2": true,
+        "random_s3": true,
+        "random_s42": true,
+        "n1000": true,
+        "n5000_sample": true,
+        "n30_sample": true
+      },
+      "neighbors_series": {
+        "n5": true,
+        "n10": true,
+        "spectral_s42": true,
+        "n100": true,
+        "n500": true,
+        "n1000": true,
+        "n5000_sample": true,
+        "n30_sample": true
+      }
+    }
+  },
+  "seconds": {
+    "prep": 77.7,
+    "plot": 20.3,
+    "total": 1469.7
+  }
+}

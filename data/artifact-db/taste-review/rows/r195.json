@@ -1,0 +1,17 @@
+{
+  "canonical": "coriander",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "coriander seeds",
+  "n_recipes": 395,
+  "note": "",
+  "order": 195,
+  "reviewed": true
+}

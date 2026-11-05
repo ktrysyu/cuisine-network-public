@@ -1,0 +1,25 @@
+{
+  "canonical": "capers",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "capers",
+  "mine": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 3,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 541,
+  "note": "塩漬け・酢漬けで比率が変わる",
+  "order": 142,
+  "reviewed": true
+}

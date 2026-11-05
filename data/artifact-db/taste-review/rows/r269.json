@@ -1,0 +1,17 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "serrano chile",
+  "n_recipes": 299,
+  "note": "",
+  "order": 269,
+  "reviewed": true
+}

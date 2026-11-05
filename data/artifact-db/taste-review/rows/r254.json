@@ -1,0 +1,17 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "chiles",
+  "n_recipes": 321,
+  "note": "品種不明（生・乾燥とも）",
+  "order": 254,
+  "reviewed": true
+}

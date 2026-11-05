@@ -1,0 +1,17 @@
+{
+  "canonical": "mirin",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 1
+  },
+  "ingredient": "mirin",
+  "n_recipes": 503,
+  "note": "本みりん想定。みりん風調味料も甘4",
+  "order": 149,
+  "reviewed": true
+}

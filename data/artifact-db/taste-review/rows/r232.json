@@ -1,0 +1,17 @@
+{
+  "canonical": "thyme",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh thyme",
+  "n_recipes": 345,
+  "note": "",
+  "order": 232,
+  "reviewed": true
+}

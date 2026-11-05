@@ -1,0 +1,152 @@
+<title>塩と沸点</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--low:#B4552D;
+  --d-x:#888888;--pt-edge:#1A1F1C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+    --d-x:#888888;--pt-edge:#F4F7F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+  --d-x:#888888;--pt-edge:#F4F7F5;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0;line-height:1.3}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+section{margin-top:40px}
+h2{font-family:var(--serif);font-weight:800;font-size:22px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .no{font-family:var(--mono);font-size:13px;color:var(--kombu);font-weight:500}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:8px 0;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.claim{font-family:var(--serif);font-weight:800;font-size:clamp(20px,3.2vw,26px);margin:0 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--surface);border-radius:8px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-weight:700;font-size:14px;margin-bottom:4px}
+.x{fill:var(--d-x)}
+.hatch-l{stroke:var(--muted);stroke-width:1;stroke-opacity:.55}
+.frame{fill:none;stroke:var(--rule)}
+.dif{fill:none;stroke:var(--saffron);stroke-width:1.6}
+.ax{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+.axs{font-family:var(--sans);font-size:9.5px;fill:var(--muted)}
+.axl{font-family:var(--sans);font-size:10.5px;fill:var(--muted)}
+.c-sc{fill:var(--low)}.c-fi{fill:var(--saffron)}.c-co{fill:var(--kombu)}.c-na{fill:var(--surface)}
+.w0{fill:var(--surface)}.w1{fill:color-mix(in srgb,var(--kombu) 25%,var(--surface))}.w2{fill:color-mix(in srgb,var(--kombu) 55%,var(--surface))}.w3{fill:var(--kombu)}
+.wn{font-family:var(--mono);font-size:8.5px;fill:var(--ink);pointer-events:none}
+.w3+.wn{fill:var(--card)}
+.pt .o{fill:none;stroke:var(--pt-edge);stroke-width:3.4}
+.pt .i{stroke:var(--card);stroke-width:1.4;fill:var(--card)}
+.pt-yes .i{fill:var(--ink)}
+.pt .h{fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;margin-top:10px;align-items:center}
+.legend .it{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw.ring{border:2px solid var(--saffron);background:transparent}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--pt-edge);background:var(--card)}
+.dot.yes{background:var(--ink)}
+.dot.opt{background:linear-gradient(90deg,var(--card) 50%,var(--ink) 50%)}
+.find{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.find li{background:var(--surface);border-radius:8px;padding:10px 14px}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-size:12.5px;font-weight:700;text-align:left;padding:7px 8px;border-bottom:2px solid var(--rule);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.q{font-family:var(--serif);font-weight:800;font-size:12.5px;line-height:1.6}
+.nw{white-space:nowrap}
+td.use{min-width:13em}
+table.rules{min-width:900px}
+.dif2{fill:none;stroke:var(--ink);stroke-width:1.4}
+.conf{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:0 9px;border:1px solid currentColor;white-space:nowrap}
+.conf.h{color:var(--kombu)}.conf.m{color:var(--saffron)}.conf.l{color:var(--low)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cols h3{margin-top:0}
+.cols ul{margin:6px 0 0;padding-left:1.2em}
+.cols li{margin:6px 0}
+.verdict{border-left:4px solid var(--saffron);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;margin-top:14px}
+.verdict p{margin:4px 0}
+table.rec td{height:52px}
+table.rec td.photo{min-width:120px}
+table.rec td.pred{font-size:12px;color:var(--muted)}
+ol.steps{padding-left:1.4em;margin:8px 0}
+ol.steps li{margin:6px 0}
+a{color:var(--kombu)}
+footer{margin-top:48px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.fg-grid{stroke:var(--rule);stroke-width:1}
+.fg-s0{stroke:var(--kombu)}.fg-s1{stroke:var(--saffron)}.fg-s2{stroke:var(--low)}.fg-s3{stroke:var(--ink)}
+.fg-f0{fill:var(--kombu)}.fg-f1{fill:var(--saffron)}.fg-f2{fill:var(--low)}.fg-f3{fill:var(--ink)}
+.fg-line{fill:none;stroke-width:2.2}.fg-dash{stroke-dasharray:5 4}
+.fg-h{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.fg-lab{font-family:var(--sans);font-size:11.5px;fill:var(--ink)}
+.fg-ax{font-family:var(--mono);font-size:11.5px;fill:var(--muted)}
+.fg-key{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+@media (max-width:720px){
+  .maps,.cols{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .card{padding:14px 12px}
+  table.rec{min-width:640px}
+}
+</style>
+<div class="wrap">
+<header><div class="eyebrow">Cuisine Network · 通説の検証 5</div><h1>パスタの湯に塩を入れると、沸点が上がって早くゆだる？</h1><p class="lead">判定と確かさ・決め手の図・言えないこと・自分で試す手順を先に置き、通説の説明・計算の詳しい答え・根拠を後ろに並べたページです。通説の説明と結論の文章は本人が書きます（いまは空欄と材料）。</p></header>
+<section id="verdict"><h2><span class="no">1</span>判定と確かさ</h2>
+<div class="card"><h3>言えること</h3><ul><li>塩を入れると沸点は<b>上がるが、料理の量ではごくわずか</b>。1% の塩で 0.18℃（i = 2 の理想の値で、実際はこれ以下）。<span class="conf h">確かさ 高</span></li><li>沸点を 1℃ 上げるには 1 L に約 57 g の塩が要る。教科書（LibreTexts）の「100 g を超えて数℃」と合う。<span class="conf h">確かさ 高</span></li><li>「早くゆだる」理由としては、沸点の上がり幅が小さすぎて説明にならない（湯の温度の差が 0.2℃ 前後）。<span class="conf m">確かさ 中</span></li></ul></div>
+<div class="owner"><p class="slot">（ここに本人が書く）結論（まとめの文章） <span>下の実験の結果を見てから書くのでもよい</span></p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>1% の塩（1 L に 10 g）で沸点は 0.18℃ 上がる（計算）</li><li>1℃ 上げるには 1 L に約 57 g（大さじ 3 杯強）</li><li>確かさ: 上がり幅は 高（教科書の式）。「だから早くゆだる」は 低〜中（麺は計算していない）</li></ul></div>
+</section>
+<section id="keyfig"><h2><span class="no">2</span>決め手の図</h2><figure class="key"><figcaption>塩の濃さと、沸点の上がり幅（計算）</figcaption><svg viewBox="0 0 640 248" role="img" aria-label="横棒グラフ"><text class="fg-lab" x="222" y="24" text-anchor="end">0.5%（1 L に 5 g）</text><rect class="fg-f0" x="230" y="10" width="17.0" height="22" rx="3"/><text class="fg-ax" x="253.0" y="24">0.09℃</text><text class="fg-lab" x="222" y="58" text-anchor="end">1%（1 L に 10 g）</text><rect class="fg-f2" x="230" y="44" width="34.0" height="22" rx="3"/><text class="fg-ax" x="270.0" y="58">0.18℃</text><text class="fg-lab" x="222" y="92" text-anchor="end">1.5%（1 L に 15 g）</text><rect class="fg-f0" x="230" y="78" width="51.0" height="22" rx="3"/><text class="fg-ax" x="287.0" y="92">0.26℃</text><text class="fg-lab" x="222" y="126" text-anchor="end">2%（1 L に 20 g）</text><rect class="fg-f0" x="230" y="112" width="68.0" height="22" rx="3"/><text class="fg-ax" x="304.0" y="126">0.35℃</text><text class="fg-lab" x="222" y="160" text-anchor="end">3%（1 L に 30 g）</text><rect class="fg-f0" x="230" y="146" width="102.0" height="22" rx="3"/><text class="fg-ax" x="338.0" y="160">0.53℃</text><text class="fg-lab" x="222" y="194" text-anchor="end">5%（1 L に 50 g）</text><rect class="fg-f0" x="230" y="180" width="170.0" height="22" rx="3"/><text class="fg-ax" x="406.0" y="194">0.88℃</text><text class="fg-lab" x="222" y="228" text-anchor="end">10%（1 L に 100 g）</text><rect class="fg-f0" x="230" y="214" width="340.0" height="22" rx="3"/><text class="fg-ax" x="576.0" y="228">1.75℃</text></svg></figure><p class="small">料理で使う 1% 前後では 0.18℃。沸点を目に見えて上げるには、食べられないほどの塩が要る。</p></section>
+<section id="cannot"><h2><span class="no">3</span>言えないこと</h2><div class="card"><h3>言えないこと</h3><ul><li>麺が実際に何秒早くゆだるか。パスタの規則が無く、計算していない。</li><li>塩を入れたときに一瞬泡立つこと（溶ける塩の粒が泡のきっかけになる、と言われる）。計算の対象外。</li><li>塩味・麺の食感への効果。塩を入れる本当の理由かもしれないが、味の話で計算の対象外。</li><li>i（食塩が分かれる割合）の実際の値。今回は理想の値 2 を使った（推定）。</li></ul></div></section>
+<section id="try"><h2><span class="no">4</span>自分で試す</h2>
+<p>0.1℃ 単位で測れる温度計があれば、沸点の違いを測れます（ふつうの料理用温度計では差が見えません）。</p>
+<h3>手順</h3><ol class="steps"><li>同じ鍋に水 1 L を沸騰させ、温度計の先を鍋底につけずに湯の中ほどに入れて、温度を書く（塩なし）。</li><li>火を止めずに、塩 10 g を入れ、再び沸騰したら温度を書く。</li><li>さらに塩 20 g（合計 30 g）、さらに 70 g（合計 100 g）と足して、そのつど書く。</li><li>気圧（天気予報の hPa）も書いておく。沸点は気圧でも変わる。</li></ol>
+<div class="tablewrap"><table class="rec"><thead><tr><th>塩の合計（g）</th><th>測った温度（℃）</th><th>塩なしとの差（℃）</th><th>計算の予言（差）</th></tr></thead><tbody>
+<tr><td class="num">0</td><td></td><td></td><td class="pred">+0.00℃</td></tr>
+<tr><td class="num">10</td><td></td><td></td><td class="pred">+0.18℃</td></tr>
+<tr><td class="num">30</td><td></td><td></td><td class="pred">+0.53℃</td></tr>
+<tr><td class="num">100</td><td></td><td></td><td class="pred">+1.75℃</td></tr>
+</tbody></table></div>
+<p class="small muted">予言は i = 2 の理想の値なので、実際の差は少し小さく出るはずです。</p>
+</section>
+<section id="claim"><h2><span class="no">5</span>通説</h2><div class="card">
+<p class="claim">「パスタをゆでる湯に塩を入れるのは、沸点が上がって早くゆだるから」</p>
+<div class="owner"><p class="slot">（ここに本人が書く）この通説がどう言われているか・なぜ気になったか</p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>言われる理由: 塩を入れると湯の温度が上がる</li><li>塩を入れる理由としては、ほかに「麺に塩味を付ける」も言われる（味の話。計算の対象外）</li><li>計算で扱えるのは、沸点が何℃上がるか（沸点上昇の式）。麺の火の通りの速さは扱えない</li></ul></div>
+</div></section>
+<section id="calc"><h2><span class="no">6</span>計算の詳しい答え</h2>
+<p>水 1 kg（1 L）に溶かした食塩の量ごとに、沸点が何℃上がるかを、沸点上昇の式 ΔTb = Kb × m × i で計算しました（R-W04）。Kb = 0.512 ℃·kg/mol、食塩の分子量 58.44 g/mol、i = 2（食塩が完全に分かれたときの理想の値、推定。実際は少し小さいので、上がり幅はこれより少し小さい）。</p>
+<div class="tablewrap"><table><thead><tr><th>塩の濃さ（水に対して %）</th><th>水 1 L あたり（g）</th><th>大さじ（約 18 g、推定）</th><th>沸点の上がり幅（℃）</th></tr></thead><tbody><tr><td class="num">0.5</td><td class="num">5</td><td class="num">0.3</td><td class="num">0.09</td></tr><tr><td class="num">1</td><td class="num">10</td><td class="num">0.6</td><td class="num">0.18</td></tr><tr><td class="num">1.5</td><td class="num">15</td><td class="num">0.8</td><td class="num">0.26</td></tr><tr><td class="num">2</td><td class="num">20</td><td class="num">1.1</td><td class="num">0.35</td></tr><tr><td class="num">3</td><td class="num">30</td><td class="num">1.7</td><td class="num">0.53</td></tr><tr><td class="num">5</td><td class="num">50</td><td class="num">2.8</td><td class="num">0.88</td></tr><tr><td class="num">10</td><td class="num">100</td><td class="num">5.6</td><td class="num">1.75</td></tr></tbody></table></div>
+<ul class="find">
+<li><b>よく使う 1% の塩（1 L に 10 g）で、沸点は 0.18℃ 上がるだけ。</b>1℃ 上げるには 1 L に約 57 g（約 5.7%）が要る。100 g 入れると 1.8℃（出典の「100 g を超えて数℃」と合う）。</li>
+<li class="muted small">注意: 麺がゆだる速さは計算していません（パスタの規則が無い）。湯の温度が 0.2℃ 違うことが、ゆで時間にどれだけ効くかは分かりません。</li>
+</ul></section>
+<section id="basis"><h2><span class="no">7</span>根拠</h2>
+<p class="small">規則ごとのページ（値・出典の文面・確かめ方・食い違い・使っている通説）: <a href="basis/rules/R-W04.html">R-W04</a>・<a href="basis/rules/R-W01.html">R-W01</a>。出典ごとのページ: <a href="basis/sources/libretexts_bpe.html">libretexts_bpe</a>。<a href="basis/index.html">規則と出典の一覧</a></p>
+<h3>使った規則（Exp-14 rules.yaml）</h3><div class="tablewrap"><table class="rules"><thead><tr><th>id</th><th>内容</th><th>出典の文面</th><th>出典</th><th>確かめ方</th><th>確かさ</th><th>計算での扱い</th></tr></thead><tbody>
+<tr><td class="num nw">R-W04</td><td>沸点が上がる。上がり幅 ΔTb = Kb × m × i（m は水 1 kg あたりの溶けた物質の量 mol、食塩は Na⁺ と Cl⁻ に分かれるので i ≒ 2）</td><td class="q">the value of Kb is 0.512°C/m ... over 100 grams of NaCl to a liter of water to increase the boiling point by a couple of degrees</td><td>libretexts_bpe</td><td class="nw">本文確認</td><td><span class="conf h">確かさ 高</span></td><td class="small use">沸点の上がり幅を計算した（Kb・i は採用値）。シミュレータの沸点にはまだ入れていない</td></tr>
+<tr><td class="num nw">R-W01</td><td>媒体の温度は100℃が上限</td><td class="q">物理定数</td><td>mc_maillard</td><td class="nw">本文確認</td><td><span class="conf h">確かさ 高</span></td><td class="small use">水の沸点 100℃（1気圧）。上がり幅の基準</td></tr>
+</tbody></table></div>
+<h3>出典と確かめ方</h3><div class="tablewrap"><table><thead><tr><th>出典</th><th>何か</th><th>確かめ方</th><th>この計算で使ったこと</th></tr></thead><tbody>
+<tr><td class="num">libretexts_bpe</td><td>Chemistry LibreTexts, Introductory Chemistry (CK-12) 16.14 &quot;Boiling Point Elevation&quot;（ΔTb = Kb × m、水の Kb は 0.512 ℃/m。パスタの湯の沸点を数℃上げるには 1 L に 100 g を超える食塩が要る）。CK-12 Curriculum Materials License <a href="https://chem.libretexts.org/Bookshelves/Introductory_Chemistry/Introductory_Chemistry_(CK-12)/16:_Solutions/16.14:_Boiling_Point_Elevation" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">沸点上昇の式と水の Kb = 0.512 ℃/m。パスタの湯で沸点を数℃上げるには 1 L に 100 g を超える食塩が要る</td></tr>
+</tbody></table></div>
+</section>
+<footer>Cuisine Network。計算: 沸点上昇の式（rules.yaml R-W04・採用値 bpe_Kb_water・bpe_i_nacl）。このページは experiments/myths/build.py（通説5 salt_boil）が生成します。</footer>
+</div>

@@ -1,0 +1,17 @@
+{
+  "canonical": "bell pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 0
+  },
+  "ingredient": "yellow bell pepper",
+  "n_recipes": 291,
+  "note": "",
+  "order": 276,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "sugar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "sugar",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 1
+  },
+  "n_recipes": 6434,
+  "note": "",
+  "order": 5,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "prosciutto",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 4
+  },
+  "ingredient": "prosciutto",
+  "n_recipes": 284,
+  "note": "",
+  "order": 281,
+  "reviewed": true
+}

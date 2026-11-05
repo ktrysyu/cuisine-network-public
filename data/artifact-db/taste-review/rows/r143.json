@@ -1,0 +1,17 @@
+{
+  "canonical": "cayenne pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 5,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground red pepper",
+  "n_recipes": 538,
+  "note": "米国では cayenne の別名として使われる",
+  "order": 143,
+  "reviewed": true
+}

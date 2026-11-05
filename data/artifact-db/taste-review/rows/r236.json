@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "boneless chicken skinless thigh",
+  "n_recipes": 343,
+  "note": "もも肉は胸肉より旨み強め",
+  "order": 236,
+  "reviewed": true
+}

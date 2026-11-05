@@ -1,0 +1,25 @@
+{
+  "canonical": "cajun seasoning",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "cajun seasoning",
+  "mine": {
+    "bitter": 1,
+    "salty": 4,
+    "sour": 1,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 1
+  },
+  "n_recipes": 376,
+  "note": "塩入りブレンド想定（製品差大）",
+  "order": 206,
+  "reviewed": true
+}

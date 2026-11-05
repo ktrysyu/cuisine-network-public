@@ -1,0 +1,17 @@
+{
+  "canonical": "black pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "cracked black pepper",
+  "n_recipes": 408,
+  "note": "",
+  "order": 190,
+  "reviewed": true
+}

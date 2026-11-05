@@ -1,0 +1,156 @@
+<title>鶏むね肉を低温で</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--low:#B4552D;
+  --d-x:#888888;--pt-edge:#1A1F1C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+    --d-x:#888888;--pt-edge:#F4F7F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+  --d-x:#888888;--pt-edge:#F4F7F5;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0;line-height:1.3}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+section{margin-top:40px}
+h2{font-family:var(--serif);font-weight:800;font-size:22px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .no{font-family:var(--mono);font-size:13px;color:var(--kombu);font-weight:500}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:8px 0;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.claim{font-family:var(--serif);font-weight:800;font-size:clamp(20px,3.2vw,26px);margin:0 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--surface);border-radius:8px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-weight:700;font-size:14px;margin-bottom:4px}
+.x{fill:var(--d-x)}
+.hatch-l{stroke:var(--muted);stroke-width:1;stroke-opacity:.55}
+.frame{fill:none;stroke:var(--rule)}
+.dif{fill:none;stroke:var(--saffron);stroke-width:1.6}
+.ax{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+.axs{font-family:var(--sans);font-size:9.5px;fill:var(--muted)}
+.axl{font-family:var(--sans);font-size:10.5px;fill:var(--muted)}
+.c-sc{fill:var(--low)}.c-fi{fill:var(--saffron)}.c-co{fill:var(--kombu)}.c-na{fill:var(--surface)}
+.w0{fill:var(--surface)}.w1{fill:color-mix(in srgb,var(--kombu) 25%,var(--surface))}.w2{fill:color-mix(in srgb,var(--kombu) 55%,var(--surface))}.w3{fill:var(--kombu)}
+.wn{font-family:var(--mono);font-size:8.5px;fill:var(--ink);pointer-events:none}
+.w3+.wn{fill:var(--card)}
+.pt .o{fill:none;stroke:var(--pt-edge);stroke-width:3.4}
+.pt .i{stroke:var(--card);stroke-width:1.4;fill:var(--card)}
+.pt-yes .i{fill:var(--ink)}
+.pt .h{fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;margin-top:10px;align-items:center}
+.legend .it{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw.ring{border:2px solid var(--saffron);background:transparent}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--pt-edge);background:var(--card)}
+.dot.yes{background:var(--ink)}
+.dot.opt{background:linear-gradient(90deg,var(--card) 50%,var(--ink) 50%)}
+.find{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.find li{background:var(--surface);border-radius:8px;padding:10px 14px}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-size:12.5px;font-weight:700;text-align:left;padding:7px 8px;border-bottom:2px solid var(--rule);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.q{font-family:var(--serif);font-weight:800;font-size:12.5px;line-height:1.6}
+.nw{white-space:nowrap}
+td.use{min-width:13em}
+table.rules{min-width:900px}
+.dif2{fill:none;stroke:var(--ink);stroke-width:1.4}
+.conf{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:0 9px;border:1px solid currentColor;white-space:nowrap}
+.conf.h{color:var(--kombu)}.conf.m{color:var(--saffron)}.conf.l{color:var(--low)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cols h3{margin-top:0}
+.cols ul{margin:6px 0 0;padding-left:1.2em}
+.cols li{margin:6px 0}
+.verdict{border-left:4px solid var(--saffron);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;margin-top:14px}
+.verdict p{margin:4px 0}
+table.rec td{height:52px}
+table.rec td.photo{min-width:120px}
+table.rec td.pred{font-size:12px;color:var(--muted)}
+ol.steps{padding-left:1.4em;margin:8px 0}
+ol.steps li{margin:6px 0}
+a{color:var(--kombu)}
+footer{margin-top:48px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.fg-grid{stroke:var(--rule);stroke-width:1}
+.fg-s0{stroke:var(--kombu)}.fg-s1{stroke:var(--saffron)}.fg-s2{stroke:var(--low)}.fg-s3{stroke:var(--ink)}
+.fg-f0{fill:var(--kombu)}.fg-f1{fill:var(--saffron)}.fg-f2{fill:var(--low)}.fg-f3{fill:var(--ink)}
+.fg-line{fill:none;stroke-width:2.2}.fg-dash{stroke-dasharray:5 4}
+.fg-h{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.fg-lab{font-family:var(--sans);font-size:11.5px;fill:var(--ink)}
+.fg-ax{font-family:var(--mono);font-size:11.5px;fill:var(--muted)}
+.fg-key{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+@media (max-width:720px){
+  .maps,.cols{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .card{padding:14px 12px}
+  table.rec{min-width:640px}
+}
+</style>
+<div class="wrap">
+<header><div class="eyebrow">Cuisine Network · 通説の検証 8</div><h1>鶏むね肉は、低温でゆっくり加熱するとしっとりする？</h1><p class="lead">判定と確かさ・決め手の図・言えないこと・自分で試す手順を先に置き、通説の説明・計算の詳しい答え・根拠を後ろに並べたページです。通説の説明と結論の文章は本人が書きます（いまは空欄と材料）。</p></header>
+<section id="verdict"><h2><span class="no">1</span>判定と確かさ</h2>
+<div class="card"><h3>言えること</h3><ul><li>鶏肉は 74℃ でなくても、<b>温度に応じた時間を保てば安全</b>（FSIS の表: 60℃ で 25.7 分など）。<span class="conf h">確かさ 高</span></li><li>低温の湯（60〜65℃）では、どの層も乾く 70℃ を超えずに中心の安全が足りる（計算: 60℃ で 45 分）。フライパンで 74℃ まで焼くと外側の多くが 70℃ を超える。<span class="conf m">確かさ 中</span></li><li>失う重さはフライパン 36.9%・60℃ の湯 19.0%（牛肉の値を代用した推定）。低温のほうが少ない向き。<span class="conf l">確かさ 低</span></li></ul></div>
+<div class="owner"><p class="slot">（ここに本人が書く）結論（まとめの文章） <span>下の実験の結果を見てから書くのでもよい</span></p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>中心の安全までの時間（計算、厚さ 20 mm・5℃から）: 60℃ の湯 45 分、62.5℃ の湯 28 分、65℃ の湯 21 分、70℃ の湯 14 分</li><li>70℃ を超えた層: フライパン 100%・低温の湯 0%</li><li>確かさ: 安全の表は 高（公的機関の表）、計算の時間は 中（熱伝導の近似・厚さの推定）、しっとり感は計算外</li><li>安全のため、本人が試すときは温度計と時間に余裕を（計算は家庭の条件のぶれを入れていない）</li></ul></div>
+</section>
+<section id="keyfig"><h2><span class="no">2</span>決め手の図</h2><figure class="key"><figcaption>加熱のしかたと、70℃ を超えた層の割合・失う重さ（計算）</figcaption><svg viewBox="0 0 640 180" role="img" aria-label="横棒グラフ"><text class="fg-lab" x="222" y="24" text-anchor="end">60℃ の湯</text><rect class="fg-f0" x="230" y="10" width="175.2" height="22" rx="3"/><text class="fg-ax" x="411.2" y="24">19.0%</text><text class="fg-lab" x="222" y="58" text-anchor="end">62.5℃ の湯</text><rect class="fg-f0" x="230" y="44" width="200.5" height="22" rx="3"/><text class="fg-ax" x="436.5" y="58">21.7%</text><text class="fg-lab" x="222" y="92" text-anchor="end">65℃ の湯</text><rect class="fg-f1" x="230" y="78" width="222.2" height="22" rx="3"/><text class="fg-ax" x="458.2" y="92">24.1%</text><text class="fg-lab" x="222" y="126" text-anchor="end">70℃ の湯</text><rect class="fg-f1" x="230" y="112" width="256.1" height="22" rx="3"/><text class="fg-ax" x="492.1" y="126">27.8%</text><text class="fg-lab" x="222" y="160" text-anchor="end">フライパン 180℃・中心 74℃まで</text><rect class="fg-f2" x="230" y="146" width="340.0" height="22" rx="3"/><text class="fg-ax" x="576.0" y="160">36.9%</text></svg></figure><p class="small">低温の湯ほど失う重さが少なく、どの層も乾く 70℃ を超えない。安全は「温度 × 時間」で足りる（60℃ なら長く保つ）。</p></section>
+<section id="cannot"><h2><span class="no">3</span>言えないこと</h2><div class="card"><h3>言えないこと</h3><ul><li>「しっとり」と感じるか。感じ方は計算に無い（乾く 70℃ の規則と、失う重さまで）。</li><li>鶏肉の加熱損失の値。牛肉の値を代用した。</li><li>家庭の湯の温度のぶれ・肉の厚さのばらつき。安全の時間はこれで大きく変わるので、実際には余裕を持つ必要がある。</li><li>サルモネラ以外の菌・芽胞。表は 7 桁のサルモネラだけ。</li></ul></div></section>
+<section id="try"><h2><span class="no">4</span>自分で試す</h2>
+<p><b>安全のため、湯の温度を測れる温度計と、肉の中心を測れる温度計が必須です。</b>計算の時間より長めに保ってください（計算は湯の温度のぶれ・肉の厚さを入れていません）。</p>
+<h3>手順</h3><ol class="steps"><li>同じ鶏むね肉を厚さ 2 cm にそろえて 2 枚。重さを量る。</li><li>A: 65℃ の湯（温度計で確かめ、ぶれたら火加減で戻す）に袋に入れて沈め、中心が 65℃ になってから 10 分以上保つ（表では 65.6℃ で 2.7 分。余裕を持つ）。</li><li>B: フライパン（中火）で返しながら、中心が 74℃ になるまで焼き、4 分休ませる。</li><li>両方の重さを量り、失った割合を出す。切って食べ比べ、しっとり感を書く。</li></ol>
+<div class="tablewrap"><table class="rec"><thead><tr><th>肉</th><th>加熱</th><th>中心の最高（℃）</th><th>保った時間（分）</th><th>前（g）</th><th>後（g）</th><th>失った割合（%）</th><th>しっとり（1〜5）</th><th>計算の予言</th></tr></thead><tbody>
+<tr><td>A</td><td>65℃ の湯</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="pred">失う重さ 24%（推定）・70℃超の層 0%</td></tr>
+<tr><td>B</td><td>フライパン</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="pred">失う重さ 37%（推定）・70℃超の層 100%</td></tr>
+</tbody></table></div>
+</section>
+<section id="claim"><h2><span class="no">5</span>通説</h2><div class="card">
+<p class="claim">「鶏むね肉は、低い温度（60℃台）でゆっくり火を通すと、パサつかずしっとりする」</p>
+<div class="owner"><p class="slot">（ここに本人が書く）この通説がどう言われているか・なぜ気になったか</p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>言われる理由: 高い温度だと水分が出て硬くなる。むね肉は 70℃ で乾く（R-P04）</li><li>気になる点: 安全な中心温度は 74℃（R-P05）と言われ、乾く 70℃ と近い（C10）。低温で安全にできるのか</li><li>計算で扱えるのは、中心の温度の経過からサルモネラを減らす時間が足りるか（R-P07）と、何℃まで上がった層がどれだけあるか</li></ul></div>
+</div></section>
+<section id="calc"><h2><span class="no">6</span>計算の詳しい答え</h2>
+<p>鶏むね肉（200 g・厚さ 20 mm、冷蔵庫の 5℃ から）を、湯（低温調理）とフライパンで加熱しました。湯は、中心でサルモネラを 7 桁減らす時間が足りたところで止めます（R-P07）。フライパンは中心 74℃（R-P05）まで焼いて 4 分休ませます。</p>
+<div class="tablewrap"><table><thead><tr><th>加熱</th><th>加熱した時間（分）</th><th>中心の最高（℃）</th><th>70℃ を超えた層の割合</th><th>失う重さ（%、推定）</th><th>中心の安全</th></tr></thead><tbody><tr><td>60℃ の湯</td><td class="num">45.2</td><td class="num">60.0</td><td class="num">0%</td><td class="num">19.0</td><td>足りた</td></tr><tr><td>62.5℃ の湯</td><td class="num">27.9</td><td class="num">62.3</td><td class="num">0%</td><td class="num">21.7</td><td>足りた</td></tr><tr><td>65℃ の湯</td><td class="num">20.7</td><td class="num">64.1</td><td class="num">0%</td><td class="num">24.1</td><td>足りた</td></tr><tr><td>70℃ の湯</td><td class="num">14.4</td><td class="num">66.3</td><td class="num">0%</td><td class="num">27.8</td><td>足りた</td></tr><tr><td>フライパン 180℃・中心 74℃まで</td><td class="num">9.4</td><td class="num">79.4</td><td class="num">100%</td><td class="num">36.9</td><td>足りた</td></tr></tbody></table></div>
+<ul class="find">
+<li><b>60℃ の湯でも、時間をかければ中心の安全は足りる</b>（45 分）。65℃ なら 21 分。どの層も 70℃ を超えない。</li>
+<li><b>フライパンで中心 74℃ まで焼くと、層の 100% が 70℃ を超える</b>（外側ほど高い）。失う重さは 36.9%、60℃ の湯では 19.0%。</li>
+<li class="muted small">注意: 失う重さは牛肉の値（R-P06、30 分保った値）を鶏に代用した推定で、値は確かではありません。比べられるのは大小の向きです。安全の判定は、一番冷たい層の温度で表（R-P07）の時間に対する割合を足し合わせたもの（表の間は対数で補間、推定）。湯の温度のぶれ・肉の厚さのばらつきは入れていません。</li>
+</ul></section>
+<section id="basis"><h2><span class="no">7</span>根拠</h2>
+<p class="small">規則ごとのページ（値・出典の文面・確かめ方・食い違い・使っている通説）: <a href="basis/rules/R-P07.html">R-P07</a>・<a href="basis/rules/R-P05.html">R-P05</a>・<a href="basis/rules/R-P04.html">R-P04</a>・<a href="basis/rules/R-P06.html">R-P06</a>。出典ごとのページ: <a href="basis/sources/fsis_poultry_tables.html">fsis_poultry_tables</a>・<a href="basis/sources/fsis.html">fsis</a>・<a href="basis/sources/soc_temps.html">soc_temps</a>・<a href="basis/sources/vaskoska2020.html">vaskoska2020</a>・<a href="basis/sources/ashrae_thermal.html">ashrae_thermal</a>。<a href="basis/index.html">規則と出典の一覧</a></p>
+<h3>使った規則（Exp-14 rules.yaml）</h3><div class="tablewrap"><table class="rules"><thead><tr><th>id</th><th>内容</th><th>出典の文面</th><th>出典</th><th>確かめ方</th><th>確かさ</th><th>計算での扱い</th></tr></thead><tbody>
+<tr><td class="num nw">R-P07</td><td>保つ時間が足りるとサルモネラが 7 桁（1000万分の1）に減る。温度が低いほど長く要る（140°F 60℃で 25.7分、145°F 62.8℃で 8.6分、150°F 65.6℃で 2.7分、165°F 73.9℃で 10秒未満。鶏・脂肪 2%）</td><td class="q">Times for a given temperature, fat content, and species needed to obtain a 7-log10 lethality of Salmonella ... Fat % = 2 ... 140 25.7 min ... 165 &lt;10 sec</td><td>fsis_poultry_tables</td><td class="nw">本文確認</td><td><span class="conf h">確かさ 高</span></td><td class="small use">中心（一番冷たい層）の温度の経過から、7 桁減らす時間に対する割合を足し合わせ、1 で安全とした（表の間は対数で補間・57.8℃未満は数えない）</td></tr>
+<tr><td class="num nw">R-P05</td><td>状態変化ではなく制約。鶏肉 165°F（74℃）、牛ステーキ 145°F（63℃）＋3分休ませる、牛ひき肉 160°F（71℃）</td><td class="q">poultry 165°F / steaks, chops, roasts 145°F + rest 3 minutes / ground beef 160°F</td><td>fsis</td><td class="nw">抜粋のみ</td><td><span class="conf h">確かさ 高</span></td><td class="small use">フライパンの手順を中心 74℃ で止めた</td></tr>
+<tr><td class="num nw">R-P04</td><td>meat_water_loss ↑（鳥のむね肉が乾く）</td><td class="q">158°F/70°C -- Breast meat in birds gets dry</td><td>soc_temps</td><td class="nw">本文確認</td><td><span class="conf m">確かさ 中</span></td><td class="small use">70℃ を超えた層を「乾く」層として数えた</td></tr>
+<tr><td class="num nw">R-P06</td><td>加熱損失（失う重さの割合）は到達温度とともに増える。50℃ 7〜11%、60℃ 17〜21%、70℃ 29〜32%、80℃ 34〜40%</td><td class="q">The cooking loss gradually increased with the increase in temperature, and it ranged between 7% and 11% at 50 °C, between 17% and 21% at 60 °C, and between 29 and 32% at 70 °C</td><td>vaskoska2020</td><td class="nw">本文確認</td><td><span class="conf m">確かさ 中</span></td><td class="small use">失う重さ（牛肉の値を鶏に代用、推定）</td></tr>
+</tbody></table></div>
+<h3>出典と確かめ方</h3><div class="tablewrap"><table><thead><tr><th>出典</th><th>何か</th><th>確かめ方</th><th>この計算で使ったこと</th></tr></thead><tbody>
+<tr><td class="num">fsis_poultry_tables</td><td>USDA FSIS の Time and Temperature Tables for Cooking Poultry（サルモネラを 7 桁減らすのに要る時間。脂肪 2・4・6%…、鶏・七面鳥）を、Riverstone Health（米モンタナ州の保健所）が低温調理の手引きとして写した PDF（2025-03-04 作成） <a href="https://riverstonehealth.org/wp-content/uploads/SousVide_LethalityChart_Poultry.pdf" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認（写し）</td><td class="small">鶏・脂肪 2% でサルモネラを 7 桁減らす時間（60℃ 25.7 分・62.8℃ 8.6 分・65.6℃ 2.7 分・73.9℃ 10 秒未満）。中心の安全の判定に使った</td></tr>
+<tr><td class="num">fsis</td><td>USDA FSIS &quot;Safe Minimum Internal Temperature Chart&quot; <a href="https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart" target="_blank" rel="noopener">リンク</a></td><td class="nw">抜粋のみ</td><td class="small">鶏肉の安全な中心温度 165°F（74℃）。フライパンで焼く手順の止め方に使った</td></tr>
+<tr><td class="num">soc_temps</td><td>Science of Cooking, &quot;Important temperatures in Cooking and Baking&quot; <a href="https://www.scienceofcooking.com/important_cooking_temperatures.htm" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">むね肉は 70℃（158°F）で乾く（R-P04）</td></tr>
+<tr><td class="num">vaskoska2020</td><td>R. Vaskoska, M. Ha, Z.B. Naqvi, J.D. White, R.D. Warner (2020) Muscle, Ageing and Temperature Influence the Changes in Texture, Cooking Loss and Shrinkage of Cooked Beef. Foods 9(9):1289。牛の3つの筋肉（半腱様筋・大腿二頭筋・大腰筋）の 50×30×30 mm の角切りを 50・60・70・80℃の湯で中心がその温度になってから 30 分保った。CC BY 4.0 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7555138/" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">牛肉の加熱損失と温度（R-P06）。鶏に代用した（推定）</td></tr>
+<tr><td class="num">ashrae_thermal</td><td>ASHRAE (1998) Refrigeration Handbook, Chapter 8 Thermal Properties of Foods. 表1・表2 は Choi, Y. &amp; Okos, M.R. (1986) Effects of temperature and composition on the thermal properties of foods. In: Food Engineering and Process Applications, Vol.1, pp.93–101 の式（ヤード・ポンド単位）。表5・表7 は食品の熱伝導率・熱拡散率の実測 <a href="https://www.kingson-foodtech.com/files/L2.pdf" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">肉の成分から熱の伝わりやすさ・比熱・密度を出す式</td></tr>
+</tbody></table></div>
+</section>
+<footer>Cuisine Network。計算: Exp-18 の肉の熱伝導（meat_slab）、R-P07（FSIS の表）・R-P04・R-P06。このページは experiments/myths/build.py（通説8 chicken_low）が生成します。</footer>
+</div>

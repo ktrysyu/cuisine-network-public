@@ -1,0 +1,75 @@
+# Exp-11 食感の層: 組織の型ごとの物性値（2026-09-29、Claude が作成。本人未確認）
+# status: sourced = 出典の数値をそのまま / derived = 出典の数値から計算 / 仮 = 出典なしの手書き値
+# 数値は事実の引用。図表・本文は転載していない。
+
+bite:
+  fracture_strain:        {value: 0.5, unit: "-", status: 仮, note: "σ_c = E × 破断ひずみ。npj 2024 の卵ゲルは 10mm の試料が約 5mm で破断（E. coli 溶解物の値、卵と同程度と本文）を目安にした"}
+  tongue_crush_limit:     {value: 20000, unit: Pa, status: sourced, source: udf, note: "UDF 区分3「舌でつぶせる」ゲルのかたさ上限 2×10⁴ N/m²。測り方（最大応力）は E と同じではない"}
+  d_soft_threshold:       {value: 80, unit: µm, status: sourced, source: tyle1993, note: "やわらかく丸い粒は 80µm まで ざらつきとして感じない"}
+  d_hard_threshold:       {value: 15, unit: µm, status: derived, source: tyle1993, note: "硬く角ばった粒は 11〜22µm で感じる。中ほど"}
+  sigma_floor:            {value: 1, unit: Pa, status: 仮, note: "液体の σ_c=0 を対数にするための下限"}
+
+egg:
+  E_whole_ref:            {value: 37100, unit: Pa, status: sourced, source: npj2024, note: "全卵（希釈なし）100℃ 60分、室温で圧縮、1mm 変形での見かけのヤング率 37.1±6.7 kPa"}
+  E_whole_60pct:          {value: 16600, unit: Pa, status: sourced, source: npj2024, note: "60%(w/w) に薄めた全卵 16.6±0.9 kPa"}
+  E_white_ref:            {value: 56600, unit: Pa, status: sourced, source: npj2024, note: "卵白 56.6±6.0 kPa"}
+  conc_exponent:          {value: null, unit: "-", status: derived, source: npj2024, note: "ln(37.1/16.6)/ln(1/0.6) ≈ 1.57。run.py で計算"}
+  yolk_fraction:          {value: 0.34, unit: "-", status: sourced, source: egg_structure, note: "中身のうち卵黄（Exp-14 と同じ）"}
+  protein_yolk:           {value: 16.5, unit: g/100g, status: sourced, source: fooddb}
+  protein_white:          {value: 10.1, unit: g/100g, status: sourced, source: fooddb}
+  white_frac_stage2:      {value: 0.12, unit: "-", status: sourced, source: wang2025, note: "段階2（65〜80℃）で固まる卵白たんぱく質 = オボトランスフェリン 12%（61℃で変性）。オボアルブミン 54% は 84℃"}
+  outer_layer_decides:    {value: true, status: 仮, note: "殻付き・割った卵・オムレツは外側（卵白・表面）の硬さで決める。歯が先に当たるため"}
+  curd_size:              {value: 5000, unit: µm, status: 仮, note: "スクランブルエッグのカード"}
+
+gelatin:
+  E_ref:                  {value: 1500, unit: Pa, status: sourced, source: pansino2020, note: "2.5 wt% で約 1.5 kPa（15℃、48時間冷やした後）"}
+  c_ref:                  {value: 2.5, unit: g/100g, status: sourced, source: pansino2020}
+  conc_exponent:          {value: 2, unit: "-", status: sourced, source: ferry1948, note: "剛性は濃度の2乗"}
+
+whipped:
+  G:                      {value: 5000, unit: Pa, status: sourced, source: dickinson2008, note: "泡立てきったホイップのせん断弾性率 約 5 kPa"}
+  yield_strain:           {value: 0.001, unit: "-", status: sourced, source: dickinson2008, note: "降伏ひずみ < 0.1%。σ_c = G × 降伏ひずみ"}
+  bubble_d:               {value: 29, unit: µm, status: sourced, source: dairy_foam, note: "平均気泡径 29.3µm（光学顕微鏡）"}
+
+meat:
+  E_cooked:               {value: 135000, unit: Pa, status: derived, source: uchupaj2017, note: "加熱した鶏むね肉の圧縮弾性率 119〜150 kPa の中央"}
+  fiber_d:                {value: 50, unit: µm, status: 仮, note: "筋線維の太さ 10〜100µm の中ほど（出典は確認していない）"}
+
+vegetable:
+  E_raw:                  {value: 1800000, unit: Pa, status: sourced, source: radish2015, note: "ダイコン 生 約 1.8 MPa を玉ねぎに代用（代用は仮）。生と硬化（PME）に使う"}
+  E_soft:                 {value: 100000, unit: Pa, status: sourced, source: radish2015, note: "10分ゆでた後 約 0.1 MPa。軟化に使う"}
+  E_collapse:             {value: 10000, unit: Pa, status: 仮, note: "煮崩れ"}
+  cell_d:                 {value: 200, unit: µm, status: 仮}
+
+rice:
+  E_cooked:               {value: 200000, unit: Pa, status: 仮, note: "炊いた米一粒の弾性率の数値は見つけられなかった"}
+  grain_d:                {value: 5000, unit: µm, status: 仮}
+
+baked:
+  E_solid:                {value: 360000, unit: Pa, status: derived, source: zghal2002, note: "パンのクラムの固体部分 280〜440 kPa（Gibson–Ashby の改良モデル）の中央"}
+  rel_density:            {value: 0.3, unit: "-", status: 仮, note: "パンケーキの相対密度"}
+  density_exponent:       {value: 2, unit: "-", status: sourced, source: zghal2002, note: "Gibson–Ashby の開いた気泡の E ∝ (ρ/ρs)²（論文は実測の指数がこれより小さいと報告）"}
+  pore_d:                 {value: 300, unit: µm, status: 仮}
+
+starch_paste:
+  granule_d:              {value: 40, unit: µm, status: 仮, note: "糊化して膨らんだ小麦でんぷん粒。80µm 未満なので結果には効かない"}
+
+prior_scale:
+  per_decade:             {value: 1.25, unit: "点/桁", status: 仮, note: "(A) 変換なしの目盛り。硬さ 0.1 kPa→0・1 MPa→5（4桁で5点）"}
+  hard_zero_kPa:          {value: 0.1, unit: kPa, status: 仮}
+
+sources:
+  npj2024:       "Microbial lysates repurposed as liquid egg substitutes. npj Science of Food (2024), PMC11187216. https://www.nature.com/articles/s41538-024-00281-y （Results の本文と Methods: 100℃ 60分、直径 8.5mm×長さ 10mm、2mm/s、1mm 変形での見かけのヤング率）"
+  wang2025:      "Wang L, et al. (2025) The Thermodynamic and Gelation Properties of Ovalbumin and Lysozyme. Gels 11(6):470, PMC12191903（卵白たんぱく質 オボアルブミン 54%・オボトランスフェリン 12%、変性温度 84℃・61℃。Exp-14 の出典と同じ）"
+  fooddb:        "文部科学省『日本食品標準成分表（八訂）増補2023年』（Exp-14 の params と同じ値）"
+  egg_structure: "Exp-14 rules.md §9 egg_structure（卵黄 30〜33%。Exp-14 の 34% と同じ）"
+  pansino2020:   "Pansino S, Taisne B (2020) Shear Wave Measurements of a Gelatin's Young's Modulus. Frontiers in Earth Science 8:171. https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2020.00171/full"
+  ferry1948:     "Ferry JD (1948) Mechanical Properties of Substances of High Molecular Weight. IV. Rigidities of Gelatin Gels; Dependence on Concentration, Temperature and Molecular Weight. J. Am. Chem. Soc. 70(6):2244（本文は開いていない。濃度の2乗は検索結果の要約で確認）"
+  dickinson2008: "Dickinson E (2008) Annual Transactions of the Nordic Rheology Society 16（招待論文）。https://nordicrheologysociety.org/Content/Transactions/2008/Invited%20papers/Dickinson.pdf （検索抜粋: fully whipped cream ... shear modulus of approximately 5 kPa / low yield strain (< 0.1%)）"
+  dairy_foam:    "Measurement of air cell distributions in dairy foams. International Dairy Journal. https://www.sciencedirect.com/science/article/abs/pii/S0958694601001716 （検索抜粋: 光学顕微鏡 29.3µm、SEM 26.7µm。本文は開いていない）"
+  uchupaj2017:   "U-Chupaj J, Malila Y, Gamonpilas C, et al. (2017) Differences in textural properties of cooked caponized and broiler chicken breast meat. Poultry Science. https://www.sciencedirect.com/science/article/pii/S0032579119314440 （119〜150 kPa は検索抜粋。本文は開いていない）"
+  radish2015:    "Young's Modulus and Poisson's Ratio Changes in Japanese Radish and Carrot Root Tissues during Boiling. International Journal of Food Properties. https://doi.org/10.1080/10942912.2013.879388 （検索抜粋。本文は開いていない）"
+  zghal2002:     "Zghal MC, Scanlon MG, Sapirstein HD (2002) Cellular Structure of Bread Crumb and its Influence on Mechanical Properties. Journal of Cereal Science. https://www.sciencedirect.com/science/article/pii/S073352100190445X （280〜440 kN/m² は検索抜粋）"
+  tyle1993:      "Tyle P (1993) Effect of size, shape and hardness of particles in suspension on oral texture and palatability. Acta Psychologica 84:111–118（検索抜粋）"
+  harper1964:    "Harper R, Stevens SS (1964) Subjective hardness of compliant materials. Quarterly Journal of Experimental Psychology（巻・頁は未確認） https://journals.sagepub.com/doi/10.1080/17470216408416370 （べき指数 0.8）"
+  udf:           "日本介護食品協議会「UDF区分策定の経緯」 https://www.udf.jp/about_udf/section_01.html （区分3 ゲル 2×10⁴、区分2 5×10⁴、区分1 5×10⁵ N/m²）"

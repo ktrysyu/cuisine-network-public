@@ -1,0 +1,17 @@
+{
+  "canonical": "water",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "hot water",
+  "n_recipes": 356,
+  "note": "",
+  "order": 218,
+  "reviewed": true
+}

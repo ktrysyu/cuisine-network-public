@@ -1,0 +1,25 @@
+{
+  "canonical": "tomatoes",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 2
+  },
+  "ingredient": "cherry tomatoes",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 2
+  },
+  "n_recipes": 436,
+  "note": "",
+  "order": 178,
+  "reviewed": true
+}

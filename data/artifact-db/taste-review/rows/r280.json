@@ -1,0 +1,17 @@
+{
+  "canonical": "cilantro",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh coriander",
+  "n_recipes": 285,
+  "note": "fresh coriander は葉（cilantro）",
+  "order": 280,
+  "reviewed": true
+}

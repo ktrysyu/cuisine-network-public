@@ -1,0 +1,17 @@
+{
+  "canonical": "mayonnaise",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "mayonaise",
+  "n_recipes": 781,
+  "note": "米国式（甘みあり）想定",
+  "order": 106,
+  "reviewed": true
+}

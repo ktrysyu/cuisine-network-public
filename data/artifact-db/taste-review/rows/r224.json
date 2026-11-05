@@ -1,0 +1,17 @@
+{
+  "canonical": "ricotta cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "ricotta cheese",
+  "n_recipes": 352,
+  "note": "",
+  "order": 224,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "green chile",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 302,
+  "note": "米国の缶詰グリーンチリ（アナハイム系）想定で辛さ控えめ",
+  "order": 266,
+  "reviewed": true
+}

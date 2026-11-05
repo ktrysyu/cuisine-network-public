@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken broth",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "chicken broth",
+  "n_recipes": 1554,
+  "note": "市販品想定。塩分は製品差が大きい",
+  "order": 41,
+  "reviewed": true
+}

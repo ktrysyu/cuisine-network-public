@@ -1,0 +1,17 @@
+{
+  "canonical": "vegetable oil",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "peanut oil",
+  "n_recipes": 610,
+  "note": "精製油想定",
+  "order": 127,
+  "reviewed": true
+}

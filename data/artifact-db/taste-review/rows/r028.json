@@ -1,0 +1,25 @@
+{
+  "canonical": "green onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "scallions",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "n_recipes": 1891,
+  "note": "green onions と同じ（生の薬味基準）",
+  "order": 28,
+  "reviewed": true
+}

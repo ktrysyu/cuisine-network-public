@@ -1,0 +1,17 @@
+{
+  "canonical": "cornmeal",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "cornmeal",
+  "n_recipes": 368,
+  "note": "加熱後",
+  "order": 210,
+  "reviewed": true
+}

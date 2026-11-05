@@ -1,0 +1,17 @@
+{
+  "canonical": "lime",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lime wedges",
+  "n_recipes": 482,
+  "note": "搾って使う前提",
+  "order": 155,
+  "reviewed": true
+}

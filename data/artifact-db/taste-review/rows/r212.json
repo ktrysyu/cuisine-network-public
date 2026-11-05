@@ -1,0 +1,17 @@
+{
+  "canonical": "spinach",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "spinach",
+  "n_recipes": 366,
+  "note": "シュウ酸のえぐみを苦1とした",
+  "order": 212,
+  "reviewed": true
+}

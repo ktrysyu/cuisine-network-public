@@ -1,0 +1,1994 @@
+{
+ "metrics": {
+  "hardness": {
+   "mae_loo": 1.5936060716045601,
+   "mae_base": 1.5256410256410255,
+   "rho_loo": -0.7606087305741638,
+   "rho_base": -1.0,
+   "mae_insample": 1.069729631169763,
+   "rho_insample": 0.42319583505630165
+  },
+  "thickness": {
+   "mae_loo": 1.0676171439594906,
+   "mae_base": 1.2948717948717947,
+   "rho_loo": -0.028257721461827687,
+   "rho_base": -1.0,
+   "mae_insample": 0.8420172117962058,
+   "rho_insample": 0.3777137133150375
+  },
+  "smoothness": {
+   "mae_loo": 2.192307692307692,
+   "mae_base": 1.9743589743589742,
+   "rho_loo": -0.3035830549626323,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 1.5311355311355312,
+   "rho_insample": 0.36331261528259573
+  },
+  "sweet": {
+   "mae_loo": 0.7367234612781757,
+   "mae_base": 1.923076923076923,
+   "rho_loo": 0.6960969028832069,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 0.4395604395604395,
+   "rho_insample": 0.9192140047502299
+  },
+  "roasted": {
+   "mae_loo": 1.2602089268755934,
+   "mae_base": 1.9102564102564101,
+   "rho_loo": -0.16913516427169173,
+   "rho_base": -1.0,
+   "mae_insample": 0.833746898263028,
+   "rho_insample": 0.8738518946547206
+  },
+  "warmth": {
+   "mae_loo": 0.7725451972415941,
+   "mae_base": 1.2435897435897434,
+   "rho_loo": 0.41640203236453976,
+   "rho_base": -0.9999999999999999,
+   "mae_insample": 0.670637585269739,
+   "rho_insample": 0.46071385117151953
+  }
+ },
+ "rows": {
+  "scrambled_eggs": {
+   "T_serve": 73.40873062334607,
+   "caramel": 0.0,
+   "gel_structure": "小片（カード）",
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 0.732824427480916,
+   "water": 71.83282442748092
+  },
+  "omelet": {
+   "T_serve": 72.7487926342977,
+   "caramel": 0.0,
+   "gel_structure": "外側連続・内側半流動",
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 0.0,
+   "water": 70.88260869565218
+  },
+  "custard_pudding": {
+   "T_serve": 5.009275220698828,
+   "caramel": 0.0,
+   "gel_structure": "連続ゲル",
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 13.261538461538462,
+   "water": 75.32820512820511
+  },
+  "chawanmushi": {
+   "T_serve": 58.454952483259426,
+   "caramel": 0.0,
+   "gel_structure": "連続ゲル",
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 0.0,
+   "water": 92.59502982107358
+  },
+  "white_sauce": {
+   "T_serve": 96.65170823310959,
+   "caramel": 0.0,
+   "gel_structure": 0.0,
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 1.0,
+   "sugar_conc": 4.123711340206185,
+   "water": 77.1618556701031
+  },
+  "caramel_sauce": {
+   "T_serve": 113.74844056971833,
+   "caramel": 2.0,
+   "gel_structure": 0.0,
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 84.92041594665048,
+   "water": 15.079584053349516
+  },
+  "sauteed_onion": {
+   "T_serve": 100.0,
+   "caramel": 2.0,
+   "gel_structure": 0.0,
+   "maillard": 2.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 6.166440158033489,
+   "water": 84.68667360755016
+  },
+  "steamed_rice": {
+   "T_serve": 94.68714462841852,
+   "caramel": 0.0,
+   "gel_structure": 0.0,
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.95,
+   "sugar_conc": 0.0,
+   "water": 62.86298873926634
+  },
+  "pancake": {
+   "T_serve": 102.43952283487555,
+   "caramel": 3.0,
+   "gel_structure": "連続ゲル",
+   "maillard": 2.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 1.0,
+   "sugar_conc": 10.525106230166275,
+   "water": 38.898045096893604
+  },
+  "milk_jelly": {
+   "T_serve": 5.000054101541315,
+   "caramel": 0.0,
+   "gel_structure": 0.0,
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 11.784,
+   "water": 80.20200000000001
+  },
+  "whipped_cream": {
+   "T_serve": 9.194219356941728,
+   "caramel": 0.0,
+   "gel_structure": 0.0,
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 12.974418604651163,
+   "water": 44.88604651162792
+  },
+  "onsen_tamago": {
+   "T_serve": 67.2808396587538,
+   "caramel": 0.0,
+   "gel_structure": "なし",
+   "maillard": 0.0,
+   "meat_water_loss": 0.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 0.0,
+   "water": 75.0
+  },
+  "sauteed_chicken": {
+   "T_serve": 100.0,
+   "caramel": 0.0,
+   "gel_structure": 0.0,
+   "maillard": 2.0,
+   "meat_water_loss": 2.0,
+   "starch_gel": 0.0,
+   "sugar_conc": 0.0,
+   "water": 70.19994797989793
+  }
+ },
+ "labels": {
+  "caramel_sauce": {
+   "hardness": 1.0,
+   "thickness": 5.0,
+   "smoothness": 5.0,
+   "sweet": 5.0,
+   "roasted": 5.0,
+   "warmth": 3.0
+  },
+  "chawanmushi": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 5.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 4.0
+  },
+  "custard_pudding": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 5.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "milk_jelly": {
+   "hardness": 0.0,
+   "thickness": 3.0,
+   "smoothness": 5.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "omelet": {
+   "hardness": 3.0,
+   "thickness": 0.0,
+   "smoothness": 1.0,
+   "sweet": 0.0,
+   "roasted": 1.0,
+   "warmth": 3.0
+  },
+  "onsen_tamago": {
+   "hardness": 1.0,
+   "thickness": 2.0,
+   "smoothness": 4.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 1.0
+  },
+  "pancake": {
+   "hardness": 4.0,
+   "thickness": 0.0,
+   "smoothness": 1.0,
+   "sweet": 4.0,
+   "roasted": 3.0,
+   "warmth": 2.0
+  },
+  "sauteed_chicken": {
+   "hardness": 5.0,
+   "thickness": 0.0,
+   "smoothness": 0.0,
+   "sweet": 0.0,
+   "roasted": 4.0,
+   "warmth": 3.0
+  },
+  "sauteed_onion": {
+   "hardness": 3.0,
+   "thickness": 1.0,
+   "smoothness": 0.0,
+   "sweet": 2.0,
+   "roasted": 5.0,
+   "warmth": 2.0
+  },
+  "scrambled_eggs": {
+   "hardness": 1.0,
+   "thickness": 1.0,
+   "smoothness": 3.0,
+   "sweet": 1.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  },
+  "steamed_rice": {
+   "hardness": 3.0,
+   "thickness": 0.0,
+   "smoothness": 0.0,
+   "sweet": 3.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  },
+  "whipped_cream": {
+   "hardness": 0.0,
+   "thickness": 1.0,
+   "smoothness": 4.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 0.0
+  },
+  "white_sauce": {
+   "hardness": 0.0,
+   "thickness": 3.0,
+   "smoothness": 3.0,
+   "sweet": 0.0,
+   "roasted": 0.0,
+   "warmth": 3.0
+  }
+ },
+ "loo": {
+  "scrambled_eggs": {
+   "hardness": 1.4960115384200376,
+   "thickness": 1.1444560958709478,
+   "smoothness": 2.75,
+   "sweet": 0.5,
+   "roasted": 0.4594594594594592,
+   "warmth": 2.1236035623295226
+  },
+  "omelet": {
+   "hardness": 1.3099787826745075,
+   "thickness": 1.25200817538279,
+   "smoothness": 2.9166666666666665,
+   "sweet": 0.6666666666666666,
+   "roasted": 0.3423423423423421,
+   "warmth": 2.1046709094851264
+  },
+  "custard_pudding": {
+   "hardness": 1.4703117464273499,
+   "thickness": 1.6765794192753911,
+   "smoothness": 3.0,
+   "sweet": 4.003990769014188,
+   "roasted": 0.4594594594594595,
+   "warmth": 0.5092215711509376
+  },
+  "chawanmushi": {
+   "hardness": 1.3627733790410048,
+   "thickness": 0.9598140649029787,
+   "smoothness": 3.0,
+   "sweet": 0.6666666666666666,
+   "roasted": 0.4594594594594595,
+   "warmth": 1.5902723678391086
+  },
+  "white_sauce": {
+   "hardness": 1.5777760622441233,
+   "thickness": 0.0,
+   "smoothness": 2.3333333333333335,
+   "sweet": 1.6240571804992974,
+   "roasted": 0.4594594594594595,
+   "warmth": 2.7910024416666985
+  },
+  "caramel_sauce": {
+   "hardness": 3.065116928490713,
+   "thickness": 5.0,
+   "smoothness": 2.0,
+   "sweet": 4.0,
+   "roasted": 0.0,
+   "warmth": 3.3369626236322496
+  },
+  "sauteed_onion": {
+   "hardness": 1.0571787889393731,
+   "thickness": 1.4247552754941393,
+   "smoothness": 2.8333333333333335,
+   "sweet": 1.6655091244197102,
+   "roasted": 3.9506172839506166,
+   "warmth": 3.0394142874748495
+  },
+  "steamed_rice": {
+   "hardness": 1.3865072096334787,
+   "thickness": 1.1639413708622661,
+   "smoothness": 2.8333333333333335,
+   "sweet": 0.0,
+   "roasted": 0.4594594594594595,
+   "warmth": 2.7329315889347887
+  },
+  "pancake": {
+   "hardness": 1.082003340354252,
+   "thickness": 1.9540141152481991,
+   "smoothness": 5.0,
+   "sweet": 3.5518004951441577,
+   "roasted": 5.0,
+   "warmth": 3.1255706402481276
+  },
+  "milk_jelly": {
+   "hardness": 1.5760414134591851,
+   "thickness": 1.488796913715814,
+   "smoothness": 2.0,
+   "sweet": 4.0,
+   "roasted": 0.4594594594594595,
+   "warmth": 0.5089145562187253
+  },
+  "whipped_cream": {
+   "hardness": 1.9963242240006442,
+   "thickness": 1.77284412602941,
+   "smoothness": 2.1666666666666665,
+   "sweet": 4.0,
+   "roasted": 0.4594594594594595,
+   "warmth": 0.6438065956255516
+  },
+  "onsen_tamago": {
+   "hardness": 1.4726482375413803,
+   "thickness": 0.9598140649029787,
+   "smoothness": 2.6666666666666665,
+   "sweet": 0.6666666666666666,
+   "roasted": 0.4594594594594595,
+   "warmth": 2.1132742057007685
+  },
+  "sauteed_chicken": {
+   "hardness": 1.4644564771635498,
+   "thickness": 1.2520081753827896,
+   "smoothness": 2.8333333333333335,
+   "sweet": 0.6666666666666666,
+   "roasted": 0.0,
+   "warmth": 2.8915960456552434
+  }
+ },
+ "baseline": {
+  "scrambled_eggs": {
+   "hardness": 1.8333333333333333,
+   "thickness": 1.5833333333333333,
+   "smoothness": 2.75,
+   "sweet": 2.1666666666666665,
+   "roasted": 1.5,
+   "warmth": 2.0
+  },
+  "omelet": {
+   "hardness": 1.6666666666666667,
+   "thickness": 1.6666666666666667,
+   "smoothness": 2.9166666666666665,
+   "sweet": 2.25,
+   "roasted": 1.4166666666666667,
+   "warmth": 2.0
+  },
+  "custard_pudding": {
+   "hardness": 1.8333333333333333,
+   "thickness": 1.5,
+   "smoothness": 2.5833333333333335,
+   "sweet": 1.9166666666666667,
+   "roasted": 1.5,
+   "warmth": 2.25
+  },
+  "chawanmushi": {
+   "hardness": 1.8333333333333333,
+   "thickness": 1.5,
+   "smoothness": 2.5833333333333335,
+   "sweet": 2.25,
+   "roasted": 1.5,
+   "warmth": 1.9166666666666667
+  },
+  "white_sauce": {
+   "hardness": 1.9166666666666667,
+   "thickness": 1.4166666666666667,
+   "smoothness": 2.75,
+   "sweet": 2.25,
+   "roasted": 1.5,
+   "warmth": 2.0
+  },
+  "caramel_sauce": {
+   "hardness": 1.8333333333333333,
+   "thickness": 1.25,
+   "smoothness": 2.5833333333333335,
+   "sweet": 1.8333333333333333,
+   "roasted": 1.0833333333333333,
+   "warmth": 2.0
+  },
+  "sauteed_onion": {
+   "hardness": 1.6666666666666667,
+   "thickness": 1.5833333333333333,
+   "smoothness": 3.0,
+   "sweet": 2.0833333333333335,
+   "roasted": 1.0833333333333333,
+   "warmth": 2.0833333333333335
+  },
+  "steamed_rice": {
+   "hardness": 1.6666666666666667,
+   "thickness": 1.6666666666666667,
+   "smoothness": 3.0,
+   "sweet": 2.0,
+   "roasted": 1.5,
+   "warmth": 2.0
+  },
+  "pancake": {
+   "hardness": 1.5833333333333333,
+   "thickness": 1.6666666666666667,
+   "smoothness": 2.9166666666666665,
+   "sweet": 1.9166666666666667,
+   "roasted": 1.25,
+   "warmth": 2.0833333333333335
+  },
+  "milk_jelly": {
+   "hardness": 1.9166666666666667,
+   "thickness": 1.4166666666666667,
+   "smoothness": 2.5833333333333335,
+   "sweet": 1.9166666666666667,
+   "roasted": 1.5,
+   "warmth": 2.25
+  },
+  "whipped_cream": {
+   "hardness": 1.9166666666666667,
+   "thickness": 1.5833333333333333,
+   "smoothness": 2.6666666666666665,
+   "sweet": 1.9166666666666667,
+   "roasted": 1.5,
+   "warmth": 2.25
+  },
+  "onsen_tamago": {
+   "hardness": 1.8333333333333333,
+   "thickness": 1.5,
+   "smoothness": 2.6666666666666665,
+   "sweet": 2.25,
+   "roasted": 1.5,
+   "warmth": 2.1666666666666665
+  },
+  "sauteed_chicken": {
+   "hardness": 1.5,
+   "thickness": 1.6666666666666667,
+   "smoothness": 3.0,
+   "sweet": 2.25,
+   "roasted": 1.1666666666666667,
+   "warmth": 2.0
+  }
+ },
+ "insample": {
+  "scrambled_eggs": {
+   "hardness": 1.4513116680905394,
+   "thickness": 1.1264782459034806,
+   "smoothness": 3.0,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 2.1918935994041475
+  },
+  "omelet": {
+   "hardness": 1.4589609941565267,
+   "thickness": 1.0924102541391798,
+   "smoothness": 1.0,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 2.174182024111252
+  },
+  "custard_pudding": {
+   "hardness": 1.4231735244995662,
+   "thickness": 1.7089207935635997,
+   "smoothness": 3.6666666666666665,
+   "sweet": 4.0,
+   "roasted": 0.411290322580646,
+   "warmth": 0.3561724794486848
+  },
+  "chawanmushi": {
+   "hardness": 1.2841739607417657,
+   "thickness": 1.0924102541391798,
+   "smoothness": 3.6666666666666665,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 1.790560486541045
+  },
+  "white_sauce": {
+   "hardness": 1.4084124650725052,
+   "thickness": 0.9727934069925716,
+   "smoothness": 2.4285714285714284,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 2.81569425158366
+  },
+  "caramel_sauce": {
+   "hardness": 1.9081805941475705,
+   "thickness": 5.0,
+   "smoothness": 2.4285714285714284,
+   "sweet": 5.0,
+   "roasted": 2.2983870967741935,
+   "warmth": 3.2745404872413126
+  },
+  "sauteed_onion": {
+   "hardness": 1.347836972515729,
+   "thickness": 1.3790795089306487,
+   "smoothness": 2.4285714285714284,
+   "sweet": 2.0,
+   "roasted": 4.314516129032257,
+   "warmth": 2.9055565154872385
+  },
+  "steamed_rice": {
+   "hardness": 1.5235196895315593,
+   "thickness": 0.7966539067782852,
+   "smoothness": 2.4285714285714284,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 2.7629688186193553
+  },
+  "pancake": {
+   "hardness": 1.716439741192586,
+   "thickness": 1.2703853815680604,
+   "smoothness": 3.6666666666666665,
+   "sweet": 4.0,
+   "roasted": 5.0,
+   "warmth": 2.971029019094648
+  },
+  "milk_jelly": {
+   "hardness": 1.3839390171089687,
+   "thickness": 1.6402320787070788,
+   "smoothness": 2.4285714285714284,
+   "sweet": 4.0,
+   "roasted": 0.411290322580646,
+   "warmth": 0.35592500082349077
+  },
+  "whipped_cream": {
+   "hardness": 1.6682357662733915,
+   "thickness": 1.695572989433451,
+   "smoothness": 2.4285714285714284,
+   "sweet": 4.0,
+   "roasted": 0.411290322580646,
+   "warmth": 0.46848902190521347
+  },
+  "onsen_tamago": {
+   "hardness": 1.4258156066689893,
+   "thickness": 1.0924102541391798,
+   "smoothness": 4.0,
+   "sweet": 0.5714285714285714,
+   "roasted": 0.411290322580646,
+   "warmth": 2.0274317802527206
+  },
+  "sauteed_chicken": {
+   "hardness": 4.9999999999999725,
+   "thickness": 1.0924102541391798,
+   "smoothness": 2.4285714285714284,
+   "sweet": 0.5714285714285714,
+   "roasted": 2.427419354838709,
+   "warmth": 2.9055565154872385
+  }
+ },
+ "misses": [
+  [
+   "custard_pudding",
+   "smoothness",
+   5.0,
+   3.0
+  ],
+  [
+   "chawanmushi",
+   "smoothness",
+   5.0,
+   3.0
+  ],
+  [
+   "chawanmushi",
+   "warmth",
+   4.0,
+   1.5902723678391086
+  ],
+  [
+   "white_sauce",
+   "thickness",
+   3.0,
+   0.0
+  ],
+  [
+   "caramel_sauce",
+   "hardness",
+   1.0,
+   3.065116928490713
+  ],
+  [
+   "caramel_sauce",
+   "smoothness",
+   5.0,
+   2.0
+  ],
+  [
+   "caramel_sauce",
+   "roasted",
+   5.0,
+   0.0
+  ],
+  [
+   "sauteed_onion",
+   "smoothness",
+   0.0,
+   2.8333333333333335
+  ],
+  [
+   "steamed_rice",
+   "smoothness",
+   0.0,
+   2.8333333333333335
+  ],
+  [
+   "steamed_rice",
+   "sweet",
+   3.0,
+   0.0
+  ],
+  [
+   "pancake",
+   "hardness",
+   4.0,
+   1.082003340354252
+  ],
+  [
+   "pancake",
+   "smoothness",
+   1.0,
+   5.0
+  ],
+  [
+   "pancake",
+   "roasted",
+   3.0,
+   5.0
+  ],
+  [
+   "milk_jelly",
+   "smoothness",
+   5.0,
+   2.0
+  ],
+  [
+   "sauteed_chicken",
+   "hardness",
+   5.0,
+   1.4644564771635498
+  ],
+  [
+   "sauteed_chicken",
+   "smoothness",
+   0.0,
+   2.8333333333333335
+  ],
+  [
+   "sauteed_chicken",
+   "roasted",
+   4.0,
+   0.0
+  ]
+ ],
+ "compare": [
+  {
+   "group": "13品の正解のレシピ",
+   "name": "スクランブルエッグ",
+   "expected": "scrambled_eggs",
+   "state": "scrambled_eggs",
+   "state_top": [
+    [
+     "scrambled_eggs",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.1070447696284544
+    ],
+    [
+     "onsen_tamago",
+     1.9705388021118715
+    ],
+    [
+     "white_sauce",
+     2.6009835865276076
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.2484264979278397
+    ],
+    [
+     "onsen_tamago",
+     2.064962657847489
+    ],
+    [
+     "white_sauce",
+     2.640599820890067
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.4513116680905394,
+    "thickness": 1.1264782459034806,
+    "smoothness": 3.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.1918935994041475
+   },
+   "pvec_loo": {
+    "hardness": 1.4960115384200376,
+    "thickness": 1.1444560958709478,
+    "smoothness": 2.75,
+    "sweet": 0.5,
+    "roasted": 0.4594594594594592,
+    "warmth": 2.1236035623295226
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "オムレツ",
+   "expected": "omelet",
+   "state": "omelet",
+   "state_top": [
+    [
+     "omelet",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "omelet",
+     2.2188389771933776
+    ],
+    [
+     "scrambled_eggs",
+     2.2921591082131383
+    ],
+    [
+     "white_sauce",
+     3.308342710781023
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.0938295028962788
+    ],
+    [
+     "onsen_tamago",
+     1.900297415822388
+    ],
+    [
+     "white_sauce",
+     2.478249619904643
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.4589609941565267,
+    "thickness": 1.0924102541391798,
+    "smoothness": 1.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.174182024111252
+   },
+   "pvec_loo": {
+    "hardness": 1.3099787826745075,
+    "thickness": 1.25200817538279,
+    "smoothness": 2.9166666666666665,
+    "sweet": 0.6666666666666666,
+    "roasted": 0.3423423423423421,
+    "warmth": 2.1046709094851264
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "プリン",
+   "expected": "custard_pudding",
+   "state": "custard_pudding",
+   "state_top": [
+    [
+     "custard_pudding",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "custard_pudding",
+     1.528920952371287
+    ],
+    [
+     "whipped_cream",
+     1.7132195562914836
+    ],
+    [
+     "milk_jelly",
+     2.401271484124995
+    ]
+   ],
+   "perc_loo": [
+    [
+     "whipped_cream",
+     2.0223753044177535
+    ],
+    [
+     "custard_pudding",
+     2.1900272921845794
+    ],
+    [
+     "milk_jelly",
+     2.895459237291597
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.4231735244995662,
+    "thickness": 1.7089207935635997,
+    "smoothness": 3.6666666666666665,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.3561724794486848
+   },
+   "pvec_loo": {
+    "hardness": 1.4703117464273499,
+    "thickness": 1.6765794192753911,
+    "smoothness": 3.0,
+    "sweet": 4.003990769014188,
+    "roasted": 0.4594594594594595,
+    "warmth": 0.5092215711509376
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "茶碗蒸し",
+   "expected": "chawanmushi",
+   "state": "chawanmushi",
+   "state_top": [
+    [
+     "chawanmushi",
+     0.889
+    ]
+   ],
+   "perc_full": [
+    [
+     "onsen_tamago",
+     1.4615954715446697
+    ],
+    [
+     "scrambled_eggs",
+     1.5327478837141664
+    ],
+    [
+     "white_sauce",
+     2.773243610434217
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.5629349112475202
+    ],
+    [
+     "onsen_tamago",
+     1.7937558952321535
+    ],
+    [
+     "white_sauce",
+     2.9431937361648015
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.2841739607417657,
+    "thickness": 1.0924102541391798,
+    "smoothness": 3.6666666666666665,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 1.790560486541045
+   },
+   "pvec_loo": {
+    "hardness": 1.3627733790410048,
+    "thickness": 0.9598140649029787,
+    "smoothness": 3.0,
+    "sweet": 0.6666666666666666,
+    "roasted": 0.4594594594594595,
+    "warmth": 1.5902723678391086
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "ホワイトソース",
+   "expected": "white_sauce",
+   "state": "white_sauce",
+   "state_top": [
+    [
+     "white_sauce",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     0.938548539133765
+    ],
+    [
+     "omelet",
+     2.4954704017452927
+    ],
+    [
+     "white_sauce",
+     2.6361680153855884
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.5564382292129562
+    ],
+    [
+     "omelet",
+     2.6026764085825342
+    ],
+    [
+     "steamed_rice",
+     3.1008332735543656
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.4084124650725052,
+    "thickness": 0.9727934069925716,
+    "smoothness": 2.4285714285714284,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.81569425158366
+   },
+   "pvec_loo": {
+    "hardness": 1.5777760622441233,
+    "thickness": 0.0,
+    "smoothness": 2.3333333333333335,
+    "sweet": 1.6240571804992974,
+    "roasted": 0.4594594594594595,
+    "warmth": 2.7910024416666985
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "カラメル",
+   "expected": "caramel_sauce",
+   "state": "caramel_sauce",
+   "state_top": [
+    [
+     "caramel_sauce",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "caramel_sauce",
+     3.848522008194352
+    ],
+    [
+     "milk_jelly",
+     5.590938805517482
+    ],
+    [
+     "custard_pudding",
+     5.782926209000604
+    ]
+   ],
+   "perc_loo": [
+    [
+     "steamed_rice",
+     5.487967203263992
+    ],
+    [
+     "scrambled_eggs",
+     5.511646917035238
+    ],
+    [
+     "white_sauce",
+     5.5234487048442364
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.9081805941475705,
+    "thickness": 5.0,
+    "smoothness": 2.4285714285714284,
+    "sweet": 5.0,
+    "roasted": 2.2983870967741935,
+    "warmth": 3.2745404872413126
+   },
+   "pvec_loo": {
+    "hardness": 3.065116928490713,
+    "thickness": 5.0,
+    "smoothness": 2.0,
+    "sweet": 4.0,
+    "roasted": 0.0,
+    "warmth": 3.3369626236322496
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "炒め玉ねぎ",
+   "expected": "sauteed_onion",
+   "state": null,
+   "state_top": [
+    [
+     "sauteed_onion",
+     0.556
+    ]
+   ],
+   "perc_full": [
+    [
+     "sauteed_onion",
+     3.1719432320344056
+    ],
+    [
+     "pancake",
+     4.18624301720109
+    ],
+    [
+     "scrambled_eggs",
+     4.496130719322038
+    ]
+   ],
+   "perc_loo": [
+    [
+     "sauteed_onion",
+     3.778388462239088
+    ],
+    [
+     "scrambled_eggs",
+     4.032777831809588
+    ],
+    [
+     "omelet",
+     4.543920053240059
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.347836972515729,
+    "thickness": 1.3790795089306487,
+    "smoothness": 2.4285714285714284,
+    "sweet": 2.0,
+    "roasted": 4.314516129032257,
+    "warmth": 2.9055565154872385
+   },
+   "pvec_loo": {
+    "hardness": 1.0571787889393731,
+    "thickness": 1.4247552754941393,
+    "smoothness": 2.8333333333333335,
+    "sweet": 1.6655091244197102,
+    "roasted": 3.9506172839506166,
+    "warmth": 3.0394142874748495
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "ご飯",
+   "expected": "steamed_rice",
+   "state": "steamed_rice",
+   "state_top": [
+    [
+     "steamed_rice",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.0251683232443363
+    ],
+    [
+     "omelet",
+     2.3632099691723334
+    ],
+    [
+     "onsen_tamago",
+     2.791997821922277
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.219209130966591
+    ],
+    [
+     "onsen_tamago",
+     2.328872656969519
+    ],
+    [
+     "white_sauce",
+     2.3672177425936556
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.5235196895315593,
+    "thickness": 0.7966539067782852,
+    "smoothness": 2.4285714285714284,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.7629688186193553
+   },
+   "pvec_loo": {
+    "hardness": 1.3865072096334787,
+    "thickness": 1.1639413708622661,
+    "smoothness": 2.8333333333333335,
+    "sweet": 0.0,
+    "roasted": 0.4594594594594595,
+    "warmth": 2.7329315889347887
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "パンケーキ",
+   "expected": "pancake",
+   "state": "pancake",
+   "state_top": [
+    [
+     "pancake",
+     0.875
+    ],
+    [
+     "custard_pudding",
+     0.667
+    ]
+   ],
+   "perc_full": [
+    [
+     "caramel_sauce",
+     4.147520729338639
+    ],
+    [
+     "pancake",
+     4.345403886906421
+    ],
+    [
+     "sauteed_onion",
+     4.4841918996541414
+    ]
+   ],
+   "perc_loo": [
+    [
+     "caramel_sauce",
+     3.3760634397910083
+    ],
+    [
+     "sauteed_onion",
+     5.7674819602165455
+    ],
+    [
+     "pancake",
+     5.813834167796202
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.716439741192586,
+    "thickness": 1.2703853815680604,
+    "smoothness": 3.6666666666666665,
+    "sweet": 4.0,
+    "roasted": 5.0,
+    "warmth": 2.971029019094648
+   },
+   "pvec_loo": {
+    "hardness": 1.082003340354252,
+    "thickness": 1.9540141152481991,
+    "smoothness": 5.0,
+    "sweet": 3.5518004951441577,
+    "roasted": 5.0,
+    "warmth": 3.1255706402481276
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "牛乳ゼリー",
+   "expected": "milk_jelly",
+   "state": "milk_jelly",
+   "state_top": [
+    [
+     "milk_jelly",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.256194674323087
+    ],
+    [
+     "custard_pudding",
+     2.6804718539221613
+    ],
+    [
+     "milk_jelly",
+     3.266855251839709
+    ]
+   ],
+   "perc_loo": [
+    [
+     "whipped_cream",
+     2.6819630833056993
+    ],
+    [
+     "custard_pudding",
+     3.1722624932159404
+    ],
+    [
+     "milk_jelly",
+     3.7732927696312353
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.3839390171089687,
+    "thickness": 1.6402320787070788,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.35592500082349077
+   },
+   "pvec_loo": {
+    "hardness": 1.5760414134591851,
+    "thickness": 1.488796913715814,
+    "smoothness": 2.0,
+    "sweet": 4.0,
+    "roasted": 0.4594594594594595,
+    "warmth": 0.5089145562187253
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "ホイップクリーム",
+   "expected": "whipped_cream",
+   "state": "whipped_cream",
+   "state_top": [
+    [
+     "whipped_cream",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.474845814126487
+    ],
+    [
+     "custard_pudding",
+     2.7459245137371955
+    ],
+    [
+     "milk_jelly",
+     3.3890156371463873
+    ]
+   ],
+   "perc_loo": [
+    [
+     "whipped_cream",
+     2.9273365862228395
+    ],
+    [
+     "custard_pudding",
+     3.1141017092647036
+    ],
+    [
+     "milk_jelly",
+     3.7609293600901115
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.6682357662733915,
+    "thickness": 1.695572989433451,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.46848902190521347
+   },
+   "pvec_loo": {
+    "hardness": 1.9963242240006442,
+    "thickness": 1.77284412602941,
+    "smoothness": 2.1666666666666665,
+    "sweet": 4.0,
+    "roasted": 0.4594594594594595,
+    "warmth": 0.6438065956255516
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "温泉卵",
+   "expected": "onsen_tamago",
+   "state": "onsen_tamago",
+   "state_top": [
+    [
+     "onsen_tamago",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.5775236057985271
+    ],
+    [
+     "onsen_tamago",
+     1.5988572426709184
+    ],
+    [
+     "chawanmushi",
+     2.5281918046154903
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     1.2019230912230612
+    ],
+    [
+     "onsen_tamago",
+     2.2311628829407137
+    ],
+    [
+     "omelet",
+     2.7485878879775183
+    ]
+   ],
+   "pvec": {
+    "hardness": 1.4258156066689893,
+    "thickness": 1.0924102541391798,
+    "smoothness": 4.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.0274317802527206
+   },
+   "pvec_loo": {
+    "hardness": 1.4726482375413803,
+    "thickness": 0.9598140649029787,
+    "smoothness": 2.6666666666666665,
+    "sweet": 0.6666666666666666,
+    "roasted": 0.4594594594594595,
+    "warmth": 2.1132742057007685
+   }
+  },
+  {
+   "group": "13品の正解のレシピ",
+   "name": "鶏むね肉のソテー",
+   "expected": "sauteed_chicken",
+   "state": "sauteed_chicken",
+   "state_top": [
+    [
+     "sauteed_chicken",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "omelet",
+     3.0995407221810938
+    ],
+    [
+     "sauteed_chicken",
+     3.1463914913070825
+    ],
+    [
+     "pancake",
+     4.139705270746943
+    ]
+   ],
+   "perc_loo": [
+    [
+     "scrambled_eggs",
+     0.6556433831324822
+    ],
+    [
+     "white_sauce",
+     2.3841312530929755
+    ],
+    [
+     "onsen_tamago",
+     2.4817136709071552
+    ]
+   ],
+   "pvec": {
+    "hardness": 4.9999999999999725,
+    "thickness": 1.0924102541391798,
+    "smoothness": 2.4285714285714284,
+    "sweet": 0.5714285714285714,
+    "roasted": 2.427419354838709,
+    "warmth": 2.9055565154872385
+   },
+   "pvec_loo": {
+    "hardness": 1.4644564771635498,
+    "thickness": 1.2520081753827896,
+    "smoothness": 2.8333333333333335,
+    "sweet": 0.6666666666666666,
+    "roasted": 0.0,
+    "warmth": 2.8915960456552434
+   }
+  },
+  {
+   "group": "組1 A: 撹拌→フライパン vs 撹拌→蒸す（依頼の2例）",
+   "name": "(卵+牛乳)→撹拌→加熱(フライパン,短時間)",
+   "expected": "scrambled_eggs",
+   "state": "scrambled_eggs",
+   "state_top": [
+    [
+     "scrambled_eggs",
+     0.9
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.1094552351593363
+    ],
+    [
+     "onsen_tamago",
+     1.9449107396161842
+    ],
+    [
+     "white_sauce",
+     2.5833507257246815
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.409178745508402,
+    "thickness": 1.1296011451485415,
+    "smoothness": 3.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.1670330034229637
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組1 B: 撹拌→フライパン vs 撹拌→蒸す（依頼の2例）",
+   "name": "(卵+牛乳+砂糖)→撹拌→蒸す(88℃)",
+   "expected": "custard_pudding",
+   "state": "custard_pudding",
+   "state_top": [
+    [
+     "custard_pudding",
+     0.889
+    ]
+   ],
+   "perc_full": [
+    [
+     "custard_pudding",
+     2.9024085916889004
+    ],
+    [
+     "whipped_cream",
+     3.003580796743982
+    ],
+    [
+     "scrambled_eggs",
+     3.248486836996542
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4231735244995662,
+    "thickness": 1.7089207935635997,
+    "smoothness": 3.6666666666666665,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 2.492636192793936
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組2 A: 同じ材料で 撹拌→フライパン vs 撹拌→蒸す",
+   "name": "(卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら",
+   "expected": "scrambled_eggs",
+   "state": "scrambled_eggs",
+   "state_top": [
+    [
+     "scrambled_eggs",
+     0.9
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     2.3153629811827927
+    ],
+    [
+     "whipped_cream",
+     3.0315474053599036
+    ],
+    [
+     "custard_pudding",
+     3.2114887986137353
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4564678880876891,
+    "thickness": 1.4818417955737468,
+    "smoothness": 3.0,
+    "sweet": 3.014293310066744,
+    "roasted": 0.411290322580646,
+    "warmth": 2.1670330034229637
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組2 B: 同じ材料で 撹拌→フライパン vs 撹拌→蒸す",
+   "name": "(卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす",
+   "expected": "custard_pudding",
+   "state": "custard_pudding",
+   "state_top": [
+    [
+     "custard_pudding",
+     0.889
+    ]
+   ],
+   "perc_full": [
+    [
+     "custard_pudding",
+     1.8767726003702914
+    ],
+    [
+     "whipped_cream",
+     1.9318975371786338
+    ],
+    [
+     "milk_jelly",
+     2.733409515335847
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4564678880876891,
+    "thickness": 1.4818417955737468,
+    "smoothness": 3.6666666666666665,
+    "sweet": 3.014293310066744,
+    "roasted": 0.411290322580646,
+    "warmth": 0.3561872401220263
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組3 A: 同じ材料で加熱温度だけ変える（温泉卵 vs ゆで卵）",
+   "name": "殻付き卵を68℃の湯で30分",
+   "expected": "onsen_tamago",
+   "state": "onsen_tamago",
+   "state_top": [
+    [
+     "onsen_tamago",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.5775236057985271
+    ],
+    [
+     "onsen_tamago",
+     1.5988572426709184
+    ],
+    [
+     "chawanmushi",
+     2.5281918046154903
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4258156066689893,
+    "thickness": 1.0924102541391798,
+    "smoothness": 4.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.0274317802527206
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組3 B: 同じ材料で加熱温度だけ変える（温泉卵 vs ゆで卵）",
+   "name": "殻付き卵を100℃の湯で30分",
+   "expected": "hard_boiled_egg",
+   "state": "hard_boiled_egg",
+   "state_top": [
+    [
+     "hard_boiled_egg",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.2484880202977486
+    ],
+    [
+     "chawanmushi",
+     1.9416443042155664
+    ],
+    [
+     "onsen_tamago",
+     2.2383725574693374
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4258156066689893,
+    "thickness": 1.0924102541391798,
+    "smoothness": 4.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.8733881836565116
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組4 A: 同じ材料で加熱温度だけ変える（プリン vs す立ち）",
+   "name": "プリン液を88℃で蒸す",
+   "expected": "custard_pudding",
+   "state": "custard_pudding",
+   "state_top": [
+    [
+     "custard_pudding",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "custard_pudding",
+     1.5289243910373873
+    ],
+    [
+     "whipped_cream",
+     1.7132226250457674
+    ],
+    [
+     "milk_jelly",
+     2.4012736735701283
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4231735244995662,
+    "thickness": 1.7089207935635997,
+    "smoothness": 3.6666666666666665,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.3561872401220263
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組4 B: 同じ材料で加熱温度だけ変える（プリン vs す立ち）",
+   "name": "プリン液を100℃で蒸す",
+   "expected": null,
+   "state": "custard_pudding",
+   "state_top": [
+    [
+     "custard_pudding",
+     0.667
+    ]
+   ],
+   "perc_full": [
+    [
+     "custard_pudding",
+     1.5289331897681417
+    ],
+    [
+     "whipped_cream",
+     1.7132304772663394
+    ],
+    [
+     "milk_jelly",
+     2.4012792758541264
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4231735244995662,
+    "thickness": 1.7089207935635997,
+    "smoothness": 3.6666666666666665,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.3562250065496312
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組5 A: 撹拌の有無だけ変える（スクランブルエッグ vs オムレツ）",
+   "name": "溶き卵をフライパンで混ぜながら",
+   "expected": "scrambled_eggs",
+   "state": "scrambled_eggs",
+   "state_top": [
+    [
+     "scrambled_eggs",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "scrambled_eggs",
+     1.1251009134517804
+    ],
+    [
+     "onsen_tamago",
+     1.9728204970854972
+    ],
+    [
+     "white_sauce",
+     2.6376106953194416
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4589609941565267,
+    "thickness": 1.0924102541391798,
+    "smoothness": 3.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.1670330034229637
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組5 B: 撹拌の有無だけ変える（スクランブルエッグ vs オムレツ）",
+   "name": "溶き卵をフライパンで混ぜずに",
+   "expected": "omelet",
+   "state": "omelet",
+   "state_top": [
+    [
+     "omelet",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "omelet",
+     2.221509643192695
+    ],
+    [
+     "scrambled_eggs",
+     2.2947444444752514
+    ],
+    [
+     "white_sauce",
+     3.3101344655562723
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.4589609941565267,
+    "thickness": 1.0924102541391798,
+    "smoothness": 1.0,
+    "sweet": 0.5714285714285714,
+    "roasted": 0.411290322580646,
+    "warmth": 2.1670330034229637
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組6 A: 順番を入れ替える（温める→冷やす vs 冷やす→温める）",
+   "name": "ゼラチン膨潤→牛乳→温める→冷やす",
+   "expected": "milk_jelly",
+   "state": "milk_jelly",
+   "state_top": [
+    [
+     "milk_jelly",
+     1.0
+    ]
+   ],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.256194713882138
+    ],
+    [
+     "custard_pudding",
+     2.6804718872196274
+    ],
+    [
+     "milk_jelly",
+     3.2668552791604544
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.3839390171089687,
+    "thickness": 1.6402320787070788,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.3559252515866832
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組6 B: 順番を入れ替える（温める→冷やす vs 冷やす→温める）",
+   "name": "ゼラチン膨潤→牛乳→冷やす→温める",
+   "expected": null,
+   "state": null,
+   "state_top": [],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.8397007832993517
+    ],
+    [
+     "custard_pudding",
+     3.1872269278945295
+    ],
+    [
+     "scrambled_eggs",
+     3.4042308589374057
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.3839390171089687,
+    "thickness": 1.6402320787070788,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 1.760729603442361
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組7 A: 順番を入れ替える（冷やす→泡立てる vs 泡立てる→冷やす）",
+   "name": "生クリームを冷やしてから泡立てる",
+   "expected": "whipped_cream",
+   "state": "whipped_cream",
+   "state_top": [
+    [
+     "whipped_cream",
+     0.833
+    ]
+   ],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.469215320375151
+    ],
+    [
+     "custard_pudding",
+     2.7408509499458042
+    ],
+    [
+     "milk_jelly",
+     3.3849061262461473
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.6682357662733915,
+    "thickness": 1.695572989433451,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.43777215343334486
+   },
+   "pvec_loo": null
+  },
+  {
+   "group": "組7 B: 順番を入れ替える（冷やす→泡立てる vs 泡立てる→冷やす）",
+   "name": "生クリームを室温で泡立ててから冷やす",
+   "expected": null,
+   "state": null,
+   "state_top": [],
+   "perc_full": [
+    [
+     "whipped_cream",
+     2.456648473868364
+    ],
+    [
+     "custard_pudding",
+     2.7295350072133573
+    ],
+    [
+     "milk_jelly",
+     3.3757498291910055
+    ]
+   ],
+   "perc_loo": null,
+   "pvec": {
+    "hardness": 1.6682357662733915,
+    "thickness": 1.695572989433451,
+    "smoothness": 2.4285714285714284,
+    "sweet": 4.0,
+    "roasted": 0.411290322580646,
+    "warmth": 0.36019700735302074
+   },
+   "pvec_loo": null
+  }
+ ],
+ "spec": {
+  "hardness": {
+   "ja": "硬さ",
+   "model": "linear",
+   "vars": [
+    "water",
+    "meat_water_loss"
+   ],
+   "why": "water は §7 の候補で唯一13品すべてが値を持つ（水が少ないほど硬い、を想定）。肉の硬さは水分量だけでは出ないので、むね肉が乾く段階（R-P04）の meat_water_loss を足す"
+  },
+  "thickness": {
+   "ja": "とろみ",
+   "model": "linear",
+   "vars": [
+    "sugar_conc",
+    "starch_gel"
+   ],
+   "why": "とろみを付ける2つの経路（糖液の濃さ R-C05、でんぷんの糊化 R-S01）。egg_gel_stage は卵の品にしか値がなく、ゲル（硬さ）ととろみを区別できないので選ばない"
+  },
+  "smoothness": {
+   "ja": "なめらかさ",
+   "model": "category_mean",
+   "vars": [
+    "gel_structure"
+   ],
+   "why": "§7 の候補3つ（porosity・gel_structure・egg_gel_stage）はどれも卵の品にしか値がない。gel_structure は撹拌の有無（R-E20）でなめらかさが変わる筋を持つ。値ごとの採点の平均を返す区分関数（学習側に無い値・卵を含まない品（値なし）も1つの区分として扱い、学習側に無い区分は全体平均）"
+  },
+  "sweet": {
+   "ja": "甘さ",
+   "model": "isotonic",
+   "vars": [
+    "sugar_conc"
+   ],
+   "why": "甘さは溶けている糖の濃さ（§7 の先頭）。濃さに対して頭打ちになるはずなので線形でなく単調増加の区分関数（isotonic 回帰、点の間は直線で補間、端は一定）"
+  },
+  "roasted": {
+   "ja": "香ばしさ",
+   "model": "linear",
+   "vars": [
+    "maillard",
+    "caramel"
+   ],
+   "why": "§7 の候補そのまま（メイラード R-M01 とカラメル化 R-C01 の段階）"
+  },
+  "warmth": {
+   "ja": "温かさ",
+   "model": "linear",
+   "vars": [
+    "T_serve"
+   ],
+   "why": "§7 の候補そのまま（食べるときの温度＝最後の操作の後の中心温度）"
+  }
+ },
+ "spec_changes": {}
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "chili powder",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "chili powder",
+  "n_recipes": 2036,
+  "note": "米国式ブレンド（唐辛子＋クミン・オレガノ・塩）想定。インド料理では純粋な唐辛子粉（辛5）の意味でも使われる",
+  "order": 24,
+  "reviewed": true
+}

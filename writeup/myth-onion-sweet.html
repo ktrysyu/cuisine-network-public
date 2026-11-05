@@ -1,0 +1,157 @@
+<title>炒め玉ねぎの甘さ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--low:#B4552D;
+  --d-x:#888888;--pt-edge:#1A1F1C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+    --d-x:#888888;--pt-edge:#F4F7F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+  --d-x:#888888;--pt-edge:#F4F7F5;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0;line-height:1.3}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+section{margin-top:40px}
+h2{font-family:var(--serif);font-weight:800;font-size:22px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .no{font-family:var(--mono);font-size:13px;color:var(--kombu);font-weight:500}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:8px 0;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.claim{font-family:var(--serif);font-weight:800;font-size:clamp(20px,3.2vw,26px);margin:0 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--surface);border-radius:8px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-weight:700;font-size:14px;margin-bottom:4px}
+.x{fill:var(--d-x)}
+.hatch-l{stroke:var(--muted);stroke-width:1;stroke-opacity:.55}
+.frame{fill:none;stroke:var(--rule)}
+.dif{fill:none;stroke:var(--saffron);stroke-width:1.6}
+.ax{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+.axs{font-family:var(--sans);font-size:9.5px;fill:var(--muted)}
+.axl{font-family:var(--sans);font-size:10.5px;fill:var(--muted)}
+.c-sc{fill:var(--low)}.c-fi{fill:var(--saffron)}.c-co{fill:var(--kombu)}.c-na{fill:var(--surface)}
+.w0{fill:var(--surface)}.w1{fill:color-mix(in srgb,var(--kombu) 25%,var(--surface))}.w2{fill:color-mix(in srgb,var(--kombu) 55%,var(--surface))}.w3{fill:var(--kombu)}
+.wn{font-family:var(--mono);font-size:8.5px;fill:var(--ink);pointer-events:none}
+.w3+.wn{fill:var(--card)}
+.pt .o{fill:none;stroke:var(--pt-edge);stroke-width:3.4}
+.pt .i{stroke:var(--card);stroke-width:1.4;fill:var(--card)}
+.pt-yes .i{fill:var(--ink)}
+.pt .h{fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;margin-top:10px;align-items:center}
+.legend .it{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw.ring{border:2px solid var(--saffron);background:transparent}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--pt-edge);background:var(--card)}
+.dot.yes{background:var(--ink)}
+.dot.opt{background:linear-gradient(90deg,var(--card) 50%,var(--ink) 50%)}
+.find{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.find li{background:var(--surface);border-radius:8px;padding:10px 14px}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-size:12.5px;font-weight:700;text-align:left;padding:7px 8px;border-bottom:2px solid var(--rule);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.q{font-family:var(--serif);font-weight:800;font-size:12.5px;line-height:1.6}
+.nw{white-space:nowrap}
+td.use{min-width:13em}
+table.rules{min-width:900px}
+.dif2{fill:none;stroke:var(--ink);stroke-width:1.4}
+.conf{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:0 9px;border:1px solid currentColor;white-space:nowrap}
+.conf.h{color:var(--kombu)}.conf.m{color:var(--saffron)}.conf.l{color:var(--low)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cols h3{margin-top:0}
+.cols ul{margin:6px 0 0;padding-left:1.2em}
+.cols li{margin:6px 0}
+.verdict{border-left:4px solid var(--saffron);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;margin-top:14px}
+.verdict p{margin:4px 0}
+table.rec td{height:52px}
+table.rec td.photo{min-width:120px}
+table.rec td.pred{font-size:12px;color:var(--muted)}
+ol.steps{padding-left:1.4em;margin:8px 0}
+ol.steps li{margin:6px 0}
+a{color:var(--kombu)}
+footer{margin-top:48px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.fg-grid{stroke:var(--rule);stroke-width:1}
+.fg-s0{stroke:var(--kombu)}.fg-s1{stroke:var(--saffron)}.fg-s2{stroke:var(--low)}.fg-s3{stroke:var(--ink)}
+.fg-f0{fill:var(--kombu)}.fg-f1{fill:var(--saffron)}.fg-f2{fill:var(--low)}.fg-f3{fill:var(--ink)}
+.fg-line{fill:none;stroke-width:2.2}.fg-dash{stroke-dasharray:5 4}
+.fg-h{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.fg-lab{font-family:var(--sans);font-size:11.5px;fill:var(--ink)}
+.fg-ax{font-family:var(--mono);font-size:11.5px;fill:var(--muted)}
+.fg-key{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+@media (max-width:720px){
+  .maps,.cols{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .card{padding:14px 12px}
+  table.rec{min-width:640px}
+}
+</style>
+<div class="wrap">
+<header><div class="eyebrow">Cuisine Network · 通説の検証 4</div><h1>玉ねぎは、炒めると甘くなる？</h1><p class="lead">判定と確かさ・決め手の図・言えないこと・自分で試す手順を先に置き、通説の説明・計算の詳しい答え・根拠を後ろに並べたページです。通説の説明と結論の文章は本人が書きます（いまは空欄と材料）。</p></header>
+<section id="verdict"><h2><span class="no">1</span>判定と確かさ</h2>
+<div class="card"><h3>言えること</h3><ul><li><b>炒めても糖は増えない</b>。生の玉ねぎの遊離糖（約6%）は加熱で変わらないか減る（tokitomo1993）、長く炒めると総量は減る（tamaki2003）。どちらも抄録で確かめた。<span class="conf h">確かさ 高</span></li><li><b>重さあたりの糖は上がる</b>。水が飛ぶから（中火 40 分で重さ 21%、計算）。「甘くなる」が「同じ重さを食べると糖が多い」の意味なら正しい。<span class="conf m">確かさ 中</span></li><li><b>刺激臭は消える</b>（R-O01）。辛みが消えることも甘く感じる理由と考えられている（著者の考察）。<span class="conf m">確かさ 中</span></li></ul></div>
+<div class="owner"><p class="slot">（ここに本人が書く）結論（まとめの文章） <span>下の実験の結果を見てから書くのでもよい</span></p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>玉ねぎ 100 g あたりの糖（計算）: 生 6.0 g → 中火 40 分 34.4 g（総量は同じとした）</li><li>確かさ: 「糖は増えない」は 高（論文2本の抄録）、「重さあたりは上がる」は 中、「甘く感じる」は計算外</li><li>言い方の候補: 甘くなったように感じるのは、糖が増えたからではなく、水が飛んで濃くなり、辛みが消えたから</li></ul></div>
+</section>
+<section id="keyfig"><h2><span class="no">2</span>決め手の図</h2><figure class="key"><figcaption>中火で炒めると、重さは減り、糖の総量は変わらない（計算）</figcaption><svg viewBox="0 0 640 300" role="img" aria-label="生を 1 とした比と炒めた時間（分）"><line class="fg-grid" x1="52" x2="624" y1="258.0" y2="258.0"/><text class="fg-ax" x="46" y="262.0" text-anchor="end">0</text><line class="fg-grid" x1="52" x2="624" y1="207.2" y2="207.2"/><text class="fg-ax" x="46" y="211.2" text-anchor="end">0.25</text><line class="fg-grid" x1="52" x2="624" y1="156.3" y2="156.3"/><text class="fg-ax" x="46" y="160.3" text-anchor="end">0.5</text><line class="fg-grid" x1="52" x2="624" y1="105.5" y2="105.5"/><text class="fg-ax" x="46" y="109.5" text-anchor="end">0.75</text><line class="fg-grid" x1="52" x2="624" y1="54.7" y2="54.7"/><text class="fg-ax" x="46" y="58.7" text-anchor="end">1</text><text class="fg-ax" x="52.0" y="276" text-anchor="middle">0</text><text class="fg-ax" x="242.7" y="276" text-anchor="middle">20</text><text class="fg-ax" x="433.3" y="276" text-anchor="middle">40</text><text class="fg-ax" x="624.0" y="276" text-anchor="middle">60</text><text class="fg-lab" x="338.0" y="294" text-anchor="middle">炒めた時間（分）</text><text class="fg-lab" x="12" y="136.0" text-anchor="middle" transform="rotate(-90 12 136.0)">生を 1 とした比</text><path class="fg-line fg-s0" d="M52.0,54.7 L71.1,58.7 L99.7,81.3 L147.3,113.4 L195.0,139.6 L242.7,161.1 L290.3,178.7 L338.0,193.1 L385.7,204.9 L433.3,214.5 L481.0,222.4 L528.7,228.9 L576.3,229.1 L624.0,229.1"><title>重さ</title></path><path class="fg-line fg-s3 fg-dash" d="M52.0,54.7 L71.1,54.7 L99.7,54.7 L147.3,54.7 L195.0,54.7 L242.7,54.7 L290.3,54.7 L338.0,54.7 L385.7,54.7 L433.3,54.7 L481.0,54.7 L528.7,54.7 L576.3,54.7 L624.0,54.7"><title>糖の総量</title></path></svg></figure><p class="small">実線が重さ、破線が糖の総量。重さあたりの糖が上がるのは、糖が増えるからではなく、水が飛んで濃くなるから。実際には長く炒めると糖の総量はむしろ減る（tamaki2003）。</p></section>
+<section id="cannot"><h2><span class="no">3</span>言えないこと</h2><div class="card"><h3>言えないこと</h3><ul><li><b>甘く感じる</b>かどうか。tamaki2003 は糖の量と甘さの感じ方が対応しなかったと書いている。感じ方は計算に無い。</li><li>「カラメルになるから甘い」か。焼き色がメイラード反応かカラメル化かの割合は分からない（R-O03、確かさ 低、C7）。カラメル化は甘さより苦み・香ばしさを足す。</li><li>何分で重さが何% になるか。水の飛び方は推定（毎分 4%）で、火加減の違いも入っていない。鍋の広さ・量・混ぜ方で大きく変わる。</li><li>糖の総量が減る速さ。計算には入っていない（減ることだけが分かっている）。</li></ul></div></section>
+<section id="try"><h2><span class="no">4</span>自分で試す</h2>
+<p>はかりがあれば、温度計は要りません。炒める前と後の重さから、水が飛んだ割合を出します。甘さは、同じ重さどうしと、同じ玉ねぎの量どうしで食べ比べます。</p>
+<h3>手順</h3><ol class="steps"><li>玉ねぎ1個を薄切りにし、半分を生のまま取っておく。残りの重さを量る。</li><li>フライパンに油小さじ2、中火で、ときどき混ぜながら 20 分・40 分炒める。それぞれの時点で全体の重さを量る（油の重さを引く）。</li><li>重さの比 = 炒めた後 ÷ 炒める前。計算の予言と比べる。</li><li>食べ比べ1: 生・20 分・40 分を、それぞれ同じ重さ（例 5 g）ずつ食べて甘さを比べる。</li><li>食べ比べ2: 生 10 g と、生 10 g ぶんを炒めたもの（重さの比をかけた量）を比べる。糖の量は同じはず。</li><li>辛み（つんとする香り）が無くなったかも書く。</li></ol>
+<div class="tablewrap"><table class="rec"><thead><tr><th>時間（分）</th><th>炒める前（g）</th><th>炒めた後（g）</th><th>重さの比</th><th>甘さ（同じ重さ）</th><th>甘さ（同じ玉ねぎの量）</th><th>辛み</th><th>計算の予言</th></tr></thead><tbody>
+<tr><td class="num">20</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="pred">重さの比 0.48・刺激臭 1（0 で消える）</td></tr>
+<tr><td class="num">40</td><td></td><td></td><td></td><td></td><td></td><td></td><td class="pred">重さの比 0.21・刺激臭 0（0 で消える）</td></tr>
+</tbody></table></div>
+<p class="small muted">予言は Exp-14 の規則をそのまま計算したもの。重さの比は水の飛び方（推定）しだいで、鍋・量によって大きくずれます。食べ比べ2 で炒めたほうが甘く感じれば、糖の量以外（辛みが消える・香り・やわらかさ）が効いていることになります。</p>
+</section>
+<section id="claim"><h2><span class="no">5</span>通説</h2><div class="card">
+<p class="claim">「玉ねぎは、じっくり炒めると甘くなる（糖が増える・カラメルになる）」</p>
+<div class="owner"><p class="slot">（ここに本人が書く）この通説がどう言われているか・なぜ気になったか</p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>言われる理由: 炒めると糖ができる・増える／糖がカラメルになる</li><li>論文（抄録）: 加熱で遊離糖は増えない（tokitomo1993）。長く炒めると総量はむしろ減る（tamaki2003）</li><li>計算で扱えるのは、重さ（水が飛ぶ）と重さあたりの糖、刺激臭の段階、焼き色。甘く感じるかどうかは扱えない</li></ul></div>
+</div></section>
+<section id="calc"><h2><span class="no">6</span>計算の詳しい答え</h2>
+<p>玉ねぎ 200 g と油 10 g をフライパンで炒める計算を、火加減 3 通り × 時間で走らせました（Exp-14 のシミュレータ、ときどき混ぜる＝混ぜ続けない）。糖の総量は変えず（R-O02）、水が飛んだ分だけ重さあたりの糖が上がります。</p>
+<div class="tablewrap"><table><thead><tr><th></th><th>弱火（130℃）</th><th>中火（170℃）</th><th>強火（210℃）</th></tr></thead><tbody><tr><td>重さが半分になる（分）</td><td class="num">20</td><td class="num">20</td><td class="num">20</td></tr><tr><td>刺激臭が消える（分）</td><td class="num">30</td><td class="num">25</td><td class="num">25</td></tr><tr><td>きつね色（焼き色 2）になる（分）</td><td class="num">—</td><td class="num">5</td><td class="num">5</td></tr></tbody></table></div>
+<p class="small">「—」は 60 分までに届かないもの。中火 40 分（正解のレシピ）で、重さは生の 21%、玉ねぎ 100 g あたりの糖は 6.0 g → 34.4 g。</p>
+<figure class="chart"><figcaption>中火（170℃）で炒めた時間と、重さ・糖（生を 1 とした比）</figcaption><svg viewBox="0 0 640 300" role="img" aria-label="生を 1 とした比と炒めた時間（分）"><line class="fg-grid" x1="52" x2="624" y1="258.0" y2="258.0"/><text class="fg-ax" x="46" y="262.0" text-anchor="end">0</text><line class="fg-grid" x1="52" x2="624" y1="198.8" y2="198.8"/><text class="fg-ax" x="46" y="202.8" text-anchor="end">2.5</text><line class="fg-grid" x1="52" x2="624" y1="139.6" y2="139.6"/><text class="fg-ax" x="46" y="143.6" text-anchor="end">5</text><line class="fg-grid" x1="52" x2="624" y1="80.3" y2="80.3"/><text class="fg-ax" x="46" y="84.3" text-anchor="end">7.5</text><line class="fg-grid" x1="52" x2="624" y1="21.1" y2="21.1"/><text class="fg-ax" x="46" y="25.1" text-anchor="end">10</text><text class="fg-ax" x="52.0" y="276" text-anchor="middle">0</text><text class="fg-ax" x="242.7" y="276" text-anchor="middle">20</text><text class="fg-ax" x="433.3" y="276" text-anchor="middle">40</text><text class="fg-ax" x="624.0" y="276" text-anchor="middle">60</text><text class="fg-lab" x="338.0" y="294" text-anchor="middle">炒めた時間（分）</text><text class="fg-lab" x="12" y="136.0" text-anchor="middle" transform="rotate(-90 12 136.0)">生を 1 とした比</text><path class="fg-line fg-s0" d="M52.0,234.3 L71.1,234.8 L99.7,237.4 L147.3,241.2 L195.0,244.2 L242.7,246.7 L290.3,248.8 L338.0,250.4 L385.7,251.8 L433.3,252.9 L481.0,253.9 L528.7,254.6 L576.3,254.6 L624.0,254.6"><title>重さ</title></path><path class="fg-line fg-s3 fg-dash" d="M52.0,234.3 L71.1,234.3 L99.7,234.3 L147.3,234.3 L195.0,234.3 L242.7,234.3 L290.3,234.3 L338.0,234.3 L385.7,234.3 L433.3,234.3 L481.0,234.3 L528.7,234.3 L576.3,234.3 L624.0,234.3"><title>糖の総量</title></path><path class="fg-line fg-s2" d="M52.0,234.3 L71.1,233.8 L99.7,230.5 L147.3,224.0 L195.0,215.8 L242.7,205.4 L290.3,192.1 L338.0,174.9 L385.7,152.3 L433.3,122.2 L481.0,80.8 L528.7,21.8 L576.3,18.7 L624.0,18.7"><title>重さあたりの糖</title></path></svg></figure>
+<div class="legend"><span class="it"><span class="fg-key" style="border-color:var(--kombu);"></span>重さ</span><span class="it"><span class="fg-key" style="border-color:var(--ink);border-top-style:dashed;"></span>糖の総量（計算では変えない）</span><span class="it"><span class="fg-key" style="border-color:var(--low);"></span>重さあたりの糖</span></div>
+<ul class="find">
+<li><b>糖は増えない。重さあたりの糖が上がるのは、水が飛んで濃くなるから。</b>計算は糖の総量を変えていない（R-O02）。実際には長く炒めると総量は減る（R-O01）ので、重さあたりの糖は計算より低い。</li>
+<li><b>刺激臭（辛み）は、重さが生の 40% になるまでに消える</b>（R-O01 の採用値。中火で 25 分）。甘く感じる理由の一つは、辛みが消えて甘さが目立つことと考えられる（tokitomo1993 の考察、確かめていない）。</li>
+<li class="muted small">注意: 水の飛び方は、沸点に達した後は火加減によらず毎分 4%（推定）としているので、弱火・中火・強火で重さの減り方が同じになります（表）。焼き色は中火 5 分で きつね色になり、実際より早すぎます（Exp-14 で分かっている問題。表面の温度の近似が粗い）。刺激臭が消える重さ（40%）も含めて、何分で何% になるかは鍋・量・混ぜ方で大きく変わります。</li>
+</ul></section>
+<section id="basis"><h2><span class="no">7</span>根拠</h2>
+<p class="small">規則ごとのページ（値・出典の文面・確かめ方・食い違い・使っている通説）: <a href="basis/rules/R-O01.html">R-O01</a>・<a href="basis/rules/R-O02.html">R-O02</a>・<a href="basis/rules/R-O03.html">R-O03</a>。出典ごとのページ: <a href="basis/sources/tamaki2003.html">tamaki2003</a>・<a href="basis/sources/tokitomo1993.html">tokitomo1993</a>・<a href="basis/sources/fooddb.html">fooddb</a>。<a href="basis/index.html">規則と出典の一覧</a></p>
+<h3>使った規則（Exp-14 rules.yaml）</h3><div class="tablewrap"><table class="rules"><thead><tr><th>id</th><th>内容</th><th>出典の文面</th><th>出典</th><th>確かめ方</th><th>確かさ</th><th>計算での扱い</th></tr></thead><tbody>
+<tr><td class="num nw">R-O01</td><td>water ↓、onion_sulfur → 0（刺激臭が消える）、甘く香ばしい香り、maillard/caramel ↑。ブドウ糖・果糖・遊離糖の総量は減る</td><td class="q">長時間炒めると水分の蒸発とともに色, 味, 香りが変化し, 刺激臭も消失 ... グルコース, フルクトースおよび遊離糖総量が減少 ... 糖含有量と, 官能評価による甘味の強さとは対応しなかった</td><td>tamaki2003</td><td class="nw">抄録確認</td><td><span class="conf h">確かさ 高</span></td><td class="small use">重さが生の 40% まで減ると刺激臭が消える（採用値）。糖の総量が減ることは計算に入れていない</td></tr>
+<tr><td class="num nw">R-O02</td><td>遊離糖（生で約6%）は増えず、変わらないか減る。硫黄化合物は減り、糖の分解で甘い香りの成分ができる。甘く感じるのは水分蒸発による濃縮と組織の軟化と考えられる（著者の考察）</td><td class="q">生タマネギ中に6%程度存在する遊離糖の含量は加熱により変化しないか、あるいは、減少する傾向にあり、新たな遊離糖の生成はない</td><td>tokitomo1993</td><td class="nw">抄録確認</td><td><span class="conf h">確かさ 高</span></td><td class="small use">糖の総量は加熱で変えない（新たな糖はできない）。重さあたりの糖は水が飛んだ分だけ上がる</td></tr>
+<tr><td class="num nw">R-O03</td><td>褐変は糖とアミノ酸のメイラードが主で、温度が上がるとカラメル化も加わる</td><td class="q">the heat breaks down their cellular structure, releasing sugars and amino acids, which then react with each other, forming the Maillard products</td><td>—</td><td class="nw">未確認</td><td><span class="conf l">確かさ 低</span></td><td class="small use">焼き色（メイラード）の段階。カラメル化との割合は分からない（出典が飲食店のブログのみ、確かさ 低）</td></tr>
+</tbody></table></div>
+<h3>出典と確かめ方</h3><div class="tablewrap"><table><thead><tr><th>出典</th><th>何か</th><th>確かめ方</th><th>この計算で使ったこと</th></tr></thead><tbody>
+<tr><td class="num">tamaki2003</td><td>M. Tamaki, M. Ukai (2003)「長時間炒めたタマネギの味, 香り, 遊離糖, 色の変化」日本家政学会誌 54(1):69 <a href="https://www.jstage.jst.go.jp/article/jhej1987/54/1/54_1_69/_article/-char/ja" target="_blank" rel="noopener">リンク</a></td><td class="nw">抄録確認</td><td class="small">長時間炒めると水分が飛び、色・味・香りが変わり刺激臭が消える。ブドウ糖・果糖・遊離糖の総量は減る。糖の量と甘さの感じ方は対応しなかった</td></tr>
+<tr><td class="num">tokitomo1993</td><td>Y. Tokitomo, S. Yamanishi (1993)「加熱タマネギの甘いフレーバーについて」日本家政学会誌 44(5):347-353 <a href="https://www.jstage.jst.go.jp/article/jhej1987/44/5/44_5_347/_article/-char/ja/" target="_blank" rel="noopener">リンク</a></td><td class="nw">抄録確認</td><td class="small">生の玉ねぎの遊離糖（約6%）は加熱で増えず、変わらないか減る。甘い香りの成分ができる。甘く感じるのは濃縮と組織の軟化と考えられる（著者の考察）</td></tr>
+<tr><td class="num">fooddb</td><td>文部科学省『日本食品標準成分表（八訂）増補2023年』食品成分データベース <a href="https://fooddb.mext.go.jp/" target="_blank" rel="noopener">リンク</a></td><td class="nw">本文確認</td><td class="small">玉ねぎの成分（水分 90.1・炭水化物 8.4 g/100g）</td></tr>
+</tbody></table></div>
+</section>
+<footer>Cuisine Network。計算: Exp-14 のシミュレータ（experiments/exp-14/sim、rules.yaml の規則と採用値）。このページは experiments/myths/build.py（通説4 onion_sweet）が生成します。</footer>
+</div>

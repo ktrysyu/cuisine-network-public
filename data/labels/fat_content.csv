@@ -1,0 +1,304 @@
+ingredient,ja,canonical,fat_g_per_100g,fdc_id,fdc_description,match,note
+salt,塩,salt,0,173468,"Salt, table",一致,
+onions,玉ねぎ,onions,0.1,170000,"Onions, raw",一致,
+olive oil,オリーブオイル,olive oil,100,171413,"Oil, olive, salad or cooking",一致,
+water,水,water,0,173647,"Beverages, water, tap, drinking",一致,
+garlic,にんにく,garlic,0.5,169230,"Garlic, raw",一致,
+sugar,砂糖,sugar,0,169655,"Sugars, granulated",一致,
+garlic cloves,にんにく（片）,garlic,0.5,169230,"Garlic, raw",一致,
+butter,バター,butter,81.11,173410,"Butter, salted",一致,
+ground black pepper,黒胡椒（挽いたもの）,black pepper,3.26,170931,"Spices, pepper, black",一致,
+all-purpose flour,中力粉（オールパーパス）,flour,0.98,168894,"Wheat flour, white, all-purpose, enriched, bleached",一致,
+pepper,胡椒,black pepper,3.26,170931,"Spices, pepper, black",近い,黒胡椒の値
+vegetable oil,サラダ油（植物油）,vegetable oil,100,172370,"Oil, vegetable, soybean, refined",近い,大豆油（精製）の値。植物油の種類が書かれていない
+eggs,卵,eggs,9.51,171287,"Egg, whole, raw, fresh",一致,
+soy sauce,醤油,soy sauce,0.57,174277,Soy sauce made from soy and wheat (shoyu),一致,大豆と小麦の醤油
+kosher salt,コーシャーソルト（粗塩）,salt,0,173468,"Salt, table",近い,食卓塩の値（塩は脂質 0）
+green onions,青ねぎ,green onions,0.19,170005,"Onions, spring or scallions (includes tops and bulb), raw",一致,
+tomatoes,トマト,tomatoes,0.2,170457,"Tomatoes, red, ripe, raw, year round average",一致,
+large eggs,卵（Lサイズ）,eggs,9.51,171287,"Egg, whole, raw, fresh",一致,
+carrots,にんじん,carrots,0.24,170393,"Carrots, raw",一致,
+unsalted butter,無塩バター,butter,81.11,173430,"Butter, without salt",一致,
+extra-virgin olive oil,エクストラバージンオリーブオイル,olive oil,100,171413,"Oil, olive, salad or cooking",近い,オリーブ油全般の値
+ground cumin,クミンパウダー,cumin,22.27,170923,"Spices, cumin seed",一致,
+black pepper,黒胡椒,black pepper,3.26,170931,"Spices, pepper, black",一致,
+milk,牛乳,milk,3.25,171265,"Milk, whole, 3.25% milkfat, with added vitamin D",近い,全乳の値。脂肪の割合が書かれていない
+chili powder,チリパウダー,chili powder,14.28,171319,"Spices, chili powder",一致,
+oil,油,vegetable oil,100,172370,"Oil, vegetable, soybean, refined",近い,大豆油の値。油の種類が書かれていない
+red bell pepper,赤パプリカ,bell pepper,0.3,170108,"Peppers, sweet, red, raw",一致,
+purple onion,紫玉ねぎ,onions,0.1,170000,"Onions, raw",近い,玉ねぎ全般の値（赤玉ねぎの項目なし）
+scallions,青ねぎ（スキャリオン）,green onions,0.19,170005,"Onions, spring or scallions (includes tops and bulb), raw",一致,
+grated parmesan cheese,粉チーズ（パルメザン）,parmesan cheese,27.84,171247,"Cheese, parmesan, grated",一致,
+sesame oil,ごま油,sesame oil,100,171016,"Oil, sesame, salad or cooking",一致,
+corn starch,コーンスターチ,corn starch,0.05,169698,Cornstarch,一致,
+ginger,生姜,ginger,0.75,169231,"Ginger root, raw",一致,
+baking powder,ベーキングパウダー,baking powder,0,172804,"Leavening agents, baking powder, double-acting, straight phosphate",一致,
+jalapeno chilies,ハラペーニョ,chile pepper,0.37,168576,"Peppers, jalapeno, raw",一致,
+dried oregano,乾燥オレガノ,oregano,4.28,171328,"Spices, oregano, dried",一致,
+chopped cilantro fresh,パクチー（刻み）,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+fresh lemon juice,レモン汁（生搾り）,lemon juice,0.24,167747,"Lemon juice, raw",一致,
+diced tomatoes,カットトマト（缶）,tomatoes,0.25,170051,"Tomatoes, red, ripe, canned, packed in tomato juice",近い,缶詰（トマトジュース漬け）の値
+fresh parsley,パセリ（生）,parsley,0.79,170416,"Parsley, fresh",一致,
+minced garlic,にんにく（みじん切り）,garlic,0.5,169230,"Garlic, raw",一致,
+chicken broth,チキンブロス,chicken broth,0.21,174536,"Soup, chicken broth, ready-to-serve",一致,
+sour cream,サワークリーム,sour cream,19.35,171257,"Cream, sour, cultured",一致,
+cayenne pepper,カイエンペッパー,cayenne pepper,17.27,170932,"Spices, pepper, red or cayenne",一致,
+brown sugar,ブラウンシュガー,brown sugar,0,168833,"Sugars, brown",一致,
+fresh ginger,生姜（生）,ginger,0.75,169231,"Ginger root, raw",一致,
+cooking spray,料理用オイルスプレー,vegetable oil,78.69,171430,"Oil, PAM cooking spray, original",近い,PAM（商品名）の値。噴射剤を含む
+shallots,エシャロット,shallots,0.1,170499,"Shallots, raw",一致,
+garlic powder,ガーリックパウダー,garlic,0.73,171325,"Spices, garlic powder",一致,
+lime,ライム,lime,0.2,168155,"Limes, raw",一致,
+lemon juice,レモン汁,lemon juice,0.24,167747,"Lemon juice, raw",近い,生搾りの値（濃縮還元なら 0.07）
+fresh lime juice,ライム汁（生搾り）,lime juice,0.07,168156,"Lime juice, raw",一致,
+flour,小麦粉,flour,0.98,168894,"Wheat flour, white, all-purpose, enriched, bleached",近い,中力粉（オールパーパス、漂白）の値。粉の種類が書かれていない
+honey,はちみつ,honey,0,169640,Honey,一致,
+vanilla extract,バニラエッセンス,vanilla extract,0.06,173471,Vanilla extract,一致,
+paprika,パプリカパウダー,paprika,12.89,171329,"Spices, paprika",一致,
+chopped onion,玉ねぎ（みじん切り）,onions,0.1,170000,"Onions, raw",一致,
+fish sauce,魚醤（ナンプラー）,fish sauce,0.01,174531,"Sauce, fish, ready-to-serve",一致,
+ground cinnamon,シナモンパウダー,cinnamon,1.24,171320,"Spices, cinnamon, ground",一致,
+avocado,アボカド,avocado,14.66,171705,"Avocados, raw, all commercial varieties",一致,
+canola oil,キャノーラ油,vegetable oil,100,172336,"Oil, canola",一致,
+dry white wine,辛口白ワイン,white wine,0,174837,"Alcoholic beverage, wine, table, white",近い,白ワイン全般の値
+lemon,レモン,lemon,0.3,167746,"Lemons, raw, without peel",一致,
+rice vinegar,米酢,rice vinegar,0,172237,"Vinegar, distilled",代用,SR Legacy に米酢が無い。蒸留酢の値（酢は脂質 0）
+yellow onion,黄玉ねぎ,onions,0.1,170000,"Onions, raw",近い,玉ねぎ全般の値
+green bell pepper,ピーマン,bell pepper,0.17,170427,"Peppers, sweet, green, raw",一致,
+cilantro leaves,パクチーの葉,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+tomato paste,トマトペースト,tomato paste,0.47,170459,"Tomato products, canned, paste, without salt added (Includes foods for USDA's Food Distribution Program)",一致,
+heavy cream,生クリーム（乳脂肪高め）,heavy cream,36.08,170859,"Cream, fluid, heavy whipping",一致,
+cilantro,パクチー,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+fresh basil,バジル（生）,basil,0.64,172232,"Basil, fresh",一致,
+boneless skinless chicken breasts,鶏むね肉（皮なし骨なし）,chicken,2.62,171077,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",一致,
+flat leaf parsley,イタリアンパセリ,parsley,0.79,170416,"Parsley, fresh",近い,パセリ全般の値
+white sugar,白砂糖,sugar,0,169655,"Sugars, granulated",一致,
+lime juice,ライム汁,lime juice,0.07,168156,"Lime juice, raw",近い,生搾りの値
+chicken stock,チキンストック,chicken broth,1.2,172884,"Soup, stock, chicken, home-prepared",近い,家庭で作ったストックの値
+bay leaves,ローリエ,bay leaves,8.36,170917,"Spices, bay leaf",一致,
+potatoes,じゃがいも,potatoes,0.09,170026,"Potatoes, flesh and skin, raw",一致,
+chicken,鶏肉,chicken,3.08,171052,"Chicken, broilers or fryers, meat only, raw",近い,肉のみ（部位の平均）の値。部位・皮の有無が書かれていない（皮つきなら 15.06）
+corn tortillas,コーントルティーヤ,corn tortillas,2.85,175036,"Tortillas, ready-to-bake or -fry, corn",一致,
+salsa,サルサ,salsa,0.17,174524,"Sauce, salsa, ready-to-serve",一致,
+cumin,クミン,cumin,22.27,170923,"Spices, cumin seed",一致,
+freshly ground pepper,挽きたての胡椒,black pepper,3.26,170931,"Spices, pepper, black",一致,
+ground turmeric,ターメリックパウダー,turmeric,3.25,172231,"Spices, turmeric, ground",一致,
+baking soda,重曹,baking soda,0,175040,"Leavening agents, baking soda",一致,
+sea salt,海塩,salt,0,173468,"Salt, table",近い,食卓塩の値
+cumin seed,クミンシード,cumin,22.27,170923,"Spices, cumin seed",一致,
+garam masala,ガラムマサラ,garam masala,,,,対応なし,混合スパイス。SR Legacy に項目が無く、配合で変わる
+shrimp,えび,shrimp,0.51,175179,"Crustaceans, shrimp, raw",一致,
+black beans,黒いんげん豆,black beans,0.54,173735,"Beans, black, mature seeds, cooked, boiled, without salt",近い,乾燥豆をゆでたものの値。缶詰か乾燥か書かれていない（乾燥のままなら 1.42）
+zucchini,ズッキーニ,zucchini,0.32,169291,"Squash, summer, zucchini, includes skin, raw",一致,
+ground beef,牛ひき肉,ground beef,20,174036,"Beef, ground, 80% lean meat / 20% fat, raw",近い,赤身80%/脂肪20%（米国のひき肉の代表）の値
+dried thyme,乾燥タイム,thyme,7.43,170938,"Spices, thyme, dried",一致,
+large garlic cloves,にんにく（大きめの片）,garlic,0.5,169230,"Garlic, raw",一致,
+flour tortillas,小麦粉トルティーヤ,flour tortillas,7.99,175037,"Tortillas, ready-to-bake or -fry, flour, refrigerated",近い,冷蔵の値
+tomato sauce,トマトソース,tomato sauce,0.3,170054,"Tomato products, canned, sauce",一致,
+buttermilk,バターミルク,buttermilk,1.07,170874,"Milk, buttermilk, fluid, cultured, lowfat",近い,低脂肪の発酵バターミルク（米国の一般的な市販品）の値
+plum tomatoes,プラムトマト,tomatoes,0.2,170457,"Tomatoes, red, ripe, raw, year round average",近い,トマト（通年平均）の値
+coconut milk,ココナッツミルク,coconut milk,21.33,170173,"Nuts, coconut milk, canned (liquid expressed from grated meat and water)",一致,
+granulated sugar,グラニュー糖,sugar,0,169655,"Sugars, granulated",一致,
+fresh cilantro,パクチー（生）,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+bay leaf,ローリエ（1枚）,bay leaves,8.36,170917,"Spices, bay leaf",一致,
+celery,セロリ,celery,0.17,169988,"Celery, raw",一致,
+crushed red pepper,粗挽き唐辛子,red pepper flakes,17.27,170932,"Spices, pepper, red or cayenne",近い,カイエン（粉）の値（同じ唐辛子を粗く砕いたもの）
+chopped cilantro,パクチー（刻み）,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+chicken breasts,鶏むね肉,chicken,2.62,171077,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",近い,皮なし骨なしの値。皮の有無が書かれていない（皮つきなら 9.25）
+mayonaise,マヨネーズ,mayonnaise,74.85,171009,"Salad dressing, mayonnaise, regular",一致,
+shredded cheddar cheese,チェダーチーズ（シュレッド）,cheddar cheese,33.31,173414,"Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",一致,
+cucumber,きゅうり,cucumber,0.11,168409,"Cucumber, with peel, raw",一致,
+green chilies,青唐辛子,chile pepper,0.2,170497,"Peppers, hot chili, green, raw",一致,
+ground coriander,コリアンダーパウダー,coriander,17.77,170922,"Spices, coriander seed",一致,
+whole milk,牛乳（全乳）,milk,3.25,171265,"Milk, whole, 3.25% milkfat, with added vitamin D",一致,
+red wine vinegar,赤ワインビネガー,vinegar,0,172240,"Vinegar, red wine",一致,
+tumeric,ターメリック,turmeric,3.25,172231,"Spices, turmeric, ground",一致,
+cinnamon,シナモン,cinnamon,1.24,171320,"Spices, cinnamon, ground",一致,
+curry powder,カレー粉,curry powder,14.01,170924,"Spices, curry powder",一致,
+worcestershire sauce,ウスターソース,worcestershire sauce,0,171610,"Sauce, worcestershire",一致,
+white onion,白玉ねぎ,onions,0.1,170000,"Onions, raw",近い,玉ねぎ全般の値
+ground ginger,ジンジャーパウダー,ginger,4.24,170926,"Spices, ginger, ground",一致,
+sesame seeds,ごま,sesame seeds,49.67,170150,"Seeds, sesame seeds, whole, dried",一致,
+hot sauce,ホットソース,hot sauce,0.37,174527,"Sauce, ready-to-serve, pepper or hot",一致,
+red pepper flakes,赤唐辛子フレーク,red pepper flakes,17.27,170932,"Spices, pepper, red or cayenne",近い,カイエン（粉）の値
+cinnamon sticks,シナモンスティック,cinnamon,1.24,171320,"Spices, cinnamon, ground",近い,粉の値
+red chili peppers,赤唐辛子,chile pepper,0.44,170106,"Peppers, hot chili, red, raw",一致,
+bacon,ベーコン,bacon,37.13,168277,"Pork, cured, bacon, unprepared",一致,
+whipping cream,ホイップ用生クリーム,heavy cream,30.91,170858,"Cream, fluid, light whipping",近い,ライトホイッピングクリームの値（ヘビーなら 36.08）
+boneless skinless chicken breast halves,鶏むね肉（半身・皮なし骨なし）,chicken,2.62,171077,"Chicken, broiler or fryers, breast, skinless, boneless, meat only, raw",一致,
+peanut oil,ピーナッツ油,vegetable oil,100,171410,"Oil, peanut, salad or cooking",一致,
+ground nutmeg,ナツメグパウダー,nutmeg,36.31,171326,"Spices, nutmeg, ground",一致,
+clove,クローブ,cloves,13,171321,"Spices, cloves, ground",近い,粉の値
+parmesan cheese,パルメザンチーズ,parmesan cheese,25,170848,"Cheese, parmesan, hard",近い,パルメザン（ハード）の値
+dried basil,乾燥バジル,basil,4.07,171317,"Spices, basil, dried",一致,
+peeled fresh ginger,生姜（皮むき）,ginger,0.75,169231,"Ginger root, raw",一致,
+coarse salt,粗塩,salt,0,173468,"Salt, table",近い,食卓塩の値
+mushrooms,マッシュルーム,mushrooms,0.34,169251,"Mushrooms, white, raw",近い,ホワイトマッシュルームの値
+warm water,ぬるま湯,water,0,173647,"Beverages, water, tap, drinking",一致,
+large egg yolks,卵黄（Lサイズ）,egg yolks,26.54,172184,"Egg, yolk, raw, fresh",一致,
+balsamic vinegar,バルサミコ酢,balsamic vinegar,0,172241,"Vinegar, balsamic",一致,
+celery ribs,セロリの茎,celery,0.17,169988,"Celery, raw",一致,
+cream cheese,クリームチーズ,cream cheese,34.44,173418,"Cheese, cream",一致,
+white vinegar,ホワイトビネガー,vinegar,0,172237,"Vinegar, distilled",一致,
+egg yolks,卵黄,egg yolks,26.54,172184,"Egg, yolk, raw, fresh",一致,
+capers,ケッパー,capers,0.86,172238,"Capers, canned",一致,
+ground red pepper,赤唐辛子パウダー,cayenne pepper,17.27,170932,"Spices, pepper, red or cayenne",一致,
+onion powder,オニオンパウダー,onions,1.04,171327,"Spices, onion powder",一致,
+dijon mustard,ディジョンマスタード,dijon mustard,3.34,172234,"Mustard, prepared, yellow",代用,SR Legacy にディジョンマスタードが無い。イエローマスタードの値
+rice,米,rice,0.66,168877,"Rice, white, long-grain, regular, raw, enriched",近い,長粒米（生、強化）の値。品種が書かれていない
+cold water,冷水,water,0,173647,"Beverages, water, tap, drinking",一致,
+crushed red pepper flakes,赤唐辛子フレーク（粗挽き）,red pepper flakes,17.27,170932,"Spices, pepper, red or cayenne",近い,カイエン（粉）の値
+mirin,みりん,mirin,,,,対応なし,SR Legacy にみりんが無い（糖を含む酒で、ほかの酒で代用できない）
+fresh basil leaves,バジルの葉（生）,basil,0.64,172232,"Basil, fresh",一致,
+eggplant,なす,eggplant,0.18,169228,"Eggplant, raw",一致,
+powdered sugar,粉砂糖,powdered sugar,0,169656,"Sugars, powdered",一致,
+large egg whites,卵白（Lサイズ）,egg whites,0.17,172183,"Egg, white, raw, fresh",一致,
+cooking oil,料理用油,vegetable oil,100,172370,"Oil, vegetable, soybean, refined",近い,大豆油の値。油の種類が書かれていない
+lime wedges,くし切りライム,lime,0.2,168155,"Limes, raw",一致,
+shredded mozzarella cheese,モッツァレラチーズ（シュレッド）,mozzarella cheese,19.78,171244,"Cheese, mozzarella, low moisture, part-skim",近い,低水分・部分脱脂（シュレッドの一般的な形）の値
+fat free less sodium chicken broth,チキンブロス（無脂肪・減塩）,chicken broth,0,172888,"Soup, chicken broth, less/reduced sodium, ready to serve",一致,
+ground pork,豚ひき肉,pork,21.19,167902,"Pork, fresh, ground, raw",一致,
+sliced green onions,青ねぎ（小口切り）,green onions,0.19,170005,"Onions, spring or scallions (includes tops and bulb), raw",一致,
+cayenne,カイエン,cayenne pepper,17.27,170932,"Spices, pepper, red or cayenne",一致,
+mozzarella cheese,モッツァレラチーズ,mozzarella cheese,22.14,170845,"Cheese, mozzarella, whole milk",近い,全乳の値
+medium shrimp,えび（中）,shrimp,0.51,175179,"Crustaceans, shrimp, raw",一致,
+raisins,レーズン,raisins,0.25,168165,"Raisins, dark, seedless (Includes foods for USDA's Food Distribution Program)",近い,種なし（ダーク）の値
+red pepper,赤唐辛子／赤パプリカ,bell pepper,,,,対応なし,赤唐辛子か赤パプリカか決まらない（ingredient_ja でも両方）
+coriander,コリアンダー,coriander,,,,対応なし,種（スパイス）か葉（パクチー）か決まらない（種 17.77・葉 0.52）
+sauce,ソース,sauce,,,,対応なし,何のソースか書かれていない
+finely chopped onion,玉ねぎ（細かいみじん切り）,onions,0.1,170000,"Onions, raw",一致,
+oyster sauce,オイスターソース,oyster sauce,0.25,174529,"Sauce, oyster, ready-to-serve",一致,
+sweet potatoes,さつまいも,sweet potatoes,0.05,168482,"Sweet potato, raw, unprepared (Includes foods for USDA's Food Distribution Program)",一致,
+beansprouts,もやし,beansprouts,0.18,169957,"Mung beans, mature seeds, sprouted, raw",近い,緑豆もやしの値
+black peppercorns,黒胡椒（ホール）,black pepper,3.26,170931,"Spices, pepper, black",一致,
+crushed tomatoes,クラッシュトマト（缶）,tomatoes,0.25,170051,"Tomatoes, red, ripe, canned, packed in tomato juice",近い,缶詰（トマトジュース漬け）の値
+egg whites,卵白,egg whites,0.17,172183,"Egg, white, raw, fresh",一致,
+cheese,チーズ,cheese,,,,対応なし,チーズの種類が書かれていない（脂質は 0〜35 と幅が大きい）
+fresh rosemary,ローズマリー（生）,rosemary,5.86,173473,"Rosemary, fresh",一致,
+oregano,オレガノ,oregano,4.28,171328,"Spices, oregano, dried",近い,乾燥の値。生か乾燥かが書かれていない
+white pepper,白胡椒,white pepper,2.12,170933,"Spices, pepper, white",一致,
+cherry tomatoes,ミニトマト,tomatoes,0.2,170457,"Tomatoes, red, ripe, raw, year round average",近い,トマト（通年平均）の値
+leeks,リーキ（西洋ねぎ）,leeks,0.3,169246,"Leeks, (bulb and lower leaf-portion), raw",一致,
+ketchup,ケチャップ,ketchup,0.1,168556,Catsup,一致,
+hoisin sauce,海鮮醤,hoisin sauce,3.39,172886,"Sauce, hoisin, ready-to-serve",一致,
+chopped celery,セロリ（刻み）,celery,0.17,169988,"Celery, raw",一致,
+low sodium soy sauce,減塩醤油,soy sauce,0.3,172473,"Soy sauce made from soy and wheat (shoyu), low sodium",一致,
+cheddar cheese,チェダーチーズ,cheddar cheese,33.31,173414,"Cheese, cheddar (Includes foods for USDA's Food Distribution Program)",一致,
+light brown sugar,ブラウンシュガー（ライト）,brown sugar,0,168833,"Sugars, brown",近い,ブラウンシュガー全般の値
+cabbage,キャベツ,cabbage,0.1,169975,"Cabbage, raw",一致,
+fresh mint,ミント（生）,mint,0.73,173475,"Spearmint, fresh",近い,スペアミントの値（ペパーミント 0.94）
+large shrimp,えび（大）,shrimp,0.51,175179,"Crustaceans, shrimp, raw",一致,
+vegetable broth,野菜ブロス,vegetable broth,0.07,171583,"Soup, vegetable broth, ready to serve",一致,
+cracked black pepper,粗挽き黒胡椒,black pepper,3.26,170931,"Spices, pepper, black",一致,
+spring onions,葉玉ねぎ（スプリングオニオン）,green onions,0.19,170005,"Onions, spring or scallions (includes tops and bulb), raw",一致,
+peanuts,ピーナッツ,peanuts,49.24,172430,"Peanuts, all types, raw",一致,
+chickpeas,ひよこ豆,chickpeas,2.77,173800,"Chickpeas (garbanzo beans, bengal gram), mature seeds, canned, drained solids",近い,缶詰（水を切ったもの）の値。缶詰か乾燥か書かれていない（乾燥なら 6.04）
+confectioners sugar,粉砂糖（コンフェクショナーズ）,powdered sugar,0,169656,"Sugars, powdered",一致,
+coriander seeds,コリアンダーシード,coriander,17.77,170922,"Spices, coriander seed",一致,
+italian seasoning,イタリアンシーズニング,italian seasoning,,,,対応なし,混合ハーブ。SR Legacy に項目が無い
+fresh oregano,オレガノ（生）,oregano,,,,対応なし,SR Legacy に生のオレガノが無い（乾燥 4.28 は水分が違うので代用しない）
+bell pepper,パプリカ（ピーマン類）,bell pepper,0.17,170427,"Peppers, sweet, green, raw",近い,緑の値。色が書かれていない（赤 0.30・黄 0.21）
+cooked rice,ご飯（炊いた米）,rice,0.28,168878,"Rice, white, long-grain, regular, enriched, cooked",近い,長粒米を炊いたものの値
+lean ground beef,牛ひき肉（赤身）,ground beef,10,174030,"Beef, ground, 90% lean meat / 10% fat, raw",近い,赤身90%/脂肪10%の値
+ground pepper,挽いた胡椒,black pepper,3.26,170931,"Spices, pepper, black",一致,
+low salt chicken broth,チキンブロス（減塩）,chicken broth,0.6,171609,"Soup, chicken broth, low sodium, canned",近い,減塩（缶詰）の値
+frozen peas,冷凍グリーンピース,peas,0.4,170016,"Peas, green, frozen, unprepared (Includes foods for USDA's Food Distribution Program)",一致,
+beef broth,ビーフブロス,beef broth,0.22,171538,"Soup, beef broth or bouillon canned, ready-to-serve",一致,
+active dry yeast,ドライイースト,yeast,7.61,175043,"Leavening agents, yeast, baker's, active dry",一致,
+cajun seasoning,ケイジャンシーズニング,cajun seasoning,,,,対応なし,混合スパイス。SR Legacy に項目が無い
+chopped fresh thyme,タイム（生・刻み）,thyme,1.68,173470,"Thyme, fresh",一致,
+green pepper,ピーマン（青）,bell pepper,0.17,170427,"Peppers, sweet, green, raw",一致,
+ground cloves,クローブパウダー,cloves,13,171321,"Spices, cloves, ground",一致,
+cornmeal,コーンミール,cornmeal,1.75,168867,"Cornmeal, degermed, enriched, yellow",近い,脱胚芽・黄の値
+white wine,白ワイン,white wine,0,174837,"Alcoholic beverage, wine, table, white",一致,
+spinach,ほうれん草,spinach,0.39,168462,"Spinach, raw",一致,
+ground allspice,オールスパイス,allspice,8.69,171315,"Spices, allspice, ground",一致,
+lemongrass,レモングラス,lemongrass,0.49,168573,"Lemon grass (citronella), raw",一致,
+plain yogurt,プレーンヨーグルト,yogurt,3.25,171284,"Yogurt, plain, whole milk",近い,全乳ヨーグルトの値
+thyme,タイム,thyme,1.68,173470,"Thyme, fresh",近い,生の値。生か乾燥かが書かれていない（乾燥 7.43）
+feta cheese crumbles,フェタチーズ（崩したもの）,feta cheese,21.49,173420,"Cheese, feta",一致,
+hot water,お湯,water,0,173647,"Beverages, water, tap, drinking",一致,
+orange,オレンジ,orange,0.12,169097,"Oranges, raw, all commercial varieties",一致,
+toasted sesame oil,焙煎ごま油,sesame oil,100,171016,"Oil, sesame, salad or cooking",近い,ごま油（焙煎の区別なし）の値
+long-grain rice,長粒米,rice,0.66,168877,"Rice, white, long-grain, regular, raw, enriched",一致,
+parmigiano reggiano cheese,パルミジャーノ・レッジャーノ,parmesan cheese,25,170848,"Cheese, parmesan, hard",近い,パルメザン（ハード）の値
+fennel seeds,フェンネルシード,fennel seeds,14.87,171323,"Spices, fennel seed",一致,
+ricotta cheese,リコッタチーズ,ricotta cheese,10.18,170851,"Cheese, ricotta, whole milk",近い,全乳の値
+white wine vinegar,白ワインビネガー,vinegar,0,172240,"Vinegar, red wine",代用,SR Legacy に白ワインビネガーが無い。赤ワインビネガーの値（酢は脂質 0）
+boiling water,熱湯,water,0,173647,"Beverages, water, tap, drinking",一致,
+cider vinegar,りんご酢,cider vinegar,0,173469,"Vinegar, cider",一致,
+ground white pepper,白胡椒（挽いたもの）,white pepper,2.12,170933,"Spices, pepper, white",一致,
+pinenuts,松の実,pine nuts,68.37,170591,"Nuts, pine nuts, dried",一致,
+light soy sauce,薄口醤油,soy sauce,0.57,174277,Soy sauce made from soy and wheat (shoyu),代用,SR Legacy に薄口醤油が無い。濃口（大豆と小麦）の値
+chopped garlic,にんにく（刻み）,garlic,0.5,169230,"Garlic, raw",一致,
+fresh thyme,タイム（生）,thyme,1.68,173470,"Thyme, fresh",一致,
+parsley,パセリ,parsley,0.79,170416,"Parsley, fresh",一致,
+sake,酒,sake,0,167723,"Alcoholic beverage, rice (sake)",一致,
+smoked paprika,スモークパプリカ,paprika,12.89,171329,"Spices, paprika",近い,パプリカの値（燻製の区別なし）
+boneless chicken skinless thigh,鶏もも肉（皮なし骨なし）,chicken,4.12,173627,"Chicken, broilers or fryers, dark meat, thigh, meat only, raw",一致,
+grated lemon zest,レモンの皮（すりおろし）,lemon zest,0.3,167749,"Lemon peel, raw",一致,
+spaghetti,スパゲッティ,pasta,1.51,169736,"Pasta, dry, enriched",一致,
+green beans,さやいんげん,green beans,0.22,169961,"Beans, snap, green, raw",一致,
+yellow corn meal,コーンミール（黄）,cornmeal,1.75,168867,"Cornmeal, degermed, enriched, yellow",近い,脱胚芽の値（全粒なら 3.59）
+chile pepper,唐辛子,chile pepper,0.44,170106,"Peppers, hot chili, red, raw",近い,赤唐辛子（生）の値。色が書かれていない（青 0.20）
+low sodium chicken broth,チキンブロス（減塩）,chicken broth,0.6,171609,"Soup, chicken broth, low sodium, canned",一致,
+fresh ginger root,生姜（根）,ginger,0.75,169231,"Ginger root, raw",一致,
+orange juice,オレンジジュース,orange juice,0.2,169098,"Orange juice, raw (Includes foods for USDA's Food Distribution Program)",近い,生搾りの値
+half & half,ハーフ＆ハーフ（牛乳と生クリームの混合）,heavy cream,11.5,171255,"Cream, fluid, half and half",一致,
+chicken thighs,鶏もも肉,chicken,4.12,173627,"Chicken, broilers or fryers, dark meat, thigh, meat only, raw",近い,もも肉・肉のみの値。皮の有無が書かれていない（皮つきなら 16.61）
+sweet onion,甘玉ねぎ,onions,0.1,170000,"Onions, raw",近い,玉ねぎ全般の値
+chopped parsley,パセリ（刻み）,parsley,0.79,170416,"Parsley, fresh",一致,
+shiitake,しいたけ,shiitake,0.49,169242,"Mushrooms, shiitake, raw",一致,
+corn,とうもろこし,corn,1.35,169998,"Corn, sweet, yellow, raw",近い,スイートコーン（生）の値
+basmati rice,バスマティライス,rice,0.66,168877,"Rice, white, long-grain, regular, raw, enriched",近い,長粒米の値（バスマティの項目なし）
+shredded monterey jack cheese,モントレージャックチーズ（シュレッド）,monterey jack cheese,30.28,170844,"Cheese, monterey",一致,
+tomatillos,トマティーヨ,tomatillos,1.02,168566,"Tomatillos, raw",一致,
+chiles,唐辛子（チレ）,chile pepper,0.44,170106,"Peppers, hot chili, red, raw",近い,赤唐辛子（生）の値。色・生か乾燥かが書かれていない
+pasta,パスタ,pasta,1.51,169736,"Pasta, dry, enriched",一致,
+dark brown sugar,ブラウンシュガー（ダーク）,brown sugar,0,168833,"Sugars, brown",近い,ブラウンシュガー全般の値
+chopped fresh mint,ミント（生・刻み）,mint,0.73,173475,"Spearmint, fresh",近い,スペアミントの値
+vinegar,酢,vinegar,0,172237,"Vinegar, distilled",近い,蒸留酢の値
+mustard seeds,マスタードシード,mustard seeds,36.24,170929,"Spices, mustard seed, ground",近い,粉の値
+dark soy sauce,老抽（中国のたまり醤油）,soy sauce,0.57,174277,Soy sauce made from soy and wheat (shoyu),代用,SR Legacy に老抽が無い。醤油（大豆と小麦）の値
+vanilla,バニラ,vanilla extract,0.06,173471,Vanilla extract,近い,バニラエキストラクトの値
+dry red wine,辛口赤ワイン,red wine,0,173190,"Alcoholic beverage, wine, table, red",近い,赤ワイン全般の値
+ghee,ギー,ghee,100,171314,"Butter, Clarified butter (ghee)",一致,
+bread crumbs,パン粉,bread crumbs,5.3,174928,"Bread, crumbs, dry, grated, plain",近い,乾燥パン粉（プレーン）の値
+hot pepper sauce,ホットペッパーソース,hot sauce,0.37,174527,"Sauce, ready-to-serve, pepper or hot",一致,
+green chile,青唐辛子（チレ）,chile pepper,0.2,170497,"Peppers, hot chili, green, raw",一致,
+tortilla chips,トルティーヤチップス,tortilla chips,20.68,167558,"Snacks, tortilla chips, plain, white corn, salted",一致,
+pork,豚肉,pork,10.14,168316,"Pork, fresh, composite of trimmed retail cuts (loin and shoulder blade), separable lean and fat, raw",近い,ロース・肩の平均（脂身つき）の値。部位が書かれていない
+serrano chile,セラーノ唐辛子,chile pepper,0.44,169395,"Peppers, serrano, raw",一致,
+chopped tomatoes,トマト（刻み）,tomatoes,0.2,170457,"Tomatoes, red, ripe, raw, year round average",一致,
+sriracha,シラチャーソース,sriracha,0.93,171186,"Sauce, hot chile, sriracha",一致,
+cooked chicken,加熱済み鶏肉,chicken,7.41,171054,"Chicken, broilers or fryers, meat only, cooked, roasted",近い,肉のみ・ローストの値
+enchilada sauce,エンチラーダソース,enchilada sauce,0.91,174074,"Sauce, enchilada, red, mild, ready to serve",近い,赤・マイルドの値
+toasted sesame seeds,炒りごま,sesame seeds,48,170151,"Seeds, sesame seeds, whole, roasted and toasted",一致,
+arborio rice,アルボリオ米（リゾット用）,rice,0.58,168879,"Rice, white, medium-grain, raw, enriched",近い,中粒米（生）の値
+yellow bell pepper,黄パプリカ,bell pepper,0.21,169383,"Peppers, sweet, yellow, raw",一致,
+dry bread crumbs,乾燥パン粉,bread crumbs,5.3,174928,"Bread, crumbs, dry, grated, plain",一致,
+fresh parmesan cheese,パルメザンチーズ（生）,parmesan cheese,25,170848,"Cheese, parmesan, hard",近い,パルメザン（ハード）の値
+fine sea salt,海塩（細粒）,salt,0,173468,"Salt, table",近い,食卓塩の値
+fresh coriander,パクチー（生）,cilantro,0.52,169997,"Coriander (cilantro) leaves, raw",一致,
+prosciutto,生ハム（プロシュート）,prosciutto,,,,対応なし,SR Legacy に乾燥熟成の生ハムの項目が無い（ハムは湿式の塩漬けだけで、脂身の有無で 4〜53 と幅が大きい）
+basil,バジル,basil,0.64,172232,"Basil, fresh",近い,生の値。生か乾燥かが書かれていない
+chopped pecans,ピーカンナッツ（刻み）,pecans,71.97,170182,"Nuts, pecans",一致,
+garlic paste,にんにくペースト,garlic,0.5,169230,"Garlic, raw",近い,生のにんにくの値。市販のペーストは油を含むことがある
+radishes,ラディッシュ,radishes,0.1,169276,"Radishes, raw",一致,
+corn kernels,コーン（粒）,corn,1.35,169998,"Corn, sweet, yellow, raw",近い,スイートコーン（生）の値。缶詰なら 1.22
+juice,果汁,juice,,,,対応なし,何の果汁か書かれていない
+long grain white rice,長粒米（白）,rice,0.66,168877,"Rice, white, long-grain, regular, raw, enriched",一致,
+saffron threads,サフラン,saffron,5.85,170934,"Spices, saffron",一致,
+creole seasoning,クレオールシーズニング,creole seasoning,,,,対応なし,混合スパイス。SR Legacy に項目が無い
+melted butter,溶かしバター,butter,81.11,173410,"Butter, salted",近い,有塩バターの値（溶かしても脂質は同じ）
+beef,牛肉,beef,14.42,169483,"Beef, composite of trimmed retail cuts, separable lean and fat, trimmed to 1/8"" fat, all grades, raw",近い,市販の部位の平均（脂身 1/8 インチまで）の値。部位が書かれていない
+fresh mushrooms,マッシュルーム（生）,mushrooms,0.34,169251,"Mushrooms, white, raw",近い,ホワイトマッシュルームの値
+sweetened condensed milk,加糖練乳,sweetened condensed milk,8.7,171275,"Milk, canned, condensed, sweetened",一致,
+taco seasoning,タコスシーズニング,taco seasoning,0,172243,"Seasoning mix, dry, taco, original",近い,タコス用ミックス（乾燥、商品の平均）の値
+baguette,バゲット,baguette,2.42,172675,"Bread, french or vienna (includes sourdough)",近い,フランスパン（サワードウ含む）の値
+romaine lettuce,ロメインレタス,romaine lettuce,0.3,169247,"Lettuce, cos or romaine, raw",一致,
+apple cider vinegar,りんご酢（アップルサイダー）,cider vinegar,0,173469,"Vinegar, cider",一致,
+chopped green bell pepper,ピーマン（刻み）,bell pepper,0.17,170427,"Peppers, sweet, green, raw",一致,
+feta cheese,フェタチーズ,feta cheese,21.49,173420,"Cheese, feta",一致,
+mango,マンゴー,mango,0.38,169910,"Mangos, raw",一致,
+okra,オクラ,okra,0.19,169260,"Okra, raw",一致,

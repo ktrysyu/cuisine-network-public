@@ -1,0 +1,3030 @@
+{
+ "tau＋吸油 off（今の既定）": {
+  "s13": {
+   "n": 13,
+   "mae": {
+    "hardness": {
+     "A": 0.7482480681845346,
+     "C": 0.998852842159603,
+     "base": 1.5256410256410255,
+     "e14_loo": 1.5936060716045601
+    },
+    "smoothness": {
+     "A": 1.3625669449200937,
+     "C": 1.3252929914334841,
+     "base": 1.9743589743589742,
+     "e14_loo": 2.192307692307692
+    }
+   },
+   "rho_index": {
+    "hardness": 0.7820743005880013,
+    "smoothness": 0.7827914496752273
+   },
+   "hits": {
+    "Exp-14（全体で当てはめ）": 7,
+    "Exp-14（1つ抜き）": 3,
+    "(A) 変換なし＋他は全体": 5,
+    "(A) 変換なし＋他は1つ抜き": 3,
+    "(B) 一次式を全体で＋他は全体": 5,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 3,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 5
+   },
+   "hits_v": {
+    "Exp-14（全体で当てはめ）": 6,
+    "Exp-14（1つ抜き）": 2,
+    "(A) 変換なし＋他は全体": 4,
+    "(A) 変換なし＋他は1つ抜き": 3,
+    "(B) 一次式を全体で＋他は全体": 4,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 2,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 4
+   }
+  },
+  "s16": {
+   "n": 16,
+   "mae": {
+    "hardness": {
+     "A": 0.7461262613250135,
+     "C": 0.9578060611763645,
+     "base": 1.6,
+     "e14_loo": 1.30388912073597
+    },
+    "smoothness": {
+     "A": 1.6620145479813218,
+     "C": 1.3462498444116087,
+     "base": 2.066666666666667,
+     "e14_loo": 2.1069444444444443
+    }
+   },
+   "rho_index": {
+    "hardness": 0.8086095405103849,
+    "smoothness": 0.7768858937237239
+   },
+   "hits": {
+    "Exp-14（全体で当てはめ）": 10,
+    "Exp-14（1つ抜き）": 4,
+    "(A) 変換なし＋他は全体": 7,
+    "(A) 変換なし＋他は1つ抜き": 6,
+    "(B) 一次式を全体で＋他は全体": 6,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 4,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 8
+   },
+   "hits_v": {
+    "Exp-14（全体で当てはめ）": 9,
+    "Exp-14（1つ抜き）": 3,
+    "(A) 変換なし＋他は全体": 6,
+    "(A) 変換なし＋他は1つ抜き": 5,
+    "(B) 一次式を全体で＋他は全体": 5,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 3,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 7
+   }
+  },
+  "states": {
+   "beef_steak": {
+    "answer": null,
+    "T_core_max": 100.0,
+    "maillard": 2,
+    "cell_wall": null,
+    "starch_gel": null,
+    "water": 59.99646036877733,
+    "fat": 22.760634617764623,
+    "myoglobin": 2,
+    "ops": [
+     "heat(pan,175℃,until maillard≧2)→3.3min",
+     "heat(pan,175℃,until T_core≧55)→0min",
+     "rest(20℃,4min)"
+    ]
+   },
+   "french_fries": {
+    "answer": "french_fries",
+    "T_core_max": 100.0,
+    "maillard": 2,
+    "cell_wall": "軟化",
+    "starch_gel": 1.0,
+    "water": 70.55757634305982,
+    "fat": 0.14575457255910979,
+    "myoglobin": null,
+    "ops": [
+     "heat(water,100℃,15min)",
+     "heat(oil,175℃,4.5min)"
+    ]
+   },
+   "boiled_potato": {
+    "answer": "boiled_potato",
+    "T_core_max": 100.0,
+    "maillard": 0,
+    "cell_wall": "軟化",
+    "starch_gel": 1.0,
+    "water": 79.41233498555457,
+    "fat": 0.10191913373487842,
+    "myoglobin": null,
+    "ops": [
+     "heat(water,100℃,until cell_wall∈{軟化})→16min",
+     "heat(pan,130℃,2min,撹拌)"
+    ]
+   },
+   "sauteed_chicken": {
+    "answer": "sauteed_chicken",
+    "T_core_max": 100.0,
+    "maillard": 2,
+    "cell_wall": null,
+    "starch_gel": null,
+    "water": 70.19994797989793,
+    "fat": 6.548627629501078,
+    "myoglobin": 2,
+    "ops": [
+     "heat(pan,180℃,until maillard≧2)→3.3min",
+     "heat(pan,180℃,until T_core≧74)→0min"
+    ]
+   }
+  },
+  "timed": {
+   "beef_steak": {
+    "answer": null,
+    "T_core_max": 100.0,
+    "maillard": 1
+   },
+   "french_fries": {
+    "answer": "french_fries",
+    "T_core_max": 100.0,
+    "maillard": 2
+   },
+   "boiled_potato": {
+    "answer": "boiled_potato",
+    "T_core_max": 100.0,
+    "maillard": 0
+   }
+  },
+  "nearest16": {
+   "Exp-14（1つ抜き）": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.5877074832032485
+     ],
+     [
+      "omelet",
+      2.3968296457527827
+     ],
+     [
+      "onsen_tamago",
+      2.4706735085324665
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      1.4138622959398388
+     ],
+     [
+      "onsen_tamago",
+      2.301739931996571
+     ],
+     [
+      "omelet",
+      2.643512180058949
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "whipped_cream",
+      2.2371975506477506
+     ],
+     [
+      "custard_pudding",
+      2.3144179301946175
+     ],
+     [
+      "milk_jelly",
+      3.1143767041780834
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.764848183394492
+     ],
+     [
+      "onsen_tamago",
+      1.9748357024292378
+     ],
+     [
+      "omelet",
+      3.0170084056427395
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      2.0410558903363283
+     ],
+     [
+      "omelet",
+      2.2111976632468315
+     ],
+     [
+      "steamed_rice",
+      2.5316832027416893
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "steamed_rice",
+      5.29969383626033
+     ],
+     [
+      "scrambled_eggs",
+      5.606429049956191
+     ],
+     [
+      "white_sauce",
+      5.606962278504687
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      2.7113621134529606
+     ],
+     [
+      "french_fries",
+      2.9180023564719595
+     ],
+     [
+      "pancake",
+      4.182066083019146
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "scrambled_eggs",
+      1.585199118777015
+     ],
+     [
+      "omelet",
+      1.9564812079471572
+     ],
+     [
+      "onsen_tamago",
+      3.0004924636174697
+     ]
+    ],
+    "pancake": [
+     [
+      "caramel_sauce",
+      4.040738766470944
+     ],
+     [
+      "pancake",
+      5.490629723627161
+     ],
+     [
+      "sauteed_onion",
+      5.596696751860507
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      3.279734725789942
+     ],
+     [
+      "steamed_rice",
+      3.4872040324314
+     ],
+     [
+      "custard_pudding",
+      3.7893622504109095
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      3.424292610943057
+     ],
+     [
+      "steamed_rice",
+      3.498344225248973
+     ],
+     [
+      "custard_pudding",
+      3.745621615934896
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.716976556798346
+     ],
+     [
+      "omelet",
+      2.4117260072926254
+     ],
+     [
+      "onsen_tamago",
+      2.55028776654409
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      2.5648510932475364
+     ],
+     [
+      "sauteed_chicken",
+      2.5778385868353286
+     ],
+     [
+      "beef_steak",
+      3.0901410473067097
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      2.541693013601285
+     ],
+     [
+      "sauteed_chicken",
+      2.838287598296399
+     ],
+     [
+      "omelet",
+      3.153108138433612
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      2.016341214855146
+     ],
+     [
+      "omelet",
+      3.0725046744427917
+     ],
+     [
+      "sauteed_onion",
+      3.2850827261882025
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "scrambled_eggs",
+      1.3745136444154489
+     ],
+     [
+      "omelet",
+      2.0276037383954066
+     ],
+     [
+      "white_sauce",
+      3.1241260571961673
+     ]
+    ]
+   },
+   "(A) 変換なし＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.6045574575504309
+     ],
+     [
+      "onsen_tamago",
+      2.2761921150945845
+     ],
+     [
+      "omelet",
+      2.5639196058963893
+     ]
+    ],
+    "omelet": [
+     [
+      "onsen_tamago",
+      2.555726229467466
+     ],
+     [
+      "scrambled_eggs",
+      2.9039174294942827
+     ],
+     [
+      "chawanmushi",
+      2.937655193732522
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      0.9005225457884017
+     ],
+     [
+      "whipped_cream",
+      1.7881823463228574
+     ],
+     [
+      "milk_jelly",
+      1.9727862222257047
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "onsen_tamago",
+      1.8213982116354956
+     ],
+     [
+      "scrambled_eggs",
+      2.5558177760142917
+     ],
+     [
+      "chawanmushi",
+      2.854900751946853
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      2.583798928427604
+     ],
+     [
+      "chawanmushi",
+      3.1083083903116546
+     ],
+     [
+      "onsen_tamago",
+      3.332204743390688
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      3.6205897336587807
+     ],
+     [
+      "custard_pudding",
+      4.371346476713481
+     ],
+     [
+      "white_sauce",
+      4.899012764527262
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      2.660784762068134
+     ],
+     [
+      "beef_steak",
+      2.6655739801593223
+     ],
+     [
+      "sauteed_chicken",
+      2.6847959480474644
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.2267983049176738
+     ],
+     [
+      "boiled_potato",
+      2.215839264740932
+     ],
+     [
+      "french_fries",
+      2.849824434674505
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      4.328803650810663
+     ],
+     [
+      "caramel_sauce",
+      4.4606400362948415
+     ],
+     [
+      "sauteed_onion",
+      4.64314149173256
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      1.0018474298415487
+     ],
+     [
+      "whipped_cream",
+      1.5811163807881874
+     ],
+     [
+      "milk_jelly",
+      1.9783007159280495
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "custard_pudding",
+      1.3731730234397945
+     ],
+     [
+      "whipped_cream",
+      1.4859193629675171
+     ],
+     [
+      "milk_jelly",
+      1.6010159122768834
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "onsen_tamago",
+      2.1688665964371223
+     ],
+     [
+      "scrambled_eggs",
+      2.597695732288793
+     ],
+     [
+      "chawanmushi",
+      2.789433775806835
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      3.0371950881144625
+     ],
+     [
+      "omelet",
+      3.665470376416213
+     ],
+     [
+      "scrambled_eggs",
+      4.053634881414698
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      2.9938419535462018
+     ],
+     [
+      "omelet",
+      3.5277439249582776
+     ],
+     [
+      "scrambled_eggs",
+      3.826275551759727
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      2.418177268043903
+     ],
+     [
+      "omelet",
+      3.3499603549047494
+     ],
+     [
+      "sauteed_chicken",
+      3.6371309312975835
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      2.339521593277452
+     ],
+     [
+      "scrambled_eggs",
+      2.5012614984745865
+     ],
+     [
+      "french_fries",
+      3.4995634419793356
+     ]
+    ]
+   },
+   "(C) 一次式を1つ抜き＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "omelet",
+      1.7041824282128173
+     ],
+     [
+      "boiled_potato",
+      1.782620971855481
+     ],
+     [
+      "french_fries",
+      2.816319963474967
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      2.24224753199668
+     ],
+     [
+      "onsen_tamago",
+      2.360093454607916
+     ],
+     [
+      "chawanmushi",
+      3.179856850367547
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      2.1491686150124285
+     ],
+     [
+      "whipped_cream",
+      2.3175478413234054
+     ],
+     [
+      "milk_jelly",
+      3.072484481457349
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.8887143042948626
+     ],
+     [
+      "onsen_tamago",
+      1.9306403552906946
+     ],
+     [
+      "omelet",
+      3.1606750605091523
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.699009308261286
+     ],
+     [
+      "onsen_tamago",
+      3.197391035822937
+     ],
+     [
+      "chawanmushi",
+      3.4191237606202436
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      3.9945040005805152
+     ],
+     [
+      "white_sauce",
+      4.483082781305539
+     ],
+     [
+      "custard_pudding",
+      4.6857296348224935
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      1.5047101318056315
+     ],
+     [
+      "beef_steak",
+      2.3484115891290047
+     ],
+     [
+      "sauteed_chicken",
+      2.3702070860802626
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.4340855035451694
+     ],
+     [
+      "boiled_potato",
+      1.8751353742431636
+     ],
+     [
+      "steamed_rice",
+      2.876343164497468
+     ]
+    ],
+    "pancake": [
+     [
+      "sauteed_onion",
+      3.3413466879520173
+     ],
+     [
+      "pancake",
+      3.3845856928356572
+     ],
+     [
+      "french_fries",
+      4.015346722521044
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      2.1594539829254753
+     ],
+     [
+      "whipped_cream",
+      2.2154465626334283
+     ],
+     [
+      "milk_jelly",
+      3.1139671966800773
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.3712299894192332
+     ],
+     [
+      "custard_pudding",
+      1.8769569627263432
+     ],
+     [
+      "milk_jelly",
+      2.3189527095383533
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.712330314414284
+     ],
+     [
+      "onsen_tamago",
+      2.0074881539680556
+     ],
+     [
+      "white_sauce",
+      2.635641250019137
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      1.7556541314721237
+     ],
+     [
+      "omelet",
+      2.7006370556728525
+     ],
+     [
+      "sauteed_onion",
+      3.2741048103329606
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.6795407315399815
+     ],
+     [
+      "omelet",
+      2.5105267626871766
+     ],
+     [
+      "sauteed_onion",
+      3.4727580531384703
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.220674655544518
+     ],
+     [
+      "sauteed_chicken",
+      2.5545863577720995
+     ],
+     [
+      "omelet",
+      2.6200571929707963
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.0977204195500234
+     ],
+     [
+      "boiled_potato",
+      2.554344053070898
+     ],
+     [
+      "scrambled_eggs",
+      2.706177337663947
+     ]
+    ]
+   },
+   "Exp-14（全体で当てはめ）": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.3050354631503502
+     ],
+     [
+      "onsen_tamago",
+      2.0391635789189255
+     ],
+     [
+      "omelet",
+      2.8748400282515187
+     ]
+    ],
+    "omelet": [
+     [
+      "omelet",
+      2.0529861985576114
+     ],
+     [
+      "boiled_potato",
+      2.2466165146283648
+     ],
+     [
+      "scrambled_eggs",
+      2.3955546458514996
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.665501221096751
+     ],
+     [
+      "whipped_cream",
+      1.9256711750604898
+     ],
+     [
+      "milk_jelly",
+      2.629559494215838
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "onsen_tamago",
+      1.6188457722745024
+     ],
+     [
+      "scrambled_eggs",
+      1.68504641147506
+     ],
+     [
+      "chawanmushi",
+      3.0049294266883826
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.5831496798015292
+     ],
+     [
+      "omelet",
+      1.9140958387564266
+     ],
+     [
+      "boiled_potato",
+      2.890386971024941
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "caramel_sauce",
+      4.626530716533692
+     ],
+     [
+      "milk_jelly",
+      5.577067407448914
+     ],
+     [
+      "custard_pudding",
+      5.771493915289459
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      2.3886943597467023
+     ],
+     [
+      "french_fries",
+      2.8906543910882014
+     ],
+     [
+      "pancake",
+      3.879523988918395
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "scrambled_eggs",
+      1.663785612566451
+     ],
+     [
+      "omelet",
+      1.8355925316644757
+     ],
+     [
+      "boiled_potato",
+      2.8061338460755145
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      4.1715175396686055
+     ],
+     [
+      "sauteed_onion",
+      4.4060964517523775
+     ],
+     [
+      "caramel_sauce",
+      4.4398813617097055
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      2.8801635554046316
+     ],
+     [
+      "custard_pudding",
+      3.357691738761853
+     ],
+     [
+      "steamed_rice",
+      3.8841856525102068
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      2.981524593531896
+     ],
+     [
+      "custard_pudding",
+      3.3916377892162464
+     ],
+     [
+      "steamed_rice",
+      3.802717096894467
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "onsen_tamago",
+      1.6335945827516296
+     ],
+     [
+      "scrambled_eggs",
+      1.8280418003270167
+     ],
+     [
+      "chawanmushi",
+      2.8447288977854597
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "sauteed_chicken",
+      2.2546022990027237
+     ],
+     [
+      "french_fries",
+      2.496764461940984
+     ],
+     [
+      "beef_steak",
+      2.7281140970766535
+     ]
+    ],
+    "beef_steak": [
+     [
+      "sauteed_chicken",
+      2.3486223640449633
+     ],
+     [
+      "french_fries",
+      2.429480053653014
+     ],
+     [
+      "beef_steak",
+      2.8063146667635386
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.8087624971180407
+     ],
+     [
+      "omelet",
+      2.893321272231624
+     ],
+     [
+      "sauteed_onion",
+      3.2372010565540577
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "scrambled_eggs",
+      1.6187930691012566
+     ],
+     [
+      "omelet",
+      1.8447980523444503
+     ],
+     [
+      "boiled_potato",
+      2.9000271424935358
+     ]
+    ]
+   },
+   "(B) 一次式を全体で＋他は全体": {
+    "scrambled_eggs": [
+     [
+      "omelet",
+      1.7075668245663331
+     ],
+     [
+      "boiled_potato",
+      1.9462944229508827
+     ],
+     [
+      "scrambled_eggs",
+      2.693035464005153
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      2.16571038486481
+     ],
+     [
+      "onsen_tamago",
+      2.4855763393142225
+     ],
+     [
+      "omelet",
+      2.960472254269335
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.914203362765824
+     ],
+     [
+      "whipped_cream",
+      2.1723371753330056
+     ],
+     [
+      "milk_jelly",
+      2.87778248537956
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.7524212848324745
+     ],
+     [
+      "onsen_tamago",
+      1.7912202979482232
+     ],
+     [
+      "chawanmushi",
+      3.1581036954809183
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.3330345598664763
+     ],
+     [
+      "onsen_tamago",
+      2.4758009739357196
+     ],
+     [
+      "white_sauce",
+      2.531998483653491
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "caramel_sauce",
+      3.6848314354278577
+     ],
+     [
+      "milk_jelly",
+      4.421714054974573
+     ],
+     [
+      "custard_pudding",
+      5.0481024405919905
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      1.22543969132534
+     ],
+     [
+      "beef_steak",
+      2.6383031277197335
+     ],
+     [
+      "sauteed_chicken",
+      2.7055532509517772
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.4845967605622563
+     ],
+     [
+      "boiled_potato",
+      1.7632398479106879
+     ],
+     [
+      "steamed_rice",
+      2.5392474360471344
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      3.137411117388166
+     ],
+     [
+      "sauteed_onion",
+      3.441109577800441
+     ],
+     [
+      "french_fries",
+      4.172510842395638
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      1.8677191443541896
+     ],
+     [
+      "whipped_cream",
+      2.029886942099154
+     ],
+     [
+      "milk_jelly",
+      2.8238453085677784
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.1574649592770712
+     ],
+     [
+      "custard_pudding",
+      1.7831309547051428
+     ],
+     [
+      "milk_jelly",
+      2.2268523886601286
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.7441327346927697
+     ],
+     [
+      "onsen_tamago",
+      1.8416757778197403
+     ],
+     [
+      "white_sauce",
+      2.5421394778902187
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      1.6588592882442221
+     ],
+     [
+      "omelet",
+      2.8020528816497134
+     ],
+     [
+      "sauteed_chicken",
+      3.0378063853720865
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.5326733032312883
+     ],
+     [
+      "omelet",
+      2.8783009106471513
+     ],
+     [
+      "sauteed_onion",
+      2.999114164799582
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.0458281630177533
+     ],
+     [
+      "omelet",
+      2.488662845772489
+     ],
+     [
+      "sauteed_chicken",
+      2.5685401763385496
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.0694957587092921
+     ],
+     [
+      "boiled_potato",
+      2.299594469452222
+     ],
+     [
+      "french_fries",
+      2.7636723692452825
+     ]
+    ]
+   },
+   "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.188966654871339
+     ],
+     [
+      "onsen_tamago",
+      1.878932562194239
+     ],
+     [
+      "white_sauce",
+      2.5560947694430145
+     ]
+    ],
+    "omelet": [
+     [
+      "omelet",
+      1.7494121030100005
+     ],
+     [
+      "boiled_potato",
+      1.840070556348834
+     ],
+     [
+      "french_fries",
+      2.87160925005423
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      0.8929027119414283
+     ],
+     [
+      "whipped_cream",
+      1.717594412409674
+     ],
+     [
+      "milk_jelly",
+      1.9090363905498975
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "onsen_tamago",
+      1.8191658982473495
+     ],
+     [
+      "scrambled_eggs",
+      2.5542274025990213
+     ],
+     [
+      "chawanmushi",
+      2.853477076036149
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.6358535700189167
+     ],
+     [
+      "onsen_tamago",
+      3.332204743390688
+     ],
+     [
+      "white_sauce",
+      3.419605596666153
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      3.7561509580254304
+     ],
+     [
+      "custard_pudding",
+      4.255428300356542
+     ],
+     [
+      "white_sauce",
+      5.000032606593786
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      0.9862113482185575
+     ],
+     [
+      "french_fries",
+      2.4770680381174164
+     ],
+     [
+      "beef_steak",
+      2.9613062091246367
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.3934806039798127
+     ],
+     [
+      "boiled_potato",
+      1.844266692733887
+     ],
+     [
+      "steamed_rice",
+      2.8563152770905473
+     ]
+    ],
+    "pancake": [
+     [
+      "sauteed_onion",
+      2.2721348646588755
+     ],
+     [
+      "pancake",
+      2.535958269620963
+     ],
+     [
+      "french_fries",
+      3.7070051680735343
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      1.3322120600251264
+     ],
+     [
+      "custard_pudding",
+      1.407714931866086
+     ],
+     [
+      "milk_jelly",
+      1.7856465736312679
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.099070677091238
+     ],
+     [
+      "custard_pudding",
+      1.6987066116027179
+     ],
+     [
+      "milk_jelly",
+      1.8876577950899314
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "onsen_tamago",
+      1.6443790053210807
+     ],
+     [
+      "scrambled_eggs",
+      1.6577162355335149
+     ],
+     [
+      "chawanmushi",
+      2.789433775806835
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "sauteed_chicken",
+      1.6260216943137622
+     ],
+     [
+      "beef_steak",
+      2.3553484801302003
+     ],
+     [
+      "french_fries",
+      2.59261793094217
+     ]
+    ],
+    "beef_steak": [
+     [
+      "sauteed_chicken",
+      2.013920676353252
+     ],
+     [
+      "french_fries",
+      2.541693013601285
+     ],
+     [
+      "beef_steak",
+      2.7857623151731303
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.1458711650917615
+     ],
+     [
+      "sauteed_chicken",
+      2.448715525247276
+     ],
+     [
+      "sauteed_onion",
+      2.5022748794621985
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.3924082421172117
+     ],
+     [
+      "boiled_potato",
+      2.0620985029027405
+     ],
+     [
+      "steamed_rice",
+      2.556658338953649
+     ]
+    ]
+   }
+  }
+ },
+ "slab＋吸油 on": {
+  "s13": {
+   "n": 13,
+   "mae": {
+    "hardness": {
+     "A": 0.7482480681845346,
+     "C": 0.998852842159603,
+     "base": 1.5256410256410255,
+     "e14_loo": 1.5937165151226667
+    },
+    "smoothness": {
+     "A": 1.3625669449200937,
+     "C": 1.3252929914334841,
+     "base": 1.9743589743589742,
+     "e14_loo": 2.192307692307692
+    }
+   },
+   "rho_index": {
+    "hardness": 0.7820743005880013,
+    "smoothness": 0.7827914496752273
+   },
+   "hits": {
+    "Exp-14（全体で当てはめ）": 7,
+    "Exp-14（1つ抜き）": 3,
+    "(A) 変換なし＋他は全体": 5,
+    "(A) 変換なし＋他は1つ抜き": 3,
+    "(B) 一次式を全体で＋他は全体": 5,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 3,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 5
+   },
+   "hits_v": {
+    "Exp-14（全体で当てはめ）": 6,
+    "Exp-14（1つ抜き）": 2,
+    "(A) 変換なし＋他は全体": 4,
+    "(A) 変換なし＋他は1つ抜き": 3,
+    "(B) 一次式を全体で＋他は全体": 4,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 2,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 4
+   }
+  },
+  "s16": {
+   "n": 16,
+   "mae": {
+    "hardness": {
+     "A": 0.7461262613250135,
+     "C": 0.9578060611763645,
+     "base": 1.6,
+     "e14_loo": 1.4163726665426144
+    },
+    "smoothness": {
+     "A": 1.6620145479813218,
+     "C": 1.3462498444116087,
+     "base": 2.066666666666667,
+     "e14_loo": 2.1069444444444443
+    }
+   },
+   "rho_index": {
+    "hardness": 0.8086095405103849,
+    "smoothness": 0.7768858937237239
+   },
+   "hits": {
+    "Exp-14（全体で当てはめ）": 10,
+    "Exp-14（1つ抜き）": 3,
+    "(A) 変換なし＋他は全体": 7,
+    "(A) 変換なし＋他は1つ抜き": 5,
+    "(B) 一次式を全体で＋他は全体": 6,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 4,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 7
+   },
+   "hits_v": {
+    "Exp-14（全体で当てはめ）": 9,
+    "Exp-14（1つ抜き）": 2,
+    "(A) 変換なし＋他は全体": 6,
+    "(A) 変換なし＋他は1つ抜き": 5,
+    "(B) 一次式を全体で＋他は全体": 5,
+    "(C) 一次式を1つ抜き＋他は1つ抜き": 3,
+    "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": 6
+   }
+  },
+  "states": {
+   "beef_steak": {
+    "answer": "beef_steak",
+    "T_core_max": 62.70731269952189,
+    "maillard": 2,
+    "cell_wall": null,
+    "starch_gel": null,
+    "water": 60.19607843137255,
+    "fat": 22.647058823529413,
+    "myoglobin": 1,
+    "ops": [
+     "heat(pan,175℃,until maillard≧2)→3.3min",
+     "heat(pan,175℃,until T_core≧55)→2.9min",
+     "rest(20℃,4min)"
+    ]
+   },
+   "french_fries": {
+    "answer": "french_fries",
+    "T_core_max": 100.0,
+    "maillard": 2,
+    "cell_wall": "軟化",
+    "starch_gel": 1.0,
+    "water": 68.84412327893463,
+    "fat": 2.4875675247582767,
+    "myoglobin": null,
+    "ops": [
+     "heat(water,100℃,15min)",
+     "heat(oil,175℃,4.5min)"
+    ]
+   },
+   "boiled_potato": {
+    "answer": "boiled_potato",
+    "T_core_max": 100.0,
+    "maillard": 0,
+    "cell_wall": "軟化",
+    "starch_gel": 1.0,
+    "water": 79.41233498555457,
+    "fat": 0.10191913373487842,
+    "myoglobin": null,
+    "ops": [
+     "heat(water,100℃,until cell_wall∈{軟化})→16min",
+     "heat(pan,130℃,2min,撹拌)"
+    ]
+   },
+   "sauteed_chicken": {
+    "answer": "sauteed_chicken",
+    "T_core_max": 74.01629388702051,
+    "maillard": 2,
+    "cell_wall": null,
+    "starch_gel": null,
+    "water": 70.37830188679244,
+    "fat": 6.509433962264151,
+    "myoglobin": 2,
+    "ops": [
+     "heat(pan,180℃,until maillard≧2)→3.3min",
+     "heat(pan,180℃,until T_core≧74)→9.4min"
+    ]
+   }
+  },
+  "timed": {
+   "beef_steak": {
+    "answer": null,
+    "T_core_max": 71.52067553752443,
+    "maillard": 1
+   },
+   "french_fries": {
+    "answer": "french_fries",
+    "T_core_max": 100.0,
+    "maillard": 2
+   },
+   "boiled_potato": {
+    "answer": "boiled_potato",
+    "T_core_max": 100.0,
+    "maillard": 0
+   }
+  },
+  "nearest16": {
+   "Exp-14（1つ抜き）": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.5635191638551673
+     ],
+     [
+      "omelet",
+      2.3509342690706827
+     ],
+     [
+      "onsen_tamago",
+      2.5098082641338615
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      1.3826391126999669
+     ],
+     [
+      "onsen_tamago",
+      2.342232639422573
+     ],
+     [
+      "omelet",
+      2.597221782812439
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "whipped_cream",
+      2.3217682866941733
+     ],
+     [
+      "custard_pudding",
+      2.3849021931572314
+     ],
+     [
+      "milk_jelly",
+      3.1756727400665272
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.676272031397647
+     ],
+     [
+      "onsen_tamago",
+      1.99672160960335
+     ],
+     [
+      "omelet",
+      2.977600157911217
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      2.0437393469289042
+     ],
+     [
+      "omelet",
+      2.192609633825648
+     ],
+     [
+      "steamed_rice",
+      2.515464517627154
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "steamed_rice",
+      5.310453044204155
+     ],
+     [
+      "scrambled_eggs",
+      5.734137414450643
+     ],
+     [
+      "white_sauce",
+      5.79252754828916
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      2.7233457314476093
+     ],
+     [
+      "french_fries",
+      2.9291406956822192
+     ],
+     [
+      "pancake",
+      4.189623463556926
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "scrambled_eggs",
+      1.5994520833663295
+     ],
+     [
+      "omelet",
+      1.9054285197140501
+     ],
+     [
+      "onsen_tamago",
+      3.032927363936948
+     ]
+    ],
+    "pancake": [
+     [
+      "caramel_sauce",
+      4.050755849511337
+     ],
+     [
+      "pancake",
+      5.420381060155237
+     ],
+     [
+      "sauteed_onion",
+      5.555804517820795
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      3.332827630949988
+     ],
+     [
+      "steamed_rice",
+      3.3504486425063016
+     ],
+     [
+      "pancake",
+      3.8022895797763505
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "steamed_rice",
+      3.358358718140609
+     ],
+     [
+      "whipped_cream",
+      3.533692511471616
+     ],
+     [
+      "pancake",
+      3.7089026524780535
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.673997718918755
+     ],
+     [
+      "omelet",
+      2.3577368930327745
+     ],
+     [
+      "onsen_tamago",
+      2.5863463644587474
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      2.5092428931114816
+     ],
+     [
+      "sauteed_chicken",
+      2.714507113607134
+     ],
+     [
+      "beef_steak",
+      3.2050380313338533
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.6129618079956458
+     ],
+     [
+      "omelet",
+      2.629557061954963
+     ],
+     [
+      "sauteed_chicken",
+      3.386154037442071
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.996889396675508
+     ],
+     [
+      "omelet",
+      3.045623340025286
+     ],
+     [
+      "sauteed_onion",
+      3.2731794765535938
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "scrambled_eggs",
+      1.376710882399109
+     ],
+     [
+      "omelet",
+      2.0133648229458547
+     ],
+     [
+      "white_sauce",
+      3.1301758366966426
+     ]
+    ]
+   },
+   "(A) 変換なし＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.5632253490596846
+     ],
+     [
+      "onsen_tamago",
+      2.306783955122057
+     ],
+     [
+      "omelet",
+      2.5382577888902396
+     ]
+    ],
+    "omelet": [
+     [
+      "onsen_tamago",
+      2.583003345472339
+     ],
+     [
+      "scrambled_eggs",
+      2.880545688148795
+     ],
+     [
+      "chawanmushi",
+      2.890837891024834
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.0491918667908033
+     ],
+     [
+      "whipped_cream",
+      1.8674739145614503
+     ],
+     [
+      "milk_jelly",
+      2.0449323207554606
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "onsen_tamago",
+      1.8521514450090297
+     ],
+     [
+      "scrambled_eggs",
+      2.5006910469384334
+     ],
+     [
+      "chawanmushi",
+      2.7705321421322258
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      2.578231192539012
+     ],
+     [
+      "chawanmushi",
+      3.092333576009895
+     ],
+     [
+      "onsen_tamago",
+      3.3489512087689888
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      3.634961194794694
+     ],
+     [
+      "custard_pudding",
+      4.383257109463608
+     ],
+     [
+      "white_sauce",
+      4.899106539978571
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "beef_steak",
+      2.662119516675229
+     ],
+     [
+      "sauteed_onion",
+      2.6735313801061493
+     ],
+     [
+      "sauteed_chicken",
+      2.6813662487643914
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.212743885930905
+     ],
+     [
+      "boiled_potato",
+      2.241865283410306
+     ],
+     [
+      "french_fries",
+      2.8569851741514496
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      4.337081139673126
+     ],
+     [
+      "caramel_sauce",
+      4.459291277601104
+     ],
+     [
+      "sauteed_onion",
+      4.650859563251194
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      1.1373309680843295
+     ],
+     [
+      "whipped_cream",
+      1.6702552104035653
+     ],
+     [
+      "milk_jelly",
+      2.050243200433781
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "custard_pudding",
+      1.4799392121064603
+     ],
+     [
+      "whipped_cream",
+      1.5851095458892726
+     ],
+     [
+      "milk_jelly",
+      1.6934780395952245
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "onsen_tamago",
+      2.201500780644572
+     ],
+     [
+      "scrambled_eggs",
+      2.561188500125454
+     ],
+     [
+      "chawanmushi",
+      2.725275073461066
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      2.966342219645979
+     ],
+     [
+      "omelet",
+      3.76301413760692
+     ],
+     [
+      "scrambled_eggs",
+      4.14204756989423
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      2.991985956307401
+     ],
+     [
+      "omelet",
+      3.6421016612342587
+     ],
+     [
+      "scrambled_eggs",
+      3.9319603137213273
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      2.432195672646958
+     ],
+     [
+      "omelet",
+      3.347212281405871
+     ],
+     [
+      "sauteed_chicken",
+      3.6345999902000727
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      2.3371837420485355
+     ],
+     [
+      "scrambled_eggs",
+      2.4990749573463904
+     ],
+     [
+      "french_fries",
+      3.513749577333374
+     ]
+    ]
+   },
+   "(C) 一次式を1つ抜き＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "omelet",
+      1.6653247749287234
+     ],
+     [
+      "boiled_potato",
+      1.8215211226029693
+     ],
+     [
+      "french_fries",
+      2.817142772516788
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      2.2118953453852956
+     ],
+     [
+      "onsen_tamago",
+      2.3896047449769666
+     ],
+     [
+      "chawanmushi",
+      3.1366567016093208
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      2.21557858213632
+     ],
+     [
+      "whipped_cream",
+      2.3792626409645328
+     ],
+     [
+      "milk_jelly",
+      3.1192985760685015
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.8134202301991191
+     ],
+     [
+      "onsen_tamago",
+      1.9596800022904337
+     ],
+     [
+      "omelet",
+      3.1162666840583353
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.6905300379454942
+     ],
+     [
+      "onsen_tamago",
+      3.214839837814746
+     ],
+     [
+      "chawanmushi",
+      3.4046076406062173
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      4.007534788226004
+     ],
+     [
+      "white_sauce",
+      4.483185256834472
+     ],
+     [
+      "custard_pudding",
+      4.6968430971069965
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      1.5271368868300035
+     ],
+     [
+      "beef_steak",
+      2.34448985267929
+     ],
+     [
+      "sauteed_chicken",
+      2.3663214718769363
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.4220811803101525
+     ],
+     [
+      "boiled_potato",
+      1.9058197641778163
+     ],
+     [
+      "steamed_rice",
+      2.870376918083272
+     ]
+    ],
+    "pancake": [
+     [
+      "sauteed_onion",
+      3.352063462096823
+     ],
+     [
+      "pancake",
+      3.3951659866616906
+     ],
+     [
+      "french_fries",
+      4.0242690102547956
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      2.22554823867204
+     ],
+     [
+      "whipped_cream",
+      2.2799181849723893
+     ],
+     [
+      "milk_jelly",
+      3.1601606225448573
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.4781365306054017
+     ],
+     [
+      "custard_pudding",
+      1.9564210587586717
+     ],
+     [
+      "milk_jelly",
+      2.383727666555635
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.656423412441875
+     ],
+     [
+      "onsen_tamago",
+      2.042702147245159
+     ],
+     [
+      "white_sauce",
+      2.599666942980563
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      1.6300164386112044
+     ],
+     [
+      "omelet",
+      2.831614879519825
+     ],
+     [
+      "sauteed_onion",
+      3.208487879022305
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.6762301121353333
+     ],
+     [
+      "omelet",
+      2.6688334411974584
+     ],
+     [
+      "sauteed_onion",
+      3.471158137504754
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.2482151677683786
+     ],
+     [
+      "sauteed_chicken",
+      2.5509816025749896
+     ],
+     [
+      "omelet",
+      2.61654263710698
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.0927290049145804
+     ],
+     [
+      "boiled_potato",
+      2.5951089761932065
+     ],
+     [
+      "scrambled_eggs",
+      2.7041564935429414
+     ]
+    ]
+   },
+   "Exp-14（全体で当てはめ）": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.2784947218711713
+     ],
+     [
+      "onsen_tamago",
+      2.0845586970334122
+     ],
+     [
+      "omelet",
+      2.8397129081197416
+     ]
+    ],
+    "omelet": [
+     [
+      "omelet",
+      2.0012875294424695
+     ],
+     [
+      "boiled_potato",
+      2.257588316954845
+     ],
+     [
+      "scrambled_eggs",
+      2.3812132843934948
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.7213937660782614
+     ],
+     [
+      "whipped_cream",
+      1.986749571872922
+     ],
+     [
+      "milk_jelly",
+      2.6746116578858783
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.616838645237135
+     ],
+     [
+      "onsen_tamago",
+      1.6507421787633019
+     ],
+     [
+      "chawanmushi",
+      2.939325687988675
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.583823024221763
+     ],
+     [
+      "omelet",
+      1.8930926802064096
+     ],
+     [
+      "boiled_potato",
+      2.900953132791587
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "caramel_sauce",
+      4.661702105080136
+     ],
+     [
+      "milk_jelly",
+      5.643434104382118
+     ],
+     [
+      "pancake",
+      5.739085095077988
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      2.3962921402779283
+     ],
+     [
+      "french_fries",
+      2.896935982376822
+     ],
+     [
+      "pancake",
+      3.8834733806064454
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "scrambled_eggs",
+      1.6788861515792055
+     ],
+     [
+      "omelet",
+      1.7898124493872356
+     ],
+     [
+      "boiled_potato",
+      2.8034368639500395
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      4.119928996367139
+     ],
+     [
+      "sauteed_onion",
+      4.382550997093971
+     ],
+     [
+      "caramel_sauce",
+      4.459924647983143
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      2.914578740071669
+     ],
+     [
+      "custard_pudding",
+      3.3833054548139043
+     ],
+     [
+      "steamed_rice",
+      3.78370183933451
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      3.0693493541182373
+     ],
+     [
+      "custard_pudding",
+      3.4412125924503316
+     ],
+     [
+      "steamed_rice",
+      3.6817696181618675
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "onsen_tamago",
+      1.6829164195466417
+     ],
+     [
+      "scrambled_eggs",
+      1.7851866868137043
+     ],
+     [
+      "chawanmushi",
+      2.78898302598898
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "sauteed_chicken",
+      2.39297734950837
+     ],
+     [
+      "french_fries",
+      2.4181833733786475
+     ],
+     [
+      "beef_steak",
+      2.843539272677643
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.5472529802224482
+     ],
+     [
+      "sauteed_chicken",
+      2.794892648092808
+     ],
+     [
+      "sauteed_onion",
+      2.930677461371917
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.7883443097918996
+     ],
+     [
+      "omelet",
+      2.869762906248303
+     ],
+     [
+      "sauteed_onion",
+      3.2258369890524663
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "scrambled_eggs",
+      1.6195290818641002
+     ],
+     [
+      "omelet",
+      1.828855745550592
+     ],
+     [
+      "boiled_potato",
+      2.9113975686268168
+     ]
+    ]
+   },
+   "(B) 一次式を全体で＋他は全体": {
+    "scrambled_eggs": [
+     [
+      "omelet",
+      1.6733256721145986
+     ],
+     [
+      "boiled_potato",
+      1.9819339018806186
+     ],
+     [
+      "scrambled_eggs",
+      2.67145547501501
+     ]
+    ],
+    "omelet": [
+     [
+      "scrambled_eggs",
+      2.1380124192974983
+     ],
+     [
+      "onsen_tamago",
+      2.513544344851299
+     ],
+     [
+      "omelet",
+      2.940270668196657
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.9541803287861976
+     ],
+     [
+      "whipped_cream",
+      2.2076446830784895
+     ],
+     [
+      "milk_jelly",
+      2.9045272036165026
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "scrambled_eggs",
+      1.6926826944208726
+     ],
+     [
+      "onsen_tamago",
+      1.8254223650075156
+     ],
+     [
+      "chawanmushi",
+      3.098880788390106
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.3231861449964697
+     ],
+     [
+      "onsen_tamago",
+      2.498916989323462
+     ],
+     [
+      "white_sauce",
+      2.5268274095663488
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "caramel_sauce",
+      3.684918537974761
+     ],
+     [
+      "milk_jelly",
+      4.431419039649197
+     ],
+     [
+      "custard_pudding",
+      5.056605360488056
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      1.243271762684398
+     ],
+     [
+      "beef_steak",
+      2.634832667721968
+     ],
+     [
+      "sauteed_chicken",
+      2.7021691632639997
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.4739961776536428
+     ],
+     [
+      "boiled_potato",
+      1.7968011514661395
+     ],
+     [
+      "steamed_rice",
+      2.533064296802896
+     ]
+    ],
+    "pancake": [
+     [
+      "pancake",
+      3.1442458078359556
+     ],
+     [
+      "sauteed_onion",
+      3.4473422091537484
+     ],
+     [
+      "french_fries",
+      4.177652440126185
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "custard_pudding",
+      1.9086565978933363
+     ],
+     [
+      "whipped_cream",
+      2.067616067890573
+     ],
+     [
+      "milk_jelly",
+      2.851087079205907
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.2314782945124207
+     ],
+     [
+      "custard_pudding",
+      1.832039753806839
+     ],
+     [
+      "milk_jelly",
+      2.266205025760527
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.6885920340254965
+     ],
+     [
+      "onsen_tamago",
+      1.8760425003463002
+     ],
+     [
+      "white_sauce",
+      2.504359635953957
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "french_fries",
+      1.5147029248750374
+     ],
+     [
+      "omelet",
+      2.914606271625753
+     ],
+     [
+      "sauteed_onion",
+      2.98997044629016
+     ]
+    ],
+    "beef_steak": [
+     [
+      "french_fries",
+      1.5126313528264717
+     ],
+     [
+      "sauteed_onion",
+      2.988921532696572
+     ],
+     [
+      "omelet",
+      3.0001642036427603
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.066667138977251
+     ],
+     [
+      "omelet",
+      2.4849834110286446
+     ],
+     [
+      "sauteed_chicken",
+      2.5649753274884346
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.0609057314654768
+     ],
+     [
+      "boiled_potato",
+      2.3226018617924518
+     ],
+     [
+      "french_fries",
+      2.7716253721133848
+     ]
+    ]
+   },
+   "参考: 硬さ・なめらかさ＝本人の採点＋他は1つ抜き": {
+    "scrambled_eggs": [
+     [
+      "scrambled_eggs",
+      1.1325681276453137
+     ],
+     [
+      "onsen_tamago",
+      1.91587819134297
+     ],
+     [
+      "white_sauce",
+      2.530353597372511
+     ]
+    ],
+    "omelet": [
+     [
+      "omelet",
+      1.7103361454257482
+     ],
+     [
+      "boiled_potato",
+      1.8777724502918913
+     ],
+     [
+      "french_fries",
+      2.872042488971853
+     ]
+    ],
+    "custard_pudding": [
+     [
+      "custard_pudding",
+      1.0426590865949925
+     ],
+     [
+      "whipped_cream",
+      1.7999981342789444
+     ],
+     [
+      "milk_jelly",
+      1.9835026237216145
+     ]
+    ],
+    "chawanmushi": [
+     [
+      "onsen_tamago",
+      1.8499562414409
+     ],
+     [
+      "scrambled_eggs",
+      2.4990655918233005
+     ],
+     [
+      "chawanmushi",
+      2.769065089625898
+     ]
+    ],
+    "white_sauce": [
+     [
+      "scrambled_eggs",
+      1.627045199796593
+     ],
+     [
+      "onsen_tamago",
+      3.3489512087689888
+     ],
+     [
+      "white_sauce",
+      3.41540065239614
+     ]
+    ],
+    "caramel_sauce": [
+     [
+      "milk_jelly",
+      3.77000568801471
+     ],
+     [
+      "custard_pudding",
+      4.267662461777322
+     ],
+     [
+      "white_sauce",
+      5.000124487456367
+     ]
+    ],
+    "sauteed_onion": [
+     [
+      "sauteed_onion",
+      1.0201016193073018
+     ],
+     [
+      "french_fries",
+      2.4907550172229262
+     ],
+     [
+      "beef_steak",
+      2.9581971099912976
+     ]
+    ],
+    "steamed_rice": [
+     [
+      "omelet",
+      1.3811233998386447
+     ],
+     [
+      "boiled_potato",
+      1.8754561940286232
+     ],
+     [
+      "steamed_rice",
+      2.8503071087261396
+     ]
+    ],
+    "pancake": [
+     [
+      "sauteed_onion",
+      2.2878655135376795
+     ],
+     [
+      "pancake",
+      2.5500619816184016
+     ],
+     [
+      "french_fries",
+      3.716667738843562
+     ]
+    ],
+    "milk_jelly": [
+     [
+      "whipped_cream",
+      1.4368759275455598
+     ],
+     [
+      "custard_pudding",
+      1.5071445808820934
+     ],
+     [
+      "milk_jelly",
+      1.8650354270642175
+     ]
+    ],
+    "whipped_cream": [
+     [
+      "whipped_cream",
+      1.229866770211024
+     ],
+     [
+      "custard_pudding",
+      1.7861187170874981
+     ],
+     [
+      "milk_jelly",
+      1.9666895714858725
+     ]
+    ],
+    "onsen_tamago": [
+     [
+      "scrambled_eggs",
+      1.5999020386182625
+     ],
+     [
+      "onsen_tamago",
+      1.6871886934124054
+     ],
+     [
+      "chawanmushi",
+      2.725275073461066
+     ]
+    ],
+    "sauteed_chicken": [
+     [
+      "sauteed_chicken",
+      1.8353606920231609
+     ],
+     [
+      "beef_steak",
+      2.5044497963218153
+     ],
+     [
+      "french_fries",
+      2.5092428931114816
+     ]
+    ],
+    "beef_steak": [
+     [
+      "sauteed_chicken",
+      2.208122234236242
+     ],
+     [
+      "french_fries",
+      2.5395065850115364
+     ],
+     [
+      "beef_steak",
+      2.929231808396883
+     ]
+    ],
+    "french_fries": [
+     [
+      "french_fries",
+      1.1751660382035658
+     ],
+     [
+      "sauteed_chicken",
+      2.4449546828004367
+     ],
+     [
+      "sauteed_onion",
+      2.515824728145002
+     ]
+    ],
+    "boiled_potato": [
+     [
+      "omelet",
+      1.3884766009553322
+     ],
+     [
+      "boiled_potato",
+      2.1123842672519633
+     ],
+     [
+      "steamed_rice",
+      2.5545192151999485
+     ]
+    ]
+   }
+  }
+ }
+}

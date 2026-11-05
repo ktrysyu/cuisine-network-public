@@ -1,0 +1,17 @@
+{
+  "canonical": "cheese",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "cheese",
+  "n_recipes": 447,
+  "note": "種類不明。チェダー相当として採点",
+  "order": 174,
+  "reviewed": true
+}

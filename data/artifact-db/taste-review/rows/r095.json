@@ -1,0 +1,17 @@
+{
+  "canonical": "tomato sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 3
+  },
+  "ingredient": "tomato sauce",
+  "n_recipes": 865,
+  "note": "米国の缶入りトマトソース（無調味寄り）想定",
+  "order": 95,
+  "reviewed": true
+}

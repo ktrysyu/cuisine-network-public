@@ -1,0 +1,17 @@
+{
+  "canonical": "sugar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "white sugar",
+  "n_recipes": 1093,
+  "note": "",
+  "order": 73,
+  "reviewed": true
+}

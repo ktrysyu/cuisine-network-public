@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "cooked chicken",
+  "n_recipes": 295,
+  "note": "",
+  "order": 272,
+  "reviewed": true
+}

@@ -1,0 +1,407 @@
+<title>味覚スコア確認</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--changed:#FBF1DC;--low:#B4552D;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;
+    --kombu:#7DBFA2;--saffron:#E3AE4A;--changed:#2E2716;--low:#E08A63;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;
+  --kombu:#7DBFA2;--saffron:#E3AE4A;--changed:#2E2716;--low:#E08A63;
+}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:1040px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0 8px;text-wrap:balance}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+details.scale{margin:16px 0 0;background:var(--surface);border-radius:6px;padding:10px 14px;font-size:14px}
+details.scale summary{cursor:pointer;font-weight:500}
+details.scale table{border-collapse:collapse;margin-top:8px}
+details.scale td{padding:3px 12px 3px 0;vertical-align:top}
+details.scale td:first-child{font-family:var(--mono)}
+
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:12px;border-bottom:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;margin-top:16px}
+.progress{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:13px;font-variant-numeric:tabular-nums}
+.meter{width:140px;height:6px;border-radius:99px;background:var(--surface);overflow:hidden}
+.meter i{display:block;height:100%;background:var(--kombu);width:0}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:inherit;font-size:13px;border:1px solid var(--rule);background:transparent;color:var(--muted);border-radius:99px;padding:3px 12px;cursor:pointer}
+.tabs button[aria-pressed="true"]{border-color:var(--kombu);color:var(--kombu);font-weight:500}
+.tabs .n{font-family:var(--mono);font-size:11px;margin-left:4px}
+#q{font:inherit;font-size:14px;border:1px solid var(--rule);background:var(--card);color:var(--ink);border-radius:6px;padding:5px 10px;min-width:0;flex:1 1 160px;max-width:260px}
+.status{font-size:12px;color:var(--muted);margin-left:auto}
+button:focus-visible,select:focus-visible,input:focus-visible{outline:2px solid var(--saffron);outline-offset:2px}
+
+.tablewrap{overflow-x:auto;margin-top:8px}
+table.rows{border-collapse:collapse;width:100%;min-width:820px}
+.rows th{font-size:13px;font-weight:700;color:var(--ink);text-align:left;padding:8px 6px;border-bottom:2px solid var(--rule);white-space:nowrap;position:sticky;top:var(--bar-h,0px);z-index:4;background:var(--bg)}
+.rows th .en{display:block;font-weight:400;font-size:10.5px}
+/* 広い画面は列見出しを上部バーの直下に固定。狭い画面は表を縦スクロール枠にして、その中で固定する */
+@media (max-width:879px){
+  .tablewrap{max-height:78vh;overflow:auto}
+  .rows th{top:0}
+}
+@media (min-width:880px){
+  .tablewrap{overflow:visible}
+}
+.rows th.ax{text-align:center;width:58px}
+.rows td{padding:8px 6px;border-bottom:1px solid var(--rule);vertical-align:top}
+.rows tr.done td{background:color-mix(in srgb,var(--kombu) 5%,transparent)}
+.name{font-weight:500}
+.en{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+.sub{font-family:var(--mono);font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums}
+.note{font-size:12.5px;color:var(--muted);max-width:34ch}
+.pill{display:inline-block;font-family:var(--mono);font-size:10.5px;padding:0 7px;border-radius:99px;border:1px solid var(--rule);color:var(--muted)}
+.pill.low{border-color:var(--low);color:var(--low)}
+.pill.high{border-color:var(--kombu);color:var(--kombu)}
+td.ax{text-align:center}
+td.ax select{font-family:var(--mono);font-size:14px;font-variant-numeric:tabular-nums;width:48px;padding:3px 2px;border:1px solid var(--rule);border-radius:5px;background:var(--card);color:var(--ink);text-align:center}
+td.ax.changed select{background:var(--changed);border-color:var(--saffron);font-weight:500}
+td.ax .was{display:block;font-family:var(--mono);font-size:10px;color:var(--saffron);height:14px}
+.ok{display:flex;align-items:center;gap:6px;font-size:13px;white-space:nowrap;cursor:pointer}
+.ok input{width:16px;height:16px;accent-color:var(--kombu)}
+.empty{padding:32px 0;color:var(--muted);text-align:center}
+.rows tr.grp td{background:var(--surface);padding:10px 8px;font-size:13.5px;border-bottom:1px solid var(--rule)}
+.grp-head{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.grp-head b{font-weight:700}
+.grp-head .axes{color:var(--low)}
+.rows tr.gline td{border-bottom:1px solid var(--rule)}
+.rows tr.gline.done td{background:color-mix(in srgb,var(--kombu) 5%,transparent)}
+.rows tr.gmember td{background:var(--surface)}
+.members{font-size:12px;color:var(--muted);margin-top:2px;max-width:40ch}
+.gcount{font-family:var(--mono);font-size:11px;color:var(--kombu);margin-left:6px}
+td.ax.mixed select{box-shadow:0 0 0 2px var(--low)}
+td.ax .mix{display:block;font-size:10px;color:var(--low);height:14px}
+.expand{font:inherit;font-size:12px;border:0;background:none;color:var(--kombu);padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;margin-top:4px}
+.sug{display:flex;flex-wrap:wrap;gap:4px 10px;align-items:baseline;margin-top:6px;font-size:13px;line-height:1.6}
+.sug .ax-name{font-weight:700;min-width:1.5em}
+.sug .bucket{color:var(--muted)}
+.sug .bucket b{font-family:var(--mono);color:var(--ink);font-weight:500;margin-right:2px}
+.sug .why{color:var(--kombu)}
+.sug button{font:inherit;font-size:12px;border:1px solid var(--kombu);background:var(--card);color:var(--kombu);border-radius:99px;padding:1px 10px;cursor:pointer}
+.sug button:hover{background:var(--kombu);color:var(--bg)}
+.grp-head button{font:inherit;font-size:12px;margin-left:auto;border:1px solid var(--rule);background:var(--card);color:var(--muted);border-radius:99px;padding:2px 10px;cursor:pointer}
+.grp-head button:hover{color:var(--ink);border-color:var(--ink)}
+td.ax.odd select{box-shadow:0 0 0 2px var(--low)}
+.flag{display:inline-block;margin-left:6px;font-family:var(--mono);font-size:10.5px;padding:0 7px;border-radius:99px;background:var(--low);color:var(--bg)}
+.help{font-size:13px;color:var(--muted);margin-top:10px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Cuisine Network · Exp-02</div>
+  <h1>味覚スコアの確認</h1>
+  <p class="lead">よく使われる食材 303 個に、Claude が甘・塩・酸・苦・旨・辛を 0〜5 で下書きしました。違うと思う値を直して、見終わった行に「確認済み」を付けてください。直した値は自動で保存され、黄色で表示されます。「自信：低」の行から見るのがおすすめです。</p>
+  <details class="scale">
+    <summary>採点の基準</summary>
+    <p>その食材を単体で、料理で普通に使う形で口にしたときの味です。加熱して使うもの（玉ねぎ・肉・米）は加熱後、生で使うもの（レモン汁・薬味のねぎ）は生で見ます。香り・脂のコク・食感は6軸に入れていません。</p>
+    <table>
+      <tr><td>0</td><td>ほぼ感じない（小麦粉、水）</td></tr>
+      <tr><td>1</td><td>かすかに感じる（米の甘み）</td></tr>
+      <tr><td>2</td><td>はっきりあるが脇役（にんじんの甘み）</td></tr>
+      <tr><td>3</td><td>目立つ（生姜の辛み、ひき肉の旨み）</td></tr>
+      <tr><td>4</td><td>強い（醤油の旨み、黒胡椒の辛み）</td></tr>
+      <tr><td>5</td><td>その味が主役（砂糖の甘、塩の塩、レモン汁の酸）</td></tr>
+    </table>
+  </details>
+</header>
+
+<div class="bar">
+  <div class="progress"><span class="meter"><i id="meter"></i></span><span id="count">— / 303 確認済み</span></div>
+  <div class="tabs" role="group" aria-label="表示する行">
+    <button type="button" data-f="group" aria-pressed="false">まとめて確認<span class="n" id="n-group"></span></button>
+    <button type="button" data-f="low" aria-pressed="true">自信：低<span class="n" id="n-low"></span></button>
+    <button type="button" data-f="medium" aria-pressed="false">自信：中<span class="n" id="n-medium"></span></button>
+    <button type="button" data-f="mismatch" aria-pressed="false">不一致<span class="n" id="n-mismatch"></span></button>
+    <button type="button" data-f="todo" aria-pressed="false">未確認<span class="n" id="n-todo"></span></button>
+    <button type="button" data-f="changed" aria-pressed="false">直した行<span class="n" id="n-changed"></span></button>
+    <button type="button" data-f="all" aria-pressed="false">すべて<span class="n" id="n-all"></span></button>
+  </div>
+  <input id="q" type="search" placeholder="食材名で絞り込み（日本語・英語）" aria-label="食材名で絞り込み">
+  <span class="status" id="status" aria-live="polite">読み込み中…</span>
+</div>
+
+<div class="tablewrap">
+<table class="rows">
+  <thead><tr>
+    <th>食材</th><th class="ax">甘<span class="en">sweet</span></th><th class="ax">塩<span class="en">salty</span></th><th class="ax">酸<span class="en">sour</span></th><th class="ax">苦<span class="en">bitter</span></th><th class="ax">旨<span class="en">umami</span></th><th class="ax">辛<span class="en">spicy</span></th><th>メモ</th><th>確認</th>
+  </tr></thead>
+  <tbody id="tbody"></tbody>
+</table>
+</div>
+<p class="empty" id="empty" hidden></p>
+<p class="help">表は「使われているレシピ数」の多い順です。値の下の小さな数字は Claude の下書きの値です。「不一致」には、同じ食材の表記違い（例：玉ねぎ・紫玉ねぎ・黄玉ねぎ）の間で値が食い違っているものを出します。あなたが直した味が仲間と1以上ずれているか、仲間どうしで2以上ずれていると表示されます。「まとめて確認」では、同じ食材の表記違い（例：玉ねぎ・紫玉ねぎ・黄玉ねぎ）を1行にまとめます。その行で値を変えると仲間全員に入り、「まとめて確認済み」で全員が確認済みになります。仲間の中で値が違う味は赤い枠と「混在」で示します。「個別に見る」で1件ずつ直すこともできます。仲間がいない食材は普通の行で出ます。「不一致」の各グループには、味ごとに「どの値にどの食材があるか」と、揃える先の値（あなたが直した値、なければ仲間で一番多い値）を出します。「全部○に揃える」を押すと仲間全員がその値になり、確認済みになります。違っていてよい場合は「この違いは意図どおり」を押すと消えます（値を変えるとまた判定されます）。</p>
+</div>
+
+<script>
+(function(){
+  const AX=['sweet','salty','sour','bitter','umami','spicy'];
+  const JA={"salt": "塩", "onions": "玉ねぎ", "olive oil": "オリーブオイル", "water": "水", "garlic": "にんにく", "sugar": "砂糖", "garlic cloves": "にんにく（片）", "butter": "バター", "ground black pepper": "黒胡椒（挽いたもの）", "all-purpose flour": "中力粉（オールパーパス）", "pepper": "胡椒", "vegetable oil": "サラダ油（植物油）", "eggs": "卵", "soy sauce": "醤油", "kosher salt": "コーシャーソルト（粗塩）", "green onions": "青ねぎ", "tomatoes": "トマト", "large eggs": "卵（Lサイズ）", "carrots": "にんじん", "unsalted butter": "無塩バター", "extra-virgin olive oil": "エクストラバージンオリーブオイル", "ground cumin": "クミンパウダー", "black pepper": "黒胡椒", "milk": "牛乳", "chili powder": "チリパウダー", "oil": "油", "red bell pepper": "赤パプリカ", "purple onion": "紫玉ねぎ", "scallions": "青ねぎ（スキャリオン）", "grated parmesan cheese": "粉チーズ（パルメザン）", "sesame oil": "ごま油", "corn starch": "コーンスターチ", "ginger": "生姜", "baking powder": "ベーキングパウダー", "jalapeno chilies": "ハラペーニョ", "dried oregano": "乾燥オレガノ", "chopped cilantro fresh": "パクチー（刻み）", "fresh lemon juice": "レモン汁（生搾り）", "diced tomatoes": "カットトマト（缶）", "fresh parsley": "パセリ（生）", "minced garlic": "にんにく（みじん切り）", "chicken broth": "チキンブロス", "sour cream": "サワークリーム", "cayenne pepper": "カイエンペッパー", "brown sugar": "ブラウンシュガー", "fresh ginger": "生姜（生）", "cooking spray": "料理用オイルスプレー", "shallots": "エシャロット", "garlic powder": "ガーリックパウダー", "lime": "ライム", "lemon juice": "レモン汁", "fresh lime juice": "ライム汁（生搾り）", "flour": "小麦粉", "honey": "はちみつ", "vanilla extract": "バニラエッセンス", "paprika": "パプリカパウダー", "chopped onion": "玉ねぎ（みじん切り）", "fish sauce": "魚醤（ナンプラー）", "ground cinnamon": "シナモンパウダー", "avocado": "アボカド", "canola oil": "キャノーラ油", "dry white wine": "辛口白ワイン", "lemon": "レモン", "rice vinegar": "米酢", "yellow onion": "黄玉ねぎ", "green bell pepper": "ピーマン", "cilantro leaves": "パクチーの葉", "tomato paste": "トマトペースト", "heavy cream": "生クリーム（乳脂肪高め）", "cilantro": "パクチー", "fresh basil": "バジル（生）", "boneless skinless chicken breasts": "鶏むね肉（皮なし骨なし）", "flat leaf parsley": "イタリアンパセリ", "white sugar": "白砂糖", "lime juice": "ライム汁", "chicken stock": "チキンストック", "bay leaves": "ローリエ", "potatoes": "じゃがいも", "chicken": "鶏肉", "corn tortillas": "コーントルティーヤ", "salsa": "サルサ", "cumin": "クミン", "freshly ground pepper": "挽きたての胡椒", "ground turmeric": "ターメリックパウダー", "baking soda": "重曹", "sea salt": "海塩", "cumin seed": "クミンシード", "garam masala": "ガラムマサラ", "shrimp": "えび", "black beans": "黒いんげん豆", "zucchini": "ズッキーニ", "ground beef": "牛ひき肉", "dried thyme": "乾燥タイム", "large garlic cloves": "にんにく（大きめの片）", "flour tortillas": "小麦粉トルティーヤ", "tomato sauce": "トマトソース", "buttermilk": "バターミルク", "plum tomatoes": "プラムトマト", "coconut milk": "ココナッツミルク", "granulated sugar": "グラニュー糖", "fresh cilantro": "パクチー（生）", "bay leaf": "ローリエ（1枚）", "celery": "セロリ", "crushed red pepper": "粗挽き唐辛子", "chopped cilantro": "パクチー（刻み）", "chicken breasts": "鶏むね肉", "mayonaise": "マヨネーズ", "shredded cheddar cheese": "チェダーチーズ（シュレッド）", "cucumber": "きゅうり", "green chilies": "青唐辛子", "ground coriander": "コリアンダーパウダー", "whole milk": "牛乳（全乳）", "red wine vinegar": "赤ワインビネガー", "tumeric": "ターメリック", "cinnamon": "シナモン", "curry powder": "カレー粉", "worcestershire sauce": "ウスターソース", "white onion": "白玉ねぎ", "ground ginger": "ジンジャーパウダー", "sesame seeds": "ごま", "hot sauce": "ホットソース", "red pepper flakes": "赤唐辛子フレーク", "cinnamon sticks": "シナモンスティック", "red chili peppers": "赤唐辛子", "bacon": "ベーコン", "whipping cream": "ホイップ用生クリーム", "boneless skinless chicken breast halves": "鶏むね肉（半身・皮なし骨なし）", "peanut oil": "ピーナッツ油", "ground nutmeg": "ナツメグパウダー", "clove": "クローブ", "parmesan cheese": "パルメザンチーズ", "dried basil": "乾燥バジル", "peeled fresh ginger": "生姜（皮むき）", "coarse salt": "粗塩", "mushrooms": "マッシュルーム", "warm water": "ぬるま湯", "large egg yolks": "卵黄（Lサイズ）", "balsamic vinegar": "バルサミコ酢", "celery ribs": "セロリの茎", "cream cheese": "クリームチーズ", "white vinegar": "ホワイトビネガー", "egg yolks": "卵黄", "capers": "ケッパー", "ground red pepper": "赤唐辛子パウダー", "onion powder": "オニオンパウダー", "dijon mustard": "ディジョンマスタード", "rice": "米", "cold water": "冷水", "crushed red pepper flakes": "赤唐辛子フレーク（粗挽き）", "mirin": "みりん", "fresh basil leaves": "バジルの葉（生）", "eggplant": "なす", "powdered sugar": "粉砂糖", "large egg whites": "卵白（Lサイズ）", "cooking oil": "料理用油", "lime wedges": "くし切りライム", "shredded mozzarella cheese": "モッツァレラチーズ（シュレッド）", "fat free less sodium chicken broth": "チキンブロス（無脂肪・減塩）", "ground pork": "豚ひき肉", "sliced green onions": "青ねぎ（小口切り）", "cayenne": "カイエン", "mozzarella cheese": "モッツァレラチーズ", "medium shrimp": "えび（中）", "raisins": "レーズン", "red pepper": "赤唐辛子／赤パプリカ", "coriander": "コリアンダー", "sauce": "ソース", "finely chopped onion": "玉ねぎ（細かいみじん切り）", "oyster sauce": "オイスターソース", "sweet potatoes": "さつまいも", "beansprouts": "もやし", "black peppercorns": "黒胡椒（ホール）", "crushed tomatoes": "クラッシュトマト（缶）", "egg whites": "卵白", "cheese": "チーズ", "fresh rosemary": "ローズマリー（生）", "oregano": "オレガノ", "white pepper": "白胡椒", "cherry tomatoes": "ミニトマト", "leeks": "リーキ（西洋ねぎ）", "ketchup": "ケチャップ", "hoisin sauce": "海鮮醤", "chopped celery": "セロリ（刻み）", "low sodium soy sauce": "減塩醤油", "cheddar cheese": "チェダーチーズ", "light brown sugar": "ブラウンシュガー（ライト）", "cabbage": "キャベツ", "fresh mint": "ミント（生）", "large shrimp": "えび（大）", "vegetable broth": "野菜ブロス", "cracked black pepper": "粗挽き黒胡椒", "spring onions": "葉玉ねぎ（スプリングオニオン）", "peanuts": "ピーナッツ", "chickpeas": "ひよこ豆", "confectioners sugar": "粉砂糖（コンフェクショナーズ）", "coriander seeds": "コリアンダーシード", "italian seasoning": "イタリアンシーズニング", "fresh oregano": "オレガノ（生）", "bell pepper": "パプリカ（ピーマン類）", "cooked rice": "ご飯（炊いた米）", "lean ground beef": "牛ひき肉（赤身）", "ground pepper": "挽いた胡椒", "low salt chicken broth": "チキンブロス（減塩）", "frozen peas": "冷凍グリーンピース", "beef broth": "ビーフブロス", "active dry yeast": "ドライイースト", "cajun seasoning": "ケイジャンシーズニング", "chopped fresh thyme": "タイム（生・刻み）", "green pepper": "ピーマン（青）", "ground cloves": "クローブパウダー", "cornmeal": "コーンミール", "white wine": "白ワイン", "spinach": "ほうれん草", "ground allspice": "オールスパイス", "lemongrass": "レモングラス", "plain yogurt": "プレーンヨーグルト", "thyme": "タイム", "feta cheese crumbles": "フェタチーズ（崩したもの）", "hot water": "お湯", "orange": "オレンジ", "toasted sesame oil": "焙煎ごま油", "long-grain rice": "長粒米", "parmigiano reggiano cheese": "パルミジャーノ・レッジャーノ", "fennel seeds": "フェンネルシード", "ricotta cheese": "リコッタチーズ", "white wine vinegar": "白ワインビネガー", "boiling water": "熱湯", "cider vinegar": "りんご酢", "ground white pepper": "白胡椒（挽いたもの）", "pinenuts": "松の実", "light soy sauce": "薄口醤油", "chopped garlic": "にんにく（刻み）", "fresh thyme": "タイム（生）", "parsley": "パセリ", "sake": "酒", "smoked paprika": "スモークパプリカ", "boneless chicken skinless thigh": "鶏もも肉（皮なし骨なし）", "grated lemon zest": "レモンの皮（すりおろし）", "spaghetti": "スパゲッティ", "green beans": "さやいんげん", "yellow corn meal": "コーンミール（黄）", "chile pepper": "唐辛子", "low sodium chicken broth": "チキンブロス（減塩）", "fresh ginger root": "生姜（根）", "orange juice": "オレンジジュース", "half & half": "ハーフ＆ハーフ（牛乳と生クリームの混合）", "chicken thighs": "鶏もも肉", "sweet onion": "甘玉ねぎ", "chopped parsley": "パセリ（刻み）", "shiitake": "しいたけ", "corn": "とうもろこし", "basmati rice": "バスマティライス", "shredded monterey jack cheese": "モントレージャックチーズ（シュレッド）", "tomatillos": "トマティーヨ", "chiles": "唐辛子（チレ）", "pasta": "パスタ", "dark brown sugar": "ブラウンシュガー（ダーク）", "chopped fresh mint": "ミント（生・刻み）", "vinegar": "酢", "mustard seeds": "マスタードシード", "dark soy sauce": "老抽（中国のたまり醤油）", "vanilla": "バニラ", "dry red wine": "辛口赤ワイン", "ghee": "ギー", "bread crumbs": "パン粉", "hot pepper sauce": "ホットペッパーソース", "green chile": "青唐辛子（チレ）", "tortilla chips": "トルティーヤチップス", "pork": "豚肉", "serrano chile": "セラーノ唐辛子", "chopped tomatoes": "トマト（刻み）", "sriracha": "シラチャーソース", "cooked chicken": "加熱済み鶏肉", "enchilada sauce": "エンチラーダソース", "toasted sesame seeds": "炒りごま", "arborio rice": "アルボリオ米（リゾット用）", "yellow bell pepper": "黄パプリカ", "dry bread crumbs": "乾燥パン粉", "fresh parmesan cheese": "パルメザンチーズ（生）", "fine sea salt": "海塩（細粒）", "fresh coriander": "パクチー（生）", "prosciutto": "生ハム（プロシュート）", "basil": "バジル", "chopped pecans": "ピーカンナッツ（刻み）", "garlic paste": "にんにくペースト", "radishes": "ラディッシュ", "corn kernels": "コーン（粒）", "juice": "果汁", "long grain white rice": "長粒米（白）", "saffron threads": "サフラン", "creole seasoning": "クレオールシーズニング", "melted butter": "溶かしバター", "beef": "牛肉", "fresh mushrooms": "マッシュルーム（生）", "sweetened condensed milk": "加糖練乳", "taco seasoning": "タコスシーズニング", "baguette": "バゲット", "romaine lettuce": "ロメインレタス", "apple cider vinegar": "りんご酢（アップルサイダー）", "chopped green bell pepper": "ピーマン（刻み）", "feta cheese": "フェタチーズ", "mango": "マンゴー", "okra": "オクラ"};
+  const CONF={high:'自信：高',medium:'自信：中',low:'自信：低'};
+  const AXJA={sweet:'甘',salty:'塩',sour:'酸',bitter:'苦',umami:'旨',spicy:'辛'};
+  const okSig=new Map();
+  const tbody=document.getElementById('tbody'),statusEl=document.getElementById('status');
+  const emptyEl=document.getElementById('empty');
+  let rows=new Map(), filter='low', query='', db=null, readOnly=false;
+  const chains=new Map();
+
+  try{ const f=localStorage.getItem('taste-filter'); if(f) filter=f; }catch(e){}
+  // 上部バーの高さに合わせて列見出しの固定位置を決める
+  const bar=document.querySelector('.bar');
+  function setBarH(){ document.documentElement.style.setProperty('--bar-h',bar.offsetHeight+'px'); }
+  setBarH();
+  if(window.ResizeObserver) new ResizeObserver(setBarH).observe(bar); else window.addEventListener('resize',setBarH);
+
+  function current(r){ return r.mine||r.draft; }
+  function isChanged(r){ const m=r.mine; if(!m) return false; return AX.some(a=>m[a]!==r.draft[a]); }
+
+  // 同じ canonical（表記違い）どうしの食い違いを探す
+  function esc(t){ return String(t).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function gid(k){ return 'g_'+k.replace(/[^A-Za-z0-9_\-.~:@+]/g,'_'); }
+  function sigOf(ms){ return ms.map(r=>AX.map(a=>current(r)[a]).join('')).join('|'); }
+  function mode(vals){ const c={}; vals.forEach(v=>c[v]=(c[v]||0)+1); let best=vals[0],n=0; for(const k in c){ if(c[k]>n){n=c[k];best=Number(k);} } return best; }
+  function mismatches(){
+    const g=new Map();
+    rows.forEach(r=>{ const k=r.canonical||r.ingredient; if(!g.has(k)) g.set(k,[]); g.get(k).push(r); });
+    const out=[];
+    g.forEach((ms,k)=>{
+      if(ms.length<2) return;
+      ms.sort((a,b)=>a.order-b.order);
+      const axes=AX.filter(a=>{
+        const vals=ms.map(r=>current(r)[a]); const spread=Math.max(...vals)-Math.min(...vals);
+        const touched=ms.some(r=>r.mine&&r.mine[a]!==r.draft[a]);
+        return spread>=2||(spread>=1&&touched);
+      });
+      if(!axes.length) return;
+      if(okSig.get(gid(k))===sigOf(ms)) return;
+      const odd={};
+      axes.forEach(a=>{ const m=mode(ms.map(r=>current(r)[a])); ms.forEach(r=>{ if(current(r)[a]!==m){ (odd[r.id]=odd[r.id]||new Set()).add(a); } }); });
+      const lead=ms.find(r=>r.ingredient===k)||ms[0];
+      // 揃える先: あなたが直した行の値（多いほう）。直した行がなければ仲間で一番多い値
+      const sug=axes.map(a=>{
+        const edited=ms.filter(r=>r.mine&&r.mine[a]!==r.draft[a]);
+        const target=edited.length?mode(edited.map(r=>r.mine[a])):mode(ms.map(r=>current(r)[a]));
+        const buckets=new Map();
+        ms.forEach(r=>{ const v=current(r)[a]; if(!buckets.has(v)) buckets.set(v,[]); buckets.get(v).push(JA[r.ingredient]||r.ingredient); });
+        return {axis:a,target:target,byUser:edited.length>0,buckets:[...buckets.entries()].sort((x,y)=>(y[0]===target)-(x[0]===target)||y[1].length-x[1].length)};
+      });
+      out.push({key:k,label:(JA[lead.ingredient]||lead.ingredient)+' の仲間',members:ms,axes:axes,odd:odd,sug:sug});
+    });
+    return out;
+  }
+  const expanded=new Set();
+  function allGroups(){
+    const g=new Map();
+    rows.forEach(r=>{ const k=r.canonical||r.ingredient; if(!g.has(k)) g.set(k,[]); g.get(k).push(r); });
+    return [...g.entries()].map(([k,ms])=>{ ms.sort((a,b)=>a.order-b.order); return {key:k,members:ms,order:ms[0].order}; }).sort((a,b)=>a.order-b.order);
+  }
+  function groupLine(g){
+    const ms=g.members, id=gid(g.key), lead=ms.find(r=>r.ingredient===g.key)||ms[0];
+    const done=ms.every(r=>r.reviewed);
+    let h='<tr class="gline'+(done?' done':'')+'" data-g="'+id+'">';
+    h+='<td><div class="name">'+esc(JA[lead.ingredient]||lead.ingredient)+'<span class="gcount">'+ms.length+'件</span></div><div class="members">'+esc(ms.map(r=>JA[r.ingredient]||r.ingredient).join('・'))+'</div>';
+    h+='<button type="button" class="expand" data-g="'+id+'">'+(expanded.has(id)?'個別の行を閉じる':'個別に見る')+'</button></td>';
+    AX.forEach(a=>{
+      const vals=ms.map(r=>current(r)[a]); const m=mode(vals); const mixed=Math.max(...vals)!==Math.min(...vals);
+      h+='<td class="ax'+(mixed?' mixed':'')+'"><select data-ax="'+a+'" aria-label="'+a+'"'+(readOnly?' disabled':'')+'>';
+      for(let v=0;v<=5;v++) h+='<option'+(v===m?' selected':'')+'>'+v+'</option>';
+      h+='</select><span class="mix">'+(mixed?'混在 '+[...new Set(vals)].sort().join('/'):'')+'</span></td>';
+    });
+    h+='<td class="note">値を変えると '+ms.length+' 件すべてに入ります</td>';
+    h+='<td><label class="ok"><input type="checkbox"'+(done?' checked':'')+(readOnly?' disabled':'')+'>まとめて確認済み</label></td></tr>';
+    return h;
+  }
+  function oddMap(list){ const m=new Map(); list.forEach(g=>{ Object.keys(g.odd).forEach(id=>m.set(id,g.odd[id])); g.members.forEach(r=>{ if(!m.has(r.id)) m.set(r.id,new Set()); }); }); return m; }
+
+  function visible(){
+    return [...rows.values()].filter(r=>{
+      if(!matchesQ(r)) return false;
+      if(filter==='low') return r.confidence==='low';
+      if(filter==='medium') return r.confidence==='medium';
+      if(filter==='todo') return !r.reviewed;
+      if(filter==='changed') return isChanged(r);
+      return true;
+    }).sort((a,b)=>a.order-b.order);
+  }
+
+  function counts(mm){
+    const all=[...rows.values()];
+    document.getElementById('n-mismatch').textContent=(mm||mismatches()).length;
+    { const gs=allGroups(); document.getElementById('n-group').textContent=gs.filter(g=>!g.members.every(r=>r.reviewed)).length+'/'+gs.length; }
+    const done=all.filter(r=>r.reviewed).length;
+    document.getElementById('count').textContent=done+' / '+all.length+' 確認済み';
+    document.getElementById('meter').style.width=(all.length?done/all.length*100:0)+'%';
+    document.getElementById('n-low').textContent=all.filter(r=>r.confidence==='low').length;
+    document.getElementById('n-medium').textContent=all.filter(r=>r.confidence==='medium').length;
+    document.getElementById('n-todo').textContent=all.length-done;
+    document.getElementById('n-changed').textContent=all.filter(isChanged).length;
+    document.getElementById('n-all').textContent=all.length;
+  }
+
+  function rowHtml(r,odd){
+    const cur=current(r);
+    let h='<tr data-id="'+r.id+'" class="'+(r.reviewed?'done':'')+'">';
+    h+='<td><div class="name"></div><div class="en"></div><div class="sub">'+r.n_recipes.toLocaleString()+' レシピ</div><span class="pill '+r.confidence+'">'+CONF[r.confidence]+'</span>'+(odd?'<span class="flag">仲間と不一致</span>':'')+'</td>';
+    AX.forEach(a=>{
+      const ch=cur[a]!==r.draft[a];
+      h+='<td class="ax'+(ch?' changed':'')+(odd&&odd.has(a)?' odd':'')+'"><select data-ax="'+a+'" aria-label="'+a+'"'+(readOnly?' disabled':'')+'>';
+      for(let v=0;v<=5;v++) h+='<option'+(v===cur[a]?' selected':'')+'>'+v+'</option>';
+      h+='</select><span class="was">'+(ch?'下書き '+r.draft[a]:'')+'</span></td>';
+    });
+    h+='<td class="note"></td>';
+    h+='<td><label class="ok"><input type="checkbox"'+(r.reviewed?' checked':'')+(readOnly?' disabled':'')+'>確認済み</label></td></tr>';
+    return h;
+  }
+
+  function fill(tr,r){
+    tr.querySelector('.name').textContent=JA[r.ingredient]||r.ingredient;
+    tr.querySelector('.en').textContent=r.ingredient;
+    tr.querySelector('.note').textContent=r.note||'';
+  }
+  function matchesQ(r){
+    const q=query.trim().toLowerCase(); if(!q) return true;
+    return r.ingredient.toLowerCase().includes(q)||(r.canonical||'').toLowerCase().includes(q)||(JA[r.ingredient]||'').includes(q);
+  }
+  function render(){
+    const mm=mismatches(), odd=oddMap(mm);
+    let html='', list=[];
+    if(filter==='group'){
+      allGroups().filter(g=>g.members.some(matchesQ)).forEach(g=>{
+        if(g.members.length===1){ html+=rowHtml(g.members[0],odd.get(g.members[0].id)); list.push(g.members[0]); return; }
+        html+=groupLine(g);
+        if(expanded.has(gid(g.key))) g.members.forEach(r=>{ html+=rowHtml(r,odd.get(r.id)).replace('<tr data-id=','<tr data-member="1" data-id='); list.push(r); });
+      });
+      tbody.innerHTML=html;
+      tbody.querySelectorAll('tr[data-member]').forEach(tr=>tr.classList.add('gmember'));
+    }else if(filter==='mismatch'){
+      mm.filter(g=>g.members.some(matchesQ)).forEach(g=>{
+        html+='<tr class="grp"><td colspan="9"><div class="grp-head"><b></b><span class="axes">食い違い：'+g.axes.map(a=>AXJA[a]).join('・')+'</span>'+(readOnly?'':'<button type="button" class="dismiss" data-g="'+gid(g.key)+'">この違いは意図どおり</button>')+'</div>';
+        g.sug.forEach(x=>{
+          html+='<div class="sug"><span class="ax-name">'+AXJA[x.axis]+'</span>';
+          html+=x.buckets.map(([v,names])=>'<span class="bucket"><b>'+v+'</b>'+esc(names.join('・'))+'</span>').join('<span class="bucket">／</span>');
+          html+='<span class="why">→ '+(x.byUser?'あなたが直した値は '+x.target:'仲間で一番多いのは '+x.target)+'</span>';
+          if(!readOnly) html+='<button type="button" class="align" data-g="'+gid(g.key)+'" data-a="'+x.axis+'" data-v="'+x.target+'">全部 '+x.target+' に揃える</button>';
+          html+='</div>';
+        });
+        html+='</td></tr>';
+        g.members.forEach(r=>{ html+=rowHtml(r,odd.get(r.id)); list.push(r); });
+      });
+      tbody.innerHTML=html;
+      const heads=tbody.querySelectorAll('tr.grp b'); let i=0;
+      mm.filter(g=>g.members.some(matchesQ)).forEach(g=>{ heads[i++].textContent=g.label; });
+    }else{
+      list=visible();
+      tbody.innerHTML=list.map(r=>rowHtml(r,odd.get(r.id))).join('');
+    }
+    list.forEach(r=>fill(tbody.querySelector('tr[data-id="'+r.id+'"]'),r));
+    emptyEl.hidden=list.length>0 || rows.size===0;
+    emptyEl.textContent=filter==='changed'?'まだ直した行はありません。':filter==='mismatch'?'食い違いは見つかりませんでした。':'該当する行はありません。';
+    counts(mm);
+  }
+
+  function write(id,patch){
+    if(!db||readOnly) return;
+    const prev=chains.get(id)||Promise.resolve();
+    const next=prev.then(()=>db.collection('rows').doc(id).update(patch)).then(()=>{
+      statusEl.textContent='保存しました';
+    }).catch(e=>{
+      if(e&&e.code==='invalid_argument'){ readOnly=true; statusEl.textContent='この表示では保存できません'; render(); }
+      else statusEl.textContent='保存できませんでした。もう一度変更してください';
+    });
+    chains.set(id,next);
+    statusEl.textContent='保存中…';
+  }
+
+  tbody.addEventListener('change',e=>{
+    const tr=e.target.closest('tr'); if(!tr) return;
+    if(tr.dataset.g){
+      const g=allGroups().find(x=>gid(x.key)===tr.dataset.g); if(!g) return;
+      if(e.target.matches('select')){
+        const a=e.target.dataset.ax, v=Number(e.target.value);
+        g.members.forEach(r=>{ const mine=Object.assign({},current(r)); mine[a]=v; r.mine=mine; r.reviewed=true; write(r.id,{mine:mine,reviewed:true}); });
+      }else if(e.target.matches('input[type=checkbox]')){
+        const on=e.target.checked;
+        g.members.forEach(r=>{ if(r.reviewed!==on){ r.reviewed=on; write(r.id,{reviewed:on}); } });
+      }
+      render(); return;
+    }
+    const r=rows.get(tr.dataset.id); if(!r) return;
+    if(e.target.matches('select')){
+      const mine=Object.assign({},current(r)); mine[e.target.dataset.ax]=Number(e.target.value);
+      r.mine=mine; r.reviewed=true;
+      write(r.id,{mine:mine,reviewed:true});
+    }else if(e.target.matches('input[type=checkbox]')){
+      r.reviewed=e.target.checked;
+      write(r.id,{reviewed:r.reviewed});
+    }
+    // 行の見た目だけ更新して、フィルタで行が消えても編集中に飛ばないようにする
+    if(filter==='mismatch'||filter==='group'){ render(); return; }
+    const odd=oddMap(mismatches());
+    const tmp=document.createElement('tbody'); tmp.innerHTML=rowHtml(r,odd.get(r.id));
+    const nt=tmp.firstChild; fill(nt,r);
+    tr.replaceWith(nt); counts();
+  });
+
+  tbody.addEventListener('click',e=>{
+    const ex=e.target.closest('button.expand');
+    if(ex){ const id=ex.dataset.g; if(expanded.has(id)) expanded.delete(id); else expanded.add(id); render(); return; }
+    const al=e.target.closest('button.align');
+    if(al&&db&&!readOnly){
+      const g=mismatches().find(x=>gid(x.key)===al.dataset.g); if(!g) return;
+      const a=al.dataset.a, v=Number(al.dataset.v);
+      g.members.forEach(r=>{
+        if(current(r)[a]===v) return;
+        const mine=Object.assign({},current(r)); mine[a]=v; r.mine=mine; r.reviewed=true;
+        write(r.id,{mine:mine,reviewed:true});
+      });
+      render(); return;
+    }
+    const b=e.target.closest('button.dismiss'); if(!b||!db||readOnly) return;
+    const g=mismatches().find(x=>gid(x.key)===b.dataset.g); if(!g) return;
+    const sig=sigOf(g.members); okSig.set(b.dataset.g,sig); render();
+    db.collection('ok').doc(b.dataset.g).set({sig:sig}).then(()=>{statusEl.textContent='保存しました';}).catch(()=>{statusEl.textContent='保存できませんでした';});
+  });
+
+  document.querySelectorAll('.tabs button').forEach(b=>{
+    b.setAttribute('aria-pressed',String(b.dataset.f===filter));
+    b.addEventListener('click',()=>{
+      filter=b.dataset.f;
+      document.querySelectorAll('.tabs button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+      try{ localStorage.setItem('taste-filter',filter); }catch(e){}
+      render();
+    });
+  });
+  document.getElementById('q').addEventListener('input',e=>{ query=e.target.value; render(); });
+
+  (async function(){
+    db=await (window.claude?window.claude.use('db'):null);
+    if(!db){ statusEl.textContent='この表示ではデータを読み込めません'; return; }
+    db.collection('ok').limit(1000).onSnapshot(snap=>{
+      okSig.clear(); snap.docs.forEach(d=>okSig.set(d.id,(d.data()||{}).sig));
+      if(rows.size && !(document.activeElement&&document.activeElement.closest&&document.activeElement.closest('#tbody'))) render();
+    },()=>{});
+    db.collection('rows').limit(1000).onSnapshot(snap=>{
+      const first=rows.size===0;
+      snap.docs.forEach(d=>{ const x=d.data(); rows.set(d.id,Object.assign({id:d.id},x)); });
+      if(first){ statusEl.textContent=snap.size?'':'データがまだありません'; render(); }
+      else if(!document.activeElement||!document.activeElement.closest||!document.activeElement.closest('#tbody')){ render(); }
+      else counts();
+    },err=>{ statusEl.textContent='読み込みが止まりました。ページを開き直してください'; });
+  })();
+})();
+</script>

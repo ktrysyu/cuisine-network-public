@@ -1,0 +1,17 @@
+{
+  "canonical": "white wine",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "dry white wine",
+  "n_recipes": 1218,
+  "note": "加熱でアルコールが飛ぶと酸味が残る",
+  "order": 61,
+  "reviewed": true
+}

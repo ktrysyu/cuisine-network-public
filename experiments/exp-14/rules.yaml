@@ -1,0 +1,2219 @@
+# Exp-14 調理の計算: 食品科学の規則表（機械可読版）
+# 人が読む版は rules.md。表の中身はこのファイルが正本。
+# 知覚の層（硬さ・とろみ・甘さ など）への対応はここには書かない（本人が決める部分）。
+# perception_candidates は「どの状態変数が効きそうか」の候補だけ。
+
+meta:
+  version: 0.1
+  created: 2026-09-27
+  scope: 物理・化学の状態（段1）と、操作による状態の変化の規則。シミュレータは sim/（採用値は下の sim、判定条件は dish_conditions）。
+  check_levels:
+    本文確認: 出典の本文（ページ・データベース）を取得し、数値をその場で確認した
+    抄録確認: 論文の抄録を取得して確認した（本文は未読）
+    抜粋のみ: 検索エンジンの抜粋でのみ確認した（ページ本文は取得できなかった／しなかった）
+    書籍(章): 書籍の内容として知っている範囲。ページまでは確かでない。数値は今回ウェブで確認していない
+    未確認: 出典を確認できていない。値は推定
+  confidence:
+    高: 一次に近い出典（論文・公的機関・データベース）で本文か抄録を確認、または複数出典で値が整合
+    中: 抜粋のみ、または出典どうしで値に幅・食い違いがある
+    低: 出典が弱い（レシピサイト、出典記載のないブログ）か、推定
+
+sources:
+  fooddb:
+    type: database
+    cite: 文部科学省『日本食品標準成分表（八訂）増補2023年』食品成分データベース
+    url: https://fooddb.mext.go.jp/
+  mcgee:
+    type: book
+    cite: "Harold McGee, On Food and Cooking: The Science and Lore of the Kitchen, 2nd ed., Scribner, 2004"
+    note: 卵は第2章、乳は第1章、肉は第3章、ソースは第11章、糖は第12章。今回は書籍本文を開いていない。Science of Cooking と Wikipedia が McGee のページ（p.85, p.656）を引いている箇所だけ数値を採った
+  soc_temps:
+    type: web
+    cite: Science of Cooking, "Important temperatures in Cooking and Baking"
+    url: https://www.scienceofcooking.com/important_cooking_temperatures.htm
+  soc_sousvide:
+    type: web
+    cite: Science of Cooking, "Cooking Eggs Sous Vide"（McGee p.85 を引用）
+    url: https://www.scienceofcooking.com/eggs/cooking-eggs-sous-vide.html
+  wiki_caramel:
+    type: web
+    cite: Wikipedia "Caramelization"（温度表は McGee 2004, p.656 を引用）
+    url: https://en.wikipedia.org/wiki/Caramelization
+  awatsu1982:
+    type: paper
+    cite: 粟津原宏子 ほか (1982)「卵白および卵黄の熱凝固について―食塩,砂糖の添加による影響―」調理科学 15(2):114
+    url: https://www.jstage.jst.go.jp/article/cookeryscience1968/15/2/15_114/_article/-char/ja/
+  tatsu2019:
+    type: paper
+    cite: "N. Tatsutaguchi, M. Dai (2019)「温泉卵の凝固状態への加熱温度と保持時間の影響―好みの温泉卵を作るには―」日本調理科学会誌 52(5):345（著者名は J-STAGE の英字表記）"
+    url: https://www.jstage.jst.go.jp/article/cookeryscience/52/5/52_345/_article/-char/ja/
+  maff_rice:
+    type: web(公的機関)
+    cite: 農林水産省「米の調理特性」
+    url: https://www.maff.go.jp/j/syouan/keikaku/soukatu/okome_summary/02/charact_eristic_01.html
+  kainuma1987:
+    type: paper
+    cite: "Y. Kainuma, A. Ema (1987)「加水量が炊飯に及ぼす影響」日本家政学会誌 38(7):567-575"
+    url: https://www.jstage.jst.go.jp/article/jhej1987/38/7/38_7_567/_article/-char/ja/
+  tamaki2003:
+    type: paper
+    cite: "M. Tamaki, M. Ukai (2003)「長時間炒めたタマネギの味, 香り, 遊離糖, 色の変化」日本家政学会誌 54(1):69"
+    url: https://www.jstage.jst.go.jp/article/jhej1987/54/1/54_1_69/_article/-char/ja
+  tokitomo1993:
+    type: paper
+    cite: "Y. Tokitomo, S. Yamanishi (1993)「加熱タマネギの甘いフレーバーについて」日本家政学会誌 44(5):347-353"
+    url: https://www.jstage.jst.go.jp/article/jhej1987/44/5/44_5_347/_article/-char/ja/
+  mc_maillard:
+    type: web
+    cite: Modernist Cuisine, "The Maillard Reaction"
+    url: https://modernistcuisine.com/mc/the-maillard-reaction/
+  maillard_overview:
+    type: web
+    cite: ScienceDirect Topics "Maillard Reaction" / BAKERpedia "Maillard Reaction"
+    url: https://www.sciencedirect.com/topics/food-science/maillard-reaction
+  schmidt2011:
+    type: paper
+    cite: "J. W. Lee, L. C. Thomas, S. J. Schmidt (2011) Can the thermodynamic melting temperature of sucrose, glucose, and fructose be measured using rapid-scanning DSC? J. Agric. Food Chem. 59(8)（巻号は記憶、要確認）"
+    url: https://pubmed.ncbi.nlm.nih.gov/21417276/
+    note: 解説記事 https://www.sciencedaily.com/releases/2011/07/110725123549.htm
+  roasted_sugar:
+    type: web
+    cite: Stella Parks（Serious Eats / BraveTart）の roasted sugar 手法を紹介した記事（Boston Univ. "Trial by Fryer" 2018 など）
+    url: http://physics.bu.edu/~jmott/trialbyfryer/2018/06/roasted-sugar/
+  candy_stages:
+    type: web
+    cite: Wikipedia "Candy making"（糖液の段階の表）
+    url: https://en.wikipedia.org/wiki/Candy_making
+  nitta:
+    type: web(メーカー)
+    cite: 新田ゼラチン Web研究所「ゼラチン研究室 12. よりよく活用するために」
+    url: https://www.nitta-gelatin.co.jp/ja/labo/gelatin/12.html
+  ijfp2007:
+    type: paper
+    cite: "Effects of Concentration, Bloom Degree, and pH on Gelatin Melting and Gelling Temperatures Using Small Amplitude Oscillatory Rheology. Int. J. Food Properties 10(4) (2007)"
+    url: https://www.tandfonline.com/doi/full/10.1080/10942910601128895
+  gelatin_home:
+    type: web
+    cite: 料理科学の森「ゼラチンの凝固温度と融解温度」ほか家庭向け解説
+    url: https://ryourikagakunomori.jp/2021/07/20/%E3%82%BC%E3%83%A9%E3%83%81%E3%83%B3%E3%81%AE%E5%87%9D%E5%9B%BA%E6%B8%A9%E5%BA%A6%E3%81%A8%E8%9E%8D%E8%A7%A3%E6%B8%A9%E5%BA%A6/
+  pineapple:
+    type: web(公的DB)
+    cite: 国立国会図書館 レファレンス協同データベース「パイナップルを入れるとゼラチンではかたまらないが、寒天では固まる」
+    url: https://crd.ndl.go.jp/reference/entry/index.php?id=1000288396&page=ref_view
+  tornberg2005:
+    type: paper
+    cite: "E. Tornberg (2005) Effects of heat on meat proteins – Implications on structure and quality of meat products. Meat Science 70:493-508（巻・頁は記憶、要確認）"
+    url: https://www.researchgate.net/publication/51781900_Effects_of_heat_on_meat_proteins_-_Implication_on_structure_and_quality_of_meat_products
+  fsis:
+    type: web(公的機関)
+    cite: USDA FSIS "Safe Minimum Internal Temperature Chart"
+    url: https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart
+  cream2010:
+    type: paper
+    cite: "Influence of whipping temperature on the whipping properties and rheological characteristics of whipped cream. J. Dairy Sci. (2010)"
+    url: https://www.sciencedirect.com/science/article/pii/S0022030210002997
+  cream_overview:
+    type: web
+    cite: ScienceDirect Topics "Whipped Cream"
+    url: https://www.sciencedirect.com/topics/food-science/whipped-cream
+  eggfoam_isu:
+    type: web(大学教材)
+    cite: Iowa State Univ., Food Preparation Lab Manual for FSHN 1150, "9.1 Introduction to Egg White Foams"
+    url: https://iastate.pressbooks.pub/fshn115/chapter/egg-white-foams/
+  eggfoam_yolk:
+    type: paper
+    cite: "Effect of Lipase and Phospholipase A1 on Foaming and Batter Properties of Yolk Contaminated Egg White (PMC10048306)"
+    url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10048306/
+  custard_textbook:
+    type: web(教科書)
+    cite: "Modern Pastry and Plated Dessert Techniques, \"Coagulation\" (BCcampus Open Textbook)"
+    url: https://opentextbc.ca/modernpastryandplateddesserts/chapter/coagulation/
+  custard_123:
+    type: web
+    cite: 123 Food Science "Why Custard Thickens"
+    url: https://123foodscience.com/cooking-science/custard-science/
+  casein:
+    type: paper
+    cite: "Acid-induced gelation behavior of casein/whey protein solutions assessed by oscillatory rheology (PMC4152502) ほか"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC4152502/
+  starch_gel:
+    type: paper
+    cite: 検索抜粋に出た複数論文（ResearchGate "Studies on the Gelatinization Temperature of Some Cereal Starches"、PMC12167104 など）。どの値がどの論文かは抜粋では分離できなかった
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12167104/
+  roux:
+    type: paper
+    cite: "Effects of Cooking Temperatures and Starch Source on the Gelatinization and Thickening Power of Roux"
+    url: https://www.researchgate.net/publication/254361032_Effects_of_Cooking_Temperatures_and_Starch_Source_on_the_Gelatinization_and_Thickening_Power_of_Roux
+  roux_texts:
+    type: web(大学教材)
+    cite: LibreTexts "4.2 Roux and Thickening"（Kansas State Univ. FNDH 313）
+    url: https://med.libretexts.org/Courses/Kansas_State_University/FNDH_313:_Science_of_Food/04:_Soups_Salads_and_Gelatins/4.02:_Roux_and_Thickening
+  potato_pme:
+    type: web
+    cite: 宝酒造 業務用調味料「煮崩れ～その要因と防止する方法～」、香西みどり「野菜の硬さと最適加熱時間の予測」（熱物性資料）
+    url: https://chomiryo.takarashuzo.co.jp/knowledge/detail/104/
+  gluten:
+    type: web(学会)
+    cite: 'Institute of Food Science and Technology "Protein: gluten formation" / Wikipedia "Gluten"'
+    url: https://www.ifst.org/lovefoodlovescience/resources/protein-gluten-formation
+  baking_powder:
+    type: web
+    cite: Wikipedia "Baking powder" / Britannica "Double-acting baking powder"
+    url: https://en.wikipedia.org/wiki/Baking_powder
+  yeast:
+    type: web
+    cite: 'Exploratorium "Yeast is Fussy About Temperature" / ThermoWorks "Homemade Bread: Temperature is Key"'
+    url: https://www.exploratorium.edu/explore/cooking/yeast-temperature
+  frying:
+    type: paper
+    cite: '"Changes in food caused by deep fat frying – A review." Archivos Latinoamericanos de Nutrición 63(1) (2013) ほか'
+    url: https://www.alanrevista.org/ediciones/2013/1/art-1
+  chawan_web:
+    type: web
+    cite: 三越伊勢丹 FOODIE「茶碗蒸しレシピ。卵と出汁は1:3が黄金比」ほか
+    url: https://mi-journey.jp/foodie/49227/
+  kajiya:
+    type: web(出典記載なし)
+    cite: カジヤ「カスタードプリンや茶碗蒸しの凝固温度は？」
+    url: https://www.kajiya.org/archives/107
+  mirai:
+    type: web(出典記載なし)
+    cite: 科学者の卵養成講座「プリンの“す”」（高校生の記事）
+    url: https://mirai-eggs.org/science_blog/%E3%83%97%E3%83%AA%E3%83%B3%E3%81%AE%E3%81%99/
+  omelet_web:
+    type: web
+    cite: オリーブオイルをひとまわし「ふんわり卵でオムレツを作ろう！コツや卵の凝固温度を紹介！」
+    url: https://www.olive-hitomawashi.com/column/2018/09/post-3039.html
+  butter:
+    type: web
+    cite: The Physics Factbook "Melting Point of Butter" / Pastry Arts Magazine "Plasticity and Melting Points in Butter"
+    url: https://hypertextbook.com/facts/2003/JessicaCheung.shtml
+  pancake_web:
+    type: web(レシピ)
+    cite: Betty Crocker "Fluffy Homemade Pancakes" ほかレシピサイト
+    url: https://www.bettycrocker.com/recipes/fluffy-homemade-pancakes/77a89da1-fd56-494b-874a-55f9195c1413
+
+  # ---- 2026-09-27 ポーチドエッグの追加で足した出典 ----
+  soc_poach:
+    type: web
+    cite: Science of Cooking, "What are best methods to poach an egg?"（McGee "On Food and Cooking" と Heston Blumenthal の手順を引用）
+    url: https://www.scienceofcooking.com/eggs/what-are-best-methods-to-poach-an-egg.html
+  terumimorita:
+    type: web(料理人の記事)
+    cite: Terumi Morita, "Poached Egg"（Journal / Recipes, 2025-08-28）
+    url: https://terumimorita.com/journal/poached-egg
+    note: 本文の湯温は 80–85°C。記事冒頭の要約行には「63–65°C」とあり本文と食い違う（C13）
+  travelingfoodlab:
+    type: web(料理人の記事)
+    cite: 樋口直哉（TravelingFoodLab.）「ポーチドエッグの作り方」note。『マギーキッチンサイエンス』p88（共立出版、香西みどり監訳）を引用
+    url: https://note.com/travelingfoodlab/n/n2c560bfe4de4
+  kyounoryouri:
+    type: web(レシピ)
+    cite: NHK「みんなのきょうの料理」脇雅世「ポーチドエッグ」
+    url: https://www.kyounoryouri.jp/recipe/5203_%E3%83%9D%E3%83%BC%E3%83%81%E3%83%89%E3%82%A8%E3%83%83%E3%82%B0.html
+  wiki_poached:
+    type: web
+    cite: Wikipedia "Poached egg"
+    url: https://en.wikipedia.org/wiki/Poached_egg
+  wang2025:
+    type: paper
+    cite: "Wang L, Li R, Lv S, et al. The Thermodynamic and Gelation Properties of Ovalbumin and Lysozyme. Gels 2025;11(6):470. doi:10.3390/gels11060470"
+    url: https://doi.org/10.3390/gels11060470
+  egg_structure:
+    type: web(出典記載なし)
+    cite: 「たまごの構造」（個人のページ）。卵殻 8～11%、卵白 56～59%、卵黄 30～33%、卵殻の厚さ 0.2～0.38mm。検索抜粋では 卵白 57～63.4%・卵黄 28～30.6%・卵殻 8.1～12.4% という値もあった
+    url: http://ww1.tiki.ne.jp/~k_fukuda/kouzou.htm
+    check: 本文確認（2026-09-28）
+  egg_thermal:
+    type: web(検索抜粋)
+    cite: "熱拡散率 卵白 1.7×10⁻⁷ m²/s・卵黄 1.3×10⁻⁷ m²/s、熱伝導率 卵白 0.52・卵黄 0.34 W/(m·K)（ResearchGate の表 \"Thermal properties of egg components\"、本文は 403）。卵を模した熱シミュレータの特許（US10466188B2）では卵白 1.3〜2.3×10⁻⁷、卵黄 1.1〜1.4×10⁻⁷ m²/s"
+    url: https://www.researchgate.net/figure/Thermal-properties-of-egg-components_tbl1_256804375
+    check: 抜粋のみ
+  dilorenzo2025: {type: paper, cite: "E. Di Lorenzo, F. Romano, L. Ciriaco, N. Iaccarino, L. Izzo, A. Randazzo, P. Musto, E. Di Maio (2025) Periodic cooking of eggs. Communications Engineering 4:5。Table 4 に卵黄・卵白の熱伝導率・密度・比熱と変性の A・Ea（熱物性の元は Abbasnezhad et al. 2016 Food Sci Nutr 4:42）。CC BY-NC-ND 4.0", url: "https://www.nature.com/articles/s44172-024-00334-w", check: "本文確認（2026-09-30。著者欄・Table 4・本文の記述）"}
+  wiki_boiled:
+    type: web
+    cite: Wikipedia "Boiled egg"（"Soft-boiled eggs have a partially liquid yolk" / "heat will take longer to reach the yolk through the albumin"）
+    url: https://en.wikipedia.org/wiki/Boiled_egg
+  ashrae_thermal:
+    type: book
+    cite: "ASHRAE (1998) Refrigeration Handbook, Chapter 8 Thermal Properties of Foods. 表1・表2 は Choi, Y. & Okos, M.R. (1986) Effects of temperature and composition on the thermal properties of foods. In: Food Engineering and Process Applications, Vol.1, pp.93–101 の式（ヤード・ポンド単位）。表5・表7 は食品の熱伝導率・熱拡散率の実測"
+    url: https://www.kingson-foodtech.com/files/L2.pdf
+    check: 本文確認（2026-09-30、Exp-18）
+  ngadi2007:
+    type: paper
+    cite: "M.O. Ngadi, D-K. Hwang (2007) Modelling Heat Transfer and Heterocyclic Amines Formation in Meat Patties during Frying. Agricultural Engineering International: the CIGR Ejournal, Manuscript BC 04 004, Vol. IX（厚さ 20mm の牛ひき肉のパティ、片面焼き器 180・200℃。鍋に触れた面 h=300、上面 60、側面 10 W/(m²·℃)、表面近くの温度に合うよう決めた値）"
+    url: https://cigrjournal.org/index.php/Ejounral/article/download/884/878/878
+    check: 本文確認（2026-09-30、Exp-18）
+  tokyogas_steak:
+    type: web
+    cite: "東京ガス ウチコト「実証! 絶対に失敗しないステーキの焼き方【東京ガス調べ】」2021-09-21（オーストラリア産サーロイン 厚さ約2cm・250g、室温に戻す、中火、中心 55℃まで。90秒ごとに返して 6分30秒〜7分、15秒ごとに返して 5分30秒〜6分）"
+    url: https://uchi.tokyo-gas.co.jp/topics/7462
+    check: 本文確認（2026-09-30、Exp-18）
+  aussiebeef_steak:
+    type: web
+    cite: "オージー・ビーフ公式サイト「ステーキの上手な焼き方」（厚さ2cm以上。ミディアム: 強火約1分→弱火約2分→返して強火約30秒→弱火約2〜3分、中心 約55℃。3〜5分休ませる）"
+    url: https://www.aussiebeef.jp/steak/
+    check: 本文確認（2026-09-30、Exp-18）
+  thermoworks_medium:
+    type: web
+    cite: "ThermoWorks \"What Temperature is Medium Doneness?\" 2026-01-21（medium 135–145°F。目標より 2〜3°F 低く火から下ろすと休ませる間に約 3°F 上がる）"
+    url: https://blog.thermoworks.com/what-temperature-is-medium/
+    check: 本文確認（2026-09-30、Exp-18）
+  wiki_doneness:
+    type: web
+    cite: "Wikipedia \"Doneness\"（表は Field Guide to Meat, 2005 を引く。Medium 60–65 °C）"
+    url: https://en.wikipedia.org/wiki/Doneness
+    check: 本文確認（2026-09-30、Exp-18）
+  ebara_steak:
+    type: web
+    cite: "エバラ食品「お肉の焼き方ルール」（ミディアム 65℃〜70℃）"
+    url: https://www.ebarafoods.com/sp/meat/health/how-to-grill.html
+    check: 本文確認（2026-09-30、Exp-18）
+  amsa2015:
+    type: web(学会の指針)
+    cite: "AMSA (2015) Research Guidelines for Cookery, Sensory Evaluation, and Instrumental Tenderness Measurements of Meat, 2nd ed. ver.1.0（ステーキの厚さ 2.54cm。速く焼くと加熱後の上昇が 5℃ を超えることがある）"
+    url: https://meatscience.org/docs/default-source/publications-resources/research-guide/2015-amsa-sensory-guidelines-1-0.pdf
+    check: 本文確認（2026-09-30、Exp-18）
+  mext2020_tables:
+    type: database
+    cite: "文部科学省『日本食品標準成分表2020年版（八訂）』表12 調理方法の概要および重量変化率表、表13 揚げ物等における衣の割合及び脂質量の増減（じゃがいも 皮なし フライドポテト（生を揚げたもの）02067: くし形 1.5×1.5×5.0cm、油揚げ→油切り→油揚げ→油切り、重量変化率 71%、吸油量 4.0g／生 100g。水煮 02019: 重量変化率 97%）"
+    url: https://www.mext.go.jp/content/20201225-mxt_kagsei-mext_01110_011.pdf
+    check: 本文確認（2026-09-30、Exp-18）
+  wikibooks_hard_eggs:
+    type: web
+    cite: "Wikibooks Cookbook:Hard Cooked Eggs（蒸す方法: 鍋に湯 2 cm を強く沸かし、かごに卵、蓋をして約 12〜13 分、氷水で冷やす）。CC BY-SA"
+    url: https://en.wikibooks.org/wiki/Cookbook:Hard_Cooked_Eggs
+    check: 本文確認（2026-10-22、Exp-20）
+  maff_dashimaki:
+    type: 公的機関
+    cite: "農林水産省「中東の家庭料理に向いた日本食レシピ だし巻きたまご」（卵 4 個・だし汁 150 mL・薄口醤油 小さじ2・砂糖 大さじ1/2・みりん風調味料 大さじ1/2。玉子焼き器を中火、卵液を 1/5 ずつ、周りが固まってきたら寄せて巻く）。政府標準利用規約 第2.0版"
+    url: https://www.maff.go.jp/j/yusyutu_kokusai/kokuchi/middle_east/japan-cuisine/ja/japan/18/index.html
+    check: 本文確認（2026-10-22、Exp-20）
+  wikibooks_creme_pat:
+    type: web
+    cite: "Wikibooks Cookbook:Crème pâtissière（砂糖 1 カップ・卵黄 5・薄力粉 2/3 カップ・沸騰した牛乳 2 カップ・バター 大さじ1。中火で混ぜながらゆっくり沸騰させ、沸騰したら 2〜3 分混ぜて粉に火を通す）。CC BY-SA"
+    url: https://en.wikibooks.org/wiki/Cookbook:Cr%C3%A8me_p%C3%A2tissi%C3%A8re
+    check: 本文確認（2026-10-22、Exp-20）
+  fsis_poultry_tables:
+    type: 公的機関の資料（写し）
+    cite: "USDA FSIS の Time and Temperature Tables for Cooking Poultry（サルモネラを 7 桁減らすのに要る時間。脂肪 2・4・6%…、鶏・七面鳥）を、Riverstone Health（米モンタナ州の保健所）が低温調理の手引きとして写した PDF（2025-03-04 作成）"
+    url: https://riverstonehealth.org/wp-content/uploads/SousVide_LethalityChart_Poultry.pdf
+    check: 本文確認（2026-10-22、通説11。FSIS の元の表は開いていない）
+  libretexts_bpe:
+    type: web(教科書)
+    cite: "Chemistry LibreTexts, Introductory Chemistry (CK-12) 16.14 \"Boiling Point Elevation\"（ΔTb = Kb × m、水の Kb は 0.512 ℃/m。パスタの湯の沸点を数℃上げるには 1 L に 100 g を超える食塩が要る）。CK-12 Curriculum Materials License"
+    url: "https://chem.libretexts.org/Bookshelves/Introductory_Chemistry/Introductory_Chemistry_(CK-12)/16:_Solutions/16.14:_Boiling_Point_Elevation"
+    check: 本文確認（2026-10-22、通説5）
+  vaskoska2020:
+    type: paper
+    cite: "R. Vaskoska, M. Ha, Z.B. Naqvi, J.D. White, R.D. Warner (2020) Muscle, Ageing and Temperature Influence the Changes in Texture, Cooking Loss and Shrinkage of Cooked Beef. Foods 9(9):1289。牛の3つの筋肉（半腱様筋・大腿二頭筋・大腰筋）の 50×30×30 mm の角切りを 50・60・70・80℃の湯で中心がその温度になってから 30 分保った。CC BY 4.0"
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7555138/
+    check: 本文確認（2026-10-22、通説3）
+  wiki_searing:
+    type: web
+    cite: "Wikipedia \"Searing\"（\"Experiments to test the theory were carried out as early as the 1930s and found that the seared roasts lost the same amount of moisture or more.\" McGee 2004 On Food and Cooking p.161 を引く）。CC BY-SA"
+    url: https://en.wikipedia.org/wiki/Searing
+    check: 本文確認（2026-10-22、通説3）
+  wikibooks_fries:
+    type: web
+    cite: "Wikibooks Cookbook:French Fries（細い棒状に切る→水で洗う→水で約15分 simmer or parboil→水気を切る→175℃の油で 4〜5分「until light golden and crisp」→塩。二度揚げの変形は 177℃ で「nearly cooked but limp and pale」まで、冷ましてから 190℃ で「golden and crisp」まで）。CC BY-SA"
+    url: https://en.wikibooks.org/wiki/Cookbook:French_Fries
+    check: 本文確認（2026-10-22、Exp-18）
+  wikibooks_boiled_potato:
+    type: web
+    cite: "Wikibooks Cookbook:Boiled Potatoes（同じ大きさに切る→水からゆで、沸騰したら弱く煮て「soft enough to be pierced gently with a fork」まで→湯を捨て、ふたを取ってごく弱火にかけ余分な水分を飛ばす。中くらいのいもで 15〜20分）。CC BY-SA"
+    url: https://en.wikibooks.org/wiki/Cookbook:Boiled_Potatoes
+    check: 本文確認（2026-10-22、Exp-18）
+  gamble1987:
+    type: paper
+    cite: "M.H. Gamble, P. Rice, J.D. Selman (1987) Relationship between oil uptake and moisture loss during frying of potato slices from c.v. Record U.K. tubers. Int. J. Food Sci. Technol. 22(3):233–241（1.5mm の薄切りを 145・165・185℃で揚げ、水の減りと油の増えはどちらも揚げ時間の平方根に比例）"
+    url: https://ifst.onlinelibrary.wiley.com/doi/abs/10.1111/j.1365-2621.1987.tb00483.x
+    check: 抄録確認（2026-09-30、Exp-18）
+
+# ---------------------------------------------------------------
+# 食材
+# canonical は data/labels/taste_scores.csv の canonical 列（味の層とつなぐ鍵）。null は taste_scores に無い
+# composition は g/100g（成分表 八訂、本文確認）。salt は食塩相当量
+# ---------------------------------------------------------------
+ingredients:
+  egg_white:
+    ja: 卵白
+    canonical: egg whites
+    fooddb: "12014 卵白/生"
+    composition: {water: 88.3, protein: 10.1, fat: Tr, carb: 0.5, salt: null}
+    why: プリン・茶碗蒸し・オムレツ等の凝固、メレンゲ系の泡。卵黄と凝固温度が違うので分けて持つ
+  egg_yolk:
+    ja: 卵黄
+    canonical: egg yolks
+    fooddb: "12010 卵黄/生"
+    composition: {water: 49.6, protein: 16.5, fat: 34.3, carb: 0.2, salt: null}
+    why: とろみ（65℃）と凝固（70℃）。脂質を含み泡立ちを妨げる
+  egg_whole:
+    ja: 全卵（卵白＋卵黄の混合として扱う）
+    canonical: eggs
+    fooddb: "12004 全卵/生"
+    composition: {water: 75.0, protein: 12.2, fat: 10.2, carb: 0.4, salt: null}
+    why: 多くの目標料理は全卵。卵白:卵黄の質量比は未確認（推定 約2:1）。計算では egg_white と egg_yolk の混合として展開する
+  milk:
+    ja: 牛乳
+    canonical: milk
+    fooddb: "13003 普通牛乳"
+    composition: {water: 87.4, protein: 3.3, fat: 3.8, carb: 4.8, salt: 0.1}
+    why: プリン・ホワイトソース・スクランブルエッグ・パンケーキ・牛乳ゼリー。卵を薄めて凝固温度を上げる
+  heavy_cream:
+    ja: 生クリーム（乳脂肪）
+    canonical: heavy cream
+    fooddb: "13014 クリーム/乳脂肪"
+    composition: {water: 48.2, protein: 1.9, fat: 43.0, carb: 6.5, salt: 0.1}
+    why: ホイップクリーム（乳脂肪30%以上で泡立つ）
+  butter:
+    ja: バター（有塩）
+    canonical: butter
+    fooddb: "14017 有塩バター（食塩不使用は 14018: 水分15.8 脂質83.0）"
+    composition: {water: 16.2, protein: 0.6, fat: 81.0, carb: 0.2, salt: 1.9}
+    why: ホワイトソースのルー、卵料理の油脂。融け方が温度で変わる
+  flour:
+    ja: 小麦粉（薄力粉1等）
+    canonical: flour
+    fooddb: "01015 薄力粉/1等（強力粉1等 01020 は たんぱく質11.8）"
+    composition: {water: 14.0, protein: 8.3, fat: 1.5, carb: 75.8, salt: 0}
+    why: ホワイトソース（でんぷんの糊化）、パンケーキ（グルテン・糊化）
+  rice:
+    ja: 米（精白米うるち米）
+    canonical: rice
+    fooddb: "01083 精白米/うるち米（めし 01088 は水分60.0）"
+    composition: {water: 14.9, protein: 6.1, fat: 0.9, carb: 77.6, salt: 0}
+    why: ご飯（浸漬・糊化・老化）
+  sugar:
+    ja: 砂糖（上白糖。グラニュー糖 03005 は炭水化物100.0）
+    canonical: sugar
+    fooddb: "03003 上白糖"
+    composition: {water: 0.7, protein: 0, fat: 0, carb: 99.3, salt: 0}
+    why: カラメル、プリン（凝固温度を上げる）、泡の安定
+  salt:
+    ja: 食塩
+    canonical: salt
+    fooddb: "17012 食塩"
+    composition: {water: 0.1, protein: 0, fat: 0, carb: 0, salt: 99.5}
+    why: 卵の凝固力・凝固温度を変える（粟津原 1982）、茶碗蒸し・スクランブルエッグの味付け
+  water:
+    ja: 水
+    canonical: water
+    fooddb: null
+    composition: {water: 100, protein: 0, fat: 0, carb: 0, salt: 0}
+    why: ご飯・カラメル（糖液）・ゼラチンの膨潤。加熱媒体としての沸点100℃
+  dashi:
+    ja: だし（かつお・昆布）
+    canonical: null
+    fooddb: "17148 かつお・昆布だし"
+    composition: {water: 99.2, protein: 0.3, fat: 0, carb: 0.4, salt: 0.1}
+    why: 茶碗蒸しの希釈液（卵:だし=1:3）。状態の上では「ほぼ水＋わずかな塩」
+  vegetable_oil:
+    ja: 植物油（調合油）
+    canonical: vegetable oil
+    fooddb: "14006 調合油"
+    composition: {water: 0, protein: 0, fat: 100.0, carb: 0, salt: 0}
+    why: 揚げる・炒めるの加熱媒体（100℃を超えられる）
+  onion:
+    ja: 玉ねぎ
+    canonical: onions
+    fooddb: "06153 たまねぎ/りん茎/生"
+    composition: {water: 90.1, protein: 1.0, fat: 0.1, carb: 8.4, salt: 0}
+    why: 炒め玉ねぎ（水分蒸発・刺激臭の消失・褐変）
+  potato:
+    ja: じゃがいも
+    canonical: potatoes
+    fooddb: "02017 じゃがいも/塊茎/皮なし/生"
+    composition: {water: 79.8, protein: 1.8, fat: 0.1, carb: 17.3, salt: 0}
+    why: フライドポテト（揚げる）。でんぷん糊化とペクチン（煮崩れ・硬化）の規則を持つ
+  tomato:
+    ja: トマト
+    canonical: tomatoes
+    fooddb: "06182 赤色トマト/生"
+    composition: {water: 94.0, protein: 0.7, fat: 0.1, carb: 4.7, salt: 0}
+    why: 依頼で挙がった食材。今回の目標料理には使わないため、規則は調べていない（成分のみ）
+  chicken:
+    ja: 鶏むね肉（皮なし）
+    canonical: chicken
+    fooddb: "11220 若どり/むね/皮なし/生"
+    composition: {water: 74.6, protein: 23.3, fat: 1.9, carb: 0.1, salt: 0.1}
+    why: 肉たんぱく質の規則（ミオシン・アクチン・コラーゲン）。目標料理は「鶏むねのソテー」
+  beef:
+    ja: 牛ひき肉
+    canonical: ground beef
+    fooddb: "11089 うし/ひき肉/生（塊肉は部位で成分差が大きいので未採用）"
+    composition: {water: 61.4, protein: 17.1, fat: 21.1, carb: 0.3, salt: 0.2}
+    why: 肉の規則を共有。焼く→煮る の順番の違い（非可換性）を試す材料。今回の目標料理には入れていない
+  gelatin:
+    ja: ゼラチン
+    canonical: null
+    fooddb: "11198 ぶた/ゼラチン"
+    composition: {water: 11.3, protein: 87.6, fat: 0.3, carb: 0, salt: 0.7}
+    why: 牛乳ゼリー（冷やすとゲル化、温めると融ける＝可逆）
+  vinegar:
+    ja: 酢（穀物酢）
+    canonical: vinegar
+    fooddb: "17015 穀物酢"
+    composition: {water: 93.3, protein: 0.1, fat: 0, carb: 2.4, salt: 0}
+    why: pH を下げる操作の代表（乳の凝集、卵白泡の安定）
+  lemon_juice:
+    ja: レモン汁
+    canonical: lemon juice
+    fooddb: "07156 レモン/果汁/生"
+    composition: {water: 90.5, protein: 0.4, fat: 0.2, carb: 8.6, salt: 0}
+    why: 酢と同じく pH を下げる。卵白泡の安定に使われる
+  baking_powder:
+    ja: ベーキングパウダー
+    canonical: baking powder
+    fooddb: "17084 ベーキングパウダー"
+    composition: {water: 4.5, protein: Tr, fat: 1.2, carb: 29.0, salt: 17.3}
+    why: パンケーキの膨化（濡れたときと加熱時に CO2）
+  yeast:
+    ja: パン酵母（乾燥）
+    canonical: yeast
+    fooddb: "17083 パン酵母/乾燥"
+    composition: {water: 8.7, protein: 37.1, fat: 6.8, carb: 43.1, salt: 0.3}
+    why: 操作「発酵」を持つため。今回の目標料理（パンケーキはベーキングパウダー）には使わない
+
+# ---------------------------------------------------------------
+# 状態変数
+# scope: mixture = 鍋の中の混合物全体 / component = 混合物中の成分ごと（卵白・卵黄・でんぷん・肉 …）
+# 段階（ordinal）は、出典が温度しきい値でしか語っていないものを連続量にしないため
+# ---------------------------------------------------------------
+state_variables:
+  T_core_max:
+    ja: 中心の到達温度
+    unit: ℃
+    range: [-20, 200]
+    type: continuous
+    scope: mixture
+    note: 凝固・糊化の多くは到達温度で決まるが、それだけでは足りない（t_at_T を参照）
+  T_surface_max:
+    ja: 表面の到達温度
+    unit: ℃
+    range: [-20, 250]
+    type: continuous
+    scope: mixture
+    note: 表面が湿っている間は沸点（大気圧で100℃）を超えない（R-W02）。メイラード・カラメル化は表面で起きる
+  t_at_T:
+    ja: 温度履歴（温度ごとの保持時間）
+    unit: "min（温度帯ごと）"
+    range: [0, 1440]
+    type: history
+    scope: mixture
+    note: 温泉卵（R-E08）、炊飯（R-S04）、コラーゲン（R-P04）、ショ糖の熱分解（R-C03）は時間に依存する。スカラー1つでは表せない
+  water:
+    ja: 水分量
+    unit: g/100g
+    range: [0, 100]
+    type: continuous
+    scope: mixture
+  fat:
+    ja: 脂質量
+    unit: g/100g
+    range: [0, 100]
+    type: continuous
+    scope: mixture
+  protein:
+    ja: たんぱく質量
+    unit: g/100g
+    range: [0, 100]
+    type: continuous
+    scope: mixture
+  T_serve:
+    ja: 食べるときの温度
+    unit: ℃
+    range: [-20, 100]
+    type: continuous
+    scope: mixture
+    note: 調理後の状態ではなく提供条件。§11 の「温度」の層に対応する
+  mass_ratio:
+    ja: 元の質量に対する比
+    unit: "-"
+    range: [0, 5]
+    type: continuous
+    scope: mixture
+    note: 炊飯で増え（約2.2倍）、炒め玉ねぎで減る（0.4〜0.2）
+  sugar_conc:
+    ja: 糖濃度（溶けている糖）
+    unit: "g/100g（糖液では %）"
+    range: [0, 100]
+    type: continuous
+    scope: mixture
+    note: 炒め玉ねぎでは糖の総量は減るのに重量あたりの濃度は上がりうる（R-O01, R-O02）
+  salt_conc:
+    ja: 食塩濃度
+    unit: g/100g
+    range: [0, 30]
+    type: continuous
+    scope: mixture
+  pH:
+    ja: pH
+    unit: "-"
+    range: [2, 9]
+    type: continuous
+    scope: mixture
+  egg_dilution:
+    ja: 卵液の卵濃度
+    unit: "卵の体積/全体積（%）"
+    range: [0, 100]
+    type: continuous
+    scope: mixture
+    note: 茶碗蒸しは約25%（R-E16）。凝固温度を上げる要因
+  egg_white_stage:
+    ja: 卵白たんぱく質の凝固段階
+    type: ordinal
+    levels: {0: 生（流動）, 1: とろみ・白濁開始, 2: やわらかい固体, 3: 固いゲル（オボアルブミン凝固）}
+    scope: component
+  egg_yolk_stage:
+    ja: 卵黄の凝固段階
+    type: ordinal
+    levels: {0: 生（流動）, 1: とろみ, 2: 凝固（しっとり）, 3: ほろほろ・粉状}
+    scope: component
+  egg_gel_stage:
+    ja: 卵液（希釈・混合）全体のゲル段階
+    type: ordinal
+    levels: {0: 液, 1: とろみ, 2: やわらかいゲル, 3: 固いゲル, 4: 離水・す立ち}
+    scope: mixture
+    note: 希釈・糖・塩で段階の境目の温度がずれる
+  gel_structure:
+    ja: ゲルの形
+    type: categorical
+    levels: [なし, 連続ゲル, 小片（カード）, 外側連続・内側半流動]
+    scope: mixture
+    note: 撹拌しながら固めたか・静置で固めたかで決まる。スクランブルエッグとオムレツ・プリンの違いはここ
+  porosity:
+    ja: す（加熱中の気化でできた空洞）
+    type: ordinal
+    levels: {0: なし, 1: 少し, 2: 多い}
+    scope: mixture
+  milk_casein:
+    ja: カゼインの状態
+    type: categorical
+    levels: [分散, 凝集（凝乳）]
+    scope: component
+  milk_whey_denatured:
+    ja: 乳清たんぱく質の熱変性
+    type: ordinal
+    levels: {0: 未変性, 1: 変性}
+    scope: component
+  fat_phase:
+    ja: 脂質の相状態
+    type: categorical
+    levels: [固体（結晶多い）, 可塑（半固体）, 液体（融解）, O/W乳化（乳・卵黄）, 部分合一ネットワーク（ホイップ）, 分離]
+    scope: component
+  air_frac:
+    ja: 気泡の体積割合（オーバーラン）
+    unit: "%（泡立て前体積に対する増加）"
+    range: [0, 800]
+    type: continuous
+    scope: mixture
+    note: 値の出典は今回集めていない。目標料理では段階（なし・あり）でしか書いていない
+  foam_stage:
+    ja: 泡の段階
+    type: ordinal
+    levels: {0: 泡なし, 1: 粗い泡, 2: やわらかい角, 3: しっかりした角, 4: 泡立てすぎ（分離・バター化・ぼそぼそ）}
+    scope: mixture
+  starch_gel:
+    ja: でんぷんの糊化度
+    unit: "0〜1（または %）"
+    range: [0, 1]
+    type: continuous
+    scope: component
+    note: 炊飯直後で約95%という測定値がある（R-S07）
+  starch_retro:
+    ja: でんぷんの老化
+    type: ordinal
+    levels: {0: なし, 1: 進行, 2: 著しい}
+    scope: component
+  gluten:
+    ja: グルテン形成
+    type: ordinal
+    levels: {0: なし（乾いた粉）, 1: 形成（水と接触）, 2: 発達（混ぜる・こねる）, 3: 強く発達}
+    scope: component
+  gluten_relaxed:
+    ja: グルテンの緩み（寝かせ）
+    type: ordinal
+    levels: {0: 張っている, 1: 緩んでいる}
+    scope: component
+  maillard:
+    ja: メイラード反応の進み
+    type: ordinal
+    levels: {0: なし, 1: 薄い焼き色, 2: きつね色, 3: 濃い褐色}
+    scope: mixture（主に表面）
+  caramel:
+    ja: 糖の熱分解（カラメル化）の進み
+    type: ordinal
+    levels: {0: なし（無色の糖液・結晶）, 1: 淡い色, 2: 褐色（カラメル）, 3: 焦げ（熱分解）}
+    scope: mixture
+  syrup_stage:
+    ja: 糖液の段階（煮詰め）
+    type: ordinal
+    levels: {0: 溶液, 1: 糸, 2: ソフトボール, 3: ファームボール, 4: ハードボール, 5: ソフトクラック, 6: ハードクラック, 7: 透明な融液, 8: 褐色の融液}
+    scope: mixture
+  onion_sulfur:
+    ja: 玉ねぎの刺激臭成分（揮発性の硫黄化合物）の残り
+    type: ordinal
+    levels: {0: ほぼ消失, 1: 減少, 2: 生のまま}
+    scope: component
+  cell_wall:
+    ja: 野菜の細胞壁（ペクチン）の状態
+    type: categorical
+    levels: [生, 硬化（PME）, 軟化, 崩壊（煮崩れ）]
+    scope: component
+  meat_myosin:
+    ja: ミオシン変性
+    type: ordinal
+    levels: {0: 未変性, 1: 変性}
+    scope: component
+  meat_actin:
+    ja: アクチン変性
+    type: ordinal
+    levels: {0: 未変性, 1: 変性}
+    scope: component
+  meat_collagen:
+    ja: コラーゲンの状態
+    type: ordinal
+    levels: {0: 未変性, 1: 変性・収縮, 2: ゼラチン化（溶解）}
+    scope: component
+  meat_myoglobin:
+    ja: ミオグロビン変性（赤→灰褐色）
+    type: ordinal
+    levels: {0: 未変性, 1: 変性開始, 2: 変性}
+    scope: component
+  meat_water_loss:
+    ja: 肉からの水分流出
+    unit: "% of 生重量"
+    range: [0, 50]
+    type: continuous
+    scope: component
+    note: 数値の出典は今回集めていない。60℃で急に出る（R-P02）、鶏むね70℃で乾く（R-P05）の定性のみ
+  gelatin_state:
+    ja: ゼラチンの状態
+    type: categorical
+    levels: [乾燥, 膨潤, 溶解（ゾル）, ゲル, 分解（酵素）]
+    scope: component
+  gelatin_conc:
+    ja: ゼラチン濃度
+    unit: g/100g
+    range: [0, 10]
+    type: continuous
+    scope: mixture
+  co2:
+    ja: 生地中の CO2（膨化）
+    type: ordinal
+    levels: {0: なし, 1: 第1段（濡れて発生）, 2: 第2段（加熱で発生）, 3: 発酵で発生}
+    scope: mixture
+  yeast_alive:
+    ja: 酵母の生死
+    type: categorical
+    levels: [活性, 休眠, 死滅]
+    scope: component
+
+# ---------------------------------------------------------------
+# 操作
+# 焼く・炒める・蒸す・煮る・揚げるは、すべて「加熱」を媒体（空気・金属＋油・蒸気・水・油）で特殊化したもの
+# 媒体が表面の最高温度を決める（湿った表面は沸点で頭打ち: R-W02）
+# ---------------------------------------------------------------
+operations:
+  mix:
+    ja: 混ぜる
+    params: {strength: "弱（さっくり）/中/強", time: min}
+    note: 均一化。小麦粉＋水ではグルテンが形成・発達する（R-G01, R-G02）
+  whisk:
+    ja: 撹拌・泡立て
+    params: {time: min, T_medium: ℃}
+    note: 空気を入れる。卵白・生クリームで泡。加熱中の撹拌（スクランブル）もこれ
+  knead:
+    ja: こねる
+    params: {time: min}
+    note: グルテン発達。今回の目標料理では使わない（パン用）
+  soak:
+    ja: 浸す（浸漬）
+    params: {T_medium: ℃, time: min}
+    note: 米の吸水（R-S06）、ゼラチンの膨潤（R-J01）
+  heat:
+    ja: 加熱（基本形）
+    params: {medium: "空気/金属+油/蒸気/水/油", T_medium: ℃, time: min, stirring: bool, lid: bool}
+    note: 以下はこの特殊化
+  bake:
+    ja: 焼く・炒める
+    params: {medium: "金属+油（フライパン）/空気（オーブン）", T_medium: ℃, time: min, stirring: bool}
+    note: 表面が乾くと100℃を超え、メイラードが起きうる
+  steam:
+    ja: 蒸す
+    params: {T_medium: "℃（蓋のずらしで 85〜100）", time: min}
+    note: 表面・中心とも100℃を超えない。茶碗蒸しは85〜90℃に保つ（R-E15）
+  simmer:
+    ja: 煮る・茹でる・炊く
+    params: {T_medium: "℃（≦100）", time: min, water_ratio: "対食材質量比"}
+    note: 表面は沸点を超えない（R-W02）。炊飯は吸水しきって水が無くなるまで
+  deep_fry:
+    ja: 揚げる
+    params: {T_oil: "℃（160〜190）", time: min}
+    note: 表面は乾いてクラスト、中心は100℃を超えない（R-F01）
+  chill:
+    ja: 冷やす
+    params: {T_medium: ℃, time: min}
+    note: ゼラチンのゲル化、でんぷんの老化、脂肪の結晶化
+  rest:
+    ja: 寝かせる
+    params: {T_medium: ℃, time: min}
+    note: グルテンの緩み、ベーキングパウダー第1段の CO2、吸水。温度を上げない時間経過
+  ferment:
+    ja: 発酵
+    params: {T_medium: ℃, time: min}
+    note: 酵母による CO2。今回の目標料理では使わない
+  poach:
+    ja: 卵を割って湯に落とす（ポーチ）
+    params: {T_medium: "℃（≦100）", time: min, vinegar_pct: "湯に対する酢の量（%）", salt_pct: "湯に対する塩の量（%）"}
+    note: 2026-09-27 追加。煮る（simmer）の特殊化で、割った卵がじかに湯にふれる形（drop）。落とした時点の湯温と酢・塩で卵白のまとまりが決まる（R-E21, R-E22）
+
+# ---------------------------------------------------------------
+# 規則
+# id の頭文字: E=卵 D=乳 S=でんぷん G=グルテン L=膨化 C=糖 M=メイラード F=揚げ O=玉ねぎ J=ゼラチン P=肉 W=水 A=酸
+# values の数値は出典の表記のまま（°F併記のものは両方）
+# ---------------------------------------------------------------
+rules:
+  # ---- 卵 ----
+  - id: R-E01
+    op: heat
+    applies_to: egg_white
+    condition: T ≧ 60℃（140°F）
+    effect: egg_white_stage 0→1（オボトランスフェリンが固まり始める）
+    values: "Ovotransferrin begins setting at 140°F/60°C"
+    source: soc_temps
+    check: 本文確認
+    confidence: 高
+    note: オボトランスフェリンは卵白たんぱく質の約12%。検索抜粋では 62℃ という値もあった
+  - id: R-E02
+    op: heat
+    applies_to: egg_white
+    condition: T ≧ 63℃ でとろみ、≧ 65℃ でやわらかい固体
+    effect: egg_white_stage 1→2
+    values: "145°F/63°C -- Egg whites begin to thicken / 150°F/65°C -- Egg whites become a tender solid"
+    source: soc_temps
+    check: 本文確認
+    confidence: 高
+    note: 凝固開始の値は出典で 55〜57℃（kajiya、出典記載なし）〜63℃ と幅がある（衝突 C1）
+  - id: R-E03
+    op: heat
+    applies_to: egg_white
+    condition: T ≧ 80℃
+    effect: egg_white_stage 2→3（オボアルブミンが凝固）
+    values: "ovalbumin ... doesn't coagulate until the temperature reaches 80°C（オボアルブミンは卵白の54%）"
+    source: [soc_sousvide, soc_temps, mcgee]
+    check: 本文確認
+    confidence: 高
+  - id: R-E04
+    op: heat
+    applies_to: egg_white
+    condition: 61〜84℃
+    effect: 卵白たんぱく質全体が凝固する温度範囲
+    values: "albumen of eggs coagulate at temperatures ranging from 141.8° to 183.2°F (61° to 84°C)"
+    source: soc_sousvide
+    check: 本文確認
+    confidence: 中
+    note: R-E01〜E03 と同じ現象を範囲で言ったもの
+  - id: R-E05
+    op: heat
+    applies_to: egg_yolk
+    condition: T ≧ 65℃ でとろみ、≧ 70℃ で凝固
+    effect: egg_yolk_stage 0→1→2
+    values: "The yolk begins to thicken around 65°C and sets around 70°C（McGee p.85）/ 158°F/70°C -- Egg yolks set"
+    source: [soc_sousvide, soc_temps, mcgee]
+    check: 本文確認
+    confidence: 高
+  - id: R-E06
+    op: heat
+    applies_to: egg_yolk
+    condition: 80〜90℃
+    effect: egg_yolk_stage 2→3（固ゆで卵のほろほろ）
+    values: "Further heating to around 80-90°C produces the crumbly texture typical of hard boiled eggs"
+    source: soc_sousvide
+    check: 本文確認
+    confidence: 中
+  - id: R-E07
+    op: heat
+    applies_to: egg_whole（撹拌した全卵、希釈なし）
+    condition: T ≧ 73℃
+    effect: egg_gel_stage → 2 以上
+    values: "165°F/73°C -- Whole egg sets"
+    source: soc_temps
+    check: 本文確認
+    confidence: 中
+    note: 家庭向けサイトでは「溶き卵は70℃で固まり始め、73℃でとろとろ、75℃でしっかり」（omelet_web、抜粋のみ・出典記載なし）。衝突 C2
+  - id: R-E08
+    op: heat
+    applies_to: egg_whole（殻付き、一定温度の湯）
+    condition: 湯温 65/68/70℃ で保持
+    effect: 同じ到達温度でも保持時間で凝固が進む。70℃では30分で卵白の流動性が消える。65・68℃では卵黄の高さが保持時間とともに増す
+    values: "中心が湯温近くに達するまで 65℃:30分、68℃:28分、70℃:27分。70℃では30分で卵白の流動性が消失"
+    source: tatsu2019
+    check: 抄録確認
+    confidence: 高
+    note: 状態は到達温度だけでなく温度履歴 t_at_T を持つ必要がある根拠
+  - id: R-E09
+    op: heat
+    applies_to: egg + milk（+ sugar）
+    condition: 卵を牛乳で薄める
+    effect: 凝固（とろみ開始）温度が上がる。カスタードは 80〜85℃で凝固
+    values: "custard (egg, milk, sugar) will coagulate between 80°C and 85°C (176–185°F) / 卵1個+牛乳1カップ+砂糖大さじ1 では 175–180°F まで増粘が始まらない（薄めない卵は約150°F）"
+    source: [custard_textbook, custard_123, mcgee]
+    check: 抜粋のみ
+    confidence: 中
+    note: custard_textbook は取得を試みたが 403。値は検索抜粋。McGee 第2章にも同趣旨の記述があるはずだが本文未確認
+  - id: R-E10
+    op: mix
+    applies_to: egg + sugar
+    condition: 砂糖を加える
+    effect: 凝固温度がさらに上がる。牛乳の効果と足し合わさる
+    values: "Sugar raises the coagulation temperature further ... milk and sugar effects are additive"
+    source: custard_123
+    check: 抜粋のみ
+    confidence: 中
+    note: 何℃上がるかの数値は見つけていない
+  - id: R-E11
+    op: heat
+    applies_to: egg_white / egg_yolk + sugar
+    condition: 砂糖 10〜30% 添加
+    effect: ゲル強度が下がる（卵白で最も大きい）
+    values: "砂糖添加の影響は卵白で最も大きくゼリー強度が著しく減少した"
+    source: awatsu1982
+    check: 抄録確認
+    confidence: 高
+  - id: R-E12
+    op: heat
+    applies_to: egg_white / egg_yolk + salt
+    condition: 食塩 0.5〜2.5% 添加
+    effect: 凝固力（ゲル化）が促進される。卵白は 0.5% で著しく、1.0% で最高。卵黄は 1.0% まではあまり変わらず 1.5〜2.0% で著しく促進
+    values: 抄録の記述どおり
+    source: awatsu1982
+    check: 抄録確認
+    confidence: 高
+  - id: R-E13
+    op: heat
+    applies_to: egg_white / egg_yolk / egg_whole + salt
+    condition: 食塩量を増やす
+    effect: 凝固温度は上がる。卵白に 1.5% 以上で著しく上がる
+    values: "凝固温度は卵白,卵黄,全卵共食塩量の増加と共に上昇し,特に卵白に食塩1.5%以上添加した場合には著しく上昇した"
+    source: awatsu1982
+    check: 抄録確認
+    confidence: 高
+    note: R-E12（凝固力は上がる）と向きが逆に見える。同じ論文の中で「凝固力」と「凝固温度」は別の指標。衝突 C5
+  - id: R-E14
+    op: mix
+    applies_to: egg_white + acid
+    condition: pH を下げる
+    effect: 卵白の凝固が促進される（ポーチドエッグに酢を入れる理由）
+    values: null
+    source: mcgee
+    check: 未確認
+    confidence: 低
+    note: 書籍第2章の内容として知っている範囲。数値なし。推定
+  - id: R-E15
+    op: steam
+    applies_to: 希釈卵液（茶碗蒸し・プリン）
+    condition: 蒸し器内を 85〜90℃ に保ち沸騰させない
+    effect: porosity（す）を抑える。高すぎると す立ち・硬くなる
+    values: "蒸し器内の温度を85～90℃に保ち、卵液の沸騰を防ぐことによって、“す”の発生を最小限に抑える"
+    source: chawan_web
+    check: 抜粋のみ
+    confidence: 中
+    note: 仕組み（卵液中の水の気化で空洞ができる）は複数の家庭向けサイトで一致。論文での確認はしていない
+  - id: R-E16
+    op: mix
+    applies_to: egg_whole + dashi
+    condition: 卵:だし = 1:3（体積）
+    effect: egg_dilution 約25%。やわらかく固まる
+    values: "卵とだし汁の容量の黄金比は「1：3」／卵液の体積濃度を約25%"
+    source: chawan_web
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-E17
+    op: steam
+    applies_to: カスタードプリン・茶碗蒸し
+    condition: 85℃ 36分 または 90℃ 12分
+    effect: egg_gel_stage → 2
+    values: "85℃で36分蒸し上げる／90℃で12分蒸し上げる"
+    source: kajiya
+    check: 本文確認
+    confidence: 低
+    note: ページに出典の記載がない。温度と時間の組の例として残す
+  - id: R-E18
+    op: whisk
+    applies_to: egg_white
+    condition: 砂糖・酸・脂肪の有無
+    effect: 砂糖は泡立て時間を延ばすが泡を安定させる。酸（酒石酸など）は pH を下げて安定させる。脂肪（卵黄を含む）は泡立ちを妨げる
+    values: "even 0.5 wt% egg yolk will destroy the foaming characteristics of egg protein system"
+    source: [eggfoam_isu, eggfoam_yolk]
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-E19
+    op: heat
+    applies_to: 撹拌が不十分な全卵
+    condition: 卵白と卵黄が分かれたまま加熱
+    effect: 凝固温度が違うので固まり方にむらが出る
+    values: "卵の凝固温度は黄身と白身で異なり、しっかり混ぜなければ固まり方にムラが出来ます"
+    source: omelet_web
+    check: 抜粋のみ
+    confidence: 中
+    note: R-E01〜E05 から導ける帰結
+  - id: R-E20
+    op: heat
+    applies_to: 卵液
+    condition: 加熱中に撹拌し続ける（stirring=true）／撹拌しない
+    effect: 撹拌あり → gel_structure=小片（カード）。撹拌なし → 連続ゲル
+    values: null
+    source: null
+    check: 未確認
+    confidence: 低
+    note: 推定。スクランブルエッグとオムレツ・プリンの違いを状態で書くために置いた。出典を探していない
+
+  # ---- 卵を割って湯に落とす（ポーチドエッグ、2026-09-27 追加）----
+  - id: R-E21
+    op: poach
+    applies_to: egg_whole（割った卵、溶いていない）
+    condition: 湯温 80〜85℃（鍋底から小さな泡、沸騰させない）に割り入れる
+    effect: 卵白が散る前に固まり、卵黄を包んでまとまる（egg_white_cohesion=まとまる）。沸騰（100℃）では対流で卵白がちぎれる（ばらける）。70℃では卵白が固まりきらない。3〜4分で卵白は完全に固まり、卵黄の中心は 65℃未満（流動）
+    values: "Bring to a temperature of 80–85°C — small bubbles forming at the base ... but no rolling simmer. At 100°C, the turbulence tears the white apart before it sets. At 70°C, the white never fully coagulates. / The cooking time (3–4 minutes) is chosen to bring the white to full coagulation while keeping the center of the yolk below 65°C（terumimorita）／「沸騰させると水の対流が生じ白身が崩れてしまう」「85度を目安に…五分間」（travelingfoodlab）／The egg is cooked at 80C for 4 minutes（soc_poach）"
+    source: [terumimorita, travelingfoodlab, soc_poach]
+    check: 本文確認
+    confidence: 低
+    note: 料理人の記事とレシピの記述で、論文では確認していない。湯温は出典によって 62℃〜沸騰までばらつく（C13）
+  - id: R-E22
+    op: poach
+    applies_to: egg_white（湯に酢・塩を加える）
+    condition: "湯に酢・塩を加える（例: ワインビネガー湯量の3%、穀物酢・米酢なら4.5%）"
+    effect: 卵白の凝固が速まり、湯の中で飛び散らない。ただし卵の表面に不規則な膜・ちぎれができる（egg_white_cohesion=まとまる（表面に膜・ちぎれ））
+    values: "adding vinegar and salt \"does speed coagulation, but also produces shreds and an irregular film over the egg surface\"（McGee、soc_poach の引用）／〈酢や塩を加えることで早く固まるが卵の表面に不規則な膜が生じる〉（『マギーキッチンサイエンス』p88、travelingfoodlab の引用）／「酢は卵白を固める働きをするので、酢が入った湯に卵を入れるとすばやく卵白が固まり、湯の中で飛び散ることがない」（kyounoryouri）"
+    source: [soc_poach, travelingfoodlab, kyounoryouri, mcgee]
+    check: 本文確認
+    confidence: 中
+    note: McGee の本文は開いておらず、2つのページの引用で確認した（英語版・日本語版で一致）。何℃・何分速まるかの数値はない。kyounoryouri は沸騰した湯＋酢で作る。R-E14（未確認）の内容をこの出典で確かめた形
+  - id: R-E23
+    op: heat
+    applies_to: egg_white（オボアルブミン）
+    condition: pH を下げる（pH 5〜9 の範囲で比較）
+    effect: オボアルブミンの熱安定性が下がる（pH が高いほど安定）。水中 5% で変性温度 80.22℃
+    values: "The Td of OVA and LYZ in water (5% w/v, 5 °C/min) were 80.22 °C and 77.46 °C ... OVA thermal stability was improved with increasing pH"
+    source: wang2025
+    check: 抄録確認
+    confidence: 高
+    note: 精製たんぱく質の溶液での測定。pH ごとの変性温度の数値は抄録に無いので、段階のしきい値は動かさない
+
+  # ---- 乳 ----
+  - id: R-D01
+    op: mix
+    applies_to: milk + acid（vinegar / lemon_juice）
+    condition: pH ≦ 4.6
+    effect: milk_casein 分散→凝集（カゼインの等電点）
+    values: "At pH 4.6, which is the isoelectric point of casein, the casein micelles disintegrate and precipitate"
+    source: casein
+    check: 抜粋のみ
+    confidence: 高
+    note: 教科書的な値で、抜粋した複数の出典で一致
+  - id: R-D02
+    op: heat
+    applies_to: milk
+    condition: 加熱
+    effect: 乳清たんぱく質は熱で変性する。カゼインは熱に強い（変性は約120℃から）
+    values: "casein ... denaturation begins at approximately 120°C, while whey proteins ... can be denatured at high temperatures"
+    source: casein
+    check: 抜粋のみ
+    confidence: 中
+    note: 乳清の変性温度の数値は確認していない（推定 70℃前後）
+  - id: R-D03
+    op: whisk
+    applies_to: heavy_cream
+    condition: 乳脂肪 30% 以上、品温 7.5〜12.5℃
+    effect: 脂肪球が部分合一してネットワークを作り気泡を安定させる（fat_phase → 部分合一ネットワーク、foam_stage ↑）
+    values: "Whipping cream traditionally has a fat content between 30 and 40% / temperature range of 7.5 to 12.5°C recommended（5〜15℃で比較）/ whipping time, overrun, and bubble diameters decreased with increasing temperature"
+    source: [cream2010, cream_overview]
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-D04
+    op: whisk
+    applies_to: heavy_cream
+    condition: 泡立てすぎ
+    effect: fat_phase → 分離（バターと液に分かれる）。foam_stage=4
+    values: null
+    source: mcgee
+    check: 書籍(章)
+    confidence: 中
+    note: 第1章（乳）の内容。何分でそうなるかの数値はない
+  - id: R-D05
+    op: heat
+    applies_to: butter
+    condition: 約32〜35℃
+    effect: fat_phase 可塑→液体。明確な融点はなく幅で融ける
+    values: "butter melts ... typically around 32-35°C / 融け始めは 21〜40℃の間 / 冷蔵では2/3以上の脂肪が固体"
+    source: butter
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-D06
+    op: heat
+    applies_to: 乳脂肪
+    condition: "-40〜40℃"
+    effect: 乳脂肪の融解範囲
+    values: "Milk fat has a wide melting range, which spans from about −40 to 40°C"
+    source: butter
+    check: 抜粋のみ
+    confidence: 中
+
+  # ---- でんぷん ----
+  - id: R-S01
+    op: heat
+    applies_to: flour（小麦でんぷん）+ 水
+    condition: 約 52〜66℃
+    effect: starch_gel 0→1（糊化）
+    values: "Wheat: 59.5-64°C or 52-66°C / peak 61.5°C"
+    source: starch_gel
+    check: 抜粋のみ
+    confidence: 中
+    note: 水分量と測定法で値が変わる
+  - id: R-S02
+    op: heat
+    applies_to: rice（米でんぷん）+ 水
+    condition: 約 58.9〜82℃（出典で幅）
+    effect: starch_gel 0→1
+    values: "Rice: 68-78°C or 58.9-72.4°C or 66-82°C"
+    source: starch_gel
+    check: 抜粋のみ
+    confidence: 中
+    note: 農水省は「糊化開始 60℃付近」（R-S04）。衝突 C6
+  - id: R-S03
+    op: heat
+    applies_to: potato（じゃがいもでんぷん）+ 水
+    condition: 約 55〜66℃
+    effect: starch_gel 0→1
+    values: "Potato: 55-66°C / peak 63.6°C"
+    source: starch_gel
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-S04
+    op: simmer
+    applies_to: rice + water（炊飯）
+    condition: 糊化は 60℃付近から始まり、完全な糊化には 98℃以上で約20分
+    effect: starch_gel → 約1
+    values: "糊化開始温度：60℃付近／完全糊化に必要な加熱：98℃以上で約20分間／温度上昇期 約10分・沸騰期 約5分・蒸し煮期 10〜15分（100℃保持）・蒸らし期 約10分"
+    source: maff_rice
+    check: 本文確認
+    confidence: 高
+  - id: R-S05
+    op: simmer
+    applies_to: rice + water（炊飯）
+    condition: 加水量 米の重さの1.5倍（容積の1.2倍）。現代の炊飯器では1.3〜1.4倍
+    effect: 炊き上がりは米の重さの 2.1〜2.3倍、飯の水分 約60〜65%
+    values: "基準加水量：米の重さの1.5倍（米の容積の1.2倍）／好まれる飯：米の重さの2.2倍前後（2.1～2.3倍）／飯の水分 約60～65%"
+    source: [maff_rice, fooddb]
+    check: 本文確認
+    confidence: 高
+    note: 成分表の めし（01088）は水分 60.0 g/100g
+  - id: R-S06
+    op: soak
+    applies_to: rice + water
+    condition: 水温30℃以下で浸漬
+    effect: water ↑（吸水率 20〜25%）。30℃は5℃より速い。最低30分、できれば60分、約2時間で飽和
+    values: "吸水率：水温30℃以下のうるち米で20～25％程度／浸漬時間：最低30分、できれば60分／飽和状態到達時間：約2時間"
+    source: maff_rice
+    check: 本文確認
+    confidence: 高
+  - id: R-S07
+    op: simmer
+    applies_to: rice + water
+    condition: 加水比を変える
+    effect: 炊飯直後の糊化度は加水比によらず約95%。1.2倍未満では沸騰が不十分。官能評価は1.3〜1.4倍が高い
+    values: "飯の糊化度は炊飯直後には加水比の多少にかかわらず95%前後を示した"
+    source: kainuma1987
+    check: 抄録確認
+    confidence: 高
+  - id: R-S08
+    op: chill
+    applies_to: 糊化したでんぷん
+    condition: 冷やす・時間が経つ
+    effect: starch_retro ↑（老化して硬くなる）。0〜4℃付近・水分30〜60%で最も速い
+    values: "老化は、水分含量30～60％、0～4℃付近で最も速く進行"
+    source: null
+    check: 未確認
+    confidence: 中
+    note: 定性（冷えると老化）は複数の解説で一致。数値は検索の要約にしか出ず、一次出典を確認できなかった
+  - id: R-S09
+    op: bake
+    applies_to: flour + butter（ルー）
+    condition: ルーを 130℃ を超えて加熱
+    effect: そのルーで作ったソースの粘度が下がる（でんぷんの増粘力が落ちる）
+    values: "Viscosity and texture parameters of the sauce decreased at heating temperatures of roux over 130°C"
+    source: roux
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-S10
+    op: simmer
+    applies_to: ルー + milk（ホワイトソース）
+    condition: 沸騰まで加熱し、しばらく煮る
+    effect: starch_gel → 1、とろみが出る。粉臭さを消すには長め（最長30分）に煮る
+    values: "bring the liquid to a boil ... flour needs to be cooked for longer periods of time (up to 30 minutes)"
+    source: roux_texts
+    check: 抜粋のみ
+    confidence: 低
+    note: 「粉臭さ」は知覚の話なので、状態としては starch_gel と t_at_T だけを使う
+  - id: R-S11
+    op: heat
+    applies_to: potato
+    condition: 50〜70℃ に一定時間置く
+    effect: cell_wall → 硬化（ペクチンメチルエステラーゼが働く）。その後 80℃以上で長く煮ても煮崩れしにくい。60℃付近に長く置きすぎると柔らかくならない（2時間で生より硬くなることも）
+    values: "50～70℃でペクチンメチルエステラーゼを活性化した状態が一定時間続けば、野菜を硬くすることができます"
+    source: potato_pme
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-S12
+    op: simmer
+    applies_to: potato
+    condition: 80℃以上で加熱を続ける
+    effect: cell_wall → 軟化 → 崩壊（ペクチンが溶け出して煮崩れ）
+    values: "加熱するとペクチンが溶け出し、煮崩れが起こります"
+    source: potato_pme
+    check: 抜粋のみ
+    confidence: 中
+    note: 軟化が始まる温度の数値は確認していない
+
+  # ---- グルテン ----
+  - id: R-G01
+    op: mix
+    applies_to: flour + water
+    condition: 水と接触
+    effect: gluten 0→1（グリアジンとグルテニンが結びつく）。水がなければ形成しない
+    values: "Without water, gluten is not formed"
+    source: gluten
+    check: 抜粋のみ
+    confidence: 高
+  - id: R-G02
+    op: [mix, knead]
+    applies_to: flour + water
+    condition: 混ぜる・こねる時間と強さ
+    effect: gluten ↑（1→2→3）
+    values: null
+    source: gluten
+    check: 抜粋のみ
+    confidence: 高
+    note: 定性のみ。何分で何段階かの数値はない
+  - id: R-G03
+    op: rest
+    applies_to: 生地
+    condition: 寝かせる
+    effect: gluten_relaxed 0→1（弾性が下がる）
+    values: "Relaxing or resting the dough reduces the elasticity of the dough"
+    source: gluten
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-G04
+    op: mix
+    applies_to: パンケーキ生地
+    condition: 混ぜすぎ
+    effect: gluten ↑ で生地が締まる。粉気が少し残る程度で止める
+    values: "Over mixing develops the gluten ... do not overmix or pancakes will be tough"
+    source: pancake_web
+    check: 抜粋のみ
+    confidence: 低
+    note: レシピサイトの記述。R-G02 の特殊例
+
+  # ---- 膨化 ----
+  - id: R-L01
+    op: [mix, bake]
+    applies_to: baking_powder（ダブルアクション）
+    condition: 濡れる（室温）→ 加熱
+    effect: co2 0→1（濡れた時点）→2（加熱時）
+    values: "Double-acting baking powders work in two phases; once when cold, and once when hot"
+    source: baking_powder
+    check: 抜粋のみ
+    confidence: 高
+    note: 日本の家庭用ベーキングパウダーがダブルアクションかは製品による（未確認）
+  - id: R-L02
+    op: ferment
+    applies_to: yeast
+    condition: 約27℃が最適（30〜35℃で最速との記述もある）。55〜60℃で死滅
+    effect: co2 → 3。yeast_alive 活性→死滅（≧55〜60℃）
+    values: "the optimum temperature is just over 27°C (80°F) / yeast cells die at their thermal death point of 130°F–140°F (55°C–60°C)"
+    source: yeast
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-L03
+    op: bake
+    applies_to: パンケーキ生地
+    condition: 鉄板 375°F（約190℃）
+    effect: 表面の maillard ↑、co2 第2段
+    values: "The ideal griddle temperature for pancakes is 375°F"
+    source: pancake_web
+    check: 抜粋のみ
+    confidence: 低
+
+  # ---- 糖 ----
+  - id: R-C01
+    op: heat
+    applies_to: sugar（ショ糖）
+    condition: 約160〜170℃
+    effect: caramel 0→2
+    values: "Sucrose: 160°C/320°F（Science of Cooking）／Sucrose 170°C (338°F)（McGee p.656 を引く Wikipedia）"
+    source: [soc_temps, wiki_caramel, mcgee]
+    check: 本文確認
+    confidence: 高
+    note: 出典で10℃違う。衝突 C4。どちらも「その温度から速く進む」の目安
+  - id: R-C02
+    op: heat
+    applies_to: 果糖・ブドウ糖・麦芽糖
+    condition: 糖の種類ごとのしきい値
+    effect: caramel 0→2
+    values: "Fructose 110°C（SoC）/105°C（McGee）、Glucose 160°C（SoC）/150°C（McGee）、Maltose 180°C（両方）"
+    source: [soc_temps, wiki_caramel]
+    check: 本文確認
+    confidence: 高
+    note: 上白糖は転化糖を少し含む（未確認）ので、グラニュー糖より低い温度で色づく可能性がある（推定）
+  - id: R-C03
+    op: heat
+    applies_to: sugar（ショ糖の結晶）
+    condition: 加熱
+    effect: ショ糖は熱力学的には融けず、熱分解で結晶が崩れる（見かけの融解）。熱分解は時間をかければ低い温度でも始まる
+    values: "The loss of crystalline structure in sucrose ... has been shown to be due to the kinetic process of thermal decomposition (termed apparent melting)"
+    source: schmidt2011
+    check: 抜粋のみ
+    confidence: 高
+    note: カラメル化を「温度しきい値」でなく「温度×時間の反応」として持つべき根拠
+  - id: R-C04
+    op: bake
+    applies_to: sugar（グラニュー糖、乾いたまま）
+    condition: オーブン 300〜325°F（約150〜163℃）で約2時間、30分ごとに混ぜる
+    effect: 結晶のまま色づく（caramel 0→1）
+    values: "roast at 325°F ... stirring well once every 30 minutes, until it darkens to a sandy tan ... about 2 hours"
+    source: roasted_sugar
+    check: 抜粋のみ
+    confidence: 中
+    note: R-C03 の料理側の例
+  - id: R-C05
+    op: simmer
+    applies_to: sugar + water（糖液の煮詰め）
+    condition: 糖液の沸点（＝濃度）
+    effect: syrup_stage が温度とともに上がる
+    values: "糸 110〜112℃(80%)／ソフトボール 112〜116℃(85%)／ファームボール 118〜120℃(87%)／ハードボール 121〜130℃(90%)／ソフトクラック 132〜143℃(95%)／ハードクラック 146〜154℃(99%)／透明な液 160℃(100%)／褐色の液 170℃(100%)／焦げ 177℃(100%)"
+    source: candy_stages
+    check: 抜粋のみ
+    confidence: 中
+    note: 水がある間は糖液の温度は濃度で決まる沸点に縛られる。水を飛ばしきらないとカラメル化の温度に届かない
+  - id: R-C06
+    op: heat
+    applies_to: 糖・食品全般
+    condition: 180℃超
+    effect: 熱分解（焦げ）。caramel → 3
+    values: "above 180°C / 355°F a different set of reactions occur: pyrolysis, also known as burning / Burnt sugar 177°C"
+    source: [mc_maillard, candy_stages]
+    check: 本文確認
+    confidence: 中
+
+  # ---- メイラード ----
+  - id: R-M01
+    op: [bake, deep_fry]
+    applies_to: 糖とアミノ酸（たんぱく質）を含む食品の表面
+    condition: 約140〜165℃
+    effect: maillard ↑（速く進む）
+    values: "typically proceeds rapidly from around 140 to 165°C (280 to 330°F) / 285°F (140°C) -- Browning or the Maillard Reaction begins"
+    source: [mc_maillard, soc_temps]
+    check: 本文確認
+    confidence: 高
+  - id: R-M02
+    op: [simmer, steam]
+    applies_to: 湿った食品
+    condition: 表面が湿っている
+    effect: 表面温度が沸点を超えないため、メイラードはほとんど進まない
+    values: "as long as the food is very wet, its temperature won't climb above the boiling point of water ... dryness and temperature are the key controls"
+    source: mc_maillard
+    check: 本文確認
+    confidence: 高
+  - id: R-M03
+    op: heat
+    applies_to: 同上
+    condition: pH が高い（アルカリ）
+    effect: maillard が速くなる。pH 6〜8 で最適との記述
+    values: "Adding baking soda ... raises the food's pH (making it more alkaline), which also helps / Optimal browning takes place at pH 6–8"
+    source: [mc_maillard, maillard_overview]
+    check: 本文確認
+    confidence: 中
+    note: pH 6〜8 の値は抜粋のみ
+  - id: R-M04
+    op: heat
+    applies_to: 同上
+    condition: 140℃より低い温度で長時間
+    effect: maillard は遅いが進む
+    values: "Browning can still occur at lower temperatures, although at a slower rate"
+    source: maillard_overview
+    check: 抜粋のみ
+    confidence: 中
+    note: R-M01 のしきい値モデルと衝突する。衝突 C8
+  - id: R-M05
+    op: heat
+    applies_to: 同上
+    condition: 水分活性 aw 0.6〜0.7
+    effect: maillard が最も速い
+    values: "the reaction peaking at aw 0.6–0.7"
+    source: maillard_overview
+    check: 抜粋のみ
+    confidence: 中
+    note: 状態変数に水分活性を持っていない。water からの換算は未定
+
+  # ---- 揚げる ----
+  - id: R-F01
+    op: deep_fry
+    applies_to: 水分を含む食品（potato など）
+    condition: 油 160〜180℃
+    effect: 表面は乾いてクラスト（T_surface_max > 100、maillard ↑）。中心は100℃を超えない（water は中心に残る）
+    values: "food is in direct contact with very hot oil at 160–180°C ... The product temperature (except for the crust region) does not exceed 100°C during frying"
+    source: frying
+    check: 抜粋のみ
+    confidence: 高
+    note: 複数の総説で一致
+
+  # ---- 玉ねぎ ----
+  - id: R-O01
+    op: bake
+    applies_to: onion（長時間炒め）
+    condition: 褐変するまで炒める（重量が元の40%・20%程度まで減る）
+    effect: water ↓、onion_sulfur → 0（刺激臭が消える）、甘く香ばしい香り、maillard/caramel ↑。ブドウ糖・果糖・遊離糖の総量は減る
+    values: "長時間炒めると水分の蒸発とともに色, 味, 香りが変化し, 刺激臭も消失 ... グルコース, フルクトースおよび遊離糖総量が減少 ... 糖含有量と, 官能評価による甘味の強さとは対応しなかった"
+    source: tamaki2003
+    check: 抄録確認
+    confidence: 高
+    note: 重量 40%・20% は抄録の要約から。原文で要確認
+  - id: R-O02
+    op: heat
+    applies_to: onion
+    condition: 加熱
+    effect: 遊離糖（生で約6%）は増えず、変わらないか減る。硫黄化合物は減り、糖の分解で甘い香りの成分ができる。甘く感じるのは水分蒸発による濃縮と組織の軟化と考えられる（著者の考察）
+    values: "生タマネギ中に6%程度存在する遊離糖の含量は加熱により変化しないか、あるいは、減少する傾向にあり、新たな遊離糖の生成はない"
+    source: tokitomo1993
+    check: 抄録確認
+    confidence: 高
+    note: 「甘く感じる」は知覚の層の話。状態としては sugar_conc（重量あたり）と onion_sulfur を渡すだけにする
+  - id: R-O03
+    op: bake
+    applies_to: onion
+    condition: 炒めて褐変
+    effect: 褐変は糖とアミノ酸のメイラードが主で、温度が上がるとカラメル化も加わる
+    values: "the heat breaks down their cellular structure, releasing sugars and amino acids, which then react with each other, forming the Maillard products"
+    source: null
+    check: 未確認
+    confidence: 低
+    note: 検索で出たのは飲食店のブログのみ。メイラードとカラメル化の割合は分からない。衝突 C7
+
+  # ---- ゼラチン ----
+  - id: R-J01
+    op: soak
+    applies_to: gelatin + water
+    condition: 10〜25℃ で 30〜60分
+    effect: gelatin_state 乾燥→膨潤
+    values: "膨潤時間：30-60分／膨潤温度：10-25℃"
+    source: nitta
+    check: 本文確認
+    confidence: 高
+  - id: R-J02
+    op: heat
+    applies_to: gelatin（膨潤済み）
+    condition: 50〜60℃（直接溶かす場合は 60〜70℃ で 15〜20分）
+    effect: gelatin_state → 溶解（ゾル）
+    values: "溶解温度：50-60℃／直接溶解法：60-70℃、15-20分"
+    source: nitta
+    check: 本文確認
+    confidence: 高
+  - id: R-J03
+    op: heat
+    applies_to: gelatin（溶解後）
+    condition: 高温で長く置く（50〜80℃ で保存）
+    effect: 粘度・ゲル強度が時間とともに下がる
+    values: "加熱により経時的に劣化し、数値が低下していく"
+    source: nitta
+    check: 本文確認
+    confidence: 高
+    note: 沸騰させると固まらなくなる、という家庭向けの言い方はこの規則の強い版（未確認）
+  - id: R-J04
+    op: chill
+    applies_to: gelatin（溶解）
+    condition: ゲル化温度より下げる
+    effect: gelatin_state ゾル→ゲル。ゲル化温度は融解温度より低い。濃度が上がると両方上がる。ブルームが上がると融解温度は下がりゲル化温度は上がる
+    values: "Melting temperatures were higher than gelling temperatures, and both increased with increasing concentration at pH from 3 to 6"
+    source: ijfp2007
+    check: 抜粋のみ
+    confidence: 中
+  - id: R-J05
+    op: [chill, heat]
+    applies_to: gelatin
+    condition: 家庭の濃度（2〜4%）
+    effect: 約5〜10℃で固まり、約20〜25℃で融ける（可逆）
+    values: "溶けたゼラチンは5～10℃で固まります。ゼリー用のゼラチンは約20～25℃で溶ける／使用するゼラチン濃度は、完成時の2～4％"
+    source: gelatin_home
+    check: 抜粋のみ
+    confidence: 低
+    note: 10%ゲルで融点 27〜32℃という値もある（特許の抜粋）。濃度で変わるので R-J04 と矛盾はしない
+  - id: R-J06
+    op: mix
+    applies_to: gelatin + 生のパイナップル等
+    condition: たんぱく質分解酵素を含む生の果物
+    effect: gelatin_state → 分解（固まらない）。果物を加熱すると酵素が失活して固まる
+    values: "パイナップルに含まれるブロメラインというタンパク質分解酵素がゼラチンを分解"
+    source: pineapple
+    check: 抜粋のみ
+    confidence: 中
+    note: パイナップルは食材リストに入れていない。操作の順番（加熱→混ぜる／混ぜる→加熱）で結果が変わる例として残す
+
+  # ---- 肉 ----
+  - id: R-P01
+    op: heat
+    applies_to: chicken / beef
+    condition: ミオシン 40〜60℃、コラーゲン 53〜63℃、アクチン 66〜73℃
+    effect: meat_myosin 0→1、meat_collagen 0→1（変性して収縮）、meat_actin 0→1。硬さは筋原線維たんぱく質の変性で増す
+    values: "myosin denaturing at 40-60°C and actin at 66-73°C. Collagen denaturation occurs at temperatures between 53 and 63°C, followed by collagen fiber shrinkage"
+    source: tornberg2005
+    check: 抜粋のみ
+    confidence: 高
+    note: 総説。抜粋のみだが値は他の解説とも整合
+  - id: R-P02
+    op: heat
+    applies_to: chicken / beef
+    condition: 50℃ で白濁、60℃ で肉汁が急に出る・ミオグロビン変性開始
+    effect: meat_myoglobin 0→1、meat_water_loss ↑
+    values: "120°F/50°C -- Meat develops a white opacity / 140°F/60°C -- Red myoglobin begins to denature / 140°F/60°C -- Meat suddenly releases lots of juice"
+    source: soc_temps
+    check: 本文確認
+    confidence: 中
+  - id: R-P03
+    op: simmer
+    applies_to: 結合組織の多い肉
+    condition: 70℃（160°F）以上で長時間、湿った加熱
+    effect: meat_collagen 1→2（ゼラチンとして溶ける）
+    values: "160°F/70°C -- Connective tissue collagen begins to dissolve to gelatin / slowly heated to temperatures between 70°C and 82°C, it breaks down into gelatin"
+    source: [soc_temps, tornberg2005]
+    check: 本文確認
+    confidence: 中
+    note: 何時間かかるかの数値は確認していない。時間依存
+  - id: R-P04
+    op: heat
+    applies_to: chicken（むね）
+    condition: 70℃（158°F）
+    effect: meat_water_loss ↑（鳥のむね肉が乾く）
+    values: "158°F/70°C -- Breast meat in birds gets dry"
+    source: soc_temps
+    check: 本文確認
+    confidence: 中
+    note: '"dry" は知覚寄りの言葉。状態としては水分流出として扱う'
+  - id: R-P05
+    op: heat
+    applies_to: chicken / beef
+    condition: 安全上の最低中心温度
+    effect: 状態変化ではなく制約。鶏肉 165°F（74℃）、牛ステーキ 145°F（63℃）＋3分休ませる、牛ひき肉 160°F（71℃）
+    values: "poultry 165°F / steaks, chops, roasts 145°F + rest 3 minutes / ground beef 160°F"
+    source: fsis
+    check: 抜粋のみ
+    confidence: 高
+    note: 公的機関の基準。℃は換算（出典の本文は 403 で取得できず）
+  - id: R-P06
+    op: heat
+    applies_to: beef
+    condition: 50・60・70・80℃に保つ（中心がその温度になってから 30 分）
+    effect: 加熱損失（失う重さの割合）は到達温度とともに増える。50℃ 7〜11%、60℃ 17〜21%、70℃ 29〜32%、80℃ 34〜40%
+    values: "The cooking loss gradually increased with the increase in temperature, and it ranged between 7% and 11% at 50 °C, between 17% and 21% at 60 °C, and between 29 and 32% at 70 °C"
+    source: vaskoska2020
+    check: 本文確認
+    confidence: 中
+    note: 2026-10-22 追加（通説3 焼き目と肉汁）。30 分保った後の値で、短い加熱で失う速さは分からない。80℃ の 34〜40% は同じ論文の筋肉ごとの値（半腱様筋 40・大腿二頭筋 38・大腰筋 34）
+  - id: R-P07
+    op: heat
+    applies_to: chicken
+    condition: 中心が 136〜165°F（57.8〜73.9℃）に保たれる
+    effect: 保つ時間が足りるとサルモネラが 7 桁（1000万分の1）に減る。温度が低いほど長く要る（140°F 60℃で 25.7分、145°F 62.8℃で 8.6分、150°F 65.6℃で 2.7分、165°F 73.9℃で 10秒未満。鶏・脂肪 2%）
+    values: "Times for a given temperature, fat content, and species needed to obtain a 7-log10 lethality of Salmonella ... Fat % = 2 ... 140 25.7 min ... 165 <10 sec"
+    source: fsis_poultry_tables
+    check: 本文確認
+    confidence: 高
+    note: 2026-10-22 追加（通説11 鶏むね肉を低温で）。公的機関の表の写し。表の温度の間は時間の対数で直線補間し、温度が変わる間は「その温度で要る時間」に対する割合を足し合わせる（通説ページの計算での扱い、推定）。R-P05 の 74℃ は、この表で 10 秒未満になる温度
+
+  # ---- 水・加熱媒体 ----
+  - id: R-W04
+    op: simmer
+    applies_to: water + salt
+    condition: 水に食塩を溶かす
+    effect: 沸点が上がる。上がり幅 ΔTb = Kb × m × i（m は水 1 kg あたりの溶けた物質の量 mol、食塩は Na⁺ と Cl⁻ に分かれるので i ≒ 2）
+    values: "the value of Kb is 0.512°C/m ... over 100 grams of NaCl to a liter of water to increase the boiling point by a couple of degrees"
+    source: libretexts_bpe
+    check: 本文確認
+    confidence: 高
+    note: 2026-10-22 追加（通説5 塩と沸点）。i = 2 は完全に分かれたときの理想の値で、実際は少し小さい（推定、出典は今回確かめていない）。シミュレータの沸点（R-W01・糖液の表）にはまだ入れていない
+  - id: R-W01
+    op: [simmer, steam]
+    applies_to: 水・蒸気
+    condition: 大気圧
+    effect: 媒体の温度は100℃が上限
+    values: 物理定数
+    source: mc_maillard
+    check: 本文確認
+    confidence: 高
+  - id: R-W02
+    op: heat
+    applies_to: 湿った食品
+    condition: 表面に水がある間
+    effect: T_surface_max は沸点を超えない。高温の乾いた加熱（焼く・揚げる）で表面が乾いてはじめて100℃を超える
+    values: "only high-heat cooking techniques can dry out the food enough to raise the temperature sufficiently"
+    source: mc_maillard
+    check: 本文確認
+    confidence: 高
+    note: 焼く・蒸す・煮る・揚げるを1つの「加熱」にまとめる根拠
+  - id: R-W03
+    op: steam
+    applies_to: 蒸し器
+    condition: 蓋をずらす・火を弱める
+    effect: 庫内を 85〜90℃ に下げられる
+    values: "蒸し器内の温度を85～90℃に保ち"
+    source: chawan_web
+    check: 抜粋のみ
+    confidence: 中
+
+  # ---- 酸 ----
+  - id: R-A01
+    op: mix
+    applies_to: vinegar / lemon_juice
+    condition: 加える
+    effect: pH ↓（酢 約2.4〜3.0、レモン汁 約2.0〜2.6）
+    values: null
+    source: null
+    check: 未確認
+    confidence: 低
+    note: pH の値は推定。成分表には pH がない。R-D01・R-E14・R-E18・R-M03 に効く
+
+# ---------------------------------------------------------------
+# 目標料理の完成時の状態
+# 各値に basis（規則ID／推定／料理の定義）を付ける
+# process_ref は状態を書くための参考手順（入力ではない）
+# ---------------------------------------------------------------
+targets:
+  scrambled_eggs:
+    ja: スクランブルエッグ
+    ingredients: [egg_whole, milk（任意）, butter, salt]
+    process_ref: 卵＋牛乳を混ぜる → フライパン（バター）で加熱しながら撹拌
+    state:
+      T_core_max: {value: "70〜75℃", basis: "R-E07 と omelet_web（衝突 C2）"}
+      egg_gel_stage: {value: "1〜2（とろみ〜やわらかいゲル）", basis: R-E07}
+      gel_structure: {value: 小片（カード）, basis: "R-E20（推定）"}
+      egg_white_stage: {value: 2, basis: "R-E02（65℃で やわらかい固体、80℃未満）"}
+      egg_yolk_stage: {value: "1〜2", basis: R-E05}
+      water: {value: "約75 g/100g（全卵の値からほぼ減らない）", basis: 推定}
+      fat_phase: {value: 液体（バター融解）, basis: R-D05}
+      maillard: {value: 0, basis: "料理の定義（焼き色を付けない流儀）。付ける流儀もある（衝突 C9）"}
+      porosity: {value: 0, basis: 推定}
+  omelet:
+    ja: オムレツ（プレーン）
+    ingredients: [egg_whole, butter, salt]
+    process_ref: 溶き卵を高温のフライパンで短時間、外側を固めて中を半熟で包む
+    state:
+      T_core_max: {value: "内側 70〜73℃ 前後、外側はそれ以上", basis: "推定（R-E07）"}
+      egg_gel_stage: {value: "外側 2〜3、内側 1〜2", basis: 推定}
+      gel_structure: {value: 外側連続・内側半流動, basis: "料理の定義／R-E20（推定）"}
+      maillard: {value: "0〜1", basis: "料理の定義（焼き色は付けないのが仏式の基本とされるが未確認）"}
+      fat_phase: {value: 液体（バター融解）, basis: R-D05}
+  custard_pudding:
+    ja: プリン（カスタードプディング、蒸し／湯煎焼き）
+    ingredients: [egg_whole, egg_yolk（任意）, milk, sugar]
+    process_ref: 卵＋牛乳＋砂糖を混ぜる → 型に入れ蒸す（または湯煎焼き） → 冷やす。カラメルは別に作って底に敷く
+    state:
+      egg_dilution: {value: "レシピ依存（未確認）", basis: null}
+      sugar_conc: {value: "約10%（推定、レシピ依存）", basis: 推定}
+      T_core_max: {value: "80〜85℃", basis: R-E09}
+      egg_gel_stage: {value: "2（型から出して形を保つ連続ゲル）", basis: "R-E09"}
+      gel_structure: {value: 連続ゲル, basis: R-E20（推定）}
+      porosity: {value: 0, basis: "R-E15（庫内 85〜90℃・沸騰させない）"}
+      milk_whey_denatured: {value: "1（推定）", basis: "R-D02（温度未確認）"}
+      maillard: {value: "0（本体）", basis: R-M02（湿った加熱）}
+      caramel: {value: "2（底のカラメル層のみ）", basis: R-C01}
+      T_serve: {value: "冷蔵温度（約5℃、推定）", basis: 料理の定義}
+  chawanmushi:
+    ja: 茶碗蒸し
+    ingredients: [egg_whole, dashi, salt]
+    process_ref: 卵:だし=1:3 を混ぜて漉す → 85〜90℃で蒸す
+    state:
+      egg_dilution: {value: "約25%", basis: R-E16}
+      salt_conc: {value: "約0.5〜1%（推定）", basis: "推定（R-E12・E13 の範囲内）"}
+      T_core_max: {value: "80℃台（推定）", basis: "R-E09 を類推（牛乳ではなくだしで薄めた場合の数値は未確認）"}
+      egg_gel_stage: {value: "2（プリンよりやわらかい、推定）", basis: "R-E16（薄いほどやわらかい）"}
+      gel_structure: {value: 連続ゲル, basis: R-E20（推定）}
+      porosity: {value: 0, basis: R-E15}
+      maillard: {value: 0, basis: R-M02}
+      T_serve: {value: "温かい（60〜70℃、推定）", basis: 料理の定義}
+  white_sauce:
+    ja: ホワイトソース（ベシャメル）
+    ingredients: [butter, flour, milk, salt]
+    process_ref: バターを溶かし小麦粉を炒めてルー → 牛乳でのばし沸騰させて煮る
+    state:
+      T_core_max: {value: "約100℃（沸騰）", basis: "R-S10・R-W01"}
+      starch_gel: {value: "1（糊化）", basis: "R-S01・R-S10"}
+      gluten: {value: "0〜1（ほぼ効かない、推定）", basis: 推定}
+      fat_phase: {value: "液体（ルーの油脂が でんぷん粒を包んで分散）", basis: "mcgee 第11章（書籍(章)）"}
+      maillard: {value: "0（ルーを色づけない）", basis: "料理の定義（ホワイトルー）。R-S09: ルーを130℃超に上げると増粘力が落ちる"}
+      water: {value: "レシピ依存（牛乳の量で決まる）", basis: null}
+      milk_casein: {value: 分散, basis: "R-D01（酸を入れない）"}
+  caramel_sauce:
+    ja: カラメル（プリン用カラメルソース）
+    ingredients: [sugar, water]
+    process_ref: 砂糖＋水を煮詰めて褐色にし、湯を加えて止める
+    state:
+      T_core_max: {value: "約160〜170℃（色づけ時）", basis: "R-C01・R-C05"}
+      syrup_stage: {value: "8（褐色の融液）→ 湯でのばす", basis: R-C05}
+      caramel: {value: 2, basis: R-C01}
+      sugar_conc: {value: "のばした後はレシピ依存", basis: null}
+      note: {value: "180℃を超えると焦げ（caramel=3）", basis: R-C06}
+  sauteed_onion:
+    ja: 炒め玉ねぎ（あめ色）
+    ingredients: [onion, vegetable_oil or butter]
+    process_ref: 薄切りの玉ねぎを油で長時間炒める
+    state:
+      water: {value: 大きく減る, basis: "R-O01"}
+      mass_ratio: {value: "0.4〜0.2", basis: "R-O01（抄録の要約から、要確認）"}
+      onion_sulfur: {value: 0, basis: R-O01}
+      sugar_conc: {value: "重量あたりは上がる／総量は減る", basis: "R-O01・R-O02"}
+      maillard: {value: "2〜3", basis: "R-O01・R-O03（割合は不明）"}
+      caramel: {value: "1〜2（割合は不明）", basis: "R-O03（衝突 C7）"}
+      cell_wall: {value: 崩壊, basis: "推定（R-S12 を野菜一般に類推）"}
+      T_surface_max: {value: "100℃超（水分が飛んだ後）", basis: R-W02}
+  steamed_rice:
+    ja: ご飯（白飯）
+    ingredients: [rice, water]
+    process_ref: 洗米 → 浸漬 30〜60分 → 炊飯（米の重さの1.3〜1.5倍の水）→ 蒸らし
+    state:
+      water: {value: "約60〜65 g/100g", basis: "R-S05（成分表 めし 60.0）"}
+      starch_gel: {value: "約0.95", basis: "R-S07"}
+      T_core_max: {value: "98〜100℃（約20分保持）", basis: R-S04}
+      starch_retro: {value: 0（炊きたて）, basis: R-S08}
+      maillard: {value: "0（おこげは除く）", basis: R-M02}
+      mass_ratio: {value: "米の重さの 2.1〜2.3倍", basis: R-S05}
+  pancake:
+    ja: パンケーキ（ホットケーキ）
+    ingredients: [flour, egg_whole, milk, sugar, baking_powder, butter]
+    process_ref: 粉類と液体をさっくり混ぜる → 少し寝かせる → 鉄板で両面を焼く
+    state:
+      gluten: {value: "1（混ぜすぎない）", basis: "R-G02・R-G04"}
+      co2: {value: 2, basis: R-L01}
+      starch_gel: {value: "1（推定）", basis: "推定（中心は100℃近くまで上がると推定）"}
+      egg_gel_stage: {value: "3（推定）", basis: 推定}
+      maillard: {value: "2（表面）", basis: "R-M01・R-L03"}
+      T_surface_max: {value: "約150℃以上（推定）", basis: "R-M01 から逆算した推定"}
+      air_frac: {value: "あり（数値は未調査）", basis: R-L01}
+  milk_jelly:
+    ja: 牛乳ゼリー（ゼラチン）
+    ingredients: [milk, sugar, gelatin]
+    process_ref: ゼラチンを膨潤 → 温めた牛乳（50〜60℃）で溶かす → 冷やし固める
+    state:
+      gelatin_conc: {value: "2〜4%", basis: R-J05}
+      gelatin_state: {value: ゲル, basis: "R-J04・R-J05"}
+      T_core_max: {value: "約50〜60℃（溶解時）", basis: R-J02}
+      T_serve: {value: "約5〜10℃（冷蔵）", basis: R-J05}
+      milk_casein: {value: 分散, basis: R-D01}
+      note: {value: "20〜25℃を超えて置くと融ける（可逆）", basis: R-J05}
+  whipped_cream:
+    ja: ホイップクリーム
+    ingredients: [heavy_cream, sugar]
+    process_ref: 冷やした生クリームに砂糖を入れて泡立てる
+    state:
+      fat: {value: "30〜40%（元のクリーム）", basis: R-D03}
+      T_core_max: {value: "7.5〜12.5℃（泡立て時）", basis: R-D03}
+      fat_phase: {value: 部分合一ネットワーク, basis: R-D03}
+      foam_stage: {value: "2〜3", basis: "R-D03。4 はバター化（R-D04）"}
+      air_frac: {value: "あり（数値は未調査）", basis: R-D03}
+  onsen_tamago:
+    ja: 温泉卵
+    ingredients: [egg_whole（殻付き）]
+    process_ref: 65〜70℃の湯に殻ごと約30分
+    state:
+      T_core_max: {value: "65〜70℃", basis: R-E08}
+      egg_white_stage: {value: "1〜2（流動性が残る）", basis: "R-E02・R-E08"}
+      egg_yolk_stage: {value: "1〜2", basis: "R-E05・R-E08"}
+      t_at_T: {value: "中心が湯温に近づいてから数分〜", basis: R-E08}
+      note: {value: "卵黄のほうが卵白より固い、という逆転は R-E01〜E05 の温度差からは直接は出ない。卵白の主成分オボアルブミン（80℃）が固まらないことが効く（推定）", basis: "R-E03・R-E05"}
+  poached_egg:
+    ja: ポーチドエッグ
+    added: "2026-09-27。本人の依頼（東海オンエアの動画「温泉卵じゃ柔らかすぎ、ゆで卵じゃ硬すぎ、その間」）。13品には数えない"
+    ingredients: [egg_whole（割った・殻なし）]
+    process_ref: 割った卵を 80〜85℃の湯（沸騰させない）に落として3〜4分
+    state:
+      egg_form: {value: 割った（殻なし、溶いていない）, basis: "料理の定義（R-E21）"}
+      T_surface_max: {value: "80〜100℃（湯温）", basis: "R-E21（80〜85℃）・kyounoryouri（沸騰）。湯に接する表面は湯温（R-W02）"}
+      t_at_T: {value: "表面が 80℃以上で 3分以上", basis: "R-E21（3〜4分）"}
+      egg_white_stage: {value: "2〜3（固まる）", basis: "R-E02・R-E03・R-E21"}
+      egg_yolk_stage: {value: "0〜1（流れる〜とろみ）", basis: "R-E05・R-E21（中心 65℃未満）"}
+      egg_white_cohesion: {value: "まとまる（酢・塩を入れると表面に膜・ちぎれ）", basis: "R-E21・R-E22"}
+      maillard: {value: 0, basis: "湯で加熱（R-W02）"}
+  sauteed_chicken:
+    ja: 鶏むね肉のソテー
+    ingredients: [chicken, vegetable_oil, salt]
+    process_ref: 油をひいたフライパンで両面を焼く
+    state:
+      T_core_max: {value: "≧74℃（安全基準）", basis: R-P05}
+      meat_myosin: {value: 1, basis: R-P01}
+      meat_actin: {value: 1, basis: R-P01}
+      meat_myoglobin: {value: 2, basis: R-P02}
+      meat_water_loss: {value: "大（70℃超で乾く）", basis: R-P04}
+      maillard: {value: "2（表面）", basis: R-M01}
+      note: {value: "安全基準（74℃）と乾きはじめ（70℃）が近く、衝突する（C10）", basis: "R-P04・R-P05"}
+
+# ---------------------------------------------------------------
+# 知覚の層への候補（対応づけは本人が決める。ここは候補の列挙だけ）
+# ---------------------------------------------------------------
+perception_candidates:
+  硬さ: [egg_white_stage, egg_yolk_stage, egg_gel_stage, gelatin_state, gelatin_conc, starch_retro, gluten, meat_actin, meat_water_loss, water, cell_wall, T_serve]
+  とろみ・粘り: [starch_gel, egg_yolk_stage, egg_gel_stage, gelatin_state, sugar_conc, syrup_stage, T_serve]
+  なめらかさ: [porosity, gel_structure, egg_gel_stage]
+  ふわふわ・軽さ: [air_frac, foam_stage, co2]
+  ぱりっと・かりっと: [T_surface_max, water（表面）, syrup_stage]
+  ほろほろ・ぽろぽろ: [egg_yolk_stage, gel_structure, cell_wall]
+  ジューシーさ: [meat_water_loss, water]
+  甘さ: [sugar_conc, caramel, onion_sulfur, water]
+  塩味: [salt_conc]
+  酸味: [pH]
+  苦味: [caramel, maillard]
+  旨み: [meat_collagen, milk_whey_denatured]
+  香ばしさ: [maillard, caramel]
+  刺激臭・辛味: [onion_sulfur]
+  油っぽさ・コク: [fat, fat_phase]
+  温度: [T_serve]
+  時間（立ち上がり・余韻）: [fat_phase, sugar_conc, maillard]
+
+# ---------------------------------------------------------------
+# 衝突・未確定
+# ---------------------------------------------------------------
+conflicts:
+  C1: 卵白の凝固開始温度が出典によって 55〜57℃（kajiya）／60℃（SoC）／62℃（検索抜粋）／63℃（SoC のとろみ開始）とばらつく。何をもって「凝固開始」とするか（特定のたんぱく質・白濁・とろみ）が違う
+  C2: 撹拌した全卵の凝固が 73℃（SoC）と「70℃開始・75℃でしっかり」（家庭向けサイト）で違う。プリン液について「70℃開始・75℃」とする記事（mirai、出典なし）は、カスタードの 80〜85℃（R-E09）と矛盾する。希釈・砂糖を考えると後者が正しいと思われるが、一次資料では確認していない
+  C3: 牛乳・砂糖で薄めると凝固温度が上がる（R-E09, R-E10）ことは確かだが、薄め方ごとの凝固温度の関数（何%で何℃）は見つけていない。プリン・茶碗蒸しの状態は類推で書いた
+  C4: ショ糖のカラメル化 160℃（SoC）と 170℃（McGee）。さらにショ糖は熱分解なので時間をかければ低温でも進む（R-C03, R-C04）。「しきい値」でモデル化すると両方と食い違う
+  C5: 食塩は卵の凝固力を上げるが凝固温度も上げる（R-E12, R-E13、同じ論文）。「塩は卵を固まりやすくする」という一般的な言い方とは、指標によって合ったり合わなかったりする
+  C6: 米でんぷんの糊化開始が 60℃付近（農水省）と 58.9〜82℃（論文、幅）で違う。米の品種と測定法による
+  C7: 炒め玉ねぎの褐変のうちメイラードとカラメル化がどれだけずつかは分からない。「玉ねぎのカラメリゼ」という呼び名は化学的には不正確かもしれないが、確かめていない
+  C8: メイラードを 140℃しきい値で持つか、温度依存の速度で持つか。煮込み・長時間加熱では 140℃未満でも色が付く（R-M04）
+  C9: 料理の定義そのものが流儀で分かれる。スクランブルエッグ（焼き色の有無・仕上げ温度）、オムレツ（焼き色）。目標状態は1点ではなく範囲で持つ必要がある
+  C10: 鶏むね肉は安全基準 74℃ と乾きはじめ 70℃ が近い。安全を制約にすると「しっとり」は低温長時間（時間で殺菌）でしか満たせず、到達温度だけの状態では表せない
+  C11: 状態変数の多くが段階（ordinal）で、段階と温度の対応は出典にあるが段階の間の連続量はない。最近傍の料理を探すときの距離の定義が未定
+  C12: 卵白:卵黄の質量比、酢・レモン汁の pH、乳清の変性温度、泡のオーバーラン、肉の水分流出量は数値を集めていない（推定か空欄）
+  C13: ポーチドエッグの湯温が出典によって 62℃（wiki_poached）／63–65℃（terumimorita の要約行）／71〜74℃を保つ・85℃で入れる（travelingfoodlab）／80℃（soc_poach）／80–85℃（terumimorita 本文）／沸騰（kyounoryouri）とばらつく。シミュレータは 100℃ で頭打ちで、「弱い沸騰」と「激しい沸騰」を区別できない
+  C14: 湯に酢・塩を入れるかが出典で分かれる。入れる（kyounoryouri・terumimorita。すばやく固まり散らない）／入れない（travelingfoodlab。表面に不規則な膜ができる、McGee）。効果の向き（凝固が速まる）は両者で一致し、仕上がりの評価が違う
+  C15: 殻付き卵の温度を2つの一次遅れ（中心 tau 7.2分・卵白の層 tau 1.4分）で持つ。どちらも球の熱伝導（tatsu2019 に合わせた）の近似で、中心の一次遅れは球の解より立ち上がりが速い（沸騰の湯で中心が 63.2% に達するのは 一次遅れ 7.2分・球 10.3分）。卵白の層の tau は「63.2% に達する時間」で決めたが、75%・98% で決めると 1.9分・4.3分になる（2026-09-28、修正 B）。2026-09-28 夜 Q6 (a) で、殻付き卵は2つの一次遅れをやめて球の熱伝導の解そのもの（R²/α=60.5分）に置き換えた。残る近似は 卵黄と卵白の熱拡散率の違い・卵の形・殻の熱抵抗を分けていない。2026-09-28 夜（余熱）から、取り出した後も同じ解を続ける（空気はロバン条件 Bi_air=0.5、推定。水・蒸気・冷水は表面＝媒体温度）
+  C16: 余熱を表せるのは殻付き卵だけ（球の熱伝導の解）。ほかの形（割った卵・溶き卵・器の卵液・肉）は1つの温度の一次遅れで、中心が周りの温度を越えないので余熱が出ない。またレシピに後の手順が書いていないときは「室温に置く」とみなした（2026-09-28 夜、rules.md §10）。世の中の半熟ゆで卵のレシピ（書いていない 3 行）はこれで該当なしになり、「すぐ氷水」なら半熟。実際に食べるまでの時間の出典はない
+
+# ---------------------------------------------------------------
+# シミュレータの採用値（2026-09-27 追加）
+# 方針: 反応は「しきい値の温度＋温度履歴（温度帯ごとの保持時間）」で扱う。反応速度論は使わない。
+# 出典で値が食い違うものは value に採用値を1つ置き、alternatives に代替値を併記する。
+# check が「推定」のものは出典がなく、シミュレータを動かすために置いた値。
+# 温度の追従（中心・表面が媒体の温度に近づく）はニュートンの冷却則（熱伝達）で近似する。
+# これは反応ではなく熱の移動の近似で、時定数 tau は R-E08・R-S04 から逆算した2つ以外は推定。
+# ---------------------------------------------------------------
+sim:
+  run:
+    dt_min: {value: 0.1, unit: min, check: 推定, why: 時間刻み。しきい値と保持時間の判定の分解能}
+    T0_default: {value: 20, unit: ℃, check: 推定, why: 食材の初期温度（室温）。レシピで上書きできる}
+    boiling_point_water: {value: 100, unit: ℃, rule: R-W01, check: 本文確認}
+    mix_temperature: {value: 質量加重平均, check: 推定, why: 比熱をすべて等しいとみなす}
+
+  added_state_variables:   # state_variables に無く、シミュレータで足したもの（rules.md §10）
+    egg_form: {ja: 卵の形, type: categorical, levels: [殻付き, 割った, 溶き卵]}
+    egg_gel_stage_surface: {ja: 卵液の外側のゲル段階, type: ordinal, levels: 同 egg_gel_stage}
+    T_whisk: {ja: 泡立て中の品温（平均）, unit: ℃, type: continuous}
+    air: {ja: 気泡の有無, type: bool, note: air_frac の数値がないため真偽で持つ。foam_stage ≧ 1 か co2 ≧ 2}
+    sugar_conc_ratio: {ja: 重量あたりの糖濃度の倍率（水が飛ぶ前との比）, type: continuous}
+    meat_water_loss: {ja: 肉からの水分流出（段階に変更）, type: ordinal, levels: {0: なし, 1: 肉汁が出る（60℃）, 2: むね肉が乾く（70℃）}}
+    egg_white_cohesion: {ja: 卵白のまとまり（割って湯に落とした卵）, type: categorical, levels: [ばらける, まとまる（表面に膜・ちぎれ）, まとまる], rule: "R-E21, R-E22", note: 湯に落とした時点の湯温と酢・塩で決める。湯に落としていない卵では値なし}
+
+  heat_transfer:
+    tau_min:   # 中心温度が媒体温度に近づく時定数（形ごと）
+      thin:  {value: 2.0, check: 推定, why: フライパンに広げた卵液・生地・薄切り}
+      cup:   {value: 5.0, check: 推定, why: 型・器に入れた卵液（プリン・茶碗蒸し）}
+      shell: {value: 7.2, unused_since: "2026-09-28 夜（egg_sphere に置き換え）", rule: R-E08, check: 抄録確認, why: "殻付き卵で中心が湯温近く（1℃以内）に達するまで約28分。20℃から68℃として 28/ln(48/1) ≈ 7.2"}
+      pot:   {value: 3.3, rule: R-S04, check: 本文確認, why: "炊飯の温度上昇期 約10分 を 3τ とみなした"}
+      piece: {value: 4.0, check: 推定, why: 厚さ2cm程度の肉片}
+      drop:  {value: 7.2, check: 推定, why: "割って湯に落とした卵（ポーチドエッグ）。質量は殻付き卵と同じで殻の熱抵抗は小さいとみなし、shell と同じ値にした"}
+    tau_white_layer_min: {value: 1.4, unused_since: "2026-09-28 夜（egg_sphere に置き換え）", unit: min, rule: R-E08, source: "tatsu2019・egg_structure", check: 推定, conflict: C15, alternatives: ["1.9（75% に達する時間で決めた場合）", "4.3（98%。中心の tau と同じ決め方）"], why: "殻付き卵の卵白の層（体積平均）の温度が媒体温度に近づく時定数（2026-09-28、修正 B）。卵を一様な球とみなし、球の熱伝導の解（表面＝媒体温度）で中心が 20→68℃の湯で 1℃以内に達するのが 28分（tatsu2019、shell の tau と同じ根拠）になるよう R²/α=60.5分 と決め、卵黄を中心の球（中身の 34%、egg_structure の 卵黄 30〜33%／卵白 56〜59% から）、卵白をその外側の層として、卵白の層の体積平均が 63.2% に達する時間 1.42分 を採った。殻の熱抵抗は分けていない（tatsu2019 の実測に含まれる。殻 0.2〜0.38mm）。R²/α=60.5分 は熱拡散率 1.7×10⁻⁷ m²/s（egg_thermal）なら半径 2.5cm に当たり、卵の大きさと矛盾しない"}
+    egg_sphere:   # 殻付き卵の温度を一様な球の熱伝導の解で持つ（2026-09-28 夜、Q6 (a)。rules.md §10）。tau_min.shell と tau_white_layer_min は使わなくなった
+      R2_over_alpha_min: {value: 60.5, unit: min, rule: R-E08, source: "tatsu2019・egg_thermal", check: 抄録確認, why: "球の解で、20℃の卵を 68℃の湯に入れて中心が 1℃以内に達するのが 28分（tatsu2019）になる R²/α。修正 B で決めた値そのまま。熱拡散率 1.7×10⁻⁷ m²/s（egg_thermal）なら半径 2.5cm"}
+      yolk_volume_fraction: {value: 0.34, source: egg_structure, check: 本文確認, why: "卵黄を中心の球、卵白をその外側の層とする（卵黄 30〜33%・卵白 56〜59% から中身に占める卵黄の割合）。卵白の層の温度はこの外側の体積平均"}
+      modes: {value: 60, check: 推定, why: "固有関数の展開の項数。刻み 0.1分・空気中（4倍遅い）でも 60 項目は exp(-15) 以下に減衰する"}
+      Bi_air: {value: 0.5, since: "2026-09-28 夜（余熱）", source: "wiki_htc・egg_thermal・coimbra2006", check: 推定, alternatives: ["0.25（h=5 W/(m²·K)）", "1.25（h=25）"], why: "空気中（室温に置く・冷蔵庫・オーブン）の殻付き卵の表面の条件（ロバン条件）のビオ数 Bi = hR/k。h=10 W/(m²·K)（空気の自然対流 5〜25、wiki_htc。放射で数 W/(m²·K) 足される。濡れた殻からの蒸発は入れていない）、k=0.5 W/(m·K)（卵白 0.52・卵黄 0.34、egg_thermal／0.4〜0.6、coimbra2006）、R=0.025 m（R²/α=60.5分 と α=1.7×10⁻⁷ m²/s から）。水・蒸気は 表面＝媒体温度のまま（cengel_egg の例題 h=800 で Bi≈40）"}
+    air_tau_factor: {value: 4, check: 推定, why: "空気（オーブン・冷蔵庫・室温）は液体・金属より熱が伝わりにくい。2026-09-28 夜（余熱）から殻付き卵には使わない（egg_sphere.Bi_air の表面の条件に置き換え）。ほかの形には使う"}
+    pot_cooling_tau_min: {value: 90, unit: min, since: "2026-09-28 夜（余熱）", check: 推定, alternatives: ["45", "180"], why: "操作 off_heat（湯に入れたまま火を止める）で、湯の温度が室温（T0_default）へ下がる時定数。出典なし（湯量・蓋・鍋で大きく変わる）。卵が湯を冷ます効果は入れていない。Exp-15 の重ね合わせには使わない"}
+    surface_wet_min:   # 乾いた加熱で表面が沸点に縛られている時間（R-W02）。撹拌し続けると表面は中心と同じ温度とみなす
+      pan: {value: 1.0, check: 推定}
+      oil: {value: 0.5, check: 推定}
+      air: {value: 10.0, check: 推定}
+    tau_surface_min: {value: 0.5, check: 推定, why: 表面が乾いてから媒体温度に近づく時定数}
+    evaporation_pct_per_min:   # 沸点に達している間、全質量に対して毎分失う水の割合
+      thin: {value: 4.0, check: 推定, why: フライパンに広げたもの（炒め玉ねぎ・糖液）}
+      pot:  {value: 1.0, check: 推定, why: 鍋・蓋なし}
+      lid:  {value: 0.25, check: 推定, why: 蓋あり（炊飯）}
+
+  egg_model: {value: kinetic, since: "2026-09-30（Exp-17。既定を kinetic に切り替えたのも同日、本人決定）", why: "殻付き卵の温度と固まり方の計算。kinetic = 2層の球の差分＋変性の一次反応（Exp-17、sim/egg_kinetic.py）、stage = 一様な球の固有関数の解＋温度のしきい値（Exp-14 の形、比較用に残す）。試せるページ（JS）も同じ値を使う"}
+  egg_kinetic:   # Exp-17（experiments/exp-17-egg-kinetics/plan.md）。T は ℃。出典 id は dilorenzo2025
+    source: "Di Lorenzo et al. (2025) Periodic cooking of eggs. Communications Engineering 4:5, Table 4（熱物性は Abbasnezhad et al. 2016 Food Sci Nutr 4:42 から）。CC BY-NC-ND 4.0 の論文の数値（事実）の引用"
+    yolk:  {k_a: 0.0008, k_b: 0.395, rho_a: -0.0023, rho_b: -0.1386, rho_c: 1037.3, cp: 3120, A: 2.72e50, Ea: 3.443e5, check: 本文確認}
+    white: {k_a: 0.0013, k_b: 0.5125, rho_a: -0.0041, rho_b: -0.0115, rho_c: 1043.3, cp: 3800, A: 4.85e60, Ea: 4.185e5, check: 本文確認}
+    yolk_volume_fraction: {value: 0.34, source: egg_structure, check: 本文確認, why: "egg_sphere と同じ"}
+    nodes: {value: 60, check: 推定, why: "半径方向の分割数。60 と 120 で結果が変わらないことを run.py で確かめる"}
+    h_air: {value: 10, unit: "W/(m²·K)", source: wiki_htc, check: 推定, why: "空気の自然対流 5〜25。egg_sphere.Bi_air=0.5 と同じ仮定（h=10）"}
+    sub_s: {value: 6, unit: s, check: 推定, why: "後退オイラーの刻み。egg_kinetic.py の既定値（6秒）を rules.yaml に移した（2026-09-30、試せるページと同じ値を使うため）"}
+    stage_map:   # 仮。結果を見る前に決めた（plan.md の 3.）
+      gel_X: {value: 0.9, check: 仮, why: "場所ごとに X ≥ 0.9 を「固まった」とみなす"}
+      stage1_mean: {value: 0.1, check: 仮, why: "層の平均の X ≥ 0.1 で段階1（とろみ・白濁）"}
+      stage2_g: {value: 0.5, check: 仮, why: "層の体積の半分以上が固まれば段階2"}
+      stage3_g: {value: 0.9, check: 仮, why: "層の体積の9割以上が固まれば段階3（黄身は中心の最高温度 ≥ egg_yolk_s3 も要る）"}
+  meat_model: {value: tau, since: "2026-09-30（Exp-18）", why: "肉片（form piece）の中心温度の計算。tau = 一次遅れ（tau_min.piece、今の形）、slab = 厚み方向の1次元の熱伝導（sim/meat_slab.py、experiments/exp-18-more-dishes/plan.md の A）。試せるページ（JS）は tau のまま。既定を切り替えるかは評価を見て本人と決める"}
+  meat_slab:   # Exp-18。肉片を板とみなす。T は ℃
+    nodes: {value: 40, check: 推定, why: "厚み方向の分割数。40 と 80 で結果が変わらないことを run.py で確かめる"}
+    sub_s: {value: 6, unit: s, check: 推定, why: "後退オイラーの刻み（Exp-17 の卵と同じ）"}
+    thickness_mm: {value: 20, check: 推定, why: "厚さを書いていない肉片の厚さ。tau_min.piece の「厚さ2cm程度の肉片」と同じ"}
+    h_contact: {value: 300, unit: "W/(m²·K)", source: ngadi2007, check: 本文確認, alternatives: ["150", "600"], why: "フライパンに触れた面から鍋へ。牛ひき肉のパティ 20mm、180・200℃で表面近くの温度に合うよう決めた値（論文は h 一定と置いた）"}
+    h_top: {value: 60, unit: "W/(m²·K)", source: ngadi2007, check: 本文確認, alternatives: ["10（空気の自然対流、wiki_htc）"], why: "フライパンで焼いている間の上の面から室温へ。同じ論文の上面の値"}
+    h_air: {value: 10, unit: "W/(m²·K)", source: wiki_htc, check: 推定, why: "空気中（休ませる・室温に置く）の両面。egg_kinetic.h_air と同じ"}
+    h_oil: {value: 300, unit: "W/(m²·K)", check: 仮, why: "油の中の両面。出典なし。h_contact と同じ値にした。今の正解のレシピに肉を揚げるものは無い"}
+    choi_okos:   # ASHRAE 1998 Refrigeration Handbook 8章 表1・表2 の係数をそのまま（t は °F。k: Btu/(h·ft·°F)、rho: lb/ft³、cp: Btu/(lb·°F)）。meat_slab.py で SI に換算する
+      source: ashrae_thermal
+      check: 本文確認
+      water:   {k: [3.1064e-1, 6.4226e-4, -1.1955e-6], rho: [6.2174e+1, 4.7425e-3, -7.2397e-5], cp: [9.9827e-1, -3.7879e-5, 4.0347e-7]}
+      protein: {k: [9.0535e-2, 4.1486e-4, -4.8467e-7], rho: [8.3599e+1, -1.7979e-2], cp: [4.7442e-1, 1.6661e-4, -9.6784e-8]}
+      fat:     {k: [1.3273e-1, -8.8405e-4, -3.1652e-8], rho: [5.8246e+1, -1.4482e-2], cp: [4.6730e-1, 2.1815e-4, -3.5391e-7]}
+      carb:    {k: [1.0133e-1, 4.9478e-4, -7.7238e-7], rho: [1.0017e+2, -1.0767e-2], cp: [3.6114e-1, 2.8843e-4, -4.3788e-7]}
+      ash:     {k: [1.7553e-1, 4.8292e-4, -5.1839e-7], rho: [1.5162e+2, -9.7329e-3], cp: [2.5266e-1, 2.6810e-4, -2.7141e-7]}
+  oil_uptake:   # Exp-18（plan.md の B）
+    enabled: {value: false, since: "2026-09-30（Exp-18）", why: "揚げる（媒体 oil）間に、蒸発した水に比例して油を吸う。既定は off（試せるページと同じ結果のまま）。Exp-18 の計算では on"}
+    ratio: {value: 0.12, unit: "g 油 / g 蒸発した水", source: "mext2020_tables・gamble1987", check: 成分表から計算, why: "フライドポテト（生を揚げたもの、02067）の吸油量 4.0g／生 100g（表13）を、生 100g あたりの水の減り 79.8 − 0.71×64.2 = 34.2g（02017 の水分、表12 の重量変化率 71%、02067 の水分）で割った 0.117。温度・時間は蒸発した水の量を通してだけ効く（gamble1987: 吸油量は水の減りと直線の関係）。切り方・油の種類・出した後に吸う分は分けない"}
+  composition_split:   # 成分表の炭水化物を糖とでんぷんに分ける（成分表は分けていない）
+    sugar:       {sucrose: 99.3, check: 推定, why: 上白糖の炭水化物をすべてショ糖とみなす}
+    milk:        {lactose: 4.8, check: 推定, why: 炭水化物をすべて乳糖とみなす}
+    heavy_cream: {lactose: 6.5, check: 推定}
+    onion:       {glucose: 6.0, rule: R-O02, check: 抄録確認, why: "遊離糖 約6%。糖の内訳は記録していないのでブドウ糖として扱う（推定）"}
+    flour:       {starch: 75.8, starch_type: wheat, check: 推定}
+    rice:        {starch: 77.6, starch_type: rice, check: 推定}
+    potato:      {starch: 17.3, starch_type: potato, check: 推定}
+    acids: [vinegar, lemon_juice]
+    liquids: [water, milk, heavy_cream, dashi, egg_whole, egg_white, egg_yolk, vinegar, lemon_juice]
+    added_water: [water, dashi]   # mass_ratio の分母から除く（炊飯の「米の重さの2.2倍」に合わせる）
+
+  adopted_values:
+    # ---- 卵（成分ごと、到達温度のしきい値）----
+    egg_white_s1: {value: 60, unit: ℃, rule: R-E01, source: soc_temps, alternatives: ["62（検索抜粋）", "55〜57（kajiya）"], conflict: C1}
+    egg_white_s2: {value: 65, unit: ℃, rule: R-E02, source: soc_temps, alternatives: ["63（とろみ開始）"]}
+    egg_white_s3: {value: 80, unit: ℃, rule: R-E03, source: soc_sousvide, alternatives: ["84（R-E04 の上端）"]}
+    egg_yolk_s1: {value: 65, unit: ℃, rule: R-E05, source: soc_sousvide}
+    egg_yolk_s2: {value: 70, unit: ℃, rule: R-E05, source: soc_sousvide}
+    egg_yolk_s3: {value: 80, unit: ℃, rule: R-E06, source: soc_sousvide, alternatives: ["90（R-E06 の上端）"]}
+    # ---- 卵液（溶いた卵）のゲル段階 ----
+    egg_dilution_boundary: {value: 50, unit: "% (卵の質量/全体)", check: 推定, conflict: C3, why: "これ以上なら薄めない卵、未満ならカスタードのしきい値を使う。薄め方の関数は見つかっていない（C3）。体積比を質量比で代用"}
+    egg_undiluted_s1: {value: 70, unit: ℃, rule: R-E07, source: omelet_web, check: 抜粋のみ, conflict: C2}
+    egg_undiluted_s2: {value: 73, unit: ℃, rule: R-E07, source: soc_temps, alternatives: ["75（omelet_web）"], conflict: C2}
+    egg_undiluted_s3: {value: 80, unit: ℃, rule: R-E03, check: 推定, why: 卵白の主成分オボアルブミンが固まる温度を全卵に類推}
+    egg_diluted_s1: {value: 79, unit: ℃, rule: R-E09, source: custard_123, alternatives: ["82（180°F）"], why: "175°F まで増粘しない"}
+    egg_diluted_s2: {value: 80, unit: ℃, rule: R-E09, source: custard_textbook, alternatives: ["85（R-E09 の上端）"]}
+    egg_porosity_T: {value: 90, unit: ℃, rule: R-E15, source: chawan_web, alternatives: ["85（R-E15 の下端）"], why: "薄めた卵液の中心がこれを超えると す（porosity=1）"}
+    egg_porosity_hold2_min: {value: 5, unit: min, check: 推定, why: "egg_porosity_T 以上にこれだけ保つと porosity=2"}
+    egg_sugar_salt_shift: {value: 0, unit: ℃, rule: "R-E10, R-E13", check: 推定, why: "砂糖・塩で凝固温度が上がるが数値がないので動かさない"}
+    # ---- 卵を割って湯に落とす（2026-09-27 追加）----
+    poach_cohesion_T_min: {value: 80, unit: ℃, rule: R-E21, source: terumimorita, alternatives: ["62（wiki_poached）", "71（travelingfoodlab の保つ温度の下端）"], conflict: C13, why: "これ以上・沸騰未満の湯に割り入れると卵白がまとまる。未満は固まりきらず散る（70℃の記述）。沸騰（boiling_point_water）では酢・塩がなければばらける"}
+    poach_additive_effect: {value: "酢か塩が少しでも入っていれば効く", rule: R-E22, check: 推定, why: "量と効果の関係の出典がない。80℃未満では酢・塩があってもばらけるとした（何℃下げるかの数値がない）"}
+    # ---- 乳 ----
+    whey_denature_T: {value: 70, unit: ℃, rule: R-D02, check: 推定}
+    acid_to_milk_ratio: {value: 0.05, check: 推定, rule: "R-D01, R-A01", why: "酸（酢・レモン汁）/牛乳 の質量比がこれ以上で pH 4.6 以下とみなし、カゼインが凝集"}
+    butter_plastic_T: {value: 21, unit: ℃, rule: R-D05, source: butter}
+    butter_liquid_T: {value: 35, unit: ℃, rule: R-D05, source: butter, alternatives: ["32（R-D05 の下端）"]}
+    cream_fat_min: {value: 30, unit: "g/100g", rule: R-D03, source: cream2010}
+    cream_whip_T_range: {value: [5, 15], unit: ℃, rule: R-D03, source: cream2010, alternatives: ["7.5〜12.5（推奨範囲）"], why: 出典が比較した範囲。範囲外は泡が粗い（foam_stage 1 まで）とする（推定）}
+    cream_foam_minutes: {value: {1: 1, 2: 2, 3: 4, 4: 8}, unit: min, check: 推定, rule: "R-D03, R-D04", why: "泡立て時間→foam_stage。数値の出典なし"}
+    # ---- でんぷん ----
+    wheat_gel_onset: {value: 59.5, unit: ℃, rule: R-S01, source: starch_gel, alternatives: ["52"]}
+    wheat_gel_complete: {value: 64, unit: ℃, rule: R-S01, source: starch_gel, alternatives: ["66"]}
+    potato_gel_onset: {value: 55, unit: ℃, rule: R-S03, source: starch_gel}
+    potato_gel_complete: {value: 66, unit: ℃, rule: R-S03, source: starch_gel}
+    rice_gel_onset: {value: 60, unit: ℃, rule: R-S04, source: maff_rice, alternatives: ["58.9", "66", "68（R-S02）"], conflict: C6}
+    rice_full_T: {value: 98, unit: ℃, rule: R-S04, source: maff_rice}
+    rice_full_min: {value: 20, unit: min, rule: R-S04, source: maff_rice}
+    rice_full_value: {value: 0.95, rule: R-S07, source: kainuma1987}
+    rice_min_water_ratio: {value: 1.2, rule: R-S07, source: kainuma1987, why: これ未満は沸騰が不十分で完全に糊化しない}
+    starch_partial_value: {value: 0.5, check: 推定, why: 糊化開始温度は超えたが完了条件を満たさないときの値}
+    starch_min_water_ratio: {value: 1.0, check: 推定, why: "水/でんぷん の質量比がこれ未満なら糊化しない（ルーの段階など）"}
+    retro_T: {value: 4, unit: ℃, rule: R-S08, check: 未確認, why: "0〜4℃付近で最も速い"}
+    retro_min: {value: {1: 60, 2: 1440}, unit: min, check: 推定}
+    # ---- グルテン ----
+    gluten_by_strength: {value: {弱: 1, 中: 2, 強: 3}, check: 推定, rule: "R-G01, R-G02, R-G04", why: "混ぜる強さ→段階。こねる は 3"}
+    gluten_min_water_ratio: {value: 0.5, check: 推定, why: "粉以外から来る水/粉 がこれ未満ならグルテンは形成しない（R-G01）"}
+    gluten_relax_min: {value: 15, unit: min, rule: R-G03, check: 推定}
+    # ---- 膨化 ----
+    baking_powder_heat_T: {value: 60, unit: ℃, rule: R-L01, check: 推定, why: 第2段が起きる温度の数値はない}
+    yeast_death_T: {value: 55, unit: ℃, rule: R-L02, source: yeast, alternatives: ["60"]}
+    yeast_ferment_T_range: {value: [20, 40], unit: ℃, rule: R-L02, check: 推定, why: "最適 27℃の前後"}
+    # ---- 糖 ----
+    sucrose_caramel_T: {value: 170, unit: ℃, rule: R-C01, source: mcgee, alternatives: ["160（soc_temps）"], conflict: C4, why: "candy_stages の「褐色の液 170℃」と一致する方を採った"}
+    glucose_caramel_T: {value: 160, unit: ℃, rule: R-C02, source: soc_temps, alternatives: ["150（McGee）"]}
+    caramel_pyrolysis_T: {value: 180, unit: ℃, rule: R-C06, source: mc_maillard, alternatives: ["177（candy_stages）"]}
+    roasted_sugar: {value: {T: 150, min: 120}, rule: R-C04, source: roasted_sugar, why: "ショ糖を150℃以上に120分保つと caramel=1（R-C03 の時間依存を保持時間で表す）"}
+    syrup_boiling_point: {value: [[0, 100], [80, 111], [85, 114], [87, 119], [90, 125.5], [95, 137.5], [99, 150], [100, 160]], unit: "[糖濃度%, ℃]", rule: R-C05, source: candy_stages, why: "各段階の温度範囲の中央。0〜80% は直線で補間（推定）"}
+    syrup_stage_T: {value: [110, 112, 118, 121, 132, 146, 160, 170], unit: ℃, rule: R-C05, source: candy_stages, why: "段階1〜8 の下端"}
+    syrup_min_fraction: {value: 0.9, check: 推定, why: "糖＋水 が全体のこれ以上のときだけ糖液として syrup_stage を持つ"}
+    # ---- メイラード ----
+    maillard_T: {value: 140, unit: ℃, rule: R-M01, source: mc_maillard, conflict: C8, why: "しきい値モデル。140℃未満の遅い褐変（R-M04）は扱わない"}
+    maillard_s2_min: {value: 2, unit: min, check: 推定, why: "表面が maillard_T 以上にこれだけ保たれると きつね色"}
+    maillard_s3_T: {value: 165, unit: ℃, rule: R-M01, source: mc_maillard}
+    maillard_s3_min: {value: 10, unit: min, check: 推定}
+    maillard_min_protein: {value: 0.5, unit: "g/100g", check: 推定}
+    # ---- 野菜 ----
+    onion_sulfur_reduce_T: {value: 80, unit: ℃, check: 推定, rule: R-O01}
+    onion_sulfur_zero_mass_ratio: {value: 0.4, rule: R-O01, source: tamaki2003, why: "重量が元の40%まで減ると刺激臭が消えるとみなす"}
+    pme_band: {value: [50, 70], unit: ℃, rule: R-S11, source: potato_pme}
+    pme_min: {value: 30, unit: min, check: 推定}
+    soften_T: {value: 80, unit: ℃, rule: R-S12, source: potato_pme}
+    soften_min: {value: 10, unit: min, check: 推定}
+    collapse_min: {value: 30, unit: min, check: 推定}
+    # ---- ゼラチン ----
+    gelatin_swell: {value: {T: [10, 25], min: 30}, rule: R-J01, source: nitta}
+    gelatin_dissolve_T: {value: 50, unit: ℃, rule: R-J02, source: nitta, alternatives: ["60"]}
+    gelatin_direct_dissolve: {value: {T: 60, min: 15}, rule: R-J02, source: nitta}
+    gelatin_gel_T: {value: 10, unit: ℃, rule: R-J05, source: gelatin_home, alternatives: ["5"]}
+    gelatin_gel_min: {value: 30, unit: min, check: 推定}
+    gelatin_melt_T: {value: 25, unit: ℃, rule: R-J05, source: gelatin_home, alternatives: ["20"]}
+    gelatin_degrade: {value: {T: 80, min: 30}, rule: R-J03, check: 推定}
+    # ---- 肉（範囲の上端＝その範囲で変性し終える温度を採用）----
+    myosin_T: {value: 60, unit: ℃, rule: R-P01, source: tornberg2005, alternatives: ["40（下端）"]}
+    collagen_T: {value: 63, unit: ℃, rule: R-P01, source: tornberg2005, alternatives: ["53（下端）"]}
+    actin_T: {value: 73, unit: ℃, rule: R-P01, source: tornberg2005, alternatives: ["66（下端）"]}
+    myoglobin_s1_T: {value: 60, unit: ℃, rule: R-P02, source: soc_temps}
+    myoglobin_s2_T: {value: 70, unit: ℃, check: 推定}
+    meat_water_loss_T: {value: {1: 60, 2: 70}, unit: ℃, rule: "R-P02, R-P04", source: soc_temps, why: "60℃で肉汁が急に出る、70℃でむね肉が乾く。量の出典がないので段階で持つ"}
+    collagen_gelatinize: {value: {T: 70, min: 60}, rule: R-P03, check: 推定}
+    cook_loss_pct: {value: {50: 9, 60: 19, 70: 30.5, 80: 37}, unit: "%", rule: R-P06, source: vaskoska2020, check: 本文確認, why: "各温度の範囲（7〜11・17〜21・29〜32・34〜40）の中央。2026-10-22 追加（通説3）。シミュレータの判定には使っていない（通説ページの計算だけで使う）"}
+    poultry_7log_min_fat2: {value: [[136, 64.5], [137, 51], [138, 40.5], [139, 32.2], [140, 25.7], [141, 20.5], [142, 16.4], [143, 13.2], [144, 10.6], [145, 8.6], [146, 6.9], [147, 5.5], [148, 4.4], [149, 3.5], [150, 2.7], [151, 2.0], [152, 1.5], [153, 1.2], [154, 0.948], [155, 0.75], [156, 0.593], [157, 0.47], [158, 0.372], [159, 0.293], [160, 0.233], [161, 0.183]], unit: "[°F, 分]", rule: R-P07, source: fsis_poultry_tables, check: 本文確認, why: "鶏・脂肪 2% の列（成分表の鶏むね肉 皮なし 脂質 1.9）。秒の値は分に直した。162°F 以上は「10秒未満」なので表に入れない（計算では 161°F の値を使う＝長めに見る）。2026-10-22 追加（通説11）"}
+    bpe_Kb_water: {value: 0.512, unit: "℃·kg/mol", rule: R-W04, source: libretexts_bpe, check: 本文確認, why: "水の沸点上昇定数。2026-10-22 追加（通説5）。シミュレータの沸点にはまだ使っていない"}
+    bpe_i_nacl: {value: 2, unit: "-", rule: R-W04, check: 推定, why: "食塩が Na⁺ と Cl⁻ に完全に分かれたときの理想の値。実際の値は少し小さい（出典は今回確かめていない）"}
+
+# ---------------------------------------------------------------
+# 料理の判定条件（2026-09-27 追加）
+# targets（§6）を「状態の条件の組み合わせ（範囲・段階・真偽）」に変換したもの。
+# 判定は満たした条件の割合（重み付けしない）。required: true の条件（食材）は別扱いで、
+# 満たさない料理は満たす料理より下に並べる。
+# 2026-09-27 から required を満たさない料理は候補から外す（該当なし の判定は候補の中の1位）。
+# 2026-09-28 から、食材・殻付きに加えて「それを外したらその料理ではない」定義上の条件も required にした（def: 定義）。理由は rules.md §10
+# 「約X」は幅を持たせて範囲にした（幅は推定。各条件の basis に書いた）。
+# 条件の書き方:
+#   {ingredients: [a, [b, c]]}         a を含み、b か c のどちらかを含む
+#   {var: v, range: [lo, hi]}          lo ≦ v ≦ hi（null は片側なし）
+#   {var: v, in: [..]}                 段階・カテゴリがどれかに一致
+#   {var: v, is: true}                 真偽
+#   {history: core, at_or_above: T, min_minutes: m}   中心が T℃以上だった時間の合計が m 分以上
+# ---------------------------------------------------------------
+dish_conditions:
+  scrambled_eggs:
+    ja: スクランブルエッグ
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: §6 食材}
+      - {var: T_core_max, range: [70, 75], basis: "R-E07・omelet_web（C2）"}
+      - {var: egg_gel_stage, in: [1, 2], basis: R-E07}
+      - {var: gel_structure, in: [小片（カード）], required: true, def: 定義（2026-09-28）, basis: "R-E20（推定）"}
+      - {var: egg_white_stage, in: [2], basis: R-E02}
+      - {var: egg_yolk_stage, in: [1, 2], basis: R-E05}
+      - {var: water, range: [70, 80], basis: "約75（推定）を ±5"}
+      - {var: fat_phase, in: [液体（融解）], basis: R-D05}
+      - {var: maillard, in: [0], basis: "料理の定義（C9）"}
+      - {var: porosity, in: [0], basis: 推定}
+  omelet:
+    ja: オムレツ（プレーン）
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: §6 食材}
+      - {var: T_core_max, range: [70, 73], basis: "推定（R-E07）。内側の温度"}
+      - {var: egg_gel_stage, in: [1, 2], basis: "推定。内側"}
+      - {var: egg_gel_stage_surface, in: [2, 3], basis: "推定。外側"}
+      - {var: gel_structure, in: [外側連続・内側半流動], required: true, def: 定義（2026-09-28）, basis: "料理の定義／R-E20（推定）"}
+      - {var: maillard, in: [0, 1], basis: 料理の定義}
+      - {var: fat_phase, in: [液体（融解）], basis: R-D05}
+  custard_pudding:
+    ja: プリン
+    conditions:
+      - {ingredients: [[egg_whole, egg_yolk], milk, sugar], required: true, basis: §6 食材}
+      - {var: sugar_conc, range: [5, 15], basis: "約10%（推定）を ±5。乳糖を含む"}
+      - {var: T_core_max, range: [80, 85], basis: R-E09}
+      - {var: egg_gel_stage, in: [2], basis: R-E09}
+      - {var: gel_structure, in: [連続ゲル], required: true, def: 定義（2026-09-28）, basis: "R-E20（推定）"}
+      - {var: porosity, in: [0], basis: R-E15}
+      - {var: milk_whey_denatured, in: [1], basis: "R-D02（推定）"}
+      - {var: maillard, in: [0], basis: R-M02}
+      - {var: T_serve, range: [null, 10], basis: "冷蔵温度 約5℃（推定）。10℃以下"}
+  chawanmushi:
+    ja: 茶碗蒸し
+    conditions:
+      - {ingredients: [egg_whole, dashi], required: true, basis: §6 食材}
+      - {var: egg_dilution, range: [20, 30], required: true, def: 定義（2026-09-28）, basis: "約25%（R-E16）を ±5"}
+      - {var: salt_conc, range: [0.5, 1.0], basis: 推定}
+      - {var: T_core_max, range: [80, 89.9], basis: "80℃台（推定）"}
+      - {var: egg_gel_stage, in: [2], basis: R-E16}
+      - {var: gel_structure, in: [連続ゲル], required: true, def: 定義（2026-09-28）, basis: "R-E20（推定）"}
+      - {var: porosity, in: [0], basis: R-E15}
+      - {var: maillard, in: [0], basis: R-M02}
+      - {var: T_serve, range: [60, 70], basis: 推定}
+  white_sauce:
+    ja: ホワイトソース
+    conditions:
+      - {ingredients: [butter, flour, milk], required: true, basis: §6 食材}
+      - {var: T_core_max, range: [95, 100], basis: "約100℃（R-S10・R-W01）"}
+      - {var: starch_gel, range: [0.9, 1.0], required: true, def: 定義（2026-09-28）, basis: "R-S01・R-S10"}
+      - {var: gluten, in: [0, 1], basis: 推定}
+      - {var: fat_phase, in: [液体（融解）], basis: mcgee 第11章}
+      - {var: maillard, in: [0], required: true, def: 定義（2026-09-28）, basis: "料理の定義（ホワイトルー）・R-S09"}
+      - {var: milk_casein, in: [分散], basis: R-D01}
+  caramel_sauce:
+    ja: カラメル
+    conditions:
+      - {ingredients: [sugar], required: true, basis: §6 食材}
+      - {var: T_core_max, range: [160, 179.9], basis: "R-C01・R-C05・R-C06。焦げ（180℃）の手前まで"}
+      - {var: syrup_stage, in: [8], basis: R-C05}
+      - {var: caramel, in: [2], required: true, def: 定義（2026-09-28）, basis: R-C01}
+  sauteed_onion:
+    ja: 炒め玉ねぎ（あめ色）
+    conditions:
+      - {ingredients: [onion], required: true, basis: §6 食材}
+      - {var: water, range: [null, 80], basis: "大きく減る（R-O01）。生 90.1 から 10 以上減る（推定）"}
+      - {var: mass_ratio, range: [0.2, 0.4], basis: R-O01}
+      - {var: onion_sulfur, in: [0], basis: R-O01}
+      - {var: sugar_conc_ratio, range: [1.0, null], basis: "重量あたりは上がる（R-O01・R-O02）"}
+      - {var: maillard, in: [2, 3], required: true, def: 定義（2026-09-28）, basis: "R-O01・R-O03"}
+      - {var: caramel, in: [1, 2], basis: "R-O03（C7）"}
+      - {var: cell_wall, in: [崩壊（煮崩れ）], basis: "推定（R-S12 を類推）"}
+      - {var: T_surface_max, range: [100.1, null], basis: R-W02}
+  steamed_rice:
+    ja: ご飯（白飯）
+    conditions:
+      - {ingredients: [rice, water], required: true, basis: §6 食材}
+      - {var: water, range: [60, 65], basis: R-S05}
+      - {var: starch_gel, range: [0.9, 1.0], required: true, def: 定義（2026-09-28）, basis: "約0.95（R-S07）"}
+      - {var: T_core_max, range: [98, 100], basis: R-S04}
+      - {history: core, at_or_above: 98, min_minutes: 20, basis: "R-S04（98℃以上で約20分）"}
+      - {var: starch_retro, in: [0], basis: R-S08}
+      - {var: maillard, in: [0], basis: R-M02}
+      - {var: mass_ratio, range: [2.1, 2.3], basis: R-S05}
+  pancake:
+    ja: パンケーキ
+    conditions:
+      - {ingredients: [flour, [egg_whole, egg_yolk], milk, baking_powder], required: true, basis: §6 食材}
+      - {var: gluten, in: [1], basis: "R-G02・R-G04"}
+      - {var: co2, in: [2], basis: R-L01}
+      - {var: starch_gel, range: [0.9, 1.0], required: true, def: 定義（2026-09-28）, basis: 推定}
+      - {var: egg_gel_stage, in: [3], basis: 推定}
+      - {var: maillard, in: [2], basis: "R-M01・R-L03"}
+      - {var: T_surface_max, range: [150, null], basis: "推定（R-M01 から逆算）"}
+      - {var: air, is: true, basis: "R-L01（数値は未調査なので有無だけ）"}
+  milk_jelly:
+    ja: 牛乳ゼリー
+    conditions:
+      - {ingredients: [milk, gelatin], required: true, basis: §6 食材}
+      - {var: gelatin_conc, range: [2, 4], basis: R-J05}
+      - {var: gelatin_state, in: [ゲル], required: true, def: 定義（2026-09-28）, basis: "R-J04・R-J05"}
+      - {var: T_core_max, range: [50, 60], basis: "約50〜60℃（R-J02）"}
+      - {var: T_serve, range: [null, 10], basis: "約5〜10℃（R-J05）。10℃以下"}
+      - {var: milk_casein, in: [分散], basis: R-D01}
+  whipped_cream:
+    ja: ホイップクリーム
+    conditions:
+      - {ingredients: [heavy_cream], required: true, basis: §6 食材}
+      - {var: fat, range: [30, null], basis: "R-D03（乳脂肪30%以上）"}
+      - {var: T_whisk, range: [7.5, 12.5], basis: "R-D03（泡立て時の品温）"}
+      - {var: fat_phase, in: [部分合一ネットワーク（ホイップ）], required: true, def: 定義（2026-09-28）, basis: R-D03}
+      - {var: foam_stage, in: [2, 3], basis: "R-D03・R-D04"}
+      - {var: air, is: true, basis: R-D03}
+  onsen_tamago:
+    ja: 温泉卵
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: §6 食材}
+      - {var: egg_form, in: [殻付き], required: true, basis: "§6 食材（殻付き）。2026-09-27 必須に変更"}
+      - {var: T_core_max, range: [65, 70], required: true, def: 定義（2026-09-28 夜 Q6）, basis: "R-E08（65〜70℃の湯に保った卵。中心が 70℃を超えると卵黄が固まる R-E05）"}
+      - {var: egg_white_stage, in: [1, 2], required: true, def: 定義（2026-09-28）, basis: "R-E02・R-E08"}
+      - {var: egg_yolk_stage, in: [1, 2], basis: "R-E05・R-E08"}
+      - {history: core, at_or_above: 65, min_minutes: 3, basis: "R-E08（中心が湯温に近づいてから数分〜、「数分」を3分とした）"}
+  sauteed_chicken:
+    ja: 鶏むね肉のソテー
+    conditions:
+      - {ingredients: [chicken], required: true, basis: §6 食材}
+      - {var: T_core_max, range: [74, null], basis: R-P05}
+      - {var: meat_myosin, in: [1], required: true, def: 定義（2026-09-28）, basis: R-P01}
+      - {var: meat_actin, in: [1], basis: R-P01}
+      - {var: meat_myoglobin, in: [2], basis: R-P02}
+      - {var: meat_water_loss, in: [2], basis: R-P04}
+      - {var: maillard, in: [2], basis: R-M01}
+  hard_boiled_egg:
+    ja: ゆで卵（固ゆで）
+    added: "2026-09-27。13品には入っていない。温泉卵と「温度だけ変える」テストの相手として追加"
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: 料理の定義}
+      - {var: egg_form, in: [殻付き], required: true, basis: "料理の定義。2026-09-27 必須に変更"}
+      - {var: T_core_max, range: [80, 100], basis: "R-E03・R-E06"}
+      - {var: egg_white_stage, in: [3], basis: R-E03}
+      - {var: egg_yolk_stage, in: [3], required: true, def: 定義（2026-09-28）, basis: R-E06}
+  poached_egg:
+    ja: ポーチドエッグ
+    added: "2026-09-27。13品には入っていない（14品目。本人の依頼）"
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: 料理の定義}
+      - {var: egg_form, in: [割った], required: true, basis: "料理の定義（殻なし・溶いていない、R-E21）"}
+      - {var: T_surface_max, range: [80, 100], basis: "湯温 80〜85℃（R-E21）〜沸騰（kyounoryouri）。湯に接する表面は湯温（R-W02）"}
+      - {history: surface, at_or_above: 80, min_minutes: 3, basis: "R-E21（80〜85℃で3〜4分、soc_poach 80℃で4分）の下端"}
+      - {var: egg_white_stage, in: [2, 3], required: true, def: 定義（2026-09-28）, basis: "卵白は固まる（R-E02・R-E03、soc_poach「top white is set」、kyounoryouri「白身は堅く」）"}
+      - {var: egg_yolk_stage, in: [0, 1], required: true, def: 定義（2026-09-28）, basis: "卵黄は流れる（wiki_poached「runny yolk」、R-E21 中心 65℃未満）。とろみ（1）まで含めた（推定）"}
+      - {var: egg_white_cohesion, in: [まとまる, まとまる（表面に膜・ちぎれ）], basis: "R-E21・R-E22"}
+      - {var: egg_white_cohesion, in: [ばらける, まとまる（表面に膜・ちぎれ）, まとまる], required: true, def: 定義（2026-09-28）, basis: "湯に落とした卵であること（まとまりの値は湯に落としたときだけ持つ、R-E21）。2026-09-28 追加"}
+      - {var: maillard, in: [0], basis: "焼き色なし（湯で加熱、R-W02）"}
+  soft_boiled_egg:
+    ja: 半熟ゆで卵
+    added: "2026-09-28。修正 B の後、沸騰した湯で6〜7分の殻付き卵が温泉卵とゆで卵の間で該当なしになったので、計算前に決めた定義（rules.md §10）どおりに足した。13品には入っていない"
+    conditions:
+      - {ingredients: [egg_whole], required: true, basis: 料理の定義}
+      - {var: egg_form, in: [殻付き], required: true, basis: "料理の定義（殻ごとゆでる）"}
+      - {var: egg_white_stage, in: [3], required: true, def: 定義（2026-09-28）, basis: "白身はしっかり固まる（R-E03）。温泉卵の「卵白 1〜2」と重ならない側"}
+      - {var: egg_yolk_stage, in: [0, 1], required: true, def: 定義（2026-09-28）, basis: "黄身は流れる〜とろみ（wiki_boiled「partially liquid yolk」、R-E05）"}
+      - {var: T_surface_max, range: [95, 100], required: true, def: 定義（2026-09-28 夜 Q6）, basis: "沸騰した湯・蒸気（Exp-15 の半熟ゆで卵のレシピは全件が沸騰の湯か蒸し）。「ゆでる」＝沸騰した湯"}
+      - {var: maillard, in: [0], basis: "湯で加熱（R-W02）"}
+  beef_steak:
+    ja: ビーフステーキ（ミディアム）
+    added: "2026-10-22（Exp-18。本人の採点 2e3094b の後、計算する前に書いた）。13品には入っていない。ミディアムの中心温度は出典ごとにばらつくので、どれか1つに決めず出典の幅を全部含めた"
+    conditions:
+      - {ingredients: [beef], required: true, basis: 料理の定義}
+      - {var: T_core_max, range: [55, 70], required: true, def: 定義（2026-10-22）, basis: "ミディアムの中心温度。aussiebeef_steak 約55℃／thermoworks_medium 57〜63℃／wiki_doneness 60〜65℃／ebara_steak 65〜70℃ の幅をすべて含めた（出典ごとにばらつく）"}
+      - {var: meat_myoglobin, in: [0, 1], basis: "中は赤みが残る（料理の定義）。ミオグロビンは 60℃で変性し始める（R-P02）。段階2（70℃）は推定"}
+      - {var: maillard, in: [2, 3], basis: "表面に焼き色（R-M01）。強火で両面を焼く（aussiebeef_steak）"}
+  french_fries:
+    ja: フライドポテト
+    added: "2026-10-22（Exp-18。計算する前に書いた）。13品には入っていない"
+    conditions:
+      - {ingredients: [potato], required: true, basis: 料理の定義}
+      - {var: maillard, in: [1, 2], required: true, def: 定義（2026-10-22）, basis: "「light golden」（wikibooks_fries）。薄い焼き色〜きつね色（R-M01）"}
+      - {var: starch_gel, range: [0.9, null], basis: "でんぷんが糊化している（R-S03。中まで火が通る）"}
+      - {var: cell_wall, in: [軟化], basis: "推定。wikibooks_fries は揚げる前に水で約15分下ゆでする（R-S12 で軟化）。中がやわらかいとは本文に書いていない"}
+      - {var: water, range: [59.2, 69.2], basis: "成分表 02067（フライドポテト、生を揚げたもの）の水分 64.2 を ±5（幅は推定。mext2020_tables）"}
+      - {var: fat, range: [3, 9], basis: "成分表 02067 の脂質 約6（吸油量 4.0g／生100g・重量変化率 71% から 5.8）。幅は推定（mext2020_tables）"}
+  boiled_potato:
+    ja: ゆでじゃがいも（粉ふきいも）
+    added: "2026-10-22（Exp-18。計算する前に書いた）。13品には入っていない"
+    conditions:
+      - {ingredients: [potato], required: true, basis: 料理の定義}
+      - {var: cell_wall, in: [軟化], required: true, def: 定義（2026-10-22）, basis: "「soft enough to be pierced gently with a fork」（wikibooks_boiled_potato、R-S12）。煮崩れ（崩壊）の手前"}
+      - {var: starch_gel, range: [0.9, null], basis: "でんぷんが糊化している（R-S03）"}
+      - {var: maillard, in: [0], basis: "湯で加熱（R-W02）。ごく弱火で水気を飛ばすだけ"}
+      - {var: water, range: [75.6, 85.6], basis: "成分表 02019（じゃがいも 皮なし 水煮）の水分 80.6 を ±5（幅は推定。水気を飛ばす分は数えていない）"}
+  dashimaki:
+    ja: だし巻き卵（卵焼き）
+    added: "2026-10-22（Exp-20、計算する前に書いた）。13品には入っていない"
+    conditions:
+      - {ingredients: [egg_whole, dashi], required: true, basis: "料理の定義（maff_dashimaki）"}
+      - {var: T_surface_max, range: [100.1, null], required: true, def: 定義（2026-10-22）, basis: "玉子焼き器で焼く（maff_dashimaki）。表面が 100℃を超えるのは乾いた加熱だけ（R-W02）。蒸す茶碗蒸しと分ける"}
+      - {var: egg_gel_stage, in: [2, 3], basis: "周りが固まって巻ける（maff_dashimaki）"}
+      - {var: gel_structure, in: [連続ゲル], basis: "巻いてまとめる（maff_dashimaki）。混ぜて小片にするスクランブルエッグと分ける"}
+  custard_cream:
+    ja: カスタードクリーム
+    added: "2026-10-22（Exp-20、計算する前に書いた）。13品には入っていない。ホワイトソースの条件も満たしうることは計算の前から分かっている（plan.md）"
+    conditions:
+      - {ingredients: [egg_yolk, milk, sugar, flour], required: true, basis: "料理の定義（wikibooks_creme_pat）"}
+      - {var: starch_gel, range: [0.9, null], required: true, def: 定義（2026-10-22）, basis: "沸騰後 2〜3 分混ぜて粉に火を通す（wikibooks_creme_pat、R-S01）"}
+      - {var: T_core_max, range: [95, 100], basis: "沸騰させる（wikibooks_creme_pat、R-W01）"}
+      - {var: egg_gel_stage, in: [1, 2, 3], basis: "卵を牛乳で薄めると 80〜85℃で固まる（R-E09）"}
+      - {var: maillard, in: [0], basis: "湯の中と同じ湿った加熱（R-M02）"}

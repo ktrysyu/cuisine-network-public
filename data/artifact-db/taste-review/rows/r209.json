@@ -1,0 +1,17 @@
+{
+  "canonical": "cloves",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 3,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground cloves",
+  "n_recipes": 371,
+  "note": "",
+  "order": 209,
+  "reviewed": true
+}

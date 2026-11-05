@@ -1,0 +1,25 @@
+{
+  "canonical": "cilantro",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "chopped cilantro fresh",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 1698,
+  "note": "香りが本体。石けん様に感じる人がいる（遺伝差）",
+  "order": 36,
+  "reviewed": true
+}

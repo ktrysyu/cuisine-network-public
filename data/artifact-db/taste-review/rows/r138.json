@@ -1,0 +1,17 @@
+{
+  "canonical": "celery",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "celery ribs",
+  "n_recipes": 567,
+  "note": "",
+  "order": 138,
+  "reviewed": true
+}

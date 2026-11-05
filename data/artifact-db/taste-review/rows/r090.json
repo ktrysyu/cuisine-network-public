@@ -1,0 +1,17 @@
+{
+  "canonical": "zucchini",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "zucchini",
+  "n_recipes": 892,
+  "note": "",
+  "order": 90,
+  "reviewed": true
+}

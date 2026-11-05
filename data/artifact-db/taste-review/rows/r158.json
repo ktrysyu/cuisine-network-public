@@ -1,0 +1,17 @@
+{
+  "canonical": "pork",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "ground pork",
+  "n_recipes": 473,
+  "note": "加熱後",
+  "order": 158,
+  "reviewed": true
+}

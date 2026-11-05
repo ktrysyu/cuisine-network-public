@@ -1,0 +1,153 @@
+<title>蒸し物の す</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F6F7F5;--surface:#ECEFEB;--card:#FFFFFF;--ink:#1A1F1C;--muted:#5B6560;--rule:#D5DBD6;
+  --kombu:#2E5A48;--saffron:#B97B0C;--low:#B4552D;
+  --d-x:#888888;--pt-edge:#1A1F1C;
+  --serif:"Shippori Mincho B1","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Zen Kaku Gothic New","Hiragino Sans","Yu Gothic",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+    --d-x:#888888;--pt-edge:#F4F7F5;}
+}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#111614;--surface:#19201D;--card:#161C19;--ink:#E4EAE6;--muted:#9AA7A0;--rule:#2A3430;--kombu:#7DBFA2;--saffron:#E3AE4A;--low:#E08A63;
+  --d-x:#888888;--pt-edge:#F4F7F5;}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.7;margin:0;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+header{padding-block:32px 8px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;color:var(--kombu);text-transform:uppercase}
+h1{font-family:var(--serif);font-weight:800;font-size:clamp(26px,4.5vw,36px);margin:8px 0;line-height:1.3}
+.lead{color:var(--muted);margin:0;max-width:68ch}
+section{margin-top:40px}
+h2{font-family:var(--serif);font-weight:800;font-size:22px;margin:0 0 12px;display:flex;align-items:baseline;gap:10px}
+h2 .no{font-family:var(--mono);font-size:13px;color:var(--kombu);font-weight:500}
+h3{font-size:15px;margin:22px 0 6px}
+p{margin:8px 0;max-width:72ch}
+.muted{color:var(--muted)}
+.small{font-size:13px}
+.num{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px}
+.claim{font-family:var(--serif);font-weight:800;font-size:clamp(20px,3.2vw,26px);margin:0 0 6px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}
+.stat{background:var(--surface);border-radius:8px;padding:10px 12px}
+.stat b{display:block;font-family:var(--mono);font-size:24px;font-weight:500;line-height:1.2}
+.stat span{font-size:12.5px;color:var(--muted)}
+.maps{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:10px}
+figure{margin:0}
+figure svg{display:block;width:100%;height:auto}
+figcaption{font-weight:700;font-size:14px;margin-bottom:4px}
+.x{fill:var(--d-x)}
+.hatch-l{stroke:var(--muted);stroke-width:1;stroke-opacity:.55}
+.frame{fill:none;stroke:var(--rule)}
+.dif{fill:none;stroke:var(--saffron);stroke-width:1.6}
+.ax{font-family:var(--mono);font-size:9.5px;fill:var(--muted)}
+.axs{font-family:var(--sans);font-size:9.5px;fill:var(--muted)}
+.axl{font-family:var(--sans);font-size:10.5px;fill:var(--muted)}
+.c-sc{fill:var(--low)}.c-fi{fill:var(--saffron)}.c-co{fill:var(--kombu)}.c-na{fill:var(--surface)}
+.w0{fill:var(--surface)}.w1{fill:color-mix(in srgb,var(--kombu) 25%,var(--surface))}.w2{fill:color-mix(in srgb,var(--kombu) 55%,var(--surface))}.w3{fill:var(--kombu)}
+.wn{font-family:var(--mono);font-size:8.5px;fill:var(--ink);pointer-events:none}
+.w3+.wn{fill:var(--card)}
+.pt .o{fill:none;stroke:var(--pt-edge);stroke-width:3.4}
+.pt .i{stroke:var(--card);stroke-width:1.4;fill:var(--card)}
+.pt-yes .i{fill:var(--ink)}
+.pt .h{fill:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 16px;font-size:12.5px;margin-top:10px;align-items:center}
+.legend .it{display:inline-flex;align-items:center;gap:6px}
+.sw{display:inline-block;width:12px;height:12px;border-radius:2px}
+.sw.ring{border:2px solid var(--saffron);background:transparent}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid var(--pt-edge);background:var(--card)}
+.dot.yes{background:var(--ink)}
+.dot.opt{background:linear-gradient(90deg,var(--card) 50%,var(--ink) 50%)}
+.find{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.find li{background:var(--surface);border-radius:8px;padding:10px 14px}
+.tablewrap{overflow-x:auto;margin-top:8px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{font-size:12.5px;font-weight:700;text-align:left;padding:7px 8px;border-bottom:2px solid var(--rule);vertical-align:bottom}
+td{padding:8px;border-bottom:1px solid var(--rule);vertical-align:top}
+td.q{font-family:var(--serif);font-weight:800;font-size:12.5px;line-height:1.6}
+.nw{white-space:nowrap}
+td.use{min-width:13em}
+table.rules{min-width:900px}
+.dif2{fill:none;stroke:var(--ink);stroke-width:1.4}
+.conf{display:inline-block;font-size:12px;font-weight:700;border-radius:99px;padding:0 9px;border:1px solid currentColor;white-space:nowrap}
+.conf.h{color:var(--kombu)}.conf.m{color:var(--saffron)}.conf.l{color:var(--low)}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.cols h3{margin-top:0}
+.cols ul{margin:6px 0 0;padding-left:1.2em}
+.cols li{margin:6px 0}
+.verdict{border-left:4px solid var(--saffron);padding:10px 14px;background:var(--surface);border-radius:0 8px 8px 0;margin-top:14px}
+.verdict p{margin:4px 0}
+table.rec td{height:52px}
+table.rec td.photo{min-width:120px}
+table.rec td.pred{font-size:12px;color:var(--muted)}
+ol.steps{padding-left:1.4em;margin:8px 0}
+ol.steps li{margin:6px 0}
+a{color:var(--kombu)}
+footer{margin-top:48px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--rule);padding-top:12px}
+.fg-grid{stroke:var(--rule);stroke-width:1}
+.fg-s0{stroke:var(--kombu)}.fg-s1{stroke:var(--saffron)}.fg-s2{stroke:var(--low)}.fg-s3{stroke:var(--ink)}
+.fg-f0{fill:var(--kombu)}.fg-f1{fill:var(--saffron)}.fg-f2{fill:var(--low)}.fg-f3{fill:var(--ink)}
+.fg-line{fill:none;stroke-width:2.2}.fg-dash{stroke-dasharray:5 4}
+.fg-h{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+.fg-lab{font-family:var(--sans);font-size:11.5px;fill:var(--ink)}
+.fg-ax{font-family:var(--mono);font-size:11.5px;fill:var(--muted)}
+.fg-key{display:inline-block;width:18px;height:0;border-top:3px solid;vertical-align:middle;margin-right:6px}
+@media (max-width:720px){
+  .maps,.cols{grid-template-columns:minmax(0,1fr)}
+  .stats{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:480px){
+  body{font-size:14.5px}
+  .card{padding:14px 12px}
+  table.rec{min-width:640px}
+}
+</style>
+<div class="wrap">
+<header><div class="eyebrow">Cuisine Network · 通説の検証 6</div><h1>茶碗蒸し・プリンは、強火で蒸すと す が立つ？</h1><p class="lead">判定と確かさ・決め手の図・言えないこと・自分で試す手順を先に置き、通説の説明・計算の詳しい答え・根拠を後ろに並べたページです。通説の説明と結論の文章は本人が書きます（いまは空欄と材料）。</p></header>
+<section id="verdict"><h2><span class="no">1</span>判定と確かさ</h2>
+<div class="card"><h3>言えること</h3><ul><li>蒸す温度を 90℃ 以下に保てば す は立たない、は規則（R-E15）そのもの。出典は家庭向けの記事の抜粋で、論文では確かめていない。<span class="conf m">確かさ 中</span></li><li>強火（100℃ 近く）でも、固まったところで止めれば す の前に止められる。ただし止める時間の幅が狭い（計算）。<span class="conf l">確かさ 低</span></li><li>「強火だと す が立ちやすい」は、止める時間の幅が狭くなる、という意味で計算と合う。<span class="conf m">確かさ 中</span></li></ul></div>
+<div class="owner"><p class="slot">（ここに本人が書く）結論（まとめの文章） <span>下の実験の結果を見てから書くのでもよい</span></p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>プリン（計算）: 100℃ で固まるまで 7.0 分、す が立つまで 10.4 分／88℃（正解のレシピ）は す が立たない</li><li>確かさ: す の規則は家庭向けの記事の抜粋（中）、止める時間の幅は計算（低）</li></ul></div>
+</section>
+<section id="keyfig"><h2><span class="no">2</span>決め手の図</h2><figure class="key"><figcaption>プリン: 蒸す温度ごとの、固まるまでと す が立つまでの時間（計算）</figcaption><svg viewBox="0 0 640 300" role="img" aria-label="時間（分）と蒸す温度（℃）"><line class="fg-grid" x1="52" x2="624" y1="258.0" y2="258.0"/><text class="fg-ax" x="46" y="262.0" text-anchor="end">0</text><line class="fg-grid" x1="52" x2="624" y1="176.7" y2="176.7"/><text class="fg-ax" x="46" y="180.7" text-anchor="end">20</text><line class="fg-grid" x1="52" x2="624" y1="95.3" y2="95.3"/><text class="fg-ax" x="46" y="99.3" text-anchor="end">40</text><line class="fg-grid" x1="52" x2="624" y1="14.0" y2="14.0"/><text class="fg-ax" x="46" y="18.0" text-anchor="end">60</text><text class="fg-ax" x="52.0" y="276" text-anchor="middle">80</text><text class="fg-ax" x="195.0" y="276" text-anchor="middle">85</text><text class="fg-ax" x="338.0" y="276" text-anchor="middle">90</text><text class="fg-ax" x="481.0" y="276" text-anchor="middle">95</text><text class="fg-ax" x="624.0" y="276" text-anchor="middle">100</text><text class="fg-lab" x="338.0" y="294" text-anchor="middle">蒸す温度（℃）</text><text class="fg-lab" x="12" y="136.0" text-anchor="middle" transform="rotate(-90 12 136.0)">時間（分）</text><path class="fg-line fg-s0" d="M123.5,192.5 L195.0,205.5 L266.5,213.3 L338.0,218.1 L409.5,222.2 L481.0,225.1 L552.5,227.5 L624.0,229.5"><title>固まる</title></path><path class="fg-line fg-s2" d="M409.5,189.3 L481.0,202.7 L552.5,210.4 L624.0,215.7"><title>す が立つ</title></path></svg></figure><p class="small">緑（下）が固まるまで、赤が す が立つまで。90℃ 以下では赤い線が無い（す は立たない）。強火ほど、二つの線の間（ちょうどよく止められる時間）が狭くなる。<div class="legend"><span class="it"><span class="fg-key" style="border-color:var(--kombu);"></span>固まるまで</span><span class="it"><span class="fg-key" style="border-color:var(--low);"></span>す が立つまで</span></div></p></section>
+<section id="cannot"><h2><span class="no">3</span>言えないこと</h2><div class="card"><h3>言えないこと</h3><ul><li><b>す ができる仕組み</b>（水が泡になる・溶けていた空気が出る）。計算は温度のしきい値で、泡を解いていない。</li><li>器の大きさ・卵液の量・器の材質の違い。器の中の温まり方は一次遅れ1つ（推定）。</li><li>「強火」が蒸し器の中で何℃か。家庭のコンロと蒸し器で大きく違う（ここでは蒸す温度で直接比べた）。</li><li>卵と水分（牛乳・だし）の割合で す の立ちやすさが変わるか。</li></ul></div></section>
+<section id="try"><h2><span class="no">4</span>自分で試す</h2>
+<p>同じ卵液を2つの器に分け、蒸し方だけを変えます。蒸し器の中の温度を測れる温度計があると、計算と比べられます。</p>
+<h3>手順</h3><ol class="steps"><li>プリン液（卵 2 個・牛乳 250 mL・砂糖 40 g）を作り、こして同じ器 4 つに分ける。</li><li>A: 蓋をずらして弱めの火（蒸し器の中 85〜90℃）で、竹串を刺して澄んだ汁が出るまで蒸す。時間を書く。</li><li>B: 蓋をしっかり閉めて強火（沸騰）で、同じく澄んだ汁が出たらすぐ止める。時間を書く。</li><li>C: B と同じ強火で、B の止めた時間からさらに 5 分蒸す。</li><li>冷やしてから横に切り、断面の穴（す）を写真に撮る。</li></ol>
+<div class="tablewrap"><table class="rec"><thead><tr><th>器</th><th>蒸し器の中の温度（℃）</th><th>蒸した時間（分）</th><th>断面の写真</th><th>す（なし／少し／多い）</th><th>計算の予言</th></tr></thead><tbody>
+<tr><td>A 弱め（88℃）</td><td></td><td></td><td class="photo"></td><td></td><td class="pred">す なし（固まるまで 10.8 分）</td></tr>
+<tr><td>B 強火・すぐ止める</td><td></td><td></td><td class="photo"></td><td></td><td class="pred">す なし（固まるまで 7.0 分）</td></tr>
+<tr><td>C 強火・5分長く</td><td></td><td></td><td class="photo"></td><td></td><td class="pred">す あり（10.4 分で す）</td></tr>
+</tbody></table></div>
+</section>
+<section id="claim"><h2><span class="no">5</span>通説</h2><div class="card">
+<p class="claim">「茶碗蒸しやプリンは、強火で蒸すと す（小さな穴）が立つ。弱火でゆっくり蒸す」</p>
+<div class="owner"><p class="slot">（ここに本人が書く）この通説がどう言われているか・なぜ気になったか</p><h4>材料（Claude が集めた事実・数値・出典。本文ではありません）</h4><ul><li>言われる理由: 卵液が沸騰すると、中の水が泡になって穴が残る（家庭向けの説明で一致。論文では確かめていない、R-E15）</li><li>対策としてよく言われること: 蓋をずらす・火を弱めて、蒸し器の中を 85〜90℃ に保つ（R-W03）</li><li>計算で扱えるのは、蒸す温度ごとの「固まるまでの時間」と「中心が 90℃ を超えるまでの時間」。す ができる仕組みそのものは扱えない</li></ul></div>
+</div></section>
+<section id="calc"><h2><span class="no">6</span>計算の詳しい答え</h2>
+<p>Exp-14 の正解のレシピ（プリン液・茶碗蒸しの卵液、器に入れて蒸す）の蒸す温度だけを変え、固まる（卵液の段階 2）までと、中心が 90℃ を超えて す が立つまでの時間を計算しました。60 分までに届かないものは「—」。</p>
+<div class="tablewrap"><table><thead><tr><th>蒸す温度（℃）</th><th>プリン 固まる</th><th>プリン す</th><th>茶碗蒸し 固まる</th><th>茶碗蒸し す</th></tr></thead><tbody><tr><td class="num">80</td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr><tr><td class="num">82.5</td><td class="num">16.1</td><td class="num">—</td><td class="num">16.1</td><td class="num">—</td></tr><tr><td class="num">85</td><td class="num">12.9</td><td class="num">—</td><td class="num">12.9</td><td class="num">—</td></tr><tr><td class="num">87.5</td><td class="num">11.0</td><td class="num">—</td><td class="num">11.0</td><td class="num">—</td></tr><tr><td class="num">90</td><td class="num">9.8</td><td class="num">—</td><td class="num">9.8</td><td class="num">—</td></tr><tr><td class="num">92.5</td><td class="num">8.8</td><td class="num">16.9</td><td class="num">8.8</td><td class="num">16.9</td></tr><tr><td class="num">95</td><td class="num">8.1</td><td class="num">13.6</td><td class="num">8.1</td><td class="num">13.6</td></tr><tr><td class="num">97.5</td><td class="num">7.5</td><td class="num">11.7</td><td class="num">7.5</td><td class="num">11.7</td></tr><tr><td class="num">100</td><td class="num">7.0</td><td class="num">10.4</td><td class="num">7.0</td><td class="num">10.4</td></tr></tbody></table></div>
+<ul class="find">
+<li><b>蒸す温度が 90℃ 以下なら、どれだけ蒸しても す は立たない</b>（中心が 90℃ を超えないため）。これは規則（R-E15）をそのまま言い直したもの。</li>
+<li><b>強火（蒸す温度 92.5・95・97.5・100℃）でも、固まってから す が立つまでに 8.1・5.5・4.2・3.4 分の間がある</b>（プリン）。固まったところで火から下ろせば、計算の上では す は立たない。強火は、ちょうどよく止める時間の幅を狭くする。</li>
+<li>プリンと茶碗蒸しは同じ時間になった。器の温まり方が同じ一次遅れ（器の大きさ・中身を区別しない）で、固まる・す の規則も同じ温度で決まるため。中身の違い（牛乳・砂糖とだし）は、この計算では時間に効いていない。</li>
+<li class="muted small">注意: 器の中の温まり方は一次遅れ（推定）、す の規則は温度のしきい値（中心 90℃、出典は家庭向けの記事の抜粋）です。何分かの値は確かではありません。</li>
+</ul></section>
+<section id="basis"><h2><span class="no">7</span>根拠</h2>
+<p class="small">規則ごとのページ（値・出典の文面・確かめ方・食い違い・使っている通説）: <a href="basis/rules/R-E15.html">R-E15</a>・<a href="basis/rules/R-W03.html">R-W03</a>・<a href="basis/rules/R-E09.html">R-E09</a>。出典ごとのページ: <a href="basis/sources/chawan_web.html">chawan_web</a>。<a href="basis/index.html">規則と出典の一覧</a></p>
+<h3>使った規則（Exp-14 rules.yaml）</h3><div class="tablewrap"><table class="rules"><thead><tr><th>id</th><th>内容</th><th>出典の文面</th><th>出典</th><th>確かめ方</th><th>確かさ</th><th>計算での扱い</th></tr></thead><tbody>
+<tr><td class="num nw">R-E15</td><td>porosity（す）を抑える。高すぎると す立ち・硬くなる</td><td class="q">蒸し器内の温度を85～90℃に保ち、卵液の沸騰を防ぐことによって、“す”の発生を最小限に抑える</td><td>chawan_web</td><td class="nw">抜粋のみ</td><td><span class="conf m">確かさ 中</span></td><td class="small use">中心が 90℃ 以上で す（porosity 1）、5 分保つと porosity 2（推定）</td></tr>
+<tr><td class="num nw">R-W03</td><td>庫内を 85〜90℃ に下げられる</td><td class="q">蒸し器内の温度を85～90℃に保ち</td><td>chawan_web</td><td class="nw">抜粋のみ</td><td><span class="conf m">確かさ 中</span></td><td class="small use">蓋をずらす・火を弱めると蒸し器の中を 85〜90℃ に下げられる（ここでは蒸す温度を直接変えた）</td></tr>
+<tr><td class="num nw">R-E09</td><td>凝固（とろみ開始）温度が上がる。カスタードは 80〜85℃で凝固</td><td class="q">custard (egg, milk, sugar) will coagulate between 80°C and 85°C (176–185°F) / 卵1個+牛乳1カップ+砂糖大さじ1 では 175–180°F まで増粘が始まらない（薄めない卵は約150°F）</td><td>custard_textbook・custard_123・mcgee</td><td class="nw">抜粋のみ</td><td><span class="conf m">確かさ 中</span></td><td class="small use">プリン液・茶碗蒸しの卵液が固まる温度（卵液の段階）</td></tr>
+</tbody></table></div>
+<h3>出典と確かめ方</h3><div class="tablewrap"><table><thead><tr><th>出典</th><th>何か</th><th>確かめ方</th><th>この計算で使ったこと</th></tr></thead><tbody>
+<tr><td class="num">chawan_web</td><td>三越伊勢丹 FOODIE「茶碗蒸しレシピ。卵と出汁は1:3が黄金比」ほか <a href="https://mi-journey.jp/foodie/49227/" target="_blank" rel="noopener">リンク</a></td><td class="nw">抜粋のみ</td><td class="small">蒸し器の中を 85〜90℃ に保ち、卵液を沸騰させないと す が最小になる</td></tr>
+</tbody></table></div>
+</section>
+<footer>Cuisine Network。計算: Exp-14 のシミュレータ（experiments/exp-14/sim、rules.yaml の規則と採用値）。このページは experiments/myths/build.py（通説6 custard_su）が生成します。</footer>
+</div>

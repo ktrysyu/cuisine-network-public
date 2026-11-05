@@ -1,0 +1,17 @@
+{
+  "canonical": "oregano",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "dried oregano",
+  "n_recipes": 1706,
+  "note": "香りが本体",
+  "order": 35,
+  "reviewed": true
+}

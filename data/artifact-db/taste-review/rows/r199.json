@@ -1,0 +1,17 @@
+{
+  "canonical": "rice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "cooked rice",
+  "n_recipes": 387,
+  "note": "",
+  "order": 199,
+  "reviewed": true
+}

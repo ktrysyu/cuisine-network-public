@@ -1,0 +1,25 @@
+{
+  "canonical": "bay leaves",
+  "confidence": "low",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "bay leaves",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 1036,
+  "note": "取り出す前提で単体では口にしない。煮出した液の苦み基準",
+  "order": 76,
+  "reviewed": true
+}

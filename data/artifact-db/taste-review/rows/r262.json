@@ -1,0 +1,17 @@
+{
+  "canonical": "red wine",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 3,
+    "salty": 0,
+    "sour": 2,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "dry red wine",
+  "n_recipes": 309,
+  "note": "渋み（タンニン）は6軸外だが苦に寄せた",
+  "order": 262,
+  "reviewed": true
+}

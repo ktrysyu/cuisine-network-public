@@ -1,0 +1,17 @@
+{
+  "canonical": "black pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "black peppercorns",
+  "n_recipes": 453,
+  "note": "ホールで煮出す用途が多く、噛めば辛4",
+  "order": 171,
+  "reviewed": true
+}

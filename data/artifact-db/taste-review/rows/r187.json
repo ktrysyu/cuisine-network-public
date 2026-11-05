@@ -1,0 +1,17 @@
+{
+  "canonical": "mint",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh mint",
+  "n_recipes": 416,
+  "note": "清涼感（メントール）は6軸外。辛には入れない",
+  "order": 187,
+  "reviewed": true
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "egg whites",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "egg whites",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 453,
+  "note": "",
+  "order": 173,
+  "reviewed": true
+}

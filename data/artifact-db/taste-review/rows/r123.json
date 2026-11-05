@@ -1,0 +1,17 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "red chili peppers",
+  "n_recipes": 644,
+  "note": "",
+  "order": 123,
+  "reviewed": true
+}

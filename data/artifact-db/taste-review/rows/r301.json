@@ -1,0 +1,17 @@
+{
+  "canonical": "mango",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "mango",
+  "n_recipes": 268,
+  "note": "完熟想定",
+  "order": 301,
+  "reviewed": true
+}

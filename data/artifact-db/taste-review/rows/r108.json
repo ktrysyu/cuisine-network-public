@@ -1,0 +1,25 @@
+{
+  "canonical": "cucumber",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "cucumber",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 768,
+  "note": "皮の苦みは品種差",
+  "order": 108,
+  "reviewed": true
+}

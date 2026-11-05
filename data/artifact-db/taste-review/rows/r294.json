@@ -1,0 +1,17 @@
+{
+  "canonical": "sweetened condensed milk",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "sweetened condensed milk",
+  "n_recipes": 271,
+  "note": "",
+  "order": 294,
+  "reviewed": true
+}

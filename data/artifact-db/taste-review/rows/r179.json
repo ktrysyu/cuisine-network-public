@@ -1,0 +1,17 @@
+{
+  "canonical": "leeks",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "leeks",
+  "n_recipes": 435,
+  "note": "加熱後",
+  "order": 179,
+  "reviewed": true
+}

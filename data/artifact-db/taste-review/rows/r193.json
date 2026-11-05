@@ -1,0 +1,17 @@
+{
+  "canonical": "chickpeas",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "chickpeas",
+  "n_recipes": 402,
+  "note": "加熱後",
+  "order": 193,
+  "reviewed": true
+}

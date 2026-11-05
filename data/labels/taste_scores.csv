@@ -1,0 +1,304 @@
+ingredient,ja,canonical,n_recipes,sweet,salty,sour,bitter,umami,spicy,reviewed,changed_from_draft
+salt,塩,salt,18048,0,5,0,0,0,0,1,0
+onions,玉ねぎ,onions,7972,1,0,1,0,1,2,1,1
+olive oil,オリーブオイル,olive oil,7971,0,0,0,1,0,0,1,0
+water,水,water,7457,0,0,0,0,0,0,1,0
+garlic,にんにく,garlic,7380,1,0,0,0,1,1,1,0
+sugar,砂糖,sugar,6434,5,0,0,0,1,0,1,1
+garlic cloves,にんにく（片）,garlic,6236,1,0,0,0,2,1,1,1
+butter,バター,butter,4847,1,2,0,0,1,0,1,0
+ground black pepper,黒胡椒（挽いたもの）,black pepper,4784,0,0,0,1,0,4,1,0
+all-purpose flour,中力粉（オールパーパス）,flour,4632,0,0,0,0,0,0,1,0
+pepper,胡椒,black pepper,4438,0,0,0,1,0,4,1,0
+vegetable oil,サラダ油（植物油）,vegetable oil,4385,0,0,0,0,0,0,1,0
+eggs,卵,eggs,3388,0,0,0,0,1,0,1,0
+soy sauce,醤油,soy sauce,3296,1,5,0,0,4,0,1,0
+kosher salt,コーシャーソルト（粗塩）,salt,3113,0,5,0,0,1,0,1,1
+green onions,青ねぎ,green onions,3078,0,0,0,0,0,2,1,1
+tomatoes,トマト,tomatoes,3058,2,0,2,0,2,0,1,0
+large eggs,卵（Lサイズ）,eggs,2948,0,0,0,0,1,0,1,0
+carrots,にんじん,carrots,2814,2,0,0,0,0,0,1,0
+unsalted butter,無塩バター,butter,2782,1,0,0,0,2,0,1,1
+extra-virgin olive oil,エクストラバージンオリーブオイル,olive oil,2747,0,0,0,1,0,1,1,1
+ground cumin,クミンパウダー,cumin,2747,0,0,0,2,0,3,1,1
+black pepper,黒胡椒,black pepper,2627,0,0,0,1,0,4,1,0
+milk,牛乳,milk,2263,2,0,0,0,1,0,1,1
+chili powder,チリパウダー,chili powder,2036,0,1,0,1,0,2,1,0
+oil,油,vegetable oil,1970,0,0,0,0,0,0,1,0
+red bell pepper,赤パプリカ,bell pepper,1939,3,0,0,1,0,0,1,1
+purple onion,紫玉ねぎ,onions,1896,1,0,1,0,0,2,1,1
+scallions,青ねぎ（スキャリオン）,green onions,1891,1,0,0,1,0,2,1,1
+grated parmesan cheese,粉チーズ（パルメザン）,parmesan cheese,1885,0,4,1,0,5,0,1,0
+sesame oil,ごま油,sesame oil,1773,0,0,0,1,1,0,1,0
+corn starch,コーンスターチ,corn starch,1757,0,0,0,0,0,0,1,0
+ginger,生姜,ginger,1755,0,0,0,0,0,3,1,0
+baking powder,ベーキングパウダー,baking powder,1738,0,1,0,1,0,0,1,1
+jalapeno chilies,ハラペーニョ,chile pepper,1730,0,0,0,1,0,3,1,0
+dried oregano,乾燥オレガノ,oregano,1706,0,0,0,2,0,1,1,0
+chopped cilantro fresh,パクチー（刻み）,cilantro,1698,0,0,0,1,0,0,1,0
+fresh lemon juice,レモン汁（生搾り）,lemon juice,1679,0,0,5,0,0,0,1,0
+diced tomatoes,カットトマト（缶）,tomatoes,1623,2,1,3,0,2,0,1,0
+fresh parsley,パセリ（生）,parsley,1604,0,0,0,2,0,0,1,0
+minced garlic,にんにく（みじん切り）,garlic,1583,1,0,0,0,1,1,1,0
+chicken broth,チキンブロス,chicken broth,1554,0,3,0,0,3,0,1,0
+sour cream,サワークリーム,sour cream,1538,1,0,3,0,2,0,1,1
+cayenne pepper,カイエンペッパー,cayenne pepper,1523,0,0,0,1,0,5,1,0
+brown sugar,ブラウンシュガー,brown sugar,1503,5,0,0,1,0,0,1,0
+fresh ginger,生姜（生）,ginger,1503,0,0,0,0,0,3,1,0
+cooking spray,料理用オイルスプレー,vegetable oil,1490,0,0,0,0,0,0,1,0
+shallots,エシャロット,shallots,1477,2,0,1,0,1,1,1,1
+garlic powder,ガーリックパウダー,garlic,1442,1,0,0,1,1,1,1,0
+lime,ライム,lime,1439,0,0,5,1,0,0,1,0
+lemon juice,レモン汁,lemon juice,1394,0,0,5,0,0,0,1,0
+fresh lime juice,ライム汁（生搾り）,lime juice,1368,0,0,5,1,0,0,1,0
+flour,小麦粉,flour,1348,0,0,0,0,0,0,1,0
+honey,はちみつ,honey,1299,5,0,0,0,0,0,1,1
+vanilla extract,バニラエッセンス,vanilla extract,1298,2,0,0,0,0,0,1,1
+paprika,パプリカパウダー,paprika,1287,1,0,0,1,0,1,1,1
+chopped onion,玉ねぎ（みじん切り）,onions,1250,2,0,2,0,1,0,1,1
+fish sauce,魚醤（ナンプラー）,fish sauce,1247,0,5,0,0,5,0,1,0
+ground cinnamon,シナモンパウダー,cinnamon,1231,1,0,0,2,0,1,1,0
+avocado,アボカド,avocado,1228,0,0,0,0,1,0,1,0
+canola oil,キャノーラ油,vegetable oil,1223,0,0,0,0,0,0,1,0
+dry white wine,辛口白ワイン,white wine,1218,0,0,3,1,0,0,1,0
+lemon,レモン,lemon,1218,0,0,5,1,0,0,1,0
+rice vinegar,米酢,rice vinegar,1204,1,0,4,0,0,0,1,0
+yellow onion,黄玉ねぎ,onions,1184,2,0,0,0,1,0,1,0
+green bell pepper,ピーマン,bell pepper,1180,1,0,0,2,0,0,1,0
+cilantro leaves,パクチーの葉,cilantro,1160,0,0,0,1,0,0,1,0
+tomato paste,トマトペースト,tomato paste,1158,2,1,3,1,4,0,1,0
+heavy cream,生クリーム（乳脂肪高め）,heavy cream,1146,2,0,0,0,0,0,1,1
+cilantro,パクチー,cilantro,1142,0,0,0,1,0,0,1,0
+fresh basil,バジル（生）,basil,1137,0,0,0,1,0,0,1,0
+boneless skinless chicken breasts,鶏むね肉（皮なし骨なし）,chicken,1111,0,0,0,0,2,0,1,0
+flat leaf parsley,イタリアンパセリ,parsley,1094,0,0,0,2,0,0,1,0
+white sugar,白砂糖,sugar,1093,5,0,0,0,0,0,1,0
+lime juice,ライム汁,lime juice,1072,0,0,5,1,0,0,1,0
+chicken stock,チキンストック,chicken broth,1039,0,2,0,0,3,0,1,0
+bay leaves,ローリエ,bay leaves,1036,0,0,0,1,0,0,1,1
+potatoes,じゃがいも,potatoes,1018,1,0,0,0,1,0,1,0
+chicken,鶏肉,chicken,982,0,0,0,0,2,0,1,0
+corn tortillas,コーントルティーヤ,corn tortillas,965,1,0,0,0,0,0,1,0
+salsa,サルサ,salsa,963,1,2,3,0,1,2,1,0
+cumin,クミン,cumin,953,0,0,0,2,0,1,1,0
+freshly ground pepper,挽きたての胡椒,black pepper,949,0,0,0,1,0,4,1,0
+ground turmeric,ターメリックパウダー,turmeric,949,0,0,0,3,0,0,1,0
+baking soda,重曹,baking soda,942,0,2,0,2,0,0,1,0
+sea salt,海塩,salt,940,0,5,0,0,1,0,1,1
+cumin seed,クミンシード,cumin,935,0,0,0,2,0,1,1,0
+garam masala,ガラムマサラ,garam masala,925,1,0,0,2,0,2,1,0
+shrimp,えび,shrimp,912,2,1,0,0,3,0,1,0
+black beans,黒いんげん豆,black beans,896,1,0,0,0,1,0,1,0
+zucchini,ズッキーニ,zucchini,892,1,0,0,0,0,0,1,0
+ground beef,牛ひき肉,ground beef,877,0,0,0,0,3,0,1,0
+dried thyme,乾燥タイム,thyme,873,0,0,0,2,0,1,1,0
+large garlic cloves,にんにく（大きめの片）,garlic,873,1,0,0,0,2,1,1,1
+flour tortillas,小麦粉トルティーヤ,flour tortillas,865,0,1,0,0,0,0,1,0
+tomato sauce,トマトソース,tomato sauce,865,2,2,2,0,3,0,1,0
+buttermilk,バターミルク,buttermilk,863,1,1,3,0,0,0,1,0
+plum tomatoes,プラムトマト,tomatoes,858,2,0,2,0,2,0,1,0
+coconut milk,ココナッツミルク,coconut milk,854,2,0,0,0,0,0,1,0
+granulated sugar,グラニュー糖,sugar,849,5,0,0,0,0,0,1,0
+fresh cilantro,パクチー（生）,cilantro,841,0,0,0,1,0,0,1,0
+bay leaf,ローリエ（1枚）,bay leaves,839,0,0,0,1,0,0,1,1
+celery,セロリ,celery,837,0,1,0,1,1,0,1,0
+crushed red pepper,粗挽き唐辛子,red pepper flakes,825,0,0,0,1,0,4,1,0
+chopped cilantro,パクチー（刻み）,cilantro,796,0,0,0,1,0,0,1,0
+chicken breasts,鶏むね肉,chicken,793,0,0,0,0,2,0,1,0
+mayonaise,マヨネーズ,mayonnaise,781,1,2,2,0,1,0,1,0
+shredded cheddar cheese,チェダーチーズ（シュレッド）,cheddar cheese,769,0,3,1,0,3,0,1,0
+cucumber,きゅうり,cucumber,768,0,0,0,0,0,0,1,1
+green chilies,青唐辛子,chile pepper,768,0,0,0,1,0,4,1,1
+ground coriander,コリアンダーパウダー,coriander,768,1,0,0,1,0,0,1,0
+whole milk,牛乳（全乳）,milk,764,2,0,0,0,0,0,1,0
+red wine vinegar,赤ワインビネガー,vinegar,752,0,0,5,0,0,0,1,0
+tumeric,ターメリック,turmeric,738,0,0,0,3,0,0,1,0
+cinnamon,シナモン,cinnamon,696,1,0,0,2,0,1,1,0
+curry powder,カレー粉,curry powder,694,1,0,0,2,0,2,1,0
+worcestershire sauce,ウスターソース,worcestershire sauce,688,2,3,3,0,3,1,1,0
+white onion,白玉ねぎ,onions,684,1,0,0,0,0,2,1,0
+ground ginger,ジンジャーパウダー,ginger,678,0,0,0,2,0,3,1,1
+sesame seeds,ごま,sesame seeds,676,1,0,0,1,1,0,1,0
+hot sauce,ホットソース,hot sauce,674,0,2,3,0,0,4,1,0
+red pepper flakes,赤唐辛子フレーク,red pepper flakes,669,0,0,0,1,0,4,1,0
+cinnamon sticks,シナモンスティック,cinnamon,646,1,0,0,2,0,1,1,0
+red chili peppers,赤唐辛子,chile pepper,644,0,0,0,0,0,4,1,0
+bacon,ベーコン,bacon,620,1,4,0,0,4,0,1,0
+whipping cream,ホイップ用生クリーム,heavy cream,619,2,0,0,0,0,0,1,1
+boneless skinless chicken breast halves,鶏むね肉（半身・皮なし骨なし）,chicken,618,0,0,0,0,2,0,1,0
+peanut oil,ピーナッツ油,vegetable oil,610,0,0,0,0,0,0,1,0
+ground nutmeg,ナツメグパウダー,nutmeg,605,1,0,0,2,0,1,1,0
+clove,クローブ,cloves,600,0,0,0,3,0,3,1,0
+parmesan cheese,パルメザンチーズ,parmesan cheese,591,0,4,1,0,5,0,1,0
+dried basil,乾燥バジル,basil,585,0,0,0,1,0,0,1,0
+peeled fresh ginger,生姜（皮むき）,ginger,582,0,0,0,0,0,3,1,0
+coarse salt,粗塩,salt,578,0,5,0,0,0,0,1,0
+mushrooms,マッシュルーム,mushrooms,578,0,0,0,0,3,0,1,0
+warm water,ぬるま湯,water,577,0,0,0,0,0,0,1,0
+large egg yolks,卵黄（Lサイズ）,egg yolks,575,1,0,0,0,2,0,1,0
+balsamic vinegar,バルサミコ酢,balsamic vinegar,574,2,0,4,0,1,0,1,1
+celery ribs,セロリの茎,celery,567,0,1,0,1,1,0,1,0
+cream cheese,クリームチーズ,cream cheese,562,1,2,2,0,0,0,1,0
+white vinegar,ホワイトビネガー,vinegar,554,0,0,5,0,0,0,1,0
+egg yolks,卵黄,egg yolks,542,1,0,0,0,2,0,1,0
+capers,ケッパー,capers,541,0,4,3,1,0,1,1,1
+ground red pepper,赤唐辛子パウダー,cayenne pepper,538,0,0,0,1,0,5,1,0
+onion powder,オニオンパウダー,onions,528,2,0,0,1,1,0,1,0
+dijon mustard,ディジョンマスタード,dijon mustard,513,0,3,3,1,0,4,1,0
+rice,米,rice,509,1,0,0,0,0,0,1,0
+cold water,冷水,water,506,0,0,0,0,0,0,1,0
+crushed red pepper flakes,赤唐辛子フレーク（粗挽き）,red pepper flakes,505,0,0,0,1,0,4,1,0
+mirin,みりん,mirin,503,4,0,0,0,1,0,1,0
+fresh basil leaves,バジルの葉（生）,basil,502,0,0,0,1,0,0,1,0
+eggplant,なす,eggplant,501,0,0,0,1,0,0,1,0
+powdered sugar,粉砂糖,powdered sugar,501,5,0,0,0,0,0,1,0
+large egg whites,卵白（Lサイズ）,egg whites,485,0,0,0,0,0,0,1,1
+cooking oil,料理用油,vegetable oil,483,0,0,0,0,0,0,1,0
+lime wedges,くし切りライム,lime,482,0,0,5,1,0,0,1,0
+shredded mozzarella cheese,モッツァレラチーズ（シュレッド）,mozzarella cheese,474,1,2,1,0,2,0,1,0
+fat free less sodium chicken broth,チキンブロス（無脂肪・減塩）,chicken broth,473,0,1,0,0,3,0,1,0
+ground pork,豚ひき肉,pork,473,1,0,0,0,2,0,1,0
+sliced green onions,青ねぎ（小口切り）,green onions,472,1,0,0,0,0,2,1,0
+cayenne,カイエン,cayenne pepper,470,0,0,0,1,0,5,1,0
+mozzarella cheese,モッツァレラチーズ,mozzarella cheese,467,1,1,1,0,1,0,1,0
+medium shrimp,えび（中）,shrimp,461,2,1,0,0,3,0,1,0
+raisins,レーズン,raisins,460,5,0,1,0,0,0,1,1
+red pepper,赤唐辛子／赤パプリカ,bell pepper,459,1,0,0,0,0,2,1,1
+coriander,コリアンダー,coriander,458,1,0,0,1,0,0,1,0
+sauce,ソース,sauce,458,2,3,1,0,2,1,1,1
+finely chopped onion,玉ねぎ（細かいみじん切り）,onions,457,2,0,0,0,1,0,1,0
+oyster sauce,オイスターソース,oyster sauce,455,2,4,0,0,5,0,1,0
+sweet potatoes,さつまいも,sweet potatoes,455,4,0,0,0,0,0,1,0
+beansprouts,もやし,beansprouts,454,0,0,0,0,0,0,1,1
+black peppercorns,黒胡椒（ホール）,black pepper,453,0,0,0,1,0,4,1,0
+crushed tomatoes,クラッシュトマト（缶）,tomatoes,453,2,1,3,0,2,0,1,0
+egg whites,卵白,egg whites,453,0,0,0,0,0,0,1,1
+cheese,チーズ,cheese,447,0,3,1,0,3,0,1,0
+fresh rosemary,ローズマリー（生）,rosemary,442,0,0,0,2,0,1,1,0
+oregano,オレガノ,oregano,440,0,0,0,2,0,1,1,0
+white pepper,白胡椒,white pepper,439,0,0,0,1,0,4,1,0
+cherry tomatoes,ミニトマト,tomatoes,436,3,0,3,0,2,0,1,1
+leeks,リーキ（西洋ねぎ）,leeks,435,2,0,0,0,1,0,1,0
+ketchup,ケチャップ,ketchup,432,4,2,3,0,2,0,1,0
+hoisin sauce,海鮮醤,hoisin sauce,429,4,3,1,0,2,0,1,0
+chopped celery,セロリ（刻み）,celery,426,0,1,0,2,1,0,1,1
+low sodium soy sauce,減塩醤油,soy sauce,425,1,4,0,0,4,0,1,0
+cheddar cheese,チェダーチーズ,cheddar cheese,424,0,3,1,0,3,0,1,0
+light brown sugar,ブラウンシュガー（ライト）,brown sugar,422,5,0,0,0,0,0,1,0
+cabbage,キャベツ,cabbage,416,2,0,0,1,0,0,1,0
+fresh mint,ミント（生）,mint,416,0,0,0,1,0,0,1,0
+large shrimp,えび（大）,shrimp,414,2,1,0,0,3,0,1,0
+vegetable broth,野菜ブロス,vegetable broth,409,1,3,0,0,2,0,1,0
+cracked black pepper,粗挽き黒胡椒,black pepper,408,0,0,0,1,0,4,1,0
+spring onions,葉玉ねぎ（スプリングオニオン）,green onions,407,1,0,0,0,0,2,1,0
+peanuts,ピーナッツ,peanuts,406,1,0,0,1,2,0,1,0
+chickpeas,ひよこ豆,chickpeas,402,1,0,0,0,1,0,1,0
+confectioners sugar,粉砂糖（コンフェクショナーズ）,powdered sugar,395,5,0,0,0,0,0,1,0
+coriander seeds,コリアンダーシード,coriander,395,1,0,0,1,0,0,1,0
+italian seasoning,イタリアンシーズニング,italian seasoning,395,0,0,0,2,0,1,1,0
+fresh oregano,オレガノ（生）,oregano,393,0,0,0,2,0,1,1,0
+bell pepper,パプリカ（ピーマン類）,bell pepper,387,1,0,0,1,0,1,1,1
+cooked rice,ご飯（炊いた米）,rice,387,1,0,0,0,0,0,1,0
+lean ground beef,牛ひき肉（赤身）,ground beef,387,0,0,0,0,3,0,1,0
+ground pepper,挽いた胡椒,black pepper,385,0,0,0,1,0,4,1,0
+low salt chicken broth,チキンブロス（減塩）,chicken broth,385,0,1,0,0,3,0,1,0
+frozen peas,冷凍グリーンピース,peas,383,3,0,0,0,1,0,1,0
+beef broth,ビーフブロス,beef broth,381,0,3,0,0,4,0,1,0
+active dry yeast,ドライイースト,yeast,377,0,0,0,0,2,0,1,1
+cajun seasoning,ケイジャンシーズニング,cajun seasoning,376,0,4,1,1,1,3,1,1
+chopped fresh thyme,タイム（生・刻み）,thyme,375,0,0,0,2,0,1,1,0
+green pepper,ピーマン（青）,bell pepper,373,1,0,0,2,0,0,1,0
+ground cloves,クローブパウダー,cloves,371,0,0,0,3,0,3,1,0
+cornmeal,コーンミール,cornmeal,368,1,0,0,0,0,0,1,0
+white wine,白ワイン,white wine,367,1,0,3,1,0,0,1,0
+spinach,ほうれん草,spinach,366,0,0,0,1,1,0,1,0
+ground allspice,オールスパイス,allspice,364,0,0,0,2,0,2,1,1
+lemongrass,レモングラス,lemongrass,364,0,0,1,1,0,0,1,0
+plain yogurt,プレーンヨーグルト,yogurt,364,1,0,3,0,0,0,1,0
+thyme,タイム,thyme,361,0,0,0,2,0,1,1,0
+feta cheese crumbles,フェタチーズ（崩したもの）,feta cheese,358,0,4,3,0,2,0,1,0
+hot water,お湯,water,356,0,0,0,0,0,0,1,0
+orange,オレンジ,orange,355,4,0,2,0,0,0,1,0
+toasted sesame oil,焙煎ごま油,sesame oil,355,0,0,0,1,1,0,1,0
+long-grain rice,長粒米,rice,353,1,0,0,0,0,0,1,0
+parmigiano reggiano cheese,パルミジャーノ・レッジャーノ,parmesan cheese,353,0,4,1,0,5,0,1,0
+fennel seeds,フェンネルシード,fennel seeds,352,2,0,0,1,0,0,1,0
+ricotta cheese,リコッタチーズ,ricotta cheese,352,2,1,0,0,0,0,1,0
+white wine vinegar,白ワインビネガー,vinegar,352,0,0,5,0,0,0,1,0
+boiling water,熱湯,water,350,0,0,0,0,0,0,1,0
+cider vinegar,りんご酢,cider vinegar,348,1,0,5,0,0,0,1,0
+ground white pepper,白胡椒（挽いたもの）,white pepper,348,0,0,0,1,0,4,1,0
+pinenuts,松の実,pine nuts,348,1,0,0,1,1,0,1,0
+light soy sauce,薄口醤油,soy sauce,347,0,5,0,0,3,0,1,0
+chopped garlic,にんにく（刻み）,garlic,345,1,0,0,0,1,1,1,0
+fresh thyme,タイム（生）,thyme,345,0,0,0,2,0,1,1,0
+parsley,パセリ,parsley,345,0,0,0,2,0,0,1,0
+sake,酒,sake,345,1,0,1,1,2,0,1,0
+smoked paprika,スモークパプリカ,paprika,345,1,0,0,1,0,1,1,0
+boneless chicken skinless thigh,鶏もも肉（皮なし骨なし）,chicken,343,0,0,0,0,3,0,1,0
+grated lemon zest,レモンの皮（すりおろし）,lemon zest,342,0,0,1,2,0,0,1,0
+spaghetti,スパゲッティ,pasta,342,0,0,0,0,0,0,1,0
+green beans,さやいんげん,green beans,341,1,0,0,1,0,0,1,0
+yellow corn meal,コーンミール（黄）,cornmeal,341,1,0,0,0,0,0,1,0
+chile pepper,唐辛子,chile pepper,340,0,0,0,1,0,3,1,0
+low sodium chicken broth,チキンブロス（減塩）,chicken broth,339,0,1,0,0,3,0,1,0
+fresh ginger root,生姜（根）,ginger,338,0,0,0,0,0,3,1,0
+orange juice,オレンジジュース,orange juice,338,4,0,2,0,0,0,1,0
+half & half,ハーフ＆ハーフ（牛乳と生クリームの混合）,heavy cream,337,2,0,0,0,0,0,1,0
+chicken thighs,鶏もも肉,chicken,336,0,0,0,0,3,0,1,0
+sweet onion,甘玉ねぎ,onions,336,3,0,0,0,1,0,1,0
+chopped parsley,パセリ（刻み）,parsley,333,0,0,0,2,0,0,1,0
+shiitake,しいたけ,shiitake,331,0,0,0,0,4,0,1,0
+corn,とうもろこし,corn,329,4,0,0,0,1,0,1,0
+basmati rice,バスマティライス,rice,326,1,0,0,0,0,0,1,0
+shredded monterey jack cheese,モントレージャックチーズ（シュレッド）,monterey jack cheese,325,1,2,1,0,2,0,1,0
+tomatillos,トマティーヨ,tomatillos,322,1,0,4,0,0,0,1,0
+chiles,唐辛子（チレ）,chile pepper,321,0,0,0,1,0,3,1,0
+pasta,パスタ,pasta,321,0,0,0,0,0,0,1,0
+dark brown sugar,ブラウンシュガー（ダーク）,brown sugar,319,5,0,0,1,0,0,1,0
+chopped fresh mint,ミント（生・刻み）,mint,317,0,0,0,1,0,0,1,0
+vinegar,酢,vinegar,316,0,0,5,0,0,0,1,0
+mustard seeds,マスタードシード,mustard seeds,313,0,0,0,2,0,2,1,0
+dark soy sauce,老抽（中国のたまり醤油）,soy sauce,312,2,4,0,1,3,0,1,0
+vanilla,バニラ,vanilla extract,311,2,0,0,1,0,0,1,1
+dry red wine,辛口赤ワイン,red wine,309,0,0,2,3,0,0,1,0
+ghee,ギー,ghee,307,1,0,0,0,1,0,1,0
+bread crumbs,パン粉,bread crumbs,306,1,1,0,0,0,0,1,0
+hot pepper sauce,ホットペッパーソース,hot sauce,306,0,2,3,0,0,4,1,0
+green chile,青唐辛子（チレ）,chile pepper,302,0,0,0,1,0,4,1,1
+tortilla chips,トルティーヤチップス,tortilla chips,302,0,3,0,0,0,0,1,0
+pork,豚肉,pork,300,1,0,0,0,2,0,1,0
+serrano chile,セラーノ唐辛子,chile pepper,299,0,0,0,1,0,4,1,0
+chopped tomatoes,トマト（刻み）,tomatoes,298,2,0,2,0,2,0,1,0
+sriracha,シラチャーソース,sriracha,298,2,2,2,0,1,4,1,0
+cooked chicken,加熱済み鶏肉,chicken,295,0,0,0,0,2,0,1,0
+enchilada sauce,エンチラーダソース,enchilada sauce,295,1,2,1,1,2,2,1,0
+toasted sesame seeds,炒りごま,sesame seeds,294,1,0,0,1,1,0,1,0
+arborio rice,アルボリオ米（リゾット用）,rice,292,1,0,0,0,0,0,1,0
+yellow bell pepper,黄パプリカ,bell pepper,291,3,0,0,0,0,0,1,0
+dry bread crumbs,乾燥パン粉,bread crumbs,287,1,1,0,0,0,0,1,0
+fresh parmesan cheese,パルメザンチーズ（生）,parmesan cheese,286,0,4,1,0,5,0,1,0
+fine sea salt,海塩（細粒）,salt,285,0,5,0,0,1,0,1,1
+fresh coriander,パクチー（生）,cilantro,285,0,0,0,1,0,0,1,0
+prosciutto,生ハム（プロシュート）,prosciutto,284,1,5,0,0,4,0,1,0
+basil,バジル,basil,282,0,0,0,1,0,0,1,0
+chopped pecans,ピーカンナッツ（刻み）,pecans,282,2,0,0,1,0,0,1,0
+garlic paste,にんにくペースト,garlic,282,1,0,0,0,1,1,1,0
+radishes,ラディッシュ,radishes,282,0,0,0,1,0,2,1,0
+corn kernels,コーン（粒）,corn,280,4,0,0,0,1,0,1,0
+juice,果汁,juice,280,2,0,3,0,1,0,1,1
+long grain white rice,長粒米（白）,rice,277,1,0,0,0,0,0,1,0
+saffron threads,サフラン,saffron,277,0,0,0,3,0,0,1,0
+creole seasoning,クレオールシーズニング,creole seasoning,276,0,4,0,1,1,2,1,0
+melted butter,溶かしバター,butter,276,1,2,0,0,1,0,1,0
+beef,牛肉,beef,273,0,0,0,0,3,0,1,0
+fresh mushrooms,マッシュルーム（生）,mushrooms,272,0,0,0,0,3,0,1,0
+sweetened condensed milk,加糖練乳,sweetened condensed milk,271,5,0,0,0,0,0,1,0
+taco seasoning,タコスシーズニング,taco seasoning,271,1,4,0,1,1,3,1,1
+baguette,バゲット,baguette,270,1,1,0,0,1,0,1,0
+romaine lettuce,ロメインレタス,romaine lettuce,270,1,0,0,1,0,0,1,0
+apple cider vinegar,りんご酢（アップルサイダー）,cider vinegar,268,1,0,5,0,0,0,1,0
+chopped green bell pepper,ピーマン（刻み）,bell pepper,268,1,0,0,2,0,0,1,0
+feta cheese,フェタチーズ,feta cheese,268,0,4,3,0,2,0,1,0
+mango,マンゴー,mango,268,5,0,1,0,0,0,1,0
+okra,オクラ,okra,268,0,0,0,0,0,0,1,1

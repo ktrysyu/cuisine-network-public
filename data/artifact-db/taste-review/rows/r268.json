@@ -1,0 +1,17 @@
+{
+  "canonical": "pork",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "pork",
+  "n_recipes": 300,
+  "note": "加熱後。部位不明",
+  "order": 268,
+  "reviewed": true
+}

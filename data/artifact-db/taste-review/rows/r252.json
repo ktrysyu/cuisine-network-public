@@ -1,0 +1,17 @@
+{
+  "canonical": "monterey jack cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 2
+  },
+  "ingredient": "shredded monterey jack cheese",
+  "n_recipes": 325,
+  "note": "",
+  "order": 252,
+  "reviewed": true
+}

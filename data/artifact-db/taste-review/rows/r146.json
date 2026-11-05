@@ -1,0 +1,17 @@
+{
+  "canonical": "rice",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "rice",
+  "n_recipes": 509,
+  "note": "炊いた後",
+  "order": 146,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "feta cheese",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 4,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "feta cheese",
+  "n_recipes": 268,
+  "note": "",
+  "order": 300,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "white pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground white pepper",
+  "n_recipes": 348,
+  "note": "",
+  "order": 228,
+  "reviewed": true
+}

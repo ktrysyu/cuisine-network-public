@@ -1,0 +1,17 @@
+{
+  "canonical": "green beans",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "green beans",
+  "n_recipes": 341,
+  "note": "加熱後",
+  "order": 239,
+  "reviewed": true
+}

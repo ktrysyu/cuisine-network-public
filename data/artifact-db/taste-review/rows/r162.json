@@ -1,0 +1,17 @@
+{
+  "canonical": "shrimp",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 3
+  },
+  "ingredient": "medium shrimp",
+  "n_recipes": 461,
+  "note": "",
+  "order": 162,
+  "reviewed": true
+}

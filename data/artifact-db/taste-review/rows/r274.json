@@ -1,0 +1,17 @@
+{
+  "canonical": "sesame seeds",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "toasted sesame seeds",
+  "n_recipes": 294,
+  "note": "",
+  "order": 274,
+  "reviewed": true
+}

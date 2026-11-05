@@ -1,0 +1,25 @@
+{
+  "canonical": "cumin",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground cumin",
+  "mine": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 2747,
+  "note": "香りが本体。味としては苦みと弱い刺激のみ",
+  "order": 21,
+  "reviewed": true
+}

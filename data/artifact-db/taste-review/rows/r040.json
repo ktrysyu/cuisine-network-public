@@ -1,0 +1,17 @@
+{
+  "canonical": "garlic",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "minced garlic",
+  "n_recipes": 1583,
+  "note": "garlic と同じ扱い（加熱基準）",
+  "order": 40,
+  "reviewed": true
+}

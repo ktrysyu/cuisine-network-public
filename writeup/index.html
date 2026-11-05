@@ -1,0 +1,1093 @@
+<title>料理の宇宙をつくる</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700&family=Noto+Sans+JP:wght@500;700&family=IBM+Plex+Sans:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;600&family=Roboto+Mono:wght@400;500&family=JetBrains+Mono:wght@400&family=BIZ+UDGothic&display=swap">
+<style>
+/* Arukashi デザイン（パーソナル組）。色は main・sub と無彩色だけ。間隔は 8・16・40・64px の4段 */
+:root{
+  --ground:#FCFCFC;--surface:#F3F3F3;--rule:#E1E1E1;--ink:#171717;--muted:#606060;
+  --main:#B63552;--on-main:#FFFFFF;--sub:#00C9D4;
+  --space:#101010;--space-ink:#EEEEEE;
+  --gap-tight:8px;--gap-item:16px;--gap-group:40px;--gap-section:64px;
+  --heading:"Hanken Grotesk","Noto Sans JP",system-ui,sans-serif;
+  --body:"IBM Plex Sans","IBM Plex Sans JP","Hiragino Sans",system-ui,sans-serif;
+  --mono:"Roboto Mono",ui-monospace,monospace;
+  --code:"JetBrains Mono","BIZ UDGothic",ui-monospace,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){color-scheme:dark;
+    --ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--muted:#A4A4A4;
+    --main:#FB8495;--on-main:#1A0E10;--sub:#00A8B3;--space:#0A0A0A;}
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --ground:#101010;--surface:#1D1D1D;--rule:#2E2E2E;--ink:#EEEEEE;--muted:#A4A4A4;
+  --main:#FB8495;--on-main:#1A0E10;--sub:#00A8B3;--space:#0A0A0A;}
+
+body{background:var(--ground);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;letter-spacing:.04em;padding-inline:16px;padding-block:0 var(--gap-section);margin:0}
+.wrap{max-width:38em;margin:0 auto}
+.wide{max-width:980px;margin:0 auto}
+header{padding-block:var(--gap-section) var(--gap-group)}
+.series{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--main);display:flex;gap:var(--gap-item);flex-wrap:wrap}
+h1,h2,h3,h4{font-family:var(--heading);letter-spacing:.05em;font-feature-settings:"palt";text-wrap:balance}
+h1{font-weight:700;font-size:clamp(30px,6vw,44px);line-height:1.3;margin:var(--gap-tight) 0 var(--gap-item)}
+.dek{font-size:16px;color:var(--muted);margin:0}
+.meta{margin-top:var(--gap-item);font-size:13.5px;color:var(--muted);display:flex;gap:var(--gap-item);flex-wrap:wrap;font-family:var(--mono)}
+figure{margin:var(--gap-group) 0}
+.hero{background:var(--space);border-radius:8px;overflow:hidden;position:relative}
+.hero canvas{display:block;width:100%;height:clamp(200px,36vw,360px)}
+.hero .tag{position:absolute;left:16px;bottom:8px;font-family:var(--mono);font-size:11.5px;color:var(--space-ink);opacity:.75}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:var(--gap-tight);line-height:1.6}
+h2{font-weight:700;font-size:26px;line-height:1.45;margin:var(--gap-section) 0 var(--gap-tight)}
+h3{font-weight:700;font-size:19px;line-height:1.5;margin:var(--gap-group) 0 var(--gap-tight)}
+h4{font-size:13.5px;font-weight:700;color:var(--muted);margin:var(--gap-group) 0 var(--gap-tight)}
+p{margin:0 0 var(--gap-item)}
+h2+p,h3+p,h4+p,h4+ul,h3+ul{margin-top:0}
+a{color:var(--main);text-underline-offset:3px}
+a:focus-visible,summary:focus-visible{outline:2px solid var(--main);outline-offset:2px}
+strong{font-weight:600}
+code{font-family:var(--code);font-size:.9em}
+.num{font-family:var(--mono);font-size:.95em;font-variant-numeric:tabular-nums;letter-spacing:0}
+ul,ol{padding-left:1.3em;margin:0 0 var(--gap-item)}
+li{margin:0}
+li+li{margin-top:var(--gap-item)}
+ul{list-style:none;padding-left:1.1em}
+ul>li{position:relative}
+ul>li::before{content:"";position:absolute;left:-1.1em;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--muted)}
+.lede-q{font-family:var(--heading);font-size:19px;line-height:1.7;margin:var(--gap-group) 0;padding-left:var(--gap-item);border-left:3px solid var(--main)}
+.tablewrap{overflow-x:auto;margin:var(--gap-item) 0}
+table{border-collapse:collapse;width:100%;font-size:13.5px;min-width:520px}
+th,td{text-align:left;padding:8px 12px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top}
+th{font-size:11.5px;letter-spacing:.06em;color:var(--muted);font-weight:600;background:var(--surface);padding-left:8px}
+td:first-child{white-space:nowrap}
+.pill{display:inline-block;font-family:var(--mono);font-size:11.5px;padding:0 8px;border-radius:4px;border:1px solid var(--rule);color:var(--muted);white-space:nowrap}
+.pill.next{border-color:var(--sub)}
+.pill.done{background:var(--main);border-color:var(--main);color:var(--on-main)}
+.result h4{color:var(--main)}
+.plate{display:block;background:#fff;border-radius:8px;padding:8px;border:1px solid var(--rule)}
+.plate img{display:block;width:100%;height:auto}
+.zoomable{position:relative;display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in}
+.zoomable:focus-visible{outline:2px solid var(--main);outline-offset:3px}
+.zoom-hint{position:absolute;right:10px;bottom:10px;font-family:var(--mono);font-size:11.5px;background:rgba(16,16,16,.8);color:#EEEEEE;padding:2px 8px;border-radius:4px}
+.lightbox{position:fixed;inset:0;z-index:50;background:rgba(10,10,10,.92);display:flex;flex-direction:column;padding:calc(env(safe-area-inset-top,0px) + 12px) 12px calc(env(safe-area-inset-bottom,0px) + 12px)}
+.lightbox[hidden]{display:none}
+.lb-bar{display:flex;gap:8px;justify-content:flex-end;align-items:center;color:#EEEEEE;font-family:var(--mono);font-size:13.5px;padding-bottom:8px}
+.lb-bar .lb-cap{margin-right:auto;opacity:.75}
+.lb-bar button{font:inherit;color:#EEEEEE;background:transparent;border:1px solid #606060;border-radius:8px;padding:4px 12px;cursor:pointer}
+.lb-stage{flex:1;overflow:auto;display:flex;border-radius:8px;background:#fff}
+.lb-stage img{margin:auto;display:block;max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in}
+.lb-stage.actual img{max-width:none;max-height:none;cursor:zoom-out}
+.small{font-size:13.5px;line-height:1.65}
+.exp-head{display:flex;align-items:baseline;gap:var(--gap-tight) var(--gap-item);flex-wrap:wrap;margin-top:var(--gap-section)}
+.exp-head .id{font-family:var(--mono);font-size:13.5px;color:var(--main)}
+.exp-head h3{margin:0}
+.pending{background:var(--surface);border-radius:8px;padding:12px 16px;margin:var(--gap-item) 0;font-size:13.5px;color:var(--muted);line-height:1.7}
+.pending b{color:var(--ink);font-weight:600}
+.gist{margin:var(--gap-tight) 0 var(--gap-item)}
+.gist ul{margin-bottom:var(--gap-tight)}
+.gist .nums{display:flex;flex-wrap:wrap;gap:var(--gap-tight) var(--gap-item);font-size:13.5px;color:var(--muted)}
+.gist .nums b{font-family:var(--mono);font-weight:500;font-size:16px;color:var(--ink);letter-spacing:0;margin-right:4px}
+.gist .status{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+details.more{margin:0 0 var(--gap-item);border-top:1px solid var(--rule)}
+details.more>summary{cursor:pointer;list-style:none;font-size:13.5px;color:var(--main);padding:var(--gap-tight) 0;font-family:var(--heading)}
+details.more>summary::-webkit-details-marker{display:none}
+details.more>summary::before{content:"＋ ";font-family:var(--mono)}
+details.more[open]>summary::before{content:"− "}
+details.more[open]{padding-bottom:var(--gap-item)}
+#summary{margin-top:var(--gap-group)}
+#summary h2{margin-top:0}
+#summary dl{margin:0}
+#summary dt{font-family:var(--heading);font-weight:700;font-size:13.5px;color:var(--main);margin-top:var(--gap-item)}
+#summary dd{margin:var(--gap-tight) 0 0}
+.diagram{background:var(--surface);border-radius:8px;padding:16px 8px;overflow-x:auto}
+.diagram svg{display:block;width:100%;max-width:640px;height:auto;margin:0 auto}
+.d-ink{fill:var(--ink)} .d-muted{fill:var(--muted)} .d-kombu{fill:var(--main)} .d-saffron{fill:var(--sub)}
+.s-rule{stroke:var(--rule)} .s-kombu{stroke:var(--main)} .s-saffron{stroke:var(--sub)} .s-muted{stroke:var(--muted)}
+.d-label{font-family:var(--body);font-size:13.5px}
+.d-mono{font-family:var(--mono);font-size:11.5px}
+.refs{font-size:13.5px;line-height:1.65}
+footer{margin-top:var(--gap-section);padding-top:var(--gap-item);border-top:1px solid var(--rule);font-size:13.5px;color:var(--muted)}
+.toc{max-width:38em;margin:0 auto var(--gap-tight);padding-block:var(--gap-item) 0;font-size:13.5px}
+.toc-title{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;color:var(--muted);margin:0 0 var(--gap-tight)}
+.toc ol{list-style:none;padding:0;margin:0;border-left:1px solid var(--rule)}
+.toc li{margin:0}
+.toc li::before{display:none}
+.toc a{display:block;padding:4px 0 4px 12px;margin-left:-1px;border-left:2px solid transparent;color:var(--muted);text-decoration:none;line-height:1.5}
+.toc a:hover{color:var(--ink)}
+.toc a.active{color:var(--ink);border-left-color:var(--main);font-weight:600}
+.toc li.sub a{padding-left:24px}
+.toc-tag{font-family:var(--mono);font-size:11.5px;color:var(--main);margin-left:4px;white-space:nowrap}
+@media (max-width:1239px){.toc{background:var(--surface);border-radius:8px;padding:12px 16px;margin-top:var(--gap-tight)} .toc li.sub{display:none}}
+@media (min-width:1240px){.wide{max-width:min(980px,calc(100vw - 520px))} .toc{position:fixed;top:calc(env(safe-area-inset-top,0px) + 48px);left:24px;width:210px;max-height:calc(100vh - 96px);overflow-y:auto;margin:0;padding:0}}
+h2,.exp-head,[id]{scroll-margin-top:24px}
+@media (prefers-reduced-motion: reduce){*{animation:none!important;transition:none!important}}
+</style>
+
+<article id="top">
+<nav class="toc" aria-label="目次">
+  <p class="toc-title">目次</p>
+  <ol>
+    <li><a href="#summary">この研究の要約</a></li>
+    <li><a href="#top">はじめに</a></li>
+    <li><a href="#goals">やりたいこと</a></li>
+    <li><a href="#prior">先行研究で分かっていること</a></li>
+    <li><a href="#questions">研究の問い</a></li>
+    <li><a href="#space">空間の組み立て方</a></li>
+    <li><a href="#views">観点を重ねる（組み直し）</a></li>
+    <li><a href="#plan">実験の計画</a></li>
+    <li class="sub"><a href="#exp-01">Exp-01 小さな空間を作り、軸を1本引いてみる<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-01-projection">Exp-01 補足 2次元への押しつぶし方</a></li>
+    <li class="sub"><a href="#exp-01b">Exp-01b 文化の方向を取り除く<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-02">Exp-02 味覚スコアと学習空間を比べる<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-03">Exp-03 データ量を減らして空間の崩れ方を見る</a></li>
+    <li class="sub"><a href="#exp-04">Exp-04 自分の評価を空間に載せる</a></li>
+    <li class="sub"><a href="#exp-05">Exp-05 同じ料理の別の作り方を別の点にする</a></li>
+    <li class="sub"><a href="#exp-06">Exp-06 空間の穴を探し、入るはずの料理を生成する</a></li>
+    <li class="sub"><a href="#exp-07">Exp-07 動画・口コミ・チェーン店商品を空間に載せる</a></li>
+    <li class="sub"><a href="#exp-08">Exp-08 他人の評価を重ねて空間を育てる</a></li>
+    <li class="sub"><a href="#exp-09">Exp-09 空間の答えと Jev の分布を比べる</a></li>
+    <li class="sub"><a href="#exp-10">Exp-10 香りの層<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-11">Exp-11 油分と食感の層<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-12">Exp-12 温度と調理法の層</a></li>
+    <li class="sub"><a href="#exp-13">Exp-13 時間の層</a></li>
+    <li class="sub"><a href="#exp-14">Exp-14 調理の計算<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-17">Exp-17 殻付き卵を熱伝導と変性の速さで解く<span class="toc-tag">結果あり</span></a></li>
+    <li class="sub"><a href="#exp-18">Exp-18 料理を増やす<span class="toc-tag">結果あり</span></a></li>
+    <li><a href="#refs">参考文献</a></li>
+    <li><a href="#history">更新履歴</a></li>
+  </ol>
+</nav>
+
+<div class="wrap">
+<header>
+  <div class="series"><span>Cuisine Network</span><span>問いと実験計画、Exp-01〜20 の結果</span></div>
+  <h1>料理の宇宙をつくる</h1>
+  <p class="dek">食材の組み合わせから料理の空間を学習して、自分の好みを言葉にし、まだ知らない料理に出会えるか。その問いを実験に分けた記録です。</p>
+  <div class="meta"><span>2026-09-27 公開</span><span>2026-10-22 更新</span><span>研究ノート・連載中</span></div>
+</header>
+</div>
+<div class="wrap">
+<section id="summary" aria-labelledby="summary-h">
+<h2 id="summary-h">この研究の要約</h2>
+<p class="small">2026-10-22 時点。細部は各実験の「手順・表・細部」を開くと読めます。この要約は Claude がまとめたものです。</p>
+<dl>
+  <dt>目的</dt>
+  <dd>料理の感覚や勘を、目に見えて動かせる形にすること。「こうしたらこうなる」を計算で示し、根拠を辿れるようにして、「それなら間違いないね」と言ってもらえるようにする（構想メモ §13、本人の言葉から）。</dd>
+  <dt>何を作っているか</dt>
+  <dd>料理と食材を点にした<strong>料理のネットワーク</strong>と、その上の<strong>演算</strong>（足し引き、食材と操作から料理を計算する「調理の計算」）、それを見て触れる<strong>可視化</strong>。料理の通説を計算で確かめるページは、この仕組みが見える応用の一つとして試しています（2026-09-29 本人訂正）。</dd>
+  <dt>ここまでの到達点</dt>
+  <dd><ul>
+    <li>食材の共起だけの空間は国籍が強く、味は弱くしか入らない（Exp-01〜02）。観点ごとの層（共起・味・香り・食感…）を重ねる形に組み直した（Exp-10）</li>
+    <li>調理の計算が一本つながった。状態の条件で <span class="num">12/13</span> 品を当て、操作や順番を変えると別の料理になる（Exp-14）</li>
+    <li>殻付き卵は熱伝導と変性の速さで解けるようになり、温泉卵の実測（中心が湯温に近づくまで約28分）と合わせ込みなしで一致した（<span class="num">28.4</span> 分、Exp-17）</li>
+    <li>食感は物性値から計算すると当たるようになった（硬さの誤差 <span class="num">1.59→0.69</span>、Exp-11）</li>
+    <li>殻付き卵の計算の既定を新しい計算（Exp-17）に切り替えた。肉は厚み方向の熱伝導で解けるようになった（Exp-18、既定は未切替）。料理の条件は 16→21 品（ビーフステーキ・フライドポテト・ゆでじゃがいも・だし巻き卵・カスタードクリーム、Exp-18・20）</li>
+    <li>通説ページを 8 本にした。根拠は規則ごと・出典ごとのページに分けて共有している（<a href="basis/index.html">規則と出典</a>）</li>
+  </ul></dd>
+  <dt>通説の一覧</dt>
+  <dd><ol>
+    <li><a href="myth-poached-vinegar.html">ポーチドエッグは、湯に酢を入れるとまとまる？</a></li>
+    <li><a href="myth-room-temp-egg.html">卵は、常温に戻してからゆでる？</a></li>
+    <li><a href="myth-sear-juice.html">肉は、先に焼き目を付けると肉汁を閉じ込める？</a></li>
+    <li><a href="myth-onion-sweet.html">玉ねぎは、炒めると甘くなる？</a></li>
+    <li><a href="myth-salt-boil.html">パスタの湯に塩を入れると、沸点が上がって早くゆだる？</a></li>
+    <li><a href="myth-custard-su.html">茶碗蒸し・プリンは、強火で蒸すと す が立つ？</a></li>
+    <li><a href="myth-meat-room-temp.html">肉は、焼く前に常温に戻す？</a></li>
+    <li><a href="myth-chicken-low.html">鶏むね肉は、低温でゆっくり加熱するとしっとりする？</a></li>
+  </ol><p class="small">3〜8 は 2026-10-22 に作ったもので、本人の欄（結論など）はまだ空です。計算で扱えなかった候補とその理由は experiments/myths/candidates.md。</p></dd>
+  <dt>今の問い</dt>
+  <dd>計算した「感じ方」から料理を当てられるか。1品抜きで試すと 13品中 <span class="num">2〜3</span> 品、料理を 16品に増やしても <span class="num">5〜6</span> 品しか当たらない。外れは甘さ・香ばしさ・温かさの側と、卵料理どうしが近すぎること、焼いた肉が肉らしく出ないことから来ている（Exp-18）。</dd>
+  <dt>次の一手</dt>
+  <dd>肉の新しい計算（厚み方向の熱伝導）と揚げ物の吸油を既定にするかを決める（試せるページへ移すのが先）。鍋の温度を火加減の温度ではなく火力から解く形にするか（experiments/exp-15-recipes/heat_levels.md）。通説ページを実際に作って確かめる。</dd>
+</dl>
+</section>
+</div>
+
+
+<div class="wide">
+<figure class="hero">
+  <canvas id="universe" aria-label="料理を星として並べた宇宙のイメージ図"></canvas>
+  <span class="tag">イメージ図 · 実データではありません</span>
+</figure>
+</div>
+
+<div class="wrap">
+<p>唐揚げと竜田揚げは近い。では、唐揚げとフライドチキンはどのくらい近いのか。味噌汁に一番近い海外の料理は何か。自分が「おいしい」と思った料理を並べたとき、そこに一本の軸は見えるのか。</p>
+<p>こうした問いに、料理を点として並べた空間で答えたいと考えています。見た目は衛星の軌道マップのような、暗い背景に星が散らばる宇宙です。ただし宇宙は見た目の比喩で、本体は中身にあります。点の位置は人が決めた軸ではなく、食材の組み合わせから学習されて決まります。</p>
+<p>これはプロダクト開発ではなく研究プロジェクトとして進めます。完成形の仕様は置かず、独立して回せる実験を並べ、ひとつ終わるたびにこのページへ結果を書き足します。Part 1 では、何を知りたいのか、どの順番で確かめるのかをまとめます。Part 2 として、最初の実験 Exp-01 の結果を <a href="#exp-01-result">実験計画の中</a> に書き足しました。</p>
+
+<h2 id="goals">やりたいこと</h2>
+<p>出発点は4つの願いで、あとから5つ目を加えました。どれも「料理の空間がある」ことを前提にしています。</p>
+<ol>
+  <li><strong>自分の好みを言葉にする。</strong>高く評価した料理が空間のどの領域に集まり、どの方向に並ぶかを見ることで、「自分はこういう軸の上の料理が好きだ」と説明できるようにする。</li>
+  <li><strong>まだ知らない料理に出会う。</strong>好みの領域の近くにある未体験の料理を見つける。さらに、空間の中で料理が存在しない「穴」を探し、そこに入るはずの料理を生成モデルで作ってみる。</li>
+  <li><strong>みんなで空間を育てる。</strong>公開して評価やラベルを集め、学習済みの空間の上に集合知の層を重ねる。最初は自分ひとりの評価から始める。</li>
+  <li><strong>料理情報の海を泳ぐ。</strong>レシピ、動画、口コミ、チェーン店の商品を同じ空間に並べ、自分の嗜好軸で探せるようにする。</li>
+  <li><strong>調理を計算する（2026-09-27 追加）。</strong>（卵＋牛乳）→撹拌→加熱＝スクランブルエッグ、のように、食材と操作の並びから料理を計算する。足し算ではなく、状態を変える操作を順に重ねる計算で、同じ材料でも操作と順番が違えば別の料理（蒸せばプリン）になる。</li>
+</ol>
+<p>設計の中心に置くのは、<strong>見る軸を利用者が自分で引けること</strong>です。「今日は家庭的か外食か」「今日は日本か海外か」という見方を、用意された選択肢から選ぶのではなく、2つの点を指して自分で作れるようにします。</p>
+
+<p class="lede-q">食材の共起だけから学習した空間に、人間にとって意味のある軸を後から引けるか。</p>
+<p>この問いに答えが出れば、4つの願いはすべてその上に乗ります。逆に、ここで意味のある軸が引けなければ土台から考え直すことになります。なので最初の実験はここに当てます。</p>
+
+<h2 id="prior">先行研究で分かっていること</h2>
+<p>食材を埋め込む研究はすでに多くあります。何が確かめ済みで、どこが空いているかを先に整理しておきます。</p>
+<ul>
+  <li><strong>風味化合物のネットワーク</strong>（Ahn et al. 2011）。食材が共有する化合物から食材の関係を描いた研究で、この分野の出発点です。</li>
+  <li><strong>地域料理スタイルの変換</strong>（Kazama et al. 2017）。レシピを学習した空間でベクトル演算を行い、<code>みりん − 日本 + フランス ≈ カルヴァドス</code> という結果を示しています。「文化をまたいだ対応が空間の上で見つかる」という直感は、ここで一度実証されています。</li>
+  <li><strong>グラフ埋め込み</strong>（FlavorGraph 2021、Recipe2Vec 2022）。食材・化合物・レシピを1つのグラフにして埋め込む手法です。</li>
+  <li><strong>大規模データセット</strong>（Recipe1M+）。100万件以上のレシピと画像を含み、この論文でもベクトル演算が検証されています。</li>
+  <li><strong>3D の銀河ビュー</strong>（Flavor Web）。見た目としての宇宙はすでに実装例があります。</li>
+  <li><strong>食材埋め込みの多次元構造</strong>（Epicure、Radzikowski・Chen 2026年4月）。FlavorGraph の食材埋め込みに、LLM で付けた味・食感・地理などのラベルを当て、15以上の読み取れる方向があることを示しています。「甘い ↔ しょっぱい」が最も大きな軸で、おかず側の食材だけで見ると料理圏はこの軸と直交する方向で分かれる、と報告しています。手法はこのノートの Exp-02 とかなり近く、比較を Exp-02 の結果に書いています。</li>
+  <li><strong>共起と化学の間の埋め込み</strong>（Epicure 続編、同 2026年5月）。7言語・約414万件のレシピから、共起だけ・香り化合物だけ・両方を混ぜた3種類の埋め込みを作って比べています。観点を重ねるこのノートの組み直し（Exp-10 以降）と重なる研究です。</li>
+</ul>
+<p class="small">Epicure の2本（2026年）はこのノートを書き始めた後に見つけたもので、「空間の中に味や文化の方向があるか」という問いは、すでにかなり調べられていることになります。著者の所属は KAIKAKU.AI（ロンドンの厨房自動化のスタートアップ、2026年7月に REEF が買収）で、料理人の勘を機械に持たせることが目的の研究です。同じ食材の埋め込みを使いながら、個人が自分の好みを理解し新しい料理に出会うことを目的にするこのノートとは、向いている方向が違います。2本目の論文の埋め込み（共起だけ・香り化合物だけ・両方の3種類、1,790食材）は CC BY 4.0 で公開されています。</p>
+<p>空いているのは、空間を<strong>個人の道具として使う側</strong>です。利用者が自分で軸を引くこと、自分の評価を空間に重ねて好みを説明すること、空間の穴から新しい料理を予測すること、動画や口コミまで同じ空間に載せること。先行研究は空間を作って評価するところまでで、そこから先はほとんど扱われていません。</p>
+
+<h2 id="questions">研究の問い</h2>
+<p>実験ごとに答える問いを6つに分けました。各実験の説明にどの問いを扱うかを書いています。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>ID</th><th>問い</th></tr></thead>
+  <tbody>
+    <tr><td>Q1</td><td>食材の共起だけから、意味のあるクラスタが自然に現れるか</td></tr>
+    <tr><td>Q2</td><td>学習された方向は、味・文化・調理法など人間が解釈できる概念に対応するか</td></tr>
+    <tr><td>Q3</td><td>「味噌汁に対応する海外の料理」のような、文化をまたぐ対応を空間上で見つけられるか</td></tr>
+    <tr><td>Q4</td><td>人が付けた味覚スコア（甘・塩・酸・苦・旨・辛）と、共起から学習した空間は、どこで似てどこで違うか</td></tr>
+    <tr><td>Q5</td><td>意味のある空間を作るのに、最低どれだけのレシピが要るか</td></tr>
+    <tr><td>Q6</td><td>ベクトルの足し引きは、人間の直感に沿った料理を返すか</td></tr>
+  </tbody>
+</table>
+</div>
+
+<h2 id="space">空間の組み立て方</h2>
+<p>空間には2つの層があります。</p>
+<h3>学習の主役は食材</h3>
+<p>学習するのは食材のベクトルです。料理はその派生で、構成する食材のベクトルを平均（または重み付きで足し合わせ）した点として置きます。レシピを「食材を並べた文」とみなせば、単語の埋め込みと同じ手法で食材を学習できます。同じレシピによく一緒に出てくる食材ほど近くに置かれます。</p>
+<h3>味覚は座標ではなくラベル</h3>
+<p>各食材・料理には甘・塩・酸・苦・旨・辛の6軸スコアを付けます。ただしこれは空間の座標には使わず、点に貼る情報として持ちます。座標を人が決めた軸で固定すると、学習から何が出てくるかを観察できなくなるからです。味覚スコアと学習された空間を突き合わせるのは Q4 の実験で行います。</p>
+<h3>軸は後から引く</h3>
+<p>利用者が2つの点（たとえば「和食の重心」と「イタリアンの重心」）を指すと、その差のベクトルが1本の軸になります。空間内の全料理をその軸に射影すれば、「和食寄り〜イタリアン寄り」の一列に並び替えられます。</p>
+
+<figure class="diagram" aria-label="2点から軸を定義し、全ての点を射影する概念図">
+<svg viewBox="0 0 640 300" role="img">
+  <title>軸の定義と射影</title>
+  <line x1="70" y1="235" x2="570" y2="65" class="s-kombu" stroke-width="2"/>
+  <polygon points="570,65 556,64 562,77" class="d-kombu"/>
+  <g class="s-muted" stroke-width="1" stroke-dasharray="3 4">
+    <line x1="200" y1="110" x2="224.6" y2="182.4"/>
+    <line x1="330" y1="235" x2="303.1" y2="155.8"/>
+    <line x1="430" y1="200" x2="403.4" y2="121.7"/>
+    <line x1="420" y1="70" x2="434.0" y2="111.2"/>
+  </g>
+  <g class="d-muted">
+    <circle cx="200" cy="110" r="5"/><circle cx="330" cy="235" r="5"/><circle cx="430" cy="200" r="5"/><circle cx="420" cy="70" r="5"/>
+  </g>
+  <g class="d-saffron">
+    <circle cx="224.6" cy="182.4" r="3.5"/><circle cx="303.1" cy="155.8" r="3.5"/><circle cx="403.4" cy="121.7" r="3.5"/><circle cx="434.0" cy="111.2" r="3.5"/>
+  </g>
+  <circle cx="120" cy="218" r="8" class="d-kombu"/>
+  <circle cx="520" cy="82" r="8" class="d-kombu"/>
+  <text x="120" y="252" text-anchor="middle" class="d-label d-ink">点 A（和食の重心）</text>
+  <text x="520" y="58" text-anchor="middle" class="d-label d-ink">点 B（イタリアンの重心）</text>
+  <text x="330" y="258" text-anchor="middle" class="d-mono d-muted">料理</text>
+  <text x="440" y="150" class="d-mono d-saffron">射影された位置</text>
+  <text x="24" y="290" class="d-mono d-muted">軸 = B − A ／ 各料理の位置 = (料理 − A) · 軸 ／ |軸|²</text>
+</svg>
+</figure>
+<p>この操作は、Kazama らのベクトル演算を利用者の手に渡したものと言えます。軸の引き方を変えれば、文化を軸にした見方と、文化を考えない見方を切り替えることもできます。</p>
+
+<h2 id="views">観点を重ねる（2026-09-27 組み直し）</h2>
+<p>Exp-01 と Exp-01b を終え、味覚スコアを付け終えたところで、計画を組み直しました。今の空間が表しているのは「どの食材を一緒に使うか」という1つの観点だけです。文化が強く出るのはこの観点の性質で、この観点の中で文化を取り除いても、味は出てきませんでした。想定していた空間を作るには、情報の量よりも観点が足りていません。特に、風味の大部分を占める香りは何も入っていません。</p>
+<p>そこで、1つの空間ではなく、観点ごとの層を重ねた空間として組み直します。What's Cooking の共起は、その中の1層（ベースライン）として残します。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>観点</th><th>単位</th><th>データの当て</th><th>状態</th></tr></thead>
+  <tbody>
+    <tr><td>共起（何と一緒に使うか）</td><td>食材</td><td>What's Cooking</td><td><span class="pill done">あり</span></td></tr>
+    <tr><td>味（甘・塩・酸・苦・旨・辛）</td><td>食材</td><td>本人のスコア（303件）</td><td><span class="pill done">あり</span></td></tr>
+    <tr><td>香り</td><td>食材</td><td>Ahn ら 2011 の食材×香り化合物表、FlavorDB</td><td><span class="pill">Exp-10</span></td></tr>
+    <tr><td>油分</td><td>食材</td><td>脂質量（USDA の食品成分データ）と、本人の感じ方</td><td><span class="pill">Exp-11</span></td></tr>
+    <tr><td>食感</td><td>食材</td><td>本人のスコア</td><td><span class="pill">Exp-11</span></td></tr>
+    <tr><td>時間（感じる順番・余韻）</td><td>食材</td><td>本人のスコア（立ち上がりの早さ・余韻の長さ）</td><td><span class="pill">Exp-13</span></td></tr>
+    <tr><td>温度</td><td>料理</td><td>料理名と手順のあるデータ</td><td><span class="pill">Exp-12</span></td></tr>
+    <tr><td>調理法</td><td>料理</td><td>手順の文章</td><td><span class="pill">Exp-12</span></td></tr>
+    <tr><td>食べる場面</td><td>料理</td><td>口コミ・動画</td><td><span class="pill">Exp-07</span></td></tr>
+  </tbody>
+</table>
+</div>
+<p>時間は、本人の指摘から加えた観点です。甘みは先に来て、苦みや唐辛子の辛さは遅れて来て残るように、味や香りには「何を感じるか」だけでなく「いつ感じるか」があります。香水のトップノートや、日本語の「後味」「キレ」「余韻」と同じ考え方で、官能評価の分野では TDS（感覚の時間的優位性）や時間-強度法という名前で測られています。</p>
+<p>観点には、食材で決まるもの（香り・油分・食感・時間）と、料理で決まるもの（温度・調理法・場面）があります。What's Cooking には料理名も手順もないので、料理で決まる観点を扱うところから、料理単位のデータに移ります。</p>
+<p>味のスコアで分かったとおり、本人の感じ方は一般的な値からずれます（塩・砂糖・乳製品に旨みを感じる、など）。感じ方が関わる観点は本人のスコアを正とし、客観的な値がある観点（脂質量・香り化合物）は両方持ちます。</p>
+<p>層ごとの近さを別々に持っておけば、利用者が「どの層で見るか」「どの層を混ぜるか」を選べます。構想の中心にある「軸を自分で引く」を、層の選び方にまで広げる形です。層どうしの食い違い、たとえば「共起では遠いが香りでは近い組み合わせ」も、それ自体が見どころになります。</p>
+
+<h2 id="plan">実験の計画</h2>
+<p>8つの実験に分けました（Exp-01 の結果を受けて Exp-01b と Exp-09 を、観点の組み直しで Exp-10〜13 を、5つ目の願いで Exp-14 を追加）。番号は取り組む予定の順ですが、各実験は独立して回せる大きさにしてあり、途中で順番を入れ替えることもあります。</p>
+
+<p><strong>進める順番（2026-09-27 決定）。</strong>実験が14個に増え、全部を少しずつ進めると独立試行の4か月に収まりません。一本の筋を最後まで通すため、<strong>香りの層（Exp-10）→ 調理の計算の手書き版（Exp-14）</strong>を先に進めます。食感・時間・温度（Exp-11〜13）は、Exp-14 に必要な分だけ手で決めて使い、本格的な確認は後に回します。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>実験</th><th>内容</th><th>問い / 願い</th><th>状態</th></tr></thead>
+  <tbody>
+    <tr><td>Exp-01</td><td>小さな空間を作り、軸を1本引いてみる</td><td>Q1 Q2 Q3 Q6</td><td><span class="pill done">完了</span></td></tr>
+    <tr><td>Exp-01b</td><td>文化の方向を取り除き、足し引きと軸が変わるかを見る</td><td>Q2 Q3 Q6</td><td><span class="pill done">完了</span></td></tr>
+    <tr><td>Exp-02</td><td>味覚スコアと学習空間を比べる</td><td>Q4</td><td><span class="pill done">完了</span></td></tr>
+    <tr><td>Exp-03</td><td>データの量と質を変えて空間の変わり方を見る</td><td>Q5</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-04</td><td>自分の評価を空間に載せる</td><td>自己理解</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-05</td><td>同じ料理の別の作り方を別の点にする</td><td>点の粒度</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-06</td><td>空間の穴を探し、入るはずの料理を生成する</td><td>予測・発見</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-07</td><td>動画・口コミ・チェーン店商品を空間に載せる</td><td>情報の海</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-08</td><td>他人の評価を重ねて空間を育てる</td><td>集合的育成</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-09</td><td>空間の足し引きの答えと、Jev が返す確率分布を比べる</td><td>Q6</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-10</td><td>香りの層を加え、共起・味・香りの近さを比べる</td><td>観点</td><td><span class="pill done">完了</span></td></tr>
+    <tr><td>Exp-11</td><td>油分と食感の層を加える</td><td>観点</td><td><span class="pill done">食感の作り直しまで</span></td></tr>
+    <tr><td>Exp-12</td><td>温度と調理法の層を料理単位で加える</td><td>観点</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-13</td><td>時間の層（感じる順番と余韻）を加える</td><td>観点</td><td><span class="pill">計画</span></td></tr>
+    <tr><td>Exp-14</td><td>食材と調理の操作から料理を計算する</td><td>調理の計算</td><td><span class="pill done">最小の形で完了</span></td></tr>
+    <tr><td>Exp-17</td><td>殻付き卵を熱伝導と変性の速さで解く</td><td>調理の計算</td><td><span class="pill done">完了（既定に切替）</span></td></tr>
+    <tr><td>Exp-18</td><td>感じ方の評価に使う料理を増やす</td><td>調理の計算</td><td><span class="pill done">完了（既定は未切替）</span></td></tr>
+  </tbody>
+</table>
+</div>
+
+<div class="exp-head" id="exp-01"><span class="id">Exp-01</span><h3>小さな空間を作り、軸を1本引いてみる</h3></div>
+<div class="gist"><ul><li>食材の共起だけで、国ごとのまとまりははっきり出る。ただし料理の種類（おかず・菓子）でも分かれる</li><li>「醤油 ↔ バター」の軸は、味のつもりが東アジアと欧米を分ける地域の軸になった</li><li>足し引きは半分ほど直感に合う（バター − フランス + インド = ギー）。みりん − 日本 + フランス ≈ カルヴァドスは再現できなかった</li></ul><div class="nums"><span><b>66%</b>近い10件が同じ国籍（偶然なら 10%）</span><span><b>39,772</b>件のレシピで学習</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>Kaggle の <em>What's Cooking</em> データセットを使います。約 <span class="num">4</span> 万件のレシピに食材リストと料理の国籍（<span class="num">20</span> 種類、和食を含む）が付いています。レシピを食材の文とみなして word2vec で食材を学習し、料理は食材ベクトルの平均として置きます。</p>
+<ol>
+  <li>2次元に落として眺め、国籍ごとのまとまりが見えるかを確かめる（Q1）</li>
+  <li>「醤油 ↔ バター」「和食 ↔ イタリアン」などの軸を引き、並び順が直感に合うかを見る（Q2）</li>
+  <li>和食の料理ごとに、他の国の料理で一番近いものを挙げる（Q3）</li>
+  <li>食材の足し引きを試し、返ってくる結果を直感と比べる（Q6）</li>
+</ol>
+<h4>判定の観点</h4>
+<p>国籍ラベルは学習に使わないので、国籍ごとのまとまりが出れば「共起だけで文化が浮かび上がる」ことになります。軸の並び順は、自分が見て納得できるかで判定します。この段階では数値の評価指標は置きません。</p>
+<h4>このデータを選んだ理由</h4>
+<p>Recipe1M+ は利用申請が必要ですが、What's Cooking はすぐに手に入り、ノートブック1本で回せる大きさです。国籍ラベルが最初から付いているので、文化を軸にした見方の検証がそのままできます。</p>
+<div class="result" id="exp-01-result">
+<h4>結果（2026-09-27 実施）</h4>
+<div class="pending"><b>この実験の位置づけ：追試・ベースライン。</b>What's Cooking の食材を word2vec で学習して国ごとのまとまりを見るのは、よく知られた練習課題です。共起から地域性が出ることは Ahn ら（2011）、ベクトルの足し引きは Kazama ら（2017）がすでに示しています。この実験に新規性はありません。目的は、以降の実験と比べる基準の数字を取ることと、自分のデータでどこに壁があるかを確かめることです。</div>
+<p>レシピ <span class="num">39,772</span> 件、食材の語彙 <span class="num">3,336</span> 語（5回以上出てくる食材）で学習しました。学習は約1分、全体で約2分です。同じスクリプトを2回実行して、図と数値がまったく同じになることを確かめています。</p>
+
+<figure>
+  <button type="button" class="zoomable" data-full="figures/exp-01-map.png" data-cap="図1. Exp-01 の2次元マップ" aria-label="図1を拡大表示"><span class="plate"><img src="figures/exp-01-map.png" alt="約4万件のレシピを2次元に落とした散布図。国籍ごとに色分けされ、左上にメキシコ、左下に東アジアと東南アジア、中央左にインドとモロッコ、右上にイタリアとヨーロッパ、右下に国籍が混ざった大きな島がある" style="display:block"></span><span class="zoom-hint">クリックで拡大</span></button>
+  <figcaption>図1. 料理（構成食材ベクトルの平均）を UMAP で2次元に落とし、国籍で色分けしたもの。国籍ラベルは学習に使っていません。1点が1レシピです。</figcaption>
+</figure>
+
+<h3 id="exp-01-projection">図1の読み方：100次元をどう2次元に押しつぶしたか</h3>
+<p>学習した空間は <span class="num">100</span> 次元で、図1はそれを UMAP という方法で2次元に押しつぶしたものです。UMAP は、まず100次元の中で各料理の近所 <span class="num">30</span> 件を決め、2次元にばらまいた点を「近所どうしは引き寄せ、それ以外は押し離す」というばねの動きで並べ直します。守られるのは「近所が誰か」だけで、島どうしの距離や島の大きさは保証されません。縦軸・横軸にも意味はありません。以下の数値はすべて、押しつぶす前の100次元で計算しています。</p>
+<p>押しつぶし方で見た目がどれだけ変わるかを確かめるため、同じ100次元の料理ベクトルを4通りで描き比べました。PCA は、散らばりが最も大きい2方向にそのまま影を落とす方法です。UMAP は近所の件数を <span class="num">10・30・100</span> と変えました。</p>
+
+<figure>
+  <button type="button" class="zoomable" data-full="figures/exp-01-projections.png" data-cap="図2. 押しつぶし方を4通りで比較" aria-label="図2を拡大表示"><span class="plate"><img src="figures/exp-01-projections.png" alt="同じ料理ベクトルを PCA と UMAP（近所10・30・100件）の4通りで2次元にした散布図。PCA は全体が1つの雲になり、UMAP の3つはほぼ同じ島の配置になる" style="display:block"></span><span class="zoom-hint">クリックで拡大</span></button>
+  <figcaption>図2. 左上が PCA、右上から UMAP の近所10件・30件（図1と同じ）・100件。色は国籍です。</figcaption>
+</figure>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>押しつぶし方</th><th>100次元の近所30件のうち2次元でも近所に残る割合</th><th>2次元で近い10件が同じ国籍の割合</th></tr></thead>
+  <tbody>
+    <tr><td>押しつぶす前（100次元）</td><td>—</td><td class="num">66%</td></tr>
+    <tr><td>PCA</td><td class="num">5%</td><td class="num">30%</td></tr>
+    <tr><td>UMAP 近所10件</td><td class="num">19%</td><td class="num">56%</td></tr>
+    <tr><td>UMAP 近所30件（図1）</td><td class="num">19%</td><td class="num">55%</td></tr>
+    <tr><td>UMAP 近所100件</td><td class="num">18%</td><td class="num">54%</td></tr>
+  </tbody>
+</table>
+</div>
+<ul>
+  <li><strong>どの方法でも共通して見える構造は信頼できます。</strong>東アジア（中国・韓国・日本・タイ・ベトナム）がひとかたまりになり、メキシコがそこから離れ、イタリア・ギリシャ・スペイン・フランスが近く、インドとモロッコが隣り合う。この並びは4通りとも同じでした。</li>
+  <li><strong>島に分かれて見えるのは UMAP の性質です。</strong>PCA では全体が1つの連続した雲になり、切れ目はありません。PCA の2方向で説明できるのは元の散らばりの <span class="num">30%</span> だけで、国籍の重なりも大きくなります。</li>
+  <li><strong>UMAP の近所の件数を変えても、見た目はほとんど変わりませんでした。</strong>ただしこれだけでは、配置が本物だとは言えません。3つとも同じ初期配置から動き始めているからです。これは下の「配置の確かめ直し」で調べています。</li>
+  <li><strong>ただし2次元の図は近所をかなり取りこぼしています。</strong>UMAP でも、100次元での近所30件のうち2次元で近所に残るのは5〜6件だけです。図の上で隣にある料理が、本当に近い料理だとは限りません。</li>
+</ul>
+
+<h4>配置の確かめ直し：初期配置と近所の件数</h4>
+<p>UMAP は、点を最初に並べる位置（初期配置）を近所のつながり方から計算します。図2の3つが似ていたのは、同じ初期配置から出発していたからかもしれません。そこで、乱数の種を変えた場合、初期配置をランダムにした場合、近所の件数を 5件から 5,000件まで変えた場合を描き比べました。各条件の20国籍の重心の配置を、回転・反転・拡大縮小を合わせたうえで図1と比べています。</p>
+
+<figure>
+  <button type="button" class="zoomable" data-full="figures/exp-01-neighbors.png" data-cap="図3. 近所の件数を 5〜5,000 件で変えた比較" aria-label="図3を拡大表示"><span class="plate"><img src="figures/exp-01-neighbors.png" alt="近所の件数を 5, 10, 30, 100, 500, 1000, 5000 件に変えた UMAP の散布図8枚。どれも島の配置はほぼ同じ" style="display:block"></span><span class="zoom-hint">クリックで拡大</span></button>
+  <figcaption>図3. 近所の件数を 5〜5,000 件で変えた UMAP。向きは図1に合わせて回転・反転してあります。5,000 件は計算が重いため 10,000 件の抜き出しで描いています（右下は同じ抜き出しで 30 件にした対照）。</figcaption>
+</figure>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>条件</th><th>図1との国籍の配置の一致（重心どうしの距離の順位相関）</th></tr></thead>
+  <tbody>
+    <tr><td>乱数の種を変える（4通り）</td><td class="num">0.997〜1.000</td></tr>
+    <tr><td>近所の件数 10〜1,000 件</td><td class="num">0.997〜0.999</td></tr>
+    <tr><td>近所の件数 5 件 / 5,000 件</td><td class="num">0.963 / 0.954</td></tr>
+    <tr><td>初期配置をランダムにする（5通り）</td><td class="num">0.807〜0.987</td></tr>
+    <tr><td>比較用：国籍ラベルをでたらめに付け替えた場合</td><td class="num">平均 0.00（最大 0.45）</td></tr>
+  </tbody>
+</table>
+</div>
+<ul>
+  <li><strong>島があることは本物です。</strong>東アジア、インド、メキシコ、ヨーロッパ、アメリカ南部・イギリスのまとまりは、どの条件でも出ました。</li>
+  <li><strong>島どうしの大まかな位置関係も本物です。</strong>一番崩れた条件でも一致は 0.81 で、でたらめの場合の最大 0.45 を大きく上回ります。2次元の重心どうしの距離は、100次元での距離ともよく対応していました（順位相関 0.78〜0.90）。</li>
+  <li><strong>ただし「どの島がどの島の隣か」という細部は、初期配置に左右されます。</strong>初期配置をランダムにしたある条件では、ヨーロッパの島とメキシコの島の左右が入れ替わり、インドとモロッコも別の場所に移りました。乱数の種を変えても図1とほぼ同じになったのは、同じ初期配置から出発したためで、配置が一通りに決まる証拠ではありません。</li>
+</ul>
+
+<figure>
+  <button type="button" class="zoomable" data-full="figures/exp-01-sweets.png" data-cap="図4. 菓子レシピの位置" aria-label="図4を拡大表示"><span class="plate"><img src="figures/exp-01-sweets.png" alt="砂糖・小麦粉・バニラのうち2つ以上を含むレシピを赤で強調した4通りの散布図。UMAP では右下の島に集まり、PCA では右端に偏るが切れ目はない" style="display:block"></span><span class="zoom-hint">クリックで拡大</span></button>
+  <figcaption>図4. 砂糖・小麦粉・バニラのうち2つ以上を含むレシピ（<span class="num">4,184</span> 件、全体の <span class="num">10.5%</span>）を赤で表示。配置は図2と同じです。</figcaption>
+</figure>
+<p>菓子の島も同じ見方で確かめました。UMAP の3通りではどれも右下に島として固まり、PCA では右端に偏るものの切れ目はありません。100次元で菓子レシピの近い10件のうち菓子レシピが占める割合は <span class="num">85%</span> で、全体に占める割合 <span class="num">10.5%</span> を大きく上回ります。菓子がまとまっていること自体は100次元でも本当で、島としてくっきり分かれて見えるのは UMAP が強調した結果です。一部は中国料理のあたりにも散っていて、小麦粉と砂糖を使う点心などが含まれると思われます（中身は未確認）。</p>
+
+<h3>Q1. 共起だけで国ごとのまとまりは出るか：出る。ただし国とは別の軸も強い</h3>
+<p>図1を見ると、メキシコ、インド、東アジア（中国・日本・韓国）、東南アジア（タイ・ベトナム）、イタリアははっきり固まっています。各料理に近い10件のうち同じ国籍のものは平均 <span class="num">66%</span> でした。偶然なら <span class="num">10%</span> なので、共起だけで国ごとの構造はかなり浮かび上がっています。国籍別ではメキシコ <span class="num">86%</span>、インド <span class="num">80%</span> が高く、ロシア <span class="num">27%</span>、アイルランド <span class="num">29%</span> が低い結果でした。</p>
+<p>一方で、クラスタのまとまりを測るシルエット係数はほぼ <span class="num">0</span>（<span class="num">−0.003</span>、ラベルをシャッフルした基準は <span class="num">−0.043</span>）でした。原因の一つは右下の大きな島です。ここにはイタリア・フランス・南部アメリカなど複数の国籍が混ざっていて、中身を見ると砂糖・小麦粉・バニラ・バターが多い製菓の塊でした。空間は国籍だけでなく、<strong>料理の種類（おかずか菓子か）でも分かれている</strong>ことになります。国籍ラベルで測ると、これが「まとまっていない」と数えられてしまいます。</p>
+
+<h3>Q2. 軸は意味を持つか：持つ。ただし味の軸のつもりが地域の軸になった</h3>
+<p>「醤油 ↔ バター」の軸を引いて国籍ごとの平均を並べると、韓国・中国・日本・ベトナム・タイが醤油側、イギリス・アイルランド・フランス・南部アメリカ・イタリアがバター側に並びました。「和食の重心 ↔ イタリアンの重心」の軸でも、並び方はほぼ同じです。</p>
+<p>醤油とバターという味の違いのつもりで引いた軸が、実際には<strong>東アジアと欧米を分ける地域の軸</strong>として働いています。共起から学習しているので、「一緒に使われる食材」の違いが最初に効くのは自然な結果です。味そのものの軸を取り出せるかは、味覚スコアと突き合わせる Exp-02 で確かめます。</p>
+<p class="small">軸の両端には、食材が1〜3個しかないレシピが並びやすいという癖もありました。バター側の先頭は食材が <code>butter</code> だけのレシピで、インド料理のものはギーを作るレシピだと思われます。</p>
+
+<h3>Q3. 国をまたいだ対応は見つかるか：近い国に偏る</h3>
+<p>和食のレシピから、ほかの国の料理で一番近いものを探しました。行き先は韓国 <span class="num">39%</span>、中国 <span class="num">30%</span> で、近隣の国に集中しました。味噌汁に近いのは豆腐とキムチの韓国のスープ、照り焼きに近いのは中国の甘辛い炒め物です。</p>
+<p>遠い国との対応として面白かったのは「とんかつ → 南部アメリカのフライドグリーントマト」「和風カレー → インド料理」くらいでした。「味噌汁 ≈ ミネストローネ」のような大きく離れた対応を見つけるには、国ごとの違いを差し引いてから比べる工夫が要ります。</p>
+
+<h3>Q6. ベクトルの足し引きは直感に合うか：半分くらい</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>式</th><th>上位の結果</th><th>直感に合うか</th></tr></thead>
+  <tbody>
+    <tr><td>butter − french + indian</td><td>ghee</td><td>合う</td></tr>
+    <tr><td>sake − japanese + french</td><td>grappa, kirsch, riesling, pinot noir</td><td>合う（洋酒が並ぶ）</td></tr>
+    <tr><td>fish sauce − thai + italian</td><td>prosciutto, pancetta</td><td>合う（うま味の元が並ぶ）</td></tr>
+    <tr><td>mirin − japanese + french</td><td>white asparagus, thyme</td><td>合わない</td></tr>
+    <tr><td>soy sauce − japanese + italian</td><td>sausage meat, italian seasoning</td><td>合わない</td></tr>
+  </tbody>
+</table>
+</div>
+<p>国籍の重心を足し引きする式は、半分ほどが直感に合いました。バターのインド版がギーになるのは、期待していた形そのものです。一方、Kazama らが示した <code>みりん − 日本 + フランス ≈ カルヴァドス</code> は再現できませんでした。食材同士だけの足し引きは、ほとんどの場合「足した側の食材の近く」が返ってくるだけでした。</p>
+
+<h3>みりんの足し引きはなぜ外れたか</h3>
+<p>結果を見ると、文化と役割がひとつのベクトルに混ざっていて、切り離せていないように見えます。根拠は2つあります。</p>
+<ul>
+  <li><strong>和食らしさが引き切れていない。</strong><code>mirin − japanese + french</code> の結果の7位に、かつお節（dried bonito flakes）が残っています。mirin だけで近いものを並べると、酒・かつお節・だし・海苔と和食の食材ばかりです。mirin のベクトルの大部分は「和食によく出てくる」という情報で、和食の平均を1本引いただけでは消えませんでした。</li>
+  <li><strong>役割の情報が薄い。</strong>「甘い調理酒」という役割はベクトルにあまり入っていないようです。和食らしさを引いた後に役割が残らず、フランス料理の食材が並んだと考えられます。ただし「フランスの平均だけの近傍」と重なったのは上位8件中1件なので、フランス側に引っ張られただけとも言い切れません。</li>
+</ul>
+<p>共起から学習すると、「どの料理文化で使われるか」と「料理の中で何の役をするか」が同じベクトルに入ります。醤油 ↔ バターが地域の軸になったのも、同じ現象を別の方向から見たものだと考えています。</p>
+
+<h3>データが粗いせいか、手法のせいか</h3>
+<p>このデータには食材名しかなく、分量・手順・料理名がありません。<code>soy sauce</code> と <code>low sodium soy sauce</code> のような表記揺れや、<code>kraft mexican style finely shredded four cheese</code> のような商品名も別の食材として数えられます。規模も Recipe1M+ の約25分の1です。結果が雑多に見える原因の一部は、このデータの粗さにあるはずです。</p>
+<p>一方で、文化と役割の混ざりはデータを細かくしても残ると考えています。みりんが和食の中で使われるという事実は変わらないからです。この2つは、表記揺れをまとめる、大きなデータで学習し直す、という操作で切り分けられます。粗さが原因なら結果は良くなり、混ざりが原因なら変わりません。これを Exp-03 で確かめます。</p>
+
+<h3>次の実験に持ち越すこと</h3>
+<ul>
+  <li>空間には国籍のほかに、おかずと菓子の分かれ目も見える。ただ、このプロジェクトではおかずと菓子を別物としては見ない。同じ料理の空間の中でつながっているものとして扱い、両者を分けるための実験はしない。</li>
+  <li>味の軸を狙って引いても、地域の軸が出てくる。味を取り出すには味覚スコアとの突き合わせ（Exp-02）が必要。</li>
+  <li>文化と役割の混ざりをほどくため、文化の方向を取り除いた空間を作る（Exp-01b）。遠い国同士の対応もこの空間で探し直す。</li>
+  <li>食材が極端に少ないレシピは軸の端を占めるので、以降は食材5個以上に絞った結果も並べて見る。</li>
+</ul>
+<p class="small">データ: Kaggle「What's Cooking」の train.json（<span class="num">39,774</span> 件・<span class="num">20</span> 国籍）。非公式ミラー7か所から取得し、ハッシュが全件一致することを確認済みです。Kaggle 公式版との照合はまだです。コード・数値・全結果はリポジトリの <code>experiments/exp-01/</code> にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-01b"><span class="id">Exp-01b</span><h3>文化の方向を取り除く</h3></div>
+<div class="gist"><ul><li>国籍を分ける方向（LDA）を19本取り除いても、国籍の情報はほとんど残った</li><li>重心の差で取り除けば国籍は線形には消えるが、みりんのベクトルの半分以上も一緒に消え、甘い酒にはならなかった</li><li>空間の中から役割を取り出すのはやめ、味などの役割は外から与える</li></ul><div class="nums"><span><b>61%</b>LDA 19本を取り除いた後も国籍を当てる精度</span><span><b>20%</b>重心の差で取り除いた後（当てずっぽうと同じ）</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>国籍を最もよく分ける方向を、<strong>料理ベクトル</strong>と国籍ラベルから線形判別（LDA）で求めます。国籍ラベルが付いているのは料理だけだからです。その方向の成分を<strong>食材ベクトル</strong>から取り除きます。料理ベクトルは食材ベクトルの平均なので、食材から取り除けば料理からも同じ成分が消えます。学習はやり直さず、同じ空間を射影するだけです。取り除いた空間で、Exp-01 と同じ足し引き・軸・国をまたいだ近傍を計算し直します。</p>
+<h4>判定の観点</h4>
+<ul>
+  <li>足し引きで直感に合う割合が増えるか。特に <code>mirin − japanese + french</code> から和食の食材が消え、甘い酒や甘味料が並ぶか</li>
+  <li>「醤油 ↔ バター」の軸で、国籍の並びが崩れて別の並び（味・用途）が見えるか</li>
+  <li>和食の最近傍が韓国・中国以外に広がるか</li>
+  <li>取り除きすぎて、料理として意味のある構造（菓子の島など）まで壊れていないか</li>
+</ul>
+<p>うまくいけば、構想にあった「文化を考えない見方」をそのまま作れます。文化あり／なしを切り替えて見る機能の土台にもなります。</p>
+<div class="result" id="exp-01b-result">
+<h4>結果（2026-09-27 実施）：狙いどおりにはならなかった</h4>
+<p>国籍を分ける方向を最大 <span class="num">19</span> 本（国籍が20なので取れる上限）まで取り除きましたが、国籍の構造はほとんど残りました。期待していた「みりんの足し引きで甘い酒や甘味料が並ぶ」「醤油 ↔ バターが味の軸になる」は、どの本数でも起きていません。</p>
+
+<div class="tablewrap">
+<table>
+  <thead><tr><th>取り除いた本数</th><th>近傍の国籍一致率</th><th>それでも国籍を当てられる精度</th><th>食材ベクトルから取れた割合</th></tr></thead>
+  <tbody>
+    <tr><td>0（Exp-01）</td><td class="num">66%</td><td class="num">71%</td><td>—</td></tr>
+    <tr><td>1</td><td class="num">66%</td><td class="num">71%</td><td class="num">3%</td></tr>
+    <tr><td>5</td><td class="num">63%</td><td class="num">67%</td><td class="num">9%</td></tr>
+    <tr><td>10</td><td class="num">60%</td><td class="num">64%</td><td class="num">14%</td></tr>
+    <tr><td>19</td><td class="num">59%</td><td class="num">61%</td><td class="num">22%</td></tr>
+  </tbody>
+</table>
+</div>
+<p>19本取り除いても、取れたのは食材ベクトルの <span class="num">22%</span> だけでした。取り除いた後の空間で改めて国籍を当てさせても、<span class="num">61%</span> 当たります。国籍の情報は数本の方向にまとまっておらず、空間全体に広く散らばっているようです。</p>
+<p class="small">取り除いた量が少なかった原因は、LDA の方向の選び方にありました。下の「追加計算」で確かめています。</p>
+
+<h3>みりんの足し引きの変化</h3>
+<ul>
+  <li><strong>少し取り除く（1〜5本）</strong>と、上位に酒・だし・かつお節が増えました。取り除いたことで「− 日本 + フランス」の効き目のほうが弱まり、みりん自身の和食らしさが前に出たためです。</li>
+  <li><strong>多く取り除く（10本以上）</strong>と和食の食材は消えましたが、代わりに並んだのはレモンカードやパイ生地など欧米の菓子と香草で、甘い酒ではありませんでした。</li>
+  <li>みりん単体の近所は、取り除くにつれて和食の食材から、中国・韓国の調味料（濃口醤油・ごま油・コチュジャン）に入れ替わりました。「日本」が「東アジア」に広がっただけで、「甘い調味料」には寄りませんでした。</li>
+</ul>
+
+<h3>軸と国をまたいだ近傍の変化</h3>
+<p>「醤油 ↔ バター」の軸で国籍を並べた順番は、どの本数でも Exp-01 とほぼ同じでした（順位相関 <span class="num">0.96〜0.99</span>）。和食に一番近い他国の料理も、韓国と中国で6割前後を占めたままです。一方、菓子の島はどの本数でも残っていて、取り除きすぎて空間が壊れることは起きていません。</p>
+
+<h3>「効かなかった」は「国籍の情報が入っていなかった」ではない</h3>
+<p>取り除いても結果がほとんど変わらなかったので、国籍の情報がもともと少なかったようにも見えます。実際は逆です。19本取り除いた後でも、近い10件の <span class="num">59%</span> が同じ国籍で（偶然なら <span class="num">10%</span>）、空間から国籍を <span class="num">61%</span> の精度で当てられます（一番多いイタリア料理と答え続けた場合は約 <span class="num">20%</span>）。国籍の情報は大量に残っています。</p>
+<p>国籍の情報は、数本の方向にまとまっているのではなく、100次元全体に混ざって入っていると考えられます。19方向を押しつぶしても、残りの81次元に同じ情報が残ります。文章のあちこちに書かれた「和風らしさ」を、19行消しただけで消そうとしたようなものです。</p>
+<p>この国籍の情報は、後から外から持ち込んだものではありません。学習には国籍ラベルを使っておらず、空間は食材の組み合わせだけから作っています。それでも国籍が入るのは、<strong>食材の組み合わせそのものが文化でできている</strong>からです。</p>
+
+<h3>「みりんのフランス版」はそもそも成り立ちにくい</h3>
+<p>甘い酒は東アジアだけのものではありません。西洋にもマルサラ・マデイラ・ポート・甘口シェリーがあります。違うのは使われ方です。このデータで数えると、次のようになりました。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>酒</th><th>使われるレシピ数</th><th>その国の料理に占める割合</th></tr></thead>
+  <tbody>
+    <tr><td>mirin</td><td class="num">402（和食）</td><td class="num">28%</td></tr>
+    <tr><td>marsala wine</td><td class="num">105（イタリア料理）</td><td class="num">1.3%</td></tr>
+    <tr><td>calvados・madeira・port 類</td><td class="num">約60（フランス料理）</td><td class="num">約2%</td></tr>
+  </tbody>
+</table>
+</div>
+<p>みりんは和食の4品に1品以上で使われる日常の調味料です。西洋の甘口の酒は、チキンマルサラのような決まった料理のソースに使う特別な材料です。空間の中でみりんのベクトルが表しているのは「和食の日常の調味料」という位置で、フランス料理にはその位置にあたる食材がありません。食材の組み合わせのデータの上では、「みりんのフランス版」という問いはそもそも成り立ちにくいと考えられます。Kazama らの答えだったカルヴァドスは、このデータではフランス料理の <span class="num">19</span> 件にしか出てきません。</p>
+
+<h3>追加計算：方向の選び方を変える</h3>
+<p>LDA の方向の選び方に問題があったのかを確かめるため、方向の作り方を2つ追加して比べました。1つは国籍ごとの重心の差から方向を作る方法、もう1つは「国籍を当てる方向を取り除いては、残りでまた当てさせる」を繰り返す方法（INLP）です。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>方法（取り除いた本数）</th><th>近い10件が同じ国籍</th><th>国籍を当てる精度</th><th>食材ベクトルから取れた割合</th></tr></thead>
+  <tbody>
+    <tr><td>取り除く前</td><td class="num">66%</td><td class="num">71%</td><td>—</td></tr>
+    <tr><td>LDA（19本）</td><td class="num">59%</td><td class="num">61%</td><td class="num">22%</td></tr>
+    <tr><td>重心の差（19本）</td><td class="num">44%</td><td class="num">20%</td><td class="num">35%</td></tr>
+    <tr><td>INLP（1本ずつ30本）</td><td class="num">49%</td><td class="num">40%</td><td class="num">38%</td></tr>
+  </tbody>
+</table>
+</div>
+<p class="small">国籍を当てる精度は、一番多いイタリア料理と答え続けると約 <span class="num">20%</span>、近い10件の一致は偶然なら <span class="num">10%</span> です。</p>
+<ul>
+  <li><strong>LDA の方向の選び方が原因だった。</strong>同じ19本でも、重心の差で作った方向を取り除くと、国籍を当てる精度は <span class="num">20%</span> と当てずっぽうと同じになりました。LDA の19本には、国籍どうしの実際の隔たりの <span class="num">54%</span> しか入っていませんでした。</li>
+  <li><strong>それでも近所の関係には国籍が残る。</strong>重心の差で19本取り除いた後も、近い10件の <span class="num">44%</span> が同じ国籍でした（偶然の4倍以上）。直線で区切って当てる手がかりは消えても、「誰の近くにいるか」には国籍が残っています。</li>
+  <li><strong>醤油 ↔ バターの軸は、中身がほぼ地域だった。</strong>重心の差で取り除くと、この軸の上の国籍の並びは崩れ、軸上の位置のばらつきのうち国籍で説明できる割合は <span class="num">68%</span> からほぼ <span class="num">0%</span> になりました。</li>
+  <li><strong>みりんは甘い酒にはならなかった。</strong>どの方法でも、足し引きの上位に甘い酒や甘味料は並びませんでした。重心の差で19本取り除くと、みりんの近所はエスプレッソやチョコレート菓子になりました。このとき、みりんのベクトルの半分以上（<span class="num">53〜60%</span>）が取り除かれています。</li>
+</ul>
+
+<h3>この結果から言えること</h3>
+<p>文化の情報は、方向の選び方しだいで線形にはほぼ取り除けます。ただし取り除くと、みりんのベクトルの半分以上が一緒に消え、残った部分には「甘い調理酒」という役割が見当たりませんでした。空間の中で、みりんの「和食らしさ」と「役割」は同じ方向に乗っていて、文化を消すと役割も消えると考えられます（ここは状況証拠で、言い切れる段階ではありません）。</p>
+<p>だとすると、空間の中から役割を取り出す工夫をこれ以上重ねても、あまり得るものはありません。役割の情報は外から与える必要があります。味覚スコアを付ける Exp-02 と、Jev の分布と比べる Exp-09 がその役を担います。</p>
+<p class="small">コード・数値・全結果はリポジトリの <code>experiments/exp-01b/</code> にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-02"><span class="id">Exp-02</span><h3>味覚スコアと学習空間を比べる</h3></div>
+<div class="gist"><ul><li>味は空間に入っているが弱い。塩はほぼ取れず、酸・辛・苦は比較的取れる</li><li>食材どうしの近さを決めているのは味ではなく国籍</li><li>図の横軸の「甘い ↔ おかず」は、国籍ごとの菓子の割合というデータの偏りだった</li></ul><div class="nums"><span><b>0.18</b>空間から味を予測した R²（ランダムは −0.02）</span><span><b>0.09</b>味の近さと空間の近さの順位相関（国籍は 0.52）</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>Exp-01 に出てくる食材のうち、よく使われるものに甘・塩・酸・苦・旨・辛の6軸スコアを付けます。自分で付けるか、LLM に下書きさせて自分で直すかは実験の中で決めます。そのうえで、スコアの近さと学習空間での近さを比べます。</p>
+<h4>判定の観点</h4>
+<p>両者がどこで一致し、どこでずれるかを具体例で並べます。たとえば「甘い食材同士は空間でも近いか」「味は似ているのに空間では遠い食材は何か」。ずれている箇所こそ、共起が味以外の何か（調理法、地域、用途）を拾っている証拠になります。</p>
+<p>あわせて、空間の中で料理が最も大きくばらつく方向（PCA の第1〜第10成分）と、6つの味覚スコアとの相関を取ります。図2の PCA では、横方向がおかず ↔ 菓子、縦方向が東アジア ↔ イタリアに見えました。横方向が「甘」と強く相関すれば、一番ばらつく向きの一部は味に対応していることになります。上位の方向がほとんど地域としか対応しなければ、「このデータで一番ばらつく向き」と「人間が味を判断しやすい向き」は別物だと分かります。</p>
+<div class="result" id="exp-02-result">
+<h4>結果（2026-09-27 実施）</h4>
+<p>よく使われる303食材に、Claude が甘・塩・酸・苦・旨・辛を 0〜5 で下書きし、本人が全件を確認しました（48件を修正）。このスコアを外から与えて、共起の空間のどこに味が入っているかを調べました。同じ食材の表記違い（にんにく・にんにく（片）など）が学習側と評価側に分かれると結果が良く出すぎるので、表記違いはまとめて分けて評価しています。</p>
+
+<h3>味は空間に入っているが、弱い</h3>
+<p>食材ベクトルから本人の味覚スコアを予測すると、6軸平均の R²（どれだけ説明できるか、1が完全）は <span class="num">0.18</span> でした。ランダムなベクトルでは <span class="num">−0.02</span> なので、味の情報はたしかに入っています。軸別では酸 <span class="num">0.32</span>、辛 <span class="num">0.24</span>、苦 <span class="num">0.22</span> が比較的よく取れ、塩 <span class="num">0.05</span> はほぼ取れません。</p>
+<p>この味の情報は、国籍とは別のものでした。「その食材がどの国の料理に出るか」の割合だけでは味をまったく予測できず（<span class="num">−0.02</span>）、空間に加えても予測は良くなりません。空間から取り出した味の方向も、文化の方向とはほぼ直交していました。</p>
+
+<h3>ただし、食材どうしの近さは味ではなく国籍で決まっている</h3>
+<p>味が似ている食材どうしが空間でも近いかを見ると、順位相関は <span class="num">0.09</span> で、ほぼ無関係でした。国籍の出方が似ている食材どうしでは <span class="num">0.52</span> です。空間に味の情報はあっても、近さを決めているのは国籍です。空間では近いのに味は違う例に、コーントルティーヤとフラワートルティーヤ、魚醤とレモングラス、ごま油と米酢があります。</p>
+
+<h3>図2の横軸は「甘い料理 ↔ おかず」だった</h3>
+<p>料理を PCA で押しつぶしたときの横方向（第1成分）は、料理の味と強く対応していました（甘と <span class="num">+0.54</span>、辛と <span class="num">−0.51</span>）。前に「横方向は甘さに近く見える」と読んだとおりです。一方、食材ベクトルの PCA では、上位6成分がすべて地域と対応していました。</p>
+<p>この料理の第1成分は、Exp-01b で取り除いた「国籍の重心の差」の方向の中に、ほぼ丸ごと（<span class="num">97%</span>）入っていました。国籍の重心の差を5本取り除くだけで、甘・旨の予測は半分以下に落ちます。Exp-01b で文化を取り除いたときにみりんの甘さが消えたのは、このためだと考えられます。</p>
+<p>ただしこれは、料理文化についての発見ではなく、主に<strong>このデータの集め方の偏り</strong>によるものでした。国籍ごとに、菓子らしいレシピ（砂糖・小麦粉・バニラのうち2つ以上を使う）の割合を数えると、大きく違います。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>国籍</th><th>菓子らしいレシピの割合</th></tr></thead>
+  <tbody>
+    <tr><td>ロシア・イギリス・アメリカ南部・アイルランド</td><td class="num">26〜29%</td></tr>
+    <tr><td>フランス</td><td class="num">22%</td></tr>
+    <tr><td>イタリア・スペイン・中国</td><td class="num">6〜7%</td></tr>
+    <tr><td>日本・メキシコ・韓国・インド</td><td class="num">3〜5%</td></tr>
+    <tr><td>タイ</td><td class="num">0.8%</td></tr>
+  </tbody>
+</table>
+</div>
+<p>「ロシア料理は甘い」のではなく、米国のレシピサイトで「ロシア料理」として集まったレシピに菓子が多い、ということだと考えられます。このデータでは国籍ラベルと「菓子の多さ」がほぼ重なっているため、文化を消すと甘さも消えました。</p>
+
+<h3>Epicure との比較</h3>
+<p>Epicure（2026年4月）は、別の埋め込み（FlavorGraph）でほぼ同じ種類の分析をしています。彼らの結果では、甘さと料理文化は別々の方向でした。手法とデータを並べると、違いがどこから来るかが見えます。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th></th><th>このノート（Exp-01〜02）</th><th>Epicure</th></tr></thead>
+  <tbody>
+    <tr><td>埋め込み</td><td>word2vec。What's Cooking の約4万件の共起だけ</td><td>FlavorGraph（300次元）。約100万件のレシピの共起と、香り化合物1,561種から学習</td></tr>
+    <tr><td>食材名の整理</td><td>表記揺れはそのまま。評価のときだけ同じ食材をまとめる</td><td>LLM で 6,653件を 1,032件に統合し、ベクトルは平均</td></tr>
+    <tr><td>味のラベル</td><td>Claude の下書きを本人が全件確認（303食材、0〜5）</td><td>LLM が付けた5段階（1,032食材）。人の確認はなし</td></tr>
+    <tr><td>方向の求め方</td><td>リッジ回帰の係数、上位と下位の食材の平均の差</td><td>ラベルの低い群と高い群の重心の差</td></tr>
+    <tr><td>評価</td><td>同じ食材の表記違いが学習側と評価側に分かれないようにした5分割の交差検証（R²）</td><td>10分割の交差検証（順位相関 ρ、Cohen の d）</td></tr>
+    <tr><td>単位</td><td>食材と料理（食材の平均）</td><td>食材のみ</td></tr>
+    <tr><td>甘さと文化</td><td>料理の「甘い ↔ おかず」の軸が文化の方向に入る（データの偏り）</td><td>おかず側の食材だけで見ると、料理圏は甘さの軸と直交</td></tr>
+  </tbody>
+</table>
+</div>
+<p>違いの一番の理由は、単位とデータの偏りだと考えています。Epicure は食材単位で、しかもおかず側の食材に絞って文化を見ています。このノートは料理単位でも見ていて、国籍ごとの菓子の割合の偏りをそのまま受けています。味の予測の精度は、評価の指標が違う（R² と順位相関）ので直接は比べられません。</p>
+<p>一方、このノートにしかない点もあります。味のラベルを本人が全件確認していることで、その結果、LLM や一般的な値とのずれ（塩・乳製品の旨み、辛さの強さなど）が見えています。FlavorGraph や Epicure の学習済み埋め込みも公開されていますが、学習の元データを手元で作り直せないため、このノートでは分析に使いません。どう学習されたかが分かり、手元で再生成できるものだけを使い、そうでなければ自分で作るという方針です。香りの層も、公開されている食材×香り化合物の表から自分で作ります（Exp-10）。</p>
+<p>Epicure の付属サイト（epicure-data.kaikaku.ai）では、FlavorGraph の埋め込みで近い食材の上位を見られます（味のラベルは載っていません）。みりんに近いのは、ごま・大豆・醤油・米酢・ポン酢・味噌・三つ葉・わかめ・しいたけ・しそで、甘い酒は出てきませんでした。カルヴァドスに近いのは洋梨のリキュール・洋梨のウォッカ・栗・ルビーポートです。香り化合物も使って学習した埋め込みでも、みりんは「和食の文脈」に置かれていて、Exp-01 と同じ傾向です。</p>
+
+<h3>空間はみりんを甘いものとして捉えていない</h3>
+<p>空間から予測したみりんの甘さは約 <span class="num">1.6</span> で、本人のスコアは <span class="num">4</span> です。味の方向を残したまま文化だけを取り除く足し引きも試しましたが、<code>みりん − 日本 + フランス</code> の結果はほとんど変わりませんでした。カルヴァドスの順位は、取り除く前でも <span class="num">42</span> 位です。</p>
+
+<h3>下書き（Claude）と本人の差</h3>
+<p>本人が直した方向は、辛 <span class="num">+13</span>、旨 <span class="num">+11</span>、甘 <span class="num">−5</span>、苦 <span class="num">−4</span>、酸 <span class="num">+4</span>、塩 <span class="num">−2</span>（変えた値の合計）でした。旨と辛は、直した10件すべてで値を上げています。Claude が「誰が付けても±1に収まる」とした食材でも1割強が直され、砂糖・塩・牛乳・サワークリームの旨み、生クリームの甘さなど、本人の感じ方がはっきり出ました。空間から味を予測する精度は、下書きでも本人版でも同じ（<span class="num">0.18</span>）でした。</p>
+
+<h3>ずれの原因は2つある</h3>
+<p>味と空間の近さがずれた原因として、2つ考えています。</p>
+<p>1つは、<strong>6軸が「味」の一部でしかない</strong>ことです（本人の指摘）。甘・塩・酸・苦・旨・辛は舌で感じる感覚だけで、ふだん「味」と呼んでいるものには、香り・食感・温度・後味・油分のコクが重なっています。本人が塩・砂糖・乳製品に旨みを付けたのも、6軸に「コク」や「余韻」の置き場がなく、いちばん近い旨に入れたのだと考えられます。</p>
+<p>もう1つは、<strong>共起の空間はそもそも「似ている」を測っていない</strong>ことです。共起で近いのは一緒に使われる食材で、一緒に使われる食材はむしろ味が違うもの同士であることが多くあります。砂糖とレモン、ごま油と米酢、魚醤とレモングラスは、互いを補い合う関係です。味が似ているのは、醤油とたまり、バターとギーのように<strong>代わりに使える関係</strong>のほうです。6軸を完全な「味」に置き換えても、測っている関係の種類が違えば一致はしません。</p>
+<p>1つ目は Exp-10 で香りを加えてずれが減るかで、2つ目は Exp-10 で「補い合う近さ」と「代わりに使える近さ」を分けて、味・香りの近さがどちらと一致しやすいかで確かめます。</p>
+
+<h3>この結果から言えること</h3>
+<p>共起の空間には、国籍とは別の味の情報が弱く入っています。ただし近さを決めているのは国籍で、味を知りたいなら空間の近さではなく、味の層を別に持つ必要があります。この結果は、観点ごとの層を重ねる組み直し（上の「観点を重ねる」）を裏付けています。</p>
+<p class="small">コード・数値・全結果はリポジトリの <code>experiments/exp-02/</code> にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-03"><span class="id">Exp-03</span><h3>データの量と質を変えて空間の変わり方を見る</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>レシピ数を 4 万、1 万、1,000、100 と減らしながら同じ学習を繰り返し、Exp-01 で見えた構造がどこで崩れるかを見ます。逆方向として、表記揺れや商品名をまとめたデータと、より大きなデータ（RecipeNLG など）でも学習し直し、Exp-01 の雑多さがデータの粗さから来ているのかを確かめます。</p>
+<h4>判定の観点</h4>
+<p>国籍のまとまりの強さと、Exp-01 で決めた軸の並び順がどれだけ保たれるかを比べます。自作の 30〜50 品で意味のある空間が作れるかどうかは、この結果で判断します。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-04"><span class="id">Exp-04</span><h3>自分の評価を空間に載せる</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>自分が食べた料理に 5 段階の評価を付け、空間に重ねます。高評価の料理が集まる領域と、それを最もよく分ける方向を探します。</p>
+<h4>判定の観点</h4>
+<p>見つかった方向を、Exp-01 で引いた軸や味覚スコアで説明できるかを確かめます。「自分は○○の方向に好みが寄っている」と一文で言えれば成功です。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-05"><span class="id">Exp-05</span><h3>同じ料理の別の作り方を別の点にする</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>唐揚げを1点とするのか、家庭の唐揚げ・居酒屋の唐揚げ・動画レシピの唐揚げを別々の点とするのか。後者で空間を作り、同じ名前の料理が固まるか散らばるかを観察します。</p>
+<h4>判定の観点</h4>
+<p>料理ごとの散らばり具合を比べ、散らばる料理とまとまる料理にどんな違いがあるかを見ます。この結果で、以降の実験の点の単位を決めます。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-06"><span class="id">Exp-06</span><h3>空間の穴を探し、入るはずの料理を生成する</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>料理の点が周囲に比べて薄い領域を探します。穴の座標に近い食材と料理を取り出して LLM に渡し、その位置に入る料理のレシピを書かせます。</p>
+<h4>判定の観点</h4>
+<p>生成したレシピを空間に置き直したとき、狙った穴の近くに落ちるかを確かめます。いくつかは実際に作って食べます。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-07"><span class="id">Exp-07</span><h3>動画・口コミ・チェーン店商品を空間に載せる</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>料理動画の字幕や説明文、口コミ、チェーン店の商品説明から、LLM で食材リストと味の言葉を抜き出し、レシピと同じ形に揃えて空間に載せます。</p>
+<h4>判定の観点</h4>
+<p>抜き出した食材リストが元の情報と合っているかを手で確かめます。そのうえで、動画版と家庭版の同じ料理がどれだけ近くに置かれるかを見ます。</p>
+<h4>データの権利</h4>
+<p>What's Cooking、Recipe1M+、RecipeNLG などの公開データは、研究・非商用に限られるものがほとんどです。将来この空間を公開サービスにするなら、自前で集めたデータが必要になります。この実験で作る収集の仕組みは、そのための土台も兼ねます。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-08"><span class="id">Exp-08</span><h3>他人の評価を重ねて空間を育てる</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>学習済みの空間はそのままに、その上に利用者ごとの評価の層を重ねます。数人に評価を付けてもらい、協調フィルタリングで評価の似た人を探します。</p>
+<h4>判定の観点</h4>
+<p>評価が増えるにつれて、空間の見え方や推薦がどう変わるかを記録します。ここは公開の仕方も含めて、Exp-04 の結果を見てから詳細を決めます。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-09"><span class="id">Exp-09</span><h3>空間の答えと Jev の分布を比べる</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>Exp-01 では、足し引きの結果が直感に合うかを自分の目で判定しました。これを分布で測れるようにします。TypeSafe AI の Jev は、選択肢ごとの確率と、答えに迷っていないかを表す Confidence を返すモデルです。「みりんのフランス料理版は？」のような問いを、空間が返した上位の食材と、一般的に考えられる答えを混ぜた選択肢で聞きます。</p>
+<p>Jev の答えも LLM の知識から出てくるので、正解ではありません。ここでは「LLM が持つ料理の常識」という比較相手として扱い、学習データには使いません。選択肢の説明文は食材名だけにして答えを誘導しないようにし、選択肢の順番を変えて2回聞いて安定性も確かめます。</p>
+<h4>判定の観点</h4>
+<ul>
+  <li>空間の1位の答えが、Jev の分布で何%を得るか</li>
+  <li>空間の順位と Jev の確率の並びがどれだけ一致するか</li>
+  <li>Jev が迷わない（Confidence が高い）のに空間が外している問いはどれか。そこが空間側の問題の候補になる</li>
+</ul>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-10"><span class="id">Exp-10</span><h3>香りの層</h3></div>
+<div class="gist"><ul><li>味と香りの近さは弱く一致するが、共起はどちらともほぼ一致しない。層を分けて持つ組み直しを裏付けた</li><li>「代わりに使える近さ」が味・香りと一致しやすい、という仮説は外れた</li><li>中国・日本・韓国は香りを共有する食材を避ける、という Ahn らの結果は再現した（西洋は砂糖の扱いで変わる）</li></ul><div class="nums"><span><b>0.22</b>味 × 香りの近さの順位相関</span><span><b>270/303</b>食材を香りの表に対応づけ（みりんは無い）</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>Ahn ら（2011）の食材×香り化合物の表や FlavorDB を使い、味のスコアがある303食材に香りの情報を対応づけます。共有する香り化合物の多さで「香りの近さ」を作り、共起・味・香りの3つの近さを同じ食材で比べます。</p>
+<h4>判定の観点</h4>
+<ul>
+  <li>3つの観点の近さがどこで一致し、どこでずれるか。共起では遠いが香りでは近い組み合わせ（みりんとカルヴァドスなど）が見つかるか</li>
+  <li>Ahn らの結果（西洋料理は香りを共有する食材を組み合わせ、東アジア料理は避ける）が、このデータでも出るか</li>
+  <li>共起を「補い合う近さ」（同じレシピに一緒に出る）と「代わりに使える近さ」（使われる文脈は似ているが、同じレシピには一緒に出にくい）に分けたとき、味・香りの近さはどちらと一致しやすいか</li>
+</ul>
+<div class="result" id="exp-10-result">
+<h4>結果（2026-09-27 実施）</h4>
+<p>香りのデータには、Ahn ら（2011）の食材×香り化合物の表（1,524食材 × 1,107化合物、Zenodo 版、CC BY 4.0）を使いました。味のスコアがある303食材のうち <span class="num">270</span>（<span class="num">89%</span>）を対応づけられました。対応できなかったのは、塩・水・膨張剤、複合調味料、それに表に項目がない食材です。<strong>みりんは表になく、香りの層では扱えませんでした。</strong></p>
+
+<h3>3つの観点の近さはほとんど一致しない</h3>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>組み合わせ</th><th>近さの順位相関</th></tr></thead>
+  <tbody>
+    <tr><td>味 × 香り</td><td class="num">+0.22</td></tr>
+    <tr><td>共起 × 味</td><td class="num">+0.07</td></tr>
+    <tr><td>共起 × 香り</td><td class="num">+0.04</td></tr>
+  </tbody>
+</table>
+</div>
+<p>味と香りは弱く一致しますが、共起はどちらともほぼ一致しません。観点ごとに別の層として持つ必要がある、という組み直しの前提は裏付けられました。共起では遠いが香りでは近い組み合わせには、ピーナッツと牛ひき肉、チェダーチーズと鶏もも肉、白胡椒とスモークパプリカがあります。</p>
+
+<h3>「代わりに使える近さ」の仮説は外れた</h3>
+<p>共起を「補い合う近さ」（同じレシピに一緒に出る）と「代わりに使える近さ」（使われる文脈は似ているが、一緒には出にくい）に分けました。味・香りの近さは後者と一致しやすい、という仮説を立てていましたが、どちらとの一致もほぼ0で（<span class="num">−0.01〜+0.04</span>）、仮説には合いませんでした。代わりに使える近さの上位は、コーントルティーヤと小麦粉トルティーヤ、砂糖とブラウンシュガー、白ワインと赤ワインで、中身としてはもっともらしいものが並んでいます。</p>
+
+<h3>Ahn らの結果の追試</h3>
+<figure>
+  <button type="button" class="zoomable" data-full="figures/exp-10-delta-ns.png" data-cap="図5. 国籍ごとの香り化合物の共有" aria-label="図5を拡大表示"><span class="plate"><img src="figures/exp-10-delta-ns.png" alt="国籍ごとに、レシピ内の食材が香り化合物をどれだけ共有するかを、ランダムに入れ替えた場合との差で示した棒グラフ" style="display:block"></span><span class="zoom-hint">クリックで拡大</span></button>
+  <figcaption>図5. 国籍ごとに、同じレシピの食材どうしが共有する香り化合物の数を、食材をランダムに入れ替えた場合と比べた差。正なら「香りを共有する食材を組み合わせる」、負なら「避ける」。</figcaption>
+</figure>
+<p>中国・日本・韓国はすべて負で、「東アジア料理は香りを共有する食材を避ける」という Ahn らの結果と同じでした。西洋は8国籍中5つが正です。ただし砂糖を香りの表のどの項目に対応させるかで結果が変わり、精製糖を対応なしにすると西洋の8国籍すべてが正になります。対応できずに計算から除いた食材が、出現数で <span class="num">40%</span> あることにも注意が要ります。</p>
+
+<h3>この結果から言えること</h3>
+<p>香りの層を加えても、味・香り・共起は互いにほとんど一致しません。それぞれが別のことを表していて、1つの空間にまとめるのではなく、層として重ねる組み直しは正しい方向だと考えています。一方で、この香りの表は粗く（共有化合物が0のペアが <span class="num">31%</span>、ライム汁とレモンが「香りで遠い」と出るなど）、みりんのような和食の調味料が入っていません。香りの層は、データを変えて作り直す余地が大きく残っています。</p>
+<p class="small">対応表 <code>data/labels/aroma_mapping.csv</code> はまだ本人の確認を受けていません。コード・数値・全結果はリポジトリの <code>experiments/exp-10/</code> にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-11"><span class="id">Exp-11</span><h3>油分と食感の層</h3></div>
+<div class="gist"><ul><li>油分の客観値（脂質量）を入れた。味とはほとんど重ならない</li><li>食感（硬さ・なめらかさ）は、状態から直接ではなく組織の型と物性値（出典つき）を挟むと当たるようになった</li><li>ただし感じ方の上で一番近い料理はほぼ増えない。外れは甘さ・香ばしさ・温かさの側にある</li></ul><div class="nums"><span><b>1.59→0.69</b>硬さの誤差（1品抜き、平均を返すだけは 1.53）</span><span><b>2→3/13</b>感じ方の距離で料理を当てた数（1品抜き）</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>油分は、脂質量（客観的な値）と、脂っこさ・コク（本人の感じ方）の両方で持ちます。食感は、硬さ・とろみ・みずみずしさ・歯ごたえなどを、味と同じ手順（Claude が下書きし、本人が確認）でスコアにします。項目と尺度は着手時に本人と決めます。</p>
+<h4>判定の観点</h4>
+<p>油分と食感が、共起・味・香りとどれだけ重なり、どれだけ独立しているか。脂質量と本人の感じる脂っこさがどれだけ一致するか。</p>
+<div class="result" id="exp-11-result">
+<h4>結果（2026-09-29）：食感の層の作り直し</h4>
+<p class="small">この節は Claude による作業の記録です。本人の語りではありません。</p>
+<p>Exp-14 で状態から当たらなかった硬さ・なめらかさを、状態の変数から直接ではなく、<strong>状態 → 組織の型と物性値 → 感じ方</strong>の2段で計算し直しました。組織の型は、卵のゲル・ゼラチンのゲル・ホイップ・加熱した肉・野菜の組織・米粒・焼いた生地・液体です。</p>
+<ul>
+  <li><strong>硬さ</strong>：壊すのに要る応力の対数。硬さの感じ方は剛性のべき乗になる（Harper &amp; Stevens 1964）ためです。値は出典から取りました。全卵を固めたゲル 37.1 kPa、60% に薄めると 16.6 kPa（ここから、薄めたときの弱まり方の指数 1.57 を出した）、卵白 56.6 kPa、ゼラチン 2.5% で 1.5 kPa と濃度の2乗、ホイップは弾性率 5 kPa でも 0.1% の変形で崩れる、加熱した鶏むね肉 119〜150 kPa、生の根菜 1.8 MPa・ゆでて 0.1 MPa、など。卵は、65〜80℃ で固まるのは卵黄と卵白のうちオボトランスフェリン（12%）だけで、オボアルブミン（54%）は 84℃ まで固まらない、として段階ごとの硬さを決めています。</li>
+  <li><strong>なめらかさ</strong>：口の中で感じる粒の大きさと硬さ。やわらかく丸い粒は 80µm まで、硬く角ばった粒は 11〜22µm でざらつきとして感じる（Tyle 1993）。舌で押しつぶせる硬さ（介護食の区分で 2×10⁴ N/m²）を超えると歯で砕くことになり、破片が残る、としました。</li>
+</ul>
+<p>出典の無い値（炊いた米粒の硬さ、パンケーキの密度、カード・細胞・線維の大きさなど）は「仮」と明記し、1つずつ半分・2倍にして結果がどれだけ動くかを確かめています。仮説と値は、計算の前に記録しました。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>13品（本人の採点が正解）</th><th>Exp-14</th><th>作り直し（変換なし）</th><th>作り直し（1品抜き）</th><th>平均を返すだけ</th></tr></thead>
+  <tbody>
+    <tr><td>硬さの誤差</td><td class="num">1.59</td><td class="num">0.69</td><td class="num">0.92</td><td class="num">1.53</td></tr>
+    <tr><td>なめらかさの誤差</td><td class="num">2.19</td><td class="num">1.36</td><td class="num">1.33</td><td class="num">1.97</td></tr>
+    <tr><td>感じ方の距離で一番近い料理（1品抜き）</td><td class="num">2/13</td><td class="num">3/13</td><td class="num">2/13</td><td>—</td></tr>
+  </tbody>
+</table>
+</div>
+<p>物性から計算した値そのもの（採点で何も合わせていない）と本人の採点の順位相関は、硬さ <span class="num">0.84</span>、なめらかさ <span class="num">0.78</span> でした。仮の値を半分・2倍にしても、誤差はどれも平均を返すだけより小さいままです。</p>
+<p>一方、感じ方の上で一番近い料理はほとんど増えませんでした。硬さ・なめらかさを本人の採点そのものに置き換えても、他の4項目（とろみ・甘さ・香ばしさ・温かさ）が1品抜きのままでは 13品中 6品です。残りの外れは、ご飯の甘さ、鶏肉とカラメルの香ばしさ、茶碗蒸しの温かさと、卵料理どうしが感じ方の上で近いことから来ています。食感の層で外れたのは、オムレツ（外側の膜がなめらかと出る）、パンケーキ（表面の焼き固まりを入れていない）、鶏むね肉のなめらかさ（線維の大きさだけでは粗さが小さい）、ホワイトソースです。</p>
+<p class="small">物性値の測り方（圧縮・ねじり・介護食の基準）は揃っておらず、桁の近似です。本人の採点は Exp-14 の表で見た後に組み立てを決めました。計算・物性値の表・出典はリポジトリの <code>experiments/exp-11/</code>（<code>texture_rules.yaml</code>・<code>results/texture_output.md</code>）にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-12"><span class="id">Exp-12</span><h3>温度と調理法の層</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>温度（温かい・常温・冷たい）と調理法（焼く・煮る・揚げる・蒸す・生・発酵など）は料理の性質なので、料理名と手順のあるデータ（RecipeNLG など）に移って扱います。手順の文章から LLM で下書きし、抜き取りで本人が確認します。同じ料理の別の作り方を別の点にする Exp-05 と合わせて設計します。</p>
+<h4>判定の観点</h4>
+<p>料理単位の層を加えると、食材だけから作った空間の見え方がどう変わるか。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-13"><span class="id">Exp-13</span><h3>時間の層</h3></div>
+<div class="gist"><p class="status">未実施（計画のみ）</p></div>
+<details class="more"><summary>計画の内容</summary>
+<h4>やること</h4>
+<p>食材ごとに、立ち上がりの早さ、余韻の長さ、最初に来る感覚、最後に残る感覚を、味と同じ手順（Claude が下書きし、本人が確認）でスコアにします。項目は着手時に本人と決めます。料理単位では「食べ始め・中盤・後味」の主役を記録する形に広げます。</p>
+<h4>判定の観点</h4>
+<p>時間の性格（すぐ来て消える／遅れて来て残る）が、共起・味・香りとどれだけ独立しているか。本人が塩・砂糖・乳製品に付けた「旨み」が、余韻と対応しているか。</p>
+<div class="pending"><b>結果：未実施。</b></div>
+</details>
+
+<div class="exp-head" id="exp-14"><span class="id">Exp-14</span><h3>調理の計算</h3></div>
+<div class="gist"><ul><li>食材と操作の並びから状態を計算し、料理を答える流れが最小の形で一本つながった</li><li>操作や順番を変えると別の料理か「該当なし」になる（撹拌してフライパンならスクランブルエッグ、蒸せばプリン）</li><li>感じ方の層は甘さ・温かさは当たるが、感じ方だけで料理を当てるのはまだ弱い</li></ul><div class="nums"><span><b>12/13</b>状態の条件で正解のレシピを当てた品</span><span><b>6/7</b>順番・操作を変えて別の料理か該当なしになった組</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<h4>やること</h4>
+<p>調理を「食材の状態を変える操作」として扱います。状態は、観点ごとの層の値（温度・食感・味・香り・油分・時間）です。加熱すれば卵は固まり、玉ねぎは甘くなる、というように、各操作が層の値をどう動かすかを書き、食材と操作の並びから計算した状態に一番近い料理を答えにします。</p>
+<p>状態は2段に分けます（本人の指摘による見直し）。1段目は<strong>物理・化学の状態</strong>で、到達温度・水分・タンパク質が固まったか・デンプンが糊化したか・糖が変化したか・乳化しているか、などです。操作によるこれらの変化は、食品科学で数値まで分かっています。たとえば卵白は約62〜65℃で固まり始め、卵黄は約70℃で固まり、牛乳で薄めると固まる温度が上がります。規則はこうした知見から決め、1つずつ出典を記録します。2段目は<strong>知覚の層</strong>（硬さ・とろみ・甘さ・香ばしさ）で、1段目の状態から計算します。本人の感覚が入るのは、この「状態をどう感じるか」の部分だけです。</p>
+<p>最初は約20食材と約10操作（混ぜる・撹拌・加熱・焼く・蒸す・煮る・揚げる・冷やす・発酵など）に絞ります。スクランブルエッグ・プリン・茶碗蒸し・ホワイトソース・カラメルなど約10品で試し、その後、手順の文章があるデータから操作の効果を学ぶ段階に進みます。</p>
+<p>近い先行研究に、レシピの動作を食材の状態を変える操作として学習する Neural Process Networks（Bosselut ら 2018）と、レシピを「食材→操作→中間物」の流れの図にしたレシピフローグラフ（森ら 2014）があります。</p>
+<h4>判定の観点（「一本の筋を通した」とする条件）</h4>
+<ul>
+  <li>目標の約10品のうち、大半を正しく計算できる</li>
+  <li>同じ材料で操作や順番を変えると、別の料理になる（撹拌して加熱ならスクランブルエッグ、撹拌して蒸すならプリン）</li>
+  <li>状態の計算 → 知覚の層への変換 → 層の上で一番近い料理、までを1回つなげ、触って試せるページを作る</li>
+</ul>
+<p>ここまでできれば、食材の性質（層）・調理（操作）・料理（答え）がつながった最小の形になります。最初の4つの願い（好みを言葉にする、まだ知らない料理に出会う、みんなで育てる、情報の海を泳ぐ）は、この上に載せていきます。</p>
+<div class="result" id="exp-14-result">
+<h4>結果（2026-09-27）</h4>
+<p>食品科学の規則表を作りました。食材23、操作12、状態の変数40、規則75（確かさ 高31・中35・低9）、目標の料理13品です。規則には1つずつ出典を付けています。ただし75件中37件は、出典の本文を開けず、検索結果の抜粋だけで確かめたものです。出典どうしで値が食い違うもの（卵白が固まり始める温度が55〜63℃、カラメル化が160℃か170℃か、など）は、採用した値と代わりの値を両方記録しています。</p>
+<p>この規則で計算の仕組みを作り、料理を「状態の条件の組み合わせ」として定義して、満たした条件の割合で答えを選ぶようにしました。</p>
+<ul>
+  <li><strong>13品すべてが、正解のレシピで1位になりました。</strong>ただしスクランブルエッグ・オムレツ・カラメルの加熱時間は、計算が1位を返す時間の範囲を探してから決めたもので、先に書いたレシピで当てたわけではありません。オムレツは加熱を1割長くするとスクランブルエッグになります。</li>
+  <li><strong>順番や操作を変えると、別の料理になりました（7組中5組）。</strong>卵と牛乳を撹拌してフライパンで混ぜながら焼けばスクランブルエッグ、砂糖を加えて蒸せばプリン。殻付き卵は68℃の湯なら温泉卵、100℃ならゆで卵。溶き卵は加熱中に混ぜればスクランブルエッグ、混ぜなければオムレツ。プリン液は88℃で蒸せばプリン、100℃で蒸すと「す」が立ってプリンではなくなります。</li>
+  <li><strong>うまくいかなかったところ。</strong>プリン液を90℃で蒸すと、答えがゆで卵になりました。牛乳や砂糖で薄めた卵が何℃で固まるかの数値が見つからず、薄めた卵にも卵白・卵黄そのものの規則を当てているためです。結果に一番効いているのがこの部分です。</li>
+</ul>
+<h3>見直し：状態で止める・「該当なし」を返す</h3>
+<p>時間の合わせ込みをなくすため、「〜になるまで加熱する」操作を加え、状態で止めるのが自然な8品のレシピを書き直しました。止める条件は結果を見る前に決めて記録しています。あわせて、条件を満たした割合が <span class="num">0.6</span> 未満なら「該当なし」と答えるようにし、殻付きをゆで卵・温泉卵の必須条件にしました。</p>
+<ul>
+  <li>状態で止める版では、13品中 <span class="num">12</span> 品が1位になりました。スクランブルエッグ・オムレツ・カラメルは、時間を探さなくても前回と同じところで止まりました。外れたのは炒め玉ねぎで、フライパンの表面が乾くまでの時間を推定で置いているため、きつね色になるのが早すぎて「該当なし」になりました。</li>
+  <li>順番や操作を変えたテストは、7組中6組で別の料理か「該当なし」になりました（室温で泡立てた生クリームが「該当なし」に変わった）。</li>
+  <li>100℃で蒸したプリン液は、的外れな「ゆで卵」は出なくなりましたが、「す」が立っていても条件の3分の2を満たすためプリンと答えます。「失敗したプリン」をどう扱うかは料理の定義の問題として残っています。</li>
+</ul>
+<h3>感じ方の層への変換</h3>
+<p>本人が13品に、硬さ・とろみ・なめらかさ・甘さ・香ばしさ・温かさを 0〜5 で付けました。計算した完成時の状態とこの採点を対応させ、項目ごとに状態の変数を1〜2個だけ使う単純な変換を作りました。変数は採点と突き合わせる前に決めています。1品ずつ抜いて当てる方法で確かめると、次のとおりでした。</p>
+<div class="tablewrap">
+<table>
+  <thead><tr><th>項目</th><th>使った状態</th><th>誤差（1品抜き）</th><th>平均を返すだけの誤差</th></tr></thead>
+  <tbody>
+    <tr><td>甘さ</td><td>糖の濃さ</td><td class="num">0.74</td><td class="num">1.92</td></tr>
+    <tr><td>温かさ</td><td>食べるときの温度</td><td class="num">0.77</td><td class="num">1.24</td></tr>
+    <tr><td>とろみ</td><td>糖の濃さ・デンプンの糊化</td><td class="num">1.07</td><td class="num">1.29</td></tr>
+    <tr><td>香ばしさ</td><td>メイラード・カラメル化</td><td class="num">1.26</td><td class="num">1.91</td></tr>
+    <tr><td>硬さ</td><td>水分・肉の水分流出</td><td class="num">1.59</td><td class="num">1.53</td></tr>
+    <tr><td>なめらかさ</td><td>ゲルの形</td><td class="num">2.19</td><td class="num">1.97</td></tr>
+  </tbody>
+</table>
+</div>
+<p>甘さと温かさは状態からよく当たりました。硬さとなめらかさは、平均を返すだけより悪い結果です。なめらかさに使える状態は卵の料理にしか値がなく、ご飯を噛んで出る甘さや、茶碗蒸しを熱いと感じることのように、今の状態の変数では決まらない感じ方もありました。肉や糖液は1品ずつしかなく、1品抜くと変換が決まりません。</p>
+<p>感じ方の層の上で一番近い料理を答えさせると、正解は13品中6品でした（状態の条件による判定は12品）。答えがスクランブルエッグに集まり、温泉卵とゆで卵、88℃のプリンと100℃で「す」が立ったプリンは、感じ方では区別できませんでした。</p>
+
+<h3>触って試せるページ</h3>
+<p>材料を選び、操作を順に積むと、各操作の後の状態、感じ方、答えが出るページを作りました。計算はすべてページの中で行います。元の Python の計算と同じ答えを出すことを、42通りの入力で確かめています。</p>
+<p><a href="https://claude.ai/artifact/M372eLF8KiVaKFg1D3Cm73">調理の計算（試せるページ）</a></p>
+
+<h3>ここまでで言えること</h3>
+<p>「食材と操作を入れると、状態を計算し、感じ方に変え、料理を答える」という流れは、最小の形で1本つながりました。状態の条件による判定は13品中12品を当て、操作や順番を変えると別の料理になります。一方、感じ方の層はまだ弱く、状態から当たるのは甘さ・温かさ・香ばしさ・とろみまでです。食感（硬さ・なめらかさ）を当てるには、状態の変数（組織の構造、噛んだときの壊れ方）と、料理の数の両方が足りません。</p>
+<p class="small">規則表・計算の仕組み・テスト・結果はリポジトリの <code>experiments/exp-14/</code> にあります。</p>
+</div>
+</details>
+
+<div class="exp-head" id="exp-17"><span class="id">Exp-17</span><h3>殻付き卵を熱伝導と変性の速さで解く</h3></div>
+<div class="gist"><ul><li>殻付き卵を黄身と白身の2層の球として熱伝導で解き、たんぱく質の変性を場所ごとに反応の速さで積分するようにした</li><li>白身がどこから固まるかを人が決めなくても出る。温泉卵の実測と合わせ込みなしで一致した</li><li>正解のレシピの答えは変わらない。半熟の判定は「固まった」とみなす境目（仮）に左右される</li></ul><div class="nums"><span><b>28.4分</b>68℃の湯で中心が湯温近くになるまで（実測 約28分）</span><span><b>0/46</b>正解のレシピ・組で答えが変わった数</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<p class="small">この節は Claude による作業の記録です。</p>
+<h4>やること</h4>
+<p>殻付き卵の白身の固まり方を「白身の層の平均温度で決める」「殻の表面の温度で決める」と人が選ぶのをやめ、物理から出るようにします（本人 2026-09-30「これは決めるものじゃない。自然に従うように、できるだけ頑張って近づけて」）。卵を黄身（中心の球）と白身（外側の層）の2層の球とし、湯の温度と時間から中の温度の分布を熱伝導で解きます。白身・黄身のたんぱく質は、温度が高いほど速く進む一次反応（アレニウス型）で場所ごとに変性させ、その分布から固まり具合を出します。熱物性と反応の速さは Di Lorenzo ら（2025）の表の値をそのまま使い、卵の大きさは中身の質量から決めました。実測に合わせる操作はしていません。変性度から「固まった」とみなす境目（9割変性）は出典が無いので仮です。</p>
+<h4>結果（2026-09-30）</h4>
+<ul>
+  <li>温泉卵の論文の実測（20℃の卵を 68℃の湯に入れて、中心が湯温近くになるまで約28分）と、合わせ込みなしで <span class="num">28.4</span> 分で一致しました。</li>
+  <li>正解のレシピと順番を変えた組の答えは、46通りすべて変わりませんでした。</li>
+  <li>沸騰した湯では白身が外側から固まっていき（1分で 22%、3分で 59%、6分で全体）、どこから固まるかを人が決めなくても出ます。すぐ氷水に取る場合、半熟ゆで卵になるのは 6〜6.5分、固ゆでは 11分からでした。68℃の湯では、白身は60分でも固まりきらず、黄身は30分でほぼ全体が固まります。</li>
+  <li>殻付き卵の地図は 630マス中 63〜65マスが変わりました。世の中のレシピとの一致は <span class="num">22/28 → 21/28</span>（沸騰7分で氷水に取る半熟ゆで卵が該当なしになった）。境目を 9割変性から 99% にすると 22/28 に戻り、境目の決め方（仮）が半熟の判定を左右します。</li>
+  <li>Di Lorenzo らの本文の「100℃ 12分で卵全体が 100℃」は再現できませんでした（同じ表の値では中心 61℃）。本文の熱拡散率 O(10⁻⁵) m²/s は表の値から出る約 1.3×10⁻⁷ m²/s と 100倍ずれています。</li>
+</ul>
+<h4>既定を新しい計算に切り替えた（2026-09-30 本人決定）</h4>
+<p>殻付き卵の計算の既定を、この新しい計算（熱伝導＋変性の速さ）に切り替えました。試せるページ（JavaScript 版）も同じ計算に移してあります。前の形（一様な球＋温度のしきい値）は比べるために残し、前の形そのものを確かめるテストはその形に固定して走らせています。</p>
+<p>切り替えで変わった答えは次のとおりです。</p>
+<ul>
+  <li>世の中のレシピとの一致: <span class="num">22/28 → 21/28</span>。変わったのは半熟ゆで卵の R006（沸騰7分→氷水）の1件だけです。R002（沸騰5分、後の手順を書いていない）は前から該当なしで、参考に出している「すぐ氷水に取った場合」の答えが半熟ゆで卵から該当なしに変わりました（一致の数には入りません）。</li>
+  <li>正解のレシピの時間を一律に変えた表（Exp-14）: 半熟ゆで卵は 1.1倍・1.2倍（沸騰 7.15分・7.8分）で該当なしになりました。1.0倍（6.5分）では半熟ゆで卵のままです。</li>
+</ul>
+<p>外れる原因は、変性度から段階に変える決め方（結果を見る前に決めた仮の値）にあります。</p>
+<ul>
+  <li><strong>長い側（7分前後）</strong>：黄身の体積のうち 9割以上変性した部分が半分を超えると「黄身が固まる（卵黄 2）」としています。沸騰7分では湯から出した時点で 37%、氷水に取った後の余熱で <span class="num">56%</span> になり卵黄 2 になります。半熟ゆで卵の条件は卵黄 0〜1 なので外れます。境目は沸騰 6.8分（氷水の後 51%）です。氷水に取る処理は外れの原因ではなく、余熱そのものは前の形でも同じように出ます（中心の最高温度は前の形 65.7℃・新しい計算 64.5℃）。</li>
+  <li><strong>短い側（5分以下）</strong>：白身の体積のうち 9割以上変性した部分が 9割に届かないと白身が「しっかり固まる（卵白 3）」になりません。沸騰5分→氷水では <span class="num">88%</span> で卵白 2 になり、半熟ゆで卵の条件（卵白 3）から外れます。</li>
+  <li>半熟ゆで卵の定義の出典（Wikipedia "Boiled egg" の「黄身が一部液体」）からは、黄身が半分固まっていても半熟と読めます。ただ、段階の境目（9割変性・半分）には出典が無く（<code>experiments/exp-17-egg-kinetics/threshold_sources.md</code>）、結果を見てから境目や半熟ゆで卵の条件を動かすと合わせ込みになるので、直していません。</li>
+</ul>
+<p>出典のある変性度と固まり方の対応が見つかったら、境目をそれに置き換えます。</p>
+<p class="small">コード・結果はリポジトリの <code>experiments/exp-17-egg-kinetics/</code> と <code>experiments/exp-14/sim/egg_kinetic.py</code> にあります。出典: Di Lorenzo et al. (2025) Periodic cooking of eggs. Communications Engineering 4:5（熱物性の元は Abbasnezhad et al. 2016）。</p>
+</details>
+
+<div class="exp-head" id="exp-18"><span class="id">Exp-18</span><h3>感じ方の評価に使う料理を増やす</h3></div>
+<div class="gist"><ul><li>感じ方から料理を当てる外れを減らすため、焼いた肉・香ばしくて甘くない料理・でんぷん質の料理を1品ずつ足す</li><li>候補はビーフステーキ・フライドポテト・ゆでじゃがいも。卵料理は足さない</li><li>3品の料理の条件を出典つきで足した。フライドポテト・ゆでじゃがいもは判定が当たり、ステーキは肉を厚み方向の熱伝導で解いたときだけ当たる</li><li>感じ方から料理を当てるのは 1品抜きで 3/13 → 6/16。焼いた肉2品は互いではなくフライドポテトに近くなった</li></ul><div class="nums"><span><b>6/16</b>感じ方の距離で当たった数（1品抜き、変換なし）</span><span><b>13→16</b>品</span></div></div>
+<details class="more"><summary>手順・表・細部</summary>
+<p class="small">この節は Claude による作業の記録です。</p>
+<p>Exp-11 で、感じ方から料理を当てる外れの原因が、1品抜くと変換が決まらない項目（焼いた肉が1品だけ、香ばしくて甘くない料理が1品だけ）と、卵料理どうしが近すぎることだと分かりました。今の計算で作れる範囲から、ビーフステーキ（ミディアム）・フライドポテト・ゆでじゃがいも（粉ふきいも）の3品を足す候補にしました。卵料理は足していません。本人の採点用のファイル（<code>data/labels/dish_perception_v2_input.csv</code>）を用意し、採点を待っています。</p>
+<p>分かっている問題として、肉の温まり方が粗く、ステーキの中心が 100℃ まで上がってしまうこと、揚げ物の吸油の規則が無いことがあります。採点の後、料理の状態の条件を出典つきで足して評価します。</p>
+<h4>採点の後（2026-10-22）</h4>
+<p>本人の採点がそろったので、3品の「料理として成り立つ条件」を出典つきで足し、Exp-11 と同じ評価を16品で回しました。条件とレシピは計算する前に決めています。</p>
+<ul>
+  <li><strong>条件</strong>：ステーキのミディアムの中心温度は出典ごとにばらつく（約55℃／57〜63℃／60〜65℃／65〜70℃）ので、どれか1つに決めず 55〜70℃ の幅で持ちました。フライドポテトとゆでじゃがいもは Wikibooks の手順（揚げる前に15分下ゆでする／フォークがすっと刺さるまで煮て水気を飛ばす）と成分表の水分・脂質から決めました。</li>
+  <li><strong>判定</strong>：フライドポテトとゆでじゃがいもは正しく判定されました。ステーキは、今の計算（肉の温度を一次遅れで近づける）では中心が 100℃ まで上がって当たりません。肉を厚み方向の熱伝導で解く計算では、「焼き色がつくまで焼き、返して中心 55℃まで、4分休ませる」で中心の最高 62.7℃ になり当たりました。東京ガスの実測の手順（90秒ごとに返して 6.75分）では中心が 71.5℃ まで上がり外れました。計算が実測より速く温まる傾向は、前から分かっていたものです。</li>
+  <li><strong>感じ方から料理を当てる</strong>（1品抜き）：変換なしで <span class="num">3/13 → 6/16</span>（肉を熱伝導で解く計算では 5/16）。当たったのは元の13品のうち 5品と、追加のフライドポテトです。ステーキと鶏むね肉のソテーは、互いではなくフライドポテトに一番近くなりました。肉の硬さ（計算 3.0〜3.5、本人 5）となめらかさ（計算 2.2〜3.7、本人 0）が肉らしく出ていないためです。</li>
+  <li><strong>硬さ・なめらかさの誤差</strong>（1品抜き）：硬さ <span class="num">0.75</span>（残りの平均で当てると 1.60）、なめらかさ <span class="num">1.66</span>（同 2.07）。16品でも平均で当てるより良いままですが、なめらかさは13品のとき（1.36）より悪くなりました。</li>
+</ul>
+<p>肉の計算と揚げ物の吸油は、新しい形を既定にしていません。既存の答えは変わりませんでしたが、試せるページがまだ今の形しか持っていないためです。切り替えるかは本人と決めます。</p>
+<p class="small">候補の選び方・条件・結果はリポジトリの <code>experiments/exp-18-more-dishes/plan.md</code> と <code>results/eval_output.md</code> にあります。出典: Wikibooks Cookbook:French Fries・Cookbook:Boiled Potatoes（CC BY-SA）、文部科学省 日本食品標準成分表2020年版（八訂）、ほか plan.md の一覧。</p>
+</details>
+
+<h2 id="refs">参考文献</h2>
+<ul class="refs">
+  <li>Ahn, Y.-Y. et al. (2011). Flavor network and the principles of food pairing. <a href="https://www.nature.com/articles/srep00196">Scientific Reports</a></li>
+  <li>Kazama, M. et al. (2017). A neural network system for transformation of regional cuisine style. <a href="https://arxiv.org/pdf/1705.03487">arXiv:1705.03487</a></li>
+  <li>Park, D. et al. (2021). FlavorGraph: a large-scale food-chemical graph for generating food representations and recommending food pairings. <a href="https://www.nature.com/articles/s41598-020-79422-8">Scientific Reports</a></li>
+  <li>Tian, Y. et al. (2022). Recipe2Vec: Multi-modal Recipe Representation Learning with Graph Neural Networks. <a href="https://arxiv.org/abs/2205.12396">arXiv:2205.12396</a></li>
+  <li>Marin, J., Salvador, A. et al. (2019). Recipe1M+: A Dataset for Learning Cross-Modal Embeddings for Cooking Recipes and Food Images. <a href="https://arxiv.org/abs/1810.06553">arXiv:1810.06553</a></li>
+  <li>Radzikowski, J. &amp; Chen, J. (2026). Epicure: Multidimensional Flavor Structure in Food Ingredient Embeddings. <a href="https://arxiv.org/abs/2604.22776">arXiv:2604.22776</a></li>
+  <li>Radzikowski, J. &amp; Chen, J. (2026). Epicure: Navigating the Emergent Geometry of Food Ingredient Embeddings. <a href="https://arxiv.org/abs/2605.22391">arXiv:2605.22391</a></li>
+  <li>Bosselut, A. et al. (2018). Simulating Action Dynamics with Neural Process Networks. ICLR 2018.</li>
+  <li>森 信介ほか (2014). レシピフローグラフコーパス（Flow Graph Corpus from Recipe Texts）. LREC 2014.</li>
+  <li>Flavor Web（3D 銀河ビューの参考実装）. <a href="https://github.com/dineshkadavakuduru-cmd/flavor-web">GitHub</a></li>
+</ul>
+
+<h2 id="history">更新履歴</h2>
+<p class="small">版ごとに書き足した記録です（Claude の記録）。</p>
+<h3>2026-09-27</h3>
+<p>公開。Exp-01・01b・02・10・14 の結果と観点の組み直しを追記。</p>
+<h3>2026-09-28 までに進んだこと</h3>
+<p>目的を「料理の通説を計算で確かめ、根拠ごと見せて、それなら間違いないねと言ってもらうこと」と定めました（構想メモ §13）。そのために次の3つを作りました。</p>
+<ul>
+  <li><strong>地図</strong>：2つの値（湯の温度と時間など）を軸に、マスごとに何ができるかを色で塗る状態図を、試せるページに加えました。ポーチドエッグを14品目に加え、料理ごとの「必須条件」を決めて、だし抜きの茶碗蒸しがスクランブルエッグと答える誤りをなくしました。おかしな領域（沸騰7分で温泉卵、蒸したプリン液がオムレツ など）は直さずに記録しています。</li>
+  <li><strong>世の中のレシピとの照合</strong>：Wikibooks Cookbook と自治体のオープンデータだけからレシピ56件を集め、地図に重ねられる28件を点として重ねました。計算と一致したのは <span class="num">16/28</span>（固ゆで卵 6/7、ポーチドエッグ 6/6、プリン 4/4、半熟ゆで卵 0/5、スクランブルエッグ 0/6）です。その後、殻付き卵の白身を中心ではなく白身の層の温度で判定するよう直し、半熟ゆで卵を15品目に加えました（温泉卵は低温で全体がほぼ均一、半熟ゆで卵は高温・短時間で外だけ熱い、という違いを表すため）。一致は <span class="num">21/28</span> になりました。ただし半熟ゆで卵の5件は、定義に使った時間と同じレシピから来ているので割り引いて見る必要があります。スクランブルエッグは、地図の元のレシピが混ぜないオムレツなので 0/6 のままです。湯の温度が数値で書かれていたのは1件だけで、ほかは「沸騰」などからの推定です。</li>
+  <li><strong>通説の検証ページ</strong>：「ポーチドエッグは湯に酢を入れるとまとまる」を、計算・出典・確かさで1枚にまとめました。「酢で白身が早く固まる」は確かさ中、「だから形がまとまる」は確かさ低です。実際に酢あり・なしで作って比べる記録表を空けてあります。</li>
+</ul>
+<p><a href="https://claude.ai/artifact/M372eLF8KiVaKFg1D3Cm73">調理の計算（地図つき）</a> ／ <a href="https://claude.ai/artifact/8xsnsXfC8SzPgRXeoJRBhX">酢とポーチドエッグ</a></p>
+
+<h3>2026-09-28 夜に進んだこと</h3>
+<ul>
+  <li><strong>卵の温まり方を式で解くようにした</strong>：殻付き卵を一様な球とみなし、球の熱伝導の解で中心と白身の層の温度を計算するようにしました。卵の大きさと熱の伝わりやすさ（R²/α）は、温泉卵の論文の実測（68℃の湯で中心が湯温近くになるまで28分）の1点に合わせています。あわせて温泉卵には「中心 65〜70℃」、半熟ゆで卵には「沸騰した湯」を必須条件にし、72.5〜80℃に長く置くと温泉卵になる、といったおかしな領域を消しました。溶き卵を混ぜながら焼く地図も加えています。</li>
+  <li><strong>余熱を入れた</strong>：火から下ろした後も中心の温度が上がり続ける効果です。湯から出した後も球の計算を続け、周りが水（氷水・冷水）なら表面は水の温度、空気なら熱が逃げにくい（ビオ数 0.5、推定）として解きます。判定は、後の手順（置く・水に取る 15分）が終わった時点で行います。レシピが後の手順を書いていないときは「室温に置く」とみなしました。これは結果を見る前に決めています。
+    <ul>
+      <li>沸騰12分の固ゆで卵は、定義を変えずに固ゆでと判定されるようになりました（中心の最高 88.4℃）。余熱を入れる前は、中心が 77.5℃ で止まって「該当なし」でした。</li>
+      <li>全16品の正解のレシピは、状態で止める版で <span class="num">15/16</span>、時間の版で <span class="num">16/16</span> でした。外れたのは、状態で止める版の炒め玉ねぎです。</li>
+      <li>世の中のレシピとの一致は <span class="num">22/28</span> になりました（固ゆで 1/7→6/7）。代わりに、半熟ゆで卵が 5/5→2/5 に下がりました。後の手順を書いていない3件を「置く」とみなしたため、余熱で黄身が固まってしまいます。すぐ氷水に取れば半熟です。</li>
+      <li>新しくおかしな領域が出ました（80〜85℃・7〜13分が温泉卵と判定される）。余熱を扱えるのは殻付き卵だけです。</li>
+    </ul>
+  </li>
+  <li><strong>通説ページを型にした</strong>：通説1本を「データ＋共通テンプレート」で作れるようにし（<code>experiments/myths/</code>）、次の通説の候補を12件並べました。上位は、玉ねぎは炒めると甘くなる・焼き目で肉汁を閉じ込める・肉を常温に戻す、です。肉は温まり方がまだ粗いので、卵と同じ直しを肉にしてから扱うほうが確かです。</li>
+  <li><strong>通説の2本目「卵は常温に戻してからゆでる」</strong>：冷蔵（5℃）と常温（20℃）で地図を2枚描き、同じ仕上がりまでの時間を比べました。ゆでた後すぐ氷水に取る場合、沸騰した湯で固ゆでになるのは常温 10.7分・冷蔵 11.8分で、冷蔵のほうが約1分遅れます。白身の差は小さく、差はほぼ黄身に出ます。遅れる向きは確かさ中〜高、何分かは確かさ中です。殻が割れるかどうかは計算で扱えず、割れた数を数えた出典も見つかりませんでした（確かさ低）。卵の温度を書いていたレシピは20件中2件です。</li>
+  <li><strong>油分の層の客観値</strong>：303食材の脂質量（g/100g）を USDA FoodData Central（SR Legacy、CC0）から入れました。値が入ったのは291件（96%）です。味覚スコアとの順位相関は |ρ| ≤ 0.20 で、脂質量は味とほとんど重なりません。どの食材にどの品目を当てたかは Claude が決めたもので、まだ確認していません。</li>
+</ul>
+<p><a href="https://claude.ai/artifact/M372eLF8KiVaKFg1D3Cm73">調理の計算（余熱つき）</a> ／ <a href="https://claude.ai/artifact/D4hhoXES3n5EKL5Qg4k8sP">常温に戻す卵</a> ／ <a href="https://claude.ai/artifact/8xsnsXfC8SzPgRXeoJRBhX">酢とポーチドエッグ</a></p>
+
+<h3>2026-09-29 に進んだこと</h3>
+<p class="small">この節は Claude による作業の記録です。</p>
+<ul>
+  <li><strong>本人判断 2026-09-29</strong>：9/28 から保留だった2件を決めました。① 半熟ゆで卵を料理として足す ② 殻付き卵の白身の固まり方は外側の温度で決める。どちらも 9/28 の見直し（白身は白身の層の温度で決める・半熟ゆで卵を15品目に）で入っていた形のままで、計算の仕組みは変えていません。殻の表面の温度（＝湯温）そのもので決めた場合も計算し、正解のレシピと順番を変えた組の答えは変わらず、地図では沸騰した湯に1分で半熟ゆで卵になるなど 630マス中 58マスが変わることを記録しました。</li>
+  <li><strong>食感の層の作り直し（Exp-11）</strong>：<a href="#exp-11-result">Exp-11 の結果</a>に書きました。</li>
+</ul>
+
+<h3>2026-09-30</h3>
+<ul>
+  <li>本人判断: 殻付き卵の白身の固まり方は人が決めるものではなく、物理から出す（→ <a href="#exp-17">Exp-17</a>）。料理を増やしてよい（→ <a href="#exp-18">Exp-18</a>）</li>
+  <li>本人依頼「長すぎて読めない」を受けて、先頭に要約を置き、各実験は要点の下に本文をたたみ、版ごとの記録をこの更新履歴に移した。本文の事実・数字・出典は消していない。見た目を Arukashi のデザイン（本文 16px・最小 11.5px・間隔4段）に合わせた</li>
+  <li>本人判断: 殻付き卵の計算の既定を Exp-17 の新しい計算に切り替えた。世の中のレシピとの一致は 22/28 → 21/28、変わった答えとその原因を <a href="#exp-17">Exp-17</a> に追記（2026-10-22 に記録）</li>
+</ul>
+
+<h3>2026-10-22</h3>
+<ul>
+  <li>Exp-18: 本人の採点の後、追加3品の条件を出典つきで足し、16品で評価した（→ <a href="#exp-18">Exp-18</a>）</li>  <li>卵の最初の温度を 5→20℃ に変えたときの地図の変化を、境目が動くアニメーション（<a href="boundary-t0.html">境目が動く地図</a>）と立体の状態図（<a href="state3d.html">卵の状態図（立体）</a>）にした（Exp-21）。判定が変わるのは 630 マス中 20 マスで、固ゆで・温泉卵・生のままの境目は 0〜2 分短い側へ動き、半熟ゆで卵の境目は動かない（時間は 2 分刻み）</li>
+  <li>油分の層（脂質量）を共起・味・香りの層と比べた（CLA-130）: どの層ともほとんど重ならない（ρ = −0.08〜+0.14）。一番近いのは「代わりに使える」関係（+0.14）。experiments/exp-12/results/fat_layer.md</li>
+  <li>火加減と温度の換算の根拠を調べ直した: 火加減ごとの鍋の温度を測った値は見つからず、換算の値は変えていない（experiments/exp-15-recipes/heat_levels.md）。レシピの収集を卵以外（ご飯・肉・玉ねぎ）に広げた（recipes_more.csv、地図が無いので重ね合わせはまだ）</li>
+  <li>足りない料理を足した（Exp-20）: だし巻き卵（農林水産省のレシピ）とカスタードクリーム（Wikibooks）を料理の条件つきで加え、どちらも正解のレシピで当たった。蒸し卵（Wikibooks）は状態が固ゆで卵と同じで区別できないので、料理としては足さず「固ゆで卵と答える」ことを確かめた。食材の条件を外した比較では、パンケーキがだし巻き卵に負けるようになった（条件は変えていない。詳しくは experiments/exp-20-more-dishes-sim/plan.md）</li>
+  <li>通説ページを6本足した（通説3〜8: 焼き目と肉汁・炒め玉ねぎ・塩と沸点・蒸し物の す・肉を常温に・鶏むね肉を低温で）。そのために規則を3つ足した（加熱損失と温度・沸点上昇・鶏肉の殺菌の時間と温度）。扱えない候補（ゼラチン・米の浸水・卵のむきやすさ・揚げ油の泡）は理由を候補一覧に書いた</li>
+  <li>通説ページの見せ方を組み直した（構想メモ §14）: 判定と確かさ → 決め手の図 → 言えないこと → 自分で試す を先頭に、通説の説明・計算の詳しい答え・根拠を後ろに。根拠は規則ごと・出典ごとのページ（<a href="basis/index.html">規則と出典</a>）に切り出し、どこまで確かめたか（本文確認・抜粋のみ など）を各ページの先頭に出した</li>
+</ul>
+
+<footer>Cuisine Network 研究ノート · 実験が終わるたびにこのページを更新します</footer>
+</div>
+</article>
+
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="図の拡大表示" hidden>
+  <div class="lb-bar">
+    <span class="lb-cap" id="lb-cap"></span>
+    <button type="button" id="lb-toggle">原寸で見る</button>
+    <button type="button" id="lb-close">閉じる（Esc）</button>
+  </div>
+  <div class="lb-stage" id="lb-stage"><img id="lb-img" alt=""></div>
+</div>
+
+<script>
+(function(){
+  const c=document.getElementById('universe');
+  if(!c) return;
+  const ctx=c.getContext('2d');
+  // 固定シードの疑似乱数（毎回同じ星図にする）
+  let s=20260927;
+  const rnd=()=>{s=(s*1664525+1013904223)>>>0;return s/4294967296};
+  const gauss=()=>{let u=0,v=0;while(!u)u=rnd();while(!v)v=rnd();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)};
+  const clusters=[[.22,.38,.09],[.40,.66,.07],[.58,.30,.08],[.76,.58,.10],[.88,.24,.05],[.12,.74,.06],[.50,.48,.14]];
+  const pts=[];
+  clusters.forEach(([x,y,r],i)=>{
+    const n=i===6?140:90;
+    for(let k=0;k<n;k++) pts.push({x:x+gauss()*r,y:y+gauss()*r*.8,m:rnd(),hot:rnd()<.035});
+  });
+  for(let k=0;k<160;k++) pts.push({x:rnd(),y:rnd(),m:rnd()*.5,hot:false});
+  function draw(){
+    const dpr=window.devicePixelRatio||1;
+    const w=c.clientWidth,h=c.clientHeight;
+    c.width=w*dpr;c.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+    const cs=getComputedStyle(document.documentElement);
+    const ink=cs.getPropertyValue('--space-ink').trim()||'#EEEEEE';
+    const hot=cs.getPropertyValue('--main').trim()||'#FB8495';
+    ctx.clearRect(0,0,w,h);
+    for(const p of pts){
+      const x=p.x*w,y=p.y*h;
+      ctx.globalAlpha=.25+p.m*.6;
+      ctx.fillStyle=p.hot?hot:ink;
+      ctx.beginPath();ctx.arc(x,y,p.hot?2.4:.6+p.m*1.1,0,Math.PI*2);ctx.fill();
+    }
+    ctx.globalAlpha=1;
+  }
+  draw();
+  window.addEventListener('resize',draw);
+  new MutationObserver(draw).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+})();
+
+(function(){
+  const links=[...document.querySelectorAll('.toc a')];
+  const map=new Map(links.map(a=>[a.getAttribute('href').slice(1),a]));
+  const targets=[...map.keys()].map(id=>document.getElementById(id)).filter(Boolean);
+  function update(){
+    let cur=targets[0];
+    for(const t of targets){ if(t.getBoundingClientRect().top<120) cur=t; }
+    links.forEach(a=>a.classList.remove('active'));
+    const a=map.get(cur.id); if(a) a.classList.add('active');
+  }
+  window.addEventListener('scroll',update,{passive:true}); update();
+})();
+
+(function(){
+  const box=document.getElementById('lightbox'),stage=document.getElementById('lb-stage'),img=document.getElementById('lb-img');
+  const cap=document.getElementById('lb-cap'),toggle=document.getElementById('lb-toggle'),close=document.getElementById('lb-close');
+  let opener=null;
+  function setActual(on){stage.classList.toggle('actual',on);toggle.textContent=on?'画面に合わせる':'原寸で見る';}
+  function open(btn){
+    opener=btn;img.src=btn.dataset.full;img.alt=btn.querySelector('img').alt;cap.textContent=btn.dataset.cap||'';
+    setActual(false);box.hidden=false;document.body.style.overflow='hidden';close.focus();
+  }
+  function shut(){box.hidden=true;document.body.style.overflow='';if(opener)opener.focus();}
+  document.querySelectorAll('.zoomable').forEach(b=>b.addEventListener('click',()=>open(b)));
+  toggle.addEventListener('click',()=>setActual(!stage.classList.contains('actual')));
+  img.addEventListener('click',e=>{
+    const actual=!stage.classList.contains('actual');
+    const r=img.getBoundingClientRect(),fx=(e.clientX-r.left)/r.width,fy=(e.clientY-r.top)/r.height;
+    setActual(actual);
+    if(actual){stage.scrollLeft=fx*img.naturalWidth-stage.clientWidth/2;stage.scrollTop=fy*img.naturalHeight-stage.clientHeight/2;}
+  });
+  close.addEventListener('click',shut);
+  box.addEventListener('click',e=>{if(e.target===box)shut();});
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!box.hidden)shut();});
+})();
+
+(function(){
+  function openTo(id){const t=id&&document.getElementById(id);if(!t)return;let d=t.closest('details');while(d){d.open=true;d=d.parentElement&&d.parentElement.closest('details');}}
+  document.addEventListener('click',e=>{const a=e.target.closest('a[href^="#"]');if(a)openTo(a.getAttribute('href').slice(1));});
+  window.addEventListener('hashchange',()=>openTo(location.hash.slice(1)));
+  openTo(location.hash.slice(1));
+})();
+</script>

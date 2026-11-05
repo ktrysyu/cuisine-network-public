@@ -1,0 +1,17 @@
+{
+  "canonical": "celery",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "celery",
+  "n_recipes": 837,
+  "note": "ナトリウムのわずかな塩味と青い苦み",
+  "order": 102,
+  "reviewed": true
+}

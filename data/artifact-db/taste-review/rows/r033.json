@@ -1,0 +1,25 @@
+{
+  "canonical": "baking powder",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "baking powder",
+  "mine": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 1738,
+  "note": "単体では金属的な塩味・苦み。焼成後はほぼ消える",
+  "order": 33,
+  "reviewed": true
+}

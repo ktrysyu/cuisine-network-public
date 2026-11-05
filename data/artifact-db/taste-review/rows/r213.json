@@ -1,0 +1,25 @@
+{
+  "canonical": "allspice",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "ground allspice",
+  "mine": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 364,
+  "note": "",
+  "order": 213,
+  "reviewed": true
+}

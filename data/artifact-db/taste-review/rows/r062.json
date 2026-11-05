@@ -1,0 +1,17 @@
+{
+  "canonical": "lemon",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 5,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "lemon",
+  "n_recipes": 1218,
+  "note": "果汁として使う前提。皮も使うなら苦み増",
+  "order": 62,
+  "reviewed": true
+}

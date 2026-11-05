@@ -1,0 +1,17 @@
+{
+  "canonical": "ground beef",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "ground beef",
+  "n_recipes": 877,
+  "note": "加熱後",
+  "order": 91,
+  "reviewed": true
+}

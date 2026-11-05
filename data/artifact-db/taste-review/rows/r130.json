@@ -1,0 +1,17 @@
+{
+  "canonical": "parmesan cheese",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 4,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 5
+  },
+  "ingredient": "parmesan cheese",
+  "n_recipes": 591,
+  "note": "",
+  "order": 130,
+  "reviewed": true
+}

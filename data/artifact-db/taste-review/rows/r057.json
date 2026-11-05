@@ -1,0 +1,17 @@
+{
+  "canonical": "fish sauce",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 5
+  },
+  "ingredient": "fish sauce",
+  "n_recipes": 1247,
+  "note": "",
+  "order": 57,
+  "reviewed": true
+}

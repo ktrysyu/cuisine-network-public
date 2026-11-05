@@ -1,0 +1,17 @@
+{
+  "canonical": "eggs",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "ingredient": "eggs",
+  "n_recipes": 3388,
+  "note": "加熱後。卵黄のコクを旨1とした",
+  "order": 12,
+  "reviewed": true
+}

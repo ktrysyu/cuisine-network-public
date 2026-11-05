@@ -1,0 +1,17 @@
+{
+  "canonical": "lemon zest",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "grated lemon zest",
+  "n_recipes": 342,
+  "note": "香りが本体。精油の苦み",
+  "order": 237,
+  "reviewed": true
+}

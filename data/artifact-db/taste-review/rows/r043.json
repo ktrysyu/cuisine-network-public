@@ -1,0 +1,17 @@
+{
+  "canonical": "cayenne pepper",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 5,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "cayenne pepper",
+  "n_recipes": 1523,
+  "note": "",
+  "order": 43,
+  "reviewed": true
+}

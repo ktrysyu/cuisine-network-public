@@ -1,0 +1,2444 @@
+{
+ "props": [
+  {
+   "food": "beef",
+   "T": 20,
+   "k": 0.437165015020819,
+   "rho": 1021.9140514697069,
+   "cp": 3342.235505203342,
+   "alpha": 1.2799528747625323e-07,
+   "x": {
+    "water": 0.614,
+    "protein": 0.171,
+    "fat": 0.211,
+    "carb": 0.003,
+    "ash": 0.001
+   }
+  },
+  {
+   "food": "beef",
+   "T": 60,
+   "k": 0.44651359691080206,
+   "rho": 1007.6935104529709,
+   "cp": 3367.7438987034316,
+   "alpha": 1.315731185679488e-07,
+   "x": {
+    "water": 0.614,
+    "protein": 0.171,
+    "fat": 0.211,
+    "carb": 0.003,
+    "ash": 0.001
+   }
+  },
+  {
+   "food": "chicken",
+   "T": 20,
+   "k": 0.5179256847031366,
+   "rho": 1055.3786902472375,
+   "cp": 3630.0930985549085,
+   "alpha": 1.3518900287075962e-07,
+   "x": {
+    "water": 0.746,
+    "protein": 0.233,
+    "fat": 0.019,
+    "carb": 0.001,
+    "ash": 0.001
+   }
+  },
+  {
+   "food": "chicken",
+   "T": 60,
+   "k": 0.5613176665805601,
+   "rho": 1041.8863836827343,
+   "cp": 3651.686742657623,
+   "alpha": 1.4753492289037055e-07,
+   "x": {
+    "water": 0.746,
+    "protein": 0.233,
+    "fat": 0.019,
+    "carb": 0.001,
+    "ash": 0.001
+   }
+  },
+  {
+   "food": "potato",
+   "T": 20,
+   "k": 0.552099426770274,
+   "rho": 1076.547170458985,
+   "cp": 3657.107405172798,
+   "alpha": 1.4023180274915964e-07,
+   "x": {
+    "water": 0.798,
+    "protein": 0.018,
+    "fat": 0.001,
+    "carb": 0.173,
+    "ash": 0.01
+   }
+  },
+  {
+   "food": "potato",
+   "T": 60,
+   "k": 0.6000802554888792,
+   "rho": 1064.1715367077593,
+   "cp": 3679.951696937029,
+   "alpha": 1.5323415594991565e-07,
+   "x": {
+    "water": 0.798,
+    "protein": 0.018,
+    "fat": 0.001,
+    "carb": 0.173,
+    "ash": 0.01
+   }
+  }
+ ],
+ "tokyogas": [
+  {
+   "T": 150,
+   "flip": 1.5,
+   "min": 5.9,
+   "pull": 55.017240022089936,
+   "peak": 63.74833065472092,
+   "rise": 8.73109063263098,
+   "end": 63.28578012427808
+  },
+  {
+   "T": 150,
+   "flip": 0.25,
+   "min": 5.25,
+   "pull": 55.2958365431068,
+   "peak": 66.77957706954427,
+   "rise": 11.483740526437472,
+   "end": 66.41538596931545
+  },
+  {
+   "T": 175,
+   "flip": 1.5,
+   "min": 5.5,
+   "pull": 55.53659020714918,
+   "peak": 65.73214764858534,
+   "rise": 10.195557441436158,
+   "end": 65.30845285895938
+  },
+  {
+   "T": 175,
+   "flip": 0.25,
+   "min": 4.75,
+   "pull": 55.25026134046463,
+   "peak": 67.94435821514028,
+   "rise": 12.694096874675651,
+   "end": 67.59870760632793
+  },
+  {
+   "T": 190,
+   "flip": 1.5,
+   "min": 5.3,
+   "pull": 55.558377743021325,
+   "peak": 66.5150758595311,
+   "rise": 10.95669811650977,
+   "end": 66.11984895991597
+  },
+  {
+   "T": 190,
+   "flip": 0.25,
+   "min": 4.62,
+   "pull": 55.81120573005884,
+   "peak": 69.12430342111563,
+   "rise": 13.31309769105679,
+   "end": 68.78689717066698
+  }
+ ],
+ "aussie": [
+  {
+   "last": 2.0,
+   "total": 5.5,
+   "center": 50.81344831909351,
+   "flips": 1,
+   "rest3": {
+    "pull": 50.81344831909351,
+    "peak": 58.594320398116245,
+    "rise": 7.7808720790227355,
+    "end": 58.594320398116245
+   },
+   "rest5": {
+    "pull": 50.81344831909351,
+    "peak": 58.65701262670619,
+    "rise": 7.843564307612681,
+    "end": 58.25671804867054
+   }
+  },
+  {
+   "last": 2.5,
+   "total": 6.0,
+   "center": 53.474393399931856,
+   "flips": 1,
+   "rest3": {
+    "pull": 53.474393399931856,
+    "peak": 59.9005979970464,
+    "rise": 6.426204597114541,
+    "end": 59.9005979970464
+   },
+   "rest5": {
+    "pull": 53.474393399931856,
+    "peak": 59.916114138586465,
+    "rise": 6.44172073865461,
+    "end": 59.39466487259092
+   }
+  },
+  {
+   "last": 3.0,
+   "total": 6.5,
+   "center": 55.73978794113523,
+   "flips": 1,
+   "rest3": {
+    "pull": 55.73978794113523,
+    "peak": 61.03321294682459,
+    "rise": 5.2934250056893575,
+    "end": 61.03321294682459
+   },
+   "rest5": {
+    "pull": 55.73978794113523,
+    "peak": 61.03321294682459,
+    "rise": 5.2934250056893575,
+    "end": 60.38753413950171
+   }
+  }
+ ],
+ "grid": {
+  "40": {
+   "min": 5.5,
+   "pull": 55.53659020714918,
+   "peak": 65.73214764858534,
+   "rise": 10.195557441436158,
+   "end": 65.30845285895938
+  },
+  "80": {
+   "min": 5.5,
+   "pull": 55.48006968162467,
+   "peak": 65.69459904542074,
+   "rise": 10.214529363796075,
+   "end": 65.27075972812347
+  }
+ },
+ "chicken": {
+  "tau": {
+   "until": {
+    "T_core_max": 100.0,
+    "T_core": 100.0,
+    "maillard": 2,
+    "stops": [
+     [
+      "maillard≧2",
+      3.3,
+      true
+     ],
+     [
+      "T_core≧74",
+      0.0,
+      true
+     ]
+    ],
+    "meat": {
+     "T_core_max": 100.0,
+     "T_surface_max": 179.2,
+     "T_serve": 100.0,
+     "water": 70.2,
+     "fat": 6.55,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.04,
+     "mass_ratio": 0.99,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 1,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    }
+   },
+   "timed": {
+    "T_core_max": 100.0,
+    "T_core": 100.0,
+    "maillard": 2,
+    "stops": [],
+    "meat": {
+     "T_core_max": 100.0,
+     "T_surface_max": 179.97,
+     "T_serve": 100.0,
+     "water": 68.13,
+     "fat": 7.0,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.11,
+     "mass_ratio": 0.93,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 1,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    }
+   }
+  },
+  "slab": {
+   "until": {
+    "T_core_max": 74.0,
+    "T_core": 74.0,
+    "maillard": 2,
+    "stops": [
+     [
+      "maillard≧2",
+      3.3,
+      true
+     ],
+     [
+      "T_core≧74",
+      9.4,
+      true
+     ]
+    ],
+    "meat": {
+     "T_core_max": 74.02,
+     "T_surface_max": 180.0,
+     "T_serve": 74.02,
+     "water": 70.38,
+     "fat": 6.51,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.03,
+     "mass_ratio": 1.0,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 1,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    }
+   },
+   "timed": {
+    "T_core_max": 72.0,
+    "T_core": 72.0,
+    "maillard": 2,
+    "stops": [],
+    "meat": {
+     "T_core_max": 72.02,
+     "T_surface_max": 179.97,
+     "T_serve": 72.02,
+     "water": 70.38,
+     "fat": 6.51,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.03,
+     "mass_ratio": 1.0,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 0,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    }
+   }
+  }
+ },
+ "tau": {
+  "answers": {
+   "状態で止める版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 73.4,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      1.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.7,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧1",
+      0.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 170.3,
+    "meat": false,
+    "stops": [
+     [
+      "caramel≧2",
+      9.5,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": null,
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": [
+     [
+      "maillard≧2",
+      3.4,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 50.2,
+    "meat": false,
+    "stops": [
+     [
+      "gelatin_state∈{溶解（ゾル）}",
+      4.7,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": [
+     [
+      "maillard≧2",
+      3.3,
+      true
+     ],
+     [
+      "T_core≧74",
+      0.0,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 71.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 174.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": "sauteed_onion",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組3A: 殻付き卵を68℃の湯で30分": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "組3B: 殻付き卵を100℃の湯で30分": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 99.2,
+    "meat": false,
+    "stops": []
+   },
+   "組4A: プリン液を88℃で蒸す": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組4B: プリン液を100℃で蒸す": {
+    "expected": null,
+    "answer": "custard_pudding",
+    "T_core_max": 96.0,
+    "meat": false,
+    "stops": []
+   },
+   "組5A: 溶き卵をフライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組5B: 溶き卵をフライパンで混ぜずに": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組6A: ゼラチン膨潤→牛乳→温める→冷やす": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "組6B: ゼラチン膨潤→牛乳→冷やす→温める": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 57.3,
+    "meat": false,
+    "stops": []
+   },
+   "組7A: 生クリームを冷やしてから泡立てる": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   },
+   "組7B: 生クリームを室温で泡立ててから冷やす": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   }
+  },
+  "overlay": {
+   "by": {
+    "soft_boiled_egg": 5,
+    "hard_boiled_egg": 7,
+    "poached_egg": 6,
+    "scrambled_eggs": 6,
+    "custard_pudding": 4
+   },
+   "ok": {
+    "soft_boiled_egg": 2,
+    "hard_boiled_egg": 6,
+    "poached_egg": 6,
+    "scrambled_eggs": 4,
+    "custard_pudding": 4
+   },
+   "rows": [
+    {
+     "id": "R002",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R005",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R006",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R007",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R008",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R011",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R013",
+     "dish": "hard_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R014",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R015",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R016",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R017",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R018",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R021",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R022",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R023",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R024",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R025",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R027",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R029",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R032",
+     "dish": "scrambled_eggs",
+     "answer": "__raw",
+     "match": false
+    },
+    {
+     "id": "R034",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R036",
+     "dish": "scrambled_eggs",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R037",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R038",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R044",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R053",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R054",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R055",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    }
+   ]
+  }
+ },
+ "slab": {
+  "answers": {
+   "状態で止める版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 73.4,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      1.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.7,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧1",
+      0.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 170.3,
+    "meat": false,
+    "stops": [
+     [
+      "caramel≧2",
+      9.5,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": null,
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": [
+     [
+      "maillard≧2",
+      3.4,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 50.2,
+    "meat": false,
+    "stops": [
+     [
+      "gelatin_state∈{溶解（ゾル）}",
+      4.7,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 74.0,
+    "meat": true,
+    "stops": [
+     [
+      "maillard≧2",
+      3.3,
+      true
+     ],
+     [
+      "T_core≧74",
+      9.4,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 71.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 174.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": "sauteed_onion",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 72.0,
+    "meat": true,
+    "stops": []
+   },
+   "時間の版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組3A: 殻付き卵を68℃の湯で30分": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "組3B: 殻付き卵を100℃の湯で30分": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 99.2,
+    "meat": false,
+    "stops": []
+   },
+   "組4A: プリン液を88℃で蒸す": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組4B: プリン液を100℃で蒸す": {
+    "expected": null,
+    "answer": "custard_pudding",
+    "T_core_max": 96.0,
+    "meat": false,
+    "stops": []
+   },
+   "組5A: 溶き卵をフライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組5B: 溶き卵をフライパンで混ぜずに": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組6A: ゼラチン膨潤→牛乳→温める→冷やす": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "組6B: ゼラチン膨潤→牛乳→冷やす→温める": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 57.3,
+    "meat": false,
+    "stops": []
+   },
+   "組7A: 生クリームを冷やしてから泡立てる": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   },
+   "組7B: 生クリームを室温で泡立ててから冷やす": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   }
+  },
+  "overlay": {
+   "by": {
+    "soft_boiled_egg": 5,
+    "hard_boiled_egg": 7,
+    "poached_egg": 6,
+    "scrambled_eggs": 6,
+    "custard_pudding": 4
+   },
+   "ok": {
+    "soft_boiled_egg": 2,
+    "hard_boiled_egg": 6,
+    "poached_egg": 6,
+    "scrambled_eggs": 4,
+    "custard_pudding": 4
+   },
+   "rows": [
+    {
+     "id": "R002",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R005",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R006",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R007",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R008",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R011",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R013",
+     "dish": "hard_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R014",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R015",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R016",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R017",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R018",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R021",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R022",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R023",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R024",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R025",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R027",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R029",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R032",
+     "dish": "scrambled_eggs",
+     "answer": "__raw",
+     "match": false
+    },
+    {
+     "id": "R034",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R036",
+     "dish": "scrambled_eggs",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R037",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R038",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R044",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R053",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R054",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R055",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    }
+   ]
+  }
+ },
+ "slab+oil": {
+  "answers": {
+   "状態で止める版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 73.4,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      1.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.7,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧1",
+      0.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 80.2,
+    "meat": false,
+    "stops": [
+     [
+      "egg_gel_stage≧2",
+      10.8,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 170.3,
+    "meat": false,
+    "stops": [
+     [
+      "caramel≧2",
+      9.5,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": null,
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": [
+     [
+      "maillard≧2",
+      3.4,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 50.2,
+    "meat": false,
+    "stops": [
+     [
+      "gelatin_state∈{溶解（ゾル）}",
+      4.7,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 74.0,
+    "meat": true,
+    "stops": [
+     [
+      "maillard≧2",
+      3.3,
+      true
+     ],
+     [
+      "T_core≧74",
+      9.4,
+      true
+     ]
+    ]
+   },
+   "状態で止める版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "状態で止める版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: スクランブルエッグ": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: オムレツ": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 71.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: プリン": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 茶碗蒸し": {
+    "expected": "chawanmushi",
+    "answer": "chawanmushi",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホワイトソース": {
+    "expected": "white_sauce",
+    "answer": "white_sauce",
+    "T_core_max": 97.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: カラメル": {
+    "expected": "caramel_sauce",
+    "answer": "caramel_sauce",
+    "T_core_max": 174.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 炒め玉ねぎ": {
+    "expected": "sauteed_onion",
+    "answer": "sauteed_onion",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ご飯": {
+    "expected": "steamed_rice",
+    "answer": "steamed_rice",
+    "T_core_max": 100.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: パンケーキ": {
+    "expected": "pancake",
+    "answer": "pancake",
+    "T_core_max": 102.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 牛乳ゼリー": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ホイップクリーム": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 9.2,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 温泉卵": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 鶏むね肉のソテー": {
+    "expected": "sauteed_chicken",
+    "answer": "sauteed_chicken",
+    "T_core_max": 72.0,
+    "meat": true,
+    "stops": []
+   },
+   "時間の版: ゆで卵": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 88.4,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: 半熟ゆで卵": {
+    "expected": "soft_boiled_egg",
+    "answer": "soft_boiled_egg",
+    "T_core_max": 63.7,
+    "meat": false,
+    "stops": []
+   },
+   "時間の版: ポーチドエッグ": {
+    "expected": "poached_egg",
+    "answer": "poached_egg",
+    "T_core_max": 45.6,
+    "meat": false,
+    "stops": []
+   },
+   "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組3A: 殻付き卵を68℃の湯で30分": {
+    "expected": "onsen_tamago",
+    "answer": "onsen_tamago",
+    "T_core_max": 67.5,
+    "meat": false,
+    "stops": []
+   },
+   "組3B: 殻付き卵を100℃の湯で30分": {
+    "expected": "hard_boiled_egg",
+    "answer": "hard_boiled_egg",
+    "T_core_max": 99.2,
+    "meat": false,
+    "stops": []
+   },
+   "組4A: プリン液を88℃で蒸す": {
+    "expected": "custard_pudding",
+    "answer": "custard_pudding",
+    "T_core_max": 84.6,
+    "meat": false,
+    "stops": []
+   },
+   "組4B: プリン液を100℃で蒸す": {
+    "expected": null,
+    "answer": "custard_pudding",
+    "T_core_max": 96.0,
+    "meat": false,
+    "stops": []
+   },
+   "組5A: 溶き卵をフライパンで混ぜながら": {
+    "expected": "scrambled_eggs",
+    "answer": "scrambled_eggs",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組5B: 溶き卵をフライパンで混ぜずに": {
+    "expected": "omelet",
+    "answer": "omelet",
+    "T_core_max": 72.5,
+    "meat": false,
+    "stops": []
+   },
+   "組6A: ゼラチン膨潤→牛乳→温める→冷やす": {
+    "expected": "milk_jelly",
+    "answer": "milk_jelly",
+    "T_core_max": 58.0,
+    "meat": false,
+    "stops": []
+   },
+   "組6B: ゼラチン膨潤→牛乳→冷やす→温める": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 57.3,
+    "meat": false,
+    "stops": []
+   },
+   "組7A: 生クリームを冷やしてから泡立てる": {
+    "expected": "whipped_cream",
+    "answer": "whipped_cream",
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   },
+   "組7B: 生クリームを室温で泡立ててから冷やす": {
+    "expected": null,
+    "answer": null,
+    "T_core_max": 20,
+    "meat": false,
+    "stops": []
+   }
+  },
+  "overlay": {
+   "by": {
+    "soft_boiled_egg": 5,
+    "hard_boiled_egg": 7,
+    "poached_egg": 6,
+    "scrambled_eggs": 6,
+    "custard_pudding": 4
+   },
+   "ok": {
+    "soft_boiled_egg": 2,
+    "hard_boiled_egg": 6,
+    "poached_egg": 6,
+    "scrambled_eggs": 4,
+    "custard_pudding": 4
+   },
+   "rows": [
+    {
+     "id": "R002",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R005",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R006",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R007",
+     "dish": "soft_boiled_egg",
+     "answer": "soft_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R008",
+     "dish": "soft_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R011",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R013",
+     "dish": "hard_boiled_egg",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R014",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R015",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R016",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R017",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R018",
+     "dish": "hard_boiled_egg",
+     "answer": "hard_boiled_egg",
+     "match": true
+    },
+    {
+     "id": "R021",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R022",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R023",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R024",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R025",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R027",
+     "dish": "poached_egg",
+     "answer": "poached_egg",
+     "match": true
+    },
+    {
+     "id": "R029",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R032",
+     "dish": "scrambled_eggs",
+     "answer": "__raw",
+     "match": false
+    },
+    {
+     "id": "R034",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R036",
+     "dish": "scrambled_eggs",
+     "answer": "__none",
+     "match": false
+    },
+    {
+     "id": "R037",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R038",
+     "dish": "scrambled_eggs",
+     "answer": "scrambled_eggs",
+     "match": true
+    },
+    {
+     "id": "R044",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R053",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R054",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    },
+    {
+     "id": "R055",
+     "dish": "custard_pudding",
+     "answer": "custard_pudding",
+     "match": true
+    }
+   ]
+  }
+ },
+ "sens": [
+  {
+   "label": "基準",
+   "t90": 5.5,
+   "t15": 4.75,
+   "answers": {
+    "状態で止める版: スクランブルエッグ": "scrambled_eggs",
+    "状態で止める版: オムレツ": "omelet",
+    "状態で止める版: プリン": "custard_pudding",
+    "状態で止める版: 茶碗蒸し": "chawanmushi",
+    "状態で止める版: ホワイトソース": "white_sauce",
+    "状態で止める版: カラメル": "caramel_sauce",
+    "状態で止める版: 炒め玉ねぎ": null,
+    "状態で止める版: ご飯": "steamed_rice",
+    "状態で止める版: パンケーキ": "pancake",
+    "状態で止める版: 牛乳ゼリー": "milk_jelly",
+    "状態で止める版: ホイップクリーム": "whipped_cream",
+    "状態で止める版: 温泉卵": "onsen_tamago",
+    "状態で止める版: 鶏むね肉のソテー": "sauteed_chicken",
+    "状態で止める版: ゆで卵": "hard_boiled_egg",
+    "状態で止める版: 半熟ゆで卵": "soft_boiled_egg",
+    "状態で止める版: ポーチドエッグ": "poached_egg",
+    "時間の版: スクランブルエッグ": "scrambled_eggs",
+    "時間の版: オムレツ": "omelet",
+    "時間の版: プリン": "custard_pudding",
+    "時間の版: 茶碗蒸し": "chawanmushi",
+    "時間の版: ホワイトソース": "white_sauce",
+    "時間の版: カラメル": "caramel_sauce",
+    "時間の版: 炒め玉ねぎ": "sauteed_onion",
+    "時間の版: ご飯": "steamed_rice",
+    "時間の版: パンケーキ": "pancake",
+    "時間の版: 牛乳ゼリー": "milk_jelly",
+    "時間の版: ホイップクリーム": "whipped_cream",
+    "時間の版: 温泉卵": "onsen_tamago",
+    "時間の版: 鶏むね肉のソテー": "sauteed_chicken",
+    "時間の版: ゆで卵": "hard_boiled_egg",
+    "時間の版: 半熟ゆで卵": "soft_boiled_egg",
+    "時間の版: ポーチドエッグ": "poached_egg",
+    "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": "scrambled_eggs",
+    "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": "custard_pudding",
+    "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": "scrambled_eggs",
+    "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": "custard_pudding",
+    "組3A: 殻付き卵を68℃の湯で30分": "onsen_tamago",
+    "組3B: 殻付き卵を100℃の湯で30分": "hard_boiled_egg",
+    "組4A: プリン液を88℃で蒸す": "custard_pudding",
+    "組4B: プリン液を100℃で蒸す": "custard_pudding",
+    "組5A: 溶き卵をフライパンで混ぜながら": "scrambled_eggs",
+    "組5B: 溶き卵をフライパンで混ぜずに": "omelet",
+    "組6A: ゼラチン膨潤→牛乳→温める→冷やす": "milk_jelly",
+    "組6B: ゼラチン膨潤→牛乳→冷やす→温める": null,
+    "組7A: 生クリームを冷やしてから泡立てる": "whipped_cream",
+    "組7B: 生クリームを室温で泡立ててから冷やす": null
+   }
+  },
+  {
+   "label": "h_contact=150",
+   "t90": 6.4,
+   "t15": 5.88,
+   "answers": {
+    "状態で止める版: スクランブルエッグ": "scrambled_eggs",
+    "状態で止める版: オムレツ": "omelet",
+    "状態で止める版: プリン": "custard_pudding",
+    "状態で止める版: 茶碗蒸し": "chawanmushi",
+    "状態で止める版: ホワイトソース": "white_sauce",
+    "状態で止める版: カラメル": "caramel_sauce",
+    "状態で止める版: 炒め玉ねぎ": null,
+    "状態で止める版: ご飯": "steamed_rice",
+    "状態で止める版: パンケーキ": "pancake",
+    "状態で止める版: 牛乳ゼリー": "milk_jelly",
+    "状態で止める版: ホイップクリーム": "whipped_cream",
+    "状態で止める版: 温泉卵": "onsen_tamago",
+    "状態で止める版: 鶏むね肉のソテー": "sauteed_chicken",
+    "状態で止める版: ゆで卵": "hard_boiled_egg",
+    "状態で止める版: 半熟ゆで卵": "soft_boiled_egg",
+    "状態で止める版: ポーチドエッグ": "poached_egg",
+    "時間の版: スクランブルエッグ": "scrambled_eggs",
+    "時間の版: オムレツ": "omelet",
+    "時間の版: プリン": "custard_pudding",
+    "時間の版: 茶碗蒸し": "chawanmushi",
+    "時間の版: ホワイトソース": "white_sauce",
+    "時間の版: カラメル": "caramel_sauce",
+    "時間の版: 炒め玉ねぎ": "sauteed_onion",
+    "時間の版: ご飯": "steamed_rice",
+    "時間の版: パンケーキ": "pancake",
+    "時間の版: 牛乳ゼリー": "milk_jelly",
+    "時間の版: ホイップクリーム": "whipped_cream",
+    "時間の版: 温泉卵": "onsen_tamago",
+    "時間の版: 鶏むね肉のソテー": null,
+    "時間の版: ゆで卵": "hard_boiled_egg",
+    "時間の版: 半熟ゆで卵": "soft_boiled_egg",
+    "時間の版: ポーチドエッグ": "poached_egg",
+    "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": "scrambled_eggs",
+    "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": "custard_pudding",
+    "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": "scrambled_eggs",
+    "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": "custard_pudding",
+    "組3A: 殻付き卵を68℃の湯で30分": "onsen_tamago",
+    "組3B: 殻付き卵を100℃の湯で30分": "hard_boiled_egg",
+    "組4A: プリン液を88℃で蒸す": "custard_pudding",
+    "組4B: プリン液を100℃で蒸す": "custard_pudding",
+    "組5A: 溶き卵をフライパンで混ぜながら": "scrambled_eggs",
+    "組5B: 溶き卵をフライパンで混ぜずに": "omelet",
+    "組6A: ゼラチン膨潤→牛乳→温める→冷やす": "milk_jelly",
+    "組6B: ゼラチン膨潤→牛乳→冷やす→温める": null,
+    "組7A: 生クリームを冷やしてから泡立てる": "whipped_cream",
+    "組7B: 生クリームを室温で泡立ててから冷やす": null
+   }
+  },
+  {
+   "label": "h_contact=600",
+   "t90": 5.0,
+   "t15": 4.38,
+   "answers": {
+    "状態で止める版: スクランブルエッグ": "scrambled_eggs",
+    "状態で止める版: オムレツ": "omelet",
+    "状態で止める版: プリン": "custard_pudding",
+    "状態で止める版: 茶碗蒸し": "chawanmushi",
+    "状態で止める版: ホワイトソース": "white_sauce",
+    "状態で止める版: カラメル": "caramel_sauce",
+    "状態で止める版: 炒め玉ねぎ": null,
+    "状態で止める版: ご飯": "steamed_rice",
+    "状態で止める版: パンケーキ": "pancake",
+    "状態で止める版: 牛乳ゼリー": "milk_jelly",
+    "状態で止める版: ホイップクリーム": "whipped_cream",
+    "状態で止める版: 温泉卵": "onsen_tamago",
+    "状態で止める版: 鶏むね肉のソテー": "sauteed_chicken",
+    "状態で止める版: ゆで卵": "hard_boiled_egg",
+    "状態で止める版: 半熟ゆで卵": "soft_boiled_egg",
+    "状態で止める版: ポーチドエッグ": "poached_egg",
+    "時間の版: スクランブルエッグ": "scrambled_eggs",
+    "時間の版: オムレツ": "omelet",
+    "時間の版: プリン": "custard_pudding",
+    "時間の版: 茶碗蒸し": "chawanmushi",
+    "時間の版: ホワイトソース": "white_sauce",
+    "時間の版: カラメル": "caramel_sauce",
+    "時間の版: 炒め玉ねぎ": "sauteed_onion",
+    "時間の版: ご飯": "steamed_rice",
+    "時間の版: パンケーキ": "pancake",
+    "時間の版: 牛乳ゼリー": "milk_jelly",
+    "時間の版: ホイップクリーム": "whipped_cream",
+    "時間の版: 温泉卵": "onsen_tamago",
+    "時間の版: 鶏むね肉のソテー": "sauteed_chicken",
+    "時間の版: ゆで卵": "hard_boiled_egg",
+    "時間の版: 半熟ゆで卵": "soft_boiled_egg",
+    "時間の版: ポーチドエッグ": "poached_egg",
+    "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": "scrambled_eggs",
+    "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": "custard_pudding",
+    "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": "scrambled_eggs",
+    "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": "custard_pudding",
+    "組3A: 殻付き卵を68℃の湯で30分": "onsen_tamago",
+    "組3B: 殻付き卵を100℃の湯で30分": "hard_boiled_egg",
+    "組4A: プリン液を88℃で蒸す": "custard_pudding",
+    "組4B: プリン液を100℃で蒸す": "custard_pudding",
+    "組5A: 溶き卵をフライパンで混ぜながら": "scrambled_eggs",
+    "組5B: 溶き卵をフライパンで混ぜずに": "omelet",
+    "組6A: ゼラチン膨潤→牛乳→温める→冷やす": "milk_jelly",
+    "組6B: ゼラチン膨潤→牛乳→冷やす→温める": null,
+    "組7A: 生クリームを冷やしてから泡立てる": "whipped_cream",
+    "組7B: 生クリームを室温で泡立ててから冷やす": null
+   }
+  },
+  {
+   "label": "h_top=10",
+   "t90": 5.1,
+   "t15": 4.5,
+   "answers": {
+    "状態で止める版: スクランブルエッグ": "scrambled_eggs",
+    "状態で止める版: オムレツ": "omelet",
+    "状態で止める版: プリン": "custard_pudding",
+    "状態で止める版: 茶碗蒸し": "chawanmushi",
+    "状態で止める版: ホワイトソース": "white_sauce",
+    "状態で止める版: カラメル": "caramel_sauce",
+    "状態で止める版: 炒め玉ねぎ": null,
+    "状態で止める版: ご飯": "steamed_rice",
+    "状態で止める版: パンケーキ": "pancake",
+    "状態で止める版: 牛乳ゼリー": "milk_jelly",
+    "状態で止める版: ホイップクリーム": "whipped_cream",
+    "状態で止める版: 温泉卵": "onsen_tamago",
+    "状態で止める版: 鶏むね肉のソテー": "sauteed_chicken",
+    "状態で止める版: ゆで卵": "hard_boiled_egg",
+    "状態で止める版: 半熟ゆで卵": "soft_boiled_egg",
+    "状態で止める版: ポーチドエッグ": "poached_egg",
+    "時間の版: スクランブルエッグ": "scrambled_eggs",
+    "時間の版: オムレツ": "omelet",
+    "時間の版: プリン": "custard_pudding",
+    "時間の版: 茶碗蒸し": "chawanmushi",
+    "時間の版: ホワイトソース": "white_sauce",
+    "時間の版: カラメル": "caramel_sauce",
+    "時間の版: 炒め玉ねぎ": "sauteed_onion",
+    "時間の版: ご飯": "steamed_rice",
+    "時間の版: パンケーキ": "pancake",
+    "時間の版: 牛乳ゼリー": "milk_jelly",
+    "時間の版: ホイップクリーム": "whipped_cream",
+    "時間の版: 温泉卵": "onsen_tamago",
+    "時間の版: 鶏むね肉のソテー": "sauteed_chicken",
+    "時間の版: ゆで卵": "hard_boiled_egg",
+    "時間の版: 半熟ゆで卵": "soft_boiled_egg",
+    "時間の版: ポーチドエッグ": "poached_egg",
+    "組1A: (卵+牛乳)→撹拌→加熱(フライパン,短時間)": "scrambled_eggs",
+    "組1B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)": "custard_pudding",
+    "組2A: (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら": "scrambled_eggs",
+    "組2B: (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす": "custard_pudding",
+    "組3A: 殻付き卵を68℃の湯で30分": "onsen_tamago",
+    "組3B: 殻付き卵を100℃の湯で30分": "hard_boiled_egg",
+    "組4A: プリン液を88℃で蒸す": "custard_pudding",
+    "組4B: プリン液を100℃で蒸す": "custard_pudding",
+    "組5A: 溶き卵をフライパンで混ぜながら": "scrambled_eggs",
+    "組5B: 溶き卵をフライパンで混ぜずに": "omelet",
+    "組6A: ゼラチン膨潤→牛乳→温める→冷やす": "milk_jelly",
+    "組6B: ゼラチン膨潤→牛乳→冷やす→温める": null,
+    "組7A: 生クリームを冷やしてから泡立てる": "whipped_cream",
+    "組7B: 生クリームを室温で泡立ててから冷やす": null
+   }
+  }
+ ],
+ "fries": [
+  {
+   "T": 150,
+   "min": 3,
+   "water_lost": 4.70815376802346,
+   "oil": 0.5649784521628152,
+   "mass_ratio": 0.9585682468413935,
+   "water": 78.33750646280417,
+   "fat": 0.6937205090550467,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 150,
+   "min": 5,
+   "water_lost": 12.125599379743168,
+   "oil": 1.4550719255691804,
+   "mass_ratio": 0.8932947254582602,
+   "water": 75.75820016796793,
+   "fat": 1.7408273901666982,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 150,
+   "min": 7,
+   "water_lost": 19.03795545157858,
+   "oil": 2.2845546541894306,
+   "mass_ratio": 0.8324659920261085,
+   "water": 72.9904225883569,
+   "fat": 2.8644469287997585,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 150,
+   "min": 10,
+   "water_lost": 28.534038652105952,
+   "oil": 3.4240846382527157,
+   "mass_ratio": 0.7489004598614677,
+   "water": 68.45497378567141,
+   "fat": 4.7056782938878206,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 170,
+   "min": 3,
+   "water_lost": 5.854391422776077,
+   "oil": 0.7025269707331292,
+   "mass_ratio": 0.9484813554795706,
+   "water": 77.96211085228511,
+   "fat": 0.8461178135940859,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 170,
+   "min": 5,
+   "water_lost": 13.19378420068433,
+   "oil": 1.58325410408212,
+   "mass_ratio": 0.8838946990339778,
+   "water": 75.35537420024198,
+   "fat": 1.9043604469194968,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 170,
+   "min": 7,
+   "water_lost": 20.033402431494242,
+   "oil": 2.4040082917793097,
+   "mass_ratio": 0.8237060586028506,
+   "water": 72.55816191261279,
+   "fat": 3.039929433111789,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 170,
+   "min": 10,
+   "water_lost": 29.42955956006776,
+   "oil": 3.531547147208133,
+   "mass_ratio": 0.7410198758714037,
+   "water": 67.97447960582572,
+   "fat": 4.9007418902733315,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 190,
+   "min": 3,
+   "water_lost": 6.98856736493137,
+   "oil": 0.8386280837917645,
+   "mass_ratio": 0.938500607188604,
+   "water": 77.58272299171377,
+   "fat": 1.0001358300699905,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 190,
+   "min": 5,
+   "water_lost": 14.250728649039935,
+   "oil": 1.7100874378847928,
+   "mass_ratio": 0.8745935878884487,
+   "water": 74.94826426662601,
+   "fat": 2.069632641893623,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 190,
+   "min": 7,
+   "water_lost": 21.018374449845144,
+   "oil": 2.522204933981418,
+   "mass_ratio": 0.8150383048413627,
+   "water": 72.12130423930932,
+   "fat": 3.2172781554012952,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  },
+  {
+   "T": 190,
+   "min": 10,
+   "water_lost": 30.31565701577083,
+   "oil": 3.6378788418925017,
+   "mass_ratio": 0.7332222182612168,
+   "water": 67.48887547567462,
+   "fat": 5.0978799452594465,
+   "cell_wall": "生",
+   "starch_gel": 1.0
+  }
+ ],
+ "dishes": {
+  "beef_steak": {
+   "how": "牛肉 250g・厚さ20mm・塩 2g。強火1分→弱火2分→返して強火30秒→弱火2.5分→5分休ませる（aussiebeef_steak のミディアム）",
+   "state": {
+    "T_core_max": 59.92,
+    "T_surface_max": 128.51,
+    "T_serve": 59.39,
+    "water": 60.91,
+    "fat": 20.93,
+    "sugar_conc": 0.0,
+    "salt_conc": 0.99,
+    "mass_ratio": 1.0,
+    "maillard": 0,
+    "meat_myosin": 0,
+    "meat_actin": 0,
+    "meat_myoglobin": 0,
+    "meat_water_loss": 0,
+    "air": false
+   }
+  },
+  "french_fries": {
+   "how": "じゃがいも 150g・塩 1g を 170℃の油で6分（form thin。温度・時間は仮）",
+   "state": {
+    "T_core_max": 100.0,
+    "T_surface_max": 170.0,
+    "T_serve": 100.0,
+    "water": 73.36,
+    "fat": 2.46,
+    "sugar_conc": 0.0,
+    "salt_conc": 0.77,
+    "mass_ratio": 0.84,
+    "fat_phase": "液体（融解）",
+    "starch_gel": 1.0,
+    "starch_retro": 0,
+    "maillard": 2,
+    "cell_wall": "生",
+    "air": false
+   }
+  },
+  "boiled_potato": {
+   "how": "じゃがいも 200g・塩 1g を 100℃で15分ゆで、鍋で2分ゆすって水気を飛ばす（ゆで湯は材料に入れない。時間は仮）",
+   "state": {
+    "T_core_max": 100.0,
+    "T_surface_max": 100,
+    "T_serve": 100.0,
+    "water": 77.68,
+    "fat": 0.11,
+    "sugar_conc": 0.0,
+    "salt_conc": 0.54,
+    "mass_ratio": 0.92,
+    "starch_gel": 1.0,
+    "starch_retro": 0,
+    "maillard": 0,
+    "cell_wall": "軟化",
+    "air": false
+   }
+  }
+ },
+ "elapsed_s": 11.40554428100586
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "bacon",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 4,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 4
+  },
+  "ingredient": "bacon",
+  "n_recipes": 620,
+  "note": "加熱後",
+  "order": 124,
+  "reviewed": true
+}

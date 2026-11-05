@@ -1,0 +1,17 @@
+{
+  "canonical": "flour",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "flour",
+  "n_recipes": 1348,
+  "note": "",
+  "order": 52,
+  "reviewed": true
+}

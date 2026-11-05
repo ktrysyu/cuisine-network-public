@@ -1,0 +1,25 @@
+{
+  "canonical": "sauce",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 2
+  },
+  "ingredient": "sauce",
+  "mine": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 1,
+    "spicy": 1,
+    "sweet": 2,
+    "umami": 2
+  },
+  "n_recipes": 458,
+  "note": "何のソースか不明。共起は soy sauce・sugar・water が多く、中華系の合わせ調味料が多いと推定",
+  "order": 166,
+  "reviewed": true
+}

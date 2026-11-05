@@ -1,0 +1,17 @@
+{
+  "canonical": "eggplant",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "eggplant",
+  "n_recipes": 501,
+  "note": "加熱後。品種によりアクの苦み",
+  "order": 151,
+  "reviewed": true
+}

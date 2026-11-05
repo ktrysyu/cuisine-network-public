@@ -1,0 +1,17 @@
+{
+  "canonical": "water",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "cold water",
+  "n_recipes": 506,
+  "note": "",
+  "order": 147,
+  "reviewed": true
+}

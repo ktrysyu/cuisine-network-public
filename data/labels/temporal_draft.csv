@@ -1,0 +1,304 @@
+ingredient,ja,onset,linger,first,last,basis
+salt,塩,5.0,1.0,塩,塩,味のスコア 塩5（plan.md の規則、推定）
+onions,玉ねぎ,2.8,3.4,辛,辛,味のスコア 甘1・酸1・旨1・辛2（plan.md の規則、推定）
+olive oil,オリーブオイル,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+water,水,,,,,味が全軸 0（本人が付ける）
+garlic,にんにく,2.7,3.7,甘,辛,味のスコア 甘1・旨1・辛1（plan.md の規則、推定）
+sugar,砂糖,3.7,2.3,甘,甘,味のスコア 甘5・旨1（plan.md の規則、推定）
+garlic cloves,にんにく（片）,2.5,3.8,旨,旨,味のスコア 甘1・旨2・辛1（plan.md の規則、推定）
+butter,バター,4.0,2.0,塩,旨,味のスコア 甘1・塩2・旨1（plan.md の規則、推定）
+ground black pepper,黒胡椒（挽いたもの）,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+all-purpose flour,中力粉（オールパーパス）,,,,,味が全軸 0（本人が付ける）
+pepper,胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+vegetable oil,サラダ油（植物油）,,,,,味が全軸 0（本人が付ける）
+eggs,卵,2.0,4.0,旨,旨,味のスコア 旨1（plan.md の規則、推定）
+soy sauce,醤油,3.7,2.3,塩,旨,味のスコア 甘1・塩5・旨4（plan.md の規則、推定）
+kosher salt,コーシャーソルト（粗塩）,4.5,1.5,塩,塩,味のスコア 塩5・旨1（plan.md の規則、推定）
+green onions,青ねぎ,2.0,5.0,辛,辛,味のスコア 辛2（plan.md の規則、推定）
+tomatoes,トマト,3.3,2.3,甘,旨,味のスコア 甘2・酸2・旨2（plan.md の規則、推定）
+large eggs,卵（Lサイズ）,2.0,4.0,旨,旨,味のスコア 旨1（plan.md の規則、推定）
+carrots,にんじん,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+unsalted butter,無塩バター,2.7,3.3,旨,旨,味のスコア 甘1・旨2（plan.md の規則、推定）
+extra-virgin olive oil,エクストラバージンオリーブオイル,1.5,5.0,辛,苦,味のスコア 苦1・辛1（plan.md の規則、推定）
+ground cumin,クミンパウダー,1.6,5.0,辛,辛,味のスコア 苦2・辛3（plan.md の規則、推定）
+black pepper,黒胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+milk,牛乳,3.3,2.7,甘,甘,味のスコア 甘2・旨1（plan.md の規則、推定）
+chili powder,チリパウダー,2.5,4.0,塩,辛,味のスコア 塩1・苦1・辛2（plan.md の規則、推定）
+oil,油,,,,,味が全軸 0（本人が付ける）
+red bell pepper,赤パプリカ,3.2,2.8,甘,甘,味のスコア 甘3・苦1（plan.md の規則、推定）
+purple onion,紫玉ねぎ,3.0,3.2,辛,辛,味のスコア 甘1・酸1・辛2（plan.md の規則、推定）
+scallions,青ねぎ（スキャリオン）,2.2,4.2,辛,辛,味のスコア 甘1・苦1・辛2（plan.md の規則、推定）
+grated parmesan cheese,粉チーズ（パルメザン）,3.4,2.5,塩,旨,味のスコア 塩4・酸1・旨5（plan.md の規則、推定）
+sesame oil,ごま油,1.5,4.5,旨,苦,味のスコア 苦1・旨1（plan.md の規則、推定）
+corn starch,コーンスターチ,,,,,味が全軸 0（本人が付ける）
+ginger,生姜,2.0,5.0,辛,辛,味のスコア 辛3（plan.md の規則、推定）
+baking powder,ベーキングパウダー,3.0,3.0,塩,苦,味のスコア 塩1・苦1（plan.md の規則、推定）
+jalapeno chilies,ハラペーニョ,1.8,5.0,辛,辛,味のスコア 苦1・辛3（plan.md の規則、推定）
+dried oregano,乾燥オレガノ,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+chopped cilantro fresh,パクチー（刻み）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+fresh lemon juice,レモン汁（生搾り）,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+diced tomatoes,カットトマト（缶）,3.6,2.0,酸,旨,味のスコア 甘2・塩1・酸3・旨2（plan.md の規則、推定）
+fresh parsley,パセリ（生）,1.0,5.0,苦,苦,味のスコア 苦2（plan.md の規則、推定）
+minced garlic,にんにく（みじん切り）,2.7,3.7,甘,辛,味のスコア 甘1・旨1・辛1（plan.md の規則、推定）
+chicken broth,チキンブロス,3.5,2.5,塩,旨,味のスコア 塩3・旨3（plan.md の規則、推定）
+sour cream,サワークリーム,3.3,2.2,酸,旨,味のスコア 甘1・酸3・旨2（plan.md の規則、推定）
+cayenne pepper,カイエンペッパー,1.8,5.0,辛,辛,味のスコア 苦1・辛5（plan.md の規則、推定）
+brown sugar,ブラウンシュガー,3.5,2.5,甘,甘,味のスコア 甘5・苦1（plan.md の規則、推定）
+fresh ginger,生姜（生）,2.0,5.0,辛,辛,味のスコア 辛3（plan.md の規則、推定）
+cooking spray,料理用オイルスプレー,,,,,味が全軸 0（本人が付ける）
+shallots,エシャロット,3.2,2.8,甘,辛,味のスコア 甘2・酸1・旨1・辛1（plan.md の規則、推定）
+garlic powder,ガーリックパウダー,2.2,4.0,甘,苦,味のスコア 甘1・苦1・旨1・辛1（plan.md の規則、推定）
+lime,ライム,3.5,1.7,酸,酸,味のスコア 酸5・苦1（plan.md の規則、推定）
+lemon juice,レモン汁,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+fresh lime juice,ライム汁（生搾り）,3.5,1.7,酸,酸,味のスコア 酸5・苦1（plan.md の規則、推定）
+flour,小麦粉,,,,,味が全軸 0（本人が付ける）
+honey,はちみつ,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+vanilla extract,バニラエッセンス,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+paprika,パプリカパウダー,2.3,4.0,甘,苦,味のスコア 甘1・苦1・辛1（plan.md の規則、推定）
+chopped onion,玉ねぎ（みじん切り）,3.6,2.0,甘,甘,味のスコア 甘2・酸2・旨1（plan.md の規則、推定）
+fish sauce,魚醤（ナンプラー）,3.5,2.5,塩,旨,味のスコア 塩5・旨5（plan.md の規則、推定）
+ground cinnamon,シナモンパウダー,2.0,4.2,甘,苦,味のスコア 甘1・苦2・辛1（plan.md の規則、推定）
+avocado,アボカド,2.0,4.0,旨,旨,味のスコア 旨1（plan.md の規則、推定）
+canola oil,キャノーラ油,,,,,味が全軸 0（本人が付ける）
+dry white wine,辛口白ワイン,3.2,2.0,酸,苦,味のスコア 酸3・苦1（plan.md の規則、推定）
+lemon,レモン,3.5,1.7,酸,酸,味のスコア 酸5・苦1（plan.md の規則、推定）
+rice vinegar,米酢,4.0,1.2,酸,酸,味のスコア 甘1・酸4（plan.md の規則、推定）
+yellow onion,黄玉ねぎ,3.3,2.7,甘,甘,味のスコア 甘2・旨1（plan.md の規則、推定）
+green bell pepper,ピーマン,2.0,4.0,甘,苦,味のスコア 甘1・苦2（plan.md の規則、推定）
+cilantro leaves,パクチーの葉,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+tomato paste,トマトペースト,3.1,2.6,酸,旨,味のスコア 甘2・塩1・酸3・苦1・旨4（plan.md の規則、推定）
+heavy cream,生クリーム（乳脂肪高め）,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+cilantro,パクチー,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+fresh basil,バジル（生）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+boneless skinless chicken breasts,鶏むね肉（皮なし骨なし）,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+flat leaf parsley,イタリアンパセリ,1.0,5.0,苦,苦,味のスコア 苦2（plan.md の規則、推定）
+white sugar,白砂糖,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+lime juice,ライム汁,3.5,1.7,酸,酸,味のスコア 酸5・苦1（plan.md の規則、推定）
+chicken stock,チキンストック,3.2,2.8,塩,旨,味のスコア 塩2・旨3（plan.md の規則、推定）
+bay leaves,ローリエ,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+potatoes,じゃがいも,3.0,3.0,甘,旨,味のスコア 甘1・旨1（plan.md の規則、推定）
+chicken,鶏肉,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+corn tortillas,コーントルティーヤ,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+salsa,サルサ,3.6,2.3,酸,辛,味のスコア 甘1・塩2・酸3・旨1・辛2（plan.md の規則、推定）
+cumin,クミン,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+freshly ground pepper,挽きたての胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+ground turmeric,ターメリックパウダー,1.0,5.0,苦,苦,味のスコア 苦3（plan.md の規則、推定）
+baking soda,重曹,3.0,3.0,塩,苦,味のスコア 塩2・苦2（plan.md の規則、推定）
+sea salt,海塩,4.5,1.5,塩,塩,味のスコア 塩5・旨1（plan.md の規則、推定）
+cumin seed,クミンシード,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+garam masala,ガラムマサラ,2.0,4.4,辛,苦,味のスコア 甘1・苦2・辛2（plan.md の規則、推定）
+shrimp,えび,3.2,2.8,甘,旨,味のスコア 甘2・塩1・旨3（plan.md の規則、推定）
+black beans,黒いんげん豆,3.0,3.0,甘,旨,味のスコア 甘1・旨1（plan.md の規則、推定）
+zucchini,ズッキーニ,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+ground beef,牛ひき肉,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+dried thyme,乾燥タイム,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+large garlic cloves,にんにく（大きめの片）,2.5,3.8,旨,旨,味のスコア 甘1・旨2・辛1（plan.md の規則、推定）
+flour tortillas,小麦粉トルティーヤ,5.0,1.0,塩,塩,味のスコア 塩1（plan.md の規則、推定）
+tomato sauce,トマトソース,3.6,2.2,塩,旨,味のスコア 甘2・塩2・酸2・旨3（plan.md の規則、推定）
+buttermilk,バターミルク,4.2,1.2,酸,酸,味のスコア 甘1・塩1・酸3（plan.md の規則、推定）
+plum tomatoes,プラムトマト,3.3,2.3,甘,旨,味のスコア 甘2・酸2・旨2（plan.md の規則、推定）
+coconut milk,ココナッツミルク,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+granulated sugar,グラニュー糖,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+fresh cilantro,パクチー（生）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+bay leaf,ローリエ（1枚）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+celery,セロリ,2.7,3.3,塩,苦,味のスコア 塩1・苦1・旨1（plan.md の規則、推定）
+crushed red pepper,粗挽き唐辛子,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+chopped cilantro,パクチー（刻み）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+chicken breasts,鶏むね肉,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+mayonaise,マヨネーズ,4.0,1.7,塩,旨,味のスコア 甘1・塩2・酸2・旨1（plan.md の規則、推定）
+shredded cheddar cheese,チェダーチーズ（シュレッド）,3.6,2.3,塩,旨,味のスコア 塩3・酸1・旨3（plan.md の規則、推定）
+cucumber,きゅうり,,,,,味が全軸 0（本人が付ける）
+green chilies,青唐辛子,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+ground coriander,コリアンダーパウダー,2.5,3.5,甘,苦,味のスコア 甘1・苦1（plan.md の規則、推定）
+whole milk,牛乳（全乳）,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+red wine vinegar,赤ワインビネガー,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+tumeric,ターメリック,1.0,5.0,苦,苦,味のスコア 苦3（plan.md の規則、推定）
+cinnamon,シナモン,2.0,4.2,甘,苦,味のスコア 甘1・苦2・辛1（plan.md の規則、推定）
+curry powder,カレー粉,2.0,4.4,辛,苦,味のスコア 甘1・苦2・辛2（plan.md の規則、推定）
+worcestershire sauce,ウスターソース,3.6,2.2,塩,旨,味のスコア 甘2・塩3・酸3・旨3・辛1（plan.md の規則、推定）
+white onion,白玉ねぎ,2.7,4.0,辛,辛,味のスコア 甘1・辛2（plan.md の規則、推定）
+ground ginger,ジンジャーパウダー,1.6,5.0,辛,辛,味のスコア 苦2・辛3（plan.md の規則、推定）
+sesame seeds,ごま,2.3,3.7,甘,苦,味のスコア 甘1・苦1・旨1（plan.md の規則、推定）
+hot sauce,ホットソース,3.3,2.8,酸,辛,味のスコア 塩2・酸3・辛4（plan.md の規則、推定）
+red pepper flakes,赤唐辛子フレーク,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+cinnamon sticks,シナモンスティック,2.0,4.2,甘,苦,味のスコア 甘1・苦2・辛1（plan.md の規則、推定）
+red chili peppers,赤唐辛子,2.0,5.0,辛,辛,味のスコア 辛4（plan.md の規則、推定）
+bacon,ベーコン,3.6,2.4,塩,旨,味のスコア 甘1・塩4・旨4（plan.md の規則、推定）
+whipping cream,ホイップ用生クリーム,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+boneless skinless chicken breast halves,鶏むね肉（半身・皮なし骨なし）,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+peanut oil,ピーナッツ油,,,,,味が全軸 0（本人が付ける）
+ground nutmeg,ナツメグパウダー,2.0,4.2,甘,苦,味のスコア 甘1・苦2・辛1（plan.md の規則、推定）
+clove,クローブ,1.5,5.0,辛,苦,味のスコア 苦3・辛3（plan.md の規則、推定）
+parmesan cheese,パルメザンチーズ,3.4,2.5,塩,旨,味のスコア 塩4・酸1・旨5（plan.md の規則、推定）
+dried basil,乾燥バジル,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+peeled fresh ginger,生姜（皮むき）,2.0,5.0,辛,辛,味のスコア 辛3（plan.md の規則、推定）
+coarse salt,粗塩,5.0,1.0,塩,塩,味のスコア 塩5（plan.md の規則、推定）
+mushrooms,マッシュルーム,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+warm water,ぬるま湯,,,,,味が全軸 0（本人が付ける）
+large egg yolks,卵黄（Lサイズ）,2.7,3.3,旨,旨,味のスコア 甘1・旨2（plan.md の規則、推定）
+balsamic vinegar,バルサミコ酢,3.7,1.7,酸,酸,味のスコア 甘2・酸4・旨1（plan.md の規則、推定）
+celery ribs,セロリの茎,2.7,3.3,塩,苦,味のスコア 塩1・苦1・旨1（plan.md の規則、推定）
+cream cheese,クリームチーズ,4.4,1.2,塩,塩,味のスコア 甘1・塩2・酸2（plan.md の規則、推定）
+white vinegar,ホワイトビネガー,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+egg yolks,卵黄,2.7,3.3,旨,旨,味のスコア 甘1・旨2（plan.md の規則、推定）
+capers,ケッパー,3.9,1.9,塩,苦,味のスコア 塩4・酸3・苦1・辛1（plan.md の規則、推定）
+ground red pepper,赤唐辛子パウダー,1.8,5.0,辛,辛,味のスコア 苦1・辛5（plan.md の規則、推定）
+onion powder,オニオンパウダー,2.8,3.2,甘,苦,味のスコア 甘2・苦1・旨1（plan.md の規則、推定）
+dijon mustard,ディジョンマスタード,3.3,2.8,塩,辛,味のスコア 塩3・酸3・苦1・辛4（plan.md の規則、推定）
+rice,米,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+cold water,冷水,,,,,味が全軸 0（本人が付ける）
+crushed red pepper flakes,赤唐辛子フレーク（粗挽き）,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+mirin,みりん,3.6,2.4,甘,甘,味のスコア 甘4・旨1（plan.md の規則、推定）
+fresh basil leaves,バジルの葉（生）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+eggplant,なす,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+powdered sugar,粉砂糖,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+large egg whites,卵白（Lサイズ）,,,,,味が全軸 0（本人が付ける）
+cooking oil,料理用油,,,,,味が全軸 0（本人が付ける）
+lime wedges,くし切りライム,3.5,1.7,酸,酸,味のスコア 酸5・苦1（plan.md の規則、推定）
+shredded mozzarella cheese,モッツァレラチーズ（シュレッド）,3.7,2.2,塩,旨,味のスコア 甘1・塩2・酸1・旨2（plan.md の規則、推定）
+fat free less sodium chicken broth,チキンブロス（無脂肪・減塩）,2.8,3.2,旨,旨,味のスコア 塩1・旨3（plan.md の規則、推定）
+ground pork,豚ひき肉,2.7,3.3,旨,旨,味のスコア 甘1・旨2（plan.md の規則、推定）
+sliced green onions,青ねぎ（小口切り）,2.7,4.0,辛,辛,味のスコア 甘1・辛2（plan.md の規則、推定）
+cayenne,カイエン,1.8,5.0,辛,辛,味のスコア 苦1・辛5（plan.md の規則、推定）
+mozzarella cheese,モッツァレラチーズ,3.8,2.0,塩,旨,味のスコア 甘1・塩1・酸1・旨1（plan.md の規則、推定）
+medium shrimp,えび（中）,3.2,2.8,甘,旨,味のスコア 甘2・塩1・旨3（plan.md の規則、推定）
+raisins,レーズン,4.0,1.8,甘,甘,味のスコア 甘5・酸1（plan.md の規則、推定）
+red pepper,赤唐辛子／赤パプリカ,2.7,4.0,辛,辛,味のスコア 甘1・辛2（plan.md の規則、推定）
+coriander,コリアンダー,2.5,3.5,甘,苦,味のスコア 甘1・苦1（plan.md の規則、推定）
+sauce,ソース,3.7,2.3,塩,旨,味のスコア 甘2・塩3・酸1・旨2・辛1（plan.md の規則、推定）
+finely chopped onion,玉ねぎ（細かいみじん切り）,3.3,2.7,甘,甘,味のスコア 甘2・旨1（plan.md の規則、推定）
+oyster sauce,オイスターソース,3.5,2.5,塩,旨,味のスコア 甘2・塩4・旨5（plan.md の規則、推定）
+sweet potatoes,さつまいも,4.0,2.0,甘,甘,味のスコア 甘4（plan.md の規則、推定）
+beansprouts,もやし,,,,,味が全軸 0（本人が付ける）
+black peppercorns,黒胡椒（ホール）,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+crushed tomatoes,クラッシュトマト（缶）,3.6,2.0,酸,旨,味のスコア 甘2・塩1・酸3・旨2（plan.md の規則、推定）
+egg whites,卵白,,,,,味が全軸 0（本人が付ける）
+cheese,チーズ,3.6,2.3,塩,旨,味のスコア 塩3・酸1・旨3（plan.md の規則、推定）
+fresh rosemary,ローズマリー（生）,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+oregano,オレガノ,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+white pepper,白胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+cherry tomatoes,ミニトマト,3.5,2.1,甘,旨,味のスコア 甘3・酸3・旨2（plan.md の規則、推定）
+leeks,リーキ（西洋ねぎ）,3.3,2.7,甘,甘,味のスコア 甘2・旨1（plan.md の規則、推定）
+ketchup,ケチャップ,3.8,1.9,甘,甘,味のスコア 甘4・塩2・酸3・旨2（plan.md の規則、推定）
+hoisin sauce,海鮮醤,3.9,2.0,甘,甘,味のスコア 甘4・塩3・酸1・旨2（plan.md の規則、推定）
+chopped celery,セロリ（刻み）,2.2,3.8,塩,苦,味のスコア 塩1・苦2・旨1（plan.md の規則、推定）
+low sodium soy sauce,減塩醤油,3.6,2.4,塩,旨,味のスコア 甘1・塩4・旨4（plan.md の規則、推定）
+cheddar cheese,チェダーチーズ,3.6,2.3,塩,旨,味のスコア 塩3・酸1・旨3（plan.md の規則、推定）
+light brown sugar,ブラウンシュガー（ライト）,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+cabbage,キャベツ,3.0,3.0,甘,苦,味のスコア 甘2・苦1（plan.md の規則、推定）
+fresh mint,ミント（生）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+large shrimp,えび（大）,3.2,2.8,甘,旨,味のスコア 甘2・塩1・旨3（plan.md の規則、推定）
+vegetable broth,野菜ブロス,3.8,2.2,塩,旨,味のスコア 甘1・塩3・旨2（plan.md の規則、推定）
+cracked black pepper,粗挽き黒胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+spring onions,葉玉ねぎ（スプリングオニオン）,2.7,4.0,辛,辛,味のスコア 甘1・辛2（plan.md の規則、推定）
+peanuts,ピーナッツ,2.2,3.8,旨,旨,味のスコア 甘1・苦1・旨2（plan.md の規則、推定）
+chickpeas,ひよこ豆,3.0,3.0,甘,旨,味のスコア 甘1・旨1（plan.md の規則、推定）
+confectioners sugar,粉砂糖（コンフェクショナーズ）,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+coriander seeds,コリアンダーシード,2.5,3.5,甘,苦,味のスコア 甘1・苦1（plan.md の規則、推定）
+italian seasoning,イタリアンシーズニング,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+fresh oregano,オレガノ（生）,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+bell pepper,パプリカ（ピーマン類）,2.3,4.0,甘,苦,味のスコア 甘1・苦1・辛1（plan.md の規則、推定）
+cooked rice,ご飯（炊いた米）,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+lean ground beef,牛ひき肉（赤身）,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+ground pepper,挽いた胡椒,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+low salt chicken broth,チキンブロス（減塩）,2.8,3.2,旨,旨,味のスコア 塩1・旨3（plan.md の規則、推定）
+frozen peas,冷凍グリーンピース,3.5,2.5,甘,甘,味のスコア 甘3・旨1（plan.md の規則、推定）
+beef broth,ビーフブロス,3.3,2.7,塩,旨,味のスコア 塩3・旨4（plan.md の規則、推定）
+active dry yeast,ドライイースト,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+cajun seasoning,ケイジャンシーズニング,3.3,2.9,塩,辛,味のスコア 塩4・酸1・苦1・旨1・辛3（plan.md の規則、推定）
+chopped fresh thyme,タイム（生・刻み）,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+green pepper,ピーマン（青）,2.0,4.0,甘,苦,味のスコア 甘1・苦2（plan.md の規則、推定）
+ground cloves,クローブパウダー,1.5,5.0,辛,苦,味のスコア 苦3・辛3（plan.md の規則、推定）
+cornmeal,コーンミール,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+white wine,白ワイン,3.4,2.0,酸,苦,味のスコア 甘1・酸3・苦1（plan.md の規則、推定）
+spinach,ほうれん草,1.5,4.5,旨,苦,味のスコア 苦1・旨1（plan.md の規則、推定）
+ground allspice,オールスパイス,1.5,5.0,辛,苦,味のスコア 苦2・辛2（plan.md の規則、推定）
+lemongrass,レモングラス,2.5,3.0,酸,苦,味のスコア 酸1・苦1（plan.md の規則、推定）
+plain yogurt,プレーンヨーグルト,4.0,1.2,酸,酸,味のスコア 甘1・酸3（plan.md の規則、推定）
+thyme,タイム,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+feta cheese crumbles,フェタチーズ（崩したもの）,4.0,1.7,塩,旨,味のスコア 塩4・酸3・旨2（plan.md の規則、推定）
+hot water,お湯,,,,,味が全軸 0（本人が付ける）
+orange,オレンジ,4.0,1.7,甘,甘,味のスコア 甘4・酸2（plan.md の規則、推定）
+toasted sesame oil,焙煎ごま油,1.5,4.5,旨,苦,味のスコア 苦1・旨1（plan.md の規則、推定）
+long-grain rice,長粒米,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+parmigiano reggiano cheese,パルミジャーノ・レッジャーノ,3.4,2.5,塩,旨,味のスコア 塩4・酸1・旨5（plan.md の規則、推定）
+fennel seeds,フェンネルシード,3.0,3.0,甘,苦,味のスコア 甘2・苦1（plan.md の規則、推定）
+ricotta cheese,リコッタチーズ,4.3,1.7,甘,甘,味のスコア 甘2・塩1（plan.md の規則、推定）
+white wine vinegar,白ワインビネガー,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+boiling water,熱湯,,,,,味が全軸 0（本人が付ける）
+cider vinegar,りんご酢,4.0,1.2,酸,酸,味のスコア 甘1・酸5（plan.md の規則、推定）
+ground white pepper,白胡椒（挽いたもの）,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+pinenuts,松の実,2.3,3.7,甘,苦,味のスコア 甘1・苦1・旨1（plan.md の規則、推定）
+light soy sauce,薄口醤油,3.9,2.1,塩,旨,味のスコア 塩5・旨3（plan.md の規則、推定）
+chopped garlic,にんにく（刻み）,2.7,3.7,甘,辛,味のスコア 甘1・旨1・辛1（plan.md の規則、推定）
+fresh thyme,タイム（生）,1.3,5.0,苦,苦,味のスコア 苦2・辛1（plan.md の規則、推定）
+parsley,パセリ,1.0,5.0,苦,苦,味のスコア 苦2（plan.md の規則、推定）
+sake,酒,2.6,3.2,旨,旨,味のスコア 甘1・酸1・苦1・旨2（plan.md の規則、推定）
+smoked paprika,スモークパプリカ,2.3,4.0,甘,苦,味のスコア 甘1・苦1・辛1（plan.md の規則、推定）
+boneless chicken skinless thigh,鶏もも肉（皮なし骨なし）,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+grated lemon zest,レモンの皮（すりおろし）,2.0,3.7,酸,苦,味のスコア 酸1・苦2（plan.md の規則、推定）
+spaghetti,スパゲッティ,,,,,味が全軸 0（本人が付ける）
+green beans,さやいんげん,2.5,3.5,甘,苦,味のスコア 甘1・苦1（plan.md の規則、推定）
+yellow corn meal,コーンミール（黄）,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+chile pepper,唐辛子,1.8,5.0,辛,辛,味のスコア 苦1・辛3（plan.md の規則、推定）
+low sodium chicken broth,チキンブロス（減塩）,2.8,3.2,旨,旨,味のスコア 塩1・旨3（plan.md の規則、推定）
+fresh ginger root,生姜（根）,2.0,5.0,辛,辛,味のスコア 辛3（plan.md の規則、推定）
+orange juice,オレンジジュース,4.0,1.7,甘,甘,味のスコア 甘4・酸2（plan.md の規則、推定）
+half & half,ハーフ＆ハーフ（牛乳と生クリームの混合）,4.0,2.0,甘,甘,味のスコア 甘2（plan.md の規則、推定）
+chicken thighs,鶏もも肉,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+sweet onion,甘玉ねぎ,3.5,2.5,甘,甘,味のスコア 甘3・旨1（plan.md の規則、推定）
+chopped parsley,パセリ（刻み）,1.0,5.0,苦,苦,味のスコア 苦2（plan.md の規則、推定）
+shiitake,しいたけ,2.0,4.0,旨,旨,味のスコア 旨4（plan.md の規則、推定）
+corn,とうもろこし,3.6,2.4,甘,甘,味のスコア 甘4・旨1（plan.md の規則、推定）
+basmati rice,バスマティライス,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+shredded monterey jack cheese,モントレージャックチーズ（シュレッド）,3.7,2.2,塩,旨,味のスコア 甘1・塩2・酸1・旨2（plan.md の規則、推定）
+tomatillos,トマティーヨ,4.0,1.2,酸,酸,味のスコア 甘1・酸4（plan.md の規則、推定）
+chiles,唐辛子（チレ）,1.8,5.0,辛,辛,味のスコア 苦1・辛3（plan.md の規則、推定）
+pasta,パスタ,,,,,味が全軸 0（本人が付ける）
+dark brown sugar,ブラウンシュガー（ダーク）,3.5,2.5,甘,甘,味のスコア 甘5・苦1（plan.md の規則、推定）
+chopped fresh mint,ミント（生・刻み）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+vinegar,酢,4.0,1.0,酸,酸,味のスコア 酸5（plan.md の規則、推定）
+mustard seeds,マスタードシード,1.5,5.0,辛,苦,味のスコア 苦2・辛2（plan.md の規則、推定）
+dark soy sauce,老抽（中国のたまり醤油）,3.5,2.5,塩,旨,味のスコア 甘2・塩4・苦1・旨3（plan.md の規則、推定）
+vanilla,バニラ,3.0,3.0,甘,苦,味のスコア 甘2・苦1（plan.md の規則、推定）
+dry red wine,辛口赤ワイン,2.2,3.4,酸,苦,味のスコア 酸2・苦3（plan.md の規則、推定）
+ghee,ギー,3.0,3.0,甘,旨,味のスコア 甘1・旨1（plan.md の規則、推定）
+bread crumbs,パン粉,4.5,1.5,塩,甘,味のスコア 甘1・塩1（plan.md の規則、推定）
+hot pepper sauce,ホットペッパーソース,3.3,2.8,酸,辛,味のスコア 塩2・酸3・辛4（plan.md の規則、推定）
+green chile,青唐辛子（チレ）,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+tortilla chips,トルティーヤチップス,5.0,1.0,塩,塩,味のスコア 塩3（plan.md の規則、推定）
+pork,豚肉,2.7,3.3,旨,旨,味のスコア 甘1・旨2（plan.md の規則、推定）
+serrano chile,セラーノ唐辛子,1.8,5.0,辛,辛,味のスコア 苦1・辛4（plan.md の規則、推定）
+chopped tomatoes,トマト（刻み）,3.3,2.3,甘,旨,味のスコア 甘2・酸2・旨2（plan.md の規則、推定）
+sriracha,シラチャーソース,3.3,2.9,塩,辛,味のスコア 甘2・塩2・酸2・旨1・辛4（plan.md の規則、推定）
+cooked chicken,加熱済み鶏肉,2.0,4.0,旨,旨,味のスコア 旨2（plan.md の規則、推定）
+enchilada sauce,エンチラーダソース,3.0,3.1,塩,辛,味のスコア 甘1・塩2・酸1・苦1・旨2・辛2（plan.md の規則、推定）
+toasted sesame seeds,炒りごま,2.3,3.7,甘,苦,味のスコア 甘1・苦1・旨1（plan.md の規則、推定）
+arborio rice,アルボリオ米（リゾット用）,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+yellow bell pepper,黄パプリカ,4.0,2.0,甘,甘,味のスコア 甘3（plan.md の規則、推定）
+dry bread crumbs,乾燥パン粉,4.5,1.5,塩,甘,味のスコア 甘1・塩1（plan.md の規則、推定）
+fresh parmesan cheese,パルメザンチーズ（生）,3.4,2.5,塩,旨,味のスコア 塩4・酸1・旨5（plan.md の規則、推定）
+fine sea salt,海塩（細粒）,4.5,1.5,塩,塩,味のスコア 塩5・旨1（plan.md の規則、推定）
+fresh coriander,パクチー（生）,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+prosciutto,生ハム（プロシュート）,3.7,2.3,塩,旨,味のスコア 甘1・塩5・旨4（plan.md の規則、推定）
+basil,バジル,1.0,5.0,苦,苦,味のスコア 苦1（plan.md の規則、推定）
+chopped pecans,ピーカンナッツ（刻み）,3.0,3.0,甘,苦,味のスコア 甘2・苦1（plan.md の規則、推定）
+garlic paste,にんにくペースト,2.7,3.7,甘,辛,味のスコア 甘1・旨1・辛1（plan.md の規則、推定）
+radishes,ラディッシュ,1.7,5.0,辛,辛,味のスコア 苦1・辛2（plan.md の規則、推定）
+corn kernels,コーン（粒）,3.6,2.4,甘,甘,味のスコア 甘4・旨1（plan.md の規則、推定）
+juice,果汁,3.7,1.8,酸,甘,味のスコア 甘2・酸3・旨1（plan.md の規則、推定）
+long grain white rice,長粒米（白）,4.0,2.0,甘,甘,味のスコア 甘1（plan.md の規則、推定）
+saffron threads,サフラン,1.0,5.0,苦,苦,味のスコア 苦3（plan.md の規則、推定）
+creole seasoning,クレオールシーズニング,3.4,2.9,塩,辛,味のスコア 塩4・苦1・旨1・辛2（plan.md の規則、推定）
+melted butter,溶かしバター,4.0,2.0,塩,旨,味のスコア 甘1・塩2・旨1（plan.md の規則、推定）
+beef,牛肉,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+fresh mushrooms,マッシュルーム（生）,2.0,4.0,旨,旨,味のスコア 旨3（plan.md の規則、推定）
+sweetened condensed milk,加糖練乳,4.0,2.0,甘,甘,味のスコア 甘5（plan.md の規則、推定）
+taco seasoning,タコスシーズニング,3.3,3.0,塩,辛,味のスコア 甘1・塩4・苦1・旨1・辛3（plan.md の規則、推定）
+baguette,バゲット,3.7,2.3,塩,旨,味のスコア 甘1・塩1・旨1（plan.md の規則、推定）
+romaine lettuce,ロメインレタス,2.5,3.5,甘,苦,味のスコア 甘1・苦1（plan.md の規則、推定）
+apple cider vinegar,りんご酢（アップルサイダー）,4.0,1.2,酸,酸,味のスコア 甘1・酸5（plan.md の規則、推定）
+chopped green bell pepper,ピーマン（刻み）,2.0,4.0,甘,苦,味のスコア 甘1・苦2（plan.md の規則、推定）
+feta cheese,フェタチーズ,4.0,1.7,塩,旨,味のスコア 塩4・酸3・旨2（plan.md の規則、推定）
+mango,マンゴー,4.0,1.8,甘,甘,味のスコア 甘5・酸1（plan.md の規則、推定）
+okra,オクラ,,,,,味が全軸 0（本人が付ける）

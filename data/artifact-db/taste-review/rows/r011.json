@@ -1,0 +1,17 @@
+{
+  "canonical": "vegetable oil",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "vegetable oil",
+  "n_recipes": 4385,
+  "note": "",
+  "order": 11,
+  "reviewed": true
+}

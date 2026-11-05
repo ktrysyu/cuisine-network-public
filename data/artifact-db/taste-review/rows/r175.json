@@ -1,0 +1,17 @@
+{
+  "canonical": "rosemary",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh rosemary",
+  "n_recipes": 442,
+  "note": "",
+  "order": 175,
+  "reviewed": true
+}

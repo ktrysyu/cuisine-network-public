@@ -1,0 +1,17 @@
+{
+  "canonical": "hot sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 3,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "hot pepper sauce",
+  "n_recipes": 306,
+  "note": "",
+  "order": 265,
+  "reviewed": true
+}

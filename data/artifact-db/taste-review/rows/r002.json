@@ -1,0 +1,25 @@
+{
+  "canonical": "olive oil",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "olive oil",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 7971,
+  "note": "精製度で苦み・喉の刺激が変わる。脂のコクは6軸外",
+  "order": 2,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "chicken",
+  "n_recipes": 982,
+  "note": "部位不明。加熱後",
+  "order": 78,
+  "reviewed": true
+}

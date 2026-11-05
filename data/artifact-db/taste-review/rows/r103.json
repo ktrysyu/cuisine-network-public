@@ -1,0 +1,17 @@
+{
+  "canonical": "red pepper flakes",
+  "confidence": "high",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "crushed red pepper",
+  "n_recipes": 825,
+  "note": "",
+  "order": 103,
+  "reviewed": true
+}

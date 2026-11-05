@@ -1,0 +1,17 @@
+{
+  "canonical": "chile pepper",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "jalapeno chilies",
+  "n_recipes": 1730,
+  "note": "個体差が大きい（辛2〜4）",
+  "order": 34,
+  "reviewed": true
+}

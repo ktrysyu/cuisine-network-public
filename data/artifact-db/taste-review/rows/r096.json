@@ -1,0 +1,17 @@
+{
+  "canonical": "buttermilk",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "buttermilk",
+  "n_recipes": 863,
+  "note": "",
+  "order": 96,
+  "reviewed": true
+}

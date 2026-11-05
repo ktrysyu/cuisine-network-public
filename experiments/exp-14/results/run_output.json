@@ -1,0 +1,3336 @@
+{
+ "no_match_below": 0.6,
+ "dishes": {
+  "until": {
+   "scrambled_eggs": {
+    "dish": "scrambled_eggs",
+    "ja": "スクランブルエッグ",
+    "recipe": "[egg_whole 100g + milk 20g + butter 10g + salt 1g] → whisk(time=1) → bake(T=110, stirring=True, form=thin, until={'var': 'egg_gel_stage', 'ge': 2}, max_time=10)",
+    "note": "弱火で混ぜながら、卵液がやわらかく固まる（egg_gel_stage 2）まで。「固まりかけたら火から下ろす」",
+    "answer": "scrambled_eggs",
+    "no_match": false,
+    "top": [
+     [
+      "scrambled_eggs",
+      "スクランブルエッグ",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 2,
+      "until": "egg_gel_stage≧2",
+      "reached": true,
+      "minutes": 1.8,
+      "max_time": 10
+     }
+    ],
+    "state": {
+     "T_core_max": 73.41,
+     "T_surface_max": 73.41,
+     "T_serve": 73.41,
+     "water": 71.83,
+     "fat": 14.55,
+     "sugar_conc": 0.73,
+     "salt_conc": 0.92,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 76.34,
+     "egg_white_stage": 2,
+     "egg_yolk_stage": 2,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "小片（カード）",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "maillard": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E07 egg_gel_stage→1（薄めない卵）",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E20 撹拌しながら固まった→小片（カード）",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-D02 乳清たんぱく質が変性",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌) R-E07 egg_gel_stage→2（薄めない卵）",
+     "2:heat(pan,110℃,until egg_gel_stage≧2,撹拌)→1.8min until egg_gel_stage≧2 に 1.80分で到達"
+    ]
+   },
+   "omelet": {
+    "dish": "omelet",
+    "ja": "オムレツ（プレーン）",
+    "recipe": "[egg_whole 150g + butter 10g + salt 1g] → whisk(time=1) → bake(T=180, form=thin, until={'var': 'egg_gel_stage', 'ge': 1}, max_time=5)",
+    "note": "高温で混ぜずに、内側にとろみが出る（egg_gel_stage 1）まで。「中が半熟のうちに火から下ろす」",
+    "answer": "omelet",
+    "no_match": false,
+    "top": [
+     [
+      "omelet",
+      "オムレツ（プレーン）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 2,
+      "until": "egg_gel_stage≧1",
+      "reached": true,
+      "minutes": 0.8,
+      "max_time": 5
+     }
+    ],
+    "state": {
+     "T_core_max": 72.75,
+     "T_surface_max": 100.0,
+     "T_serve": 72.75,
+     "water": 70.88,
+     "fat": 14.53,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.74,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 93.17,
+     "egg_white_stage": 2,
+     "egg_yolk_stage": 2,
+     "egg_gel_stage": 1,
+     "egg_gel_stage_surface": 3,
+     "gel_structure": "外側連続・内側半流動",
+     "porosity": 0,
+     "fat_phase": "液体（融解）",
+     "maillard": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,180℃,until egg_gel_stage≧1) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,180℃,until egg_gel_stage≧1) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,180℃,until egg_gel_stage≧1) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,180℃,until egg_gel_stage≧1) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,180℃,until egg_gel_stage≧1) R-E07 egg_gel_stage→1（薄めない卵）",
+     "2:heat(pan,180℃,until egg_gel_stage≧1)→0.8min until egg_gel_stage≧1 に 0.80分で到達"
+    ]
+   },
+   "custard_pudding": {
+    "dish": "custard_pudding",
+    "ja": "プリン",
+    "recipe": "[egg_whole 100g + milk 250g + sugar 40g] → whisk(time=1) → steam(T=88, form=cup, until={'var': 'egg_gel_stage', 'ge': 2}, max_time=40) → chill(T=5, time=180)",
+    "note": "蒸し器 88℃で、卵液が固まる（egg_gel_stage 2。竹串で澄んだ汁が出る）まで。冷蔵庫で3時間",
+    "answer": "custard_pudding",
+    "no_match": false,
+    "top": [
+     [
+      "custard_pudding",
+      "プリン",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 2,
+      "until": "egg_gel_stage≧2",
+      "reached": true,
+      "minutes": 10.8,
+      "max_time": 40
+     }
+    ],
+    "state": {
+     "T_core_max": 80.16,
+     "T_surface_max": 88,
+     "T_serve": 5.01,
+     "water": 75.33,
+     "fat": 5.05,
+     "sugar_conc": 13.26,
+     "salt_conc": 0.06,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 25.64,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→1",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→2",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→1",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→2",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-D02 乳清たんぱく質が変性",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→3",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→3",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E09 egg_gel_stage→2（薄めた卵液）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2)→11min until egg_gel_stage≧2 に 10.80分で到達"
+    ]
+   },
+   "chawanmushi": {
+    "dish": "chawanmushi",
+    "ja": "茶碗蒸し",
+    "recipe": "[egg_whole 50g + dashi 150g + salt 1.2g] → mix(strength=中, time=1) → steam(T=88, form=cup, until={'var': 'egg_gel_stage', 'ge': 2}, max_time=40) → rest(T=25, time=10)",
+    "note": "88℃で、卵液が固まる（egg_gel_stage 2。竹串で澄んだ汁が出る）まで。器ごと10分おく",
+    "answer": "chawanmushi",
+    "no_match": false,
+    "top": [
+     [
+      "chawanmushi",
+      "茶碗蒸し",
+      0.889
+     ]
+    ],
+    "hit": true,
+    "fraction": 0.889,
+    "unmet": [
+     [
+      "T_serve ∈ [60, 70]",
+      58.45,
+      "推定"
+     ]
+    ],
+    "stops": [
+     {
+      "op": 2,
+      "until": "egg_gel_stage≧2",
+      "reached": true,
+      "minutes": 10.8,
+      "max_time": 40
+     }
+    ],
+    "state": {
+     "T_core_max": 80.16,
+     "T_surface_max": 88,
+     "T_serve": 58.45,
+     "water": 92.6,
+     "fat": 2.53,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.67,
+     "mass_ratio": 3.93,
+     "egg_form": "溶き卵",
+     "egg_dilution": 24.85,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:mix(中) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→1",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→2",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→1",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→2",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→3",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→3",
+     "2:heat(steam,88℃,until egg_gel_stage≧2) R-E09 egg_gel_stage→2（薄めた卵液）",
+     "2:heat(steam,88℃,until egg_gel_stage≧2)→11min until egg_gel_stage≧2 に 10.80分で到達"
+    ]
+   },
+   "white_sauce": {
+    "dish": "white_sauce",
+    "ja": "ホワイトソース",
+    "recipe": "[butter 20g + flour 20g] → bake(T=120, time=3, stirring=True, form=thin) → mix(add={'milk': 250, 'salt': 1}, strength=弱, time=1) → simmer(T=100, time=10, stirring=True, form=pot)",
+    "note": "ルーを色づけずに炒め（130℃未満、R-S09）、牛乳でのばして沸騰後10分",
+    "answer": "white_sauce",
+    "no_match": false,
+    "top": [
+     [
+      "white_sauce",
+      "ホワイトソース",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 97.69,
+     "T_surface_max": 97.69,
+     "T_serve": 96.65,
+     "water": 77.16,
+     "fat": 8.93,
+     "sugar_conc": 4.12,
+     "salt_conc": 0.56,
+     "mass_ratio": 1.0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 1,
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "2:mix(弱,+milk+salt) R-G01/G02 gluten→1（弱）",
+     "2:mix(弱,+milk+salt) R-D02 乳清たんぱく質が変性",
+     "2:mix(弱,+milk+salt) R-S01 starch_gel→1.0"
+    ]
+   },
+   "caramel_sauce": {
+    "dish": "caramel_sauce",
+    "ja": "カラメル",
+    "recipe": "[sugar 100g + water 30g] → bake(T=190, stirring=True, form=thin, until={'var': 'caramel', 'ge': 2}, max_time=30) → mix(add={'water': 20}, time=0.5)",
+    "note": "鍋をゆすりながら、褐色（caramel 2）になるまで煮詰め、湯を加えて止める",
+    "answer": "caramel_sauce",
+    "no_match": false,
+    "top": [
+     [
+      "caramel_sauce",
+      "カラメル",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 1,
+      "until": "caramel≧2",
+      "reached": true,
+      "minutes": 9.5,
+      "max_time": 30
+     }
+    ],
+    "state": {
+     "T_core_max": 170.33,
+     "T_surface_max": 170.33,
+     "T_serve": 113.75,
+     "water": 15.08,
+     "fat": 0.0,
+     "sugar_conc": 84.92,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.17,
+     "maillard": 0,
+     "caramel": 2,
+     "syrup_stage": 8,
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→1",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→2",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→3",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→4",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→5",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→6",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→7",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C01 ショ糖 170℃以上 caramel=2",
+     "1:heat(pan,190℃,until caramel≧2,撹拌) R-C05 syrup_stage→8",
+     "1:heat(pan,190℃,until caramel≧2,撹拌)→9.5min until caramel≧2 に 9.50分で到達"
+    ]
+   },
+   "sauteed_onion": {
+    "dish": "sauteed_onion",
+    "ja": "炒め玉ねぎ（あめ色）",
+    "recipe": "[onion 200g + vegetable_oil 10g] → bake(T=170, form=thin, until={'var': 'maillard', 'ge': 2}, max_time=120)",
+    "note": "中火で、色づく（maillard 2＝きつね色。料理の条件は 2〜3）まで",
+    "answer": null,
+    "no_match": true,
+    "top": [
+     [
+      "sauteed_onion",
+      "炒め玉ねぎ（あめ色）",
+      0.556
+     ]
+    ],
+    "hit": false,
+    "fraction": 0.556,
+    "unmet": [
+     [
+      "water ∈ [, 80]",
+      84.69,
+      "大きく減る（R-O01）。生 90.1 から 10 以上減る（推定）"
+     ],
+     [
+      "mass_ratio ∈ [0.2, 0.4]",
+      0.93,
+      "R-O01"
+     ],
+     [
+      "onion_sulfur ∈ {0}",
+      1,
+      "R-O01"
+     ],
+     [
+      "cell_wall ∈ {崩壊（煮崩れ）}",
+      "生",
+      "推定（R-S12 を類推）"
+     ]
+    ],
+    "stops": [
+     {
+      "op": 1,
+      "until": "maillard≧2",
+      "reached": true,
+      "minutes": 3.4,
+      "max_time": 120
+     }
+    ],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 169.42,
+     "T_serve": 100.0,
+     "water": 84.69,
+     "fat": 5.24,
+     "sugar_conc": 6.17,
+     "salt_conc": 0.0,
+     "mass_ratio": 0.93,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "caramel": 2,
+     "onion_sulfur": 1,
+     "cell_wall": "生",
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,170℃,until maillard≧2) R-O01 onion_sulfur→1",
+     "1:heat(pan,170℃,until maillard≧2) R-M01 maillard→1",
+     "1:heat(pan,170℃,until maillard≧2) R-C02 ブドウ糖 160℃以上 caramel=2",
+     "1:heat(pan,170℃,until maillard≧2) R-M01 maillard→2",
+     "1:heat(pan,170℃,until maillard≧2)→3.4min until maillard≧2 に 3.40分で到達"
+    ]
+   },
+   "steamed_rice": {
+    "dish": "steamed_rice",
+    "ja": "ご飯（白飯）",
+    "recipe": "[rice 150g + water 210g] → soak(T=25, time=30) → simmer(T=100, time=35, lid=True, form=pot) → rest(T=90, time=10)",
+    "note": "加水 1.4倍（R-S05）、浸漬30分（R-S06）、炊飯35分（温度上昇10＋沸騰5＋蒸し煮15＋余裕、R-S04）、蒸らし10分",
+    "answer": "steamed_rice",
+    "no_match": false,
+    "top": [
+     [
+      "steamed_rice",
+      "ご飯（白飯）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 100,
+     "T_serve": 94.69,
+     "water": 62.86,
+     "fat": 0.39,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 2.29,
+     "starch_gel": 0.95,
+     "starch_retro": 0,
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "2:heat(water,100℃,35min,蓋) R-S04/S07 starch_gel→0.5",
+     "2:heat(water,100℃,35min,蓋) R-S04/S07 starch_gel→0.95"
+    ]
+   },
+   "pancake": {
+    "dish": "pancake",
+    "ja": "パンケーキ",
+    "recipe": "[flour 100g + egg_whole 50g + milk 100g + sugar 20g + baking_powder 4g + butter 10g] → mix(strength=弱, time=1) → rest(T=20, time=10) → bake(T=190, time=3, form=thin) → bake(T=190, time=3, form=thin)",
+    "note": "さっくり混ぜ、10分寝かせ、鉄板 190℃（R-L03）で片面3分ずつ",
+    "answer": "pancake",
+    "no_match": false,
+    "top": [
+     [
+      "pancake",
+      "パンケーキ",
+      0.875
+     ],
+     [
+      "custard_pudding",
+      "プリン",
+      0.667
+     ]
+    ],
+    "hit": true,
+    "fraction": 0.875,
+    "unmet": [
+     [
+      "egg_gel_stage ∈ {3}",
+      2,
+      "推定"
+     ]
+    ],
+    "stops": [],
+    "state": {
+     "T_core_max": 102.44,
+     "T_surface_max": 188.39,
+     "T_serve": 102.44,
+     "water": 38.9,
+     "fat": 7.92,
+     "sugar_conc": 10.53,
+     "salt_conc": 0.42,
+     "mass_ratio": 0.82,
+     "egg_form": "溶き卵",
+     "egg_dilution": 17.61,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 1,
+     "co2": 2,
+     "maillard": 2,
+     "caramel": 3,
+     "air": true
+    },
+    "trace": [
+     "1:mix(弱) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "1:mix(弱) R-G01/G02 gluten→1（弱）",
+     "1:mix(弱) R-L01 ベーキングパウダー第1段 co2=1",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→1",
+     "3:heat(pan,190℃,3min) R-S01 starch_gel→1.0",
+     "3:heat(pan,190℃,3min) R-L01 ベーキングパウダー第2段 co2=2",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→2",
+     "3:heat(pan,190℃,3min) R-E05..06 egg_yolk_stage→2",
+     "3:heat(pan,190℃,3min) R-D02 乳清たんぱく質が変性",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→3",
+     "3:heat(pan,190℃,3min) R-E05..06 egg_yolk_stage→3",
+     "3:heat(pan,190℃,3min) R-E09 egg_gel_stage→2（薄めた卵液）",
+     "3:heat(pan,190℃,3min) R-M01 maillard→1",
+     "3:heat(pan,190℃,3min) R-C01 ショ糖 170℃以上 caramel=2",
+     "3:heat(pan,190℃,3min) R-C06 180℃以上 焦げ caramel=3",
+     "4:heat(pan,190℃,3min) R-M01 maillard→2"
+    ]
+   },
+   "milk_jelly": {
+    "dish": "milk_jelly",
+    "ja": "牛乳ゼリー",
+    "recipe": "[gelatin 5g + water 25g] → soak(T=15, time=30) → mix(add={'milk': 200, 'sugar': 20}, time=1) → heat(medium=water, T=60, stirring=True, form=pot, until={'var': 'gelatin_state', 'in': ['溶解（ゾル）']}, max_time=30) → chill(T=5, time=180)",
+    "note": "膨潤させたゼラチンと牛乳を湯煎で、ゼラチンが溶ける（gelatin_state ゾル）まで温め、冷蔵3時間",
+    "answer": "milk_jelly",
+    "no_match": false,
+    "top": [
+     [
+      "milk_jelly",
+      "牛乳ゼリー",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 3,
+      "until": "gelatin_state∈{溶解（ゾル）}",
+      "reached": true,
+      "minutes": 4.7,
+      "max_time": 30
+     }
+    ],
+    "state": {
+     "T_core_max": 50.23,
+     "T_surface_max": 50.23,
+     "T_serve": 5.0,
+     "water": 80.2,
+     "fat": 3.05,
+     "sugar_conc": 11.78,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.11,
+     "milk_whey_denatured": 0,
+     "milk_casein": "分散",
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "caramel": 0,
+     "gelatin_state": "ゲル",
+     "gelatin_conc": 2.0,
+     "air": false
+    },
+    "trace": [
+     "1:soak(15℃,30min) R-J01 ゼラチンが膨潤",
+     "3:heat(water,60℃,until gelatin_state∈{溶解（ゾル）},撹拌) R-J02 ゼラチンが溶解",
+     "3:heat(water,60℃,until gelatin_state∈{溶解（ゾル）},撹拌)→4.7min until gelatin_state∈{溶解（ゾル）} に 4.70分で到達",
+     "4:heat(air,5℃,180min) R-J04/J05 ゲル化"
+    ]
+   },
+   "whipped_cream": {
+    "dish": "whipped_cream",
+    "ja": "ホイップクリーム",
+    "recipe": "[heavy_cream 200g + sugar 15g] (初期 8℃) → whisk(time=3, T=10)",
+    "note": "生クリームを品温 7.5〜12.5℃（R-D03 の推奨）に保って3分泡立てる",
+    "answer": "whipped_cream",
+    "no_match": false,
+    "top": [
+     [
+      "whipped_cream",
+      "ホイップクリーム",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 9.19,
+     "T_surface_max": 9.19,
+     "T_serve": 9.19,
+     "water": 44.89,
+     "fat": 40.0,
+     "sugar_conc": 12.97,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.0,
+     "milk_whey_denatured": 0,
+     "milk_casein": "分散",
+     "fat_phase": "部分合一ネットワーク（ホイップ）",
+     "maillard": 0,
+     "caramel": 0,
+     "foam_stage": 2,
+     "T_whisk": 8.71,
+     "air": true
+    },
+    "trace": [
+     "1:whisk(3min,10℃) R-D03/D04 foam_stage→2"
+    ]
+   },
+   "onsen_tamago": {
+    "dish": "onsen_tamago",
+    "ja": "温泉卵",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=68, time=30, form=shell) → rest(T=20, time=15)",
+    "note": "68℃の湯に殻ごと30分（R-E08）。後の手順は書かれていないので室温に15分置く（余熱、rules.md §10）",
+    "answer": "onsen_tamago",
+    "no_match": false,
+    "top": [
+     [
+      "onsen_tamago",
+      "温泉卵",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 67.48,
+     "T_surface_max": 68,
+     "T_white_max": 67.91,
+     "T_serve": 60.7,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 1,
+     "egg_yolk_stage": 2,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,68℃,30min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.10）",
+     "1:heat(water,68℃,30min) Exp-17 egg_white_stage→1（固まった割合 0.00・平均 X 0.10）",
+     "1:heat(water,68℃,30min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.89）"
+    ]
+   },
+   "sauteed_chicken": {
+    "dish": "sauteed_chicken",
+    "ja": "鶏むね肉のソテー",
+    "recipe": "[chicken 200g + vegetable_oil 10g + salt 2g] → bake(T=180, form=piece, until={'var': 'maillard', 'ge': 2}, max_time=15) → bake(T=180, form=piece, until={'var': 'T_core', 'ge': 74}, max_time=20)",
+    "note": "片面を焼き色（maillard 2）がつくまで、返して中心温度が 74℃（R-P05）に達するまで",
+    "answer": "sauteed_chicken",
+    "no_match": false,
+    "top": [
+     [
+      "sauteed_chicken",
+      "鶏むね肉のソテー",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 1,
+      "until": "maillard≧2",
+      "reached": true,
+      "minutes": 3.3,
+      "max_time": 15
+     },
+     {
+      "op": 2,
+      "until": "T_core≧74",
+      "reached": true,
+      "minutes": 0.0,
+      "max_time": 20
+     }
+    ],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 179.2,
+     "T_serve": 100.0,
+     "water": 70.2,
+     "fat": 6.55,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.04,
+     "mass_ratio": 0.99,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 1,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_myosin→1",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_myoglobin→1",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_water_loss→1",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_collagen→1",
+     "1:heat(pan,180℃,until maillard≧2) R-M01 maillard→1",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_myoglobin→2",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_water_loss→2",
+     "1:heat(pan,180℃,until maillard≧2) R-P01..P04 meat_actin→1",
+     "1:heat(pan,180℃,until maillard≧2) R-M01 maillard→2",
+     "1:heat(pan,180℃,until maillard≧2)→3.3min until maillard≧2 に 3.30分で到達",
+     "2:heat(pan,180℃,until T_core≧74)→0min until T_core≧74 に 0.00分で到達（加熱前から満たしていた）"
+    ]
+   },
+   "hard_boiled_egg": {
+    "dish": "hard_boiled_egg",
+    "ja": "ゆで卵（固ゆで）",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=100, time=12, form=shell) → rest(T=20, time=15)",
+    "note": "沸騰した湯で12分（比較用に追加した品）。後の手順は書かれていないので室温に15分置く（余熱、rules.md §10）",
+    "answer": "hard_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "hard_boiled_egg",
+      "ゆで卵（固ゆで）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 89.47,
+     "T_surface_max": 100,
+     "T_white_max": 97.24,
+     "T_serve": 82.41,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(water,100℃,12min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）",
+     "1:heat(water,100℃,12min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.63）",
+     "2:heat(air,20℃,15min) Exp-17 egg_yolk_stage→3（固まった割合 1.00・平均 X 1.00）"
+    ]
+   },
+   "soft_boiled_egg": {
+    "dish": "soft_boiled_egg",
+    "ja": "半熟ゆで卵",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=100, time=6.5, form=shell) → plunge(T=15, time=15)",
+    "note": "沸騰した湯に殻ごと6.5分（Exp-15 R007 の 6〜7分の中央）。R007 の「冷水に移す」で冷水 15℃に15分（余熱、rules.md §10）",
+    "answer": "soft_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "soft_boiled_egg",
+      "半熟ゆで卵",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 62.57,
+     "T_surface_max": 100,
+     "T_white_max": 92.41,
+     "T_serve": 27.71,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 1,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）"
+    ]
+   },
+   "poached_egg": {
+    "dish": "poached_egg",
+    "ja": "ポーチドエッグ",
+    "recipe": "[egg_whole 60g] (卵は割った) → poach(T=80, time=4)",
+    "note": "割った卵を 80℃の湯に落として4分（soc_poach）。酢・塩なし",
+    "answer": "poached_egg",
+    "no_match": false,
+    "top": [
+     [
+      "poached_egg",
+      "ポーチドエッグ",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 45.57,
+     "T_surface_max": 80,
+     "T_serve": 45.57,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "割った",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 0,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false,
+     "egg_white_cohesion": "まとまる"
+    },
+    "trace": [
+     "1:heat(water,80℃,4min) R-E01..03 egg_white_stage→3",
+     "1:poach(酢0.0%,塩0.0%,80℃,4min) R-E21/E22 卵白のまとまり→まとまる"
+    ]
+   },
+   "steamed_egg": {
+    "dish": "hard_boiled_egg",
+    "ja": "蒸し卵（答えはゆで卵（固ゆで））",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → steam(T=100, time=12.5, form=shell) → plunge(T=0, time=15)",
+    "note": "wikibooks_hard_eggs の蒸す方法（蓋をして 12〜13 分の中央、氷水で冷やす）。状態は固ゆで卵と区別できないので、答えは ゆで卵（固ゆで）",
+    "answer": "hard_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "hard_boiled_egg",
+      "ゆで卵（固ゆで）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 84.97,
+     "T_surface_max": 100,
+     "T_white_max": 97.48,
+     "T_serve": 20.43,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.63）",
+     "2:heat(water,0℃,15min) Exp-17 egg_yolk_stage→3（固まった割合 1.00・平均 X 1.00）"
+    ]
+   },
+   "dashimaki": {
+    "dish": "dashimaki",
+    "ja": "だし巻き卵（卵焼き）",
+    "recipe": "[egg_whole 200g + dashi 150g + salt 2g + sugar 9g + vegetable_oil 4g] → whisk(time=1) → bake(T=175, form=thin, until={'var': 'egg_gel_stage', 'ge': 2}, max_time=10)",
+    "note": "中火 175℃で混ぜずに、卵液が固まる（egg_gel_stage 2。周りが固まってきたら巻く）まで（maff_dashimaki）",
+    "answer": "dashimaki",
+    "no_match": false,
+    "top": [
+     [
+      "dashimaki",
+      "だし巻き卵（卵焼き）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 2,
+      "until": "egg_gel_stage≧2",
+      "reached": true,
+      "minutes": 0.9,
+      "max_time": 10
+     }
+    ],
+    "state": {
+     "T_core_max": 76.17,
+     "T_surface_max": 100.4,
+     "T_serve": 76.17,
+     "water": 81.88,
+     "fat": 6.68,
+     "sugar_conc": 2.45,
+     "salt_conc": 0.59,
+     "mass_ratio": 1.7,
+     "egg_form": "溶き卵",
+     "egg_dilution": 54.79,
+     "egg_white_stage": 2,
+     "egg_yolk_stage": 2,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 3,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "fat_phase": "液体（融解）",
+     "maillard": 0,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E07 egg_gel_stage→1（薄めない卵）",
+     "2:heat(pan,175℃,until egg_gel_stage≧2) R-E07 egg_gel_stage→2（薄めない卵）",
+     "2:heat(pan,175℃,until egg_gel_stage≧2)→0.9min until egg_gel_stage≧2 に 0.90分で到達"
+    ]
+   },
+   "custard_cream": {
+    "dish": "custard_cream",
+    "ja": "カスタードクリーム",
+    "recipe": "[egg_yolk 90g + sugar 200g] → whisk(time=2) → mix(add={'flour': 80}, strength=弱, time=0.5) → mix(add={'milk': 495}, T_add=100, strength=中, time=0.5) → simmer(T=100, stirring=True, form=pot, until={'var': 'T_core', 'ge': 99.5}, max_time=20) → simmer(T=100, time=2.5, stirring=True, form=pot) → mix(add={'butter': 14}, strength=弱, time=0.5)",
+    "note": "混ぜながら沸騰（中心 99.5℃）するまで煮て、さらに 2.5 分（wikibooks_creme_pat の 2〜3 分の中央）。バターを混ぜる",
+    "answer": "custard_cream",
+    "no_match": false,
+    "top": [
+     [
+      "custard_cream",
+      "カスタードクリーム",
+      1.0
+     ],
+     [
+      "white_sauce",
+      "ホワイトソース",
+      0.857
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [
+     {
+      "op": 4,
+      "until": "T_core≧99.5",
+      "reached": true,
+      "minutes": 14.0,
+      "max_time": 20
+     }
+    ],
+    "state": {
+     "T_core_max": 99.77,
+     "T_surface_max": 99.77,
+     "T_serve": 98.5,
+     "water": 55.99,
+     "fat": 7.08,
+     "sugar_conc": 25.3,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 10.24,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "小片（カード）",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 2,
+     "maillard": 0,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(2min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:mix(弱,+flour) R-G01/G02 gluten→1（弱）",
+     "3:mix(中,+milk) R-G01/G02 gluten→2（中）",
+     "3:mix(中,+milk) R-E01..03 egg_white_stage→2",
+     "3:mix(中,+milk) R-E05..06 egg_yolk_stage→1",
+     "3:mix(中,+milk) R-S01 starch_gel→1.0",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E05..06 egg_yolk_stage→2",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-D02 乳清たんぱく質が変性",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E20 撹拌しながら固まった→小片（カード）",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E01..03 egg_white_stage→3",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E05..06 egg_yolk_stage→3",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌) R-E09 egg_gel_stage→2（薄めた卵液）",
+     "4:heat(water,100℃,until T_core≧99.5,撹拌)→14min until T_core≧99.5 に 14.00分で到達"
+    ]
+   }
+  },
+  "timed": {
+   "scrambled_eggs": {
+    "dish": "scrambled_eggs",
+    "ja": "スクランブルエッグ",
+    "recipe": "[egg_whole 100g + milk 20g + butter 10g + salt 1g] → whisk(time=1) → bake(T=110, time=1.75, stirring=True, form=thin)",
+    "note": "弱火（110℃）で混ぜながら約1.75分。全条件を満たす窓は 1.7〜1.8分",
+    "answer": "scrambled_eggs",
+    "no_match": false,
+    "top": [
+     [
+      "scrambled_eggs",
+      "スクランブルエッグ",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 72.48,
+     "T_surface_max": 72.48,
+     "T_serve": 72.48,
+     "water": 71.83,
+     "fat": 14.55,
+     "sugar_conc": 0.73,
+     "salt_conc": 0.92,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 76.34,
+     "egg_white_stage": 2,
+     "egg_yolk_stage": 2,
+     "egg_gel_stage": 1,
+     "egg_gel_stage_surface": 1,
+     "gel_structure": "小片（カード）",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "maillard": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E07 egg_gel_stage→1（薄めない卵）",
+     "2:heat(pan,110℃,1.75min,撹拌) R-E20 撹拌しながら固まった→小片（カード）",
+     "2:heat(pan,110℃,1.75min,撹拌) R-D02 乳清たんぱく質が変性"
+    ]
+   },
+   "omelet": {
+    "dish": "omelet",
+    "ja": "オムレツ（プレーン）",
+    "recipe": "[egg_whole 150g + butter 10g + salt 1g] → whisk(time=1) → bake(T=180, time=0.78, form=thin)",
+    "note": "高温のフライパンで約47秒、混ぜずに外側を固める。1位になる時間の窓は 0.75〜0.80分",
+    "answer": "omelet",
+    "no_match": false,
+    "top": [
+     [
+      "omelet",
+      "オムレツ（プレーン）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 71.67,
+     "T_surface_max": 100.0,
+     "T_serve": 71.67,
+     "water": 70.88,
+     "fat": 14.53,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.74,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 93.17,
+     "egg_white_stage": 2,
+     "egg_yolk_stage": 2,
+     "egg_gel_stage": 1,
+     "egg_gel_stage_surface": 3,
+     "gel_structure": "外側連続・内側半流動",
+     "porosity": 0,
+     "fat_phase": "液体（融解）",
+     "maillard": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,180℃,0.78min) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,180℃,0.78min) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,180℃,0.78min) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,180℃,0.78min) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,180℃,0.78min) R-E07 egg_gel_stage→1（薄めない卵）"
+    ]
+   },
+   "custard_pudding": {
+    "dish": "custard_pudding",
+    "ja": "プリン",
+    "recipe": "[egg_whole 100g + milk 250g + sugar 40g] → whisk(time=1) → steam(T=88, time=15, form=cup) → chill(T=5, time=180)",
+    "note": "蒸し器 85〜90℃（R-E15）で15分、冷蔵庫で3時間",
+    "answer": "custard_pudding",
+    "no_match": false,
+    "top": [
+     [
+      "custard_pudding",
+      "プリン",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 84.61,
+     "T_surface_max": 88,
+     "T_serve": 5.01,
+     "water": 75.33,
+     "fat": 5.05,
+     "sugar_conc": 13.26,
+     "salt_conc": 0.06,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 25.64,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→1",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→2",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→1",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→2",
+     "2:heat(steam,88℃,15min) R-D02 乳清たんぱく質が変性",
+     "2:heat(steam,88℃,15min) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→3",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→3",
+     "2:heat(steam,88℃,15min) R-E09 egg_gel_stage→2（薄めた卵液）"
+    ]
+   },
+   "chawanmushi": {
+    "dish": "chawanmushi",
+    "ja": "茶碗蒸し",
+    "recipe": "[egg_whole 50g + dashi 150g + salt 1.2g] → mix(strength=中, time=1) → steam(T=88, time=15, form=cup) → rest(T=25, time=10)",
+    "note": "卵:だし=1:3（R-E16）、85〜90℃で15分、器ごと10分おいて食べる",
+    "answer": "chawanmushi",
+    "no_match": false,
+    "top": [
+     [
+      "chawanmushi",
+      "茶碗蒸し",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 84.61,
+     "T_surface_max": 88,
+     "T_serve": 61.16,
+     "water": 92.6,
+     "fat": 2.53,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.67,
+     "mass_ratio": 3.93,
+     "egg_form": "溶き卵",
+     "egg_dilution": 24.85,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:mix(中) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→1",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→2",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→1",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→2",
+     "2:heat(steam,88℃,15min) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "2:heat(steam,88℃,15min) R-E01..03 egg_white_stage→3",
+     "2:heat(steam,88℃,15min) R-E05..06 egg_yolk_stage→3",
+     "2:heat(steam,88℃,15min) R-E09 egg_gel_stage→2（薄めた卵液）"
+    ]
+   },
+   "white_sauce": {
+    "dish": "white_sauce",
+    "ja": "ホワイトソース",
+    "recipe": "[butter 20g + flour 20g] → bake(T=120, time=3, stirring=True, form=thin) → mix(add={'milk': 250, 'salt': 1}, strength=弱, time=1) → simmer(T=100, time=10, stirring=True, form=pot)",
+    "note": "ルーを色づけずに炒め（130℃未満、R-S09）、牛乳でのばして沸騰後10分",
+    "answer": "white_sauce",
+    "no_match": false,
+    "top": [
+     [
+      "white_sauce",
+      "ホワイトソース",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 97.69,
+     "T_surface_max": 97.69,
+     "T_serve": 96.65,
+     "water": 77.16,
+     "fat": 8.93,
+     "sugar_conc": 4.12,
+     "salt_conc": 0.56,
+     "mass_ratio": 1.0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 1,
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "2:mix(弱,+milk+salt) R-G01/G02 gluten→1（弱）",
+     "2:mix(弱,+milk+salt) R-D02 乳清たんぱく質が変性",
+     "2:mix(弱,+milk+salt) R-S01 starch_gel→1.0"
+    ]
+   },
+   "caramel_sauce": {
+    "dish": "caramel_sauce",
+    "ja": "カラメル",
+    "recipe": "[sugar 100g + water 30g] → bake(T=190, time=10, stirring=True, form=thin) → mix(add={'water': 20}, time=0.5)",
+    "note": "鍋をゆすりながら煮詰め、褐色になったら湯を加えて止める。1位で全条件を満たす窓は 9.5〜10.5分（蒸発の推定値に依存）",
+    "answer": "caramel_sauce",
+    "no_match": false,
+    "top": [
+     [
+      "caramel_sauce",
+      "カラメル",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 174.68,
+     "T_surface_max": 174.68,
+     "T_serve": 113.75,
+     "water": 15.08,
+     "fat": 0.0,
+     "sugar_conc": 84.92,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.17,
+     "maillard": 0,
+     "caramel": 2,
+     "syrup_stage": 8,
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→1",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→2",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→3",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→4",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→5",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→6",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→7",
+     "1:heat(pan,190℃,10min,撹拌) R-C01 ショ糖 170℃以上 caramel=2",
+     "1:heat(pan,190℃,10min,撹拌) R-C05 syrup_stage→8"
+    ]
+   },
+   "sauteed_onion": {
+    "dish": "sauteed_onion",
+    "ja": "炒め玉ねぎ（あめ色）",
+    "recipe": "[onion 200g + vegetable_oil 10g] → bake(T=170, time=40, form=thin)",
+    "note": "中火で40分（ときどき混ぜる＝撹拌し続けない）",
+    "answer": "sauteed_onion",
+    "no_match": false,
+    "top": [
+     [
+      "sauteed_onion",
+      "炒め玉ねぎ（あめ色）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 170.0,
+     "T_serve": 100.0,
+     "water": 33.6,
+     "fat": 22.73,
+     "sugar_conc": 26.74,
+     "salt_conc": 0.0,
+     "mass_ratio": 0.21,
+     "fat_phase": "液体（融解）",
+     "maillard": 3,
+     "caramel": 2,
+     "onion_sulfur": 0,
+     "cell_wall": "崩壊（煮崩れ）",
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,170℃,40min) R-O01 onion_sulfur→1",
+     "1:heat(pan,170℃,40min) R-M01 maillard→1",
+     "1:heat(pan,170℃,40min) R-C02 ブドウ糖 160℃以上 caramel=2",
+     "1:heat(pan,170℃,40min) R-M01 maillard→2",
+     "1:heat(pan,170℃,40min) R-S12 軟化",
+     "1:heat(pan,170℃,40min) R-M01 maillard→3",
+     "1:heat(pan,170℃,40min) R-O01 onion_sulfur→0",
+     "1:heat(pan,170℃,40min) R-S12 崩壊"
+    ]
+   },
+   "steamed_rice": {
+    "dish": "steamed_rice",
+    "ja": "ご飯（白飯）",
+    "recipe": "[rice 150g + water 210g] → soak(T=25, time=30) → simmer(T=100, time=35, lid=True, form=pot) → rest(T=90, time=10)",
+    "note": "加水 1.4倍（R-S05）、浸漬30分（R-S06）、炊飯35分（温度上昇10＋沸騰5＋蒸し煮15＋余裕、R-S04）、蒸らし10分",
+    "answer": "steamed_rice",
+    "no_match": false,
+    "top": [
+     [
+      "steamed_rice",
+      "ご飯（白飯）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 100,
+     "T_serve": 94.69,
+     "water": 62.86,
+     "fat": 0.39,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 2.29,
+     "starch_gel": 0.95,
+     "starch_retro": 0,
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "2:heat(water,100℃,35min,蓋) R-S04/S07 starch_gel→0.5",
+     "2:heat(water,100℃,35min,蓋) R-S04/S07 starch_gel→0.95"
+    ]
+   },
+   "pancake": {
+    "dish": "pancake",
+    "ja": "パンケーキ",
+    "recipe": "[flour 100g + egg_whole 50g + milk 100g + sugar 20g + baking_powder 4g + butter 10g] → mix(strength=弱, time=1) → rest(T=20, time=10) → bake(T=190, time=3, form=thin) → bake(T=190, time=3, form=thin)",
+    "note": "さっくり混ぜ、10分寝かせ、鉄板 190℃（R-L03）で片面3分ずつ",
+    "answer": "pancake",
+    "no_match": false,
+    "top": [
+     [
+      "pancake",
+      "パンケーキ",
+      0.875
+     ],
+     [
+      "custard_pudding",
+      "プリン",
+      0.667
+     ]
+    ],
+    "hit": true,
+    "fraction": 0.875,
+    "unmet": [
+     [
+      "egg_gel_stage ∈ {3}",
+      2,
+      "推定"
+     ]
+    ],
+    "stops": [],
+    "state": {
+     "T_core_max": 102.44,
+     "T_surface_max": 188.39,
+     "T_serve": 102.44,
+     "water": 38.9,
+     "fat": 7.92,
+     "sugar_conc": 10.53,
+     "salt_conc": 0.42,
+     "mass_ratio": 0.82,
+     "egg_form": "溶き卵",
+     "egg_dilution": 17.61,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 1,
+     "co2": 2,
+     "maillard": 2,
+     "caramel": 3,
+     "air": true
+    },
+    "trace": [
+     "1:mix(弱) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "1:mix(弱) R-G01/G02 gluten→1（弱）",
+     "1:mix(弱) R-L01 ベーキングパウダー第1段 co2=1",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→1",
+     "3:heat(pan,190℃,3min) R-S01 starch_gel→1.0",
+     "3:heat(pan,190℃,3min) R-L01 ベーキングパウダー第2段 co2=2",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→2",
+     "3:heat(pan,190℃,3min) R-E05..06 egg_yolk_stage→2",
+     "3:heat(pan,190℃,3min) R-D02 乳清たんぱく質が変性",
+     "3:heat(pan,190℃,3min) R-E01..03 egg_white_stage→3",
+     "3:heat(pan,190℃,3min) R-E05..06 egg_yolk_stage→3",
+     "3:heat(pan,190℃,3min) R-E09 egg_gel_stage→2（薄めた卵液）",
+     "3:heat(pan,190℃,3min) R-M01 maillard→1",
+     "3:heat(pan,190℃,3min) R-C01 ショ糖 170℃以上 caramel=2",
+     "3:heat(pan,190℃,3min) R-C06 180℃以上 焦げ caramel=3",
+     "4:heat(pan,190℃,3min) R-M01 maillard→2"
+    ]
+   },
+   "milk_jelly": {
+    "dish": "milk_jelly",
+    "ja": "牛乳ゼリー",
+    "recipe": "[gelatin 5g + water 25g] → soak(T=15, time=30) → mix(add={'milk': 200, 'sugar': 20}, time=1) → heat(medium=water, T=60, time=10, stirring=True, form=pot) → chill(T=5, time=180)",
+    "note": "ゼラチンを膨潤（R-J01）、牛乳を湯煎で 60℃まで温めて溶かし（R-J02）、冷蔵3時間",
+    "answer": "milk_jelly",
+    "no_match": false,
+    "top": [
+     [
+      "milk_jelly",
+      "牛乳ゼリー",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 58.04,
+     "T_surface_max": 58.04,
+     "T_serve": 5.0,
+     "water": 80.2,
+     "fat": 3.05,
+     "sugar_conc": 11.78,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.11,
+     "milk_whey_denatured": 0,
+     "milk_casein": "分散",
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "caramel": 0,
+     "gelatin_state": "ゲル",
+     "gelatin_conc": 2.0,
+     "air": false
+    },
+    "trace": [
+     "1:soak(15℃,30min) R-J01 ゼラチンが膨潤",
+     "3:heat(water,60℃,10min,撹拌) R-J02 ゼラチンが溶解",
+     "4:heat(air,5℃,180min) R-J04/J05 ゲル化"
+    ]
+   },
+   "whipped_cream": {
+    "dish": "whipped_cream",
+    "ja": "ホイップクリーム",
+    "recipe": "[heavy_cream 200g + sugar 15g] (初期 8℃) → whisk(time=3, T=10)",
+    "note": "生クリームを品温 7.5〜12.5℃（R-D03 の推奨）に保って3分泡立てる",
+    "answer": "whipped_cream",
+    "no_match": false,
+    "top": [
+     [
+      "whipped_cream",
+      "ホイップクリーム",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 9.19,
+     "T_surface_max": 9.19,
+     "T_serve": 9.19,
+     "water": 44.89,
+     "fat": 40.0,
+     "sugar_conc": 12.97,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.0,
+     "milk_whey_denatured": 0,
+     "milk_casein": "分散",
+     "fat_phase": "部分合一ネットワーク（ホイップ）",
+     "maillard": 0,
+     "caramel": 0,
+     "foam_stage": 2,
+     "T_whisk": 8.71,
+     "air": true
+    },
+    "trace": [
+     "1:whisk(3min,10℃) R-D03/D04 foam_stage→2"
+    ]
+   },
+   "onsen_tamago": {
+    "dish": "onsen_tamago",
+    "ja": "温泉卵",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=68, time=30, form=shell) → rest(T=20, time=15)",
+    "note": "68℃の湯に殻ごと30分（R-E08）。後の手順は書かれていないので室温に15分置く（余熱、rules.md §10）",
+    "answer": "onsen_tamago",
+    "no_match": false,
+    "top": [
+     [
+      "onsen_tamago",
+      "温泉卵",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 67.48,
+     "T_surface_max": 68,
+     "T_white_max": 67.91,
+     "T_serve": 60.7,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 1,
+     "egg_yolk_stage": 2,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,68℃,30min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.10）",
+     "1:heat(water,68℃,30min) Exp-17 egg_white_stage→1（固まった割合 0.00・平均 X 0.10）",
+     "1:heat(water,68℃,30min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.89）"
+    ]
+   },
+   "sauteed_chicken": {
+    "dish": "sauteed_chicken",
+    "ja": "鶏むね肉のソテー",
+    "recipe": "[chicken 200g + vegetable_oil 10g + salt 2g] → bake(T=180, time=5, form=piece) → bake(T=180, time=5, form=piece)",
+    "note": "フライパン 180℃で片面5分ずつ",
+    "answer": "sauteed_chicken",
+    "no_match": false,
+    "top": [
+     [
+      "sauteed_chicken",
+      "鶏むね肉のソテー",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 100.0,
+     "T_surface_max": 179.97,
+     "T_serve": 100.0,
+     "water": 68.13,
+     "fat": 7.0,
+     "sugar_conc": 0.0,
+     "salt_conc": 1.11,
+     "mass_ratio": 0.93,
+     "fat_phase": "液体（融解）",
+     "maillard": 2,
+     "meat_myosin": 1,
+     "meat_actin": 1,
+     "meat_myoglobin": 2,
+     "meat_water_loss": 2,
+     "air": false
+    },
+    "trace": [
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_myosin→1",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_myoglobin→1",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_water_loss→1",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_collagen→1",
+     "1:heat(pan,180℃,5min) R-M01 maillard→1",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_myoglobin→2",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_water_loss→2",
+     "1:heat(pan,180℃,5min) R-P01..P04 meat_actin→1",
+     "1:heat(pan,180℃,5min) R-M01 maillard→2"
+    ]
+   },
+   "hard_boiled_egg": {
+    "dish": "hard_boiled_egg",
+    "ja": "ゆで卵（固ゆで）",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=100, time=12, form=shell) → rest(T=20, time=15)",
+    "note": "沸騰した湯で12分（比較用に追加した品）。後の手順は書かれていないので室温に15分置く（余熱、rules.md §10）",
+    "answer": "hard_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "hard_boiled_egg",
+      "ゆで卵（固ゆで）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 89.47,
+     "T_surface_max": 100,
+     "T_white_max": 97.24,
+     "T_serve": 82.41,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(water,100℃,12min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(water,100℃,12min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）",
+     "1:heat(water,100℃,12min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.63）",
+     "2:heat(air,20℃,15min) Exp-17 egg_yolk_stage→3（固まった割合 1.00・平均 X 1.00）"
+    ]
+   },
+   "soft_boiled_egg": {
+    "dish": "soft_boiled_egg",
+    "ja": "半熟ゆで卵",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → simmer(T=100, time=6.5, form=shell) → plunge(T=15, time=15)",
+    "note": "沸騰した湯に殻ごと6.5分（Exp-15 R007 の 6〜7分の中央）。R007 の「冷水に移す」で冷水 15℃に15分（余熱、rules.md §10）",
+    "answer": "soft_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "soft_boiled_egg",
+      "半熟ゆで卵",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 62.57,
+     "T_surface_max": 100,
+     "T_white_max": 92.41,
+     "T_serve": 27.71,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 1,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(water,100℃,6.5min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）"
+    ]
+   },
+   "poached_egg": {
+    "dish": "poached_egg",
+    "ja": "ポーチドエッグ",
+    "recipe": "[egg_whole 60g] (卵は割った) → poach(T=80, time=4)",
+    "note": "割った卵を 80℃の湯に落として4分（soc_poach）。酢・塩なし",
+    "answer": "poached_egg",
+    "no_match": false,
+    "top": [
+     [
+      "poached_egg",
+      "ポーチドエッグ",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 45.57,
+     "T_surface_max": 80,
+     "T_serve": 45.57,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "割った",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 0,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false,
+     "egg_white_cohesion": "まとまる"
+    },
+    "trace": [
+     "1:heat(water,80℃,4min) R-E01..03 egg_white_stage→3",
+     "1:poach(酢0.0%,塩0.0%,80℃,4min) R-E21/E22 卵白のまとまり→まとまる"
+    ]
+   },
+   "steamed_egg": {
+    "dish": "hard_boiled_egg",
+    "ja": "蒸し卵（答えはゆで卵（固ゆで））",
+    "recipe": "[egg_whole 60g] (卵は殻付き) → steam(T=100, time=12.5, form=shell) → plunge(T=0, time=15)",
+    "note": "wikibooks_hard_eggs の蒸す方法（蓋をして 12〜13 分の中央、氷水で冷やす）。状態は固ゆで卵と区別できないので、答えは ゆで卵（固ゆで）",
+    "answer": "hard_boiled_egg",
+    "no_match": false,
+    "top": [
+     [
+      "hard_boiled_egg",
+      "ゆで卵（固ゆで）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 84.97,
+     "T_surface_max": 100,
+     "T_white_max": 97.48,
+     "T_serve": 20.43,
+     "water": 75.0,
+     "fat": 10.2,
+     "sugar_conc": 0.0,
+     "salt_conc": 0.0,
+     "mass_ratio": 1.0,
+     "egg_form": "殻付き",
+     "egg_dilution": 100.0,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "gel_structure": "なし",
+     "porosity": 0,
+     "fat_phase": "O/W乳化（乳・卵黄）",
+     "maillard": 0,
+     "air": false
+    },
+    "trace": [
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→1（固まった割合 0.15・平均 X 0.15）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→2（固まった割合 0.53・平均 X 0.57）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_yolk_stage→1（固まった割合 0.00・平均 X 0.11）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_white_stage→3（固まった割合 0.92・平均 X 0.97）",
+     "1:heat(steam,100℃,12.5min) Exp-17 egg_yolk_stage→2（固まった割合 0.51・平均 X 0.63）",
+     "2:heat(water,0℃,15min) Exp-17 egg_yolk_stage→3（固まった割合 1.00・平均 X 1.00）"
+    ]
+   },
+   "dashimaki": {
+    "dish": "dashimaki",
+    "ja": "だし巻き卵（卵焼き）",
+    "recipe": "[egg_whole 200g + dashi 150g + salt 2g + sugar 9g + vegetable_oil 4g] → whisk(time=1) → bake(T=175, time=1.5, form=thin)",
+    "note": "maff_dashimaki（卵 4 個・だし 150 mL、薄口醤油→食塩 2 g、砂糖とみりん風調味料→砂糖 9 g、推定）。中火 175℃（P-MED、弱い根拠）。時間の版の 1.5 分は推定（出典に時間が無い）",
+    "answer": "dashimaki",
+    "no_match": false,
+    "top": [
+     [
+      "dashimaki",
+      "だし巻き卵（卵焼き）",
+      1.0
+     ]
+    ],
+    "hit": true,
+    "fraction": 1.0,
+    "unmet": [],
+    "stops": [],
+    "state": {
+     "T_core_max": 100.4,
+     "T_surface_max": 147.56,
+     "T_serve": 100.4,
+     "water": 81.81,
+     "fat": 6.71,
+     "sugar_conc": 2.46,
+     "salt_conc": 0.59,
+     "mass_ratio": 1.69,
+     "egg_form": "溶き卵",
+     "egg_dilution": 54.79,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 3,
+     "egg_gel_stage_surface": 3,
+     "gel_structure": "連続ゲル",
+     "porosity": 0,
+     "fat_phase": "液体（融解）",
+     "maillard": 1,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(1min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:heat(pan,175℃,1.5min) R-E01..03 egg_white_stage→1",
+     "2:heat(pan,175℃,1.5min) R-E01..03 egg_white_stage→2",
+     "2:heat(pan,175℃,1.5min) R-E05..06 egg_yolk_stage→1",
+     "2:heat(pan,175℃,1.5min) R-E05..06 egg_yolk_stage→2",
+     "2:heat(pan,175℃,1.5min) R-E07 egg_gel_stage→1（薄めない卵）",
+     "2:heat(pan,175℃,1.5min) R-E07 egg_gel_stage→2（薄めない卵）",
+     "2:heat(pan,175℃,1.5min) R-E01..03 egg_white_stage→3",
+     "2:heat(pan,175℃,1.5min) R-E05..06 egg_yolk_stage→3",
+     "2:heat(pan,175℃,1.5min) R-E07 egg_gel_stage→3（薄めない卵）",
+     "2:heat(pan,175℃,1.5min) R-M01 maillard→1"
+    ]
+   },
+   "custard_cream": {
+    "dish": "custard_cream",
+    "ja": "カスタードクリーム",
+    "recipe": "[egg_yolk 90g + sugar 200g] → whisk(time=2) → mix(add={'flour': 80}, strength=弱, time=0.5) → mix(add={'milk': 495}, T_add=100, strength=中, time=0.5) → simmer(T=100, time=6, stirring=True, form=pot) → mix(add={'butter': 14}, strength=弱, time=0.5)",
+    "note": "wikibooks_creme_pat（分量の換算は推定: 砂糖 200 g・薄力粉 80 g・牛乳 495 g・卵黄 18 g×5）。時間の版の 6 分（沸騰まで＋2.5 分）は推定",
+    "answer": "custard_cream",
+    "no_match": false,
+    "top": [
+     [
+      "custard_cream",
+      "カスタードクリーム",
+      0.8
+     ],
+     [
+      "white_sauce",
+      "ホワイトソース",
+      0.714
+     ]
+    ],
+    "hit": true,
+    "fraction": 0.8,
+    "unmet": [
+     [
+      "T_core_max ∈ [95, 100]",
+      94.45,
+      "沸騰させる（wikibooks_creme_pat、R-W01）"
+     ]
+    ],
+    "stops": [],
+    "state": {
+     "T_core_max": 94.45,
+     "T_surface_max": 94.45,
+     "T_serve": 93.26,
+     "water": 55.99,
+     "fat": 7.08,
+     "sugar_conc": 25.3,
+     "salt_conc": 0.09,
+     "mass_ratio": 1.0,
+     "egg_form": "溶き卵",
+     "egg_dilution": 10.24,
+     "egg_white_stage": 3,
+     "egg_yolk_stage": 3,
+     "egg_gel_stage": 2,
+     "egg_gel_stage_surface": 2,
+     "gel_structure": "小片（カード）",
+     "porosity": 0,
+     "milk_whey_denatured": 1,
+     "milk_casein": "分散",
+     "fat_phase": "液体（融解）",
+     "starch_gel": 1.0,
+     "starch_retro": 0,
+     "gluten": 2,
+     "maillard": 0,
+     "caramel": 0,
+     "T_whisk": 20.0,
+     "air": false
+    },
+    "trace": [
+     "1:whisk(2min) R-E19 卵を溶きほぐした（卵白と卵黄が均一）",
+     "2:mix(弱,+flour) R-G01/G02 gluten→1（弱）",
+     "3:mix(中,+milk) R-G01/G02 gluten→2（中）",
+     "3:mix(中,+milk) R-E01..03 egg_white_stage→2",
+     "3:mix(中,+milk) R-E05..06 egg_yolk_stage→1",
+     "3:mix(中,+milk) R-S01 starch_gel→1.0",
+     "4:heat(water,100℃,6min,撹拌) R-E05..06 egg_yolk_stage→2",
+     "4:heat(water,100℃,6min,撹拌) R-D02 乳清たんぱく質が変性",
+     "4:heat(water,100℃,6min,撹拌) R-E09 egg_gel_stage→1（薄めた卵液）",
+     "4:heat(water,100℃,6min,撹拌) R-E20 撹拌しながら固まった→小片（カード）",
+     "4:heat(water,100℃,6min,撹拌) R-E01..03 egg_white_stage→3",
+     "4:heat(water,100℃,6min,撹拌) R-E05..06 egg_yolk_stage→3",
+     "4:heat(water,100℃,6min,撹拌) R-E09 egg_gel_stage→2（薄めた卵液）"
+    ]
+   }
+  }
+ },
+ "pairs": [
+  {
+   "pair": "撹拌→フライパン vs 撹拌→蒸す（依頼の2例）",
+   "input": "(卵+牛乳)→撹拌→加熱(フライパン,短時間)",
+   "answer": "scrambled_eggs",
+   "top": [
+    [
+     "scrambled_eggs",
+     0.9
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "撹拌→フライパン vs 撹拌→蒸す（依頼の2例）",
+   "input": "(卵+牛乳+砂糖)→撹拌→蒸す(88℃)",
+   "answer": "custard_pudding",
+   "top": [
+    [
+     "custard_pudding",
+     0.889
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で 撹拌→フライパン vs 撹拌→蒸す",
+   "input": "(卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら",
+   "answer": "scrambled_eggs",
+   "top": [
+    [
+     "scrambled_eggs",
+     0.9
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で 撹拌→フライパン vs 撹拌→蒸す",
+   "input": "(卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす",
+   "answer": "custard_pudding",
+   "top": [
+    [
+     "custard_pudding",
+     0.889
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で加熱温度だけ変える（温泉卵 vs ゆで卵）",
+   "input": "殻付き卵を68℃の湯で30分",
+   "answer": "onsen_tamago",
+   "top": [
+    [
+     "onsen_tamago",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で加熱温度だけ変える（温泉卵 vs ゆで卵）",
+   "input": "殻付き卵を100℃の湯で30分",
+   "answer": "hard_boiled_egg",
+   "top": [
+    [
+     "hard_boiled_egg",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で加熱温度だけ変える（プリン vs す立ち）",
+   "input": "プリン液を88℃で蒸す",
+   "answer": "custard_pudding",
+   "top": [
+    [
+     "custard_pudding",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "同じ材料で加熱温度だけ変える（プリン vs す立ち）",
+   "input": "プリン液を100℃で蒸す",
+   "answer": "custard_pudding",
+   "top": [
+    [
+     "custard_pudding",
+     0.667
+    ]
+   ],
+   "ok": false
+  },
+  {
+   "pair": "撹拌の有無だけ変える（スクランブルエッグ vs オムレツ）",
+   "input": "溶き卵をフライパンで混ぜながら",
+   "answer": "scrambled_eggs",
+   "top": [
+    [
+     "scrambled_eggs",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "撹拌の有無だけ変える（スクランブルエッグ vs オムレツ）",
+   "input": "溶き卵をフライパンで混ぜずに",
+   "answer": "omelet",
+   "top": [
+    [
+     "omelet",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "順番を入れ替える（温める→冷やす vs 冷やす→温める）",
+   "input": "ゼラチン膨潤→牛乳→温める→冷やす",
+   "answer": "milk_jelly",
+   "top": [
+    [
+     "milk_jelly",
+     1.0
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "順番を入れ替える（温める→冷やす vs 冷やす→温める）",
+   "input": "ゼラチン膨潤→牛乳→冷やす→温める",
+   "answer": null,
+   "top": [],
+   "ok": true
+  },
+  {
+   "pair": "順番を入れ替える（冷やす→泡立てる vs 泡立てる→冷やす）",
+   "input": "生クリームを冷やしてから泡立てる",
+   "answer": "whipped_cream",
+   "top": [
+    [
+     "whipped_cream",
+     0.833
+    ]
+   ],
+   "ok": true
+  },
+  {
+   "pair": "順番を入れ替える（冷やす→泡立てる vs 泡立てる→冷やす）",
+   "input": "生クリームを室温で泡立ててから冷やす",
+   "answer": null,
+   "top": [],
+   "ok": true
+  }
+ ],
+ "change_vs_before": [
+  {
+   "input": "正解（時間）スクランブルエッグ",
+   "before": [
+    "scrambled_eggs",
+    1.0,
+    true
+   ],
+   "shell_required": "scrambled_eggs",
+   "now": "scrambled_eggs",
+   "now_top": [
+    "scrambled_eggs",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）オムレツ",
+   "before": [
+    "omelet",
+    1.0,
+    true
+   ],
+   "shell_required": "omelet",
+   "now": "omelet",
+   "now_top": [
+    "omelet",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）プリン",
+   "before": [
+    "custard_pudding",
+    1.0,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）茶碗蒸し",
+   "before": [
+    "chawanmushi",
+    1.0,
+    true
+   ],
+   "shell_required": "chawanmushi",
+   "now": "chawanmushi",
+   "now_top": [
+    "chawanmushi",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）ホワイトソース",
+   "before": [
+    "white_sauce",
+    1.0,
+    true
+   ],
+   "shell_required": "white_sauce",
+   "now": "white_sauce",
+   "now_top": [
+    "white_sauce",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）カラメル",
+   "before": [
+    "caramel_sauce",
+    1.0,
+    true
+   ],
+   "shell_required": "caramel_sauce",
+   "now": "caramel_sauce",
+   "now_top": [
+    "caramel_sauce",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）炒め玉ねぎ",
+   "before": [
+    "sauteed_onion",
+    1.0,
+    true
+   ],
+   "shell_required": "sauteed_onion",
+   "now": "sauteed_onion",
+   "now_top": [
+    "sauteed_onion",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）ご飯",
+   "before": [
+    "steamed_rice",
+    1.0,
+    true
+   ],
+   "shell_required": "steamed_rice",
+   "now": "steamed_rice",
+   "now_top": [
+    "steamed_rice",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）パンケーキ",
+   "before": [
+    "pancake",
+    0.875,
+    true
+   ],
+   "shell_required": "pancake",
+   "now": "pancake",
+   "now_top": [
+    "pancake",
+    0.875
+   ]
+  },
+  {
+   "input": "正解（時間）牛乳ゼリー",
+   "before": [
+    "milk_jelly",
+    1.0,
+    true
+   ],
+   "shell_required": "milk_jelly",
+   "now": "milk_jelly",
+   "now_top": [
+    "milk_jelly",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）ホイップクリーム",
+   "before": [
+    "whipped_cream",
+    1.0,
+    true
+   ],
+   "shell_required": "whipped_cream",
+   "now": "whipped_cream",
+   "now_top": [
+    "whipped_cream",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）温泉卵",
+   "before": [
+    "onsen_tamago",
+    1.0,
+    true
+   ],
+   "shell_required": "onsen_tamago",
+   "now": "onsen_tamago",
+   "now_top": [
+    "onsen_tamago",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）鶏むね肉のソテー",
+   "before": [
+    "sauteed_chicken",
+    1.0,
+    true
+   ],
+   "shell_required": "sauteed_chicken",
+   "now": "sauteed_chicken",
+   "now_top": [
+    "sauteed_chicken",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）ゆで卵",
+   "before": [
+    "hard_boiled_egg",
+    1.0,
+    true
+   ],
+   "shell_required": "hard_boiled_egg",
+   "now": "hard_boiled_egg",
+   "now_top": [
+    "hard_boiled_egg",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）半熟ゆで卵",
+   "before": [
+    "soft_boiled_egg",
+    1.0,
+    true
+   ],
+   "shell_required": "soft_boiled_egg",
+   "now": "soft_boiled_egg",
+   "now_top": [
+    "soft_boiled_egg",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）ポーチドエッグ",
+   "before": [
+    "poached_egg",
+    1.0,
+    true
+   ],
+   "shell_required": "poached_egg",
+   "now": "poached_egg",
+   "now_top": [
+    "poached_egg",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）蒸し卵",
+   "before": [
+    "hard_boiled_egg",
+    1.0,
+    true
+   ],
+   "shell_required": "hard_boiled_egg",
+   "now": "hard_boiled_egg",
+   "now_top": [
+    "hard_boiled_egg",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）だし巻き卵",
+   "before": [
+    "dashimaki",
+    1.0,
+    true
+   ],
+   "shell_required": "dashimaki",
+   "now": "dashimaki",
+   "now_top": [
+    "dashimaki",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（時間）カスタードクリーム",
+   "before": [
+    "custard_cream",
+    0.8,
+    true
+   ],
+   "shell_required": "custard_cream",
+   "now": "custard_cream",
+   "now_top": [
+    "custard_cream",
+    0.8
+   ]
+  },
+  {
+   "input": "正解（状態）だし巻き卵",
+   "before": [
+    "dashimaki",
+    1.0,
+    true
+   ],
+   "shell_required": "dashimaki",
+   "now": "dashimaki",
+   "now_top": [
+    "dashimaki",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）カスタードクリーム",
+   "before": [
+    "custard_cream",
+    1.0,
+    true
+   ],
+   "shell_required": "custard_cream",
+   "now": "custard_cream",
+   "now_top": [
+    "custard_cream",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）スクランブルエッグ",
+   "before": [
+    "scrambled_eggs",
+    1.0,
+    true
+   ],
+   "shell_required": "scrambled_eggs",
+   "now": "scrambled_eggs",
+   "now_top": [
+    "scrambled_eggs",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）オムレツ",
+   "before": [
+    "omelet",
+    1.0,
+    true
+   ],
+   "shell_required": "omelet",
+   "now": "omelet",
+   "now_top": [
+    "omelet",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）カラメル",
+   "before": [
+    "caramel_sauce",
+    1.0,
+    true
+   ],
+   "shell_required": "caramel_sauce",
+   "now": "caramel_sauce",
+   "now_top": [
+    "caramel_sauce",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）プリン",
+   "before": [
+    "custard_pudding",
+    1.0,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）茶碗蒸し",
+   "before": [
+    "chawanmushi",
+    0.889,
+    true
+   ],
+   "shell_required": "chawanmushi",
+   "now": "chawanmushi",
+   "now_top": [
+    "chawanmushi",
+    0.889
+   ]
+  },
+  {
+   "input": "正解（状態）炒め玉ねぎ",
+   "before": [
+    "sauteed_onion",
+    0.556,
+    true
+   ],
+   "shell_required": "sauteed_onion",
+   "now": null,
+   "now_top": [
+    "sauteed_onion",
+    0.556
+   ]
+  },
+  {
+   "input": "正解（状態）鶏むね肉のソテー",
+   "before": [
+    "sauteed_chicken",
+    1.0,
+    true
+   ],
+   "shell_required": "sauteed_chicken",
+   "now": "sauteed_chicken",
+   "now_top": [
+    "sauteed_chicken",
+    1.0
+   ]
+  },
+  {
+   "input": "正解（状態）牛乳ゼリー",
+   "before": [
+    "milk_jelly",
+    1.0,
+    true
+   ],
+   "shell_required": "milk_jelly",
+   "now": "milk_jelly",
+   "now_top": [
+    "milk_jelly",
+    1.0
+   ]
+  },
+  {
+   "input": "組 (卵+牛乳)→撹拌→加熱(フライパン,短時間)",
+   "before": [
+    "scrambled_eggs",
+    0.9,
+    true
+   ],
+   "shell_required": "scrambled_eggs",
+   "now": "scrambled_eggs",
+   "now_top": [
+    "scrambled_eggs",
+    0.9
+   ]
+  },
+  {
+   "input": "組 (卵+牛乳+砂糖)→撹拌→蒸す(88℃)",
+   "before": [
+    "custard_pudding",
+    0.889,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    0.889
+   ]
+  },
+  {
+   "input": "組 (卵+牛乳+砂糖)→撹拌→フライパンで混ぜながら",
+   "before": [
+    "scrambled_eggs",
+    0.9,
+    true
+   ],
+   "shell_required": "scrambled_eggs",
+   "now": "scrambled_eggs",
+   "now_top": [
+    "scrambled_eggs",
+    0.9
+   ]
+  },
+  {
+   "input": "組 (卵+牛乳+砂糖)→撹拌→蒸す(88℃)→冷やす",
+   "before": [
+    "custard_pudding",
+    0.889,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    0.889
+   ]
+  },
+  {
+   "input": "組 殻付き卵を68℃の湯で30分",
+   "before": [
+    "onsen_tamago",
+    1.0,
+    true
+   ],
+   "shell_required": "onsen_tamago",
+   "now": "onsen_tamago",
+   "now_top": [
+    "onsen_tamago",
+    1.0
+   ]
+  },
+  {
+   "input": "組 殻付き卵を100℃の湯で30分",
+   "before": [
+    "hard_boiled_egg",
+    1.0,
+    true
+   ],
+   "shell_required": "hard_boiled_egg",
+   "now": "hard_boiled_egg",
+   "now_top": [
+    "hard_boiled_egg",
+    1.0
+   ]
+  },
+  {
+   "input": "組 プリン液を88℃で蒸す",
+   "before": [
+    "custard_pudding",
+    1.0,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    1.0
+   ]
+  },
+  {
+   "input": "組 プリン液を100℃で蒸す",
+   "before": [
+    "hard_boiled_egg",
+    0.8,
+    true
+   ],
+   "shell_required": "custard_pudding",
+   "now": "custard_pudding",
+   "now_top": [
+    "custard_pudding",
+    0.667
+   ]
+  },
+  {
+   "input": "組 溶き卵をフライパンで混ぜながら",
+   "before": [
+    "scrambled_eggs",
+    1.0,
+    true
+   ],
+   "shell_required": "scrambled_eggs",
+   "now": "scrambled_eggs",
+   "now_top": [
+    "scrambled_eggs",
+    1.0
+   ]
+  },
+  {
+   "input": "組 溶き卵をフライパンで混ぜずに",
+   "before": [
+    "omelet",
+    1.0,
+    true
+   ],
+   "shell_required": "omelet",
+   "now": "omelet",
+   "now_top": [
+    "omelet",
+    1.0
+   ]
+  },
+  {
+   "input": "組 ゼラチン膨潤→牛乳→温める→冷やす",
+   "before": [
+    "milk_jelly",
+    1.0,
+    true
+   ],
+   "shell_required": "milk_jelly",
+   "now": "milk_jelly",
+   "now_top": [
+    "milk_jelly",
+    1.0
+   ]
+  },
+  {
+   "input": "組 ゼラチン膨潤→牛乳→冷やす→温める",
+   "before": [
+    "milk_jelly",
+    0.667,
+    true
+   ],
+   "shell_required": null,
+   "now": null,
+   "now_top": null
+  },
+  {
+   "input": "組 生クリームを冷やしてから泡立てる",
+   "before": [
+    "whipped_cream",
+    0.833,
+    true
+   ],
+   "shell_required": "whipped_cream",
+   "now": "whipped_cream",
+   "now_top": [
+    "whipped_cream",
+    0.833
+   ]
+  },
+  {
+   "input": "組 生クリームを室温で泡立ててから冷やす",
+   "before": [
+    "whipped_cream",
+    0.5,
+    true
+   ],
+   "shell_required": null,
+   "now": null,
+   "now_top": null
+  }
+ ],
+ "time_sensitivity": {
+  "scrambled_eggs": [
+   "該当なし",
+   "該当なし",
+   "✔ 1.00",
+   "✔ 0.90",
+   "✔ 0.90"
+  ],
+  "omelet": [
+   "✔ 0.71",
+   "✔ 0.71",
+   "✔ 1.00",
+   "該当なし",
+   "該当なし"
+  ],
+  "custard_pudding": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 0.89",
+   "✔ 0.89"
+  ],
+  "chawanmushi": [
+   "✔ 0.89",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "white_sauce": [
+   "✔ 0.86",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "caramel_sauce": [
+   "該当なし",
+   "該当なし",
+   "✔ 1.00",
+   "該当なし",
+   "該当なし"
+  ],
+  "sauteed_onion": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 0.89",
+   "✔ 0.89"
+  ],
+  "steamed_rice": [
+   "該当なし",
+   "✔ 0.88",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "pancake": [
+   "✔ 0.88",
+   "✔ 0.88",
+   "✔ 0.88",
+   "✔ 0.88",
+   "✔ 0.88"
+  ],
+  "milk_jelly": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "whipped_cream": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "onsen_tamago": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "sauteed_chicken": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "hard_boiled_egg": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "soft_boiled_egg": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "該当なし",
+   "該当なし"
+  ],
+  "poached_egg": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "steamed_egg": [
+   "該当なし",
+   "ゆで卵 1.00",
+   "ゆで卵 1.00",
+   "ゆで卵 1.00",
+   "ゆで卵 1.00"
+  ],
+  "dashimaki": [
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00",
+   "✔ 1.00"
+  ],
+  "custard_cream": [
+   "✔ 0.80",
+   "✔ 0.80",
+   "✔ 0.80",
+   "✔ 1.00",
+   "✔ 1.00"
+  ]
+ },
+ "alternatives": [
+  {
+   "key": "actin_T",
+   "adopted": 73,
+   "alt": 66.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "butter_liquid_T",
+   "adopted": 35,
+   "alt": 32.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "caramel_pyrolysis_T",
+   "adopted": 180,
+   "alt": 177.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "collagen_T",
+   "adopted": 63,
+   "alt": 53.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_diluted_s1",
+   "adopted": 79,
+   "alt": 82.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_diluted_s2",
+   "adopted": 80,
+   "alt": 85.0,
+   "hits_until": 12,
+   "hits_timed": 11,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": [
+    "custard_pudding",
+    "chawanmushi"
+   ]
+  },
+  {
+   "key": "egg_porosity_T",
+   "adopted": 90,
+   "alt": 85.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_undiluted_s2",
+   "adopted": 73,
+   "alt": 75.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_white_s1",
+   "adopted": 60,
+   "alt": 62.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_white_s1",
+   "adopted": 60,
+   "alt": 55.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_white_s2",
+   "adopted": 65,
+   "alt": 63.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_white_s3",
+   "adopted": 80,
+   "alt": 84.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "egg_yolk_s3",
+   "adopted": 80,
+   "alt": 90.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "gelatin_dissolve_T",
+   "adopted": 50,
+   "alt": 60.0,
+   "hits_until": 11,
+   "hits_timed": 12,
+   "missed_until": [
+    "sauteed_onion",
+    "milk_jelly"
+   ],
+   "missed_timed": [
+    "milk_jelly"
+   ]
+  },
+  {
+   "key": "gelatin_gel_T",
+   "adopted": 10,
+   "alt": 5.0,
+   "hits_until": 11,
+   "hits_timed": 12,
+   "missed_until": [
+    "sauteed_onion",
+    "milk_jelly"
+   ],
+   "missed_timed": [
+    "milk_jelly"
+   ]
+  },
+  {
+   "key": "gelatin_melt_T",
+   "adopted": 25,
+   "alt": 20.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "glucose_caramel_T",
+   "adopted": 160,
+   "alt": 150.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "myosin_T",
+   "adopted": 60,
+   "alt": 40.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "poach_cohesion_T_min",
+   "adopted": 80,
+   "alt": 62.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "poach_cohesion_T_min",
+   "adopted": 80,
+   "alt": 71.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "rice_gel_onset",
+   "adopted": 60,
+   "alt": 58.9,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "rice_gel_onset",
+   "adopted": 60,
+   "alt": 66.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "rice_gel_onset",
+   "adopted": 60,
+   "alt": 68.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "sucrose_caramel_T",
+   "adopted": 170,
+   "alt": 160.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "wheat_gel_complete",
+   "adopted": 64,
+   "alt": 66.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  },
+  {
+   "key": "wheat_gel_onset",
+   "adopted": 59.5,
+   "alt": 52.0,
+   "hits_until": 12,
+   "hits_timed": 13,
+   "missed_until": [
+    "sauteed_onion"
+   ],
+   "missed_timed": []
+  }
+ ],
+ "adopted_used": {
+  "acid_to_milk_ratio": 0.05,
+  "actin_T": 73,
+  "baking_powder_heat_T": 60,
+  "butter_liquid_T": 35,
+  "butter_plastic_T": 21,
+  "caramel_pyrolysis_T": 180,
+  "collagen_T": 63,
+  "collagen_gelatinize": {
+   "T": 70,
+   "min": 60
+  },
+  "collapse_min": 30,
+  "cream_fat_min": 30,
+  "cream_foam_minutes": {
+   "1": 1,
+   "2": 2,
+   "3": 4,
+   "4": 8
+  },
+  "cream_whip_T_range": [
+   5,
+   15
+  ],
+  "egg_diluted_s1": 79,
+  "egg_diluted_s2": 80,
+  "egg_dilution_boundary": 50,
+  "egg_porosity_T": 90,
+  "egg_porosity_hold2_min": 5,
+  "egg_undiluted_s1": 70,
+  "egg_undiluted_s2": 73,
+  "egg_undiluted_s3": 80,
+  "egg_white_s1": 60,
+  "egg_white_s2": 65,
+  "egg_white_s3": 80,
+  "egg_yolk_s1": 65,
+  "egg_yolk_s2": 70,
+  "egg_yolk_s3": 80,
+  "gelatin_degrade": {
+   "T": 80,
+   "min": 30
+  },
+  "gelatin_direct_dissolve": {
+   "T": 60,
+   "min": 15
+  },
+  "gelatin_dissolve_T": 50,
+  "gelatin_gel_T": 10,
+  "gelatin_gel_min": 30,
+  "gelatin_melt_T": 25,
+  "gelatin_swell": {
+   "T": [
+    10,
+    25
+   ],
+   "min": 30
+  },
+  "glucose_caramel_T": 160,
+  "gluten_by_strength": {
+   "弱": 1,
+   "中": 2,
+   "強": 3
+  },
+  "gluten_min_water_ratio": 0.5,
+  "gluten_relax_min": 15,
+  "maillard_T": 140,
+  "maillard_min_protein": 0.5,
+  "maillard_s2_min": 2,
+  "maillard_s3_T": 165,
+  "maillard_s3_min": 10,
+  "meat_water_loss_T": {
+   "1": 60,
+   "2": 70
+  },
+  "myoglobin_s1_T": 60,
+  "myoglobin_s2_T": 70,
+  "myosin_T": 60,
+  "onion_sulfur_reduce_T": 80,
+  "onion_sulfur_zero_mass_ratio": 0.4,
+  "pme_band": [
+   50,
+   70
+  ],
+  "pme_min": 30,
+  "poach_cohesion_T_min": 80,
+  "retro_T": 4,
+  "retro_min": {
+   "1": 60,
+   "2": 1440
+  },
+  "rice_full_T": 98,
+  "rice_full_min": 20,
+  "rice_full_value": 0.95,
+  "rice_gel_onset": 60,
+  "rice_min_water_ratio": 1.2,
+  "roasted_sugar": {
+   "T": 150,
+   "min": 120
+  },
+  "soften_T": 80,
+  "soften_min": 10,
+  "starch_min_water_ratio": 1.0,
+  "starch_partial_value": 0.5,
+  "sucrose_caramel_T": 170,
+  "syrup_boiling_point": [
+   [
+    0,
+    100
+   ],
+   [
+    80,
+    111
+   ],
+   [
+    85,
+    114
+   ],
+   [
+    87,
+    119
+   ],
+   [
+    90,
+    125.5
+   ],
+   [
+    95,
+    137.5
+   ],
+   [
+    99,
+    150
+   ],
+   [
+    100,
+    160
+   ]
+  ],
+  "syrup_min_fraction": 0.9,
+  "syrup_stage_T": [
+   110,
+   112,
+   118,
+   121,
+   132,
+   146,
+   160,
+   170
+  ],
+  "wheat_gel_complete": 64,
+  "wheat_gel_onset": 59.5,
+  "whey_denature_T": 70
+ }
+}

@@ -1,0 +1,25 @@
+{
+  "canonical": "bell pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 1,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "red pepper",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 2,
+    "sweet": 1,
+    "umami": 0
+  },
+  "n_recipes": 459,
+  "note": "red bell pepper と唐辛子（red chili / 粉）のどちらも含む。bell 寄りに採点し辛1を残した",
+  "order": 164,
+  "reviewed": true
+}

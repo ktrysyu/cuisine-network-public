@@ -1,0 +1,17 @@
+{
+  "canonical": "black beans",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "black beans",
+  "n_recipes": 896,
+  "note": "加熱後。缶詰なら塩1",
+  "order": 89,
+  "reviewed": true
+}

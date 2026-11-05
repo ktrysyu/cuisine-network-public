@@ -1,0 +1,17 @@
+{
+  "canonical": "basil",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh basil leaves",
+  "n_recipes": 502,
+  "note": "",
+  "order": 150,
+  "reviewed": true
+}

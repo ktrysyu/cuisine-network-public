@@ -1,0 +1,17 @@
+{
+  "canonical": "turmeric",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 3,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "ground turmeric",
+  "n_recipes": 949,
+  "note": "土っぽい苦み。少量使用が普通",
+  "order": 83,
+  "reviewed": true
+}

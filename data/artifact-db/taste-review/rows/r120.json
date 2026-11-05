@@ -1,0 +1,17 @@
+{
+  "canonical": "hot sauce",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 3,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "hot sauce",
+  "n_recipes": 674,
+  "note": "タバスコ型（酢＋唐辛子）想定",
+  "order": 120,
+  "reviewed": true
+}

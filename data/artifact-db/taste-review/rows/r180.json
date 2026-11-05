@@ -1,0 +1,17 @@
+{
+  "canonical": "ketchup",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 4,
+    "umami": 2
+  },
+  "ingredient": "ketchup",
+  "n_recipes": 432,
+  "note": "",
+  "order": 180,
+  "reviewed": true
+}

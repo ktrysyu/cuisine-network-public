@@ -1,0 +1,17 @@
+{
+  "canonical": "onions",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 3,
+    "umami": 1
+  },
+  "ingredient": "sweet onion",
+  "n_recipes": 336,
+  "note": "ビダリア等の甘玉ねぎ。生でも辛み弱い",
+  "order": 247,
+  "reviewed": true
+}

@@ -1,0 +1,17 @@
+{
+  "canonical": "tomatillos",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 4,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 0
+  },
+  "ingredient": "tomatillos",
+  "n_recipes": 322,
+  "note": "",
+  "order": 253,
+  "reviewed": true
+}

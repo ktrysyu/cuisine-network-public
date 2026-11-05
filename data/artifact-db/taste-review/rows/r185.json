@@ -1,0 +1,17 @@
+{
+  "canonical": "brown sugar",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "light brown sugar",
+  "n_recipes": 422,
+  "note": "",
+  "order": 185,
+  "reviewed": true
+}

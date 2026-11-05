@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken broth",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 1,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "low sodium chicken broth",
+  "n_recipes": 339,
+  "note": "",
+  "order": 242,
+  "reviewed": true
+}

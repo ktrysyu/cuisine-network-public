@@ -1,0 +1,25 @@
+{
+  "canonical": "salt",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "kosher salt",
+  "mine": {
+    "bitter": 0,
+    "salty": 5,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 1
+  },
+  "n_recipes": 3113,
+  "note": "",
+  "order": 14,
+  "reviewed": true
+}

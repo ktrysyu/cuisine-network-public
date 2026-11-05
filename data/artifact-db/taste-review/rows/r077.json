@@ -1,0 +1,17 @@
+{
+  "canonical": "potatoes",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 1,
+    "umami": 1
+  },
+  "ingredient": "potatoes",
+  "n_recipes": 1018,
+  "note": "加熱後",
+  "order": 77,
+  "reviewed": true
+}

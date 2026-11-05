@@ -1,0 +1,25 @@
+{
+  "canonical": "bay leaves",
+  "confidence": "low",
+  "draft": {
+    "bitter": 2,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "bay leaf",
+  "mine": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "n_recipes": 839,
+  "note": "bay leaves と同じ",
+  "order": 101,
+  "reviewed": true
+}

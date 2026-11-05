@@ -1,0 +1,17 @@
+{
+  "canonical": "tortilla chips",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 3,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "tortilla chips",
+  "n_recipes": 302,
+  "note": "",
+  "order": 267,
+  "reviewed": true
+}

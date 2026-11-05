@@ -1,0 +1,17 @@
+{
+  "canonical": "ginger",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 3,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "fresh ginger root",
+  "n_recipes": 338,
+  "note": "",
+  "order": 243,
+  "reviewed": true
+}

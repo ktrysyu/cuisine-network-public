@@ -1,0 +1,304 @@
+ingredient,ja,group,form,hardness,thickness,juiciness,chewiness,smoothness,basis
+salt,塩,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+onions,玉ねぎ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+olive oil,オリーブオイル,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+water,水,water,液体（水・湯）,0,0,5,0,5,Claude の推定（出典なし）
+garlic,にんにく,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+sugar,砂糖,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+garlic cloves,にんにく（片）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+butter,バター,butter,脂（冷蔵のバター・ギー、口で溶ける）,1,2,1,0,5,Claude の推定（出典なし）
+ground black pepper,黒胡椒（挽いたもの）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+all-purpose flour,中力粉（オールパーパス）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+pepper,胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+vegetable oil,サラダ油（植物油）,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+eggs,卵,egg,加熱した卵（料理による。ゆで卵・炒り卵の中間を想定）,2,1,3,1,4,Claude の推定（出典なし）
+soy sauce,醤油,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+kosher salt,コーシャーソルト（粗塩）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+green onions,青ねぎ,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+tomatoes,トマト,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+large eggs,卵（Lサイズ）,egg,加熱した卵（料理による。ゆで卵・炒り卵の中間を想定）,2,1,3,1,4,Claude の推定（出典なし）
+carrots,にんじん,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,3,1,4,3,2,Claude の推定（出典なし）・個別に直した
+unsalted butter,無塩バター,butter,脂（冷蔵のバター・ギー、口で溶ける）,1,2,1,0,5,Claude の推定（出典なし）
+extra-virgin olive oil,エクストラバージンオリーブオイル,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+ground cumin,クミンパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+black pepper,黒胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+milk,牛乳,dairy_liquid,乳（牛乳・ヨーグルトなど）,0,1,5,0,5,Claude の推定（出典なし）
+chili powder,チリパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+oil,油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+red bell pepper,赤パプリカ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+purple onion,紫玉ねぎ,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,4,3,2,Claude の推定（出典なし）・個別に直した
+scallions,青ねぎ（スキャリオン）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+grated parmesan cheese,粉チーズ（パルメザン）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+sesame oil,ごま油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+corn starch,コーンスターチ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+ginger,生姜,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+baking powder,ベーキングパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+jalapeno chilies,ハラペーニョ,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+dried oregano,乾燥オレガノ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chopped cilantro fresh,パクチー（刻み）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+fresh lemon juice,レモン汁（生搾り）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+diced tomatoes,カットトマト（缶）,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+fresh parsley,パセリ（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+minced garlic,にんにく（みじん切り）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+chicken broth,チキンブロス,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+sour cream,サワークリーム,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,4,3,0,5,Claude の推定（出典なし）・個別に直した
+cayenne pepper,カイエンペッパー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+brown sugar,ブラウンシュガー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+fresh ginger,生姜（生）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+cooking spray,料理用オイルスプレー,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+shallots,エシャロット,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+garlic powder,ガーリックパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+lime,ライム,citrus_piece,柑橘（くし切り・皮。搾って使う）,2,0,5,2,1,Claude の推定（出典なし）
+lemon juice,レモン汁,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+fresh lime juice,ライム汁（生搾り）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+flour,小麦粉,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+honey,はちみつ,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,5,3,0,5,Claude の推定（出典なし）・個別に直した
+vanilla extract,バニラエッセンス,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+paprika,パプリカパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chopped onion,玉ねぎ（みじん切り）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+fish sauce,魚醤（ナンプラー）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+ground cinnamon,シナモンパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+avocado,アボカド,avocado,アボカド（生）,1,2,2,0,5,Claude の推定（出典なし）
+canola oil,キャノーラ油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+dry white wine,辛口白ワイン,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+lemon,レモン,citrus_piece,柑橘（くし切り・皮。搾って使う）,2,0,5,2,1,Claude の推定（出典なし）
+rice vinegar,米酢,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+yellow onion,黄玉ねぎ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+green bell pepper,ピーマン,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+cilantro leaves,パクチーの葉,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+tomato paste,トマトペースト,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+heavy cream,生クリーム（乳脂肪高め）,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+cilantro,パクチー,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+fresh basil,バジル（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+boneless skinless chicken breasts,鶏むね肉（皮なし骨なし）,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+flat leaf parsley,イタリアンパセリ,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+white sugar,白砂糖,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+lime juice,ライム汁,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+chicken stock,チキンストック,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+bay leaves,ローリエ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+potatoes,じゃがいも,potato,加熱したいも（じゃがいも・さつまいも）,2,1,2,1,3,Claude の推定（出典なし）
+chicken,鶏肉,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+corn tortillas,コーントルティーヤ,bread,パン・トルティーヤ,2,0,1,3,2,Claude の推定（出典なし）
+salsa,サルサ,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+cumin,クミン,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+freshly ground pepper,挽きたての胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+ground turmeric,ターメリックパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+baking soda,重曹,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+sea salt,海塩,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cumin seed,クミンシード,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+garam masala,ガラムマサラ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+shrimp,えび,shrimp,加熱したえび,3,0,4,4,2,Claude の推定（出典なし）
+black beans,黒いんげん豆,legume,加熱した豆（ひよこ豆・黒いんげん豆）,2,1,2,2,3,Claude の推定（出典なし）
+zucchini,ズッキーニ,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+ground beef,牛ひき肉,ground_meat,加熱したひき肉,3,0,3,3,1,Claude の推定（出典なし）
+dried thyme,乾燥タイム,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+large garlic cloves,にんにく（大きめの片）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+flour tortillas,小麦粉トルティーヤ,bread,パン・トルティーヤ,2,0,1,3,2,Claude の推定（出典なし）
+tomato sauce,トマトソース,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+buttermilk,バターミルク,dairy_liquid,乳（牛乳・ヨーグルトなど）,0,2,5,0,5,Claude の推定（出典なし）・個別に直した
+plum tomatoes,プラムトマト,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+coconut milk,ココナッツミルク,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,2,4,0,5,Claude の推定（出典なし）・個別に直した
+granulated sugar,グラニュー糖,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+fresh cilantro,パクチー（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+bay leaf,ローリエ（1枚）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+celery,セロリ,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,4,3,2,Claude の推定（出典なし）・個別に直した
+crushed red pepper,粗挽き唐辛子,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chopped cilantro,パクチー（刻み）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+chicken breasts,鶏むね肉,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+mayonaise,マヨネーズ,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+shredded cheddar cheese,チェダーチーズ（シュレッド）,melt_cheese,加熱して溶かしたチーズ（モッツァレラ・シュレッド）,1,4,2,3,3,Claude の推定（出典なし）
+cucumber,きゅうり,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,5,3,2,Claude の推定（出典なし）
+green chilies,青唐辛子,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+ground coriander,コリアンダーパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+whole milk,牛乳（全乳）,dairy_liquid,乳（牛乳・ヨーグルトなど）,0,1,5,0,5,Claude の推定（出典なし）
+red wine vinegar,赤ワインビネガー,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+tumeric,ターメリック,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cinnamon,シナモン,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+curry powder,カレー粉,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+worcestershire sauce,ウスターソース,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+white onion,白玉ねぎ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+ground ginger,ジンジャーパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+sesame seeds,ごま,nut,ナッツ・種（ローストして使う）,4,0,0,3,1,Claude の推定（出典なし）
+hot sauce,ホットソース,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+red pepper flakes,赤唐辛子フレーク,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cinnamon sticks,シナモンスティック,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+red chili peppers,赤唐辛子,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+bacon,ベーコン,cured_meat,ベーコン・生ハム,3,0,2,3,1,Claude の推定（出典なし）・個別に直した
+whipping cream,ホイップ用生クリーム,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+boneless skinless chicken breast halves,鶏むね肉（半身・皮なし骨なし）,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+peanut oil,ピーナッツ油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+ground nutmeg,ナツメグパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+clove,クローブ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+parmesan cheese,パルメザンチーズ,hard_cheese,硬いチーズ（チェダー・パルメザンの塊）,4,0,1,2,2,Claude の推定（出典なし）・個別に直した
+dried basil,乾燥バジル,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+peeled fresh ginger,生姜（皮むき）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+coarse salt,粗塩,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+mushrooms,マッシュルーム,mushroom,加熱したきのこ,2,1,4,3,2,Claude の推定（出典なし）
+warm water,ぬるま湯,water,液体（水・湯）,0,0,5,0,5,Claude の推定（出典なし）
+large egg yolks,卵黄（Lサイズ）,egg_raw_part,卵の一部（料理に混ぜて使う。生の状態）,0,3,3,0,5,Claude の推定（出典なし）
+balsamic vinegar,バルサミコ酢,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+celery ribs,セロリの茎,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,5,3,2,Claude の推定（出典なし）
+cream cheese,クリームチーズ,soft_cheese,やわらかいチーズ（クリームチーズ・リコッタなど）,1,3,2,0,4,Claude の推定（出典なし）
+white vinegar,ホワイトビネガー,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+egg yolks,卵黄,egg_raw_part,卵の一部（料理に混ぜて使う。生の状態）,0,3,3,0,5,Claude の推定（出典なし）
+capers,ケッパー,dried_fruit,干した果物（レーズン）,1,0,3,1,2,Claude の推定（出典なし）・個別に直した
+ground red pepper,赤唐辛子パウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+onion powder,オニオンパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+dijon mustard,ディジョンマスタード,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+rice,米,grain_raw,乾いた穀物（米・パスタの乾燥。加熱して使う）,,,,,,Claude の推定（出典なし）
+cold water,冷水,water,液体（水・湯）,0,0,5,0,5,Claude の推定（出典なし）
+crushed red pepper flakes,赤唐辛子フレーク（粗挽き）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+mirin,みりん,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+fresh basil leaves,バジルの葉（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+eggplant,なす,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+powdered sugar,粉砂糖,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+large egg whites,卵白（Lサイズ）,egg_raw_part,卵の一部（料理に混ぜて使う。生の状態）,0,3,3,0,5,Claude の推定（出典なし）
+cooking oil,料理用油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+lime wedges,くし切りライム,citrus_piece,柑橘（くし切り・皮。搾って使う）,2,0,5,2,1,Claude の推定（出典なし）
+shredded mozzarella cheese,モッツァレラチーズ（シュレッド）,melt_cheese,加熱して溶かしたチーズ（モッツァレラ・シュレッド）,1,4,2,3,3,Claude の推定（出典なし）
+fat free less sodium chicken broth,チキンブロス（無脂肪・減塩）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+ground pork,豚ひき肉,ground_meat,加熱したひき肉,3,0,3,3,1,Claude の推定（出典なし）
+sliced green onions,青ねぎ（小口切り）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+cayenne,カイエン,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+mozzarella cheese,モッツァレラチーズ,melt_cheese,加熱して溶かしたチーズ（モッツァレラ・シュレッド）,1,4,2,3,3,Claude の推定（出典なし）
+medium shrimp,えび（中）,shrimp,加熱したえび,3,0,4,4,2,Claude の推定（出典なし）
+raisins,レーズン,dried_fruit,干した果物（レーズン）,2,2,1,3,2,Claude の推定（出典なし）
+red pepper,赤唐辛子／赤パプリカ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+coriander,コリアンダー,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+sauce,ソース,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+finely chopped onion,玉ねぎ（細かいみじん切り）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+oyster sauce,オイスターソース,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+sweet potatoes,さつまいも,potato,加熱したいも（じゃがいも・さつまいも）,2,1,2,1,3,Claude の推定（出典なし）
+beansprouts,もやし,leafy,加熱した葉物（ほうれん草・キャベツ・もやし）,1,1,4,2,2,Claude の推定（出典なし）
+black peppercorns,黒胡椒（ホール）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+crushed tomatoes,クラッシュトマト（缶）,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+egg whites,卵白,egg_raw_part,卵の一部（料理に混ぜて使う。生の状態）,0,3,3,0,5,Claude の推定（出典なし）
+cheese,チーズ,melt_cheese,加熱して溶かしたチーズ（モッツァレラ・シュレッド）,1,4,2,3,3,Claude の推定（出典なし）
+fresh rosemary,ローズマリー（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+oregano,オレガノ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+white pepper,白胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cherry tomatoes,ミニトマト,fruit,果物（生）,1,1,5,1,3,Claude の推定（出典なし）
+leeks,リーキ（西洋ねぎ）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+ketchup,ケチャップ,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+hoisin sauce,海鮮醤,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+chopped celery,セロリ（刻み）,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,5,3,2,Claude の推定（出典なし）
+low sodium soy sauce,減塩醤油,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+cheddar cheese,チェダーチーズ,hard_cheese,硬いチーズ（チェダー・パルメザンの塊）,3,0,1,2,2,Claude の推定（出典なし）
+light brown sugar,ブラウンシュガー（ライト）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cabbage,キャベツ,leafy,加熱した葉物（ほうれん草・キャベツ・もやし）,1,1,4,2,2,Claude の推定（出典なし）
+fresh mint,ミント（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+large shrimp,えび（大）,shrimp,加熱したえび,3,0,4,4,2,Claude の推定（出典なし）
+vegetable broth,野菜ブロス,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+cracked black pepper,粗挽き黒胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+spring onions,葉玉ねぎ（スプリングオニオン）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+peanuts,ピーナッツ,nut,ナッツ・種（ローストして使う）,4,0,0,3,1,Claude の推定（出典なし）
+chickpeas,ひよこ豆,legume,加熱した豆（ひよこ豆・黒いんげん豆）,2,1,2,2,3,Claude の推定（出典なし）
+confectioners sugar,粉砂糖（コンフェクショナーズ）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+coriander seeds,コリアンダーシード,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+italian seasoning,イタリアンシーズニング,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+fresh oregano,オレガノ（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+bell pepper,パプリカ（ピーマン類）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+cooked rice,ご飯（炊いた米）,grain_cooked,炊いた・ゆでた穀物（ご飯・パスタ）,2,2,3,3,3,Claude の推定（出典なし）
+lean ground beef,牛ひき肉（赤身）,ground_meat,加熱したひき肉,3,0,3,3,1,Claude の推定（出典なし）
+ground pepper,挽いた胡椒,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+low salt chicken broth,チキンブロス（減塩）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+frozen peas,冷凍グリーンピース,legume,加熱した豆（ひよこ豆・黒いんげん豆）,1,1,3,1,3,Claude の推定（出典なし）・個別に直した
+beef broth,ビーフブロス,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+active dry yeast,ドライイースト,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cajun seasoning,ケイジャンシーズニング,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chopped fresh thyme,タイム（生・刻み）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+green pepper,ピーマン（青）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+ground cloves,クローブパウダー,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+cornmeal,コーンミール,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+white wine,白ワイン,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+spinach,ほうれん草,leafy,加熱した葉物（ほうれん草・キャベツ・もやし）,1,1,4,2,2,Claude の推定（出典なし）
+ground allspice,オールスパイス,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+lemongrass,レモングラス,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+plain yogurt,プレーンヨーグルト,dairy_liquid,乳（牛乳・ヨーグルトなど）,0,3,5,0,5,Claude の推定（出典なし）・個別に直した
+thyme,タイム,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+feta cheese crumbles,フェタチーズ（崩したもの）,soft_cheese,やわらかいチーズ（クリームチーズ・リコッタなど）,1,3,2,0,4,Claude の推定（出典なし）
+hot water,お湯,water,液体（水・湯）,0,0,5,0,5,Claude の推定（出典なし）
+orange,オレンジ,fruit,果物（生）,1,1,5,1,3,Claude の推定（出典なし）
+toasted sesame oil,焙煎ごま油,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+long-grain rice,長粒米,grain_raw,乾いた穀物（米・パスタの乾燥。加熱して使う）,,,,,,Claude の推定（出典なし）
+parmigiano reggiano cheese,パルミジャーノ・レッジャーノ,hard_cheese,硬いチーズ（チェダー・パルメザンの塊）,3,0,1,2,2,Claude の推定（出典なし）
+fennel seeds,フェンネルシード,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+ricotta cheese,リコッタチーズ,soft_cheese,やわらかいチーズ（クリームチーズ・リコッタなど）,1,3,2,0,4,Claude の推定（出典なし）
+white wine vinegar,白ワインビネガー,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+boiling water,熱湯,water,液体（水・湯）,0,0,5,0,5,Claude の推定（出典なし）
+cider vinegar,りんご酢,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+ground white pepper,白胡椒（挽いたもの）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+pinenuts,松の実,nut,ナッツ・種（ローストして使う）,4,0,0,3,1,Claude の推定（出典なし）
+light soy sauce,薄口醤油,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+chopped garlic,にんにく（刻み）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+fresh thyme,タイム（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+parsley,パセリ,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+sake,酒,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+smoked paprika,スモークパプリカ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+boneless chicken skinless thigh,鶏もも肉（皮なし骨なし）,meat,加熱した肉（焼く・煮る）,3,0,4,4,1,Claude の推定（出典なし）・個別に直した
+grated lemon zest,レモンの皮（すりおろし）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+spaghetti,スパゲッティ,grain_cooked,炊いた・ゆでた穀物（ご飯・パスタ）,2,1,3,4,3,Claude の推定（出典なし）・個別に直した
+green beans,さやいんげん,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+yellow corn meal,コーンミール（黄）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chile pepper,唐辛子,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+low sodium chicken broth,チキンブロス（減塩）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+fresh ginger root,生姜（根）,aromatic,香味野菜（にんにく・生姜・エシャロット、刻んで加熱）,2,1,3,1,2,Claude の推定（出典なし）
+orange juice,オレンジジュース,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+half & half,ハーフ＆ハーフ（牛乳と生クリームの混合）,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+chicken thighs,鶏もも肉,meat,加熱した肉（焼く・煮る）,3,0,4,4,1,Claude の推定（出典なし）・個別に直した
+sweet onion,甘玉ねぎ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+chopped parsley,パセリ（刻み）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+shiitake,しいたけ,mushroom,加熱したきのこ,2,1,4,3,2,Claude の推定（出典なし）
+corn,とうもろこし,corn,加熱したとうもろこしの粒,2,1,4,3,2,Claude の推定（出典なし）
+basmati rice,バスマティライス,grain_raw,乾いた穀物（米・パスタの乾燥。加熱して使う）,,,,,,Claude の推定（出典なし）
+shredded monterey jack cheese,モントレージャックチーズ（シュレッド）,melt_cheese,加熱して溶かしたチーズ（モッツァレラ・シュレッド）,1,4,2,3,3,Claude の推定（出典なし）
+tomatillos,トマティーヨ,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+chiles,唐辛子（チレ）,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+pasta,パスタ,grain_cooked,炊いた・ゆでた穀物（ご飯・パスタ）,2,1,3,4,3,Claude の推定（出典なし）・個別に直した
+dark brown sugar,ブラウンシュガー（ダーク）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+chopped fresh mint,ミント（生・刻み）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+vinegar,酢,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+mustard seeds,マスタードシード,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+dark soy sauce,老抽（中国のたまり醤油）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+vanilla,バニラ,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+dry red wine,辛口赤ワイン,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+ghee,ギー,butter,脂（冷蔵のバター・ギー、口で溶ける）,1,2,1,0,5,Claude の推定（出典なし）
+bread crumbs,パン粉,crisp,揚げた・乾いたもの（チップス・パン粉）,3,0,0,2,1,Claude の推定（出典なし）
+hot pepper sauce,ホットペッパーソース,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+green chile,青唐辛子（チレ）,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+tortilla chips,トルティーヤチップス,crisp,揚げた・乾いたもの（チップス・パン粉）,3,0,0,2,1,Claude の推定（出典なし）
+pork,豚肉,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+serrano chile,セラーノ唐辛子,chili_fresh,生の唐辛子（刻んで使う）,2,0,4,2,2,Claude の推定（出典なし）
+chopped tomatoes,トマト（刻み）,soft_cooked_veg,加熱するとやわらかくなる野菜（なす・ズッキーニ・トマト）,1,2,5,1,3,Claude の推定（出典なし）
+sriracha,シラチャーソース,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+cooked chicken,加熱済み鶏肉,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+enchilada sauce,エンチラーダソース,thick_liquid,とろみのある液体（ソース・クリーム・はちみつなど）,0,3,3,0,5,Claude の推定（出典なし）
+toasted sesame seeds,炒りごま,nut,ナッツ・種（ローストして使う）,4,0,0,3,1,Claude の推定（出典なし）
+arborio rice,アルボリオ米（リゾット用）,grain_raw,乾いた穀物（米・パスタの乾燥。加熱して使う）,,,,,,Claude の推定（出典なし）
+yellow bell pepper,黄パプリカ,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+dry bread crumbs,乾燥パン粉,crisp,揚げた・乾いたもの（チップス・パン粉）,3,0,0,2,1,Claude の推定（出典なし）
+fresh parmesan cheese,パルメザンチーズ（生）,hard_cheese,硬いチーズ（チェダー・パルメザンの塊）,3,0,1,2,2,Claude の推定（出典なし）
+fine sea salt,海塩（細粒）,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+fresh coriander,パクチー（生）,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+prosciutto,生ハム（プロシュート）,cured_meat,ベーコン・生ハム,1,0,2,3,2,Claude の推定（出典なし）・個別に直した
+basil,バジル,herb,生の香草（量が少なく食感は小さい）,1,0,3,1,2,Claude の推定（出典なし）
+chopped pecans,ピーカンナッツ（刻み）,nut,ナッツ・種（ローストして使う）,4,0,0,3,1,Claude の推定（出典なし）
+garlic paste,にんにくペースト,paste,ペースト（トマトペースト・マヨネーズなど）,1,4,2,0,4,Claude の推定（出典なし）
+radishes,ラディッシュ,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,5,3,2,Claude の推定（出典なし）
+corn kernels,コーン（粒）,corn,加熱したとうもろこしの粒,2,1,4,3,2,Claude の推定（出典なし）
+juice,果汁,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+long grain white rice,長粒米（白）,grain_raw,乾いた穀物（米・パスタの乾燥。加熱して使う）,,,,,,Claude の推定（出典なし）
+saffron threads,サフラン,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+creole seasoning,クレオールシーズニング,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+melted butter,溶かしバター,oil,液体（油）,0,1,1,0,5,Claude の推定（出典なし）
+beef,牛肉,meat,加熱した肉（焼く・煮る）,4,0,3,4,1,Claude の推定（出典なし）
+fresh mushrooms,マッシュルーム（生）,mushroom,加熱したきのこ,2,1,4,3,2,Claude の推定（出典なし）
+sweetened condensed milk,加糖練乳,sweet_condensed,加糖練乳,0,5,2,0,5,Claude の推定（出典なし）
+taco seasoning,タコスシーズニング,na,対象外（粉・香辛料・調味の粒。そのまま食感を感じない）,,,,,,Claude の推定（出典なし）
+baguette,バゲット,bread,パン・トルティーヤ,4,0,1,4,2,Claude の推定（出典なし）・個別に直した
+romaine lettuce,ロメインレタス,raw_crisp_veg,生で食べるみずみずしい野菜（きゅうり・レタス・ラディッシュ）,3,0,5,3,2,Claude の推定（出典なし）
+apple cider vinegar,りんご酢（アップルサイダー）,thin_liquid,液体（酢・酒・果汁・ブロス・醤油など）,0,0,5,0,5,Claude の推定（出典なし）
+chopped green bell pepper,ピーマン（刻み）,cooked_veg,加熱した野菜（玉ねぎ・にんじん・ピーマン類）,2,1,4,2,2,Claude の推定（出典なし）
+feta cheese,フェタチーズ,soft_cheese,やわらかいチーズ（クリームチーズ・リコッタなど）,1,3,2,0,4,Claude の推定（出典なし）
+mango,マンゴー,mango,マンゴー（生）,1,2,5,1,4,Claude の推定（出典なし）
+okra,オクラ,okra,加熱したオクラ（粘りがある）,2,4,4,2,3,Claude の推定（出典なし）

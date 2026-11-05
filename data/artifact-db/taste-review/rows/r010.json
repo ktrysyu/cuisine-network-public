@@ -1,0 +1,17 @@
+{
+  "canonical": "black pepper",
+  "confidence": "low",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 4,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "pepper",
+  "n_recipes": 4438,
+  "note": "単に pepper。black pepper と解釈したが bell pepper・唐辛子の可能性も残る",
+  "order": 10,
+  "reviewed": true
+}

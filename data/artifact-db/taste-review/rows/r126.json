@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 2
+  },
+  "ingredient": "boneless skinless chicken breast halves",
+  "n_recipes": 618,
+  "note": "",
+  "order": 126,
+  "reviewed": true
+}

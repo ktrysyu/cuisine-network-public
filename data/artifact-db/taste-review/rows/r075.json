@@ -1,0 +1,17 @@
+{
+  "canonical": "chicken broth",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 3
+  },
+  "ingredient": "chicken stock",
+  "n_recipes": 1039,
+  "note": "自家製なら塩0、市販なら塩3。中間",
+  "order": 75,
+  "reviewed": true
+}

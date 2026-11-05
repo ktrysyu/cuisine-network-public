@@ -1,0 +1,17 @@
+{
+  "canonical": "vegetable oil",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 0,
+    "umami": 0
+  },
+  "ingredient": "oil",
+  "n_recipes": 1970,
+  "note": "種類不明。中性の植物油と解釈",
+  "order": 25,
+  "reviewed": true
+}

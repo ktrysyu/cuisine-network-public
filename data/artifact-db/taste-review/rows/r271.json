@@ -1,0 +1,17 @@
+{
+  "canonical": "sriracha",
+  "confidence": "high",
+  "draft": {
+    "bitter": 0,
+    "salty": 2,
+    "sour": 2,
+    "spicy": 4,
+    "sweet": 2,
+    "umami": 1
+  },
+  "ingredient": "sriracha",
+  "n_recipes": 298,
+  "note": "",
+  "order": 271,
+  "reviewed": true
+}

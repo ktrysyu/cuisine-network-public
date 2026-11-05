@@ -1,0 +1,17 @@
+{
+  "canonical": "tomato paste",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 1,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 4
+  },
+  "ingredient": "tomato paste",
+  "n_recipes": 1158,
+  "note": "",
+  "order": 67,
+  "reviewed": true
+}

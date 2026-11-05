@@ -1,0 +1,25 @@
+{
+  "canonical": "juice",
+  "confidence": "low",
+  "draft": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 0
+  },
+  "ingredient": "juice",
+  "mine": {
+    "bitter": 0,
+    "salty": 0,
+    "sour": 3,
+    "spicy": 0,
+    "sweet": 2,
+    "umami": 1
+  },
+  "n_recipes": 280,
+  "note": "何の果汁か不明。共起（olive oil・garlic・トマト）から柑橘の搾り汁と推定し酸3",
+  "order": 287,
+  "reviewed": true
+}

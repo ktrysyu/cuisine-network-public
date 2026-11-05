@@ -1,0 +1,17 @@
+{
+  "canonical": "brown sugar",
+  "confidence": "medium",
+  "draft": {
+    "bitter": 1,
+    "salty": 0,
+    "sour": 0,
+    "spicy": 0,
+    "sweet": 5,
+    "umami": 0
+  },
+  "ingredient": "brown sugar",
+  "n_recipes": 1503,
+  "note": "糖蜜のわずかな苦み",
+  "order": 44,
+  "reviewed": true
+}
